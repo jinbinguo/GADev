@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizTemplate xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.myframework.template</package>
+    <name>TP_TreeDatabase</name>
+    <alias>bizTemplate[com.kingdee.eas.myframework.template.TP_TreeDatabase].alias</alias>
+    <description>bizTemplate[com.kingdee.eas.myframework.template.TP_TreeDatabase].description</description>
+    <userDefined>true</userDefined>
+    <bizType>BaseData</bizType>
+    <template>false</template>
+    <entityPK>com.kingdee.eas.myframework.template.app.TP_TreeDatabase</entityPK>
+    <queryPK>com.kingdee.eas.myframework.template.app.TP_TreeDatabaseQuery</queryPK>
+    <editUIPK>com.kingdee.eas.myframework.template.client.TP_TreeDatabaseEditUI</editUIPK>
+    <listUIPK>com.kingdee.eas.myframework.template.client.TP_TreeDatabaseListUI</listUIPK>
+    <webEditUIPK />
+    <webListUIPK />
+    <entityFunctionPK />
+    <editUIFunctionPK />
+    <listUIFunctionPK />
+    <entryUIPK />
+    <versionDate />
+    <versionNumber />
+    <extendTablePKs />
+    <extendEntityPKs />
+    <extendQueryPKs />
+    <extendEditUIPKs />
+    <extendListUIPKs />
+    <menuPKList />
+    <bimTemplateType>TreeBase</bimTemplateType>
+    <relatedTablePK />
+    <relatedEntityPK />
+    <relatedEditUIPK />
+    <genImplementCode>true</genImplementCode>
+    <webEditPagePK />
+    <webListPagePK />
+    <webPagePKS />
+    <webViewPagePK />
+    <webBriefPagePK />
+    <relatedWebEditPagePK />
+    <relatedQueryPK />
+    <resource>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_TreeDatabase].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="树型基础资料模版" />
+            <lang locale="zh_HK" value="樹型基礎資料模版" />
+            <lang locale="zh_TW" value="樹型基礎資料模版" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_TreeDatabase].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="基础资料模板" />
+            <lang locale="zh_HK" value="基礎資料範本" />
+            <lang locale="zh_TW" value="基礎資料範本" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_TreeDatabase].extendedProperty.BizUnitDeployed">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_TreeDatabase].extendedProperty.OrgType">
+            <lang locale="en_US" value="Company" />
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_TreeDatabase].extendedProperty.bimTemplateType">
+            <lang locale="en_US" value="TreeBase" />
+            <lang locale="zh_CN" value="TreeBase" />
+            <lang locale="zh_TW" value="TreeBase" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_TreeDatabase].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_TreeDatabase].extendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="name" />
+            <lang locale="zh_CN" value="name" />
+            <lang locale="zh_TW" value="name" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_TreeDatabase].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.myframework.template.app.TP_TreeDatabaseQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.myframework.template.app.TP_TreeDatabaseQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.myframework.template.app.TP_TreeDatabaseQuery" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_TreeDatabase].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.myframework.template.client.TP_TreeDatabaseEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.myframework.template.client.TP_TreeDatabaseEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.myframework.template.client.TP_TreeDatabaseEditUI" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_TreeDatabase].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_TreeDatabase].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_TreeDatabase].extendedProperty.isSimpleEntity">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_TreeDatabase].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.myframework.template.client.TP_TreeDatabaseListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.myframework.template.client.TP_TreeDatabaseListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.myframework.template.client.TP_TreeDatabaseListUI" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_TreeDatabase].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizTemplate>
+

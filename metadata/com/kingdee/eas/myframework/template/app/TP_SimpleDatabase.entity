@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entityObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.myframework.template.app</package>
+    <name>TP_SimpleDatabase</name>
+    <alias>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].alias</alias>
+    <description>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].description</description>
+    <userDefined>true</userDefined>
+    <bosType>F652B930</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.myframework.template.TP_SimpleDatabase</businessImplName>
+    <businessControllerName>com.kingdee.eas.myframework.template.app.TP_SimpleDatabaseController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getValue].description</description>
+            <innerID>caa34024-97fa-404d-8515-ef18bb1ef4ed</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.myframework.template.app.TP_SimpleDatabase</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getValue].description</description>
+            <innerID>7d8892c3-ad3b-46a4-b7f9-710636374e5c</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.myframework.template.app.TP_SimpleDatabase</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>selector</name>
+                    <alias>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getValue].parameters.parameter[selector].alias</alias>
+                    <description>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getValue].parameters.parameter[selector].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SelectorItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getValue].description</description>
+            <innerID>1f44324f-02db-4e30-882d-8a4a9f7caa6e</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.myframework.template.app.TP_SimpleDatabase</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getValue].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getValue].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getCollection].description</description>
+            <innerID>daf8c1d0-5248-4118-bbaa-daefaa1838a0</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.myframework.template.app.TP_SimpleDatabase</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getCollection].description</description>
+            <innerID>430fda06-a222-4000-8540-071baac72580</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.myframework.template.app.TP_SimpleDatabase</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>view</name>
+                    <alias>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getCollection].parameters.parameter[view].alias</alias>
+                    <description>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getCollection].parameters.parameter[view].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.EntityViewInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getCollection].description</description>
+            <innerID>0c286541-d8e4-4fee-b472-0b7cdb735f6d</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.myframework.template.app.TP_SimpleDatabase</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getCollection].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getCollection].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <isAbstract>false</isAbstract>
+    <bizUnitPK>com.kingdee.eas.myframework.template.TP_SimpleDatabase</bizUnitPK>
+    <baseEntity>
+        <key name="package" value="com.kingdee.eas.myframework.template.base.app" />
+        <key name="name" value="SimpleDatabase" />
+    </baseEntity>
+    <table>
+        <key name="package" value="com.kingdee.eas.myframework.template.app" />
+        <key name="name" value="CT_TEM_TP_SimpleDatabase" />
+    </table>
+    <logicalKey>
+        <name>id</name>
+        <alias>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].logicalKey[id].alias</alias>
+        <description>entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].logicalKey[id].description</description>
+        <keyClass>com.kingdee.bos.dao.IObjectPK</keyClass>
+        <userDefined>true</userDefined>
+        <keyProperties>
+            <baseProperty>
+                <key name="name" value="id" />
+            </baseProperty>
+        </keyProperties>
+    </logicalKey>
+    <resource>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="简单基础资料模版" />
+            <lang locale="zh_HK" value="簡單基礎資料模版" />
+            <lang locale="zh_TW" value="簡單基礎資料模版" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单级基础资料模板" />
+            <lang locale="zh_HK" value="單級基礎資料範本" />
+            <lang locale="zh_TW" value="單級基礎資料範本" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].extendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].extendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="name" />
+            <lang locale="zh_CN" value="name" />
+            <lang locale="zh_TW" value="name" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.myframework.template.app.TP_SimpleDatabaseQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.myframework.template.app.TP_SimpleDatabaseQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.myframework.template.app.TP_SimpleDatabaseQuery" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.myframework.template.client.TP_SimpleDatabaseEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.myframework.template.client.TP_SimpleDatabaseEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.myframework.template.client.TP_SimpleDatabaseEditUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].extendedProperty.isSimpleEntity">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].extendedProperty.isUseCodeRule">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.myframework.template.client.TP_SimpleDatabaseListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.myframework.template.client.TP_SimpleDatabaseListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.myframework.template.client.TP_SimpleDatabaseListUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].logicalKey[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].logicalKey[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getCollection].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getCollection].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getCollection].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getCollection].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getCollection].parameters.parameter[view].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getCollection].parameters.parameter[view].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getValue].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getValue].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getValue].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getValue].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getValue].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getValue].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getValue].parameters.parameter[selector].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.template.app.TP_SimpleDatabase].methods.method[getValue].parameters.parameter[selector].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</entityObject>
+

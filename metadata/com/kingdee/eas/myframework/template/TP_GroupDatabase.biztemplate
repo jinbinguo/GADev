@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizTemplate xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.myframework.template</package>
+    <name>TP_GroupDatabase</name>
+    <alias>bizTemplate[com.kingdee.eas.myframework.template.TP_GroupDatabase].alias</alias>
+    <description>bizTemplate[com.kingdee.eas.myframework.template.TP_GroupDatabase].description</description>
+    <userDefined>true</userDefined>
+    <bizType>BaseData</bizType>
+    <template>false</template>
+    <entityPK>com.kingdee.eas.myframework.template.app.TP_GroupDatabase</entityPK>
+    <queryPK>com.kingdee.eas.myframework.template.app.TP_GroupDatabaseQuery</queryPK>
+    <editUIPK>com.kingdee.eas.myframework.template.client.TP_GroupDatabaseEditUI</editUIPK>
+    <listUIPK>com.kingdee.eas.myframework.template.client.TP_GroupDatabaseListUI</listUIPK>
+    <webEditUIPK />
+    <webListUIPK />
+    <entityFunctionPK />
+    <editUIFunctionPK />
+    <listUIFunctionPK />
+    <entryUIPK />
+    <versionDate />
+    <versionNumber />
+    <extendTablePKs />
+    <extendEntityPKs />
+    <extendQueryPKs />
+    <extendEditUIPKs />
+    <extendListUIPKs />
+    <menuPKList />
+    <bimTemplateType>TreeDetail</bimTemplateType>
+    <relatedTablePK>com.kingdee.eas.myframework.template.app.CT_TEM_TP_GroupDatabaseTREE</relatedTablePK>
+    <relatedEntityPK>com.kingdee.eas.myframework.template.app.TP_GroupDatabaseTree</relatedEntityPK>
+    <relatedEditUIPK>com.kingdee.eas.myframework.template.client.TP_GroupDatabaseTreeEditUI</relatedEditUIPK>
+    <genImplementCode>true</genImplementCode>
+    <webEditPagePK />
+    <webListPagePK />
+    <webPagePKS />
+    <webViewPagePK />
+    <webBriefPagePK />
+    <relatedWebEditPagePK />
+    <relatedQueryPK />
+    <resource>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_GroupDatabase].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="分组基础资料模版" />
+            <lang locale="zh_HK" value="分組基礎資料模版" />
+            <lang locale="zh_TW" value="分組基礎資料模版" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_GroupDatabase].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="分组基础资料模板" />
+            <lang locale="zh_HK" value="分組基礎資料範本" />
+            <lang locale="zh_TW" value="分組基礎資料範本" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_GroupDatabase].extendedProperty.BizUnitDeployed">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_GroupDatabase].extendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_GroupDatabase].extendedProperty.bimRelationObjectPK">
+            <lang locale="en_US" value="com.kingdee.bos.bim.templates.app.BizTreeBase" />
+            <lang locale="zh_CN" value="com.kingdee.bos.bim.templates.app.BizTreeBase" />
+            <lang locale="zh_TW" value="com.kingdee.bos.bim.templates.app.BizTreeBase" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_GroupDatabase].extendedProperty.bimTemplateType">
+            <lang locale="en_US" value="TreeDetail" />
+            <lang locale="zh_CN" value="TreeDetail" />
+            <lang locale="zh_TW" value="TreeDetail" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_GroupDatabase].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_GroupDatabase].extendedProperty.configured">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_GroupDatabase].extendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_GroupDatabase].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.myframework.template.app.TP_GroupDatabaseQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.myframework.template.app.TP_GroupDatabaseQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.myframework.template.app.TP_GroupDatabaseQuery" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_GroupDatabase].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.myframework.template.client.TP_GroupDatabaseEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.myframework.template.client.TP_GroupDatabaseEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.myframework.template.client.TP_GroupDatabaseEditUI" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_GroupDatabase].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_GroupDatabase].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_GroupDatabase].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_GroupDatabase].extendedProperty.isSimpleEntity">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_GroupDatabase].extendedProperty.isUseCodeRule">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_GroupDatabase].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.myframework.template.client.TP_GroupDatabaseListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.myframework.template.client.TP_GroupDatabaseListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.myframework.template.client.TP_GroupDatabaseListUI" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_GroupDatabase].extendedProperty.useTableEditUI">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.eas.myframework.template.TP_GroupDatabase].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizTemplate>
+
