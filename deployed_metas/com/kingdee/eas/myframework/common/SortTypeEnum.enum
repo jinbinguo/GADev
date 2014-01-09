@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizEnum xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.myframework.common</package>
+    <name>SortTypeEnum</name>
+    <alias>bizEnum[com.kingdee.eas.myframework.common.SortTypeEnum].alias</alias>
+    <description>bizEnum[com.kingdee.eas.myframework.common.SortTypeEnum].description</description>
+    <userDefined>true</userDefined>
+    <className>com.kingdee.eas.myframework.common.SortTypeEnum</className>
+    <enumDataType>INTEGER</enumDataType>
+    <enumValues>
+        <enumValue>
+            <name>ASC</name>
+            <alias>bizEnum[com.kingdee.eas.myframework.common.SortTypeEnum].enumValues.enumValue[ASC].alias</alias>
+            <userDefined>true</userDefined>
+            <value>0</value>
+        </enumValue>
+        <enumValue>
+            <name>DESC</name>
+            <alias>bizEnum[com.kingdee.eas.myframework.common.SortTypeEnum].enumValues.enumValue[DESC].alias</alias>
+            <userDefined>true</userDefined>
+            <value>1</value>
+        </enumValue>
+    </enumValues>
+    <resource>
+        <rs key="bizEnum[com.kingdee.eas.myframework.common.SortTypeEnum].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="排序类别" />
+            <lang locale="zh_HK" value="排序類別" />
+            <lang locale="zh_TW" value="排序類別" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.myframework.common.SortTypeEnum].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.myframework.common.SortTypeEnum].enumValues.enumValue[ASC].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="顺序" />
+            <lang locale="zh_HK" value="順序" />
+            <lang locale="zh_TW" value="順序" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.myframework.common.SortTypeEnum].enumValues.enumValue[DESC].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="逆序" />
+            <lang locale="zh_HK" value="逆序" />
+            <lang locale="zh_TW" value="逆序" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.myframework.common.SortTypeEnum].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizEnum>
+

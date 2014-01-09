@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relationship xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.myframework.test.app</package>
+    <name>TestGroup_TestGroupTree</name>
+    <alias>relationship[com.kingdee.eas.myframework.test.app.TestGroup_TestGroupTree].alias</alias>
+    <description>relationship[com.kingdee.eas.myframework.test.app.TestGroup_TestGroupTree].description</description>
+    <userDefined>true</userDefined>
+    <type>Association</type>
+    <clientCardinality>1</clientCardinality>
+    <supplierCardinality>0..1</supplierCardinality>
+    <xmlNodeRelationship />
+    <clientObject>
+        <key name="package" value="com.kingdee.eas.myframework.test.app" />
+        <key name="name" value="TestGroup" />
+    </clientObject>
+    <supplierObject>
+        <key name="package" value="com.kingdee.eas.myframework.test.app" />
+        <key name="name" value="TestGroupTree" />
+    </supplierObject>
+    <resource>
+        <rs key="relationship[com.kingdee.eas.myframework.test.app.TestGroup_TestGroupTree].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="基础资料分组关系" />
+            <lang locale="zh_TW" value="基礎資料分組關係" />
+        </rs>
+        <rs key="relationship[com.kingdee.eas.myframework.test.app.TestGroup_TestGroupTree].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="基础资料分组关系" />
+            <lang locale="zh_TW" value="基礎資料分組關係" />
+        </rs>
+    </resource>
+</relationship>
+
