@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entityObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.myframework.demo.app</package>
+    <name>TestEntry</name>
+    <alias>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].alias</alias>
+    <description>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].description</description>
+    <userDefined>true</userDefined>
+    <bosType>EFBE18A9</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.myframework.demo.TestEntry</businessImplName>
+    <businessControllerName>com.kingdee.eas.myframework.demo.app.TestEntryController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getValue].description</description>
+            <innerID>5c308e8e-ec97-43ff-9896-862b728ea7c6</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.myframework.demo.app.TestEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getValue].description</description>
+            <innerID>511b763f-7ef3-41f3-bb7d-a1b4638d4263</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.myframework.demo.app.TestEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>selector</name>
+                    <alias>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getValue].parameters.parameter[selector].alias</alias>
+                    <description>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getValue].parameters.parameter[selector].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SelectorItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getValue].description</description>
+            <innerID>74e9acf2-c3e4-4bca-92ef-d131a287ee64</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.myframework.demo.app.TestEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getValue].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getValue].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getCollection].description</description>
+            <innerID>fddd2a20-2476-49f2-a97e-e7271cab8b7e</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.myframework.demo.app.TestEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getCollection].description</description>
+            <innerID>f9968464-1311-4671-8d0e-a8b80a81d2bb</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.myframework.demo.app.TestEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>view</name>
+                    <alias>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getCollection].parameters.parameter[view].alias</alias>
+                    <description>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getCollection].parameters.parameter[view].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.EntityViewInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getCollection].description</description>
+            <innerID>39ee29df-7c93-42f9-9fd0-0f8318efef9b</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.myframework.demo.app.TestEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getCollection].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getCollection].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <isAbstract>false</isAbstract>
+    <bizUnitPK>com.kingdee.eas.myframework.demo.Test</bizUnitPK>
+    <baseEntity>
+        <key name="package" value="com.kingdee.eas.framework.app" />
+        <key name="name" value="CoreBillEntryBase" />
+    </baseEntity>
+    <table>
+        <key name="package" value="com.kingdee.eas.myframework.demo.app" />
+        <key name="name" value="CT_DEM_TestEntry" />
+    </table>
+    <properties>
+        <linkProperty>
+            <name>parent</name>
+            <alias>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.linkProperty[parent].alias</alias>
+            <description>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.linkProperty[parent].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FParentID" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.myframework.demo.app" />
+                <key name="name" value="R_Test_TestEntry_entrys" />
+            </relationship>
+        </linkProperty>
+        <ownProperty>
+            <name>BIMUDF0001</name>
+            <alias>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0001].alias</alias>
+            <description>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0001].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>100</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0001].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFBIMUDF0001" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>BIMUDF0002</name>
+            <alias>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0002].alias</alias>
+            <description>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0002].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Enum</dataType>
+            <metadataRef>com.kingdee.eas.myframework.common.SortTypeEnum</metadataRef>
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>80</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0002].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFBIMUDF0002" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>BIMUDF0003</name>
+            <alias>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0003].alias</alias>
+            <description>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0003].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Boolean</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>1</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0003].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFBIMUDF0003" />
+            </mappingField>
+        </ownProperty>
+    </properties>
+    <logicalKey>
+        <name>id</name>
+        <alias>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].logicalKey[id].alias</alias>
+        <description>entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].logicalKey[id].description</description>
+        <keyClass>com.kingdee.bos.dao.IObjectPK</keyClass>
+        <userDefined>true</userDefined>
+        <keyProperties>
+            <baseProperty>
+                <key name="name" value="id" />
+            </baseProperty>
+        </keyProperties>
+    </logicalKey>
+    <resource>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="分录" />
+            <lang locale="zh_HK" value="分錄" />
+            <lang locale="zh_TW" value="分錄" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].logicalKey[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].logicalKey[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getCollection].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getCollection].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getCollection].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getCollection].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getCollection].parameters.parameter[view].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getCollection].parameters.parameter[view].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getValue].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getValue].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getValue].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getValue].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getValue].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getValue].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getValue].parameters.parameter[selector].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].methods.method[getValue].parameters.parameter[selector].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.linkProperty[parent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据头" />
+            <lang locale="zh_HK" value="單據頭" />
+            <lang locale="zh_TW" value="單據頭" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.linkProperty[parent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0001].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="BIMUDF0001" />
+            <lang locale="zh_HK" value="BIMUDF0001" />
+            <lang locale="zh_TW" value="BIMUDF0001" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0001].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0001].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="BIMUDF0001" />
+            <lang locale="zh_HK" value="BIMUDF0001" />
+            <lang locale="zh_TW" value="BIMUDF0001" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0001].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0001].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0001].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0001].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0001].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0001].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0001].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0001].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0001].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0002].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="BIMUDF0002" />
+            <lang locale="zh_HK" value="BIMUDF0002" />
+            <lang locale="zh_TW" value="BIMUDF0002" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0002].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ASC" />
+            <lang locale="zh_HK" value="ASC" />
+            <lang locale="zh_TW" value="ASC" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0002].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="BIMUDF0002" />
+            <lang locale="zh_HK" value="BIMUDF0002" />
+            <lang locale="zh_TW" value="BIMUDF0002" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0002].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0002].extendedProperty.bizDataType">
+            <lang locale="en_US" value="ENUM" />
+            <lang locale="zh_CN" value="ENUM" />
+            <lang locale="zh_TW" value="ENUM" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0002].extendedProperty.defaultValue">
+            <lang locale="en_US" value="ASC" />
+            <lang locale="zh_CN" value="ASC" />
+            <lang locale="zh_TW" value="ASC" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0002].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0002].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0002].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0002].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0002].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0002].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0002].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0003].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="BIMUDF0003" />
+            <lang locale="zh_HK" value="BIMUDF0003" />
+            <lang locale="zh_TW" value="BIMUDF0003" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0003].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0003].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="BIMUDF0003" />
+            <lang locale="zh_HK" value="BIMUDF0003" />
+            <lang locale="zh_TW" value="BIMUDF0003" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0003].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0003].extendedProperty.bizDataType">
+            <lang locale="en_US" value="BOOLEAN" />
+            <lang locale="zh_CN" value="BOOLEAN" />
+            <lang locale="zh_TW" value="BOOLEAN" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0003].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0003].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0003].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0003].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0003].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0003].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.myframework.demo.app.TestEntry].properties.ownProperty[BIMUDF0003].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</entityObject>
+
