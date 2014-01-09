@@ -1,0 +1,1213 @@
+package com.kingdee.eas.scm.cal.client;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ItemEvent;
+import java.math.BigDecimal;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import org.apache.log4j.Logger;
+
+import com.kingdee.bos.BOSException;
+import com.kingdee.bos.Context;
+import com.kingdee.bos.ctrl.kdf.table.IRow;
+import com.kingdee.bos.ctrl.kdf.table.KDTable;
+import com.kingdee.bos.dao.IObjectPK;
+import com.kingdee.bos.dao.ormapping.ObjectUuidPK;
+import com.kingdee.bos.metadata.entity.SelectorItemCollection;
+import com.kingdee.bos.metadata.entity.SelectorItemInfo;
+import com.kingdee.bos.util.BOSUuid;
+import com.kingdee.eas.base.codingrule.CodingRuleManagerFactory;
+import com.kingdee.eas.base.codingrule.ICodingRuleManager;
+import com.kingdee.eas.base.permission.UserInfo;
+import com.kingdee.eas.basedata.assistant.ISystemStatusCtrol;
+import com.kingdee.eas.basedata.assistant.PeriodInfo;
+import com.kingdee.eas.basedata.assistant.SystemStatusCtrolFactory;
+import com.kingdee.eas.basedata.assistant.SystemStatusCtrolUtils;
+import com.kingdee.eas.basedata.scm.common.BillTypeInfo;
+import com.kingdee.eas.basedata.scm.im.inv.StoreStateFactory;
+import com.kingdee.eas.basedata.scm.im.inv.StoreTypeFactory;
+import com.kingdee.eas.common.EASBizException;
+import com.kingdee.eas.common.client.SysContext;
+import com.kingdee.eas.framework.SystemEnum;
+import com.kingdee.eas.scm.cal.CalculateKindEnum;
+import com.kingdee.eas.scm.cal.CostAdjustBillEntryInfo;
+import com.kingdee.eas.scm.cal.CostAdjustBillFactory;
+import com.kingdee.eas.scm.cal.CostAdjustBillInfo;
+import com.kingdee.eas.scm.cal.DevolveApportionRuleEnum;
+import com.kingdee.eas.scm.cal.DevolveWriteOffFacadeFactory;
+import com.kingdee.eas.scm.cal.DevolveWriteOffStandardEnum;
+import com.kingdee.eas.scm.cal.ICostAdjustBill;
+import com.kingdee.eas.scm.cal.IDevolveWriteOffFacade;
+import com.kingdee.eas.scm.cal.info.DevolveInWarehsBillInfo;
+import com.kingdee.eas.scm.cal.info.DevolveMatReqBillInfo;
+import com.kingdee.eas.scm.cal.info.DevolveWriteOffResultInfo;
+import com.kingdee.eas.scm.cal.info.ReturnInfo;
+import com.kingdee.eas.scm.cal.util.CalculateUtil;
+import com.kingdee.eas.scm.common.BillBaseStatusEnum;
+import com.kingdee.eas.scm.common.EntryBaseStatusEnum;
+import com.kingdee.eas.scm.im.inv.MaterialReqBillEntryFactory;
+import com.kingdee.eas.scm.im.inv.MaterialReqBillEntryInfo;
+import com.kingdee.eas.scm.im.inv.MaterialReqBillFactory;
+import com.kingdee.eas.scm.im.inv.MaterialReqBillInfo;
+import com.kingdee.eas.util.client.EASResource;
+import com.kingdee.eas.util.client.MsgBox;
+
+public class DevolveWriteOffUICTEx extends DevolveWriteOffUI {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static Logger logger = Logger
+			.getLogger("com.kingdee.eas.scm.cal.client.DevolveWriteOffUICTEx");
+	private List<String> materialIdList;
+	private DevolveWriteOffStandardEnum writeOffStandard;
+	private boolean isSameSign;
+	private int topSignNum;
+
+	public DevolveWriteOffUICTEx() throws Exception {
+		super();
+		logger.info("=====材料核销=====");
+		materialIdList = new ArrayList<String>();
+		isSameSign = true;
+	}
+
+	/**
+	 * 核销标准值改变
+	 */
+	protected void writeOffStandardChanged(ItemEvent e) {
+		super.writeOffStandardChanged(e);
+		writeOffStandard = (DevolveWriteOffStandardEnum) cmbWriteOffStandard
+				.getSelectedItem();
+	}
+
+	/**
+	 * 核销
+	 */
+	public void actionWriteOff_actionPerformed(ActionEvent e) throws Exception {
+		logger.info("=====核销=====");
+		// super.actionWriteOff_actionPerformed(e);
+		// 入库单是否有选择
+		boolean topSelected = isSelected(topKdtable);
+		// 发料单是否有选择
+		boolean botSelected = isSelected(bottomKdTable);
+		// 校验
+		if (!beforeWriteOffCheck(topSelected, botSelected)) {
+			return;
+		}
+		// 获取当前登录用户
+		UserInfo user = SysContext.getSysContext().getCurrentUserInfo();
+		// 判断权限
+		if (!CalculateUtil.isAuthoriedForOrg(getCompanyOrgUnitID(), user
+				.getId().toString(), "DevMatWriteOff")) {
+			// 你没有该财务组织的核销权限！
+			showWarningMessage(
+					"com.kingdee.eas.scm.cal.ManualWriteOffResource.",
+					"isWriteOff");
+			return;
+		}
+
+		IRow row = null;
+		// 选择的入库单List
+		java.util.List<DevolveInWarehsBillInfo> DevolveInWarehs = new ArrayList<DevolveInWarehsBillInfo>();
+		for (int i = 0; topSelected
+				&& i < topKdtable.getBody().getRows().size(); i++) {
+			row = topKdtable.getRow(i);
+			if (Boolean.TRUE.equals(row.getCell("selected").getValue())) {
+				DevolveInWarehsBillInfo vo = buildDevolveInWarehsInfo(row);
+				DevolveInWarehs.add(vo);
+			}
+		}
+
+		// 选择的发料单List
+		java.util.List<DevolveMatReqBillInfo> DevolveMatReq = new ArrayList<DevolveMatReqBillInfo>();
+		for (int i = 0; botSelected
+				&& i < bottomKdTable.getBody().getRows().size(); i++) {
+			row = bottomKdTable.getRow(i);
+			if (Boolean.TRUE.equals(row.getCell("selected").getValue())
+					&& materialIdList.indexOf((String) row.getCell(
+							"materialNumber").getValue()) < 0) {
+				DevolveMatReqBillInfo vo = buildDevolveMatReqInfo(row);
+				DevolveMatReq.add(vo);
+			}
+		}
+		// 单向核销增加逻辑
+		DevolveWriteOffStandardEnum writeOffStandard = (DevolveWriteOffStandardEnum) cmbWriteOffStandard
+		.getSelectedItem();
+		if (writeOffStandard == DevolveWriteOffStandardEnum.SELF_WRITEOFF &&DevolveMatReq.size()>0) {
+			boolean flag =false;
+		if (MsgBox.showConfirm2("委外发料单将生成成本调整单,是否继续?") == 0) {		
+			flag=selfWriteOff(DevolveMatReq);
+			}
+		if(flag==false)
+		{
+			return;
+		}
+}
+		// 发料手工核销分摊依据(按数量\按金额)
+		DevolveApportionRuleEnum appRule = (DevolveApportionRuleEnum) cmbApportionRule
+				.getSelectedItem();
+		// 发料核销信息
+		DevolveWriteOffResultInfo info = new DevolveWriteOffResultInfo();
+		info.setCompanyOrgUnitID(getCompanyOrgUnitID());
+		info.setWriteOffStandard(writeOffStandard.getValue());
+//		SysContext.getSysContext().getCurrentUser()
+		info.setApportionRule(appRule.getValue());
+		info.setDevInWarehsList(DevolveInWarehs);
+		info.setDevMaterialReqList(DevolveMatReq);
+		// 委外发料核销
+		IDevolveWriteOffFacade devWriteOffFacade = DevolveWriteOffFacadeFactory
+				.getRemoteInstanceWithObjectContext(getMainOrgContext());
+		ReturnInfo writeOffResult = devWriteOffFacade.devolveWriteOff(info);
+		// 核销结果处理
+		if (writeOffResult.isSuccess()) {
+			// 刷新
+			actionRefresh_actionPerformed(e);
+			StringBuffer detailMessage = new StringBuffer();
+			// 部分单据核销失败，具体原因见详细信息。
+			String errMsg = EASResource
+					.getString("com.kingdee.eas.scm.cal.ManualWriteOffResource.WriteOffError");
+			String numberStr = writeOffResult.getUnWriteOffInWarehsNums();
+			if (numberStr != null && numberStr.length() > 0) {
+				detailMessage.append("\u4E0B\u5217\u5355\u636E\uFF1A\n")
+						.append(numberStr).append("\n");
+				// 由于发料不够，核销失败
+				detailMessage
+						.append(EASResource
+								.getString("com.kingdee.eas.scm.cal.ManualWriteOffResource.NotEnoughMaterial"));
+				MsgBox.showDetailAndOK(this, errMsg, detailMessage.toString(),
+						8188);
+				return;
+			}
+			if (materialIdList.size() > 0) {
+				detailMessage.append("\u4E0B\u5217\u7269\u6599\uFF1A\n");
+				for (int i = 0; i < materialIdList.size(); i++)
+					detailMessage.append((String) materialIdList.get(i))
+							.append("\n");
+				// 发料单正负核销数量不相等，核销失败
+				detailMessage
+						.append(EASResource
+								.getString("com.kingdee.eas.scm.cal.ManualWriteOffResource.RedAndBlueIsNotSameQty"));
+				MsgBox.showDetailAndOK(this, errMsg, detailMessage.toString(),
+						8188);
+				return;
+			}
+			// 核销成功
+			showMessage("com.kingdee.eas.scm.cal.ManualWriteOffResource.",
+					"writeOffSuccess");
+		} else {
+			// 选中的记录不满足核销条件，核销失败
+			showMessage("com.kingdee.eas.scm.cal.ManualWriteOffResource.",
+					"writeOffAlert");
+		}
+	}
+
+	/**
+	 * 增加单向核销逻辑
+	 * 
+	 * @throws BOSException
+	 * @throws EASBizException
+	 */
+	@SuppressWarnings("unchecked")
+	private boolean selfWriteOff(List DevolveMatReq) throws EASBizException,
+			BOSException {
+		/* ===========单向核销,生成成本调整单========== */
+		DevolveWriteOffStandardEnum writeOffStandard = (DevolveWriteOffStandardEnum) cmbWriteOffStandard
+				.getSelectedItem();
+		if (writeOffStandard == DevolveWriteOffStandardEnum.SELF_WRITEOFF) {
+			// 单向核销
+				List<String> supplieridList = new ArrayList<String>();
+				List<String> processMateridList = new ArrayList<String>();
+				Map<String, CostAdjustBillInfo> costAdjInfoMap = new HashMap<String, CostAdjustBillInfo>();
+				Map<String, CostAdjustBillEntryInfo> processMateridMap = new HashMap<String,CostAdjustBillEntryInfo>();
+				for (int i = 0; i < DevolveMatReq.size(); i++) {
+					DevolveMatReqBillInfo devolveMatReqBillInfo = (DevolveMatReqBillInfo) DevolveMatReq
+							.get(i);
+					String supplierId = devolveMatReqBillInfo.getSupplierId();
+					if (supplierId == null) {
+						MsgBox.showInfo("供应商为空");
+						return false;
+					}
+//					if (supplierId == null) {
+//						MsgBox.showInfo("供应商为空");
+//						return false;
+//					}
+					CostAdjustBillInfo costAdjInfo = null;
+					ISystemStatusCtrol ictrol = SystemStatusCtrolFactory.getRemoteInstance();
+					PeriodInfo currPeriod = ictrol.getCacheCurrentPeriod((new Integer(SystemEnum.
+					INVENTORYMANAGEMENT.getValue())).intValue(), getCompanyOrgUnitID().toString());
+					if (supplieridList.indexOf(supplierId) < 0) {
+						supplieridList.add(supplierId);
+						costAdjInfo = new CostAdjustBillInfo();
+						String billId = devolveMatReqBillInfo.getBillId();
+						if (billId == null) {
+							return false;
+						}
+						SelectorItemCollection selector = new SelectorItemCollection();
+						selector.add(new SelectorItemInfo("*"));
+						selector.add(new SelectorItemInfo("supplier.*"));// 查询供应商
+						selector.add(new SelectorItemInfo("storageOrgUnit.*"));// 库存组织
+						selector.add(new SelectorItemInfo("adminOrgUnit.*"));// 部门
+						selector.add(new SelectorItemInfo("costCenterOrgUnit.*"));// 成本中心
+						MaterialReqBillInfo materialReqBillInfo = MaterialReqBillFactory
+								.getRemoteInstance().getMaterialReqBillInfo(
+										new ObjectUuidPK(billId), selector);
+						Date endDate =currPeriod.getEndDate();
+						costAdjInfo.setBizDate(endDate);// 业务日期
+						costAdjInfo.setCalculateKind(CalculateKindEnum.INPUT_WAREHOUSE);// 业务类型入库
+						costAdjInfo.setDescription("委外核销自动生成");// 备注
+						costAdjInfo.setBaseStatus(BillBaseStatusEnum.TEMPORARILYSAVED);// 单据状态保存
+						costAdjInfo.setSupplier(materialReqBillInfo.getSupplier());// 供应商
+						costAdjInfo.setStorageOrgUnit(materialReqBillInfo.getStorageOrgUnit());// 库存组织
+						costAdjInfo.setAdminOrgUnit(materialReqBillInfo.getAdminOrgUnit());// 部门
+						costAdjInfo.setCostCenterOrgUnit(materialReqBillInfo.getCostCenterOrgUnit());// 成本中心
+						BillTypeInfo billTypeInfo = new BillTypeInfo();
+						billTypeInfo.setId(BOSUuid.read("3a3b5446-0106-1000-e000-01bcc0a812e6463ED552"));
+						costAdjInfo.setBillType(billTypeInfo);
+						costAdjInfo.setHasEffected(false);
+						Timestamp d = currPeriod.getEndDate();
+						int day = currPeriod.getNumber()*100+d.getDate();
+						costAdjInfo.setPeriod(currPeriod.getPeriodNumber());
+						costAdjInfo.setYear(currPeriod.getPeriodYear());
+						costAdjInfo.setMonth(currPeriod.getNumber());
+						costAdjInfo.setDay(day);
+//						costAdjInfo.setMonth();
+//						costAdjInfo.setTransactionType(materialReqBillInfo.getTransactionType());
+						costAdjInfoMap.put(supplierId, costAdjInfo);
+					} else {
+						costAdjInfo = costAdjInfoMap.get(supplierId);
+					}
+					String entryId = devolveMatReqBillInfo.getEntryId();
+					if (entryId == null) {
+						return false;
+					}
+					SelectorItemCollection entrySelector = new SelectorItemCollection();
+					entrySelector.add(new SelectorItemInfo("*"));
+					entrySelector.add(new SelectorItemInfo("costObject.*"));// 成本对象
+					entrySelector.add(new SelectorItemInfo("warehouse.*"));// 仓库
+					entrySelector.add(new SelectorItemInfo("location.*"));// 库位
+					entrySelector.add(new SelectorItemInfo("material.*"));// 物料
+					entrySelector.add(new SelectorItemInfo("parent.*"));// 
+					MaterialReqBillEntryInfo materialReqBillEntryInfo = MaterialReqBillEntryFactory
+							.getRemoteInstance().getMaterialReqBillEntryInfo(new ObjectUuidPK(entryId), entrySelector);
+					CostAdjustBillEntryInfo costAdjEntryInfo = new CostAdjustBillEntryInfo();
+					//物料编码合并
+					String materialNumber = devolveMatReqBillInfo.getLot();
+					if (processMateridList.indexOf(materialNumber) < 0) {	
+						processMateridList.add(materialNumber);
+					costAdjEntryInfo.setSourceBillEntryId(materialReqBillEntryInfo.getId().toString());
+					costAdjEntryInfo.setCostObject(materialReqBillEntryInfo.getCostObject());// 成本对象
+					costAdjEntryInfo.setMaterial(materialReqBillEntryInfo.getProcessMaterial());// 物料加工件
+					costAdjEntryInfo.setAmount(materialReqBillEntryInfo.getActualCost());// 调整金额实际成本
+					costAdjEntryInfo.setStoreType(StoreTypeFactory.getRemoteInstance().getStoreTypeInfo(
+									" where name = '普通'"));// 库存类型普通
+					costAdjEntryInfo.setStoreStatus(StoreStateFactory.getRemoteInstance().getStoreStateInfo(
+									" where name = '可用'"));// 库存状态可用
+					costAdjEntryInfo.setWarehouse(materialReqBillEntryInfo.getWarehouse());// 仓库
+					costAdjEntryInfo.setLocation(materialReqBillEntryInfo.getLocation());// 库位
+					costAdjEntryInfo.setStandardCost(materialReqBillEntryInfo.getActualCost());
+					costAdjEntryInfo.setActualCost(materialReqBillEntryInfo.getActualCost());
+					costAdjEntryInfo.setParent(costAdjInfo);
+					costAdjEntryInfo.setUnit(materialReqBillEntryInfo.getUnit());
+					costAdjEntryInfo.setStorageOrgUnit(materialReqBillEntryInfo.getStorageOrgUnit());
+					costAdjEntryInfo.setCompanyOrgUnit(materialReqBillEntryInfo.getCompanyOrgUnit());
+					costAdjEntryInfo.setSourceBillEntrySeq(materialReqBillEntryInfo.getSourceBillEntrySeq());
+					costAdjEntryInfo.setBaseStatus(EntryBaseStatusEnum.TEMPORARILYSAVED);
+					processMateridMap.put(materialNumber, costAdjEntryInfo);
+					costAdjInfo.getEntry().add(costAdjEntryInfo);
+					} else{
+					costAdjEntryInfo= processMateridMap.get(materialNumber);
+					costAdjEntryInfo.setAmount(costAdjEntryInfo.getAmount().add(materialReqBillEntryInfo.getActualCost()));
+//					costAdjEntryInfo.setStandardCost(costAdjEntryInfo.getStandardCost().add(materialReqBillEntryInfo.getActualCost()));
+//					costAdjEntryInfo.setActualCost(costAdjEntryInfo.getActualCost().add(materialReqBillEntryInfo.getActualCost()));
+					}
+
+				}
+				Collection<CostAdjustBillInfo> costAdjInfoCollection = costAdjInfoMap
+						.values();
+				Iterator<CostAdjustBillInfo> costAdjInfoIterator = costAdjInfoCollection
+						.iterator();
+				
+				while (costAdjInfoIterator.hasNext()) {
+					CostAdjustBillInfo costAdjustBillInfo = costAdjInfoIterator.next();
+					// 根据编码规则获取编码(成本调整单)
+					String adjustNum = this.getNumber(costAdjustBillInfo);
+					costAdjustBillInfo.setNumber(adjustNum);
+					ICostAdjustBill iCostAdjustBill=CostAdjustBillFactory.getRemoteInstance();
+//					Context ctxAR = iCostAdjustBill.getContext();
+//					//不设置权限
+//					ctxAR.put("disablePermissionForKScript", Boolean.TRUE);
+//					iCostAdjustBill = CostAdjustBillFactory.getRemoteInstanceWithObjectContext(ctxAR);	
+					IObjectPK billPk = (ObjectUuidPK)iCostAdjustBill.submit(costAdjustBillInfo);	
+					DevolveWriteOffFacadeFactory.getRemoteInstance().updateMaterialReqBill(billPk.toString());
+					//					CostAdjustBillInfo billInfo = (CostAdjustBillInfo) CostAdjustBillFactory
+//							.getRemoteInstance().getValue(billPk);
+//					logger.info("=======billInfo = " + billInfo.getNumber());
+					//CostAdjustBillFactory.getRemoteInstance().submit(billInfo)
+					// ;
+//					if (billInfo.getEntry() != null
+//							&& billInfo.getEntry().size() > 0) {
+//						String maReqBillEntryId = billInfo.getEntry().get(0)
+//								.getSourceBillEntryId();
+//						logger.info("=====" + maReqBillEntryId);
+//						MaterialReqBillEntryInfo materialReqBillEntryInfo1 = MaterialReqBillEntryFactory
+//								.getRemoteInstance().getMaterialReqBillEntryInfo(
+//										new ObjectUuidPK(maReqBillEntryId));
+//						materialReqBillEntryInfo1.setIsAdjust(true);// 核销成本调整
+//						materialReqBillEntryInfo1.setAdjustNum(adjustNum);// 调整单单号
+//						MaterialReqBillEntryFactory.getRemoteInstance().update(
+//								new ObjectUuidPK(materialReqBillEntryInfo1.getId()),
+//								materialReqBillEntryInfo1);
+//					}
+				}
+				return true;
+		}
+		return true;
+	}
+
+	/**
+	 * 根据编码规则获取编码(成本调整单)
+	 * 
+	 * @param costAdjInfo
+	 * @return
+	 * @throws EASBizException
+	 * @throws BOSException
+	 */
+	private String getNumber(CostAdjustBillInfo costAdjInfo)
+			throws EASBizException, BOSException {
+		String companyID = SysContext.getSysContext().getCurrentAdminUnit()
+				.getId().toString();
+		ICodingRuleManager iCodingRuleManager = CodingRuleManagerFactory
+				.getRemoteInstance();
+		String sysNumber = null;
+		// 判断规则是否存在
+		if (iCodingRuleManager.isExist(costAdjInfo, companyID)) {
+			// 是否启用断号支持
+			if (iCodingRuleManager.isUseIntermitNumber(costAdjInfo, companyID)) {
+				// 读取当前最新编码
+				sysNumber = iCodingRuleManager.readNumber(costAdjInfo,
+						companyID);
+			} else {
+				// 没有启用断号支持功能，则获取编码规则产生的编码
+				sysNumber = iCodingRuleManager
+						.getNumber(costAdjInfo, companyID);
+			}
+		}
+		return sysNumber;
+	}
+
+	/**
+	 * 核销校验
+	 * 
+	 * @param topSelected
+	 * @param botSelected
+	 * @return
+	 */
+	@SuppressWarnings("unchecked")
+	private boolean beforeWriteOffCheck(boolean topSelected, boolean botSelected) {
+		Map topMap = getMaterialTotalQty(topKdtable, "materialNumber");
+		Map botMap = getMaterialTotalQty(bottomKdTable, "materialNumber");
+		java.util.List errList = new ArrayList();
+		materialIdList.clear();
+
+		if (writeOffStandard == DevolveWriteOffStandardEnum.MANUAL_WRITEOFF) {
+			// 手工核销
+			if (!topSelected && !botSelected) {
+				// 请先选择记录行！
+				showWarningMessage(
+						"com.kingdee.eas.framework.FrameWorkResource.",
+						"Msg_MustSelected");
+				return false;
+			}
+			if (!isCompanyOrgUnit(topKdtable, bottomKdTable)) {
+				// 参与核销的记录必须在同一个财务组织下,请重新选择
+				showWarningMessage(
+						"com.kingdee.eas.scm.cal.ManualWriteOffResource.",
+						"companyUnitAlert");
+				return false;
+			}		
+			if (topSelected && !isAmountZero(topKdtable)) {
+				// 存在材料成本为零的单据，不允许按金额分摊！
+				showWarningMessage(
+						"com.kingdee.eas.scm.cal.ManualWriteOffResource.",
+						"ExistAmountZero");
+				return false;
+			}
+			// if (topSelected && !isSameQtySign(topMap)) {
+			// // 委外入库单的存在正负属性相反的物料，不允许核销！
+			// showWarningMessage(
+			// "com.kingdee.eas.scm.cal.ManualWriteOffResource.",
+			// "upIsNotSameQtySign");
+			// return false;
+			// }
+			// logger.info("======" + isSameSign);
+			// if (topSelected && botSelected && isSameSign
+			// && !isSameSignBill(bottomKdTable)) {
+			// // 选择的发料单的红蓝属性与入库单的不一致，不允许核销！
+			// showWarningMessage(
+			// "com.kingdee.eas.scm.cal.ManualWriteOffResource.",
+			// "allIsNotSameQtySign");
+			// return false;
+			// }
+			// if (topSelected && botSelected && !isSameSignUpAndDown(botMap)) {
+			// // 同时存在正负数单据，但是存在正负属性相反的物料，不允许核销！
+			// showWarningMessage(
+			// "com.kingdee.eas.scm.cal.ManualWriteOffResource.",
+			// "upAndDownIsNotSameQtySign");
+			// return false;
+			// }
+			if (!isNullMaterial(topKdtable,bottomKdTable)) {
+				//加工物料不能为空
+				return false;
+			}
+			if (!topSelected && botSelected && !isSameQty(botMap)) {
+				// 发料单正负核销数量不相等，核销失败
+				showWarningMessage(
+						"com.kingdee.eas.scm.cal.ManualWriteOffResource.",
+						"RedAndBlueIsNotSameQty");
+				return false;
+			}
+			if (topSelected && !botSelected) {
+				// 手工核销时，必须选择委外发料单！
+				showWarningMessage(
+						"com.kingdee.eas.scm.cal.ManualWriteOffResource.",
+						"NotSupportInWarehsSelfWriteOff");
+				return false;
+			}
+			if (topSelected && botSelected
+					&& !isSameProcessCompany(topKdtable, bottomKdTable)) {
+				// 不为相同的加工单位，不允许核销
+				showWarningMessage(
+						"com.kingdee.eas.scm.cal.ManualWriteOffResource.",
+						"NotSameSupplier");
+				return false;
+			}
+			if (topSelected && botSelected
+					&& !isSameMaterial(topKdtable, bottomKdTable)) {
+				// 不为相同的加工物料，不允许核销
+				String message = "不为相同的加工物料，不允许核销";
+				MsgBox.showWarning(this, message);
+				return false;
+			}
+			//存在负数的加工单位
+			if (topSelected && botSelected
+					&& !isSignumDown(topKdtable, bottomKdTable)) {
+				String message = "存在负数的加工物料，不允许核销";
+				MsgBox.showWarning(this, message);
+				return false;
+			}
+			//存在实际成本为负数的加工单位
+			if(topSelected && botSelected
+					&& !isSignumActual(topKdtable, bottomKdTable)){
+				String message = "存在实际成本为负数的单据,不允许核销";
+				MsgBox.showWarning(this, message);
+				return false;
+			}
+			//存在入库数量为负的加工单位
+			if(topSelected && botSelected
+					&& !isSignumQty(topKdtable, bottomKdTable)){
+				String message = "入库单物料汇总数量小于零,不允许核销";
+				MsgBox.showWarning(this, message);
+				return false;
+			}
+		} else if (writeOffStandard == DevolveWriteOffStandardEnum.SELF_WRITEOFF) {
+			// 单向核销
+			if (!topSelected && !botSelected) {
+				// 请先选择记录行！
+				showWarningMessage(
+						"com.kingdee.eas.framework.FrameWorkResource.",
+						"Msg_MustSelected");
+				return false;
+			}
+			if (!isCompanyOrgUnit(topKdtable, bottomKdTable)) {
+				// 参与核销的记录必须在同一个财务组织下,请重新选择
+				showWarningMessage(
+						"com.kingdee.eas.scm.cal.ManualWriteOffResource.",
+						"companyUnitAlert");
+				return false;
+			}
+			if (!isNullMaterial(topKdtable,bottomKdTable)) {
+				//物料不能为空
+				return false;
+			}
+			if (!isNullCompanyOrg(topKdtable,bottomKdTable)) {
+				//仓库不能为空
+				return false;
+			}
+		} else {
+			// 按订单核销
+			if (!topSelected) {
+				// 请先选择记录行！
+				showWarningMessage(
+						"com.kingdee.eas.framework.FrameWorkResource.",
+						"Msg_MustSelected");
+				return false;
+			}
+			if (!isCompanyOrgUnit(topKdtable, bottomKdTable)) {
+				// 参与核销的记录必须在同一个财务组织下,请重新选择
+				showWarningMessage(
+						"com.kingdee.eas.scm.cal.ManualWriteOffResource.",
+						"companyUnitAlert");
+				return false;
+			}
+			
+			if (!isExistCoreBill(topKdtable, errList)) {
+				// 不存在核心单据号，不能按发料清单核销！
+				String errBillNumber = "";
+				for (int i = 0; i < errList.size(); i++)
+					errBillNumber = (new StringBuilder()).append(errBillNumber)
+							.append(errList.get(i)).append("\n").toString();
+
+				String message = EASResource
+						.getString("com.kingdee.eas.scm.cal.ManualWriteOffResource.NotExistCoreBill");
+				MsgBox.showWarning(this, (new StringBuilder()).append(
+						errBillNumber).append(message).toString());
+				return false;
+			}
+		}
+		return true;
+	}
+
+	/**
+	 * 按金额分摊时，判断是否有材料成本为零的入库单
+	 * 
+	 * @param tbl
+	 * @return
+	 */
+	private boolean isAmountZero(KDTable tbl) {
+		DevolveApportionRuleEnum appRule = (DevolveApportionRuleEnum) cmbApportionRule
+				.getSelectedItem();
+		int count = tbl.getBody().getRows().size();
+		IRow row = null;
+		if (appRule == DevolveApportionRuleEnum.AMOUNT) {
+			for (int i = 0; i < count; i++) {
+				row = tbl.getRow(i);
+				if (row.getCell("selected").getValue() == null
+						|| !Boolean.TRUE.equals(row.getCell("selected")
+								.getValue()))
+					continue;
+				BigDecimal qtyTotal = (BigDecimal) row.getCell("materialCost")
+						.getValue();
+				if (qtyTotal == null
+						|| qtyTotal.compareTo(CalculateUtil.ZERO) == 0)
+					return false;
+			}
+
+		}
+		return true;
+	}
+
+	/**
+	 * 委外入库单的存在正负属性相反的物料
+	 */
+	@SuppressWarnings("unchecked")
+	protected boolean isSameQtySign(Map topMap) {
+		logger.info("=====isSameQtySign=====");
+		BigDecimal qty1 = null;
+		BigDecimal qty2 = null;
+		Iterator it = topMap.values().iterator();
+		if (it.hasNext()) {
+			qty1 = (BigDecimal) it.next();
+			logger.info("=====qty1 = " + qty1);
+		}
+		logger.info("=====" + qty1.signum());
+		if (qty1.signum() == 0) {
+			return false;
+		}
+		while (it.hasNext()) {
+			qty2 = (BigDecimal) it.next();
+			logger.info("=====qty2 = " + qty2);
+			logger.info("=====" + qty2.signum());
+			if (qty2.signum() == 0 || qty2.signum() != qty1.signum()) {
+				return false;
+			}
+		}
+		topSignNum = qty1.signum();
+		return true;
+	}
+
+	
+	
+	/**
+	 * 选择的发料单的红蓝属性与入库单的不一致
+	 */
+
+	@SuppressWarnings("unused")
+	private boolean isSameSignBill(KDTable tbl) {
+		logger.info("=====isSameSignBill=====");
+		int count = tbl.getBody().getRows().size();
+		IRow row = null;
+		BigDecimal qtyTotal = null;
+		for (int i = 0; i < count; i++) {
+			row = tbl.getRow(i);
+			if (row.getCell("selected").getValue() == null
+					|| !Boolean.TRUE.equals(row.getCell("selected").getValue())) {
+				continue;
+			}
+			logger
+					.info("======"
+							+ row.getCell("curWriteOffBaseQty").getValue());
+			qtyTotal = row.getCell("curWriteOffBaseQty").getValue() != null ? (BigDecimal) row
+					.getCell("curWriteOffBaseQty").getValue()
+					: CalculateUtil.ZERO;
+			logger.info("=====" + qtyTotal);
+			logger.info("=====" + topSignNum);
+			if (topSignNum != qtyTotal.signum()) {
+				return false;
+			}
+		}
+
+		return true;
+	}
+
+	/**
+	 * 同时存在正负数单据，但是存在正负属性相反的物料
+	 */
+	@SuppressWarnings("unchecked")
+	protected boolean isSameSignUpAndDown(Map botMap) {
+		logger.info("=====isSameSignUpAndDown=====");
+		BigDecimal qty = null;
+		for (Iterator it = botMap.values().iterator(); it.hasNext();) {
+			qty = (BigDecimal) it.next();
+			logger.info("=====qty = " + qty);
+			logger.info("=====topSignNum = " + topSignNum);
+			if (qty.signum() == 0 || qty.signum() != topSignNum) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	/**
+	 * 判断上下分录所选单据的加工单位是否一致
+	 * 
+	 * @param topTable
+	 * @param botTable
+	 * @return
+	 */
+	private boolean isSameProcessCompany(KDTable topTable, KDTable botTable) {
+		logger.info("===isSameProcessCompany===");
+		boolean isSame = true;
+		int topCount = topTable.getBody().getRows().size();
+		int botCount = botTable.getBody().getRows().size();
+		Object tmpObj = null;
+		IRow row = null;
+		for (int i = 0; i < topCount; i++) {
+			row = topTable.getRow(i);
+			if (row.getCell("selected").getValue() == null
+					|| !Boolean.TRUE.equals(row.getCell("selected").getValue())) {
+				continue;
+			}
+			if (row.getCell("processCompany").getValue() == null) {
+				isSame = false;
+				return isSame;
+			}
+			if (tmpObj == null) {
+				tmpObj = row.getCell("processCompany").getValue();
+				continue;
+			}
+			if (!tmpObj.equals(row.getCell("processCompany").getValue())) {
+				isSame = false;
+				return isSame;
+			}
+			for (int j = 0; j<botCount;j++){
+				row = botTable.getRow(j);
+			}
+		}
+
+		for (int j = 0; j < botCount; j++) {
+			row = botTable.getRow(j);
+			if (row.getCell("selected").getValue() == null
+					|| !Boolean.TRUE.equals(row.getCell("selected").getValue())) {
+				continue;
+			}
+			if (row.getCell("SuppliersName").getValue() == null) {
+				isSame = false;
+				return isSame;
+			}
+			if (tmpObj == null) {
+				tmpObj = row.getCell("SuppliersName").getValue();
+				continue;
+			}
+			if (!tmpObj.equals(row.getCell("SuppliersName").getValue())) {
+				isSame = false;
+				return isSame;
+			}
+		}
+
+		return isSame;
+	}
+
+	/**
+	 * 是否存在负数的加工单位
+	 * 
+	 * @param topTable
+	 * @param botTable
+	 * @return
+	 */
+	private boolean isSignumDown(KDTable topTable, KDTable botTable) {
+		logger.info("===isSameProcessCompany===");
+		boolean isSame = true;
+		int botCount = botTable.getBody().getRows().size();		
+		IRow row = null;
+		Map<String,BigDecimal> materialReqMap = new HashMap<String,BigDecimal>();
+		BigDecimal tmpQty = null;
+		for (int i = 0; i < botCount; i++) {
+			row = botTable.getRow(i);
+			if (row.getCell("selected").getValue() == null
+					|| !Boolean.TRUE.equals(row.getCell("selected").getValue())) {
+				continue;
+			}
+			String processMaterialNumber = (String) row.getCell("processMaterialNumber").getValue();
+			BigDecimal qty =  (BigDecimal) row.getCell("baseQty").getValue();
+			tmpQty = materialReqMap.get(processMaterialNumber);
+			if (tmpQty == null) {
+				tmpQty = qty;
+			} else {
+				tmpQty = tmpQty.add(qty);
+			}
+			materialReqMap.put(processMaterialNumber, tmpQty);
+//			Iterator abc = materialReqMap.entrySet().iterator();
+//			while(abc.hasNext()){
+//			Object o = abc.next();
+//			String key = o.toString();
+
+		}
+	Iterator it= materialReqMap.entrySet().iterator();
+	while (it.hasNext()) {
+		java.util.Map.Entry entry = (java.util.Map.Entry)it.next();
+		BigDecimal val = (BigDecimal) entry.getValue();
+		if(val.compareTo(BigDecimal.ZERO)<0)
+			return false;
+	}
+		return isSame;
+	}
+	
+
+	 /**
+	  * 是否存在入库数量为负
+	  * @param topTable
+	  * @param botTable
+	  * @return
+	  */
+	private boolean isSignumQty(KDTable topTable, KDTable botTable) {
+		logger.info("===isSameProcessCompany===");
+		boolean isSame = true;
+		int TopCount = topTable.getBody().getRows().size();		
+		IRow row = null;
+		Map<String,BigDecimal> materialReqMap = new HashMap<String,BigDecimal>();
+		BigDecimal tmpQty = null;
+		for (int i = 0; i < TopCount; i++) {
+			row = topTable.getRow(i);
+			if (row.getCell("selected").getValue() == null
+					|| !Boolean.TRUE.equals(row.getCell("selected").getValue())) {
+				continue;
+			}
+			String materialNumber = (String) row.getCell("materialNumber").getValue();
+			BigDecimal qty =  (BigDecimal) row.getCell("qty").getValue();
+			tmpQty = materialReqMap.get(materialNumber);
+			if (tmpQty == null) {
+				tmpQty = qty;
+			} else {
+				tmpQty = tmpQty.add(qty);
+			}
+			materialReqMap.put(materialNumber, tmpQty);
+		}
+	Iterator it= materialReqMap.entrySet().iterator();
+	while (it.hasNext()) {
+		java.util.Map.Entry entry = (java.util.Map.Entry)it.next();
+		BigDecimal val = (BigDecimal) entry.getValue();
+		if(val.compareTo(BigDecimal.ZERO)<=0)
+			return false;
+	}
+		return isSame;
+	}
+	
+	 /**
+	  * 是否存在实际成本为负
+	  * @param topTable
+	  * @param botTable
+	  * @return
+	  */
+	private boolean isSignumActual(KDTable topTable, KDTable botTable) {
+		logger.info("===isSameProcessCompany===");
+		boolean isSame = true;
+		int botCount = botTable.getBody().getRows().size();		
+		IRow row = null;
+		Map<String,BigDecimal> materialReqMap = new HashMap<String,BigDecimal>();
+		BigDecimal tmpQty = null;
+		for (int i = 0; i < botCount; i++) {
+			row = botTable.getRow(i);
+			if (row.getCell("selected").getValue() == null
+					|| !Boolean.TRUE.equals(row.getCell("selected").getValue())) {
+				continue;
+			}
+			String processMaterialNumber = (String) row.getCell("processMaterialNumber").getValue();
+			BigDecimal qty =  (BigDecimal) row.getCell("actualCost").getValue();
+			tmpQty = materialReqMap.get(processMaterialNumber);
+			if (tmpQty == null) {
+				tmpQty = qty;
+			} else {
+				tmpQty = tmpQty.add(qty);
+			}
+			materialReqMap.put(processMaterialNumber, tmpQty);
+//			Iterator abc = materialReqMap.entrySet().iterator();
+//			while(abc.hasNext()){
+//			Object o = abc.next();
+//			String key = o.toString();
+
+		}
+	Iterator it= materialReqMap.entrySet().iterator();
+	while (it.hasNext()) {
+		java.util.Map.Entry entry = (java.util.Map.Entry)it.next();
+		BigDecimal val = (BigDecimal) entry.getValue();
+		if(val.compareTo(BigDecimal.ZERO)<0)
+			return false;
+	}
+		return isSame;
+	}
+	
+	//如果加工物料一致
+	private boolean isSameMaterial(KDTable topTable, KDTable botTable) {
+		boolean isSame = true;
+		int topCount = topTable.getBody().getRows().size();
+		int botCount = botTable.getBody().getRows().size();
+		String tmpObj = null;
+		IRow row = null;
+		List<String> upMaterialList = new ArrayList<String>();
+		List<String> downMaterialList = new ArrayList<String>();
+		for (int i = 0; i < topCount; i++) {
+			row = topTable.getRow(i);
+			if (row.getCell("selected").getValue() == null
+					|| !Boolean.TRUE.equals(row.getCell("selected").getValue())) {
+				continue;
+			}
+			if (row.getCell("materialNumber").getValue() == null) {
+				isSame = false;
+				return isSame;
+			}
+			tmpObj = row.getCell("materialNumber").getValue().toString();
+			logger.info("=====up = " + tmpObj);
+			upMaterialList.add(tmpObj);
+		}
+		for (int j = 0; j < botCount; j++) {
+			row = botTable.getRow(j);
+			if (row.getCell("selected").getValue() == null
+					|| !Boolean.TRUE.equals(row.getCell("selected").getValue())) {
+				continue;
+			}
+			if (row.getCell("processMaterialNumber").getValue() == null) {
+				isSame = false;
+				return isSame;
+			}
+			tmpObj = row.getCell("processMaterialNumber").getValue().toString();
+			logger.info("=====down = " + tmpObj);
+			downMaterialList.add(tmpObj);
+		}
+		if (!checkMaterialList(upMaterialList, downMaterialList)) {
+			isSame = false;
+			return isSame;
+		}
+		return isSame;
+	}
+
+	//核对上下物料编号LIST是否相等
+	private boolean checkMaterialList(List<String> upMaterialList,
+			List<String> downMaterialList) {
+		String materialNum = null;
+		for (int i = 0; i < upMaterialList.size(); i++) {
+			materialNum = upMaterialList.get(i);
+			logger.info("=====up = " + materialNum);
+			if (downMaterialList.indexOf(materialNum) == -1) {
+				return false;
+			}
+		}
+		for (int j = 0; j < downMaterialList.size(); j++) {
+			materialNum = downMaterialList.get(j);
+			logger.info("=====down = " + materialNum);
+			if (upMaterialList.indexOf(materialNum) == -1) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	/**
+	 * 按订单核销时,校验所有选择的入库单行是否有源单据(委外订单)
+	 * 
+	 * @param tbl
+	 * @param errList
+	 * @return
+	 */
+	private boolean isExistCoreBill(KDTable tbl, List<Object> errList) {
+		int count = tbl.getBody().getRows().size();
+		IRow row = null;
+		for (int i = 0; i < count; i++) {
+			row = tbl.getRow(i);
+			if (row.getCell("selected").getValue() != null
+					&& Boolean.TRUE.equals(row.getCell("selected").getValue())
+					&& row.getCell("coreBillEntryId").getValue() == null)
+				errList.add(row.getCell("number").getValue());
+		}
+
+		return errList.size() == 0;
+	}
+
+	/**
+	 * 根据所选的入库单分录的行数据构建入库单info
+	 * 
+	 * @param row
+	 * @return
+	 */
+	private DevolveInWarehsBillInfo buildDevolveInWarehsInfo(IRow row) {
+		String entryId = (String) row.getCell("entryId").getValue();
+		DevolveInWarehsBillInfo info = new DevolveInWarehsBillInfo(entryId);
+		info.setCurWriteOffBaseQty((BigDecimal) row.getCell(
+				"curWriteOffBaseQty").getValue());
+		info.setBillId((String) row.getCell("billId").getValue());
+		info.setNumber((String) row.getCell("number").getValue());
+		info.setBizDate((Timestamp) row.getCell("bizDate").getValue());
+		info.setBillType((String) row.getCell("billType").getValue());
+		info.setQty((BigDecimal) row.getCell("qty").getValue());
+		info.setBaseQty((BigDecimal) row.getCell("baseQty").getValue());
+		info.setMaterialCost((BigDecimal) row.getCell("materialCost")
+				.getValue());
+		info.setUnitMaterialCost((BigDecimal) row.getCell("unitMaterialCost")
+				.getValue());
+		info.setCoreBillType((String) row.getCell("coreBillType").getValue());
+		info.setCoreBillNumber((String) row.getCell("coreBillNumber")
+				.getValue());
+		info.setCoreBillEntrySeq((new Integer(row.getCell("coreBillEntrySeq")
+				.getValue().toString())).intValue());
+		info.setCoreBillId((String) row.getCell("coreBillId").getValue());
+		info.setCoreBillEntryId((String) row.getCell("coreBillEntryId")
+				.getValue());
+		info.setMaterialId((String) row.getCell("materialId").getValue());
+		info.setCompanyOrgUnitID((String) row.getCell("companyOrgUnitId")
+				.getValue());
+		info.setStorageOrgUnitId((String) row.getCell("storageOrgUnitId")
+				.getValue());
+		info.setWareHouseID((String) row.getCell("wareHouseID").getValue());
+		info.setPrecision((new Integer(row.getCell("precision").getValue()
+				.toString())).intValue());
+		info.setPricePrecision((new Integer(row.getCell("pricePrecision")
+				.getValue().toString())).intValue());
+		info.setQtyPrecision((new Integer(row.getCell("qtyPrecision")
+				.getValue().toString())).intValue());
+		info.setBaseQtyPrecision((new Integer(row.getCell("baseQtyPrecision")
+				.getValue().toString())).intValue());
+		info.setBaseUnitID((String) row.getCell("baseUnitId").getValue());
+		info
+				.setYear((new Integer(row.getCell("bizYear").getValue()
+						.toString())).intValue());
+		info.setPeriod((new Integer(row.getCell("bizPeriod").getValue()
+				.toString())).intValue());
+		info.setDevUnWriteOffBaseQty((BigDecimal) row.getCell(
+				"unWriteOffBaseQty").getValue());
+		info.setDevUnWriteOffQty((BigDecimal) row.getCell("unWriteOffQty")
+				.getValue());
+		info.setDevWriteOffBaseQty((BigDecimal) row.getCell("writeOffBaseQty")
+				.getValue());
+		info.setDevWriteOffQty((BigDecimal) row.getCell("writeOffQty")
+				.getValue());
+		info.setLot((String) row.getCell("lot").getValue());
+		info.setSeq((new Integer(row.getCell("seq").getValue().toString()))
+				.intValue());
+		Integer isPresent = new Integer(0);
+		if (row.getCell("isPresent").getValue() != null)
+			isPresent = new Integer(row.getCell("isPresent").getValue()
+					.toString());
+		info.setPresent(isPresent.intValue() == 1);
+		info.setFiVouchered((new Integer(null != row.getCell("fiVouchered")
+				.getValue() ? row.getCell("fiVouchered").getValue().toString()
+				: "0")).intValue() == 1);
+		info.setTransactionTypeID((String) row.getCell("transactionTypeID")
+				.getValue());
+		info.setSupplierId((String) row.getCell("supplierId").getValue());
+		info.setReverseQty((BigDecimal) row.getCell("reverseQty").getValue());
+		boolean isReversed = false;
+		if (row.getCell("isReversed").getValue() != null)
+			isReversed = (new BigDecimal(row.getCell("isReversed").getValue()
+					.toString())).compareTo(CalculateUtil.ZERO) != 0;
+		info.setReversed(isReversed);
+		info.setTax((BigDecimal) row.getCell("tax").getValue());
+		info.setLocalTax((BigDecimal) row.getCell("localTax").getValue());
+		info.setExchangeRate((BigDecimal) row.getCell("exchangeRate")
+				.getValue());
+		info.setCurrencyID((String) row.getCell("currencyID").getValue());
+		info.setBaseConvsRate((BigDecimal) row.getCell("baseConvsRate")
+				.getValue());
+		return info;
+	}
+
+	
+	/**
+	 * 根据所选的发料单分录的行数据构建发料单info
+	 * 
+	 * @param row
+	 * @return
+	 */
+	private DevolveMatReqBillInfo buildDevolveMatReqInfo(IRow row) {
+		String entryId = (String) row.getCell("entryId").getValue();// 分录id
+		DevolveMatReqBillInfo info = new DevolveMatReqBillInfo(entryId);
+		BigDecimal curWriteOffBaseQty = row.getCell("curWriteOffBaseQty")
+				.getValue() != null ? (BigDecimal) row.getCell(
+				"curWriteOffBaseQty").getValue() : CalculateUtil.ZERO;
+		info.setCurWriteOffBaseQty(curWriteOffBaseQty);// 核销基本数量
+		info.setBillId((String) row.getCell("billId").getValue());// billId
+		info.setNumber((String) row.getCell("number").getValue());// 单据编号
+		info.setBizDate((Timestamp) row.getCell("bizDate").getValue());// 业务日期
+		info.setBillType((String) row.getCell("billType").getValue());// 单据类型
+		info.setQty((BigDecimal) row.getCell("qty").getValue());// 数量
+		info.setBaseQty((BigDecimal) row.getCell("baseQty").getValue());// 基本数量
+		info.setActualCost((BigDecimal) row.getCell("actualCost").getValue());// 实际成本
+		info.setUnitActualCost((BigDecimal) row.getCell("unitActualCost")
+				.getValue());
+		info.setCoreBillType((String) row.getCell("coreBillType").getValue());
+		info.setCoreBillNumber((String) row.getCell("coreBillNumber")
+				.getValue());
+		info.setCoreBillEntrySeq((new Integer(row.getCell("coreBillEntrySeq")
+				.getValue().toString())).intValue());
+		info.setCoreBillId((String) row.getCell("coreBillId").getValue());
+		info.setCoreBillEntryId((String) row.getCell("coreBillEntryId")
+				.getValue());
+		info.setMaterialId((String) row.getCell("materialId").getValue());
+		info.setCompanyOrgUnitID((String) row.getCell("companyOrgUnitId")
+				.getValue());
+		info.setStorageOrgUnitId((String) row.getCell("storageOrgUnitId")
+				.getValue());
+		info.setWareHouseID((String) row.getCell("wareHouseID").getValue());
+		info.setPrecision((new Integer(row.getCell("precision").getValue()
+				.toString())).intValue());
+		info.setPricePrecision((new Integer(row.getCell("pricePrecision")
+				.getValue().toString())).intValue());
+		info.setQtyPrecision((new Integer(row.getCell("qtyPrecision")
+				.getValue().toString())).intValue());
+		info.setBaseQtyPrecision((new Integer(row.getCell("baseQtyPrecision")
+				.getValue().toString())).intValue());
+		info.setBaseUnitID((String) row.getCell("baseUnitId").getValue());
+		info
+				.setYear((new Integer(row.getCell("bizYear").getValue()
+						.toString())).intValue());
+		info.setPeriod((new Integer(row.getCell("bizPeriod").getValue()
+				.toString())).intValue());
+		info.setDevUnWriteOffBaseQty((BigDecimal) row.getCell(
+				"unWriteOffBaseQty").getValue());
+		info.setDevUnWriteOffQty((BigDecimal) row.getCell("unWriteOffQty")
+				.getValue());
+		info.setDevWriteOffBaseQty((BigDecimal) row.getCell("writeOffBaseQty")
+				.getValue());
+		info.setDevWriteOffQty((BigDecimal) row.getCell("writeOffQty")
+				.getValue());
+		info.setHasWriteOffBaseQty(CalculateUtil.ZERO);
+		info.setHasWriteOffQty(CalculateUtil.ZERO);
+		info.setCurrWriteOffTotalAmount(CalculateUtil.ZERO);
+		info.setDevWriteOffAmount((BigDecimal) row.getCell("writeOffAmount")
+				.getValue());
+		info.setDevUnWriteOffAmount((BigDecimal) row
+				.getCell("unWriteOffAmount").getValue());
+		info.setLot((String) row.getCell("processMaterialNumber").getValue());
+		info.setSeq((new Integer(row.getCell("seq").getValue().toString()))
+				.intValue());
+		Integer isPresent = new Integer(0);
+		if (row.getCell("isPresent").getValue() != null)
+			isPresent = new Integer(row.getCell("isPresent").getValue()
+					.toString());
+		info.setPresent(isPresent.intValue() == 1);
+		info.setFiVouchered((new Integer(null != row.getCell("fiVouchered")
+				.getValue() ? row.getCell("fiVouchered").getValue().toString()
+				: "0")).intValue() == 1);
+		info.setTransactionTypeID((String) row.getCell("transactionTypeID")
+				.getValue());
+		info.setSupplierId((String) row.getCell("supplierId").getValue());
+		info.setReverseQty((BigDecimal) row.getCell("reverseQty").getValue());
+		boolean isReversed = false;
+		if (row.getCell("isReversed").getValue() != null)
+			isReversed = (new BigDecimal(row.getCell("isReversed").getValue()
+					.toString())).compareTo(CalculateUtil.ZERO) != 0;
+		info.setReversed(isReversed);
+		info.setBaseConvsRate((BigDecimal) row.getCell("baseConvsRate")
+				.getValue());
+		return info;
+	}
+
+	/**
+	 * 消息提示
+	 * 
+	 * @param resourcePath
+	 * @param key
+	 */
+	private void showMessage(String resourcePath, String key) {
+		setMessageText(EASResource.getString((new StringBuilder()).append(
+				resourcePath).append(key).toString()));
+		boolean oldbln = isShowTextOnly();
+		setIsShowTextOnly(false);
+		setShowMessagePolicy(3);
+		showMessage();
+		setIsShowTextOnly(oldbln);
+	}
+
+	/**
+	 * 消息提示
+	 * 
+	 * @param resourcePath
+	 * @param key
+	 */
+	private void showWarningMessage(String resourcePath, String key) {
+		String message = EASResource.getString((new StringBuilder()).append(
+				resourcePath).append(key).toString());
+		MsgBox.showWarning(this, message);
+	}
+	
+	//判断加工物料是否为空
+	private boolean isNullMaterial(KDTable topKdtable,KDTable bottomKdTable){
+      for(int i=0;i<topKdtable.getRowCount();i++){
+    	 IRow row= topKdtable.getRow(i); 
+ //   	   BigDecimal abc =(BigDecimal)row.getCell("isReversed").getValue();
+    	  if (Boolean.TRUE.equals(row.getCell("selected").getValue())&& 
+    			  row.getCell("materialNumber").getValue() == null){
+    		 MsgBox.showInfo("入库单选中的物料编码不能为空");
+    		 return false;
+			  }
+      }
+      for(int i=0;i<bottomKdTable.getRowCount();i++){
+    	  IRow row = bottomKdTable.getRow(i);
+    	  if (Boolean.TRUE.equals(row.getCell("selected").getValue())&& 
+    			   row.getCell("processMaterialNumber").getValue() == null){
+     		 MsgBox.showInfo("发料单选中的加工物料编码不能为空");
+    		 return false;
+    	  }
+      }
+	return true;   
+
+	}
+	
+	//判断仓库是否为空
+	private boolean isNullCompanyOrg(KDTable topKdtable,KDTable bottomKdTable){
+      for(int i=0;i<topKdtable.getRowCount();i++){
+    	  IRow row = topKdtable.getRow(i);
+    	  if (Boolean.TRUE.equals(row.getCell("selected").getValue())
+    			     &&row.getCell("wareHouseID").getValue() == null){
+     		 MsgBox.showInfo("入库单选中的仓库不能为空");
+    		 return false;
+    	  }
+      }
+      for(int i=0;i<bottomKdTable.getRowCount();i++){
+    	  IRow row = bottomKdTable.getRow(i);
+    	  if (Boolean.TRUE.equals(row.getCell("selected").getValue())&& 
+						row.getCell("wareHouseID").getValue() == null){
+     		 MsgBox.showInfo("发料单选中的仓库不能为空");
+    		 return false;
+    	  }
+      }
+	return true;   
+
+	}
+}
