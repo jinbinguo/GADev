@@ -317,8 +317,7 @@ public class GroupDatabaseEditUI extends AbstractGroupDatabaseEditUI {
 			} catch (Throwable e1) {
 			}
 			setOprtState("ADDNEW");
-			IObjectValue value = getUILifeCycleHandler().innerCreateNewData(
-					createNewData());
+			IObjectValue value = createNewData();
 			if (value != null) {
 				setDataObject(value);
 			} else {

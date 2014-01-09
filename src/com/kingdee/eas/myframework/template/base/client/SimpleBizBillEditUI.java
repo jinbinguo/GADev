@@ -379,8 +379,7 @@ public abstract class SimpleBizBillEditUI extends AbstractSimpleBizBillEditUI
 			} catch (Throwable e1) {
 			}
 			setOprtState("ADDNEW");
-			IObjectValue value = getUILifeCycleHandler().innerCreateNewData(
-					createNewData());
+			IObjectValue value = createNewData();
 			if (value != null) {
 				setDataObject(value);
 			} else {
