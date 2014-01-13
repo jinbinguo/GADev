@@ -15,17 +15,34 @@
 		<jar destfile="jars/ex_framework-client.jar" basedir="classes" includes="com/kingdee/eas/myframework/**" excludes="**/app/*.*, *.jar"/>
 		<jar destfile="jars/ex_framework-server.jar" basedir="classes" includes="com/kingdee/eas/myframework/**" excludes="**/client/*.*, *.jar"/>
 		
+		<!-- GA 模块-->
+		<jar destfile="jars/ex_ga-client.jar" basedir="classes" includes="com/kingdee/eas/ga/**" excludes="**/app/*.*, *.jar"/>
+		<jar destfile="jars/ex_ga-server.jar" basedir="classes" includes="com/kingdee/eas/ga/**" excludes="**/client/*.*, *.jar"/>
+				
 		
 		<!-- 剩余模块-->
-		<jar destfile="jars/ex_other-client.jar" basedir="classes" includes="com/**" excludes="com/kingdee/eas/myframework/**,**/app/*.*, *.jar"/>
-		<jar destfile="jars/ex_other-server.jar" basedir="classes" includes="com/**" excludes="com/kingdee/eas/myframework/**,**/client/*.*, *.jar"/>
+		<jar destfile="jars/ex_other-client.jar" basedir="classes" includes="com/**" 
+			excludes="com/kingdee/eas/myframework/**,
+			com/kingdee/eas/ga/**,
+			**/app/*.*, *.jar"/>
+		<jar destfile="jars/ex_other-server.jar" basedir="classes" includes="com/**" 
+			excludes="com/kingdee/eas/myframework/**,
+			com/kingdee/eas/ga/**,
+			**/client/*.*, *.jar"/>
 		
 		<!--==========================from deployed_metas ================================-->
 		<!-- EAS扩展框架-->
 		<jar destfile="jars/ex_framework-metas.jar" basedir="deployed_metas" includes="com/kingdee/eas/myframework/**" excludes="*.jar"/>
 		
+		<!-- GA 模块-->
+		<jar destfile="jars/ex_ga-metas.jar" basedir="deployed_metas" includes="com/kingdee/eas/ga/**" excludes="*.jar"/>
+
 		<!-- 剩余模块-->
-		<jar destfile="jars/ex_other-metas.jar" basedir="deployed_metas" includes="com/**,/**" excludes="com/kingdee/eas/myframework/**,*.jar,*.mdbview"/>
+		<jar destfile="jars/ex_other-metas.jar" basedir="deployed_metas" includes="com/**,/**" 
+			excludes="com/kingdee/eas/myframework/**,
+			com/kingdee/eas/ga/**,
+			*.jar,*.mdbview"/>
+		
 		<!-- 子系统树-->
 		<jar destfile="jars/ex_mdview-metas.jar" basedir="deployed_metas" includes="/*.mdbview" excludes="com/**,*.jar"/>
 		
