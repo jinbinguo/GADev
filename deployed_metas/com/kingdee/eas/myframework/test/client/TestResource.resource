@@ -77,6 +77,11 @@
             <value>i18nResource[com.kingdee.eas.myframework.test.client.TestResource].resourceItems.resourceItem[TestTree2QueryF7WindowTitle].value</value>
             <userDefined>true</userDefined>
         </resourceItem>
+        <resourceItem>
+            <name>AAAQueryF7WindowTitle</name>
+            <value>i18nResource[com.kingdee.eas.myframework.test.client.TestResource].resourceItems.resourceItem[AAAQueryF7WindowTitle].value</value>
+            <userDefined>true</userDefined>
+        </resourceItem>
     </resourceItems>
     <resource>
         <rs key="i18nResource[com.kingdee.eas.myframework.test.client.TestResource].alias">
@@ -90,6 +95,12 @@
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="i18nResource[com.kingdee.eas.myframework.test.client.TestResource].resourceItems.resourceItem[AAAQueryF7WindowTitle].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="AAA" />
+            <lang locale="zh_HK" value="AAA" />
+            <lang locale="zh_TW" value="AAA" />
         </rs>
         <rs key="i18nResource[com.kingdee.eas.myframework.test.client.TestResource].resourceItems.resourceItem[Test001QueryF7WindowTitle].value">
             <lang locale="en_US" value="null" />

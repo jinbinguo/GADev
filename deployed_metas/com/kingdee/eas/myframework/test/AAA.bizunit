@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizUnit xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.myframework.test</package>
+    <name>AAA</name>
+    <alias>bizUnit[com.kingdee.eas.myframework.test.AAA].alias</alias>
+    <description>bizUnit[com.kingdee.eas.myframework.test.AAA].description</description>
+    <userDefined>true</userDefined>
+    <bizType>BusinessBill</bizType>
+    <template>false</template>
+    <entityPK>com.kingdee.eas.myframework.test.app.AAA</entityPK>
+    <queryPK>com.kingdee.eas.myframework.test.app.AAAQuery</queryPK>
+    <editUIPK>com.kingdee.eas.myframework.test.client.AAAEditUI</editUIPK>
+    <listUIPK>com.kingdee.eas.myframework.test.client.AAAListUI</listUIPK>
+    <webEditUIPK />
+    <webListUIPK />
+    <entityFunctionPK />
+    <editUIFunctionPK>com.kingdee.eas.myframework.test.app.AAAEditUIFunction</editUIFunctionPK>
+    <listUIFunctionPK>com.kingdee.eas.myframework.test.app.AAAListUIFunction</listUIFunctionPK>
+    <entryUIPK />
+    <versionDate />
+    <versionNumber />
+    <extendTablePKs />
+    <extendEntityPKs />
+    <extendQueryPKs />
+    <extendEditUIPKs />
+    <extendListUIPKs />
+    <menuPKList />
+    <bimTemplateType>MCoreBillBase</bimTemplateType>
+    <relatedTablePK />
+    <relatedEntityPK />
+    <relatedEditUIPK />
+    <genImplementCode>true</genImplementCode>
+    <webEditPagePK />
+    <webListPagePK />
+    <webPagePKS />
+    <webViewPagePK />
+    <webBriefPagePK />
+    <relatedWebEditPagePK />
+    <relatedQueryPK />
+    <resource>
+        <rs key="bizUnit[com.kingdee.eas.myframework.test.AAA].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="AAA" />
+            <lang locale="zh_HK" value="AAA" />
+            <lang locale="zh_TW" value="AAA" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.myframework.test.AAA].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.myframework.test.AAA].extendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.myframework.test.AAA].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizUnit>
+
