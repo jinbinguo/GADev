@@ -308,7 +308,7 @@ public class SimpleBizBillListUI extends AbstractSimpleBizBillListUI {
     	String status = bizEnumStatus == null ? "0" : (String) bizEnumStatus.getStateManager().getStateValue("value");
     	String statusName =  bizEnumStatus == null ? "" : bizEnumStatus.getAlias();
     	if (!"1".equals(status) && !"2".equals(status)) {
-    		throw new EASBizException(new NumericExceptionSubItem("",String.format("已%s的数据不允许编辑!",statusName)));
+    		throw new EASBizException(new NumericExceptionSubItem("",String.format("%s的数据不允许编辑!",statusName)));
     	}
 
 		

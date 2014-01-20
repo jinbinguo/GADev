@@ -149,7 +149,6 @@ public abstract class SimpleBizBillEditUI extends AbstractSimpleBizBillEditUI
 		txtNumber.setRequired(true);
 		RequireCompCollection requireCompCol = new RequireCompCollection();
 		requireCompCol.add(pkBizDate);
-		requireCompCol.add(kdtEntrys,"lineDesc");
 		return requireCompCol;
 	}
 	/**

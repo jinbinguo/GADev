@@ -1,7 +1,10 @@
 package com.kingdee.eas.myframework.util;
 
 import java.awt.Color;
+import java.io.PrintWriter;
 import java.io.Serializable;
+import java.io.StringWriter;
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -30,7 +33,11 @@ public class PublicUtils implements Serializable {
 	public static final Color CANCELCANCEL_COLOR = new Color(151, 203, 255);
 	
 	public static final String CRYPTO_KEY = "I'M JINBIN_GUO";
-
+	
+	public static final BigDecimal BIGDECIMAL0 = BigDecimal.ZERO;
+	public static final BigDecimal BIGDECIMAL100 = new BigDecimal(100.00);
+	public static final BigDecimal BIGDECIMAL1 = BigDecimal.ONE;
+	
 	/**
 	 * 比较两个对象是否一样
 	 * @param obj1
@@ -75,6 +82,9 @@ public class PublicUtils implements Serializable {
 	public static boolean isEmpty(Map map) {
 		return map == null || map.isEmpty();
 	}
+	public static boolean isEmpty(String str) {
+		return str == null || "".equals(str);
+	}
 	
 	public static String[] setToString(Set<String> set) {
 		if (set == null || set.isEmpty()) return null;
@@ -103,4 +113,13 @@ public class PublicUtils implements Serializable {
 		}
 		return pks;
 	}
+	
+    public static String getStackTrace(Throwable t) {
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw, true);
+        t.printStackTrace(pw);
+        pw.flush();
+        sw.flush();
+        return sw.toString();
+    }
 }

@@ -272,6 +272,7 @@ public abstract class AbstractSimpleBizBillListUI extends com.kingdee.eas.framew
     {
         this.toolBar.add(btnAddNew);
         this.toolBar.add(btnCloud);
+        this.toolBar.add(btnXunTong);
         this.toolBar.add(btnView);
         this.toolBar.add(kDSeparatorCloud);
         this.toolBar.add(btnEdit);

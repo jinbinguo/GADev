@@ -1,33 +1,22 @@
 package com.kingdee.eas.myframework.util;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.math.BigDecimal;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Vector;
 
-import jxl.Cell;
-import jxl.Sheet;
-import jxl.Workbook;
-import jxl.read.biff.BiffException;
-import jxl.write.Label;
-import jxl.write.WritableSheet;
-import jxl.write.WritableWorkbook;
-import jxl.write.WriteException;
-import jxl.write.biff.RowsExceededException;
-
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFRow;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.poifs.filesystem.POIFSFileSystem;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.util.NumericExceptionSubItem;
@@ -35,33 +24,56 @@ import com.kingdee.util.StringUtils;
 
 public class ExcelUtils {
 
-    private HSSFWorkbook wb;  
+    private Workbook  wb; 
+    private FileInputStream inputStream;
+    private File file;
     
-    public ExcelUtils() {
-    	wb = new HSSFWorkbook();
+    public ExcelUtils(boolean isOverExcel2007) {
+    	if (isOverExcel2007) 
+    		wb = new XSSFWorkbook();
+    	else
+    		wb = new HSSFWorkbook();
+    	
     }
     
-    public HSSFSheet createSheet(String sheetName) {
+    public ExcelUtils(File file) throws Exception {
+    	this.file = file;
+    	inputStream = new FileInputStream (file);
+    	if (isOverExcel2007(file.getName())) 
+    		wb = new XSSFWorkbook(inputStream);
+    	else
+    		wb = new HSSFWorkbook(inputStream);
+    }
+    
+    public boolean isOverExcel2007(String fileName) throws Exception {
+    	if (fileName.toLowerCase().endsWith(".xls"))
+    		return false;
+    	else if (fileName.toLowerCase().endsWith(".xlsx"))
+    		return true;
+    	else throw new Exception("文件格式不正确！");
+    }
+    
+    public Sheet createSheet(String sheetName) {
     	if (StringUtils.isEmpty(sheetName)) sheetName = "Sheet1";
-    	HSSFSheet sheet = wb.createSheet(sheetName);
+    	Sheet sheet = wb.createSheet(sheetName);
     	return sheet;   	
     }
-    public void createCellValue(HSSFSheet sheet, int rowIndex,int cellIndex, String value) {
+    public void createCellValue(Sheet sheet, int rowIndex,int cellIndex, String value) {
     	if (value == null) return;
-    	HSSFRow row = sheet.getRow(rowIndex);
+    	Row row = sheet.getRow(rowIndex);
     	if (row == null) row = sheet.createRow(rowIndex);
-    	HSSFCell cell = row.getCell(cellIndex);
+    	Cell cell = row.getCell(cellIndex);
     	if (cell == null) cell = row.createCell(cellIndex);
     	cell.setCellValue(value);
     	
     }
-    public void createCellValue(HSSFSheet sheet, int rowIndex,int cellIndex, Date value) {
+    public void createCellValue(Sheet sheet, int rowIndex,int cellIndex, Date value) {
     	if (value == null) return;
-    	HSSFRow row = sheet.getRow(rowIndex);
+    	Row row = sheet.getRow(rowIndex);
     	if (row == null) row = sheet.createRow(rowIndex);
-    	HSSFCell cell = row.getCell(cellIndex);
+    	Cell cell = row.getCell(cellIndex);
     	if (cell == null) cell = row.createCell(cellIndex);
-    	cell.setCellType(HSSFCell.CELL_TYPE_NUMERIC);
+    	cell.setCellType(Cell.CELL_TYPE_NUMERIC);
     	SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
     	cell.setCellValue(sf.format(value));
     }
@@ -71,15 +83,11 @@ public class ExcelUtils {
     	 out.close();
     }
     
-    
-    public ExcelUtils(InputStream is) {
-    	try {  
-    		POIFSFileSystem fs = new POIFSFileSystem(is);  
-            wb = new HSSFWorkbook(fs);  
-        } catch (IOException e) {  
-            e.printStackTrace();  
-        }  
+    public String getFileName() {
+    	return file.getName();
     }
+    
+    
    
     
     public String[] getAllSheetName() {
@@ -88,7 +96,7 @@ public class ExcelUtils {
     	Vector<String> vecSheetName = new Vector<String>();
     	while (true) {
     		try {
-	    		HSSFSheet sheet = wb.getSheetAt(i);
+	    		Sheet sheet = wb.getSheetAt(i);
 	    		if (sheet == null) break;
 	    		String sheetName = sheet.getSheetName();
 	    		if (sheetName == null || sheetName.equals("")) break;
@@ -101,27 +109,32 @@ public class ExcelUtils {
     	return sheetNames;
     }
     
-    public HSSFSheet getSheet(String sheetName) {
-    	HSSFSheet sheet =  wb.getSheet(sheetName);    	
+    public Sheet getSheet(String sheetName) {
+    	Sheet sheet = wb.getSheet(sheetName);    	
     	return sheet;
     }
-    public HSSFSheet getSheet(int index) {
+    public Sheet getSheet(int index) {
     	return wb.getSheetAt(index);
     }
     
-    public HashMap<String,Integer> getTitle(HSSFSheet sheet, int titleRow) {
-    	HSSFRow row = sheet.getRow(titleRow);
+    public HashMap<String,Integer> getTitle(Sheet sheet, int titleRow) {
+    	Row row = sheet.getRow(titleRow);
     	if (row == null) return null;
     	int colNum = row.getPhysicalNumberOfCells();  
     	HashMap<String, Integer> title = new HashMap<String, Integer>();
-        for (int i=0; i<colNum; i++) { 
-        	String titleName = getStringCellValue(row.getCell((short) i));  
+        for (int i=0; i<=colNum; i++) { 
+        	String titleName = getStringCellValue(row.getCell((short) i)); 
+        	if ("".equals(titleName)) continue;
         	title.put(titleName, new Integer(i));
         }  
         return title;
     }
-    public HSSFRow getRow(HSSFSheet sheet, int rowIndex) {  	    	
+    public Row getRow(Sheet sheet, int rowIndex) {  	    	
     	return sheet.getRow(rowIndex);
+    }
+    
+    public void close() throws Exception {
+    	inputStream.close();
     }
     
  /*       
@@ -155,35 +168,40 @@ public class ExcelUtils {
         return content;  
     }  
       */
-    public BigDecimal getBigDecimalCellValue(HSSFRow row, int cellIndex, boolean isAllowBlank) throws Exception {
-    	HSSFCell cell = row.getCell(cellIndex);
+    public BigDecimal getBigDecimalCellValue(Row row, int cellIndex, boolean isAllowBlank) throws Exception {
+    	Cell cell = row.getCell(cellIndex);
     	return getBigDecimalCellValue(cell,isAllowBlank);
     }
     
-    public BigDecimal getBigDecimalCellValue(HSSFCell cell, boolean isAllowBlank) throws Exception {
-    	if (cell == null) return null;
-    	int rowIndex = cell.getRowIndex()+1;
-    	int cellIndex = cell.getColumnIndex() + 1;
-		String columnStr = "";
-		int columnIndex1 = cellIndex / 26;
+    private String getColumnFlag(int cellIndex) {
+    	String columnFlag = "";
+    	int columnIndex1 = cellIndex / 26;
 		int columnIndex2 = cellIndex % 26;
 		if (cellIndex>26) {
 			if (columnIndex2 == 0)
-				columnStr = String.valueOf((char)((columnIndex1-1) + 64)) + "Z";
-			else columnStr = String.valueOf((char)((columnIndex1) + 64)) +  String.valueOf((char)((columnIndex2) + 64));
+				columnFlag = String.valueOf((char)((columnIndex1-1) + 64)) + "Z";
+			else columnFlag = String.valueOf((char)((columnIndex1) + 64)) +  String.valueOf((char)((columnIndex2) + 64));
 			
 		} else {
-			columnStr = String.valueOf((char)(cellIndex + 64));
+			columnFlag = String.valueOf((char)(cellIndex + 64));
 		}
+		return columnFlag;
+    }
+    public BigDecimal getBigDecimalCellValue(Cell cell, boolean isAllowBlank) throws Exception {
+    	if (cell == null) return null;
+    	int rowIndex = cell.getRowIndex()+1;
+    	int cellIndex = cell.getColumnIndex() + 1;
+		String columnFlag = getColumnFlag(cellIndex);
+		
     	
-    	String expMsg = String.format("第%s行，第%s列数字格式错误", rowIndex,columnStr);
-    	String msg2 = String.format("第%s行，第%s列数字不允许空", rowIndex,columnStr);
+    	String expMsg = String.format("第%s行，第%s列数字格式错误", rowIndex,columnFlag);
+    	String msg2 = String.format("第%s行，第%s列数字不允许空", rowIndex,columnFlag);
     	BigDecimal cellValue = null;
     	switch (cell.getCellType()) {
-    	case HSSFCell.CELL_TYPE_NUMERIC:
+    	case Cell.CELL_TYPE_NUMERIC:
     		cellValue = BigDecimal.valueOf(cell.getNumericCellValue());
     		break;
-    	case HSSFCell.CELL_TYPE_STRING:
+    	case Cell.CELL_TYPE_STRING:
     		String value = getStringCellValue(cell);
     		if (!isAllowBlank && StringUtils.isEmpty(value))
     			throw new EASBizException(new NumericExceptionSubItem("",msg2));
@@ -194,7 +212,7 @@ public class ExcelUtils {
     			throw new EASBizException(new NumericExceptionSubItem("",expMsg));
     		}
     		break;
-    	case HSSFCell.CELL_TYPE_FORMULA:
+    	case Cell.CELL_TYPE_FORMULA:
     		try {
     			cellValue = BigDecimal.valueOf(cell.getNumericCellValue());
     		} catch (Exception e) {
@@ -210,7 +228,7 @@ public class ExcelUtils {
     			
     		}
     		break;
-    	case HSSFCell.CELL_TYPE_BLANK:
+    	case Cell.CELL_TYPE_BLANK:
     		if (!isAllowBlank) 
     			throw new EASBizException(new NumericExceptionSubItem("",msg2));
     		break;
@@ -219,22 +237,24 @@ public class ExcelUtils {
     	}
     	return cellValue;
     }
-    public HSSFWorkbook getWorkbook(){//add by xierongyu 2012-11-29
+    
+    public Workbook getWorkbook(){
     	return wb;
     }
-    public BigDecimal getBigDecimalCellValue(HSSFRow row, int cellIndex) throws Exception {
-    	HSSFCell cell = row.getCell(cellIndex);
+    public BigDecimal getBigDecimalCellValue(Row row, int cellIndex) throws Exception {
+    	Cell cell = row.getCell(cellIndex);
     	
     	return getBigDecimalCellValue(cell);
     }
     
-    public BigDecimal getBigDecimalCellValue(HSSFCell cell) throws Exception {
+    public BigDecimal getBigDecimalCellValue(Cell cell) throws Exception {
     	return getBigDecimalCellValue(cell,true);
     }
     
     
-    public String getStringCellValue(HSSFRow row, int cellIndex) {
-    	HSSFCell cell = row.getCell(cellIndex);
+    public String getStringCellValue(Row row, int cellIndex) {
+    	if (row == null) return "";
+    	Cell cell = row.getCell(cellIndex);
     	return getStringCellValue(cell);
     }
     /** 
@@ -242,26 +262,26 @@ public class ExcelUtils {
      * @param cell Excel单元格 
      * @return String 单元格数据内容 
      */  
-    public String getStringCellValue(HSSFCell cell) {  
+    public String getStringCellValue(Cell cell) {  
         String strCell = "";  
         if (cell == null) return "";
         switch (cell.getCellType()) {  
-        case HSSFCell.CELL_TYPE_STRING:  
+        case Cell.CELL_TYPE_STRING:  
             strCell = cell.getStringCellValue();  
             break;  
-        case HSSFCell.CELL_TYPE_NUMERIC:
+        case Cell.CELL_TYPE_NUMERIC:
         	double value = cell.getNumericCellValue();
         	if (value * 100000 == (long)value * 100000)
         		strCell = String.valueOf((long) cell.getNumericCellValue());
         	else strCell = String.valueOf((float)cell.getNumericCellValue());
             break;  
-        case HSSFCell.CELL_TYPE_BOOLEAN:  
+        case Cell.CELL_TYPE_BOOLEAN:  
             strCell = String.valueOf(cell.getBooleanCellValue());  
             break;  
-        case HSSFCell.CELL_TYPE_BLANK:  
+        case Cell.CELL_TYPE_BLANK:  
             strCell = "";  
             break;  
-        case HSSFCell.CELL_TYPE_FORMULA:
+        case Cell.CELL_TYPE_FORMULA:
         	 strCell = String.valueOf(cell.getStringCellValue());  
              break;  
         default:  
@@ -277,8 +297,8 @@ public class ExcelUtils {
         return strCell.trim();  
     }  
       
-    public Date getDateCellValue(HSSFRow row, int cellIndex) throws Exception {
-    	HSSFCell cell = row.getCell(cellIndex);
+    public Date getDateCellValue(Row row, int cellIndex) throws Exception {
+    	Cell cell = row.getCell(cellIndex);
     	return getDateCellValue(cell);
     }
     
@@ -287,22 +307,36 @@ public class ExcelUtils {
      * @param cell Excel单元格 
      * @return String 单元格数据内容 
      */  
-    public Date getDateCellValue(HSSFCell cell) throws Exception { 
+    public Date getDateCellValue(Cell cell) throws Exception { 
     	if (cell == null) return null;
     	DateFormat dformat = DateFormat.getDateInstance();
         Date result = null;
- 
-        int cellType = cell.getCellType();  
-        if (cellType == HSSFCell.CELL_TYPE_NUMERIC) {  
-        	result = cell.getDateCellValue();  
-        } else if (cellType == HSSFCell.CELL_TYPE_STRING) {  
-            String date = getStringCellValue(cell);  
-            result = dformat.parse(date); 
-        } else if (cellType == HSSFCell.CELL_TYPE_BLANK) {  
-              
-        }  
+        String tmp="";
+        try {
+	        int cellType = cell.getCellType();  
+	        if (cellType == Cell.CELL_TYPE_NUMERIC) {  
+	        	result = cell.getDateCellValue();  
+	        } else if (cellType == Cell.CELL_TYPE_STRING) {  
+	            String date = getStringCellValue(cell); 
+	            tmp = date;
+	            result = dformat.parse(date); 
+	        } else if (cellType == Cell.CELL_TYPE_BLANK) {  
+	              
+	        }  
+        } catch (Exception e) {
+        	String columnFlag = getColumnFlag(cell.getColumnIndex()+1);
+        	String expMsg = String.format("第%s行，第%s列日期格式错误[%s]", cell.getRowIndex() + 1,columnFlag,tmp);
+        	throw new EASBizException(new NumericExceptionSubItem("",expMsg));
+        }
         return result;  
     }  
+    
+    public boolean isCellEmpty(Row row, int cellIndex) {
+    	if ("".equals(getStringCellValue(row, cellIndex))) 
+    		return true;
+    	else return false;
+    		
+    }
    /*   
     public static void main(String[] args) {  
         try {  
@@ -326,7 +360,7 @@ public class ExcelUtils {
             System.out.println("未找到指定路径的文件!");  
             e.printStackTrace();  
         }  
-    }  */
+    }  
 public static List readExcel(File file){   
 	    
 	    List list=new ArrayList();   
@@ -419,5 +453,5 @@ public static void writeExcel(String fileName,List list,String workname){
             e.printStackTrace();    
         }    
     }    
-}
+}*/
 }
