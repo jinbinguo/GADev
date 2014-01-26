@@ -51,7 +51,7 @@ public class DMSTradeInquireParse extends BaseExcelParse {
 		try {
 			int maxDataRow = getMaxDataRow();
 			DMSInOutQueryEntryCollection dmsInOutQueryEntryCollection = new DMSInOutQueryEntryCollection();
-			for (int rowIndex = beginDataRow; rowIndex < maxDataRow; rowIndex++) {
+			for (int rowIndex = beginDataRow; rowIndex <= maxDataRow; rowIndex++) {
 				DMSInOutQueryEntryInfo dmsInOutQueryEntryInfo = new DMSInOutQueryEntryInfo();
 				for (int i = 0; i < titleNames.length; i++) {
 					String titleField = titleNames[i][0];
