@@ -17,7 +17,7 @@ import com.kingdee.eas.myframework.vo.ServerReturnInfo;
 
 public interface ISyncDataFacade extends IBizCtrl
 {
-    public ServerReturnInfo syncWipBill(ServiceOrgUnitInfo serviceOrgInfo, IObjectPK dmsWipBillId) throws BOSException, EASBizException;
-    public ServerReturnInfo syncTradeInquire(ServiceOrgUnitInfo serviceOrgInfo, IObjectPK dmsTradeInqireId) throws BOSException, EASBizException;
+    public ServerReturnInfo syncWipBill(ServiceOrgUnitInfo serviceOrgInfo, IObjectPK dmsWipBillPk) throws BOSException, EASBizException;
+    public ServerReturnInfo syncTradeInquire(ServiceOrgUnitInfo serviceOrgInfo, IObjectPK dmsTradeInqirePk) throws BOSException, EASBizException;
     public void autosync() throws BOSException, EASBizException;
 }

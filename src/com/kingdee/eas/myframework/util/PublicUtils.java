@@ -13,7 +13,7 @@ import java.util.Vector;
 import com.kingdee.bos.dao.IObjectPK;
 import com.kingdee.bos.dao.ormapping.ObjectUuidPK;
 import com.kingdee.eas.myframework.client.MsgBoxEx;
-import com.kingdee.eas.myframework.vo.BaseCollectionWithOrder;
+import com.kingdee.eas.myframework.vo.BaseCollectionWithSort;
 import com.kingdee.eas.myframework.vo.MsgTableInfo;
 import com.kingdee.eas.util.SysUtil;
 
@@ -70,7 +70,7 @@ public class PublicUtils implements Serializable {
 			return false;
 		}
 	}
-	public static boolean isEmpty(BaseCollectionWithOrder cols) {
+	public static boolean isEmpty(BaseCollectionWithSort cols) {
 		return cols == null || cols.isEmpty();
 	}
 	public static boolean isEmpty(List lst) {

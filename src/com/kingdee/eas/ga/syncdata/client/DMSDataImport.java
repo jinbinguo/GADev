@@ -15,6 +15,7 @@ import com.kingdee.bos.ctrl.swing.KDLabelContainer;
 import com.kingdee.bos.ctrl.swing.KDTextField;
 import com.kingdee.bos.dao.IObjectPK;
 import com.kingdee.bos.ui.face.CoreUIObject;
+import com.kingdee.bos.util.GC;
 import com.kingdee.eas.auto4s.rsm.rs.util.client.RsQueryF7Utils;
 import com.kingdee.eas.auto4s.rsm.rs.util.client.RsUtils;
 import com.kingdee.eas.base.permission.UserInfo;
@@ -54,6 +55,7 @@ public class DMSDataImport extends AbstractDMSDataImport {
 	private File file3;
 	private String defaultPath;
 	private boolean isRun = false;
+	private static final String CR = "\n\r";
 
 	public DMSDataImport() throws Exception {
 		super();
@@ -68,7 +70,8 @@ public class DMSDataImport extends AbstractDMSDataImport {
 		labProgress.setVisible(false);
 		cmbImportType_itemStateChanged(null);
 		ServiceOrgUnitInfo orgUnitInfo = RsUtils.getServiceOrgUnitInfo();
-		prmtServiceOrg.setValue(orgUnitInfo);
+		if (orgUnitInfo.isIsBizUnit())
+			prmtServiceOrg.setValue(orgUnitInfo);
 		contSpentInfo.setVisible(chkShowSpent.isSelected());
 		chkShowSpent.setSize(1,1);
 	}
@@ -231,62 +234,62 @@ public class DMSDataImport extends AbstractDMSDataImport {
 			
 
 			
-			long start = System.currentTimeMillis();
-			appendSpentInfo("开始解析WIP头");
+			long startTime = System.currentTimeMillis();
 			WipBillHeadParse wipHeadParse = new WipBillHeadParse(file1);
 			DMSWipBillEntryCollection dmsWipBillEntryCollection = wipHeadParse.parseContent();
-			addSpentInfo("耗时(ms):" + String.valueOf(System.currentTimeMillis() - start));
-	
-			start = System.currentTimeMillis();
-			appendSpentInfo("解析零件行");
+			addSpentInfo("解析WIP头", startTime);
+			System.gc();
+			startTime = System.currentTimeMillis();
 			WipBillMaterialParse wipMaterialParse = new WipBillMaterialParse(file2);
 			DMSWipBillEntry2Collection dmsWipBillEntry2Collection = wipMaterialParse.parseContent();
-			addSpentInfo("耗时(ms):" + String.valueOf(System.currentTimeMillis() - start));
-			
-			start = System.currentTimeMillis();
-			appendSpentInfo("解析工时行");
+			addSpentInfo("解析零件行",startTime);
+			System.gc();
+			startTime = System.currentTimeMillis();
 			WipBillManHourParse wipManHourParse = new WipBillManHourParse(file3);
 			DMSWipBillEntry3Collection dmsWipBillEntry3Collection = wipManHourParse.parseContent();
-			addSpentInfo("耗时(ms):" + String.valueOf(System.currentTimeMillis() - start));
-			
+			addSpentInfo("解析工时行",startTime);
+			System.gc();
 			dmsWipInfo.put("entrys",dmsWipBillEntryCollection);
 			dmsWipInfo.put("entry2",dmsWipBillEntry2Collection);
 			dmsWipInfo.put("entry3",dmsWipBillEntry3Collection);
 			
-			start = System.currentTimeMillis();
+			startTime = System.currentTimeMillis();
 			IDMSWipBill dmsWipBill = DMSWipBillFactory.getRemoteInstance();
-			addSpentInfo("连接远程接口DMSWipBill耗时(ms):" + String.valueOf(System.currentTimeMillis() - start));
+			addSpentInfo("连接远程接口DMSWipBill",startTime);
 			dmsWipInfo.setBaseStatus(BillBaseStatusEnum.TEMPORARILYSAVED);
 			
-			start = System.currentTimeMillis();
-			IObjectPK pk = dmsWipBill.addnew(dmsWipInfo);
-			addSpentInfo("新增DMSWIP单(ms):" + String.valueOf(System.currentTimeMillis() - start));
+			startTime = System.currentTimeMillis();
+			IObjectPK pk = dmsWipBill.save(dmsWipInfo);
+			addSpentInfo("新增DMSWIP单",startTime);
 			
-			
-			start = System.currentTimeMillis();
+			startTime = System.currentTimeMillis();
 			ISyncDataFacade syncFacade = SyncDataFacadeFactory.getRemoteInstance();
-			addSpentInfo("连接远程接口SyncDataFacade耗时(ms):" + String.valueOf(System.currentTimeMillis() - start));
+			addSpentInfo("连接远程接口SyncDataFacade",startTime);
 			
-			start = System.currentTimeMillis();
+			startTime = System.currentTimeMillis();
 			ServerReturnInfo returnInfo = syncFacade.syncWipBill(serviceOrgInfo, pk);
-			addSpentInfo("服务器执行DMSWIP单转EAS维修工单耗时(ms):" + String.valueOf(System.currentTimeMillis() - start));
+			addSpentInfo("服务器执行DMSWIP单转EAS维修工单",startTime);
+			
 			isRun = false;
-			addSpentInfo(returnInfo.getSpentMsg());
-			addMsgInfo(returnInfo.getExptionMsg());
-			if (returnInfo.isSuccess()&&!returnInfo.isExption) {
+			appendSpentInfo(CR+"========服务端耗时明细========"+CR);
+			appendSpentInfo(returnInfo.getSpentMsg());
+			
+			if (returnInfo.isSuccess()) {
+				addMsgInfo(returnInfo.getReturnMsg());
 				addMsgInfo("导入成功...");
 				MsgBoxEx.showInfo("导入成功...");
 			} else {
-				addMsgInfo("导入异常...");
-				MsgBoxEx.showInfo("导入异常...");
+				addMsgInfo(returnInfo.getExceptionMsg());
+				addMsgInfo("导入部分成功,请查看明细异常信息...");
+				MsgBoxEx.showInfo("导入部分成功...");
 			}
 			
 		} catch (Exception e) {
 			isRun = false;
 			addMsgInfo(PublicUtils.getStackTrace(e));
+			addMsgInfo("导入失败,请查看明细异常信息...");
+			MsgBoxEx.showInfo("导入失败...");
 			e.printStackTrace();
-			addMsgInfo("导入异常...");
-			MsgBoxEx.showInfo("导入异常...");
 		} finally {
 			labProgress.setVisible(false);
 			isRun = false;
@@ -309,52 +312,52 @@ public class DMSDataImport extends AbstractDMSDataImport {
 			}
 			dmsInoutQueryInfo.setServiceOrgUnit(serviceOrgInfo);
 			dmsInoutQueryInfo.setBizDate(SysUtil.getAppServerTime(null));
-			
+			dmsInoutQueryInfo.setBaseStatus(BillBaseStatusEnum.TEMPORARILYSAVED);
 
 			
-			long start = System.currentTimeMillis();
-			appendSpentInfo("开始解析交易查询");
+			long starTime = System.currentTimeMillis();
 			DMSTradeInquireParse dmsTradeInquireParse = new DMSTradeInquireParse(file1);
 			DMSInOutQueryEntryCollection dmsInOutQueryEntryCol = dmsTradeInquireParse.parseContent();
-			addSpentInfo("耗时(ms):" + String.valueOf(System.currentTimeMillis() - start));
+			addSpentInfo("解析交易查询", starTime);
 	
-			
 			dmsInoutQueryInfo.put("entrys",dmsInOutQueryEntryCol);
 			
-			start = System.currentTimeMillis();
+			starTime = System.currentTimeMillis();
 			IDMSInOutQuery dmsInOutQuery = DMSInOutQueryFactory.getRemoteInstance();
-			addSpentInfo("连接远程接口DMSInOutQuery耗时(ms):" + String.valueOf(System.currentTimeMillis() - start));
-			dmsInoutQueryInfo.setBaseStatus(BillBaseStatusEnum.TEMPORARILYSAVED);
+			addSpentInfo("连接远程接口DMSInOutQuery", starTime);
 			
-			start = System.currentTimeMillis();
+			starTime = System.currentTimeMillis();
 			IObjectPK pk = dmsInOutQuery.addnew(dmsInoutQueryInfo);
-			addSpentInfo("新增DMS交易查询单(ms):" + String.valueOf(System.currentTimeMillis() - start));
+			addSpentInfo("新增DMS交易查询单",starTime);
 			
-			
-			start = System.currentTimeMillis();
+			starTime = System.currentTimeMillis();
 			ISyncDataFacade syncFacade = SyncDataFacadeFactory.getRemoteInstance();
-			addSpentInfo("连接远程接口SyncDataFacade耗时(ms):" + String.valueOf(System.currentTimeMillis() - start));
+			addSpentInfo("连接远程接口SyncDataFacade" ,starTime);
 			
-			start = System.currentTimeMillis();
+			starTime = System.currentTimeMillis();
 			ServerReturnInfo returnInfo = syncFacade.syncTradeInquire(serviceOrgInfo, pk);
-			addSpentInfo("服务器执行交易查询单转EAS出入库单据耗时(ms):" + String.valueOf(System.currentTimeMillis() - start));
+			addSpentInfo("服务器执行交易查询单转EAS出入库单据:",starTime);
+			
 			isRun = false;
-			addSpentInfo(returnInfo.getSpentMsg());
-			addMsgInfo(returnInfo.getExptionMsg());
-			if (returnInfo.isSuccess()&&!returnInfo.isExption) {
+			appendSpentInfo(CR+"========服务端耗时明细========"+CR);
+			appendSpentInfo(returnInfo.getSpentMsg());
+			
+			if (returnInfo.isSuccess()) {
+				addMsgInfo(returnInfo.getReturnMsg());
 				addMsgInfo("导入成功...");
 				MsgBoxEx.showInfo("导入成功...");
 			} else {
-				addMsgInfo("导入异常...");
-				MsgBoxEx.showInfo("导入异常...");
+				addMsgInfo(returnInfo.getExceptionMsg());
+				addMsgInfo("导入部分成功,请查看明细异常信息...");
+				MsgBoxEx.showInfo("导入部分成功...");
 			}
 			
 		} catch (Exception e) {
 			isRun = false;
 			addMsgInfo(PublicUtils.getStackTrace(e));
+			addMsgInfo("导入失败,请查看明细异常信息...");
+			MsgBoxEx.showInfo("导入失败...");
 			e.printStackTrace();
-			addMsgInfo("导入异常...");
-			MsgBoxEx.showInfo("导入异常...");
 		} finally {
 			labProgress.setVisible(false);
 			isRun = false;
@@ -382,16 +385,18 @@ public class DMSDataImport extends AbstractDMSDataImport {
 	
 	private void addMsgInfo(String msg) {
 		txtMsgInfo.append(msg);
-		txtMsgInfo.append("\n\r");
+		txtMsgInfo.append(CR);
 	}
 	
-	private void appendSpentInfo(String msg) {
+	public void appendSpentInfo(String msg) {
 		txtSpentInfo.append(msg);
 	}
-	
-	private void addSpentInfo(String msg) {
+	public void addSpentInfo(String msg,long startTime) {
+		txtSpentInfo.append("执行");
 		txtSpentInfo.append(msg);
-		txtSpentInfo.append("\n\r");
+		txtSpentInfo.append("耗时(ms):");
+		txtSpentInfo.append(String.valueOf(System.currentTimeMillis()-startTime));
+		txtSpentInfo.append(CR);
 	}
 	
 	

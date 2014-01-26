@@ -23,7 +23,7 @@ public class WipBillManHourParse extends BaseExcelParse {
 			{"payCode","付款代码","string"},
 			{"billNum","账单编号","string"},
 			{"billStatus","账单状态","string"},
-			{"realLineSeq","实际行（排序）","int"},
+			{"realLineSeq","实际行号（排序）","int"},
 			{"standardHour","标准时间","decimal"},
 			{"lastEditTime","编辑日期","date"},
 			{"discountRate","折扣百分比","decimal"},
@@ -46,13 +46,14 @@ public class WipBillManHourParse extends BaseExcelParse {
 		try{
 			int maxDataRow = getMaxDataRow();
 			DMSWipBillEntry3Collection dmsWipBillEntry3Collection = new DMSWipBillEntry3Collection();
-			for (int rowIndex = beginDataRow; rowIndex < maxDataRow; rowIndex++) {
+			for (int rowIndex = beginDataRow; rowIndex <= maxDataRow; rowIndex++) {
 				DMSWipBillEntry3Info dmsWipBillEntry3Info = new DMSWipBillEntry3Info();
 				for (int i = 0; i < titleNames.length; i++) {
 					String titleField = titleNames[i][0];
 					String titleName = titleNames[i][1];
 					String dataType = titleNames[i][2];
 					Object value = getCellValue(rowIndex, titleName, dataType);
+					
 					dmsWipBillEntry3Info.put(titleField, value);
 				}
 				dmsWipBillEntry3Collection.add(dmsWipBillEntry3Info);

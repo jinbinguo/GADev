@@ -4,68 +4,82 @@ import java.io.Serializable;
 
 public class ServerReturnInfo implements Serializable{
 	
-	public boolean isSuccess=true;
-	public boolean isExption=true;
-	public StringBuilder returnMsg = new StringBuilder();
-	public StringBuilder exptionMsg = new StringBuilder();
-	public StringBuilder spentMsg = new StringBuilder();
+	private boolean isSuccess=true;
+	private boolean isException=false;
+	private StringBuilder returnMsg = new StringBuilder();
+	private StringBuilder exceptionMsg = new StringBuilder();
+	private StringBuilder spentMsg = new StringBuilder();
+	private static final String CR = "\n\r";
+	
 	
 	public boolean isSuccess() {
-		return !isExption && isSuccess;
+		return !isException && isSuccess;
 	}
 	public void setSuccess(boolean isSuccess) {
 		this.isSuccess = isSuccess;
 	}
-	public boolean isExption() {
-		return isExption;
+	public boolean isException() {
+		return isException;
 	}
-	public void setExption(boolean isExption) {
-		this.isExption = isExption;
+
+	public void clearReturnMsg() {
+		returnMsg.replace(0, this.returnMsg.length(), "");
 	}
+	public void clearExceptionMsg() {
+		isException = false;
+		exceptionMsg.replace(0, this.exceptionMsg.length(), "");
+		
+	}
+	public void clearSpentMsg() {
+		spentMsg.replace(0, this.spentMsg.length(), "");
+	}
+	
 	public String getReturnMsg() {
 		return returnMsg.toString();
 	}
+	public String getExceptionMsg() {
+		return exceptionMsg.toString();
+	}
+	public String getSpentMsg() {
+		return spentMsg.toString();
+	}
+	
 	public void setReturnMsg(String returnMsg) {
-		this.returnMsg.replace(0, this.returnMsg.length(), "");
+		clearReturnMsg();
 		this.returnMsg.append(returnMsg);
 	}
+	public void setExceptionMsg(String exceptionMsg) {
+		clearExceptionMsg();
+		isException = true;
+		this.exceptionMsg.append(exceptionMsg);
+	}
+	public void setSpentMsg(String spentMsg) {
+		clearSpentMsg();
+		this.spentMsg.append(spentMsg);
+	}
+	
 	
 	public void appendReturnMsg(String msg) {
 		returnMsg.append(msg);
 	}
-	
-	public void addReturnMsg(String msg) {
-		returnMsg.append(msg+"\n\r");
+	public void appendExceptionMsg(String msg) {
+		isException = true;
+		exceptionMsg.append(msg);
 	}
-
-	public String getExptionMsg() {
-		return exptionMsg.toString();
-	}
-	public void setExptionMsg(String exptionMsg) {
-		this.exptionMsg.replace(0, this.exptionMsg.length(), "");
-		this.exptionMsg.append(exptionMsg);
-	}
-	public void appendExptionMsg(String msg) {
-		exptionMsg.append(msg);
-	}
-	
-	public void addExptionMsg(String msg) {
-		exptionMsg.append(msg+"\n\r");
-	}
-	
-	public String getSpentMsg() {
-		return spentMsg.toString();
-	}
-	public void setSpentMsg(String spentMsg) {
-		this.spentMsg.replace(0, this.spentMsg.length(), "");
-		this.spentMsg.append(spentMsg);
-	}
-	
 	public void appendSpentMsg(String msg) {
 		spentMsg.append(msg);
 	}
-	public void addSpentMsg(String msg) {
-		spentMsg.append(msg+"\n\r");
+	
+	
+	public void addReturnMsg(String msg) {
+		returnMsg.append(msg).append(CR);
+	}
+	public void addExceptionMsg(String msg) {
+		isException = true;
+		exceptionMsg.append(msg).append(CR);
+	}
+	public void addSpentMsg(String msg,long startTime) {
+		spentMsg.append("Ö´ÐÐ").append(msg).append("ºÄÊ±(ms):").append(System.currentTimeMillis()-startTime).append(CR);
 	}
 	
 }

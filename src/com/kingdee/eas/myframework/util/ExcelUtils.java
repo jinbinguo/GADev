@@ -3,7 +3,6 @@ package com.kingdee.eas.myframework.util;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.InputStream;
 import java.math.BigDecimal;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -27,6 +26,8 @@ public class ExcelUtils {
     private Workbook  wb; 
     private FileInputStream inputStream;
     private File file;
+    
+    private DateFormat dformat = DateFormat.getDateInstance();
     
     public ExcelUtils(boolean isOverExcel2007) {
     	if (isOverExcel2007) 
@@ -117,7 +118,7 @@ public class ExcelUtils {
     	return wb.getSheetAt(index);
     }
     
-    public HashMap<String,Integer> getTitle(Sheet sheet, int titleRow) {
+    public HashMap<String,Integer> getTitle(Sheet sheet, int titleRow) throws Exception{
     	Row row = sheet.getRow(titleRow);
     	if (row == null) return null;
     	int colNum = row.getPhysicalNumberOfCells();  
@@ -252,7 +253,7 @@ public class ExcelUtils {
     }
     
     
-    public String getStringCellValue(Row row, int cellIndex) {
+    public String getStringCellValue(Row row, int cellIndex) throws Exception {
     	if (row == null) return "";
     	Cell cell = row.getCell(cellIndex);
     	return getStringCellValue(cell);
@@ -262,38 +263,48 @@ public class ExcelUtils {
      * @param cell Excel单元格 
      * @return String 单元格数据内容 
      */  
-    public String getStringCellValue(Cell cell) {  
-        String strCell = "";  
+    public String getStringCellValue(Cell cell) throws Exception {  
+    	String strCell = "";  
         if (cell == null) return "";
-        switch (cell.getCellType()) {  
-        case Cell.CELL_TYPE_STRING:  
-            strCell = cell.getStringCellValue();  
-            break;  
-        case Cell.CELL_TYPE_NUMERIC:
-        	double value = cell.getNumericCellValue();
-        	if (value * 100000 == (long)value * 100000)
-        		strCell = String.valueOf((long) cell.getNumericCellValue());
-        	else strCell = String.valueOf((float)cell.getNumericCellValue());
-            break;  
-        case Cell.CELL_TYPE_BOOLEAN:  
-            strCell = String.valueOf(cell.getBooleanCellValue());  
-            break;  
-        case Cell.CELL_TYPE_BLANK:  
-            strCell = "";  
-            break;  
-        case Cell.CELL_TYPE_FORMULA:
-        	 strCell = String.valueOf(cell.getStringCellValue());  
-             break;  
-        default:  
-            strCell = "";  
-            break;  
-        }  
-        if (strCell.equals("") || strCell == null) {  
-            return "";  
-        }  
-        if (cell == null) {  
-            return "";  
-        }  
+        
+    	int rowIndex = cell.getRowIndex()+1;
+    	int cellIndex = cell.getColumnIndex() + 1;
+		String columnFlag = getColumnFlag(cellIndex);
+    	
+        
+        try {
+	        switch (cell.getCellType()) {  
+	        case Cell.CELL_TYPE_STRING:  
+	            strCell = cell.getStringCellValue();  
+	            break;  
+	        case Cell.CELL_TYPE_NUMERIC:
+	        	double value = cell.getNumericCellValue();
+	        	if (value * 100000 == (long)value * 100000)
+	        		strCell = String.valueOf((long) cell.getNumericCellValue());
+	        	else strCell = String.valueOf((float)cell.getNumericCellValue());
+	            break;  
+	        case Cell.CELL_TYPE_BOOLEAN:  
+	            strCell = String.valueOf(cell.getBooleanCellValue());  
+	            break;  
+	        case Cell.CELL_TYPE_BLANK:  
+	            strCell = "";  
+	            break;  
+	        case Cell.CELL_TYPE_FORMULA:
+	        	 strCell = String.valueOf(cell.getStringCellValue());  
+	             break;  
+	        default:  
+	            strCell = "";  
+	            break;  
+	        }  
+	        if (strCell.equals("") || strCell == null) {  
+	            return "";  
+	        }  
+	        if (cell == null) {  
+	            return "";  
+	        }  
+        } catch (Exception e) {
+        	throw new Exception(String.format("第%s行，第%s字符格式错误：%s", rowIndex,columnFlag,e.getMessage()));
+        }
         return strCell.trim();  
     }  
       
@@ -309,7 +320,7 @@ public class ExcelUtils {
      */  
     public Date getDateCellValue(Cell cell) throws Exception { 
     	if (cell == null) return null;
-    	DateFormat dformat = DateFormat.getDateInstance();
+    	
         Date result = null;
         String tmp="";
         try {
@@ -331,8 +342,8 @@ public class ExcelUtils {
         return result;  
     }  
     
-    public boolean isCellEmpty(Row row, int cellIndex) {
-    	if ("".equals(getStringCellValue(row, cellIndex))) 
+    public boolean isCellEmpty(Row row, int cellIndex) throws Exception {
+    	if ("".equals(getStringCellValue(row, cellIndex).trim())) 
     		return true;
     	else return false;
     		

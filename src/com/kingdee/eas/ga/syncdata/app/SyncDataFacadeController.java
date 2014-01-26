@@ -20,7 +20,7 @@ import com.kingdee.bos.framework.ejb.BizController;
 
 public interface SyncDataFacadeController extends BizController
 {
-    public ServerReturnInfo syncWipBill(Context ctx, ServiceOrgUnitInfo serviceOrgInfo, IObjectPK dmsWipBillId) throws BOSException, EASBizException, RemoteException;
-    public ServerReturnInfo syncTradeInquire(Context ctx, ServiceOrgUnitInfo serviceOrgInfo, IObjectPK dmsTradeInqireId) throws BOSException, EASBizException, RemoteException;
+    public ServerReturnInfo syncWipBill(Context ctx, ServiceOrgUnitInfo serviceOrgInfo, IObjectPK dmsWipBillPk) throws BOSException, EASBizException, RemoteException;
+    public ServerReturnInfo syncTradeInquire(Context ctx, ServiceOrgUnitInfo serviceOrgInfo, IObjectPK dmsTradeInqirePk) throws BOSException, EASBizException, RemoteException;
     public void autosync(Context ctx) throws BOSException, EASBizException, RemoteException;
 }

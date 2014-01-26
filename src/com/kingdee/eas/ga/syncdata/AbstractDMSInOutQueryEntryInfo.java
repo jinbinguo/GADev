@@ -281,6 +281,61 @@ public class AbstractDMSInOutQueryEntryInfo extends com.kingdee.eas.myframework.
     {
         put("easBaseUnit", item);
     }
+    /**
+     * Object:分录's EAS维修工单配件分录IDproperty 
+     */
+    public String getEasRepairWOEntryId()
+    {
+        return getString("easRepairWOEntryId");
+    }
+    public void setEasRepairWOEntryId(String item)
+    {
+        setString("easRepairWOEntryId", item);
+    }
+    /**
+     * Object: 分录 's EAS车辆 property 
+     */
+    public com.kingdee.eas.auto4s.bdm.pbd.VehicleInfo getEasVehicle()
+    {
+        return (com.kingdee.eas.auto4s.bdm.pbd.VehicleInfo)get("easVehicle");
+    }
+    public void setEasVehicle(com.kingdee.eas.auto4s.bdm.pbd.VehicleInfo item)
+    {
+        put("easVehicle", item);
+    }
+    /**
+     * Object:分录's EAS工单配件行号property 
+     */
+    public int getEasRepairWOEntrySeq()
+    {
+        return getInt("easRepairWOEntrySeq");
+    }
+    public void setEasRepairWOEntrySeq(int item)
+    {
+        setInt("easRepairWOEntrySeq", item);
+    }
+    /**
+     * Object:分录's EAS维修工单号property 
+     */
+    public String getEasRepairWONumber()
+    {
+        return getString("easRepairWONumber");
+    }
+    public void setEasRepairWONumber(String item)
+    {
+        setString("easRepairWONumber", item);
+    }
+    /**
+     * Object:分录's 已转入property 
+     */
+    public boolean isIsTransferred()
+    {
+        return getBoolean("isTransferred");
+    }
+    public void setIsTransferred(boolean item)
+    {
+        setBoolean("isTransferred", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("861DB430");

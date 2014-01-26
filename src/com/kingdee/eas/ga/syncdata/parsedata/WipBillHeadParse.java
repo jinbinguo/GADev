@@ -41,7 +41,7 @@ public class WipBillHeadParse extends BaseExcelParse {
 		try {
 			int maxDataRow = getMaxDataRow();
 			DMSWipBillEntryCollection dmsWipBillEntryCollection = new DMSWipBillEntryCollection();
-			for (int rowIndex = beginDataRow; rowIndex < maxDataRow; rowIndex++) {
+			for (int rowIndex = beginDataRow; rowIndex <= maxDataRow; rowIndex++) {
 				DMSWipBillEntryInfo dmsWipBillEntryInfo = new DMSWipBillEntryInfo();
 				for (int i = 0; i < titleNames.length; i++) {
 					String titleField = titleNames[i][0];

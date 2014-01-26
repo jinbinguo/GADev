@@ -39,13 +39,13 @@ public class SyncDataFacade extends AbstractBizCtrl implements ISyncDataFacade
     /**
      *同步Wip单-User defined method
      *@param serviceOrgInfo 公司
-     *@param dmsWipBillId DMSWip单号ID
+     *@param dmsWipBillPk DMSWip单号ID
      *@return
      */
-    public ServerReturnInfo syncWipBill(ServiceOrgUnitInfo serviceOrgInfo, IObjectPK dmsWipBillId) throws BOSException, EASBizException
+    public ServerReturnInfo syncWipBill(ServiceOrgUnitInfo serviceOrgInfo, IObjectPK dmsWipBillPk) throws BOSException, EASBizException
     {
         try {
-            return getController().syncWipBill(getContext(), serviceOrgInfo, dmsWipBillId);
+            return getController().syncWipBill(getContext(), serviceOrgInfo, dmsWipBillPk);
         }
         catch(RemoteException err) {
             throw new EJBRemoteException(err);
@@ -54,13 +54,13 @@ public class SyncDataFacade extends AbstractBizCtrl implements ISyncDataFacade
     /**
      *同步交易查询-User defined method
      *@param serviceOrgInfo 公司
-     *@param dmsTradeInqireId DMS交易查询ID
+     *@param dmsTradeInqirePk DMS交易查询ID
      *@return
      */
-    public ServerReturnInfo syncTradeInquire(ServiceOrgUnitInfo serviceOrgInfo, IObjectPK dmsTradeInqireId) throws BOSException, EASBizException
+    public ServerReturnInfo syncTradeInquire(ServiceOrgUnitInfo serviceOrgInfo, IObjectPK dmsTradeInqirePk) throws BOSException, EASBizException
     {
         try {
-            return getController().syncTradeInquire(getContext(), serviceOrgInfo, dmsTradeInqireId);
+            return getController().syncTradeInquire(getContext(), serviceOrgInfo, dmsTradeInqirePk);
         }
         catch(RemoteException err) {
             throw new EJBRemoteException(err);

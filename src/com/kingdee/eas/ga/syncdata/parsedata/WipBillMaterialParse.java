@@ -47,7 +47,7 @@ public class WipBillMaterialParse extends BaseExcelParse {
 		try {
 			int maxDataRow = getMaxDataRow();
 			DMSWipBillEntry2Collection dmsWipBillEntry2Collection = new DMSWipBillEntry2Collection();
-			for (int rowIndex = beginDataRow; rowIndex < maxDataRow; rowIndex++) {
+			for (int rowIndex = beginDataRow; rowIndex <= maxDataRow; rowIndex++) {
 				DMSWipBillEntry2Info dmsWipBillEntry2Info = new DMSWipBillEntry2Info();
 				for (int i = 0; i < titleNames.length; i++) {
 					String titleField = titleNames[i][0];

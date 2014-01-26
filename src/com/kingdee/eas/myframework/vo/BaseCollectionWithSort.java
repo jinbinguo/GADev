@@ -7,7 +7,12 @@ import java.util.Vector;
 
 import com.kingdee.util.StringUtils;
 
-public class BaseCollectionWithOrder implements Serializable {
+/**
+ * ´øÅÅÐòµÄCollection
+ * @author guo
+ *
+ */
+public class BaseCollectionWithSort implements Serializable {
 
 	private Vector<String> orders = new Vector<String>();
 	private HashMap<String,Object> values = new HashMap<String,Object>();

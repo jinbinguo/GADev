@@ -4,9 +4,9 @@ import java.io.Serializable;
 import java.util.Vector;
 
 import com.kingdee.bos.dao.AbstractObjectCollection;
-import com.kingdee.eas.myframework.vo.BaseCollectionWithOrder;
+import com.kingdee.eas.myframework.vo.BaseCollectionWithSort;
 
-public class SortColumnCollection  extends BaseCollectionWithOrder implements Serializable {
+public class SortColumnCollection  extends BaseCollectionWithSort implements Serializable {
 
 	public void add(SortColumnInfo sortColumnInfo) throws Exception {
 		addObject(sortColumnInfo.getColumnIndex(), sortColumnInfo);

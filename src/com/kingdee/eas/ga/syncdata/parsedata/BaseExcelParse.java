@@ -71,7 +71,7 @@ public class BaseExcelParse implements Serializable {
 		for (int i = beginDataRow; i <= sheet.getPhysicalNumberOfRows(); i++) {
 			Row row = sheet.getRow(i);
 			if (excelUtils.isCellEmpty(row, keyTitleIndex)) {
-				return i;
+				return i-1;
 			}
 		}
 		return sheet.getPhysicalNumberOfRows();

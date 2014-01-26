@@ -328,11 +328,11 @@ public abstract class AbstractDMSDataImport extends CoreUIObject
         this.add(btnBrower2, null);
         btnImport.setBounds(new Rectangle(326, 62, 98, 21));
         this.add(btnImport, null);
-        contMsgInfo.setBounds(new Rectangle(16, 177, 540, 399));
+        contMsgInfo.setBounds(new Rectangle(16, 177, 513, 399));
         this.add(contMsgInfo, null);
         labProgress.setBounds(new Rectangle(431, 61, 99, 23));
         this.add(labProgress, null);
-        contSpentInfo.setBounds(new Rectangle(574, 177, 407, 396));
+        contSpentInfo.setBounds(new Rectangle(538, 177, 454, 396));
         this.add(contSpentInfo, null);
         chkShowSpent.setBounds(new Rectangle(326, 31, 101, 19));
         this.add(chkShowSpent, null);

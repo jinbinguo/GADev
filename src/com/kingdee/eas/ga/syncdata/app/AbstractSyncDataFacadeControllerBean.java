@@ -38,13 +38,13 @@ public abstract class AbstractSyncDataFacadeControllerBean extends AbstractBizCo
         return new BOSObjectType("76F81EA6");
     }
 
-    public ServerReturnInfo syncWipBill(Context ctx, ServiceOrgUnitInfo serviceOrgInfo, IObjectPK dmsWipBillId) throws BOSException, EASBizException
+    public ServerReturnInfo syncWipBill(Context ctx, ServiceOrgUnitInfo serviceOrgInfo, IObjectPK dmsWipBillPk) throws BOSException, EASBizException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("a1c9d6de-771a-4b8b-8bc4-5b641a8984b5"), new Object[]{ctx, serviceOrgInfo, dmsWipBillId});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("a1c9d6de-771a-4b8b-8bc4-5b641a8984b5"), new Object[]{ctx, serviceOrgInfo, dmsWipBillPk});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()) {
-            ServerReturnInfo retValue = (ServerReturnInfo)_syncWipBill(ctx, serviceOrgInfo, dmsWipBillId);
+            ServerReturnInfo retValue = (ServerReturnInfo)_syncWipBill(ctx, serviceOrgInfo, dmsWipBillPk);
             svcCtx.setMethodReturnValue(retValue);
             }
             invokeServiceAfter(svcCtx);
@@ -57,18 +57,18 @@ public abstract class AbstractSyncDataFacadeControllerBean extends AbstractBizCo
             super.cleanUpServiceState();
         }
     }
-    protected ServerReturnInfo _syncWipBill(Context ctx, IObjectValue serviceOrgInfo, IObjectPK dmsWipBillId) throws BOSException, EASBizException
+    protected ServerReturnInfo _syncWipBill(Context ctx, IObjectValue serviceOrgInfo, IObjectPK dmsWipBillPk) throws BOSException, EASBizException
     {    	
         return null;
     }
 
-    public ServerReturnInfo syncTradeInquire(Context ctx, ServiceOrgUnitInfo serviceOrgInfo, IObjectPK dmsTradeInqireId) throws BOSException, EASBizException
+    public ServerReturnInfo syncTradeInquire(Context ctx, ServiceOrgUnitInfo serviceOrgInfo, IObjectPK dmsTradeInqirePk) throws BOSException, EASBizException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("558e94bd-2581-4c60-9b6f-d4e93d3c4789"), new Object[]{ctx, serviceOrgInfo, dmsTradeInqireId});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("558e94bd-2581-4c60-9b6f-d4e93d3c4789"), new Object[]{ctx, serviceOrgInfo, dmsTradeInqirePk});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()) {
-            ServerReturnInfo retValue = (ServerReturnInfo)_syncTradeInquire(ctx, serviceOrgInfo, dmsTradeInqireId);
+            ServerReturnInfo retValue = (ServerReturnInfo)_syncTradeInquire(ctx, serviceOrgInfo, dmsTradeInqirePk);
             svcCtx.setMethodReturnValue(retValue);
             }
             invokeServiceAfter(svcCtx);
@@ -81,7 +81,7 @@ public abstract class AbstractSyncDataFacadeControllerBean extends AbstractBizCo
             super.cleanUpServiceState();
         }
     }
-    protected ServerReturnInfo _syncTradeInquire(Context ctx, IObjectValue serviceOrgInfo, IObjectPK dmsTradeInqireId) throws BOSException, EASBizException
+    protected ServerReturnInfo _syncTradeInquire(Context ctx, IObjectValue serviceOrgInfo, IObjectPK dmsTradeInqirePk) throws BOSException, EASBizException
     {    	
         return null;
     }

@@ -25,11 +25,14 @@ import com.kingdee.bos.metadata.entity.SorterItemCollection;
 import com.kingdee.bos.metadata.entity.SorterItemInfo;
 import com.kingdee.eas.auto4s.bdm.pbd.BrandInfo;
 import com.kingdee.eas.auto4s.bdm.pbd.CustomerInfo;
+import com.kingdee.eas.auto4s.bdm.pbd.IVehicle;
+import com.kingdee.eas.auto4s.bdm.pbd.VehicleFactory;
 import com.kingdee.eas.auto4s.bdm.pbd.VehicleInfo;
 import com.kingdee.eas.auto4s.bdm.rsm.AmountClassifyEnum;
 import com.kingdee.eas.auto4s.bdm.rsm.FReturnRepairEnum;
 import com.kingdee.eas.auto4s.bdm.rsm.OilQuantityEnum;
 import com.kingdee.eas.auto4s.bdm.rsm.PaymentClassifyInfo;
+import com.kingdee.eas.auto4s.bdm.rsm.ReceivingStatusEnum;
 import com.kingdee.eas.auto4s.bdm.rsm.RepairBillStatusEnum;
 import com.kingdee.eas.auto4s.bdm.rsm.RepairClassifyInfo;
 import com.kingdee.eas.auto4s.bdm.rsm.RepairGroupInfo;
@@ -37,6 +40,7 @@ import com.kingdee.eas.auto4s.bdm.rsm.RepairItemInfo;
 import com.kingdee.eas.auto4s.bdm.rsm.RepairItemStatusEnum;
 import com.kingdee.eas.auto4s.bdm.rsm.RepairTypeInfo;
 import com.kingdee.eas.auto4s.bdm.rsm.SettlementObjectEnum;
+import com.kingdee.eas.auto4s.bdm.rsm.SettlementStatusEnum;
 import com.kingdee.eas.auto4s.bdm.rsm.WarrantyTypeInfo;
 import com.kingdee.eas.auto4s.bdm.util.AutoPriceManager;
 import com.kingdee.eas.auto4s.rsm.rs.IRepairWO;
@@ -69,6 +73,9 @@ import com.kingdee.eas.basedata.scm.im.inv.StoreStateInfo;
 import com.kingdee.eas.basedata.scm.im.inv.StoreTypeInfo;
 import com.kingdee.eas.basedata.scm.im.inv.WarehouseInfo;
 import com.kingdee.eas.common.EASBizException;
+import com.kingdee.eas.fi.cas.ReceiptStatusEnum;
+import com.kingdee.eas.framework.CoreBaseCollection;
+import com.kingdee.eas.framework.Result;
 import com.kingdee.eas.ga.syncdata.DMSInOutQueryEntryCollection;
 import com.kingdee.eas.ga.syncdata.DMSInOutQueryEntryInfo;
 import com.kingdee.eas.ga.syncdata.DMSInOutQueryFactory;
@@ -84,6 +91,8 @@ import com.kingdee.eas.ga.syncdata.DMSWipBillInfo;
 import com.kingdee.eas.ga.syncdata.DMSWipBillTypeEnum;
 import com.kingdee.eas.ga.syncdata.IDMSInOutQuery;
 import com.kingdee.eas.ga.syncdata.IDMSWipBill;
+import com.kingdee.eas.myframework.scm.SCMBillUtils;
+import com.kingdee.eas.myframework.util.BotpUtils;
 import com.kingdee.eas.myframework.util.CodingRuleUtils;
 import com.kingdee.eas.myframework.util.PublicUtils;
 import com.kingdee.eas.myframework.vo.ServerReturnInfo;
@@ -135,21 +144,25 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     private SimpleDateFormat sfDate = new SimpleDateFormat("yyyyMMdd");
     private SimpleDateFormat sfPeriod = new SimpleDateFormat("MM");
    
+    private final String CR = "\n\r";
+    private final int BATCH_SAVE_MAXCOUNT=10;
     
+    private HashMap<String,String> hashExceptionKey = new HashMap<String, String>(); //异常的单据Key
     
     protected ServerReturnInfo _syncWipBill(Context ctx, IObjectValue serviceOrgInfo, IObjectPK dmsWipBillPk)
     		throws BOSException,EASBizException {
     	ServerReturnInfo returnInfo = new ServerReturnInfo();
     	returnInfo.setSuccess(true);
-    	returnInfo.setExption(false);
-    	long start = System.currentTimeMillis();
-    	returnInfo.appendSpentMsg("获取DMSWIP单数据耗时(ms):");
+    	hashExceptionKey.clear();
+    //	ctx.put("disablePermissionForKScript", true);
+    	long startTime = System.currentTimeMillis();
+    	
     	if (dmsWipBill == null) dmsWipBill = DMSWipBillFactory.getLocalInstance(ctx);
     	if (repairWO == null) repairWO = RepairWOFactory.getLocalInstance(ctx);
-    	
-    	
+  
     	DMSWipBillInfo dmsWipBillInfo = dmsWipBill.getDMSWipBillInfo(dmsWipBillPk);
-    	returnInfo.addSpentMsg(String.valueOf(System.currentTimeMillis()-start));
+    	
+    	returnInfo.addSpentMsg("获取DMSWIP单数据", startTime);
     	
     	try {
     		HashMap<String,RepairWOInfo> hashRepairWOInfo = new HashMap<String, RepairWOInfo>();
@@ -159,16 +172,19 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		parseWipMaterial(ctx,hashRepairWOInfo,dmsWipBillInfo,returnInfo);
     		//工时行
     		parseWipManHour(ctx,hashRepairWOInfo,dmsWipBillInfo,returnInfo);
+    		//去除异常的单据
+    		removeExceptionWIP(ctx,hashRepairWOInfo,returnInfo);
+    		
     		//累计金额合计
-    		if (!returnInfo.isExption)
-    			parseTotalAmonut(ctx,hashRepairWOInfo,returnInfo);
+    		//if (returnInfo.isSuccess())
+    		parseTotalAmonut(ctx,hashRepairWOInfo,returnInfo);
     		//保存
-    		if (!returnInfo.isExption)
-    		batchSaveRepariWOInfo(ctx,hashRepairWOInfo);
+    		//if (returnInfo.isSuccess())
+    		batchSaveRepariWOInfo(ctx,hashRepairWOInfo,returnInfo);
     		
     	} catch (Exception e) {
     		e.printStackTrace();
-    		throw new EASBizException(new NumericExceptionSubItem("",PublicUtils.getStackTrace(e)));
+    		throw new EASBizException(new NumericExceptionSubItem("",returnInfo.getSpentMsg()+ "====" +PublicUtils.getStackTrace(e)));
     		
     	}
 
@@ -186,9 +202,10 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     	defaultSA.put("id", DEFAULT_DMS_SAID);
     	
     	//TODO 默认车辆 -调整
-    	final String DEFAULT_DMS_Vehicle = "r1AAAAAAhl+en/9F";
-    	VehicleInfo defaultVehicle = new VehicleInfo();
-    	defaultVehicle.put("id", DEFAULT_DMS_Vehicle);
+    	//final String DEFAULT_DMS_Vehicle = "r1AAAAAAhl+en/9F";
+    	IVehicle vehicle = VehicleFactory.getLocalInstance(ctx);
+    	VehicleInfo defaultVehicle = vehicle.getVehicleByVin("00000000000000001");
+    	//defaultVehicle.put("id", DEFAULT_DMS_Vehicle);
     	
     	//品牌 
     	final String DEFAULT_DMS_Brand_BWM = "zfcAAAAABfHINe3g"; //BWM 001
@@ -218,7 +235,7 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     	RepairTypeInfo defaultRepairType_MINI = new RepairTypeInfo();
     	defaultRepairType_MINI.put("id",  DEFAULT_RepairType_MINI);
     	
-    	long start = System.currentTimeMillis();
+    	long startTime = System.currentTimeMillis();
     	String number = dmsWipBillInfo.getNumber();
     	ServiceOrgUnitInfo serviceOrgInfo = dmsWipBillInfo.getServiceOrgUnit();
 
@@ -254,14 +271,11 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		String keyWip = wip + "-" + String.valueOf(sfYear.format(creatTime));
     		
     		if (isIgnoreWipForStocktaking(accountCode)) { 
-    			//TODO 添加盘点WIP
+    			//TODO 添加盘点WIP,导入完成后。？
     			hashWipForStocktaking.put(keyWip, keyWip);
     			
     			continue;
     		}
-    		
-
-    		
     		
     		//-----------查询维修工单，有可能更新维修工单
     		long l = System.currentTimeMillis();
@@ -273,14 +287,17 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     				IObjectPK pk = new ObjectUuidPK(rs.getString("FID"));
         			repairWOInfo = repairWO.getRepairWOInfo(pk);
     			}
-    			spentMsg = String.format("DMSWIP单-[WIP头],第%d行,getRepairWOInfo耗时(ms):%s", seq,String.valueOf(System.currentTimeMillis()-l));
-    			returnInfo.addSpentMsg(spentMsg);
+    			spentMsg = String.format("DMSWIP单-[WIP头],第%d行,WIP号[%s]获取维修工单", seq,wip);
+    			returnInfo.addSpentMsg(spentMsg,l);
     		} catch (Exception ee) {
+    			spentMsg = String.format("DMSWIP单-[WIP头],第%d行,WIP号[%s]获取维修工单", seq,wip);
+    			returnInfo.addSpentMsg(spentMsg,l);
     			if (ee instanceof ObjectNotFoundException) {
-    				spentMsg = String.format("DMSWIP单-[WIP头],第%d行,不存在维修工单getRepairWOInfo耗时(ms):%d", seq, String.valueOf(System.currentTimeMillis()-l));
-    				returnInfo.addSpentMsg(spentMsg);
+    				expMsg = String.format("DMSWIP单-[WIP头],第%d行,WIP号[%s]不存在维修工单", seq,wip);
+    				addExceptionMsg(returnInfo,expMsg);
     			} else {
-    				expMsg = String.format("DMSWIP单-[WIP头],第%d行,WIP号[%s]重复",seq,wip);
+    				expMsg = String.format("DMSWIP单-[WIP头],第%d行,WIP号[%s]获取维修工单异常",seq,wip);
+    				expMsg = expMsg + CR +PublicUtils.getStackTrace(ee);
         			addExceptionMsg(returnInfo, expMsg);
     			}
     			ee.printStackTrace();
@@ -291,7 +308,7 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		repairWOInfo.setSA(defaultSA);
     		
     		if (hashRepairWOInfo.get(keyWip) != null) {
-    			expMsg = String.format("DMSWIP单-[WIP头],第%d行,WIP号[%s]重复",seq,wip);
+    			expMsg = String.format("DMSWIP单-[WIP头],第%d行,WIP号[%s]可能重复",seq,wip);
     			addExceptionMsg(returnInfo, expMsg);
     			continue;
     		}
@@ -302,12 +319,17 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		String vin = wipHeadInfo.getVin();
     		if ("".equals(vin)) {
     			repairWOInfo.setVehicle(defaultVehicle);
+    			repairWOInfo.setCustomer(defaultVehicle.getOrderCustomer());
+    			repairWOInfo.setRepairSender(defaultVehicle.getOwnerName());
+    			repairWOInfo.setTel(defaultVehicle.getPhone());
+    			repairWOInfo.setBrand(defaultVehicle.getBrand());
     		} else {
     			sql = String.format("select FID,FOrderCustomerID,FOwnerName,FPhone,FBrandID from T_ATS_Vehicle where FVIN='%s'", vin);
     			IRowSet rs = DbUtil.executeQuery(ctx, sql);
     			if (rs == null || !rs.next()) {
     				expMsg = String.format("DMSWIP单-[WIP头],第%d行,底盘号[%s]不存在于基础车辆档案",seq,vin);
         			addExceptionMsg(returnInfo, expMsg);
+        			continue;
     			} else {
     				//rs.next();
     				//车辆
@@ -388,8 +410,8 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     	}
 
     	
-    	spentMsg = String.format("获取WIP头单数据耗时(ms):%s", String.valueOf(System.currentTimeMillis()-start));
-    	returnInfo.addSpentMsg(spentMsg);
+    	spentMsg = "获取WIP头单数据";
+    	returnInfo.addSpentMsg(spentMsg,startTime);
     }
     
     private void parseWipMaterial(Context ctx,HashMap<String,RepairWOInfo> hashRepairWOInfo,DMSWipBillInfo dmsWipBillInfo,ServerReturnInfo returnInfo) throws Exception {
@@ -420,7 +442,7 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     	BrandInfo defaultBrand_MINI = new BrandInfo();
     	defaultBrand_MINI.put("id", DEFAULT_DMS_Brand_MINI);
     	
-    	long start = System.currentTimeMillis();
+    	long startTime = System.currentTimeMillis();
     	DMSWipBillEntry2Collection wipMaterialCol =  dmsWipBillInfo.getEntry2();
     	HashMap<String,Date> hashAdjustDate = new HashMap<String, Date>();
     	HashMap<String,MaterialInfo> hashMaterial = new HashMap<String,MaterialInfo>();
@@ -459,6 +481,7 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		//ServiceOrgUnitInfo serviceOrgUnit = dmsWipBillInfo.getServiceOrgUnit();
     		
     		RepairWOInfo repairWOInfo = hashRepairWOInfo.get(keyWip);
+    		
     		if (repairWOInfo == null) { //在当前WIP头里，找不到
     			//从维修工单里重新取,取当前编辑年份或当前编辑前一年份，按单据日期
     			Calendar calendar = new GregorianCalendar();
@@ -466,30 +489,35 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     			calendar.add(Calendar.YEAR, -1);
 
     			String keyWip2 = wip + "-" + String.valueOf(sfYear.format(calendar.getTime()));
-    			EntityViewInfo entityViewInfo = new EntityViewInfo();
-    			FilterInfo filterInfo = new FilterInfo();
-    			filterInfo.getFilterItems().add(new FilterItemInfo("OldID", keyWip));
-    			filterInfo.getFilterItems().add(new FilterItemInfo("oldID", keyWip2));
-    			filterInfo.setMaskString("#0 or #1");
-    			entityViewInfo.setFilter(filterInfo);
-    			SorterItemCollection sorterItemCol = new SorterItemCollection();
-    			SorterItemInfo scBizDate = new SorterItemInfo("bizDate");
-    			scBizDate.setSortType(SortType.DESCEND);
-    			sorterItemCol.add(scBizDate);
-    			entityViewInfo.setSorter(sorterItemCol);
-    			RepairWOCollection repairWOCol =  repairWO.getRepairWOCollection(entityViewInfo);
-    			if (!repairWOCol.isEmpty()) {
-    				repairWOInfo = repairWOCol.get(0); //取前面一个
-    				hashAdjustDate.put(wip, repairWOInfo.getBizDate()); //调整时间 为维修工单的业务时间
-    			} else {
-    				expMsg = String.format("DMSWIP单-[零件行],第%d行,不存在WIP号[%s]的维修工单",seq,wip);
-        			addExceptionMsg(returnInfo, expMsg);
-    				continue;
+    			repairWOInfo = hashRepairWOInfo.get(keyWip2); //再从缓存取一次
+    			if (repairWOInfo == null) {
+    				EntityViewInfo entityViewInfo = new EntityViewInfo();
+        			FilterInfo filterInfo = new FilterInfo();
+        			filterInfo.getFilterItems().add(new FilterItemInfo("OldID", keyWip));
+        			filterInfo.getFilterItems().add(new FilterItemInfo("oldID", keyWip2));
+        			filterInfo.setMaskString("#0 or #1");
+        			entityViewInfo.setFilter(filterInfo);
+        			SorterItemCollection sorterItemCol = new SorterItemCollection();
+        			SorterItemInfo scBizDate = new SorterItemInfo("bizDate");
+        			scBizDate.setSortType(SortType.DESCEND);
+        			sorterItemCol.add(scBizDate);
+        			entityViewInfo.setSorter(sorterItemCol);
+        			
+        			RepairWOCollection repairWOCol =  repairWO.getRepairWOCollection(entityViewInfo);
+        			if (!repairWOCol.isEmpty()) {
+        				repairWOInfo = repairWOCol.get(0); //取前面一个
+        				hashAdjustDate.put(wip, repairWOInfo.getBizDate()); //调整时间 为维修工单的业务时间
+        			} else {
+        				expMsg = String.format("DMSWIP单-[零件行],第%d行,不存在WIP号[%s]的维修工单",seq,wip);
+            			addExceptionMsg(returnInfo, expMsg);
+        				continue;
+        			}
+        			hashRepairWOInfo.put(keyWip, repairWOInfo);		
     			}
-    			hashRepairWOInfo.put(keyWip, repairWOInfo);
+    			
     		}
-    		spentMsg = String.format("DMSWIP单-[零件行]查找DMSWIP单数据耗时(ms):%s", String.valueOf(System.currentTimeMillis()-l));
-    		returnInfo.addSpentMsg(spentMsg);
+    		spentMsg = String.format("DMSWIP单-[零件行],WIP号[%s]查找DMSWIP单数据", wip);
+    		returnInfo.addSpentMsg(spentMsg,l);
     		
     		HashMap<Integer,RepairWORWOSparepartEntryInfo> hashSparepartEntry = null;
     		hashSparepartEntry = hashSparepart.get(wip);
@@ -510,12 +538,14 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     			repairWOInfo.getRWOSparepartEntry().add(sparepartEntryInfo);
     		}
     		
-    		//DMS销售金额(不含税)
+    		//DMS销售金额(不含税单价)
     		BigDecimal saleNoTaxAmount = wipMaterialInfo.getSalePrice();
-    		if (saleNoTaxAmount == null || saleNoTaxAmount.compareTo(BigDecimal.ZERO) <= 0) {
-    			expMsg = String.format("DMSWIP单-[零件行],第%d行,销售金额必须大于0",seq);
+    		if (saleNoTaxAmount == null) {
+    			expMsg = String.format("DMSWIP单-[零件行],第%d行,销售金额不能为空",seq);
     			addExceptionMsg(returnInfo, expMsg);
+    			hashExceptionKey.put(keyWip, keyWip);
     			continue;
+    			
     		}
     		l = System.currentTimeMillis();
     		
@@ -525,23 +555,28 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		sparepartEntryInfo.put("wipFactLineNo", factLineSeq);
     		
     		//结算对象
-    		sparepartEntryInfo.setSettleObject(SettlementObjectEnum.CUST);
+    		
+    		sparepartEntryInfo.setSettleObject(getSettlementObj(wipMaterialInfo.getChaimCode()));
+    		
     		//数量/DMS定货数量
     		BigDecimal qty = wipMaterialInfo.getOrderQty();
-    		if (qty == null || qty.compareTo(BigDecimal.ZERO) <= 0) {
-    			expMsg = String.format("DMSWIP单-[零件行],第%d行,定货数量必须大于0",seq);
+    		if (qty == null) {
+    			expMsg = String.format("DMSWIP单-[零件行],第%d行,定货数量不能为空",seq);
     			addExceptionMsg(returnInfo, expMsg);
+    			hashExceptionKey.put(keyWip, keyWip);
     			continue;
     		}
     		sparepartEntryInfo.setQty(qty);
+    		saleNoTaxAmount = saleNoTaxAmount.setScale(2, BigDecimal.ROUND_DOWN);
     		//DMS销售单价(不含税)
-    		BigDecimal saleNoTaxPrice = saleNoTaxAmount.divide(qty,10,BigDecimal.ROUND_HALF_UP);
+    		BigDecimal saleNoTaxPrice = saleNoTaxAmount;
     		//税率 17.0%
     		BigDecimal taxRate = new BigDecimal(17.00);
     		sparepartEntryInfo.setTaxRate(taxRate);
     		
     		//含税单价 =(1+税率%/100)*DMS销售单价(不含税)
     		BigDecimal saleTaxPrice = saleNoTaxPrice.multiply(BigDecimal.ONE.add(taxRate.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP)));
+    		saleTaxPrice = saleTaxPrice.setScale(2, BigDecimal.ROUND_DOWN);
     		sparepartEntryInfo.setTaxPrice(saleTaxPrice);
     		
     		//不含税单价=DMS销售单价(不含税)
@@ -553,12 +588,12 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		sparepartEntryInfo.setNoTaxAmount(saleNoTaxPrice.multiply(qty));
     		
     		//税额=不含税单价*税率/100
-    		sparepartEntryInfo.setTax(saleNoTaxPrice.multiply(taxRate.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP)));
+    		sparepartEntryInfo.setTax(saleNoTaxPrice.multiply(taxRate.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP)).setScale(2, BigDecimal.ROUND_DOWN));
     		//折扣率
     		BigDecimal discountRate = wipMaterialInfo.getDiscountRate();
     		sparepartEntryInfo.setDiscountRate(discountRate);
     		//优惠金额=含税金额*折扣率/100
-    		BigDecimal discountAmount = saleTaxAmount.multiply(discountRate.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP));
+    		BigDecimal discountAmount = saleTaxAmount.multiply(discountRate.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP).setScale(2, BigDecimal.ROUND_DOWN));
     		sparepartEntryInfo.setDiscountAmount(discountAmount);
     		//应收金额=含税金额-优惠金额
     		sparepartEntryInfo.setARAmount(saleTaxAmount.subtract(discountAmount));
@@ -583,10 +618,11 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		if (PublicUtils.isEmpty(materialNum)) {
     			expMsg = String.format("DMSWIP单-[零件行],第%d行,零件编号不能为空",seq);
     			addExceptionMsg(returnInfo, expMsg);
+    			hashExceptionKey.put(keyWip, keyWip);
     			continue;
     		}
-    		spentMsg = String.format("DMSWIP单-[零件行]赋值sparepartEntryInfo耗时(ms):%s", String.valueOf(System.currentTimeMillis()-l));
-    		returnInfo.addSpentMsg(spentMsg);
+    		spentMsg = "DMSWIP单-[零件行]赋值sparepartEntryInfo";
+    		returnInfo.addSpentMsg(spentMsg,l);
     		l = System.currentTimeMillis();
 
     		MaterialInfo materialInfo = hashMaterial.get(materialNum);
@@ -602,20 +638,19 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     				MaterialGroupInfo materialGroupInfo = new MaterialGroupInfo();
     				materialGroupInfo.put("id", rs.getString("FMaterialGroupID"));
     				materialInfo.setMaterialGroup(materialGroupInfo);
-    				spentMsg = String.format("DMSWIP单-[零件行]查找物料数据耗时(ms):%s", String.valueOf(System.currentTimeMillis()-l));
-    				returnInfo.addSpentMsg(spentMsg);
+    				spentMsg =  "DMSWIP单-[零件行]查找物料数据";
+    				returnInfo.addSpentMsg(spentMsg,l);
     				hashMaterial.put(materialNum, materialInfo);
     			} else {
     				expMsg = String.format("DMSWIP单-[零件行],第%d行,零件编号[%s]不存在于EAS系统",seq,materialNum);
         			addExceptionMsg(returnInfo, expMsg);
-        			spentMsg = String.format("DMSWIP单-[零件行]查找物料数据耗时(ms):%s", String.valueOf(System.currentTimeMillis()-l));
-        			returnInfo.addSpentMsg(spentMsg);
+        			spentMsg = "DMSWIP单-[零件行]查找物料数据";
+        			returnInfo.addSpentMsg(spentMsg,l);
+        			hashExceptionKey.put(keyWip, keyWip);
         			continue;
     			}
     		}
-    		
-    		
-    		
+
     		sparepartEntryInfo.setMaterial(materialInfo);
     		//计量单位
     		sparepartEntryInfo.setUnit(materialInfo.getBaseUnit());
@@ -629,8 +664,8 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		sparepartEntryInfo.setMaterialGroup(materialInfo.getMaterialGroup());
     	}
     	
-    	spentMsg = String.format("获取零件行数据耗时(ms):%s", String.valueOf(System.currentTimeMillis()-start));
-    	returnInfo.addSpentMsg(spentMsg);
+    	spentMsg =  "获取零件行数据";
+    	returnInfo.addSpentMsg(spentMsg,startTime);
     }
     
     private void parseWipManHour(Context ctx,HashMap<String,RepairWOInfo> hashRepairWOInfo,DMSWipBillInfo dmsWipBillInfo,ServerReturnInfo returnInfo) throws Exception {
@@ -689,7 +724,7 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     	RepairTypeInfo defaultRepairType_MINI = new RepairTypeInfo();
     	defaultRepairType_MINI.put("id",  DEFAULT_RepairType_MINI);
     	
-    	long start = System.currentTimeMillis();
+    	long startTime = System.currentTimeMillis();
     	DMSWipBillEntry3Collection wipManHourCol =  dmsWipBillInfo.getEntry3();
     	HashMap<String,Date> hashAdjustDate = new HashMap<String, Date>();
     	//HashMap<String,MaterialInfo> hashRepairItem = new HashMap<String,MaterialInfo>();
@@ -704,6 +739,7 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		if (lineSeq<1) {
     			expMsg = String.format("DMSWIP单-[工时行],第%d行,行号[%s]不合法,应大于等于1",seq,lineSeq);
     			addExceptionMsg(returnInfo, expMsg);
+    			
     			continue;
     		}
     		String wip = wipManHourInfo.getWip(); 
@@ -734,32 +770,35 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     			Calendar calendar = new GregorianCalendar();
     			calendar.setTime(editDate);
     			calendar.add(Calendar.YEAR, -1);
-
     			String keyWip2 = wip + "-" + String.valueOf(sfYear.format(calendar.getTime()));
-    			EntityViewInfo entityViewInfo = new EntityViewInfo();
-    			FilterInfo filterInfo = new FilterInfo();
-    			filterInfo.getFilterItems().add(new FilterItemInfo("OldID", keyWip));
-    			filterInfo.getFilterItems().add(new FilterItemInfo("oldID", keyWip2));
-    			filterInfo.setMaskString("#0 or #1");
-    			entityViewInfo.setFilter(filterInfo);
-    			SorterItemCollection sorterItemCol = new SorterItemCollection();
-    			SorterItemInfo scBizDate = new SorterItemInfo("bizDate");
-    			scBizDate.setSortType(SortType.DESCEND);
-    			sorterItemCol.add(scBizDate);
-    			entityViewInfo.setSorter(sorterItemCol);
-    			RepairWOCollection repairWOCol =  repairWO.getRepairWOCollection(entityViewInfo);
-    			if (!repairWOCol.isEmpty()) {
-    				repairWOInfo = repairWOCol.get(0); //取前面一个
-    				hashAdjustDate.put(wip, repairWOInfo.getBizDate()); //调整时间 为维修工单的业务时间
-    			} else {
-    				expMsg = String.format("DMSWIP单-[工时行],第%d行,不存在WIP号[%s]的维修工单",seq,wip);
-        			addExceptionMsg(returnInfo, expMsg);
-    				continue;
+    			
+    			repairWOInfo = hashRepairWOInfo.get(keyWip2);
+    			if (repairWOInfo == null) {
+	    			EntityViewInfo entityViewInfo = new EntityViewInfo();
+	    			FilterInfo filterInfo = new FilterInfo();
+	    			filterInfo.getFilterItems().add(new FilterItemInfo("OldID", keyWip));
+	    			filterInfo.getFilterItems().add(new FilterItemInfo("oldID", keyWip2));
+	    			filterInfo.setMaskString("#0 or #1");
+	    			entityViewInfo.setFilter(filterInfo);
+	    			SorterItemCollection sorterItemCol = new SorterItemCollection();
+	    			SorterItemInfo scBizDate = new SorterItemInfo("bizDate");
+	    			scBizDate.setSortType(SortType.DESCEND);
+	    			sorterItemCol.add(scBizDate);
+	    			entityViewInfo.setSorter(sorterItemCol);
+	    			RepairWOCollection repairWOCol =  repairWO.getRepairWOCollection(entityViewInfo);
+	    			if (!repairWOCol.isEmpty()) {
+	    				repairWOInfo = repairWOCol.get(0); //取前面一个
+	    				hashAdjustDate.put(wip, repairWOInfo.getBizDate()); //调整时间 为维修工单的业务时间
+	    			} else {
+	    				expMsg = String.format("DMSWIP单-[工时行],第%d行,不存在WIP号[%s]的维修工单",seq,wip);
+	        			addExceptionMsg(returnInfo, expMsg);
+	    				continue;
+	    			}
+	    			hashRepairWOInfo.put(keyWip, repairWOInfo);
     			}
-    			hashRepairWOInfo.put(keyWip, repairWOInfo);
     		}
-    		spentMsg = String.format("DMSWIP单-[工时行]查找DMSWIP单数据耗时(ms):%s", String.valueOf(System.currentTimeMillis()-l));
-    		returnInfo.addSpentMsg(spentMsg);
+    		spentMsg =  "DMSWIP单-[工时行]查找DMSWIP单数据";
+    		returnInfo.addSpentMsg(spentMsg,l);
     		HashMap<Integer,RepairWORWORepairItemEntryInfo> hashRepairItemEntry = null;
     		hashRepairItemEntry = hashRWORepairItem.get(wip);
     		if (hashRepairItemEntry == null)	{
@@ -786,7 +825,7 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		//付费类别
     		repairItemEntryInfo.setPaymentClassify(defaultPaymentclassify);
     		//结算对象-客户
-    		repairItemEntryInfo.setSettleObject(SettlementObjectEnum.CUST);
+    		repairItemEntryInfo.setSettleObject(getSettlementObj(wipManHourInfo.getPayCode()));
     		if (DEFAULT_DMS_Brand_BWM.equals(repairWOInfo.getBrand().getString("id"))) {
     			//维修种类
         		repairItemEntryInfo.setRepairClassify(defaultRepairClassify_BWM);
@@ -820,15 +859,16 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		} else {
     			workTimePrice = hourRate.divide(new BigDecimal(60).divide(new BigDecimal(unitMI),10,BigDecimal.ROUND_HALF_UP),10,BigDecimal.ROUND_HALF_UP);
     		}
+    		workTimePrice = workTimePrice.setScale(2, BigDecimal.ROUND_DOWN);
     		repairItemEntryInfo.setWorkTimePrice(workTimePrice);
     		//工时金额=标准工时*工时单价
-    		BigDecimal workTimeAmount = wipManHourInfo.getStandardHour().multiply(workTimePrice);
+    		BigDecimal workTimeAmount = wipManHourInfo.getStandardHour().multiply(workTimePrice).setScale(2, BigDecimal.ROUND_DOWN);;
     		repairItemEntryInfo.setWorkTimeAmount(workTimeAmount);
     		//折扣率
     		BigDecimal discountRate = wipManHourInfo.getDiscountRate();
     		repairItemEntryInfo.setDiscountRate(discountRate);
     		//折扣金额
-    		BigDecimal discountAmount = workTimeAmount.multiply(discountRate);
+    		BigDecimal discountAmount = workTimeAmount.multiply(discountRate).setScale(2, BigDecimal.ROUND_DOWN);;
     		//应收金额=工时金额-折扣金额
     		repairItemEntryInfo.setARAmount(workTimeAmount.subtract(discountAmount));
     		//TODO 维修项目状态
@@ -845,14 +885,22 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		//工资单价=DMS工时单价
     		repairItemEntryInfo.setWagePrice(workTimePrice);
     		//工时成本=DMS工时单价 * 标准工时
-    		repairItemEntryInfo.setWorkTimeCost(workTimePrice.multiply(standardHour));
+    		repairItemEntryInfo.setWorkTimeCost(workTimePrice.multiply(standardHour).setScale(2, BigDecimal.ROUND_DOWN));
     		
     		//工时标准单价=DMS工时单价
     		repairItemEntryInfo.setWorkTimeStdPrice(workTimePrice);
     	}
     	
-    	spentMsg = String.format("获取工时行数据耗时(ms):%s", String.valueOf(System.currentTimeMillis()-start));
-    	returnInfo.addSpentMsg(spentMsg);
+    	spentMsg = "获取工时行数据";
+    	returnInfo.addSpentMsg(spentMsg,startTime);
+    }
+    private void removeExceptionWIP(Context ctx,HashMap<String,RepairWOInfo> hashRepairWOInfo,ServerReturnInfo returnInfo) throws Exception {
+    	String[] keys = PublicUtils.hashKeyToArray(hashExceptionKey);
+    	if (keys == null) return;
+    	for (int i = 0; i < keys.length; i++) {
+    		hashRepairWOInfo.remove(keys[i]);
+    	}
+    	
     }
     
     private void parseTotalAmonut(Context ctx,HashMap<String,RepairWOInfo> hashRepairWOInfo,ServerReturnInfo returnInfo) throws Exception {
@@ -860,7 +908,7 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     	String spentMsg = "";
     	Set<String> setKey = hashRepairWOInfo.keySet();
     	Iterator<String> itKey = setKey.iterator();
-    	long start = System.currentTimeMillis();
+    	long startTime = System.currentTimeMillis();
     	while(itKey.hasNext()) {
     		long l = System.currentTimeMillis();
     		HashMap<SettlementObjectEnum,TotalAmountBySettObj> hashTotalAmountBySettle = new HashMap<SettlementObjectEnum, TotalAmountBySettObj>();
@@ -870,8 +918,9 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		RepairWORWOSparepartEntryCollection sparepartEntryCol = repairWOInfo.getRWOSparepartEntry(); //配件
     		RepairWORWORepairItemEntryCollection repairItemEntryCol = repairWOInfo.getRWORepairItemEntry(); //维修项目
     		if (sparepartEntryCol.isEmpty() && repairItemEntryCol.isEmpty()) {
-    			expMsg = String.format("DMSWIP单-WIP号[%s]同时不存在零件行或工时行，不能保存",wip);
-    			addExceptionMsg(returnInfo, expMsg);
+    			hashRepairWOInfo.remove(key);
+    			//expMsg = String.format("DMSWIP单-WIP号[%s]同时不存在零件行或工时行，不能保存",wip);
+    		//	addExceptionMsg(returnInfo, expMsg);
     			continue;
     		}
     		
@@ -921,12 +970,11 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		allTotalAmount.add(totalAmount(SettlementObjectEnum.CLUB,hashTotalAmountBySettle,totalAmountEntryCol));
     		repairWOInfo.setRepairTotalAmount(allTotalAmount); //维修合计金额
     		
-    		spentMsg = String.format("计算WIP号[%s]的合计金额(ms):%s", wip,String.valueOf(System.currentTimeMillis()-start));
-        	returnInfo.addSpentMsg(spentMsg);
+    		spentMsg =  "计算WIP号[%s]的合计金额";
+        	returnInfo.addSpentMsg(spentMsg,l);
     	}
-    	spentMsg = String.format("计算合计金额(ms):%s", String.valueOf(System.currentTimeMillis()-start));
-    	returnInfo.addSpentMsg(spentMsg);
-    	
+    	spentMsg ="计算合计金额";
+    	returnInfo.addSpentMsg(spentMsg,startTime);
     }
     
     private BigDecimal totalAmount(SettlementObjectEnum settleObj,HashMap<SettlementObjectEnum, TotalAmountBySettObj> hashTotalAmountBySettle,
@@ -993,16 +1041,45 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     	
     }
     
-    private void batchSaveRepariWOInfo(Context ctx, HashMap<String,RepairWOInfo> hashRepairWOInfo) throws Exception {
+    private void batchSaveRepariWOInfo(Context ctx, HashMap<String,RepairWOInfo> hashRepairWOInfo,ServerReturnInfo returnInfo) throws Exception {
     	Set<String> setKey = hashRepairWOInfo.keySet();
     	Iterator<String> itKey = setKey.iterator();
+    	CoreBaseCollection col = new CoreBaseCollection();
+    	String spentMsg;
+    	
     	while(itKey.hasNext()) {
     		String key = itKey.next();
     		RepairWOInfo repairWOInfo = hashRepairWOInfo.get(key);
-    		repairWO.save(repairWOInfo);
+    		col.add(repairWOInfo);
+    		if (col.size() < BATCH_SAVE_MAXCOUNT && itKey.hasNext()) {
+    			continue;
+    		}
+    		long l = System.currentTimeMillis();
+    		Result result = repairWO.save(col);
+    		spentMsg = String.format("批量保存%d笔维修工单",col.size());
+    		returnInfo.addSpentMsg(spentMsg, l);
+    		
+    		
+    		col.clear();
+
     	}
+    	
     }
     
+    private SettlementObjectEnum getSettlementObj(String w) {
+    	w = w.toUpperCase();
+    	if (w.startsWith("C") || w.startsWith("V") || w.startsWith("F")) {
+    		return SettlementObjectEnum.CUST;
+    	} else if (w.startsWith("I")) {
+    		return SettlementObjectEnum.INNER;
+    	} else if (w.startsWith("B") || w.startsWith("L") || w.startsWith("W")) {
+    		return SettlementObjectEnum.COMPANY;
+    	} else {
+    		return SettlementObjectEnum.CUST;
+    	}
+    	
+    	
+    }
     //按结算对象累计
     class TotalAmountBySettObj {
     	
@@ -1030,8 +1107,7 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     }
     
     private void addExceptionMsg(ServerReturnInfo returnInfo,String msg) {
-    	returnInfo.setExption(true);
-    	returnInfo.addExptionMsg(msg);
+    	returnInfo.addExceptionMsg(msg);
     }
     
     private boolean isIgnoreWipForStocktaking(String accountCode) {
@@ -1049,11 +1125,11 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		IObjectValue serviceOrgInfo, IObjectPK dmsTradeInqirePk)
     		throws BOSException, EASBizException {
     	ServerReturnInfo returnInfo = new ServerReturnInfo();
- 
+    	hashExceptionKey.clear();
+    	String spentMsg = "";
+    	String expMsg = "";
     	returnInfo.setSuccess(true);
-    	returnInfo.setExption(false);
-    	long start = System.currentTimeMillis();
-    	returnInfo.appendSpentMsg("获取DMS交易查询单数据耗时(ms):");
+    	long startTime = System.currentTimeMillis();
     	
     	if (dmsTradeInquire == null) dmsTradeInquire = DMSInOutQueryFactory.getLocalInstance(ctx);
     	if (purInwarehsBill == null) purInwarehsBill = PurInWarehsBillFactory.getLocalInstance(ctx);
@@ -1068,24 +1144,29 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		HashMap<DMSWipBillTypeEnum, HashMap<String,DMSInOutQueryEntryCollection>> hashTradeInquireGroup = new HashMap<DMSWipBillTypeEnum, HashMap<String,DMSInOutQueryEntryCollection>>();
     		//更新EAS相 关数据
     		updateTradInquireForEASData(ctx,dmsTradeInqirePk);
+    		spentMsg = "更新EAS相 关数据";
+    		returnInfo.addSpentMsg(spentMsg,startTime);
+    		
+    		startTime = System.currentTimeMillis();
     		DMSInOutQueryInfo dmsTradeInquireInfo = dmsTradeInquire.getDMSInOutQueryInfo(dmsTradeInqirePk);
-        	returnInfo.addSpentMsg(String.valueOf(System.currentTimeMillis()-start));
+    		spentMsg = "获取DMS交易查询单据";
+        	returnInfo.addSpentMsg(spentMsg,startTime);
     		
     		//交易查询，按单据分组
     		parseTradeInquireGroup(ctx,hashTradeInquireGroup,dmsTradeInquireInfo,returnInfo);
     		
     		
     		//分组保存
-    		if (!returnInfo.isExption)
-    			batchSaveInOutBill(ctx,hashTradeInquireGroup);
+    		//if (!returnInfo.isException())
+    			batchSaveInOutBill(ctx,hashTradeInquireGroup,returnInfo);
     		
     		//关联维修工单
     		
     			
     	} catch (Exception e) {
     		e.printStackTrace();
-    		throw new EASBizException(new NumericExceptionSubItem("",PublicUtils.getStackTrace(e)));
-    		
+    		throw new EASBizException(new NumericExceptionSubItem("",returnInfo.getSpentMsg()+ "====" +PublicUtils.getStackTrace(e)));
+    				
     	}
 	
     	return returnInfo;
@@ -1109,36 +1190,85 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
 		//取维修工单配件含税单价
 		sql = "/*dialect*/update a" +
 		" set a.CFEasTaxPrice = b.FTaxPrice," +
-		"a.CFEasCustomerID=(select FStdCustomerID from T_ATS_Customer where fid = c.FCustomerID)" +
+		" a.CFEasVehicleID=(select FVehicleID from T_ATS_RepairWO where fid=CFEasRepairWOID), " +
+		" a.CFEasRepairWOEntryId=(select FID from T_ATS_RWOSparepartEntry where FParentID=CFEasRepairWOID and CFLineSeq=CFWipLineNo), " +
+		" a.CFEasRepairWONumber=(select FNumber from T_ATS_RepairWO where FID=CFEasRepairWOID), " +
+		" a.CFEasRepairWOEntrySeq=(select FSeq from T_ATS_RWOSparepartEntry where FParentID=CFEasRepairWOID and CFLineSeq=CFWipLineNo),"+
+		" a.CFEasCustomerID=(select FStdCustomerID from T_ATS_Customer where fid = c.FCustomerID)" +
 		" from CT_SYN_DMSInOutQueryEntry a" +
 		" left join T_ATS_RWOSparepartEntry b on b.FParentID=a.CFEasRepairWOID and b.CFWipLineNo=a.CFLineSeq" +
 		" left join T_ATS_RepairWO c on c.FID=b.FParentID" +
 		" where a.CFEasRepairWOID<> '' and a.FParentID='" + dmsTradeInqirePk.toString() + "'";
 		DbUtil.execute(ctx, sql);
 		
+		//更新已转入单据标记，作为转入忽略
+		//采购入库检查
+		
+		sql = "/*dialect*/update a " +
+			" set CFIsTransferred=1" +
+			" from CT_SYN_DMSInOutQueryEntry a" +
+			" where a.CFT='P' and" +
+			" exists (select 1 from T_IM_PurInWarehsEntry b" +
+			" where b.CFRqn=a.CFRqn and b.FBIZDATE=a.CFBizDate)" +
+			" and a.FParentID='" + dmsTradeInqirePk.toString() + "'";
+		DbUtil.execute(ctx, sql);
+		//销售出库单
+		sql = "/*dialect*/update a "+
+			" set CFIsTransferred=1 "+
+			" from CT_SYN_DMSInOutQueryEntry a "+
+			" where a.CFT='S' and a.CFCustomer<>'@TransTo' and a.CFCustomer<>'@TransFr' and  "+
+			" exists (select 1 from T_IM_SaleIssueEntry b "+
+			" where b.CFWip=a.CFWip and b.CFWipLineNo=a.CFLineSeq)" +
+			" and a.FParentID='" + dmsTradeInqirePk.toString() + "'";
+		DbUtil.execute(ctx, sql);
+		
+		//其他入库单
+		sql = "/*dialect*/update a "+
+			" set CFIsTransferred=1 "+
+			" from CT_SYN_DMSInOutQueryEntry a "+
+			" where a.CFT='S' and a.CFCustomer='@TransTo' and  "+
+			" exists (select 1 from T_IM_OtherInWarehsBillEntry b "+
+			" where b.CFWip=a.CFWip and b.CFWipLineNo=a.CFLineSeq)" +
+			" and a.FParentID='" + dmsTradeInqirePk.toString() + "'";
+		DbUtil.execute(ctx, sql);
+		
+		//其他出库单
+		sql = "/*dialect*/update a "+
+			" set CFIsTransferred=1 "+
+			" from CT_SYN_DMSInOutQueryEntry a "+
+			" where a.CFT='S' and a.CFCustomer='@TransFr' and  "+
+			" exists (select 1 from T_IM_OtherIssueBillEntry b "+
+			" where b.CFWip=a.CFWip and b.CFWipLineNo=a.CFLineSeq)" +
+			" and a.FParentID='" + dmsTradeInqirePk.toString() + "'";
+		DbUtil.execute(ctx, sql);
+		
 	}
 
-	private void batchSaveInOutBill(Context ctx,HashMap<DMSWipBillTypeEnum, HashMap<String, DMSInOutQueryEntryCollection>> hashTradeInquireGroup) throws Exception {
+	private void batchSaveInOutBill(Context ctx,HashMap<DMSWipBillTypeEnum, HashMap<String, DMSInOutQueryEntryCollection>> hashTradeInquireGroup,ServerReturnInfo returnInfo) throws Exception {
     	
-		HashMap<String, DMSInOutQueryEntryCollection> dmsTradeInquireEntryCol = hashTradeInquireGroup.get(DMSWipBillTypeEnum.PurInWarehs);
-    	batchSavePurInware(ctx,DMSWipBillTypeEnum.PurInWarehs,dmsTradeInquireEntryCol);
-    	dmsTradeInquireEntryCol = hashTradeInquireGroup.get(DMSWipBillTypeEnum.SaleReturn);
-    	batchSaveSaleIssue(ctx,DMSWipBillTypeEnum.SaleReturn,dmsTradeInquireEntryCol);
-    	dmsTradeInquireEntryCol = hashTradeInquireGroup.get(DMSWipBillTypeEnum.TransferInWarehs);
-    	batchSaveOtherInWarehs(ctx,DMSWipBillTypeEnum.TransferInWarehs,dmsTradeInquireEntryCol);
+		HashMap<String, DMSInOutQueryEntryCollection> dmsTradeInquireEntryCol = null;
+		
+		dmsTradeInquireEntryCol = hashTradeInquireGroup.get(DMSWipBillTypeEnum.TransferInWarehs);
+    	batchSaveOtherInWarehs(ctx,DMSWipBillTypeEnum.TransferInWarehs,dmsTradeInquireEntryCol,returnInfo);
+		dmsTradeInquireEntryCol = hashTradeInquireGroup.get(DMSWipBillTypeEnum.PurInWarehs);
+		batchSavePurInware(ctx,DMSWipBillTypeEnum.PurInWarehs,dmsTradeInquireEntryCol,returnInfo);
+		dmsTradeInquireEntryCol = hashTradeInquireGroup.get(DMSWipBillTypeEnum.SaleReturn);
+		batchSaveSaleIssue(ctx,DMSWipBillTypeEnum.SaleReturn,dmsTradeInquireEntryCol,returnInfo);
     	dmsTradeInquireEntryCol = hashTradeInquireGroup.get(DMSWipBillTypeEnum.ProfitInWarehs);
-    	batchSaveOtherInWarehs(ctx,DMSWipBillTypeEnum.ProfitInWarehs,dmsTradeInquireEntryCol);
+    	batchSaveOtherInWarehs(ctx,DMSWipBillTypeEnum.ProfitInWarehs,dmsTradeInquireEntryCol,returnInfo);
+    	
+    	
     	
     	dmsTradeInquireEntryCol = hashTradeInquireGroup.get(DMSWipBillTypeEnum.PurReturn);
-    	batchSavePurInware(ctx,DMSWipBillTypeEnum.PurReturn,dmsTradeInquireEntryCol);   	
+    	batchSavePurInware(ctx,DMSWipBillTypeEnum.PurReturn,dmsTradeInquireEntryCol,returnInfo); 	
     	dmsTradeInquireEntryCol = hashTradeInquireGroup.get(DMSWipBillTypeEnum.SaleIssue);
-    	batchSaveSaleIssue(ctx,DMSWipBillTypeEnum.SaleIssue,dmsTradeInquireEntryCol);
+    	batchSaveSaleIssue(ctx,DMSWipBillTypeEnum.SaleIssue,dmsTradeInquireEntryCol,returnInfo);
     	dmsTradeInquireEntryCol = hashTradeInquireGroup.get(DMSWipBillTypeEnum.TransferOutWarehs);
-    	batchSaveOtherIssue(ctx,DMSWipBillTypeEnum.TransferOutWarehs,dmsTradeInquireEntryCol);
+    	batchSaveOtherIssue(ctx,DMSWipBillTypeEnum.TransferOutWarehs,dmsTradeInquireEntryCol,returnInfo);
     	dmsTradeInquireEntryCol = hashTradeInquireGroup.get(DMSWipBillTypeEnum.LossOutWarehs);
-    	batchSaveOtherIssue(ctx,DMSWipBillTypeEnum.LossOutWarehs,dmsTradeInquireEntryCol); 	
+    	batchSaveOtherIssue(ctx,DMSWipBillTypeEnum.LossOutWarehs,dmsTradeInquireEntryCol,returnInfo);	
 	}
-    private void batchSavePurInware(Context ctx,DMSWipBillTypeEnum billTypeEnum,HashMap<String, DMSInOutQueryEntryCollection> hashDMSTradeInquireEntryCol) throws Exception {
+    private void batchSavePurInware(Context ctx,DMSWipBillTypeEnum billTypeEnum,HashMap<String, DMSInOutQueryEntryCollection> hashDMSTradeInquireEntryCol,ServerReturnInfo returnInfo) throws Exception {
     	if (hashDMSTradeInquireEntryCol == null) return;
     	Set<String> setKey = hashDMSTradeInquireEntryCol.keySet();
     	Iterator<String> itKey = setKey.iterator();
@@ -1183,7 +1313,7 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     	BillTypeInfo default_BillType = new BillTypeInfo();
     	default_BillType.put("id", Default_BillType_ID);
     	
-    	
+    	boolean isAutoAudit = SCMBillUtils.isSubmitAutoAudit(ctx, DEFAULT_Storage_ID, Default_BillType_ID);
     	
     	
     	while (itKey.hasNext()) {
@@ -1206,11 +1336,18 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		for (int i = 0; i < dmsTradeInquireEntryCol.size(); i++) {
     			DMSInOutQueryEntryInfo dmsTradeInquireEntryInfo = dmsTradeInquireEntryCol.get(i);
     			String warehouseNum = dmsTradeInquireEntryInfo.getL();
+    			String rqn = dmsTradeInquireEntryInfo.getRqn();
     			WarehouseInfo warehouseInfo = dmsTradeInquireEntryInfo.getEasWarehouse();
-    			
+
     			PurInWarehsEntryInfo purInWarehsEntryInfo = new PurInWarehsEntryInfo();
+    			
+    			purInWarehsEntryInfo.put("rqn", rqn);
+    			
     			//税率
     			BigDecimal taxRate = new BigDecimal(17.00);
+    			if ("P0000121".equals(dmsTradeInquireEntryInfo.getSupplier())) {
+    				taxRate =  new BigDecimal(3.00);
+    			}
     			//含税单价
     			BigDecimal taxPrice = dmsTradeInquireEntryInfo.getEasTaxPrice();
     			//不含税单价=含税单价/(1+税率/100)
@@ -1365,7 +1502,7 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		
     		//SCMBillBase
     		//状态
-    		purInWarehsBillInfo.setBaseStatus(BillBaseStatusEnum.TEMPORARILYSAVED);
+    		purInWarehsBillInfo.setBaseStatus(BillBaseStatusEnum.SUBMITED);
     		//单据类型
     		purInWarehsBillInfo.setBillType(default_BillType);
     		
@@ -1379,12 +1516,25 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     	//保存
     	for (int i=0; i < purInWarehsBillCol.size(); i++) {
     		PurInWarehsBillInfo purInWarehsBillInfo  = purInWarehsBillCol.get(i);
-    		purInwarehsBill.save(purInWarehsBillInfo);
+    		long l = System.currentTimeMillis();
+    		try {
+    			
+        		IObjectPK pk = purInwarehsBill.submit(purInWarehsBillInfo);
+        		if (!isAutoAudit)
+        			purInwarehsBill.audit(pk);
+        		returnInfo.addSpentMsg("提交审核采购入库单", l);
+    		} catch (Exception e) {
+    			String expMsg = String.format("审核采购入库异常(P/O Rqn[%s])：%s",purInWarehsBillInfo.getEntry().get(0).getString("rqn"),e.getMessage());
+    			returnInfo.addExceptionMsg(expMsg);
+    			returnInfo.addSpentMsg("提交审核采购入库单", l);
+    			//	throw new EASBizException(new NumericExceptionSubItem("",expMsg));
+    		}
+    		
     	}
     }
     
     
-    private void batchSaveSaleIssue(Context ctx,DMSWipBillTypeEnum billTypeEnum,HashMap<String, DMSInOutQueryEntryCollection> hashDMSTradeInquireEntryCol) throws Exception {
+    private void batchSaveSaleIssue(Context ctx,DMSWipBillTypeEnum billTypeEnum,HashMap<String, DMSInOutQueryEntryCollection> hashDMSTradeInquireEntryCol,ServerReturnInfo returnInfo) throws Exception {
     	if (hashDMSTradeInquireEntryCol == null) return;
     	Set<String> setKey = hashDMSTradeInquireEntryCol.keySet();
     	Iterator<String> itKey = setKey.iterator();
@@ -1429,8 +1579,14 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     	BillTypeInfo default_BillType = new BillTypeInfo();
     	default_BillType.put("id", Default_BillType_ID);
     	
+    	BillTypeInfo billType_RepairWO = new BillTypeInfo();
+    	billType_RepairWO.put("id", "HM+nytJ+S7izjFHd2/madkY+1VI=");
     	
+    	final String DEFAULT_DMS_SAID = "zfcAAAADYhGA733t"; //DMS顾问 GA2014010063
+    	PersonInfo defaultSA = new PersonInfo();
+    	defaultSA.put("id", DEFAULT_DMS_SAID);
     	
+    	boolean isAutoAudit = SCMBillUtils.isSubmitAutoAudit(ctx, DEFAULT_Storage_ID, Default_BillType_ID);
     	
     	while (itKey.hasNext()) {
     		String key = itKey.next();
@@ -1450,11 +1606,20 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		
     		for (int i = 0; i < dmsTradeInquireEntryCol.size(); i++) {
     			DMSInOutQueryEntryInfo dmsTradeInquireEntryInfo = dmsTradeInquireEntryCol.get(i);
-    		
+    			String wip = dmsTradeInquireEntryInfo.getWip();
+    			int wipLineNo = dmsTradeInquireEntryInfo.getLineSeq();
+    			
     			WarehouseInfo warehouseInfo = dmsTradeInquireEntryInfo.getEasWarehouse();
     			com.kingdee.eas.basedata.master.cssp.CustomerInfo stdCustomerInfo = dmsTradeInquireEntryInfo.getEasCustomer();
     			
     			SaleIssueEntryInfo saleIssueEntryInfo = new SaleIssueEntryInfo();
+    			
+    			//DEP
+    			//领料人
+    			saleIssueEntryInfo.put("RequestPersonID", defaultSA);
+    			saleIssueEntryInfo.put("wip", wip);
+    			saleIssueEntryInfo.put("wipLineNo", wipLineNo);
+    			
     			//税率
     			BigDecimal taxRate = new BigDecimal(17.00);
     			//含税单价
@@ -1570,9 +1735,38 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     			//基本计量单位
     			saleIssueEntryInfo.setBaseUnit(dmsTradeInquireEntryInfo.getEasBaseUnit());
     			
+    			saleIssueEntryInfo.setSourceBillId(dmsTradeInquireEntryInfo.getEasRepairWO().getString("id"));
+    	/*		saleIssueEntryInfo.setSourceBillEntryId(dmsTradeInquireEntryInfo.getEasRepairWOEntryId());
+    			saleIssueEntryInfo.setSourceBillEntrySeq(dmsTradeInquireEntryInfo.getEasRepairWOEntrySeq());
+    			saleIssueEntryInfo.setSourceBillId(dmsTradeInquireEntryInfo.getEasRepairWO().getString("id"));
+    			saleIssueEntryInfo.setSourceBillType(billType_RepairWO);
+    			saleIssueEntryInfo.setSourceBillNumber(dmsTradeInquireEntryInfo.getEasRepairWONumber());
+    			
+    			saleIssueEntryInfo.setSaleOrderEntry(dmsTradeInquireEntryInfo.getEasRepairWOEntryId());
+    			saleIssueEntryInfo.setSaleOrderEntrySeq(dmsTradeInquireEntryInfo.getEasRepairWOEntrySeq());
+    			saleIssueEntryInfo.setSaleOrder(dmsTradeInquireEntryInfo.getEasRepairWO().getString("id"));
+    			saleIssueEntryInfo.setCoreBillType(billType_RepairWO);
+    			saleIssueEntryInfo.setSaleOrderNumber(dmsTradeInquireEntryInfo.getEasRepairWONumber());
+    		*/	
+    			
     			saleIssueEntryCol.add(saleIssueEntryInfo);
     		}
-       		
+    		//DEP字段
+    		//车辆
+    		saleIssueBillInfo.put("VehicleID", dmsTradeInquireEntryCol.get(0).getEasVehicle());
+    		//维修工单号
+    		saleIssueBillInfo.put("RepairWOID", dmsTradeInquireEntryCol.get(0).getEasRepairWO());
+    		//收款状态
+    		saleIssueBillInfo.put("ReceivingStatus",ReceivingStatusEnum.NoReceiving);
+    		//结算状态
+    		saleIssueBillInfo.put("SettlementStatus", SettlementStatusEnum.NOSETTLE);
+    		
+    		saleIssueBillInfo.setSourceBillId( dmsTradeInquireEntryCol.get(0).getEasRepairWO().getString("id"));
+    		saleIssueBillInfo.setSourceBillType(billType_RepairWO);
+    	
+    		
+    		
+       		//客户
     		saleIssueBillInfo.setCustomer(dmsTradeInquireEntryCol.get(0).getEasCustomer());
     		//币别
     		saleIssueBillInfo.setCurrency(defaultCurrency);
@@ -1614,7 +1808,7 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		
     		//SCMBillBase
     		//状态
-    		saleIssueBillInfo.setBaseStatus(BillBaseStatusEnum.TEMPORARILYSAVED);
+    		saleIssueBillInfo.setBaseStatus(BillBaseStatusEnum.SUBMITED);
     		//单据类型
     		saleIssueBillInfo.setBillType(default_BillType);
     		
@@ -1624,15 +1818,29 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		
     		saleIssueBillInfo.put("entry", saleIssueEntryCol);
     		saleIssueBillCol.add(saleIssueBillInfo);
+    		
+    		
     	}
     	//保存
     	for (int i=0; i < saleIssueBillCol.size(); i++) {
     		SaleIssueBillInfo saleIssueBillInfo  = saleIssueBillCol.get(i);
-    		saleIssueBill.save(saleIssueBillInfo);
+    		long l = System.currentTimeMillis();
+    		try {
+    			IObjectPK pk = saleIssueBill.submit(saleIssueBillInfo);
+        		BotpUtils.saveBotpRelation(ctx, saleIssueBillInfo.getSourceBillId(), pk.toString(), "");  			
+    			if (!isAutoAudit)
+    				saleIssueBill.audit(pk);
+    			returnInfo.addSpentMsg("提交审核销售出库单", l);
+    		} catch (Exception e) {
+    			String expMsg = String.format("审核销售出库异常(WIP单号[%s])：%s",saleIssueBillInfo.getEntry().get(0).getString("wip"),e.getMessage());
+    			returnInfo.addExceptionMsg(expMsg);
+    			returnInfo.addSpentMsg("提交审核销售出库单", l);
+    			//throw new EASBizException(new NumericExceptionSubItem("",expMsg));
+    		}
     	}
     }
     
-    private void batchSaveOtherIssue(Context ctx,DMSWipBillTypeEnum billTypeEnum,HashMap<String, DMSInOutQueryEntryCollection> hashDMSTradeInquireEntryCol) throws Exception {
+    private void batchSaveOtherIssue(Context ctx,DMSWipBillTypeEnum billTypeEnum,HashMap<String, DMSInOutQueryEntryCollection> hashDMSTradeInquireEntryCol,ServerReturnInfo returnInfo) throws Exception {
     	if (hashDMSTradeInquireEntryCol == null) return;
     	Set<String> setKey = hashDMSTradeInquireEntryCol.keySet();
     	Iterator<String> itKey = setKey.iterator();
@@ -1674,6 +1882,12 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     	BillTypeInfo default_BillType = new BillTypeInfo();
     	default_BillType.put("id", Default_BillType_ID);
     	
+    	BillTypeInfo billType_RepairWO = new BillTypeInfo();
+    	billType_RepairWO.put("id", "HM+nytJ+S7izjFHd2/madkY+1VI=");
+    	
+    	boolean isAutoAudit = SCMBillUtils.isSubmitAutoAudit(ctx, DEFAULT_Storage_ID, Default_BillType_ID);
+        
+    	
     	while (itKey.hasNext()) {
     		String key = itKey.next();
     		DMSInOutQueryEntryCollection dmsTradeInquireEntryCol = hashDMSTradeInquireEntryCol.get(key);
@@ -1695,8 +1909,14 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		
     			WarehouseInfo warehouseInfo = dmsTradeInquireEntryInfo.getEasWarehouse();
     			com.kingdee.eas.basedata.master.cssp.CustomerInfo stdCustomerInfo = dmsTradeInquireEntryInfo.getEasCustomer();
+    			String wip = dmsTradeInquireEntryInfo.getWip();
+    			int wipLineNo = dmsTradeInquireEntryInfo.getLineSeq();
     			
     			OtherIssueBillEntryInfo otherIssueEntryInfo = new OtherIssueBillEntryInfo();
+    			//DEP
+    			otherIssueEntryInfo.put("wip", wip);
+    			otherIssueEntryInfo.put("wipLineNo", wipLineNo);
+    			
     			//税率
     			BigDecimal taxRate = new BigDecimal(17.00);
     			//含税单价
@@ -1760,6 +1980,15 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     			//基本计量单位
     			otherIssueEntryInfo.setBaseUnit(dmsTradeInquireEntryInfo.getEasBaseUnit());
     			
+    			otherIssueEntryInfo.setSourceBillId(dmsTradeInquireEntryInfo.getEasRepairWO().getString("id"));
+    			/*otherIssueEntryInfo.setSourceBillEntryId(dmsTradeInquireEntryInfo.getEasRepairWOEntryId());
+    			otherIssueEntryInfo.setSourceBillEntrySeq(dmsTradeInquireEntryInfo.getEasRepairWOEntrySeq());
+    			otherIssueEntryInfo.setSourceBillId(dmsTradeInquireEntryInfo.getEasRepairWO().getString("id"));
+    			otherIssueEntryInfo.setSourceBillType(billType_RepairWO);
+    			otherIssueEntryInfo.setSourceBillNumber(dmsTradeInquireEntryInfo.getEasRepairWONumber());
+    			*/
+    			
+    			
     			otherIssueEntryCol.add(otherIssueEntryInfo);
     		}
        		
@@ -1794,7 +2023,7 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		
     		//SCMBillBase
     		//状态
-    		otherIssueBillInfo.setBaseStatus(BillBaseStatusEnum.TEMPORARILYSAVED);
+    		otherIssueBillInfo.setBaseStatus(BillBaseStatusEnum.SUBMITED);
     		//单据类型
     		otherIssueBillInfo.setBillType(default_BillType);
     		
@@ -1807,15 +2036,27 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		
     		
     	}
-    	//保存
+    	//提交审核
     	for (int i=0; i < otherIssueBillCol.size(); i++) {
     		OtherIssueBillInfo otherIssueBillInfo  = otherIssueBillCol.get(i);
-    		otherIssueBill.save(otherIssueBillInfo);
+    		long l = System.currentTimeMillis();
+    		try {
+    			IObjectPK pk = otherIssueBill.submit(otherIssueBillInfo);
+        		BotpUtils.saveBotpRelation(ctx, otherIssueBillInfo.getEntry().get(0).getSourceBillId(), pk.toString(), "");
+        		if (!isAutoAudit)
+        			otherIssueBill.audit(pk);
+        		returnInfo.addSpentMsg("提交审核其他出库单", l);
+    		} catch (Exception e) {
+    			String expMsg = String.format("提交审核其他出库异常(WIP号[%s])：%s",otherIssueBillInfo.getEntry().get(0).getString("wip"),e.getMessage());
+    			returnInfo.addExceptionMsg(expMsg);
+    			returnInfo.addSpentMsg("提交审核其他出库单", l);
+    			//throw new EASBizException(new NumericExceptionSubItem("",expMsg));
+    		}
     	}
     	
     }
     
-    private void batchSaveOtherInWarehs(Context ctx,DMSWipBillTypeEnum billTypeEnum,HashMap<String, DMSInOutQueryEntryCollection> hashDMSTradeInquireEntryCol) throws Exception {
+    private void batchSaveOtherInWarehs(Context ctx,DMSWipBillTypeEnum billTypeEnum,HashMap<String, DMSInOutQueryEntryCollection> hashDMSTradeInquireEntryCol,ServerReturnInfo returnInfo) throws Exception {
     	if (hashDMSTradeInquireEntryCol == null) return;
     	Set<String> setKey = hashDMSTradeInquireEntryCol.keySet();
     	Iterator<String> itKey = setKey.iterator();
@@ -1857,6 +2098,12 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     	BillTypeInfo default_BillType = new BillTypeInfo();
     	default_BillType.put("id", Default_BillType_ID);
     	
+    	BillTypeInfo billType_RepairWO = new BillTypeInfo();
+    	billType_RepairWO.put("id", "HM+nytJ+S7izjFHd2/madkY+1VI=");
+    	
+    	boolean isAutoAudit = SCMBillUtils.isSubmitAutoAudit(ctx, DEFAULT_Storage_ID, Default_BillType_ID);
+            	
+    	
     	while (itKey.hasNext()) {
     		String key = itKey.next();
     		DMSInOutQueryEntryCollection dmsTradeInquireEntryCol = hashDMSTradeInquireEntryCol.get(key);
@@ -1875,11 +2122,17 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		
     		for (int i = 0; i < dmsTradeInquireEntryCol.size(); i++) {
     			DMSInOutQueryEntryInfo dmsTradeInquireEntryInfo = dmsTradeInquireEntryCol.get(i);
-    		
+    			
+    			String wip = dmsTradeInquireEntryInfo.getWip();
+    			int wipLineNo = dmsTradeInquireEntryInfo.getLineSeq();
     			WarehouseInfo warehouseInfo = dmsTradeInquireEntryInfo.getEasWarehouse();
     			com.kingdee.eas.basedata.master.cssp.CustomerInfo stdCustomerInfo = dmsTradeInquireEntryInfo.getEasCustomer();
     			
     			OtherInWarehsBillEntryInfo otherInWarehsEntryInfo = new OtherInWarehsBillEntryInfo();
+    			//DEP
+    			otherInWarehsEntryInfo.put("wip", wip);
+    			otherInWarehsEntryInfo.put("wipLineNo", wipLineNo);
+    			
     			//税率
     			BigDecimal taxRate = new BigDecimal(17.00);
     			//含税单价
@@ -1946,6 +2199,13 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     			otherInWarehsEntryInfo.setReverseQty(PublicUtils.BIGDECIMAL0);
     			otherInWarehsEntryInfo.setIsPresent(false);
     			
+    			otherInWarehsEntryInfo.setSourceBillId(dmsTradeInquireEntryInfo.getEasRepairWO().getString("id"));
+    	/*		otherInWarehsEntryInfo.setSourceBillEntryId(dmsTradeInquireEntryInfo.getEasRepairWOEntryId());
+    			otherInWarehsEntryInfo.setSourceBillEntrySeq(dmsTradeInquireEntryInfo.getEasRepairWOEntrySeq());
+    			otherInWarehsEntryInfo.setSourceBillId(dmsTradeInquireEntryInfo.getEasRepairWO().getString("id"));
+    			otherInWarehsEntryInfo.setSourceBillType(billType_RepairWO);
+    			otherInWarehsEntryInfo.setSourceBillNumber(dmsTradeInquireEntryInfo.getEasRepairWONumber());
+    		*/	
     			
     			
     			otherInWarehsEntryCol.add(otherInWarehsEntryInfo);
@@ -1982,7 +2242,7 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		
     		//SCMBillBase
     		//状态
-    		otherInWarehsBillInfo.setBaseStatus(BillBaseStatusEnum.TEMPORARILYSAVED);
+    		otherInWarehsBillInfo.setBaseStatus(BillBaseStatusEnum.SUBMITED);
     		//单据类型
     		otherInWarehsBillInfo.setBillType(default_BillType);
     		
@@ -1997,10 +2257,23 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		
     	}
     	
-    	//保存
+    	//提交审核
     	for (int i=0; i < otherInWarehsBillCol.size(); i++) {
     		OtherInWarehsBillInfo otherInWarehsBillInfo  = otherInWarehsBillCol.get(i);
-    		otherInwarehsBill.save(otherInWarehsBillInfo);
+    		long l = System.currentTimeMillis();
+    		try {
+    			
+    			IObjectPK pk = otherInwarehsBill.submit(otherInWarehsBillInfo);
+    			BotpUtils.saveBotpRelation(ctx, otherInWarehsBillInfo.getEntry().get(0).getSourceBillId(), pk.toString(), "");
+    			if (!isAutoAudit)
+    				otherInwarehsBill.audit(pk);
+    			returnInfo.addSpentMsg("提交审核其他入库单", l);
+    		} catch (Exception e) {
+    			String expMsg = String.format("提交审核其他入库库异常(WIP号[%s])：%s",otherInWarehsBillInfo.getEntry().get(0).getString("wip"),e.getMessage());
+    			returnInfo.addExceptionMsg(expMsg);
+    			returnInfo.addSpentMsg("提交审核其他入库单", l);
+    			//throw new EASBizException(new NumericExceptionSubItem("",expMsg));
+    		}
     	}
     }
 
@@ -2015,6 +2288,9 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
 		DMSInOutQueryEntryCollection dmsTradeInquireEntryCol = dmsTradeInquireInfo.getEntrys();
 		for (int i = 0; i < dmsTradeInquireEntryCol.size(); i++) {
 			DMSInOutQueryEntryInfo dmsTradeInquireEntryInfo = dmsTradeInquireEntryCol.get(i);
+			//已转入的单据，直接过滤
+			if (dmsTradeInquireEntryInfo.isIsTransferred()) continue;
+			
 			//通用检查 数据合法性
 			int seq = dmsTradeInquireEntryInfo.getSeq();
 			if ("A".equals(dmsTradeInquireEntryInfo.getT())) continue;
@@ -2024,7 +2300,7 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
 			if (bizDate == null) {
 				expMsg = String.format("DMS交易查询第%d行,出库不合法,不能为空.",seq);
     			addExceptionMsg(returnInfo, expMsg);
-    			return;
+    			continue;
 			}
 			
 			//零件编号
@@ -2040,8 +2316,14 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
 			//[T]=P时，检查[供应数量]不能为空、不能等于0
     		if ("P".equals(dmsTradeInquireEntryInfo.getT())) {
     			BigDecimal supplyQty =dmsTradeInquireEntryInfo.getSupplyQty();
+    			BigDecimal cost =  dmsTradeInquireEntryInfo.getCost();
     			if (supplyQty == null || supplyQty.compareTo(PublicUtils.BIGDECIMAL0) == 0) {
     				expMsg = String.format("DMS交易查询第%d行供应数量不合法,不能为空或等于0.",seq);
+        			addExceptionMsg(returnInfo, expMsg);
+        			continue;
+    			}
+    			if (cost == null) {
+    				expMsg = String.format("DMS交易查询第%d行成本不合法,不能为空.",seq);
         			addExceptionMsg(returnInfo, expMsg);
         			continue;
     			}
@@ -2241,11 +2523,11 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     	} else if ("S".equals(t) && (hashWipStocktaking.get(keyWip) != null || hashWipStocktaking.get(keyWip2) != null)
     			&& qty.compareTo(BigDecimal.ZERO) > 0) { //其他出库(盘亏)
     		return DMSWipBillTypeEnum.LossOutWarehs;
-    	} else if ("S".equals(t) && !"@TransTo".equals(customer) && !"@TransTo".equals(customer) &&
+    	} else if ("S".equals(t) && !"@TransTo".equals(customer) && !"@TransFr".equals(customer) &&
     			hashWipStocktaking.get(keyWip) == null && hashWipStocktaking.get(keyWip2) == null &&
     			qty.compareTo(BigDecimal.ZERO) > 0) { //普通销售
     		return DMSWipBillTypeEnum.SaleIssue;
-    	} else if ("S".equals(t) && !"@TransTo".equals(customer) && !"@TransTo".equals(customer) &&
+    	} else if ("S".equals(t) && !"@TransTo".equals(customer) && !"@TransFr".equals(customer) &&
     			hashWipStocktaking.get(keyWip) == null && hashWipStocktaking.get(keyWip2) == null &&
     			qty.compareTo(BigDecimal.ZERO) < 0) { //销售退货
     		return DMSWipBillTypeEnum.SaleReturn;
