@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relationship xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.auto4s.rsm.rs.app</package>
+    <name>R_RepairWORWOItemSpEntry_DataBaseCustom_w</name>
+    <alias>relationship[com.kingdee.eas.auto4s.rsm.rs.app.R_RepairWORWOItemSpEntry_DataBaseCustom_w].alias</alias>
+    <description>relationship[com.kingdee.eas.auto4s.rsm.rs.app.R_RepairWORWOItemSpEntry_DataBaseCustom_w].description</description>
+    <userDefined>true</userDefined>
+    <type>Association</type>
+    <clientCardinality>1</clientCardinality>
+    <supplierCardinality>0..1</supplierCardinality>
+    <xmlNodeRelationship />
+    <clientObject>
+        <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+        <key name="name" value="RepairWORWOItemSpEntry" />
+    </clientObject>
+    <supplierObject>
+        <key name="package" value="com.kingdee.eas.ep.app" />
+        <key name="name" value="DataBaseCustom" />
+    </supplierObject>
+    <resource>
+        <rs key="relationship[com.kingdee.eas.auto4s.rsm.rs.app.R_RepairWORWOItemSpEntry_DataBaseCustom_w].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="relationship[com.kingdee.eas.auto4s.rsm.rs.app.R_RepairWORWOItemSpEntry_DataBaseCustom_w].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</relationship>
+

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizEnum xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.ga.syncdata</package>
+    <name>DMSImpTypeEnum</name>
+    <alias>bizEnum[com.kingdee.eas.ga.syncdata.DMSImpTypeEnum].alias</alias>
+    <description>bizEnum[com.kingdee.eas.ga.syncdata.DMSImpTypeEnum].description</description>
+    <userDefined>true</userDefined>
+    <className>com.kingdee.eas.ga.syncdata.DMSImpTypeEnum</className>
+    <enumDataType>STRING</enumDataType>
+    <enumValues>
+        <enumValue>
+            <name>WIPBILL</name>
+            <alias>bizEnum[com.kingdee.eas.ga.syncdata.DMSImpTypeEnum].enumValues.enumValue[WIPBILL].alias</alias>
+            <userDefined>true</userDefined>
+            <value>WIPBILL</value>
+        </enumValue>
+        <enumValue>
+            <name>TRADEINQUIRE</name>
+            <alias>bizEnum[com.kingdee.eas.ga.syncdata.DMSImpTypeEnum].enumValues.enumValue[TRADEINQUIRE].alias</alias>
+            <userDefined>true</userDefined>
+            <value>TRADEINQUIRE</value>
+        </enumValue>
+    </enumValues>
+    <resource>
+        <rs key="bizEnum[com.kingdee.eas.ga.syncdata.DMSImpTypeEnum].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="DMS导入类型" />
+            <lang locale="zh_HK" value="DMS導入類型" />
+            <lang locale="zh_TW" value="DMS導入類型" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.syncdata.DMSImpTypeEnum].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="f" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.syncdata.DMSImpTypeEnum].enumValues.enumValue[TRADEINQUIRE].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="交易查询" />
+            <lang locale="zh_HK" value="交易查詢" />
+            <lang locale="zh_TW" value="交易查詢" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.syncdata.DMSImpTypeEnum].enumValues.enumValue[WIPBILL].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="WIP单" />
+            <lang locale="zh_HK" value="WIP單" />
+            <lang locale="zh_TW" value="WIP單" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.syncdata.DMSImpTypeEnum].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizEnum>
+

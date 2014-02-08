@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entityObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.ga.syncdata.app</package>
+    <name>DMSWipBillEntry</name>
+    <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].alias</alias>
+    <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].description</description>
+    <userDefined>true</userDefined>
+    <bosType>D84514B0</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.ga.syncdata.DMSWipBillEntry</businessImplName>
+    <businessControllerName>com.kingdee.eas.ga.syncdata.app.DMSWipBillEntryController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getValue].description</description>
+            <innerID>8b42282d-d603-45c1-a1c0-1dcad580b212</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getValue].description</description>
+            <innerID>f1dbd11b-751c-4644-adb3-c020a41d50db</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>selector</name>
+                    <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getValue].parameters.parameter[selector].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getValue].parameters.parameter[selector].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SelectorItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getValue].description</description>
+            <innerID>737cb247-8127-4700-a5fc-4f825ca9889d</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getValue].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getValue].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getCollection].description</description>
+            <innerID>73eed3d0-8eb6-4f54-9740-58c2e71cea2f</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getCollection].description</description>
+            <innerID>f35919cf-ede5-4b62-836a-e72ce9401449</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>view</name>
+                    <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getCollection].parameters.parameter[view].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getCollection].parameters.parameter[view].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.EntityViewInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getCollection].description</description>
+            <innerID>fa1f119d-0be7-4852-b6a5-04f709ac7fcc</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getCollection].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getCollection].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <isAbstract>false</isAbstract>
+    <bizUnitPK>com.kingdee.eas.ga.syncdata.DMSWipBill</bizUnitPK>
+    <baseEntity>
+        <key name="package" value="com.kingdee.eas.myframework.template.base.app" />
+        <key name="name" value="SimpleBizBillEntry" />
+    </baseEntity>
+    <table>
+        <key name="package" value="com.kingdee.eas.ga.syncdata.app" />
+        <key name="name" value="CT_SYN_DMSWipBillEntry" />
+    </table>
+    <properties>
+        <linkProperty>
+            <name>Parent</name>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.linkProperty[Parent].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.linkProperty[Parent].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FParentID" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.ga.syncdata.app" />
+                <key name="name" value="R_DMSWipBill_DMSWipBillEntry_entrys" />
+            </relationship>
+        </linkProperty>
+        <ownProperty>
+            <name>vin</name>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[vin].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[vin].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>100</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[vin].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFVin" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>createTime</name>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[createTime].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[createTime].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Date</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>8</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[createTime].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFCreateTime" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>mileage</name>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[mileage].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[mileage].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>BigDecimal</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>100</length>
+            <precision>28</precision>
+            <decimalDigits>16</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[mileage].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFMileage" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>plateNum</name>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[plateNum].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[plateNum].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>100</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[plateNum].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFPlateNum" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>wip</name>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[wip].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[wip].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>100</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[wip].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFWip" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>accountCode</name>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[accountCode].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[accountCode].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>100</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[accountCode].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFAccountCode" />
+            </mappingField>
+        </ownProperty>
+    </properties>
+    <logicalKey>
+        <name>id</name>
+        <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].logicalKey[id].alias</alias>
+        <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].logicalKey[id].description</description>
+        <keyClass>com.kingdee.bos.dao.IObjectPK</keyClass>
+        <userDefined>true</userDefined>
+        <keyProperties>
+            <baseProperty>
+                <key name="name" value="id" />
+            </baseProperty>
+        </keyProperties>
+    </logicalKey>
+    <resource>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="Wip表头" />
+            <lang locale="zh_HK" value="Wip表頭" />
+            <lang locale="zh_TW" value="Wip表頭" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="Wip表头" />
+            <lang locale="zh_HK" value="Wip表頭" />
+            <lang locale="zh_TW" value="Wip表頭" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].extendedProperty.bimTemplateType">
+            <lang locale="en_US" value="BillBase" />
+            <lang locale="zh_CN" value="BillBase" />
+            <lang locale="zh_TW" value="BillBase" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].extendedProperty.genImplementCode">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].logicalKey[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].logicalKey[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getCollection].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getCollection].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getCollection].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getCollection].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getCollection].parameters.parameter[view].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getCollection].parameters.parameter[view].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getValue].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getValue].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getValue].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getValue].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getValue].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getValue].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getValue].parameters.parameter[selector].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].methods.method[getValue].parameters.parameter[selector].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.linkProperty[Parent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据头" />
+            <lang locale="zh_HK" value="單據頭" />
+            <lang locale="zh_TW" value="單據頭" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.linkProperty[Parent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据头" />
+            <lang locale="zh_HK" value="單據頭" />
+            <lang locale="zh_TW" value="單據頭" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.linkProperty[Parent].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.linkProperty[Parent].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.linkProperty[Parent].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.linkProperty[Parent].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[accountCode].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="账户代码" />
+            <lang locale="zh_HK" value="賬戶代碼" />
+            <lang locale="zh_TW" value="賬戶代碼" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[accountCode].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[accountCode].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="账户代码" />
+            <lang locale="zh_HK" value="賬戶代碼" />
+            <lang locale="zh_TW" value="賬戶代碼" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[accountCode].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[accountCode].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[accountCode].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[accountCode].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[accountCode].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[accountCode].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[accountCode].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[accountCode].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[accountCode].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[createTime].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建日期" />
+            <lang locale="zh_HK" value="創建日期" />
+            <lang locale="zh_TW" value="創建日期" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[createTime].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[createTime].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建日期" />
+            <lang locale="zh_HK" value="創建日期" />
+            <lang locale="zh_TW" value="創建日期" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[createTime].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[createTime].extendedProperty.bizDataType">
+            <lang locale="en_US" value="TIME" />
+            <lang locale="zh_CN" value="TIME" />
+            <lang locale="zh_TW" value="TIME" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[createTime].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[createTime].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[createTime].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[createTime].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[createTime].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[createTime].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[createTime].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[mileage].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="进厂里程数" />
+            <lang locale="zh_HK" value="進廠裏程數" />
+            <lang locale="zh_TW" value="進廠裏程數" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[mileage].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[mileage].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="进厂里程数" />
+            <lang locale="zh_HK" value="進廠裏程數" />
+            <lang locale="zh_TW" value="進廠裏程數" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[mileage].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[mileage].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[mileage].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[mileage].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[mileage].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[mileage].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[mileage].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[mileage].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[mileage].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[plateNum].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="牌照号" />
+            <lang locale="zh_HK" value="牌照號" />
+            <lang locale="zh_TW" value="牌照號" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[plateNum].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[plateNum].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="牌照号" />
+            <lang locale="zh_HK" value="牌照號" />
+            <lang locale="zh_TW" value="牌照號" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[plateNum].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[plateNum].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[plateNum].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[plateNum].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[plateNum].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[plateNum].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[plateNum].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[plateNum].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[plateNum].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[vin].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="底盘号" />
+            <lang locale="zh_HK" value="底盤號" />
+            <lang locale="zh_TW" value="底盤號" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[vin].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[vin].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="文本" />
+            <lang locale="zh_HK" value="文本" />
+            <lang locale="zh_TW" value="文本" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[vin].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[vin].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[vin].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[vin].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[vin].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[vin].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[vin].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[vin].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[vin].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[wip].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="WIP号" />
+            <lang locale="zh_HK" value="WIP號" />
+            <lang locale="zh_TW" value="WIP號" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[wip].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[wip].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="WIP号" />
+            <lang locale="zh_HK" value="WIP號" />
+            <lang locale="zh_TW" value="WIP號" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[wip].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[wip].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[wip].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[wip].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[wip].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[wip].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[wip].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[wip].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSWipBillEntry].properties.ownProperty[wip].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</entityObject>
+

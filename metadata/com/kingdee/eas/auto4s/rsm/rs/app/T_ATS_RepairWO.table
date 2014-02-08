@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataTable xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.auto4s.rsm.rs.app</package>
+    <name>T_ATS_RepairWO</name>
+    <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].alias</alias>
+    <columns>
+        <column>
+            <name>FRepairWay</name>
+            <length>100</length>
+        </column>
+    </columns>
+    <resource>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FAccountCFGID].alias">
+            <lang locale="zh_CN" value="账户类型" />
+            <lang locale="zh_HK" value="賬戶類型" />
+            <lang locale="zh_TW" value="賬戶類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCardID].alias">
+            <lang locale="zh_CN" value="会员卡" />
+            <lang locale="zh_HK" value="會員卡" />
+            <lang locale="zh_TW" value="會員卡" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FGroupOrgunitID].alias">
+            <lang locale="zh_CN" value="维修集团公司" />
+            <lang locale="zh_HK" value="維修集團公司" />
+            <lang locale="zh_TW" value="維修集團公司" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FGroupOrgunitID].description">
+            <lang locale="zh_CN" value="" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsNextWarrEdit].alias">
+            <lang locale="zh_CN" value="下次保养修改" />
+            <lang locale="zh_HK" value="下次保養修改" />
+            <lang locale="zh_TW" value="下次保養修改" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsNextWarrEdit].description">
+            <lang locale="zh_CN" value="" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsPay].alias">
+            <lang locale="zh_CN" value="已生成内部应付" />
+            <lang locale="zh_HK" value="已生成內部應付" />
+            <lang locale="zh_TW" value="已生成內部應付" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsPay].description">
+            <lang locale="zh_CN" value="" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsReceive].alias">
+            <lang locale="zh_CN" value="已生成内部应收" />
+            <lang locale="zh_HK" value="已生成內部應收" />
+            <lang locale="zh_TW" value="已生成內部應收" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsReceive].description">
+            <lang locale="zh_CN" value="" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRecentlyComeMile].alias">
+            <lang locale="zh_CN" value="上次进厂里程" />
+            <lang locale="zh_HK" value="上次進廠裏程" />
+            <lang locale="zh_TW" value="上次進廠裏程" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRepairWay].alias">
+            <lang locale="zh_CN" value="维修方式" />
+            <lang locale="zh_HK" value="維修方式" />
+            <lang locale="zh_TW" value="維修方式" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRepairWay].description">
+            <lang locale="zh_CN" value="" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSupplierID].alias">
+            <lang locale="zh_CN" value="维修外包公司" />
+            <lang locale="zh_HK" value="維修外包公司" />
+            <lang locale="zh_TW" value="維修外包公司" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSupplierID].description">
+            <lang locale="zh_CN" value="" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FVersion].alias">
+            <lang locale="zh_CN" value="版本号" />
+            <lang locale="zh_HK" value="版本號" />
+            <lang locale="zh_TW" value="版本號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FVersion].description">
+            <lang locale="zh_CN" value="由于工单，车间，领料都会修改同一数据，会造成数据不一致，所以用版本号来区分" />
+            <lang locale="zh_HK" value="由於工單，車間，領料都會修改同一數據，會造成數據不一致，所以用版本號來區分" />
+            <lang locale="zh_TW" value="由於工單，車間，領料都會修改同一數據，會造成數據不一致，所以用版本號來區分" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</dataTable>
+

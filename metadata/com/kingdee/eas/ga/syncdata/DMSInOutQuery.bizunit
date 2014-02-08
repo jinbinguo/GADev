@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizUnit xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.ga.syncdata</package>
+    <name>DMSInOutQuery</name>
+    <alias>bizUnit[com.kingdee.eas.ga.syncdata.DMSInOutQuery].alias</alias>
+    <description>bizUnit[com.kingdee.eas.ga.syncdata.DMSInOutQuery].description</description>
+    <userDefined>true</userDefined>
+    <bizType>BusinessBill</bizType>
+    <template>false</template>
+    <entityPK>com.kingdee.eas.ga.syncdata.app.DMSInOutQuery</entityPK>
+    <queryPK>com.kingdee.eas.ga.syncdata.app.DMSInOutQueryQuery</queryPK>
+    <editUIPK>com.kingdee.eas.ga.syncdata.client.DMSInOutQueryEditUI</editUIPK>
+    <listUIPK>com.kingdee.eas.ga.syncdata.client.DMSInOutQueryListUI</listUIPK>
+    <webEditUIPK />
+    <webListUIPK />
+    <entityFunctionPK>com.kingdee.eas.ga.syncdata.app.DMSInOutQueryFunction</entityFunctionPK>
+    <editUIFunctionPK />
+    <listUIFunctionPK />
+    <entryUIPK />
+    <versionDate />
+    <versionNumber />
+    <extendTablePKs />
+    <extendEntityPKs />
+    <extendQueryPKs />
+    <extendEditUIPKs />
+    <extendListUIPKs />
+    <menuPKList />
+    <bimTemplateType>BillBase</bimTemplateType>
+    <relatedTablePK />
+    <relatedEntityPK />
+    <relatedEditUIPK />
+    <genImplementCode>true</genImplementCode>
+    <webEditPagePK />
+    <webListPagePK />
+    <webPagePKS />
+    <webViewPagePK />
+    <webBriefPagePK />
+    <relatedWebEditPagePK />
+    <relatedQueryPK />
+    <resource>
+        <rs key="bizUnit[com.kingdee.eas.ga.syncdata.DMSInOutQuery].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="DMS交易查询" />
+            <lang locale="zh_HK" value="DMS交易查詢" />
+            <lang locale="zh_TW" value="DMS交易查詢" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.syncdata.DMSInOutQuery].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.syncdata.DMSInOutQuery].extendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.syncdata.DMSInOutQuery].extendedProperty.bimTemplateType">
+            <lang locale="en_US" value="BillBase" />
+            <lang locale="zh_CN" value="BillBase" />
+            <lang locale="zh_TW" value="BillBase" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.syncdata.DMSInOutQuery].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.syncdata.DMSInOutQuery].extendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.syncdata.DMSInOutQuery].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.ga.syncdata.app.DMSInOutQueryQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.syncdata.app.DMSInOutQueryQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.syncdata.app.DMSInOutQueryQuery" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.syncdata.DMSInOutQuery].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.ga.syncdata.client.DMSInOutQueryEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.syncdata.client.DMSInOutQueryEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.syncdata.client.DMSInOutQueryEditUI" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.syncdata.DMSInOutQuery].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.syncdata.DMSInOutQuery].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.syncdata.DMSInOutQuery].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.syncdata.DMSInOutQuery].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.ga.syncdata.client.DMSInOutQueryListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.syncdata.client.DMSInOutQueryListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.syncdata.client.DMSInOutQueryListUI" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.syncdata.DMSInOutQuery].extendedProperty.maxFieldIndex">
+            <lang locale="en_US" value="75" />
+            <lang locale="zh_CN" value="75" />
+            <lang locale="zh_TW" value="75" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.syncdata.DMSInOutQuery].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizUnit>
+

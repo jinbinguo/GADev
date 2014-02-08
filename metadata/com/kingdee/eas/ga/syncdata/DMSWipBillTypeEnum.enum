@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizEnum xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.ga.syncdata</package>
+    <name>DMSWipBillTypeEnum</name>
+    <alias>bizEnum[com.kingdee.eas.ga.syncdata.DMSWipBillTypeEnum].alias</alias>
+    <description>bizEnum[com.kingdee.eas.ga.syncdata.DMSWipBillTypeEnum].description</description>
+    <userDefined>true</userDefined>
+    <className>com.kingdee.eas.ga.syncdata.DMSWipBillTypeEnum</className>
+    <enumDataType>STRING</enumDataType>
+    <enumValues>
+        <enumValue>
+            <name>PurInWarehs</name>
+            <alias>bizEnum[com.kingdee.eas.ga.syncdata.DMSWipBillTypeEnum].enumValues.enumValue[PurInWarehs].alias</alias>
+            <userDefined>true</userDefined>
+            <value>PurInWarehs</value>
+        </enumValue>
+        <enumValue>
+            <name>PurReturn</name>
+            <alias>bizEnum[com.kingdee.eas.ga.syncdata.DMSWipBillTypeEnum].enumValues.enumValue[PurReturn].alias</alias>
+            <userDefined>true</userDefined>
+            <value>PurReturn</value>
+        </enumValue>
+        <enumValue>
+            <name>SaleIssue</name>
+            <alias>bizEnum[com.kingdee.eas.ga.syncdata.DMSWipBillTypeEnum].enumValues.enumValue[SaleIssue].alias</alias>
+            <userDefined>true</userDefined>
+            <value>SaleIssue</value>
+        </enumValue>
+        <enumValue>
+            <name>SaleReturn</name>
+            <alias>bizEnum[com.kingdee.eas.ga.syncdata.DMSWipBillTypeEnum].enumValues.enumValue[SaleReturn].alias</alias>
+            <userDefined>true</userDefined>
+            <value>SaleReturn</value>
+        </enumValue>
+        <enumValue>
+            <name>TransferInWarehs</name>
+            <alias>bizEnum[com.kingdee.eas.ga.syncdata.DMSWipBillTypeEnum].enumValues.enumValue[TransferInWarehs].alias</alias>
+            <userDefined>true</userDefined>
+            <value>TransferInWarehs</value>
+        </enumValue>
+        <enumValue>
+            <name>TransferOutWarehs</name>
+            <alias>bizEnum[com.kingdee.eas.ga.syncdata.DMSWipBillTypeEnum].enumValues.enumValue[TransferOutWarehs].alias</alias>
+            <userDefined>true</userDefined>
+            <value>TransferOutWarehs</value>
+        </enumValue>
+        <enumValue>
+            <name>ProfitInWarehs</name>
+            <alias>bizEnum[com.kingdee.eas.ga.syncdata.DMSWipBillTypeEnum].enumValues.enumValue[ProfitInWarehs].alias</alias>
+            <userDefined>true</userDefined>
+            <value>ProfitInWarehs</value>
+        </enumValue>
+        <enumValue>
+            <name>LossOutWarehs</name>
+            <alias>bizEnum[com.kingdee.eas.ga.syncdata.DMSWipBillTypeEnum].enumValues.enumValue[LossOutWarehs].alias</alias>
+            <userDefined>true</userDefined>
+            <value>LossOutWarehs</value>
+        </enumValue>
+    </enumValues>
+    <resource>
+        <rs key="bizEnum[com.kingdee.eas.ga.syncdata.DMSWipBillTypeEnum].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="DMSWip单据类型" />
+            <lang locale="zh_HK" value="DMSWip單據類型" />
+            <lang locale="zh_TW" value="DMSWip單據類型" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.syncdata.DMSWipBillTypeEnum].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.syncdata.DMSWipBillTypeEnum].enumValues.enumValue[LossOutWarehs].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="盘亏出库" />
+            <lang locale="zh_HK" value="盤虧出庫" />
+            <lang locale="zh_TW" value="盤虧出庫" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.syncdata.DMSWipBillTypeEnum].enumValues.enumValue[ProfitInWarehs].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="盘盈入库" />
+            <lang locale="zh_HK" value="盤盈入庫" />
+            <lang locale="zh_TW" value="盤盈入庫" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.syncdata.DMSWipBillTypeEnum].enumValues.enumValue[PurInWarehs].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="采购入库" />
+            <lang locale="zh_HK" value="採購入庫" />
+            <lang locale="zh_TW" value="採購入庫" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.syncdata.DMSWipBillTypeEnum].enumValues.enumValue[PurReturn].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="采购退货" />
+            <lang locale="zh_HK" value="採購退貨" />
+            <lang locale="zh_TW" value="採購退貨" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.syncdata.DMSWipBillTypeEnum].enumValues.enumValue[SaleIssue].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="销售出库" />
+            <lang locale="zh_HK" value="銷售出庫" />
+            <lang locale="zh_TW" value="銷售出庫" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.syncdata.DMSWipBillTypeEnum].enumValues.enumValue[SaleReturn].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="销售退货" />
+            <lang locale="zh_HK" value="銷售退貨" />
+            <lang locale="zh_TW" value="銷售退貨" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.syncdata.DMSWipBillTypeEnum].enumValues.enumValue[TransferInWarehs].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="调拨入库" />
+            <lang locale="zh_HK" value="調撥入庫" />
+            <lang locale="zh_TW" value="調撥入庫" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.syncdata.DMSWipBillTypeEnum].enumValues.enumValue[TransferOutWarehs].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="调拨出库" />
+            <lang locale="zh_HK" value="調撥出庫" />
+            <lang locale="zh_TW" value="調撥出庫" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.syncdata.DMSWipBillTypeEnum].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizEnum>
+

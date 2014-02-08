@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facade xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.ga.syncdata.app</package>
+    <name>SyncDataFacade</name>
+    <alias>facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].alias</alias>
+    <description>facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].description</description>
+    <userDefined>true</userDefined>
+    <bosType>76F81EA6</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.ga.syncdata.SyncDataFacade</businessImplName>
+    <businessControllerName>com.kingdee.eas.ga.syncdata.app.SyncDataFacadeController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>syncWipBill</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncWipBill].alias</alias>
+            <description>facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncWipBill].description</description>
+            <innerID>a1c9d6de-771a-4b8b-8bc4-5b641a8984b5</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>com.kingdee.eas.myframework.vo.ServerReturnInfo</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>serviceOrgInfo</name>
+                    <alias>facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncWipBill].parameters.parameter[serviceOrgInfo].alias</alias>
+                    <description>facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncWipBill].parameters.parameter[serviceOrgInfo].description</description>
+                    <direction>in</direction>
+                    <dataType>ObjectValue</dataType>
+                    <metadataRef>com.kingdee.eas.basedata.orgext.app.ServiceOrgUnit</metadataRef>
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>dmsWipBillPk</name>
+                    <alias>facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncWipBill].parameters.parameter[dmsWipBillPk].alias</alias>
+                    <description>facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncWipBill].parameters.parameter[dmsWipBillPk].description</description>
+                    <direction>in</direction>
+                    <dataType>ObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <exceptions>
+                <bizException>
+                    <key name="package" value="com.kingdee.eas.common" />
+                    <key name="name" value="EASBizException" />
+                </bizException>
+            </exceptions>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>syncTradeInquire</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncTradeInquire].alias</alias>
+            <description>facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncTradeInquire].description</description>
+            <innerID>558e94bd-2581-4c60-9b6f-d4e93d3c4789</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>com.kingdee.eas.myframework.vo.ServerReturnInfo</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>serviceOrgInfo</name>
+                    <alias>facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncTradeInquire].parameters.parameter[serviceOrgInfo].alias</alias>
+                    <description>facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncTradeInquire].parameters.parameter[serviceOrgInfo].description</description>
+                    <direction>in</direction>
+                    <dataType>ObjectValue</dataType>
+                    <metadataRef>com.kingdee.eas.basedata.orgext.app.ServiceOrgUnit</metadataRef>
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>dmsTradeInqirePk</name>
+                    <alias>facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncTradeInquire].parameters.parameter[dmsTradeInqirePk].alias</alias>
+                    <description>facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncTradeInquire].parameters.parameter[dmsTradeInqirePk].description</description>
+                    <direction>in</direction>
+                    <dataType>ObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <exceptions>
+                <bizException>
+                    <key name="package" value="com.kingdee.eas.common" />
+                    <key name="name" value="EASBizException" />
+                </bizException>
+            </exceptions>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>autosync</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[autosync].alias</alias>
+            <description>facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[autosync].description</description>
+            <innerID>8f51a682-c58e-4605-8319-5b3816ef884a</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <exceptions>
+                <bizException>
+                    <key name="package" value="com.kingdee.eas.common" />
+                    <key name="name" value="EASBizException" />
+                </bizException>
+            </exceptions>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <resource>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="数据同步功能" />
+            <lang locale="zh_HK" value="數據同步功能" />
+            <lang locale="zh_TW" value="數據同步功能" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[autosync].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="自动同步" />
+            <lang locale="zh_HK" value="自動同步" />
+            <lang locale="zh_TW" value="自動同步" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[autosync].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncTradeInquire].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="同步交易查询" />
+            <lang locale="zh_HK" value="同步交易查詢" />
+            <lang locale="zh_TW" value="同步交易查詢" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncTradeInquire].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncTradeInquire].parameters.parameter[dmsTradeInqirePk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="DMS交易查询ID" />
+            <lang locale="zh_HK" value="DMS交易查詢ID" />
+            <lang locale="zh_TW" value="DMS交易查詢ID" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncTradeInquire].parameters.parameter[dmsTradeInqirePk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncTradeInquire].parameters.parameter[serviceOrgInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncTradeInquire].parameters.parameter[serviceOrgInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncWipBill].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="同步Wip单" />
+            <lang locale="zh_HK" value="同步Wip單" />
+            <lang locale="zh_TW" value="同步Wip單" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncWipBill].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncWipBill].parameters.parameter[dmsWipBillPk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="DMSWip单号ID" />
+            <lang locale="zh_HK" value="DMSWip單號ID" />
+            <lang locale="zh_TW" value="DMSWip單號ID" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncWipBill].parameters.parameter[dmsWipBillPk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncWipBill].parameters.parameter[serviceOrgInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncWipBill].parameters.parameter[serviceOrgInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</facade>
+
