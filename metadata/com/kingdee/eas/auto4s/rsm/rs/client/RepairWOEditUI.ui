@@ -5,188 +5,594 @@
     <alias>uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].alias</alias>
     <components>
         <component>
+            <name>kDLabelContainer2</name>
+            <constraints>5,25,270,19,385</constraints>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
+        </component>
+        <component>
+            <name>kDLabelContainer1</name>
+            <constraints>352,10,270,19,385</constraints>
+            <parent>
+                <key name="name" value="kDPVehicleInfo" />
+            </parent>
+        </component>
+        <component>
+            <name>contInsuranCompany</name>
+            <constraints>282,95,270,19,385</constraints>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
+        </component>
+        <component>
+            <name>contSeries</name>
+            <constraints>352,44,270,19,385</constraints>
+            <parent>
+                <key name="name" value="kDPVehicleInfo" />
+            </parent>
+        </component>
+        <component>
+            <name>contModel</name>
+            <constraints>686,41,270,19,137</constraints>
+            <parent>
+                <key name="name" value="kDPVehicleInfo" />
+            </parent>
+        </component>
+        <component>
+            <name>contVIN</name>
+            <constraints>17,10,270,19,385</constraints>
+            <parent>
+                <key name="name" value="kDPVehicleInfo" />
+            </parent>
+        </component>
+        <component>
+            <name>contCustomerDiscountClassify</name>
+            <constraints>287,7,270,19,385</constraints>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
+        </component>
+        <component>
+            <name>contTel</name>
+            <constraints>342,49,270,19,385</constraints>
+            <parent>
+                <key name="name" value="kDPRepairInfo" />
+            </parent>
+        </component>
+        <component>
+            <name>contRepairSender</name>
+            <constraints>13,49,270,19,261</constraints>
+            <parent>
+                <key name="name" value="kDPRepairInfo" />
+            </parent>
+        </component>
+        <component>
+            <name>contCustomer</name>
+            <constraints>6,4,270,19,385</constraints>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
+        </component>
+        <component>
+            <name>contnextMaintainmiles</name>
+            <constraints>2,47,270,19,385</constraints>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
+        </component>
+        <component>
+            <name>contNextMaintainDate</name>
+            <constraints>558,26,270,19,385</constraints>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
+        </component>
+        <component>
+            <name>contCompanyNumber</name>
+            <constraints>342,10,270,19,385</constraints>
+        </component>
+        <component>
+            <name>contCustomerRequest</name>
+            <constraints>672,48,271,57,137</constraints>
+            <parent>
+                <key name="name" value="kDPRepairInfo" />
+            </parent>
+        </component>
+        <component>
             <name>chkIsWaitForStore</name>
-            <tabIndex>52</tabIndex>
+            <constraints>655,1,125,19,384</constraints>
+            <tabIndex>20</tabIndex>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
         </component>
         <component>
             <name>chkIsWash</name>
-            <tabIndex>51</tabIndex>
+            <constraints>796,5,120,19,385</constraints>
+            <tabIndex>19</tabIndex>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
         </component>
         <component>
             <name>chkIsPriorAssign</name>
-            <tabIndex>50</tabIndex>
+            <constraints>725,2,102,19,385</constraints>
+            <tabIndex>18</tabIndex>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
+        </component>
+        <component>
+            <name>contRepairType</name>
+            <constraints>281,69,270,19,385</constraints>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
+        </component>
+        <component>
+            <name>contWarrantyType</name>
+            <constraints>2,94,270,19,385</constraints>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
+        </component>
+        <component>
+            <name>contConsignation</name>
+            <constraints>559,115,270,19,384</constraints>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
+        </component>
+        <component>
+            <name>contKeyNumber</name>
+            <constraints>557,91,270,19,385</constraints>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
+        </component>
+        <component>
+            <name>contOilQty</name>
+            <constraints>287,120,270,19,385</constraints>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
+        </component>
+        <component>
+            <name>contMile</name>
+            <constraints>672,11,270,19,137</constraints>
+            <parent>
+                <key name="name" value="kDPRepairInfo" />
+            </parent>
         </component>
         <component>
             <name>chkIsStat</name>
-            <tabIndex>42</tabIndex>
+            <constraints>562,2,131,19,384</constraints>
+            <tabIndex>10</tabIndex>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
+        </component>
+        <component>
+            <name>contRepairTotalAmount</name>
+            <constraints>558,69,270,19,384</constraints>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
+        </component>
+        <component>
+            <name>contIntendDeliveryTime</name>
+            <constraints>342,11,270,19,385</constraints>
+            <parent>
+                <key name="name" value="kDPRepairInfo" />
+            </parent>
+        </component>
+        <component>
+            <name>contComeTime</name>
+            <constraints>13,13,270,19,261</constraints>
+            <parent>
+                <key name="name" value="kDPRepairInfo" />
+            </parent>
+        </component>
+        <component>
+            <name>contSA</name>
+            <constraints>10,121,270,19,261</constraints>
+            <parent>
+                <key name="name" value="kDPBizInfo" />
+            </parent>
+        </component>
+        <component>
+            <name>contVehicle</name>
+            <constraints>10,6,270,19,261</constraints>
+            <parent>
+                <key name="name" value="kDPBizInfo" />
+            </parent>
+        </component>
+        <component>
+            <name>contStatus</name>
+            <constraints>683,10,270,19,384</constraints>
+        </component>
+        <component>
+            <name>contOrgUnit</name>
+            <constraints>10,37,270,19,261</constraints>
+            <parent>
+                <key name="name" value="kDPBizInfo" />
+            </parent>
+        </component>
+        <component>
+            <name>contBrand</name>
+            <constraints>19,44,270,19,384</constraints>
+            <parent>
+                <key name="name" value="kDPVehicleInfo" />
+            </parent>
+        </component>
+        <component>
+            <name>contDescription</name>
+            <constraints>5,122,270,18,385</constraints>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
+        </component>
+        <component>
+            <name>contNumber</name>
+            <constraints>2,10,270,19,385</constraints>
+        </component>
+        <component>
+            <name>kDBtnMulAssign</name>
+            <constraints>834,61,114,19,385</constraints>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
+        </component>
+        <component>
+            <name>kDBtnWorkTime</name>
+            <constraints>833,38,124,19,137</constraints>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
+        </component>
+        <component>
+            <name>kDLabelContainer3</name>
+            <constraints>556,46,270,19,384</constraints>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
+        </component>
+        <component>
+            <name>kdbSelVip</name>
+            <constraints>833,21,121,19,385</constraints>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
+        </component>
+        <component>
+            <name>kDVipItemDisRate</name>
+            <constraints>836,83,116,19,385</constraints>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
+        </component>
+        <component>
+            <name>kDVipSparDisRate</name>
+            <constraints>836,107,117,19,385</constraints>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
+        </component>
+        <component>
+            <name>kDLabelContainer4</name>
+            <constraints>13,86,270,19,261</constraints>
+            <parent>
+                <key name="name" value="kDPRepairInfo" />
+            </parent>
+        </component>
+        <component>
+            <name>kDLabelContainer5</name>
+            <constraints>281,46,270,19,385</constraints>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
+        </component>
+        <component>
+            <name>kDLabelContainer6</name>
+            <constraints>342,86,270,19,385</constraints>
+            <parent>
+                <key name="name" value="kDPRepairInfo" />
+            </parent>
         </component>
         <component>
             <name>chekIsReceive</name>
-            <tabIndex>76</tabIndex>
+            <constraints>281,28,156,19,385</constraints>
+            <tabIndex>44</tabIndex>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
         </component>
         <component>
             <name>chkIsPay</name>
-            <tabIndex>75</tabIndex>
+            <constraints>424,26,118,19,385</constraints>
+            <tabIndex>43</tabIndex>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
+        </component>
+        <component>
+            <name>kDLabelContainer7</name>
+            <constraints>5,70,270,19,384</constraints>
+            <parent>
+                <key name="name" value="kDPHideField" />
+            </parent>
         </component>
         <component>
             <name>kDRecentlyComeTime</name>
-            <tabIndex>63</tabIndex>
+            <tabIndex>31</tabIndex>
         </component>
         <component>
             <name>prmtInsuranCompany</name>
-            <tabIndex>48</tabIndex>
+            <tabIndex>16</tabIndex>
         </component>
         <component>
             <name>prmtCustomerDiscountClassify</name>
-            <tabIndex>59</tabIndex>
+            <tabIndex>27</tabIndex>
         </component>
         <component>
             <name>txtTel</name>
-            <tabIndex>58</tabIndex>
+            <tabIndex>26</tabIndex>
         </component>
         <component>
             <name>txtRepairSender</name>
-            <tabIndex>57</tabIndex>
+            <tabIndex>25</tabIndex>
         </component>
         <component>
             <name>prmtCustomer</name>
-            <tabIndex>56</tabIndex>
+            <tabIndex>24</tabIndex>
         </component>
         <component>
             <name>pkNextMaintainDate</name>
-            <tabIndex>55</tabIndex>
+            <tabIndex>23</tabIndex>
         </component>
         <component>
             <name>txtCompanyNumber</name>
-            <tabIndex>54</tabIndex>
+            <tabIndex>22</tabIndex>
+            <properties>
+                <property>
+                    <name>enabled</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[txtCompanyNumber].properties.property[enabled].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
         </component>
         <component>
             <name>txtCustomerRequest</name>
-            <tabIndex>53</tabIndex>
+            <tabIndex>21</tabIndex>
         </component>
         <component>
             <name>prmtRepairType</name>
-            <tabIndex>49</tabIndex>
+            <tabIndex>17</tabIndex>
         </component>
         <component>
             <name>prmtWarrantyType</name>
-            <tabIndex>47</tabIndex>
+            <tabIndex>15</tabIndex>
         </component>
         <component>
             <name>txtConsignation</name>
-            <tabIndex>46</tabIndex>
+            <tabIndex>14</tabIndex>
         </component>
         <component>
             <name>txtKeyNumber</name>
-            <tabIndex>45</tabIndex>
+            <tabIndex>13</tabIndex>
         </component>
         <component>
             <name>OilQty</name>
-            <tabIndex>44</tabIndex>
+            <tabIndex>12</tabIndex>
         </component>
         <component>
             <name>txtMile</name>
-            <tabIndex>43</tabIndex>
+            <tabIndex>11</tabIndex>
         </component>
         <component>
             <name>txtRepairTotalAmount</name>
-            <tabIndex>41</tabIndex>
+            <tabIndex>9</tabIndex>
         </component>
         <component>
             <name>pkIntendDeliveryTime</name>
-            <tabIndex>40</tabIndex>
+            <tabIndex>8</tabIndex>
         </component>
         <component>
             <name>pkComeTime</name>
-            <tabIndex>39</tabIndex>
+            <tabIndex>7</tabIndex>
         </component>
         <component>
             <name>prmtSA</name>
-            <tabIndex>38</tabIndex>
-        </component>
-        <component>
-            <name>prmtVehicle</name>
-            <tabIndex>34</tabIndex>
-        </component>
-        <component>
-            <name>Status</name>
-            <tabIndex>37</tabIndex>
-        </component>
-        <component>
-            <name>prmtOrgUnit</name>
-            <tabIndex>36</tabIndex>
-        </component>
-        <component>
-            <name>prmtBrand</name>
-            <tabIndex>35</tabIndex>
+            <tabIndex>6</tabIndex>
         </component>
         <component>
             <name>kDTDis</name>
-            <tabIndex>65</tabIndex>
+            <tabIndex>33</tabIndex>
         </component>
         <component>
             <name>txtNumber</name>
-            <tabIndex>64</tabIndex>
+            <tabIndex>32</tabIndex>
         </component>
         <component>
             <name>prmtVip</name>
-            <tabIndex>80</tabIndex>
+            <tabIndex>48</tabIndex>
         </component>
         <component>
             <name>repairWay</name>
-            <tabIndex>77</tabIndex>
+            <tabIndex>45</tabIndex>
         </component>
         <component>
             <name>prmtGroupOrgunit</name>
-            <tabIndex>78</tabIndex>
+            <tabIndex>46</tabIndex>
         </component>
         <component>
             <name>prmtSupplier</name>
-            <tabIndex>79</tabIndex>
+            <tabIndex>47</tabIndex>
         </component>
         <component>
             <name>prmtAccountCfg</name>
-            <tabIndex>74</tabIndex>
+            <tabIndex>42</tabIndex>
         </component>
         <component>
             <name>kdtRWORepairItemEntry</name>
-            <tabIndex>72</tabIndex>
+            <constraints>0,0,973,470,15</constraints>
+            <tabIndex>40</tabIndex>
         </component>
         <component>
             <name>kdtRWOSparepartEntry</name>
-            <tabIndex>71</tabIndex>
+            <constraints>0,0,973,478,15</constraints>
+            <tabIndex>39</tabIndex>
         </component>
         <component>
             <name>kdtRWORepairPkgEntry</name>
-            <tabIndex>70</tabIndex>
+            <constraints>0,0,973,479,15</constraints>
+            <tabIndex>38</tabIndex>
         </component>
         <component>
             <name>kdtRWOActivityEntry</name>
-            <tabIndex>69</tabIndex>
+            <constraints>0,0,973,475,15</constraints>
+            <tabIndex>37</tabIndex>
         </component>
         <component>
             <name>kdtRWOAttachmentItemEntry</name>
-            <tabIndex>68</tabIndex>
+            <constraints>0,0,973,475,15</constraints>
+            <tabIndex>36</tabIndex>
         </component>
         <component>
             <name>kdtRWOTotalAmountEntry</name>
-            <tabIndex>67</tabIndex>
+            <constraints>0,0,973,478,15</constraints>
+            <tabIndex>35</tabIndex>
         </component>
         <component>
             <name>kdtRepairBreakEntry</name>
-            <tabIndex>66</tabIndex>
+            <constraints>0,0,971,477,15</constraints>
+            <tabIndex>34</tabIndex>
         </component>
         <component>
             <name>txtOldID</name>
-            <tabIndex>60</tabIndex>
+            <tabIndex>28</tabIndex>
         </component>
         <component>
             <name>txtRepairBookingID</name>
-            <tabIndex>61</tabIndex>
+            <tabIndex>29</tabIndex>
         </component>
         <component>
             <name>ReturnRepair</name>
-            <tabIndex>62</tabIndex>
+            <tabIndex>30</tabIndex>
+        </component>
+        <component>
+            <name>kDTabbedPane1</name>
+            <alias>uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[kDTabbedPane1].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDTabbedPane</classType>
+            <isContainer>true</isContainer>
+            <constraints>2,41,968,182,13</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>TabbedPaneLayout</type>
+                <value />
+            </layoutInfo>
+            <parent>
+                <key name="name" value="kDPanel1" />
+            </parent>
+        </component>
+        <component>
+            <name>kDPBizInfo</name>
+            <alias>uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[kDPBizInfo].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDPanel</classType>
+            <isContainer>true</isContainer>
+            <constraints>业务信息</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name>kDLayout11</name>
+                <type>KDLayout</type>
+                <value />
+            </layoutInfo>
+            <parent>
+                <key name="name" value="kDTabbedPane1" />
+            </parent>
+        </component>
+        <component>
+            <name>kDPRepairInfo</name>
+            <alias>uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[kDPRepairInfo].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDPanel</classType>
+            <isContainer>true</isContainer>
+            <constraints>维修信息</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name>kDLayout13</name>
+                <type>KDLayout</type>
+                <value />
+            </layoutInfo>
+            <parent>
+                <key name="name" value="kDTabbedPane1" />
+            </parent>
+        </component>
+        <component>
+            <name>kDPVehicleInfo</name>
+            <alias>uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[kDPVehicleInfo].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDPanel</classType>
+            <isContainer>true</isContainer>
+            <constraints>车辆信息</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name>kDLayout14</name>
+                <type>KDLayout</type>
+                <value />
+            </layoutInfo>
+            <parent>
+                <key name="name" value="kDTabbedPane1" />
+            </parent>
+        </component>
+        <component>
+            <name>kDPHideField</name>
+            <alias>uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[kDPHideField].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDPanel</classType>
+            <isContainer>true</isContainer>
+            <constraints>隐藏字段</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name>kDLayout12</name>
+                <type>KDLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[kDPHideField].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>enabled</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[kDPHideField].properties.property[enabled].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="kDTabbedPane1" />
+            </parent>
         </component>
         <component>
             <name>kDPRwoItemSp</name>
@@ -213,8 +619,8 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.kdf.table.KDTable</classType>
             <isContainer>false</isContainer>
-            <constraints>4,4,962,362,15</constraints>
-            <tabIndex>73</tabIndex>
+            <constraints>4,4,962,472,15</constraints>
+            <tabIndex>41</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
             <layoutInfo>
@@ -324,17 +730,6 @@
                     <userDefined>true</userDefined>
                 </propertyBinding>
                 <propertyBinding>
-                    <propertyName>w.text</propertyName>
-                    <propertyType>java.lang.Object</propertyType>
-                    <bindingObject>editData</bindingObject>
-                    <bindingField>RWOItemSpEntry.w</bindingField>
-                    <fieldType>java.lang.Object</fieldType>
-                    <accessType>2</accessType>
-                    <autoMode>false</autoMode>
-                    <herited>false</herited>
-                    <userDefined>true</userDefined>
-                </propertyBinding>
-                <propertyBinding>
                     <propertyName>qty.text</propertyName>
                     <propertyType>java.lang.Object</propertyType>
                     <bindingObject>editData</bindingObject>
@@ -411,6 +806,17 @@
                     <herited>false</herited>
                     <userDefined>true</userDefined>
                 </propertyBinding>
+                <propertyBinding>
+                    <propertyName>w.text</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>RWOItemSpEntry.w</bindingField>
+                    <fieldType>com.kingdee.eas.ep.DataBaseCustomInfo</fieldType>
+                    <accessType />
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
             </propertyBindings>
         </component>
     </components>
@@ -425,7 +831,65 @@
             <lang locale="zh_HK" value="已生成內部應付" />
             <lang locale="zh_TW" value="已生成內部應付" />
         </rs>
+        <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[contCompanyNumber].properties.property[boundLabelText].value">
+            <lang locale="zh_CN" value="DMS WIP号" />
+            <lang locale="zh_HK" value="DMS WIP號" />
+            <lang locale="zh_TW" value="DMS WIP號" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[contIntendDeliveryTime].properties.property[boundLabelText].value">
+            <lang locale="zh_CN" value="预计出厂时间" />
+            <lang locale="zh_HK" value="預計出廠時間" />
+            <lang locale="zh_TW" value="預計出廠時間" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[kDPBizInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[kDPHideField].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[kDPHideField].properties.property[enabled].value">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[kDPHideField].properties.property[visible].value">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[kDPRepairInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
         <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[kDPRwoItemSp].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[kDPVehicleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[kDSplitPane1].properties.property[dividerLocation].value">
+            <lang locale="en_US" value="400" />
+            <lang locale="zh_CN" value="400" />
+            <lang locale="zh_HK" value="400" />
+            <lang locale="zh_TW" value="400" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[kDTabbedPane1].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
@@ -444,9 +908,9 @@
         </rs>
         <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[kdtRWOItemSpEntry].properties.property[formatXml].value">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;DocRoot xmlns:c=&quot;http://www.kingdee.com/Common&quot; xmlns:f=&quot;http://www.kingdee.com/Form&quot; xmlns:t=&quot;http://www.kingdee.com/Table&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.kingdee.com/KDF KDFSchema.xsd&quot; version=&quot;0.0&quot;&gt;&lt;Styles&gt;&lt;c:Style id=&quot;sCol0&quot;&gt;&lt;c:Protection hidden=&quot;true&quot; /&gt;&lt;c:NumberFormat&gt;&amp;amp;int&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol2&quot;&gt;&lt;c:Protection hidden=&quot;true&quot; /&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol8&quot;&gt;&lt;c:NumberFormat&gt;&amp;amp;double&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol9&quot;&gt;&lt;c:NumberFormat&gt;&amp;amp;double&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol10&quot;&gt;&lt;c:NumberFormat&gt;&amp;amp;double&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol11&quot;&gt;&lt;c:NumberFormat&gt;&amp;amp;double&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;/Styles&gt;&lt;Table id=&quot;KDTable&quot;&gt;&lt;t:Sheet name=&quot;sheet1&quot;&gt;&lt;t:Table t:selectMode=&quot;15&quot; t:mergeMode=&quot;0&quot; t:dataRequestMode=&quot;0&quot; t:pageRowCount=&quot;100&quot;&gt;&lt;t:ColumnGroup&gt;&lt;t:Column t:key=&quot;seq&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol0&quot; /&gt;&lt;t:Column t:key=&quot;t&quot; t:width=&quot;40&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;itemspNum&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol2&quot; /&gt;&lt;t:Column t:key=&quot;itemspName&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;repairItem&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;material&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;taocan&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;w&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;qty&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol8&quot; /&gt;&lt;t:Column t:key=&quot;price&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol9&quot; /&gt;&lt;t:Column t:key=&quot;discountRate&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol10&quot; /&gt;&lt;t:Column t:key=&quot;amount&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol11&quot; /&gt;&lt;t:Column t:key=&quot;v&quot; t:width=&quot;40&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;p&quot; t:width=&quot;40&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;i&quot; t:width=&quot;40&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;/t:ColumnGroup&gt;&lt;t:Head&gt;&lt;t:Row t:name=&quot;header&quot; t:height=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot;&gt;&lt;t:Cell&gt;单据分录序列号&lt;/t:Cell&gt;&lt;t:Cell&gt;T&lt;/t:Cell&gt;&lt;t:Cell&gt;项目&lt;/t:Cell&gt;&lt;t:Cell&gt;项目说明&lt;/t:Cell&gt;&lt;t:Cell&gt;维修项目&lt;/t:Cell&gt;&lt;t:Cell&gt;维修配件&lt;/t:Cell&gt;&lt;t:Cell&gt;套餐&lt;/t:Cell&gt;&lt;t:Cell&gt;W&lt;/t:Cell&gt;&lt;t:Cell&gt;数量&lt;/t:Cell&gt;&lt;t:Cell&gt;价格&lt;/t:Cell&gt;&lt;t:Cell&gt;折扣%&lt;/t:Cell&gt;&lt;t:Cell&gt;总计&lt;/t:Cell&gt;&lt;t:Cell&gt;V&lt;/t:Cell&gt;&lt;t:Cell&gt;P&lt;/t:Cell&gt;&lt;t:Cell&gt;I&lt;/t:Cell&gt;&lt;/t:Row&gt;&lt;/t:Head&gt;&lt;/t:Table&gt;&lt;t:SheetOptions&gt;&lt;t:MergeBlocks&gt;&lt;t:Head /&gt;&lt;/t:MergeBlocks&gt;&lt;/t:SheetOptions&gt;&lt;/t:Sheet&gt;&lt;/Table&gt;&lt;/DocRoot&gt;" />
-            <lang locale="zh_HK" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;DocRoot xmlns:c=&quot;http://www.kingdee.com/Common&quot; xmlns:f=&quot;http://www.kingdee.com/Form&quot; xmlns:t=&quot;http://www.kingdee.com/Table&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.kingdee.com/KDF KDFSchema.xsd&quot; version=&quot;0.0&quot;&gt;&lt;Styles&gt;&lt;c:Style id=&quot;sCol0&quot;&gt;&lt;c:Protection hidden=&quot;true&quot; /&gt;&lt;c:NumberFormat&gt;&amp;amp;int&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol2&quot;&gt;&lt;c:Protection hidden=&quot;true&quot; /&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol8&quot;&gt;&lt;c:NumberFormat&gt;&amp;amp;double&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol9&quot;&gt;&lt;c:NumberFormat&gt;&amp;amp;double&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol10&quot;&gt;&lt;c:NumberFormat&gt;&amp;amp;double&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol11&quot;&gt;&lt;c:NumberFormat&gt;&amp;amp;double&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;/Styles&gt;&lt;Table id=&quot;KDTable&quot;&gt;&lt;t:Sheet name=&quot;sheet1&quot;&gt;&lt;t:Table t:selectMode=&quot;15&quot; t:mergeMode=&quot;0&quot; t:dataRequestMode=&quot;0&quot; t:pageRowCount=&quot;100&quot;&gt;&lt;t:ColumnGroup&gt;&lt;t:Column t:key=&quot;seq&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol0&quot; /&gt;&lt;t:Column t:key=&quot;t&quot; t:width=&quot;40&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;itemspNum&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol2&quot; /&gt;&lt;t:Column t:key=&quot;itemspName&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;repairItem&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;material&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;taocan&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;w&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;qty&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol8&quot; /&gt;&lt;t:Column t:key=&quot;price&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol9&quot; /&gt;&lt;t:Column t:key=&quot;discountRate&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol10&quot; /&gt;&lt;t:Column t:key=&quot;amount&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol11&quot; /&gt;&lt;t:Column t:key=&quot;v&quot; t:width=&quot;40&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;p&quot; t:width=&quot;40&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;i&quot; t:width=&quot;40&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;/t:ColumnGroup&gt;&lt;t:Head&gt;&lt;t:Row t:name=&quot;header&quot; t:height=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot;&gt;&lt;t:Cell&gt;單據分錄序列號&lt;/t:Cell&gt;&lt;t:Cell&gt;T&lt;/t:Cell&gt;&lt;t:Cell&gt;項目&lt;/t:Cell&gt;&lt;t:Cell&gt;項目說明&lt;/t:Cell&gt;&lt;t:Cell&gt;維修項目&lt;/t:Cell&gt;&lt;t:Cell&gt;維修配件&lt;/t:Cell&gt;&lt;t:Cell&gt;套餐&lt;/t:Cell&gt;&lt;t:Cell&gt;W&lt;/t:Cell&gt;&lt;t:Cell&gt;數量&lt;/t:Cell&gt;&lt;t:Cell&gt;價格&lt;/t:Cell&gt;&lt;t:Cell&gt;折扣%&lt;/t:Cell&gt;&lt;t:Cell&gt;總計&lt;/t:Cell&gt;&lt;t:Cell&gt;V&lt;/t:Cell&gt;&lt;t:Cell&gt;P&lt;/t:Cell&gt;&lt;t:Cell&gt;I&lt;/t:Cell&gt;&lt;/t:Row&gt;&lt;/t:Head&gt;&lt;/t:Table&gt;&lt;t:SheetOptions&gt;&lt;t:MergeBlocks&gt;&lt;t:Head /&gt;&lt;/t:MergeBlocks&gt;&lt;/t:SheetOptions&gt;&lt;/t:Sheet&gt;&lt;/Table&gt;&lt;/DocRoot&gt;" />
-            <lang locale="zh_TW" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;DocRoot xmlns:c=&quot;http://www.kingdee.com/Common&quot; xmlns:f=&quot;http://www.kingdee.com/Form&quot; xmlns:t=&quot;http://www.kingdee.com/Table&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.kingdee.com/KDF KDFSchema.xsd&quot; version=&quot;0.0&quot;&gt;&lt;Styles&gt;&lt;c:Style id=&quot;sCol0&quot;&gt;&lt;c:Protection hidden=&quot;true&quot; /&gt;&lt;c:NumberFormat&gt;&amp;amp;int&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol2&quot;&gt;&lt;c:Protection hidden=&quot;true&quot; /&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol8&quot;&gt;&lt;c:NumberFormat&gt;&amp;amp;double&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol9&quot;&gt;&lt;c:NumberFormat&gt;&amp;amp;double&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol10&quot;&gt;&lt;c:NumberFormat&gt;&amp;amp;double&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol11&quot;&gt;&lt;c:NumberFormat&gt;&amp;amp;double&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;/Styles&gt;&lt;Table id=&quot;KDTable&quot;&gt;&lt;t:Sheet name=&quot;sheet1&quot;&gt;&lt;t:Table t:selectMode=&quot;15&quot; t:mergeMode=&quot;0&quot; t:dataRequestMode=&quot;0&quot; t:pageRowCount=&quot;100&quot;&gt;&lt;t:ColumnGroup&gt;&lt;t:Column t:key=&quot;seq&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol0&quot; /&gt;&lt;t:Column t:key=&quot;t&quot; t:width=&quot;40&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;itemspNum&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol2&quot; /&gt;&lt;t:Column t:key=&quot;itemspName&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;repairItem&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;material&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;taocan&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;w&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;qty&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol8&quot; /&gt;&lt;t:Column t:key=&quot;price&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol9&quot; /&gt;&lt;t:Column t:key=&quot;discountRate&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol10&quot; /&gt;&lt;t:Column t:key=&quot;amount&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol11&quot; /&gt;&lt;t:Column t:key=&quot;v&quot; t:width=&quot;40&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;p&quot; t:width=&quot;40&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;i&quot; t:width=&quot;40&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;/t:ColumnGroup&gt;&lt;t:Head&gt;&lt;t:Row t:name=&quot;header&quot; t:height=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot;&gt;&lt;t:Cell&gt;單據分錄序列號&lt;/t:Cell&gt;&lt;t:Cell&gt;T&lt;/t:Cell&gt;&lt;t:Cell&gt;項目&lt;/t:Cell&gt;&lt;t:Cell&gt;項目說明&lt;/t:Cell&gt;&lt;t:Cell&gt;維修項目&lt;/t:Cell&gt;&lt;t:Cell&gt;維修配件&lt;/t:Cell&gt;&lt;t:Cell&gt;套餐&lt;/t:Cell&gt;&lt;t:Cell&gt;W&lt;/t:Cell&gt;&lt;t:Cell&gt;數量&lt;/t:Cell&gt;&lt;t:Cell&gt;價格&lt;/t:Cell&gt;&lt;t:Cell&gt;折扣%&lt;/t:Cell&gt;&lt;t:Cell&gt;總計&lt;/t:Cell&gt;&lt;t:Cell&gt;V&lt;/t:Cell&gt;&lt;t:Cell&gt;P&lt;/t:Cell&gt;&lt;t:Cell&gt;I&lt;/t:Cell&gt;&lt;/t:Row&gt;&lt;/t:Head&gt;&lt;/t:Table&gt;&lt;t:SheetOptions&gt;&lt;t:MergeBlocks&gt;&lt;t:Head /&gt;&lt;/t:MergeBlocks&gt;&lt;/t:SheetOptions&gt;&lt;/t:Sheet&gt;&lt;/Table&gt;&lt;/DocRoot&gt;" />
+            <lang locale="zh_CN" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;DocRoot xmlns:c=&quot;http://www.kingdee.com/Common&quot; xmlns:f=&quot;http://www.kingdee.com/Form&quot; xmlns:t=&quot;http://www.kingdee.com/Table&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.kingdee.com/KDF KDFSchema.xsd&quot; version=&quot;0.0&quot;&gt;&lt;Styles&gt;&lt;c:Style id=&quot;sCol0&quot;&gt;&lt;c:Protection hidden=&quot;true&quot; /&gt;&lt;c:NumberFormat&gt;&amp;amp;int&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol2&quot;&gt;&lt;c:Protection hidden=&quot;true&quot; /&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol8&quot;&gt;&lt;c:NumberFormat&gt;&amp;amp;double&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol9&quot;&gt;&lt;c:NumberFormat&gt;&amp;amp;double&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol10&quot;&gt;&lt;c:NumberFormat&gt;&amp;amp;double&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol11&quot;&gt;&lt;c:Protection locked=&quot;true&quot; /&gt;&lt;c:NumberFormat&gt;&amp;amp;double&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;/Styles&gt;&lt;Table id=&quot;KDTable&quot;&gt;&lt;t:Sheet name=&quot;sheet1&quot;&gt;&lt;t:Table t:selectMode=&quot;15&quot; t:mergeMode=&quot;0&quot; t:dataRequestMode=&quot;0&quot; t:pageRowCount=&quot;100&quot;&gt;&lt;t:ColumnGroup&gt;&lt;t:Column t:key=&quot;seq&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol0&quot; /&gt;&lt;t:Column t:key=&quot;t&quot; t:width=&quot;40&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;itemspNum&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol2&quot; /&gt;&lt;t:Column t:key=&quot;repairItem&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;3&quot; /&gt;&lt;t:Column t:key=&quot;material&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;4&quot; /&gt;&lt;t:Column t:key=&quot;itemspName&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;5&quot; /&gt;&lt;t:Column t:key=&quot;taocan&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;w&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;qty&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol8&quot; /&gt;&lt;t:Column t:key=&quot;price&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol9&quot; /&gt;&lt;t:Column t:key=&quot;discountRate&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol10&quot; /&gt;&lt;t:Column t:key=&quot;amount&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol11&quot; /&gt;&lt;t:Column t:key=&quot;v&quot; t:width=&quot;40&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;p&quot; t:width=&quot;40&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;i&quot; t:width=&quot;40&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;/t:ColumnGroup&gt;&lt;t:Head&gt;&lt;t:Row t:name=&quot;header&quot; t:height=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot;&gt;&lt;t:Cell&gt;单据分录序列号&lt;/t:Cell&gt;&lt;t:Cell&gt;T&lt;/t:Cell&gt;&lt;t:Cell&gt;项目&lt;/t:Cell&gt;&lt;t:Cell&gt;维修项目&lt;/t:Cell&gt;&lt;t:Cell&gt;维修配件&lt;/t:Cell&gt;&lt;t:Cell&gt;项目说明&lt;/t:Cell&gt;&lt;t:Cell&gt;套餐&lt;/t:Cell&gt;&lt;t:Cell&gt;W&lt;/t:Cell&gt;&lt;t:Cell&gt;数量&lt;/t:Cell&gt;&lt;t:Cell&gt;价格&lt;/t:Cell&gt;&lt;t:Cell&gt;折扣%&lt;/t:Cell&gt;&lt;t:Cell&gt;总计&lt;/t:Cell&gt;&lt;t:Cell&gt;V&lt;/t:Cell&gt;&lt;t:Cell&gt;P&lt;/t:Cell&gt;&lt;t:Cell&gt;I&lt;/t:Cell&gt;&lt;/t:Row&gt;&lt;/t:Head&gt;&lt;/t:Table&gt;&lt;t:SheetOptions&gt;&lt;t:MergeBlocks&gt;&lt;t:Head /&gt;&lt;/t:MergeBlocks&gt;&lt;/t:SheetOptions&gt;&lt;/t:Sheet&gt;&lt;/Table&gt;&lt;/DocRoot&gt;" />
+            <lang locale="zh_HK" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;DocRoot xmlns:c=&quot;http://www.kingdee.com/Common&quot; xmlns:f=&quot;http://www.kingdee.com/Form&quot; xmlns:t=&quot;http://www.kingdee.com/Table&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.kingdee.com/KDF KDFSchema.xsd&quot; version=&quot;0.0&quot;&gt;&lt;Styles&gt;&lt;c:Style id=&quot;sCol0&quot;&gt;&lt;c:Protection hidden=&quot;true&quot; /&gt;&lt;c:NumberFormat&gt;&amp;amp;int&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol2&quot;&gt;&lt;c:Protection hidden=&quot;true&quot; /&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol8&quot;&gt;&lt;c:NumberFormat&gt;&amp;amp;double&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol9&quot;&gt;&lt;c:NumberFormat&gt;&amp;amp;double&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol10&quot;&gt;&lt;c:NumberFormat&gt;&amp;amp;double&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol11&quot;&gt;&lt;c:Protection locked=&quot;true&quot; /&gt;&lt;c:NumberFormat&gt;&amp;amp;double&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;/Styles&gt;&lt;Table id=&quot;KDTable&quot;&gt;&lt;t:Sheet name=&quot;sheet1&quot;&gt;&lt;t:Table t:selectMode=&quot;15&quot; t:mergeMode=&quot;0&quot; t:dataRequestMode=&quot;0&quot; t:pageRowCount=&quot;100&quot;&gt;&lt;t:ColumnGroup&gt;&lt;t:Column t:key=&quot;seq&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol0&quot; /&gt;&lt;t:Column t:key=&quot;t&quot; t:width=&quot;40&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;itemspNum&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol2&quot; /&gt;&lt;t:Column t:key=&quot;repairItem&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;3&quot; /&gt;&lt;t:Column t:key=&quot;material&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;4&quot; /&gt;&lt;t:Column t:key=&quot;itemspName&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;5&quot; /&gt;&lt;t:Column t:key=&quot;taocan&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;w&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;qty&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol8&quot; /&gt;&lt;t:Column t:key=&quot;price&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol9&quot; /&gt;&lt;t:Column t:key=&quot;discountRate&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol10&quot; /&gt;&lt;t:Column t:key=&quot;amount&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol11&quot; /&gt;&lt;t:Column t:key=&quot;v&quot; t:width=&quot;40&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;p&quot; t:width=&quot;40&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;i&quot; t:width=&quot;40&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;/t:ColumnGroup&gt;&lt;t:Head&gt;&lt;t:Row t:name=&quot;header&quot; t:height=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot;&gt;&lt;t:Cell&gt;單據分錄序列號&lt;/t:Cell&gt;&lt;t:Cell&gt;T&lt;/t:Cell&gt;&lt;t:Cell&gt;項目&lt;/t:Cell&gt;&lt;t:Cell&gt;維修項目&lt;/t:Cell&gt;&lt;t:Cell&gt;維修配件&lt;/t:Cell&gt;&lt;t:Cell&gt;項目說明&lt;/t:Cell&gt;&lt;t:Cell&gt;套餐&lt;/t:Cell&gt;&lt;t:Cell&gt;W&lt;/t:Cell&gt;&lt;t:Cell&gt;數量&lt;/t:Cell&gt;&lt;t:Cell&gt;價格&lt;/t:Cell&gt;&lt;t:Cell&gt;折扣%&lt;/t:Cell&gt;&lt;t:Cell&gt;總計&lt;/t:Cell&gt;&lt;t:Cell&gt;V&lt;/t:Cell&gt;&lt;t:Cell&gt;P&lt;/t:Cell&gt;&lt;t:Cell&gt;I&lt;/t:Cell&gt;&lt;/t:Row&gt;&lt;/t:Head&gt;&lt;/t:Table&gt;&lt;t:SheetOptions&gt;&lt;t:MergeBlocks&gt;&lt;t:Head /&gt;&lt;/t:MergeBlocks&gt;&lt;/t:SheetOptions&gt;&lt;/t:Sheet&gt;&lt;/Table&gt;&lt;/DocRoot&gt;" />
+            <lang locale="zh_TW" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;DocRoot xmlns:c=&quot;http://www.kingdee.com/Common&quot; xmlns:f=&quot;http://www.kingdee.com/Form&quot; xmlns:t=&quot;http://www.kingdee.com/Table&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.kingdee.com/KDF KDFSchema.xsd&quot; version=&quot;0.0&quot;&gt;&lt;Styles&gt;&lt;c:Style id=&quot;sCol0&quot;&gt;&lt;c:Protection hidden=&quot;true&quot; /&gt;&lt;c:NumberFormat&gt;&amp;amp;int&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol2&quot;&gt;&lt;c:Protection hidden=&quot;true&quot; /&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol8&quot;&gt;&lt;c:NumberFormat&gt;&amp;amp;double&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol9&quot;&gt;&lt;c:NumberFormat&gt;&amp;amp;double&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol10&quot;&gt;&lt;c:NumberFormat&gt;&amp;amp;double&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;c:Style id=&quot;sCol11&quot;&gt;&lt;c:Protection locked=&quot;true&quot; /&gt;&lt;c:NumberFormat&gt;&amp;amp;double&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;/Styles&gt;&lt;Table id=&quot;KDTable&quot;&gt;&lt;t:Sheet name=&quot;sheet1&quot;&gt;&lt;t:Table t:selectMode=&quot;15&quot; t:mergeMode=&quot;0&quot; t:dataRequestMode=&quot;0&quot; t:pageRowCount=&quot;100&quot;&gt;&lt;t:ColumnGroup&gt;&lt;t:Column t:key=&quot;seq&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol0&quot; /&gt;&lt;t:Column t:key=&quot;t&quot; t:width=&quot;40&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;itemspNum&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol2&quot; /&gt;&lt;t:Column t:key=&quot;repairItem&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;3&quot; /&gt;&lt;t:Column t:key=&quot;material&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;4&quot; /&gt;&lt;t:Column t:key=&quot;itemspName&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;5&quot; /&gt;&lt;t:Column t:key=&quot;taocan&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;w&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;qty&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol8&quot; /&gt;&lt;t:Column t:key=&quot;price&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol9&quot; /&gt;&lt;t:Column t:key=&quot;discountRate&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol10&quot; /&gt;&lt;t:Column t:key=&quot;amount&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol11&quot; /&gt;&lt;t:Column t:key=&quot;v&quot; t:width=&quot;40&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;p&quot; t:width=&quot;40&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;t:Column t:key=&quot;i&quot; t:width=&quot;40&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; /&gt;&lt;/t:ColumnGroup&gt;&lt;t:Head&gt;&lt;t:Row t:name=&quot;header&quot; t:height=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot;&gt;&lt;t:Cell&gt;單據分錄序列號&lt;/t:Cell&gt;&lt;t:Cell&gt;T&lt;/t:Cell&gt;&lt;t:Cell&gt;項目&lt;/t:Cell&gt;&lt;t:Cell&gt;維修項目&lt;/t:Cell&gt;&lt;t:Cell&gt;維修配件&lt;/t:Cell&gt;&lt;t:Cell&gt;項目說明&lt;/t:Cell&gt;&lt;t:Cell&gt;套餐&lt;/t:Cell&gt;&lt;t:Cell&gt;W&lt;/t:Cell&gt;&lt;t:Cell&gt;數量&lt;/t:Cell&gt;&lt;t:Cell&gt;價格&lt;/t:Cell&gt;&lt;t:Cell&gt;折扣%&lt;/t:Cell&gt;&lt;t:Cell&gt;總計&lt;/t:Cell&gt;&lt;t:Cell&gt;V&lt;/t:Cell&gt;&lt;t:Cell&gt;P&lt;/t:Cell&gt;&lt;t:Cell&gt;I&lt;/t:Cell&gt;&lt;/t:Row&gt;&lt;/t:Head&gt;&lt;/t:Table&gt;&lt;t:SheetOptions&gt;&lt;t:MergeBlocks&gt;&lt;t:Head /&gt;&lt;/t:MergeBlocks&gt;&lt;/t:SheetOptions&gt;&lt;/t:Sheet&gt;&lt;/Table&gt;&lt;/DocRoot&gt;" />
         </rs>
         <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[prmtAccountCfg].alias">
             <lang locale="zh_CN" value="账户类型" />
@@ -472,6 +936,12 @@
             <lang locale="zh_CN" value="维修方式" />
             <lang locale="zh_HK" value="維修方式" />
             <lang locale="zh_TW" value="維修方式" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[txtCompanyNumber].properties.property[enabled].value">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
         </rs>
         <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].extendedProperty.PI_Extend">
             <lang locale="en_US" value="true" />
