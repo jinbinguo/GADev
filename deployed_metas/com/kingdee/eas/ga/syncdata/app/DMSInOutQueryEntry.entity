@@ -616,6 +616,100 @@
                 <key name="name" value="R_DMSInOutQueryEntry_MeasureUnit_easBaseUnit" />
             </relationship>
         </linkProperty>
+        <ownProperty>
+            <name>easRepairWOEntryId</name>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntryId].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntryId].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>44</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntryId].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFEasRepairWOEntryId" />
+            </mappingField>
+        </ownProperty>
+        <linkProperty>
+            <name>easVehicle</name>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.linkProperty[easVehicle].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.linkProperty[easVehicle].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="CFEasVehicleID" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.ga.syncdata.app" />
+                <key name="name" value="R_DMSInOutQueryEntry_Vehicle_easVehicle" />
+            </relationship>
+        </linkProperty>
+        <ownProperty>
+            <name>easRepairWOEntrySeq</name>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntrySeq].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntrySeq].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Integer</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>4</length>
+            <precision>10</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntrySeq].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFEasRepairWOEntrySeq" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>easRepairWONumber</name>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWONumber].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWONumber].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>100</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWONumber].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFEasRepairWONumber" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>isTransferred</name>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[isTransferred].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[isTransferred].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Boolean</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>1</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[isTransferred].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFIsTransferred" />
+            </mappingField>
+        </ownProperty>
     </properties>
     <logicalKey>
         <name>id</name>
@@ -1052,6 +1146,58 @@
             <lang locale="zh_TW" value="false" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.linkProperty[easSupplier].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.linkProperty[easVehicle].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="EAS车辆" />
+            <lang locale="zh_HK" value="EAS車輛" />
+            <lang locale="zh_TW" value="EAS車輛" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.linkProperty[easVehicle].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="车辆" />
+            <lang locale="zh_HK" value="車輛" />
+            <lang locale="zh_TW" value="車輛" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.linkProperty[easVehicle].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.linkProperty[easVehicle].extendedProperty.dataField">
+            <lang locale="en_US" value="plateNum" />
+            <lang locale="zh_CN" value="plateNum" />
+            <lang locale="zh_TW" value="plateNum" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.linkProperty[easVehicle].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.linkProperty[easVehicle].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.linkProperty[easVehicle].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.linkProperty[easVehicle].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.linkProperty[easVehicle].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.linkProperty[easVehicle].extendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
@@ -1549,6 +1695,195 @@
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntryId].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="EAS维修工单配件分录ID" />
+            <lang locale="zh_HK" value="EAS維修工單配件分錄ID" />
+            <lang locale="zh_TW" value="EAS維修工單配件分錄ID" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntryId].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntryId].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="EAS维修工单配件分录ID" />
+            <lang locale="zh_HK" value="EAS維修工單配件分錄ID" />
+            <lang locale="zh_TW" value="EAS維修工單配件分錄ID" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntryId].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntryId].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntryId].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntryId].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntryId].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntryId].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntryId].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntryId].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntryId].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntrySeq].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="EAS工单配件行号" />
+            <lang locale="zh_HK" value="EAS工單配件行號" />
+            <lang locale="zh_TW" value="EAS工單配件行號" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntrySeq].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntrySeq].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="EAS工单配件行号" />
+            <lang locale="zh_HK" value="EAS工單配件行號" />
+            <lang locale="zh_TW" value="EAS工單配件行號" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntrySeq].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntrySeq].extendedProperty.bizDataType">
+            <lang locale="en_US" value="INTEGER" />
+            <lang locale="zh_CN" value="INTEGER" />
+            <lang locale="zh_TW" value="INTEGER" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntrySeq].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntrySeq].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntrySeq].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntrySeq].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntrySeq].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntrySeq].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWOEntrySeq].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWONumber].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="EAS维修工单号" />
+            <lang locale="zh_HK" value="EAS維修工單號" />
+            <lang locale="zh_TW" value="EAS維修工單號" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWONumber].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWONumber].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="EAS维修工单号" />
+            <lang locale="zh_HK" value="EAS維修工單號" />
+            <lang locale="zh_TW" value="EAS維修工單號" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWONumber].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWONumber].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWONumber].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWONumber].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWONumber].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWONumber].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWONumber].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWONumber].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easRepairWONumber].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
         <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easTaxPrice].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="EAS含税单价" />
@@ -1608,6 +1943,69 @@
             <lang locale="zh_TW" value="false" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[easTaxPrice].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[isTransferred].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="已转入" />
+            <lang locale="zh_HK" value="已轉入" />
+            <lang locale="zh_TW" value="已轉入" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[isTransferred].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[isTransferred].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="已转入" />
+            <lang locale="zh_HK" value="已轉入" />
+            <lang locale="zh_TW" value="已轉入" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[isTransferred].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[isTransferred].extendedProperty.bizDataType">
+            <lang locale="en_US" value="BOOLEAN" />
+            <lang locale="zh_CN" value="BOOLEAN" />
+            <lang locale="zh_TW" value="BOOLEAN" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[isTransferred].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[isTransferred].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[isTransferred].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[isTransferred].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[isTransferred].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[isTransferred].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSInOutQueryEntry].properties.ownProperty[isTransferred].extendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />

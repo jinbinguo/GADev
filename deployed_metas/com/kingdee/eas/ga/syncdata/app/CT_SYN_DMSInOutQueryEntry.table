@@ -399,6 +399,76 @@
             <scale>0</scale>
             <precision>0</precision>
         </column>
+        <column>
+            <name>CFEasRepairWOEntryId</name>
+            <alias>dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].columns.column[CFEasRepairWOEntryId].alias</alias>
+            <description>dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].columns.column[CFEasRepairWOEntryId].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFEasVehicleID</name>
+            <alias>dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].columns.column[CFEasVehicleID].alias</alias>
+            <description>dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].columns.column[CFEasVehicleID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFEasRepairWOEntrySeq</name>
+            <alias>dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].columns.column[CFEasRepairWOEntrySeq].alias</alias>
+            <description>dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].columns.column[CFEasRepairWOEntrySeq].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>10</precision>
+        </column>
+        <column>
+            <name>CFEasRepairWONumber</name>
+            <alias>dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].columns.column[CFEasRepairWONumber].alias</alias>
+            <description>dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].columns.column[CFEasRepairWONumber].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFIsTransferred</name>
+            <alias>dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].columns.column[CFIsTransferred].alias</alias>
+            <description>dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].columns.column[CFIsTransferred].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>1</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>CPK_SYN_DMSIOQEdev</name>
@@ -528,6 +598,25 @@
                 </fkColumnPair>
             </fkColumnPairs>
         </foreignKey>
+        <foreignKey>
+            <name>CFK_SYN_SYNDMSIOhb</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="T_ATS_Vehicle" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="CFEasVehicleID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
     </foreignKeys>
     <resource>
         <rs key="dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].alias">
@@ -632,6 +721,30 @@
             <lang locale="zh_HK" value="EAS物料" />
             <lang locale="zh_TW" value="EAS物料" />
         </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].columns.column[CFEasRepairWOEntryId].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="EAS维修工单配件分录ID" />
+            <lang locale="zh_HK" value="EAS維修工單配件分錄ID" />
+            <lang locale="zh_TW" value="EAS維修工單配件分錄ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].columns.column[CFEasRepairWOEntryId].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="EAS维修工单配件分录ID" />
+            <lang locale="zh_HK" value="EAS維修工單配件分錄ID" />
+            <lang locale="zh_TW" value="EAS維修工單配件分錄ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].columns.column[CFEasRepairWOEntrySeq].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="EAS工单配件行号" />
+            <lang locale="zh_HK" value="EAS工單配件行號" />
+            <lang locale="zh_TW" value="EAS工單配件行號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].columns.column[CFEasRepairWOEntrySeq].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="EAS工单配件行号" />
+            <lang locale="zh_HK" value="EAS工單配件行號" />
+            <lang locale="zh_TW" value="EAS工單配件行號" />
+        </rs>
         <rs key="dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].columns.column[CFEasRepairWOID].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="EAS维修工单" />
@@ -643,6 +756,18 @@
             <lang locale="zh_CN" value="EAS维修工单" />
             <lang locale="zh_HK" value="EAS維修工單" />
             <lang locale="zh_TW" value="EAS維修工單" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].columns.column[CFEasRepairWONumber].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="EAS维修工单号" />
+            <lang locale="zh_HK" value="EAS維修工單號" />
+            <lang locale="zh_TW" value="EAS維修工單號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].columns.column[CFEasRepairWONumber].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="EAS维修工单号" />
+            <lang locale="zh_HK" value="EAS維修工單號" />
+            <lang locale="zh_TW" value="EAS維修工單號" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].columns.column[CFEasSupplierID].alias">
             <lang locale="en_US" value="null" />
@@ -668,6 +793,18 @@
             <lang locale="zh_HK" value="EAS含稅單價" />
             <lang locale="zh_TW" value="EAS含稅單價" />
         </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].columns.column[CFEasVehicleID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="EAS车辆" />
+            <lang locale="zh_HK" value="EAS車輛" />
+            <lang locale="zh_TW" value="EAS車輛" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].columns.column[CFEasVehicleID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="车辆" />
+            <lang locale="zh_HK" value="車輛" />
+            <lang locale="zh_TW" value="車輛" />
+        </rs>
         <rs key="dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].columns.column[CFEasWarehouseID].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="EAS仓库" />
@@ -679,6 +816,18 @@
             <lang locale="zh_CN" value="EAS仓库" />
             <lang locale="zh_HK" value="EAS倉庫" />
             <lang locale="zh_TW" value="EAS倉庫" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].columns.column[CFIsTransferred].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="已转入" />
+            <lang locale="zh_HK" value="已轉入" />
+            <lang locale="zh_TW" value="已轉入" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].columns.column[CFIsTransferred].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="已转入" />
+            <lang locale="zh_HK" value="已轉入" />
+            <lang locale="zh_TW" value="已轉入" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSInOutQueryEntry].columns.column[CFL].alias">
             <lang locale="en_US" value="null" />

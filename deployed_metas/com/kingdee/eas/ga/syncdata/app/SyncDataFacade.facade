@@ -36,9 +36,9 @@
                     <userDefined>true</userDefined>
                 </parameter>
                 <parameter>
-                    <name>dmsWipBillId</name>
-                    <alias>facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncWipBill].parameters.parameter[dmsWipBillId].alias</alias>
-                    <description>facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncWipBill].parameters.parameter[dmsWipBillId].description</description>
+                    <name>dmsWipBillPk</name>
+                    <alias>facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncWipBill].parameters.parameter[dmsWipBillPk].alias</alias>
+                    <description>facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncWipBill].parameters.parameter[dmsWipBillPk].description</description>
                     <direction>in</direction>
                     <dataType>ObjectPK</dataType>
                     <metadataRef />
@@ -77,9 +77,9 @@
                     <userDefined>true</userDefined>
                 </parameter>
                 <parameter>
-                    <name>dmsTradeInqireId</name>
-                    <alias>facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncTradeInquire].parameters.parameter[dmsTradeInqireId].alias</alias>
-                    <description>facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncTradeInquire].parameters.parameter[dmsTradeInqireId].description</description>
+                    <name>dmsTradeInqirePk</name>
+                    <alias>facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncTradeInquire].parameters.parameter[dmsTradeInqirePk].alias</alias>
+                    <description>facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncTradeInquire].parameters.parameter[dmsTradeInqirePk].description</description>
                     <direction>in</direction>
                     <dataType>ObjectPK</dataType>
                     <metadataRef />
@@ -158,13 +158,13 @@
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncTradeInquire].parameters.parameter[dmsTradeInqireId].alias">
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncTradeInquire].parameters.parameter[dmsTradeInqirePk].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="DMS交易查询ID" />
             <lang locale="zh_HK" value="DMS交易查詢ID" />
             <lang locale="zh_TW" value="DMS交易查詢ID" />
         </rs>
-        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncTradeInquire].parameters.parameter[dmsTradeInqireId].description">
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncTradeInquire].parameters.parameter[dmsTradeInqirePk].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="" />
             <lang locale="zh_TW" value="null" />
@@ -192,13 +192,13 @@
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncWipBill].parameters.parameter[dmsWipBillId].alias">
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncWipBill].parameters.parameter[dmsWipBillPk].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="DMSWip单号ID" />
             <lang locale="zh_HK" value="DMSWip單號ID" />
             <lang locale="zh_TW" value="DMSWip單號ID" />
         </rs>
-        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncWipBill].parameters.parameter[dmsWipBillId].description">
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.SyncDataFacade].methods.method[syncWipBill].parameters.parameter[dmsWipBillPk].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="" />
             <lang locale="zh_TW" value="null" />
