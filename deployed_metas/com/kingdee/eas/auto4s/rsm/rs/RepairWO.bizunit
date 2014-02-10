@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizUnit xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.auto4s.rsm.rs</package>
+    <name>RepairWO</name>
+    <alias>bizUnit[com.kingdee.eas.auto4s.rsm.rs.RepairWO].alias</alias>
+    <description>bizUnit[com.kingdee.eas.auto4s.rsm.rs.RepairWO].description</description>
+    <userDefined>false</userDefined>
+    <bizType>BusinessBill</bizType>
+    <template>false</template>
+    <entityPK>com.kingdee.eas.auto4s.rsm.rs.app.RepairWO</entityPK>
+    <queryPK>com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery</queryPK>
+    <editUIPK>com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI</editUIPK>
+    <listUIPK>com.kingdee.eas.auto4s.rsm.rs.client.RepairWOListUI</listUIPK>
+    <webEditUIPK />
+    <webListUIPK />
+    <entityFunctionPK />
+    <editUIFunctionPK>com.kingdee.eas.auto4s.rsm.rs.app.RepairWOEditUIFunction</editUIFunctionPK>
+    <listUIFunctionPK>com.kingdee.eas.auto4s.rsm.rs.app.RepairWOListUIFunction</listUIFunctionPK>
+    <entryUIPK />
+    <versionDate />
+    <versionNumber />
+    <extendTablePKs />
+    <extendEntityPKs />
+    <extendQueryPKs />
+    <extendEditUIPKs />
+    <extendListUIPKs />
+    <menuPKList />
+    <bimTemplateType>MCoreBillBase</bimTemplateType>
+    <relatedTablePK />
+    <relatedEntityPK />
+    <relatedEditUIPK />
+    <genImplementCode>false</genImplementCode>
+    <webEditPagePK />
+    <webListPagePK />
+    <webPagePKS />
+    <webViewPagePK />
+    <webBriefPagePK />
+    <relatedWebEditPagePK />
+    <relatedQueryPK />
+    <resource>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.rsm.rs.RepairWO].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修工单" />
+            <lang locale="zh_HK" value="維修工單" />
+            <lang locale="zh_TW" value="維修工單" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.rsm.rs.RepairWO].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.rsm.rs.RepairWO].extendedProperty.MainOrgFieldName">
+            <lang locale="en_US" value="OrgUnit" />
+            <lang locale="zh_CN" value="OrgUnit" />
+            <lang locale="zh_TW" value="OrgUnit" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.rsm.rs.RepairWO].extendedProperty.OrgType">
+            <lang locale="en_US" value="Admin" />
+            <lang locale="zh_CN" value="Admin" />
+            <lang locale="zh_TW" value="Admin" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.rsm.rs.RepairWO].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.rsm.rs.RepairWO].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.rsm.rs.RepairWO].extendedProperty.configured">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.rsm.rs.RepairWO].extendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.rsm.rs.RepairWO].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.rsm.rs.RepairWO].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.rsm.rs.RepairWO].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.rsm.rs.RepairWO].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.rsm.rs.RepairWO].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.rsm.rs.RepairWO].extendedProperty.isUseCodeRule">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.rsm.rs.RepairWO].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.auto4s.rsm.rs.client.RepairWOListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.auto4s.rsm.rs.client.RepairWOListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.auto4s.rsm.rs.client.RepairWOListUI" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.rsm.rs.RepairWO].extendedProperty.maxFieldIndex">
+            <lang locale="en_US" value="306" />
+            <lang locale="zh_CN" value="306" />
+            <lang locale="zh_TW" value="306" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.rsm.rs.RepairWO].extendedProperty.maxRuleIndex">
+            <lang locale="en_US" value="" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.rsm.rs.RepairWO].extendedProperty.useTableEditUI">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</bizUnit>
+

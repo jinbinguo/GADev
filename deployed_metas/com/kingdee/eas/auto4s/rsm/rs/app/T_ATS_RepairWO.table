@@ -1,0 +1,2190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataTable xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.auto4s.rsm.rs.app</package>
+    <name>T_ATS_RepairWO</name>
+    <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].alias</alias>
+    <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].description</description>
+    <userDefined>false</userDefined>
+    <bizUnitPK>com.kingdee.eas.auto4s.rsm.rs.RepairWO</bizUnitPK>
+    <columns>
+        <column>
+            <name>FCreatorID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCreatorID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCreatorID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue>''</defaultValue>
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FCreateTime</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCreateTime].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCreateTime].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>8</precision>
+        </column>
+        <column>
+            <name>FLastUpdateUserID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FLastUpdateUserID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FLastUpdateUserID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue>''</defaultValue>
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FLastUpdateTime</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FLastUpdateTime].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FLastUpdateTime].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FControlUnitID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FControlUnitID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FControlUnitID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FNumber</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FNumber].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FNumber].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue>N''</defaultValue>
+            <sqlType>NVARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FBizDate</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FBizDate].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FBizDate].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>8</precision>
+        </column>
+        <column>
+            <name>FHandlerID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FHandlerID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FHandlerID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FDescription</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FDescription].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FDescription].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue>N''</defaultValue>
+            <sqlType>NVARCHAR</sqlType>
+            <length>255</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FHasEffected</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FHasEffected].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FHasEffected].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>4</precision>
+        </column>
+        <column>
+            <name>FAuditorID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FAuditorID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FAuditorID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FSourceBillID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSourceBillID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSourceBillID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue>N''</defaultValue>
+            <sqlType>NVARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FSourceFunction</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSourceFunction].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSourceFunction].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>80</precision>
+        </column>
+        <column>
+            <name>FID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>false</isNullable>
+            <defaultValue>''</defaultValue>
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FAuditTime</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FAuditTime].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FAuditTime].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FBrandID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FBrandID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FBrandID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FOrgUnitID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FOrgUnitID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FOrgUnitID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FStatus</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FStatus].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FStatus].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FRemark</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRemark].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRemark].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>255</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FVehicleID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FVehicleID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FVehicleID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FSAID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSAID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSAID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FComeTime</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FComeTime].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FComeTime].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FIntendDeliveryTime</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIntendDeliveryTime].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIntendDeliveryTime].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FRepairTotalAmount</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRepairTotalAmount].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRepairTotalAmount].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>false</isNullable>
+            <defaultValue>0</defaultValue>
+            <sqlType>NUMERIC</sqlType>
+            <length>28</length>
+            <scale>10</scale>
+            <precision>28</precision>
+        </column>
+        <column>
+            <name>FReceiveTotalAmount</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FReceiveTotalAmount].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FReceiveTotalAmount].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>false</isNullable>
+            <defaultValue>0</defaultValue>
+            <sqlType>NUMERIC</sqlType>
+            <length>28</length>
+            <scale>10</scale>
+            <precision>28</precision>
+        </column>
+        <column>
+            <name>FInvoicedTotalAmount</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FInvoicedTotalAmount].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FInvoicedTotalAmount].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>false</isNullable>
+            <defaultValue>0</defaultValue>
+            <sqlType>NUMERIC</sqlType>
+            <length>28</length>
+            <scale>10</scale>
+            <precision>28</precision>
+        </column>
+        <column>
+            <name>FIsStat</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsStat].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsStat].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>1</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FMile</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FMile].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FMile].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>false</isNullable>
+            <defaultValue>0</defaultValue>
+            <sqlType>NUMERIC</sqlType>
+            <length>28</length>
+            <scale>10</scale>
+            <precision>28</precision>
+        </column>
+        <column>
+            <name>FOilQty</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FOilQty].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FOilQty].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FKeyNumber</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FKeyNumber].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FKeyNumber].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>255</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FConsignation</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FConsignation].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FConsignation].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>255</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FWarrantyTypeID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FWarrantyTypeID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FWarrantyTypeID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FInsuranCompanyID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FInsuranCompanyID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FInsuranCompanyID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FRepairTypeID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRepairTypeID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRepairTypeID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FIsPriorAssign</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsPriorAssign].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsPriorAssign].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>1</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FIsWash</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsWash].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsWash].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>1</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FIsWaitForStore</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsWaitForStore].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsWaitForStore].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>1</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FCustomerRequest</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCustomerRequest].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCustomerRequest].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>255</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FCompanyNumber</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCompanyNumber].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCompanyNumber].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FWashRemark</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FWashRemark].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FWashRemark].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>255</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FFinishTime</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FFinishTime].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FFinishTime].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FWasherID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FWasherID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FWasherID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FBreakTypeID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FBreakTypeID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FBreakTypeID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FStatusWhenCanceled</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FStatusWhenCanceled].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FStatusWhenCanceled].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FSourceBillTypeID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSourceBillTypeID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSourceBillTypeID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FSourceBillEntryID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSourceBillEntryID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSourceBillEntryID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FSourceBillNumber</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSourceBillNumber].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSourceBillNumber].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>160</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FSourceBillEntrySeq</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSourceBillEntrySeq].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSourceBillEntrySeq].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>10</precision>
+        </column>
+        <column>
+            <name>FCustomerID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCustomerID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCustomerID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FRepairSender</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRepairSender].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRepairSender].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue>N''</defaultValue>
+            <sqlType>NVARCHAR</sqlType>
+            <length>255</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FTel</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FTel].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FTel].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue>N''</defaultValue>
+            <sqlType>NVARCHAR</sqlType>
+            <length>255</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FOldID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FOldID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FOldID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FRepairBookingID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRepairBookingID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRepairBookingID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FReturnRepair</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FReturnRepair].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FReturnRepair].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FIsClaim</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsClaim].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsClaim].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>1</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FIsWarranty</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsWarranty].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsWarranty].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>1</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FCustomerDiscountClassifyID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCustomerDiscountClassifyID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCustomerDiscountClassifyID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue>''</defaultValue>
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FFactDeliveryTime</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FFactDeliveryTime].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FFactDeliveryTime].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FOldReturnRepair</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FOldReturnRepair].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FOldReturnRepair].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue>''</defaultValue>
+            <sqlType>VARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FRecentlyComeTime</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRecentlyComeTime].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRecentlyComeTime].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FVersion</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FVersion].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FVersion].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FCardID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCardID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCardID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue>''</defaultValue>
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FRecentlyComeMile</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRecentlyComeMile].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRecentlyComeMile].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NUMERIC</sqlType>
+            <length>28</length>
+            <scale>10</scale>
+            <precision>28</precision>
+        </column>
+        <column>
+            <name>FIsNextWarrEdit</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsNextWarrEdit].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsNextWarrEdit].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>1</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FIsWorkCost</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsWorkCost].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsWorkCost].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FSupplierID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSupplierID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSupplierID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue>''</defaultValue>
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FGroupOrgunitID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FGroupOrgunitID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FGroupOrgunitID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue>''</defaultValue>
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FRepairWay</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRepairWay].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRepairWay].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue>''</defaultValue>
+            <sqlType>VARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FIsReceive</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsReceive].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsReceive].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FIsPay</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsPay].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsPay].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FAccountCFGID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FAccountCFGID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FAccountCFGID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue>''</defaultValue>
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+    </columns>
+    <primaryKey>
+        <name>PK_ATS_RepairWOID</name>
+        <userDefined>false</userDefined>
+        <primaryKeyColumns>
+            <primaryKeyColumn>
+                <indexID>0</indexID>
+                <sortType>ASC</sortType>
+                <column>
+                    <key name="name" value="FID" />
+                </column>
+            </primaryKeyColumn>
+        </primaryKeyColumns>
+    </primaryKey>
+    <foreignKeys>
+        <foreignKey>
+            <name>FK_ATS_RepairWOC02</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="T_PM_User" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FCreatorID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_RepairWOLop</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="T_PM_User" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FLastUpdateUserID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_RepairWOCop</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.org" />
+                <key name="name" value="T_ORG_OUPartCtrl" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FUnitID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FControlUnitID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_RepairWOHop</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="T_PM_User" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FHandlerID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_RepairWOAop</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="T_PM_User" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FAuditorID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_RepairWORf3</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="T_ATS_Brand" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FBrandID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_RepairWORf2</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.org" />
+                <key name="name" value="T_ORG_Admin" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FOrgUnitID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_RepairWOE0s</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="T_ATS_Vehicle" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FVehicleID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_RepairWOS8s</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.person" />
+                <key name="name" value="T_BD_Person" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FSAID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_RepairWOA6m</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="T_ATS_WarrantyType" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FWarrantyTypeID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_RepairWON3c</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.vam.app" />
+                <key name="name" value="T_ATS_InsuranceCompany" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FInsuranCompanyID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_RepairWOEmc</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="T_ATS_RepairType" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FRepairTypeID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_RepairWOAmr</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.person" />
+                <key name="name" value="T_BD_Person" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FWasherID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_RepairWORs3</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="T_ATS_BreakType" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FBreakTypeID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_RepairWOOda</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.scm.common.app" />
+                <key name="name" value="T_SCM_BillType" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FSourceBillTypeID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_RepairWOUa5</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="T_ATS_Customer" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FCustomerID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+    </foreignKeys>
+    <resource>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修工单" />
+            <lang locale="zh_HK" value="維修工單" />
+            <lang locale="zh_TW" value="維修工單" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FAccountCFGID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="账户类型" />
+            <lang locale="zh_HK" value="賬戶類型" />
+            <lang locale="zh_TW" value="賬戶類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FAccountCFGID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FAuditTime].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审核时间" />
+            <lang locale="zh_HK" value="審核時間" />
+            <lang locale="zh_TW" value="審核時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FAuditTime].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审核时间" />
+            <lang locale="zh_HK" value="審核時間" />
+            <lang locale="zh_TW" value="審核時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FAuditorID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审核人" />
+            <lang locale="zh_HK" value="審核人" />
+            <lang locale="zh_TW" value="審核人" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FAuditorID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审核人" />
+            <lang locale="zh_HK" value="審核人" />
+            <lang locale="zh_TW" value="審核人" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FBizDate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务日期" />
+            <lang locale="zh_HK" value="業務日期" />
+            <lang locale="zh_TW" value="業務日期" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FBizDate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务日期" />
+            <lang locale="zh_HK" value="業務日期" />
+            <lang locale="zh_TW" value="業務日期" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FBrandID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="品牌" />
+            <lang locale="zh_HK" value="品牌" />
+            <lang locale="zh_TW" value="品牌" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FBrandID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="品牌" />
+            <lang locale="zh_HK" value="品牌" />
+            <lang locale="zh_TW" value="品牌" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FBreakTypeID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="中断类型" />
+            <lang locale="zh_HK" value="中斷類型" />
+            <lang locale="zh_TW" value="中斷類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FBreakTypeID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="中断类型" />
+            <lang locale="zh_HK" value="中斷類型" />
+            <lang locale="zh_TW" value="中斷類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCardID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="会员卡" />
+            <lang locale="zh_HK" value="會員卡" />
+            <lang locale="zh_TW" value="會員卡" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCardID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FComeTime].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="进厂时间" />
+            <lang locale="zh_HK" value="進廠時間" />
+            <lang locale="zh_TW" value="進廠時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FComeTime].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="进厂时间" />
+            <lang locale="zh_HK" value="進廠時間" />
+            <lang locale="zh_TW" value="進廠時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCompanyNumber].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="厂家编号" />
+            <lang locale="zh_HK" value="廠家編號" />
+            <lang locale="zh_TW" value="廠家編號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCompanyNumber].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="厂家编号" />
+            <lang locale="zh_HK" value="廠家編號" />
+            <lang locale="zh_TW" value="廠家編號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FConsignation].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="贵重物品寄存" />
+            <lang locale="zh_HK" value="貴重物品寄存" />
+            <lang locale="zh_TW" value="貴重物品寄存" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FConsignation].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="贵重物品寄存" />
+            <lang locale="zh_HK" value="貴重物品寄存" />
+            <lang locale="zh_TW" value="貴重物品寄存" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FControlUnitID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="控制单元" />
+            <lang locale="zh_HK" value="控制單元" />
+            <lang locale="zh_TW" value="控制單元" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FControlUnitID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="控制单元" />
+            <lang locale="zh_HK" value="控制單元" />
+            <lang locale="zh_TW" value="控制單元" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCreateTime].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建时间" />
+            <lang locale="zh_HK" value="創建時間" />
+            <lang locale="zh_TW" value="創建時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCreateTime].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建时间" />
+            <lang locale="zh_HK" value="創建時間" />
+            <lang locale="zh_TW" value="創建時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCreatorID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建者" />
+            <lang locale="zh_HK" value="創建者" />
+            <lang locale="zh_TW" value="創建者" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCreatorID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建者" />
+            <lang locale="zh_HK" value="創建者" />
+            <lang locale="zh_TW" value="創建者" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCustomerDiscountClassifyID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="客户折扣分类" />
+            <lang locale="zh_HK" value="客戶折扣分類" />
+            <lang locale="zh_TW" value="客戶折扣分類" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCustomerDiscountClassifyID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="客户折扣分类" />
+            <lang locale="zh_HK" value="客戶折扣分類" />
+            <lang locale="zh_TW" value="客戶折扣分類" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCustomerID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="客户" />
+            <lang locale="zh_HK" value="客戶" />
+            <lang locale="zh_TW" value="客戶" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCustomerID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="客户" />
+            <lang locale="zh_HK" value="客戶" />
+            <lang locale="zh_TW" value="客戶" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCustomerRequest].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="客户要求" />
+            <lang locale="zh_HK" value="客戶要求" />
+            <lang locale="zh_TW" value="客戶要求" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCustomerRequest].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="客户要求" />
+            <lang locale="zh_HK" value="客戶要求" />
+            <lang locale="zh_TW" value="客戶要求" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FDescription].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="参考信息" />
+            <lang locale="zh_HK" value="參考信息" />
+            <lang locale="zh_TW" value="參考信息" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FDescription].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="参考信息" />
+            <lang locale="zh_HK" value="參考信息" />
+            <lang locale="zh_TW" value="參考信息" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FFactDeliveryTime].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="实际交车时间" />
+            <lang locale="zh_HK" value="實際交車時間" />
+            <lang locale="zh_TW" value="實際交車時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FFactDeliveryTime].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="实际交车时间" />
+            <lang locale="zh_HK" value="實際交車時間" />
+            <lang locale="zh_TW" value="實際交車時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FFinishTime].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="洗车完成时间" />
+            <lang locale="zh_HK" value="洗車完成時間" />
+            <lang locale="zh_TW" value="洗車完成時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FFinishTime].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="洗车完成时间" />
+            <lang locale="zh_HK" value="洗車完成時間" />
+            <lang locale="zh_TW" value="洗車完成時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FGroupOrgunitID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修集团公司" />
+            <lang locale="zh_HK" value="維修集團公司" />
+            <lang locale="zh_TW" value="維修集團公司" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FGroupOrgunitID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_HK" value="集團維修公司" />
+            <lang locale="zh_TW" value="集團維修公司" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FHandlerID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="经手人" />
+            <lang locale="zh_HK" value="經手人" />
+            <lang locale="zh_TW" value="經手人" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FHandlerID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="经手人" />
+            <lang locale="zh_HK" value="經手人" />
+            <lang locale="zh_TW" value="經手人" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FHasEffected].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否曾经生效" />
+            <lang locale="zh_HK" value="是否曾經生效" />
+            <lang locale="zh_TW" value="是否曾經生效" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FHasEffected].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否曾经生效" />
+            <lang locale="zh_HK" value="是否曾經生效" />
+            <lang locale="zh_TW" value="是否曾經生效" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FInsuranCompanyID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="保险公司" />
+            <lang locale="zh_HK" value="保險公司" />
+            <lang locale="zh_TW" value="保險公司" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FInsuranCompanyID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="保险公司" />
+            <lang locale="zh_HK" value="保險公司" />
+            <lang locale="zh_TW" value="保險公司" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIntendDeliveryTime].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="预计交车时间" />
+            <lang locale="zh_HK" value="預計交車時間" />
+            <lang locale="zh_TW" value="預計交車時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIntendDeliveryTime].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="预计交车时间" />
+            <lang locale="zh_HK" value="預計交車時間" />
+            <lang locale="zh_TW" value="預計交車時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FInvoicedTotalAmount].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="已开票金额合计" />
+            <lang locale="zh_HK" value="已開票金額合計" />
+            <lang locale="zh_TW" value="已開票金額合計" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FInvoicedTotalAmount].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="已开票金额合计" />
+            <lang locale="zh_HK" value="已開票金額合計" />
+            <lang locale="zh_TW" value="已開票金額合計" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsClaim].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="理赔标记" />
+            <lang locale="zh_HK" value="理賠標記" />
+            <lang locale="zh_TW" value="理賠標記" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsClaim].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="理赔标记" />
+            <lang locale="zh_HK" value="理賠標記" />
+            <lang locale="zh_TW" value="理賠標記" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsNextWarrEdit].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="下次保养修改" />
+            <lang locale="zh_HK" value="下次保養修改" />
+            <lang locale="zh_TW" value="下次保養修改" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsNextWarrEdit].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_HK" value="下次保養修改" />
+            <lang locale="zh_TW" value="下次保養修改" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsPay].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="已生成内部应付" />
+            <lang locale="zh_HK" value="已生成內部應付" />
+            <lang locale="zh_TW" value="已生成內部應付" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsPay].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_HK" value="生成內部應付標記" />
+            <lang locale="zh_TW" value="生成內部應付標記" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsPriorAssign].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否优先派工" />
+            <lang locale="zh_HK" value="是否優先派工" />
+            <lang locale="zh_TW" value="是否優先派工" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsPriorAssign].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否优先派工" />
+            <lang locale="zh_HK" value="是否優先派工" />
+            <lang locale="zh_TW" value="是否優先派工" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsReceive].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="已生成内部应收" />
+            <lang locale="zh_HK" value="已生成內部應收" />
+            <lang locale="zh_TW" value="已生成內部應收" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsReceive].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_HK" value="生成內部應收標記" />
+            <lang locale="zh_TW" value="生成內部應收標記" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsStat].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否计算进出厂台次" />
+            <lang locale="zh_HK" value="是否計算進出廠台次" />
+            <lang locale="zh_TW" value="是否計算進出廠台次" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsStat].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否计算进出厂台次" />
+            <lang locale="zh_HK" value="是否計算進出廠台次" />
+            <lang locale="zh_TW" value="是否計算進出廠台次" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsWaitForStore].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否在店等待" />
+            <lang locale="zh_HK" value="是否在店等待" />
+            <lang locale="zh_TW" value="是否在店等待" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsWaitForStore].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否在店等待" />
+            <lang locale="zh_HK" value="是否在店等待" />
+            <lang locale="zh_TW" value="是否在店等待" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsWarranty].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="索赔标记" />
+            <lang locale="zh_HK" value="索賠標記" />
+            <lang locale="zh_TW" value="索賠標記" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsWarranty].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="索赔标记" />
+            <lang locale="zh_HK" value="索賠標記" />
+            <lang locale="zh_TW" value="索賠標記" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsWash].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否洗车" />
+            <lang locale="zh_HK" value="是否洗車" />
+            <lang locale="zh_TW" value="是否洗車" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsWash].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否洗车" />
+            <lang locale="zh_HK" value="是否洗車" />
+            <lang locale="zh_TW" value="是否洗車" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsWorkCost].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="生成工时成本" />
+            <lang locale="zh_HK" value="生成工時成本" />
+            <lang locale="zh_TW" value="生成工時成本" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FIsWorkCost].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FKeyNumber].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="钥匙号" />
+            <lang locale="zh_HK" value="鑰匙號" />
+            <lang locale="zh_TW" value="鑰匙號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FKeyNumber].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="钥匙号" />
+            <lang locale="zh_HK" value="鑰匙號" />
+            <lang locale="zh_TW" value="鑰匙號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FLastUpdateTime].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改时间" />
+            <lang locale="zh_HK" value="最後修改時間" />
+            <lang locale="zh_TW" value="最後修改時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FLastUpdateTime].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改时间" />
+            <lang locale="zh_HK" value="最後修改時間" />
+            <lang locale="zh_TW" value="最後修改時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FLastUpdateUserID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改者" />
+            <lang locale="zh_HK" value="最後修改者" />
+            <lang locale="zh_TW" value="最後修改者" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FLastUpdateUserID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改者" />
+            <lang locale="zh_HK" value="最後修改者" />
+            <lang locale="zh_TW" value="最後修改者" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FMile].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="进厂行驶里程" />
+            <lang locale="zh_HK" value="進廠行駛裏程" />
+            <lang locale="zh_TW" value="進廠行駛裏程" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FMile].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="进厂行驶里程" />
+            <lang locale="zh_HK" value="進廠行駛裏程" />
+            <lang locale="zh_TW" value="進廠行駛裏程" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FNumber].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据编号" />
+            <lang locale="zh_HK" value="單據編號" />
+            <lang locale="zh_TW" value="單據編號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FNumber].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据编号" />
+            <lang locale="zh_HK" value="單據編號" />
+            <lang locale="zh_TW" value="單據編號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FOilQty].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="油量" />
+            <lang locale="zh_HK" value="油量" />
+            <lang locale="zh_TW" value="油量" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FOilQty].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="油量" />
+            <lang locale="zh_HK" value="油量" />
+            <lang locale="zh_TW" value="油量" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FOldID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="原工单号" />
+            <lang locale="zh_HK" value="原工單號" />
+            <lang locale="zh_TW" value="原工單號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FOldID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="原工单号" />
+            <lang locale="zh_HK" value="原工單號" />
+            <lang locale="zh_TW" value="原工單號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FOldReturnRepair].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="原返修类型" />
+            <lang locale="zh_HK" value="原返修類型" />
+            <lang locale="zh_TW" value="原返修類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FOldReturnRepair].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用于回复 返修类型为外返时候的数据" />
+            <lang locale="zh_HK" value="用於回復 返修類型為外返時候的數據" />
+            <lang locale="zh_TW" value="用於回復 返修類型為外返時候的數據" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FOrgUnitID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FOrgUnitID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FReceiveTotalAmount].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="已收款金额合计" />
+            <lang locale="zh_HK" value="已收款金額合計" />
+            <lang locale="zh_TW" value="已收款金額合計" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FReceiveTotalAmount].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="已收款金额合计" />
+            <lang locale="zh_HK" value="已收款金額合計" />
+            <lang locale="zh_TW" value="已收款金額合計" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRecentlyComeMile].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="上次进厂里程" />
+            <lang locale="zh_HK" value="上次進廠裏程" />
+            <lang locale="zh_TW" value="上次進廠裏程" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRecentlyComeMile].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRecentlyComeTime].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="上次进厂时间" />
+            <lang locale="zh_HK" value="上次進廠時間" />
+            <lang locale="zh_TW" value="上次進廠時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRecentlyComeTime].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="上次進廠時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRemark].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="备注" />
+            <lang locale="zh_HK" value="備註" />
+            <lang locale="zh_TW" value="備註" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRemark].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="备注" />
+            <lang locale="zh_HK" value="備註" />
+            <lang locale="zh_TW" value="備註" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRepairBookingID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修预约单号" />
+            <lang locale="zh_HK" value="維修預約單號" />
+            <lang locale="zh_TW" value="維修預約單號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRepairBookingID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修预约单号" />
+            <lang locale="zh_HK" value="維修預約單號" />
+            <lang locale="zh_TW" value="維修預約單號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRepairSender].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="送修人" />
+            <lang locale="zh_HK" value="送修人" />
+            <lang locale="zh_TW" value="送修人" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRepairSender].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="送修人" />
+            <lang locale="zh_HK" value="送修人" />
+            <lang locale="zh_TW" value="送修人" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRepairTotalAmount].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修费用合计" />
+            <lang locale="zh_HK" value="維修費用合計" />
+            <lang locale="zh_TW" value="維修費用合計" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRepairTotalAmount].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修费用合计" />
+            <lang locale="zh_HK" value="維修費用合計" />
+            <lang locale="zh_TW" value="維修費用合計" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRepairTypeID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修类型" />
+            <lang locale="zh_HK" value="維修類型" />
+            <lang locale="zh_TW" value="維修類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRepairTypeID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修类型" />
+            <lang locale="zh_HK" value="維修類型" />
+            <lang locale="zh_TW" value="維修類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRepairWay].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修方式" />
+            <lang locale="zh_HK" value="維修方式" />
+            <lang locale="zh_TW" value="維修方式" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRepairWay].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_HK" value="維修方式" />
+            <lang locale="zh_TW" value="維修方式" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FReturnRepair].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="返修类型" />
+            <lang locale="zh_HK" value="返修類型" />
+            <lang locale="zh_TW" value="返修類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FReturnRepair].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="返修类型" />
+            <lang locale="zh_HK" value="返修類型" />
+            <lang locale="zh_TW" value="返修類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSAID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="服务顾问" />
+            <lang locale="zh_HK" value="服務顧問" />
+            <lang locale="zh_TW" value="服務顧問" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSAID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="服务顾问" />
+            <lang locale="zh_HK" value="服務顧問" />
+            <lang locale="zh_TW" value="服務顧問" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSourceBillEntryID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="源单分录ID" />
+            <lang locale="zh_HK" value="源單分錄ID" />
+            <lang locale="zh_TW" value="源單分錄ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSourceBillEntryID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="源单分录ID" />
+            <lang locale="zh_HK" value="源單分錄ID" />
+            <lang locale="zh_TW" value="源單分錄ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSourceBillEntrySeq].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="源单行号" />
+            <lang locale="zh_HK" value="源單行號" />
+            <lang locale="zh_TW" value="源單行號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSourceBillEntrySeq].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="源单行号" />
+            <lang locale="zh_HK" value="源單行號" />
+            <lang locale="zh_TW" value="源單行號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSourceBillID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="原始单据ID" />
+            <lang locale="zh_HK" value="原始單據ID" />
+            <lang locale="zh_TW" value="原始單據ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSourceBillID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="原始单据ID" />
+            <lang locale="zh_HK" value="原始單據ID" />
+            <lang locale="zh_TW" value="原始單據ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSourceBillNumber].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="源单单号" />
+            <lang locale="zh_HK" value="源單單號" />
+            <lang locale="zh_TW" value="源單單號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSourceBillNumber].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="源单单号" />
+            <lang locale="zh_HK" value="源單單號" />
+            <lang locale="zh_TW" value="源單單號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSourceBillTypeID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="源单类型" />
+            <lang locale="zh_HK" value="源單類型" />
+            <lang locale="zh_TW" value="源單類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSourceBillTypeID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="源单类型" />
+            <lang locale="zh_HK" value="源單類型" />
+            <lang locale="zh_TW" value="源單類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSourceFunction].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="来源功能" />
+            <lang locale="zh_HK" value="來源功能" />
+            <lang locale="zh_TW" value="來源功能" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSourceFunction].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="来源功能" />
+            <lang locale="zh_HK" value="來源功能" />
+            <lang locale="zh_TW" value="來源功能" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FStatusWhenCanceled].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="作废时的单据状态" />
+            <lang locale="zh_HK" value="作廢時的單據狀態" />
+            <lang locale="zh_TW" value="作廢時的單據狀態" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FStatusWhenCanceled].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="作废时的单据状态" />
+            <lang locale="zh_HK" value="作廢時的單據狀態" />
+            <lang locale="zh_TW" value="作廢時的單據狀態" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FStatus].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据状态" />
+            <lang locale="zh_HK" value="單據狀態" />
+            <lang locale="zh_TW" value="單據狀態" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FStatus].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据状态" />
+            <lang locale="zh_HK" value="單據狀態" />
+            <lang locale="zh_TW" value="單據狀態" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSupplierID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修外包公司" />
+            <lang locale="zh_HK" value="維修外包公司" />
+            <lang locale="zh_TW" value="維修外包公司" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FSupplierID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_HK" value="維修外包公司" />
+            <lang locale="zh_TW" value="維修外包公司" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FTel].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="送修人电话" />
+            <lang locale="zh_HK" value="送修人電話" />
+            <lang locale="zh_TW" value="送修人電話" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FTel].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="送修人电话" />
+            <lang locale="zh_HK" value="送修人電話" />
+            <lang locale="zh_TW" value="送修人電話" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FVehicleID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="车辆" />
+            <lang locale="zh_HK" value="車輛" />
+            <lang locale="zh_TW" value="車輛" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FVehicleID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="车辆" />
+            <lang locale="zh_HK" value="車輛" />
+            <lang locale="zh_TW" value="車輛" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FVersion].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="版本号" />
+            <lang locale="zh_HK" value="版本號" />
+            <lang locale="zh_TW" value="版本號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FVersion].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="由于工单，车间，领料都会修改同一数据，会造成数据不一致，所以用版本号来区分" />
+            <lang locale="zh_HK" value="由於工單，車間，領料都會修改同一數據，會造成數據不一致，所以用版本號來區分" />
+            <lang locale="zh_TW" value="由於工單，車間，領料都會修改同一數據，會造成數據不一致，所以用版本號來區分" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FWarrantyTypeID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="保修类型" />
+            <lang locale="zh_HK" value="保修類型" />
+            <lang locale="zh_TW" value="保修類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FWarrantyTypeID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="保修类型" />
+            <lang locale="zh_HK" value="保修類型" />
+            <lang locale="zh_TW" value="保修類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FWashRemark].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="洗车备注" />
+            <lang locale="zh_HK" value="洗車備註" />
+            <lang locale="zh_TW" value="洗車備註" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FWashRemark].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="洗车备注" />
+            <lang locale="zh_HK" value="洗車備註" />
+            <lang locale="zh_TW" value="洗車備註" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FWasherID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="洗车员" />
+            <lang locale="zh_HK" value="洗車員" />
+            <lang locale="zh_TW" value="洗車員" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FWasherID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="洗车员" />
+            <lang locale="zh_HK" value="洗車員" />
+            <lang locale="zh_TW" value="洗車員" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="多分錄基礎單據範本" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</dataTable>
+
