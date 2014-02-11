@@ -3,9 +3,13 @@ package com.kingdee.eas.myframework.scm;
 import java.io.Serializable;
 
 import com.kingdee.bos.Context;
+import com.kingdee.bos.dao.IObjectPK;
+import com.kingdee.eas.basedata.scm.common.TransactionTypeInfo;
 import com.kingdee.eas.myframework.util.PublicUtils;
 import com.kingdee.eas.scm.common.ISCMBillParam;
 import com.kingdee.eas.scm.common.SCMBillParamFactory;
+import com.kingdee.eas.scm.im.inv.IInventoryUpdate;
+import com.kingdee.eas.scm.im.inv.InventoryUpdateFactory;
 
 public class SCMBillUtils implements Serializable {
 
@@ -28,18 +32,19 @@ public class SCMBillUtils implements Serializable {
 		return isAutoAudit;
 	}
 	
-	
 	/**
 	 * ¸üÐÂ¿â´æ
-	 * 
-	 *  IInventoryUpdate iInventoryUpdate = InventoryUpdateFactory.getLocalInstance(ctx);
-
-String transTypeID = null;
- if(aInvBillBaseInfo.getTransactionType() != null)
-            {       transTypeID = aInvBillBaseInfo.getTransactionType().getId().toString();
-     iInventoryUpdate.updateInventory(pk.toString(), transTypeID);
-            }
-            
+	 * @param ctx
+	 * @param pk
+	 * @param tanscationType
+	 * @throws Exception
 	 */
+	public static void updateInv(Context ctx, IObjectPK pk, TransactionTypeInfo transcationType) throws Exception {
+		 IInventoryUpdate iInventoryUpdate;
+		 String transTypeID = transcationType.getString("id");
+		 if (ctx == null) iInventoryUpdate = InventoryUpdateFactory.getRemoteInstance();
+		 else iInventoryUpdate = InventoryUpdateFactory.getLocalInstance(ctx);
+		 iInventoryUpdate.updateInventory(pk.toString(), transTypeID);
+	}
 
 }

@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entityObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.ga.rs.app</package>
+    <name>CustomerAccount</name>
+    <alias>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].alias</alias>
+    <description>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].description</description>
+    <userDefined>true</userDefined>
+    <bosType>8B9E1F44</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.ga.rs.CustomerAccount</businessImplName>
+    <businessControllerName>com.kingdee.eas.ga.rs.app.CustomerAccountController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getValue].description</description>
+            <innerID>eecf3c6b-8136-42a5-bbb5-7af4ec81407e</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.rs.app.CustomerAccount</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getValue].description</description>
+            <innerID>3b2f6b5b-fb38-49cd-af9d-9e8b1ca944e2</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.rs.app.CustomerAccount</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>selector</name>
+                    <alias>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getValue].parameters.parameter[selector].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getValue].parameters.parameter[selector].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SelectorItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getValue].description</description>
+            <innerID>3d6b1adf-3c0a-4042-8d00-ffb1c721fb09</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.rs.app.CustomerAccount</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getValue].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getValue].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getCollection].description</description>
+            <innerID>bfbab683-54ed-48d8-8672-79729c5e94fc</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.rs.app.CustomerAccount</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getCollection].description</description>
+            <innerID>398fd646-f504-4733-8400-7688e8ffd34f</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.rs.app.CustomerAccount</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>view</name>
+                    <alias>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getCollection].parameters.parameter[view].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getCollection].parameters.parameter[view].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.EntityViewInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getCollection].description</description>
+            <innerID>853d0d1d-a04a-4fd7-bb3b-53c59f378965</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.rs.app.CustomerAccount</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getCollection].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getCollection].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <isAbstract>false</isAbstract>
+    <bizUnitPK>com.kingdee.eas.ga.rs.CustomerAccount</bizUnitPK>
+    <baseEntity>
+        <key name="package" value="com.kingdee.eas.myframework.template.base.app" />
+        <key name="name" value="SimpleDatabase" />
+    </baseEntity>
+    <table>
+        <key name="package" value="com.kingdee.eas.ga.rs.app" />
+        <key name="name" value="CT_RS_CustomerAccount" />
+    </table>
+    <properties>
+        <ownProperty>
+            <name>retailSaleType</name>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailSaleType].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailSaleType].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>100</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailSaleType].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFRetailSaleType" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>retailDiscountRate</name>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailDiscountRate].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailDiscountRate].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>BigDecimal</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>5</length>
+            <precision>5</precision>
+            <decimalDigits>2</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailDiscountRate].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFRetailDiscountRate" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>repairDiscountRate</name>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairDiscountRate].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairDiscountRate].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>BigDecimal</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>5</length>
+            <precision>5</precision>
+            <decimalDigits>2</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairDiscountRate].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFRepairDiscountRate" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>typeCode</name>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[typeCode].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[typeCode].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>100</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[typeCode].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFTypeCode" />
+            </mappingField>
+        </ownProperty>
+        <linkProperty>
+            <name>finCustomer</name>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.linkProperty[finCustomer].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.linkProperty[finCustomer].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="CFFinCustomerID" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="R_CustomerAccount_Customer_finCustomer" />
+            </relationship>
+        </linkProperty>
+        <ownProperty>
+            <name>repairSaleType</name>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairSaleType].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairSaleType].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>100</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairSaleType].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFRepairSaleType" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>settlementType</name>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[settlementType].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[settlementType].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Enum</dataType>
+            <metadataRef>com.kingdee.eas.ga.rs.SettlementTypeEnum</metadataRef>
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>80</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[settlementType].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFSettlementType" />
+            </mappingField>
+        </ownProperty>
+    </properties>
+    <logicalKey>
+        <name>id</name>
+        <alias>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].logicalKey[id].alias</alias>
+        <description>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].logicalKey[id].description</description>
+        <keyClass>com.kingdee.bos.dao.IObjectPK</keyClass>
+        <userDefined>true</userDefined>
+        <keyProperties>
+            <baseProperty>
+                <key name="name" value="id" />
+            </baseProperty>
+        </keyProperties>
+    </logicalKey>
+    <defaultView>
+        <name />
+        <alias>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].defaultViewalias</alias>
+        <description>entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].defaultViewdescription</description>
+    </defaultView>
+    <resource>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="客户账户" />
+            <lang locale="zh_HK" value="客戶賬戶" />
+            <lang locale="zh_TW" value="客戶賬戶" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].defaultViewalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].defaultViewdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].defaultViewextendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].defaultViewextendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].defaultViewextendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="name" />
+            <lang locale="zh_CN" value="name" />
+            <lang locale="zh_TW" value="name" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].defaultViewextendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.ga.rs.app.CustomerAccountQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.rs.app.CustomerAccountQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.rs.app.CustomerAccountQuery" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].defaultViewextendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.ga.rs.client.CustomerAccountEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.rs.client.CustomerAccountEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.rs.client.CustomerAccountEditUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].defaultViewextendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].defaultViewextendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].defaultViewextendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].defaultViewextendedProperty.isSimpleEntity">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].defaultViewextendedProperty.isUseCodeRule">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].defaultViewextendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.ga.rs.client.CustomerAccountListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.rs.client.CustomerAccountListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.rs.client.CustomerAccountListUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="單級基礎資料範本" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].extendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].extendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="name" />
+            <lang locale="zh_CN" value="name" />
+            <lang locale="zh_TW" value="name" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.ga.rs.app.CustomerAccountQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.rs.app.CustomerAccountQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.rs.app.CustomerAccountQuery" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.ga.rs.client.CustomerAccountEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.rs.client.CustomerAccountEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.rs.client.CustomerAccountEditUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].extendedProperty.genBusinessImplCode">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].extendedProperty.isSimpleEntity">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].extendedProperty.isUseCodeRule">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.ga.rs.client.CustomerAccountListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.rs.client.CustomerAccountListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.rs.client.CustomerAccountListUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].logicalKey[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].logicalKey[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getCollection].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getCollection].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getCollection].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getCollection].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getCollection].parameters.parameter[view].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getCollection].parameters.parameter[view].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getValue].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getValue].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getValue].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getValue].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getValue].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getValue].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getValue].parameters.parameter[selector].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].methods.method[getValue].parameters.parameter[selector].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.linkProperty[finCustomer].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="对应财务客户" />
+            <lang locale="zh_HK" value="對應財務客戶" />
+            <lang locale="zh_TW" value="對應財務客戶" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.linkProperty[finCustomer].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="对应财务客户" />
+            <lang locale="zh_HK" value="對應財務客戶" />
+            <lang locale="zh_TW" value="對應財務客戶" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.linkProperty[finCustomer].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.linkProperty[finCustomer].extendedProperty.dataField">
+            <lang locale="en_US" value="name" />
+            <lang locale="zh_CN" value="name" />
+            <lang locale="zh_TW" value="name" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.linkProperty[finCustomer].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.linkProperty[finCustomer].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.linkProperty[finCustomer].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.linkProperty[finCustomer].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.linkProperty[finCustomer].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.linkProperty[finCustomer].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.linkProperty[finCustomer].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairDiscountRate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修折扣率%" />
+            <lang locale="zh_HK" value="維修折扣率%" />
+            <lang locale="zh_TW" value="維修折扣率%" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairDiscountRate].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairDiscountRate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修折扣率%" />
+            <lang locale="zh_HK" value="維修折扣率%" />
+            <lang locale="zh_TW" value="維修折扣率%" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairDiscountRate].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairDiscountRate].extendedProperty.bizDataType">
+            <lang locale="en_US" value="DECIMAL" />
+            <lang locale="zh_CN" value="DECIMAL" />
+            <lang locale="zh_TW" value="DECIMAL" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairDiscountRate].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairDiscountRate].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairDiscountRate].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairDiscountRate].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairDiscountRate].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairDiscountRate].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairDiscountRate].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairDiscountRate].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairSaleType].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修销售类型" />
+            <lang locale="zh_HK" value="維修銷售類型" />
+            <lang locale="zh_TW" value="維修銷售類型" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairSaleType].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairSaleType].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修销售类型" />
+            <lang locale="zh_HK" value="維修銷售類型" />
+            <lang locale="zh_TW" value="維修銷售類型" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairSaleType].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairSaleType].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairSaleType].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairSaleType].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairSaleType].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairSaleType].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairSaleType].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairSaleType].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairSaleType].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[repairSaleType].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailDiscountRate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="零售折扣率%" />
+            <lang locale="zh_HK" value="零售折扣率%" />
+            <lang locale="zh_TW" value="零售折扣率%" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailDiscountRate].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailDiscountRate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="零售折扣率%" />
+            <lang locale="zh_HK" value="零售折扣率%" />
+            <lang locale="zh_TW" value="零售折扣率%" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailDiscountRate].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailDiscountRate].extendedProperty.bizDataType">
+            <lang locale="en_US" value="DECIMAL" />
+            <lang locale="zh_CN" value="DECIMAL" />
+            <lang locale="zh_TW" value="DECIMAL" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailDiscountRate].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailDiscountRate].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailDiscountRate].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailDiscountRate].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailDiscountRate].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailDiscountRate].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailDiscountRate].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailDiscountRate].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailSaleType].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="零售销售类型" />
+            <lang locale="zh_HK" value="零售銷售類型" />
+            <lang locale="zh_TW" value="零售銷售類型" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailSaleType].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailSaleType].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="零售销售类型" />
+            <lang locale="zh_HK" value="零售銷售類型" />
+            <lang locale="zh_TW" value="零售銷售類型" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailSaleType].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailSaleType].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailSaleType].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailSaleType].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailSaleType].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailSaleType].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailSaleType].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailSaleType].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailSaleType].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[retailSaleType].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[settlementType].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="结算类型" />
+            <lang locale="zh_HK" value="結算類型" />
+            <lang locale="zh_TW" value="結算類型" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[settlementType].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="Cash" />
+            <lang locale="zh_HK" value="Cash" />
+            <lang locale="zh_TW" value="Cash" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[settlementType].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="结算类型" />
+            <lang locale="zh_HK" value="結算類型" />
+            <lang locale="zh_TW" value="結算類型" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[settlementType].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[settlementType].extendedProperty.bizDataType">
+            <lang locale="en_US" value="ENUM" />
+            <lang locale="zh_CN" value="ENUM" />
+            <lang locale="zh_TW" value="ENUM" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[settlementType].extendedProperty.defaultValue">
+            <lang locale="en_US" value="Cash" />
+            <lang locale="zh_CN" value="Cash" />
+            <lang locale="zh_TW" value="Cash" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[settlementType].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[settlementType].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[settlementType].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[settlementType].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[settlementType].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[settlementType].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[settlementType].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[settlementType].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[typeCode].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="类别代码" />
+            <lang locale="zh_HK" value="類別代碼" />
+            <lang locale="zh_TW" value="類別代碼" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[typeCode].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[typeCode].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="类别代码" />
+            <lang locale="zh_HK" value="類別代碼" />
+            <lang locale="zh_TW" value="類別代碼" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[typeCode].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[typeCode].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[typeCode].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[typeCode].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[typeCode].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[typeCode].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[typeCode].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[typeCode].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[typeCode].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.CustomerAccount].properties.ownProperty[typeCode].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</entityObject>
+

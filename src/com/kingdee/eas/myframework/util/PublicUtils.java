@@ -92,6 +92,12 @@ public class PublicUtils implements Serializable {
 		set.toArray(str);
 		return str;
 	}
+	public static Integer[] setToInteger(Set<Integer> set) {
+		if (set == null || set.isEmpty()) return null;
+		Integer[] i = new Integer[set.size()];
+		set.toArray(i);
+		return i;
+	}
 	public static String[] vectorToString(Vector<String> vec) {
 		if (vec == null || vec.isEmpty()) return null;
 		String[] str = new String[vec.size()];

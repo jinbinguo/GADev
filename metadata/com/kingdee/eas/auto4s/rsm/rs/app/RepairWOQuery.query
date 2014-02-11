@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.auto4s.rsm.rs.app</package>
+    <name>RepairWOQuery</name>
+    <alias>joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].alias</alias>
+    <subObjects>
+        <subEntity>
+            <name>CustomerAccount</name>
+            <alias>joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].subObjects.subEntity[CustomerAccount].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+                <key name="name" value="RepairWOQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="CustomerAccount" />
+            </entityRef>
+        </subEntity>
+    </subObjects>
+    <units>
+        <queryField>
+            <name>customInfo</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[customInfo].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>ae6e5df2-e1d9-4cd7-a37d-5d8837e3de93</key>
+                    <parentUnit>
+                        <key name="name" value="customInfo" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairWO" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="customInfo" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+                <key name="name" value="RepairWOQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>saleType</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[saleType].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b1af8a6c-86a7-4c25-861d-56f0f90a40a6</key>
+                    <parentUnit>
+                        <key name="name" value="saleType" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairWO" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="saleType" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+                <key name="name" value="RepairWOQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>CustomerAccount.number</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[CustomerAccount.number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>7d3c1405-1b5f-410c-88f3-e9c7706ec9ad</key>
+                    <parentUnit>
+                        <key name="name" value="CustomerAccount.number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="CustomerAccount" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+                <key name="name" value="RepairWOQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>08949506-0f05-431d-a47c-b3b43937d173</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.propertyUnit[08949506-0f05-431d-a47c-b3b43937d173].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>ec6ff02d-fa91-422e-abed-7a65ec4f09fd</key>
+                    <parentUnit>
+                        <key name="name" value="08949506-0f05-431d-a47c-b3b43937d173" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairWO" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="CustomerAccount" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+                <key name="name" value="RepairWOQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>f929264c-5235-40b8-84fe-bac4d55470a2</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.propertyUnit[f929264c-5235-40b8-84fe-bac4d55470a2].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>f9d7d757-4673-404b-b0b6-f524eec681c4</key>
+                    <parentUnit>
+                        <key name="name" value="f929264c-5235-40b8-84fe-bac4d55470a2" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="CustomerAccount" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+                <key name="name" value="RepairWOQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>customerAccountName</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[customerAccountName].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>10e44445-7e7b-4d09-a051-321d66521f0c</key>
+                    <parentUnit>
+                        <key name="name" value="customerAccountName" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairWO" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="customerAccountName" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+                <key name="name" value="RepairWOQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>RWOSparepartEntry.wipLineNo</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.wipLineNo].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>c555a90d-e450-4938-b010-c8a070dd3fd7</key>
+                    <parentUnit>
+                        <key name="name" value="RWOSparepartEntry.wipLineNo" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RWOSparepartEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="wipLineNo" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+                <key name="name" value="RepairWOQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>RWOSparepartEntry.wipFactLineNo</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.wipFactLineNo].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>70642e89-b4bc-4df2-a6a9-222338f9d2ec</key>
+                    <parentUnit>
+                        <key name="name" value="RWOSparepartEntry.wipFactLineNo" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RWOSparepartEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="wipFactLineNo" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+                <key name="name" value="RepairWOQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>RWOSparepartEntry.isCT</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.isCT].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Boolean</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>227610c9-b05b-451e-8499-0e9506c06563</key>
+                    <parentUnit>
+                        <key name="name" value="RWOSparepartEntry.isCT" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RWOSparepartEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="isCT" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+                <key name="name" value="RepairWOQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>RWOSparepartEntry.itemSpEntryId</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.itemSpEntryId].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>4066c7fb-df8b-455e-a4eb-4867691e066e</key>
+                    <parentUnit>
+                        <key name="name" value="RWOSparepartEntry.itemSpEntryId" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RWOSparepartEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="itemSpEntryId" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+                <key name="name" value="RepairWOQuery" />
+            </query>
+        </queryField>
+    </units>
+    <joins>
+        <join>
+            <name>1bcba880-e1c0-4efd-a185-30f38955dc0c</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="RepairWO" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="CustomerAccount" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>ac2e8b27-93d6-43e6-8773-7170c372c772</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="08949506-0f05-431d-a47c-b3b43937d173" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="f929264c-5235-40b8-84fe-bac4d55470a2" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="1bcba880-e1c0-4efd-a185-30f38955dc0c" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+                <key name="name" value="RepairWOQuery" />
+            </query>
+        </join>
+    </joins>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].subObjects.subEntity[CustomerAccount].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.propertyUnit[08949506-0f05-431d-a47c-b3b43937d173].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.propertyUnit[f929264c-5235-40b8-84fe-bac4d55470a2].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[CustomerAccount.number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="账户代码" />
+            <lang locale="zh_HK" value="賬戶代碼" />
+            <lang locale="zh_TW" value="賬戶代碼" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[CustomerAccount.number].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[CustomerAccount.number].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[CustomerAccount.number].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.IssueQty].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.IssueQty].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.IssueQty].extendedProperty.isSumField">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.NoIssueQty].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.NoIssueQty].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.NoIssueQty].extendedProperty.isSumField">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.Qty].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.Qty].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.Qty].extendedProperty.isSumField">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.isCT].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否拆退" />
+            <lang locale="zh_HK" value="是否拆退" />
+            <lang locale="zh_TW" value="是否拆退" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.isCT].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.isCT].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.itemSpEntryId].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="项目/配件明细分录ID" />
+            <lang locale="zh_HK" value="項目/配件明細分錄ID" />
+            <lang locale="zh_TW" value="項目/配件明細分錄ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.itemSpEntryId].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.itemSpEntryId].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.wipFactLineNo].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="DMS实际行号" />
+            <lang locale="zh_HK" value="DMS實際行號" />
+            <lang locale="zh_TW" value="DMS實際行號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.wipFactLineNo].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.wipFactLineNo].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.wipLineNo].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="DMS行号" />
+            <lang locale="zh_HK" value="DMS行號" />
+            <lang locale="zh_TW" value="DMS行號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.wipLineNo].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RWOSparepartEntry.wipLineNo].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[RepairTotalAmount].extendedProperty.isSumField">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[customInfo].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="客户信息" />
+            <lang locale="zh_HK" value="客戶信息" />
+            <lang locale="zh_TW" value="客戶信息" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[customInfo].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[customInfo].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[customerAccountName].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="账户名称" />
+            <lang locale="zh_HK" value="賬戶名稱" />
+            <lang locale="zh_TW" value="賬戶名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[customerAccountName].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[customerAccountName].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[saleType].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="销售类型" />
+            <lang locale="zh_HK" value="銷售類型" />
+            <lang locale="zh_TW" value="銷售類型" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[saleType].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[saleType].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</joinQuery>
+

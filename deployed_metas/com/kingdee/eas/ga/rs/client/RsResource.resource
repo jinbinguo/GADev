@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<i18nResource xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.ga.rs.client</package>
+    <name>RsResource</name>
+    <alias>i18nResource[com.kingdee.eas.ga.rs.client.RsResource].alias</alias>
+    <description>i18nResource[com.kingdee.eas.ga.rs.client.RsResource].description</description>
+    <userDefined>true</userDefined>
+    <className>com.kingdee.eas.ga.rs.client.RsResource</className>
+    <resourceItems>
+        <resourceItem>
+            <name>WQueryF7WindowTitle</name>
+            <value>i18nResource[com.kingdee.eas.ga.rs.client.RsResource].resourceItems.resourceItem[WQueryF7WindowTitle].value</value>
+            <userDefined>true</userDefined>
+        </resourceItem>
+        <resourceItem>
+            <name>CustomerAccountQueryF7WindowTitle</name>
+            <value>i18nResource[com.kingdee.eas.ga.rs.client.RsResource].resourceItems.resourceItem[CustomerAccountQueryF7WindowTitle].value</value>
+            <userDefined>true</userDefined>
+        </resourceItem>
+    </resourceItems>
+    <resource>
+        <rs key="i18nResource[com.kingdee.eas.ga.rs.client.RsResource].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="i18nResource[com.kingdee.eas.ga.rs.client.RsResource].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="i18nResource[com.kingdee.eas.ga.rs.client.RsResource].resourceItems.resourceItem[CustomerAccountQueryF7WindowTitle].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="客户账户" />
+            <lang locale="zh_HK" value="客戶賬戶" />
+            <lang locale="zh_TW" value="客戶賬戶" />
+        </rs>
+        <rs key="i18nResource[com.kingdee.eas.ga.rs.client.RsResource].resourceItems.resourceItem[WQueryF7WindowTitle].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="W" />
+            <lang locale="zh_HK" value="W" />
+            <lang locale="zh_TW" value="W" />
+        </rs>
+    </resource>
+</i18nResource>
+

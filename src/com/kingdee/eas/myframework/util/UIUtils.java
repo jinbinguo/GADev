@@ -13,6 +13,7 @@ import com.kingdee.bos.ctrl.extendcontrols.KDBizMultiLangBox;
 import com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox;
 import com.kingdee.bos.ctrl.kdf.table.ICell;
 import com.kingdee.bos.ctrl.kdf.table.IRow;
+import com.kingdee.bos.ctrl.kdf.table.KDTDefaultCellEditor;
 import com.kingdee.bos.ctrl.kdf.table.KDTable;
 import com.kingdee.bos.ctrl.swing.KDDatePicker;
 import com.kingdee.bos.ctrl.swing.KDFormattedTextField;
@@ -36,6 +37,7 @@ import com.kingdee.eas.framework.client.CoreUI;
 import com.kingdee.eas.myframework.common.client.MultiColumnSortUI;
 import com.kingdee.eas.myframework.comparators.table.KDTableComparatorUtils;
 import com.kingdee.eas.myframework.comparators.table.SortColumnCollection;
+import com.kingdee.eas.scm.common.client.helper.FormattedEditorFactory;
 import com.kingdee.eas.util.SysUtil;
 import com.kingdee.eas.util.client.EASResource;
 import com.kingdee.eas.util.client.ExceptionHandler;
@@ -230,4 +232,18 @@ public class UIUtils implements Serializable {
     		tbl.addRow(i, lstRow.get(i));
     	}
     } 
+    /**
+     * 精度默认为2
+     * @param tblMain
+     * @param columnName
+     * @param isNegatived 是否支持录入负数
+     * @throws EASBizException
+     * @throws BOSException
+     */
+    public static void formatDecimal(KDTable tblMain, String columnName,boolean isNegatived) {
+    	KDTDefaultCellEditor editor = FormattedEditorFactory.getBigDecimalCellEditor(2, isNegatived);
+		tblMain.getColumn(columnName).setEditor(editor);
+		tblMain.getColumn(columnName).getStyleAttributes().setNumberFormat("%r{#,##0.00}f");
+		tblMain.getColumn(columnName).getStyleAttributes().setHorizontalAlign(com.kingdee.bos.ctrl.kdf.util.style.Styles.HorizontalAlignment.RIGHT);
+	}
 }

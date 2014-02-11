@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataTable xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.auto4s.rsm.rs.app</package>
+    <name>T_ATS_RWORepairItemEntry</name>
+    <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].alias</alias>
+    <columns>
+        <column>
+            <name>CFWipLineNo</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[CFWipLineNo].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[CFWipLineNo].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>10</precision>
+        </column>
+        <column>
+            <name>CFWipFactLineNo</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[CFWipFactLineNo].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[CFWipFactLineNo].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>10</precision>
+        </column>
+        <column>
+            <name>CFItemSpEntryId</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[CFItemSpEntryId].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[CFItemSpEntryId].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+    </columns>
+    <resource>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[CFItemSpEntryId].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="项目/配件明细分录ID" />
+            <lang locale="zh_HK" value="項目/配件明細分錄ID" />
+            <lang locale="zh_TW" value="項目/配件明細分錄ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[CFItemSpEntryId].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="项目/配件明细分录ID" />
+            <lang locale="zh_HK" value="項目/配件明細分錄ID" />
+            <lang locale="zh_TW" value="項目/配件明細分錄ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[CFWipFactLineNo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="DMS实际行号" />
+            <lang locale="zh_HK" value="DMS實際行號" />
+            <lang locale="zh_TW" value="DMS實際行號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[CFWipFactLineNo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="DMS实际行号" />
+            <lang locale="zh_HK" value="DMS實際行號" />
+            <lang locale="zh_TW" value="DMS實際行號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[CFWipLineNo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="DMS行号" />
+            <lang locale="zh_HK" value="DMS行號" />
+            <lang locale="zh_TW" value="DMS行號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[CFWipLineNo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="DMS行号" />
+            <lang locale="zh_HK" value="DMS行號" />
+            <lang locale="zh_TW" value="DMS行號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[FCardRepServiceID].alias">
+            <lang locale="zh_CN" value="会员服务项目ID" />
+            <lang locale="zh_HK" value="會員服務項目ID" />
+            <lang locale="zh_TW" value="會員服務項目ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[FIsMulTiAssign].alias">
+            <lang locale="zh_CN" value="是否多人派工" />
+            <lang locale="zh_HK" value="是否多人派工" />
+            <lang locale="zh_TW" value="是否多人派工" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[FIsMulTiAssign].description">
+            <lang locale="zh_CN" value="是否多人派工" />
+            <lang locale="zh_HK" value="是否多人派工" />
+            <lang locale="zh_TW" value="是否多人派工" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[FItemRemark].alias">
+            <lang locale="zh_CN" value="维修项目说明" />
+            <lang locale="zh_HK" value="維修項目說明" />
+            <lang locale="zh_TW" value="維修項目說明" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[FRepairTypeID].alias">
+            <lang locale="zh_CN" value="维修类型" />
+            <lang locale="zh_HK" value="維修類型" />
+            <lang locale="zh_TW" value="維修類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[FRepairTypeID].description">
+            <lang locale="zh_CN" value="会员积分使用=单据头" />
+            <lang locale="zh_HK" value="會員積分使用=單據頭" />
+            <lang locale="zh_TW" value="會員積分使用=單據頭" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[FWorkTimeStdPrice].alias">
+            <lang locale="zh_CN" value="工时标准单价" />
+            <lang locale="zh_HK" value="工時標準單價" />
+            <lang locale="zh_TW" value="工時標準單價" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[FWorkTimeStdPrice].description">
+            <lang locale="zh_CN" value="" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</dataTable>
+

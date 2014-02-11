@@ -918,7 +918,8 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		RepairWORWOSparepartEntryCollection sparepartEntryCol = repairWOInfo.getRWOSparepartEntry(); //配件
     		RepairWORWORepairItemEntryCollection repairItemEntryCol = repairWOInfo.getRWORepairItemEntry(); //维修项目
     		if (sparepartEntryCol.isEmpty() && repairItemEntryCol.isEmpty()) {
-    			hashRepairWOInfo.remove(key);
+    			//hashRepairWOInfo.remove(key);
+    			itKey.remove();
     			//expMsg = String.format("DMSWIP单-WIP号[%s]同时不存在零件行或工时行，不能保存",wip);
     		//	addExceptionMsg(returnInfo, expMsg);
     			continue;
@@ -1350,6 +1351,7 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     			}
     			//含税单价
     			BigDecimal taxPrice = dmsTradeInquireEntryInfo.getEasTaxPrice();
+    			if (taxPrice == null) taxPrice = PublicUtils.BIGDECIMAL0;
     			//不含税单价=含税单价/(1+税率/100)
     			BigDecimal notTaxPrice = taxPrice.divide(PublicUtils.BIGDECIMAL1.add(taxRate.divide(PublicUtils.BIGDECIMAL100,10,BigDecimal.ROUND_HALF_UP)),10,BigDecimal.ROUND_HALF_UP);
     			//数量
@@ -1513,15 +1515,25 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		purInWarehsBillInfo.put("entry", purInWarehsEntryCol);
     		purInWarehsBillCol.add(purInWarehsBillInfo);
     	}
-    	//保存
+    	String sql;
+    	//提交审核
     	for (int i=0; i < purInWarehsBillCol.size(); i++) {
     		PurInWarehsBillInfo purInWarehsBillInfo  = purInWarehsBillCol.get(i);
     		long l = System.currentTimeMillis();
     		try {
     			
-        		IObjectPK pk = purInwarehsBill.submit(purInWarehsBillInfo);
-        		if (!isAutoAudit)
-        			purInwarehsBill.audit(pk);
+        	//	IObjectPK pk = purInwarehsBill.submit(purInWarehsBillInfo);
+        	//	if (!isAutoAudit)
+        	//		purInwarehsBill.audit(pk);
+    		//	purInWarehsBillInfo.setBaseStatus(BillBaseStatusEnum.AUDITED);
+    			IObjectPK pk = purInwarehsBill.save(purInWarehsBillInfo);
+    			
+    			//更新库存
+    			sql = String.format("update T_IM_PurInWarehsBill set FBaseStatus='4' where fid='%s'",pk.toString());
+    			DbUtil.execute(ctx, sql);
+    			SCMBillUtils.updateInv(ctx, pk, purInWarehsBillInfo.getTransactionType());
+    			
+    			
         		returnInfo.addSpentMsg("提交审核采购入库单", l);
     		} catch (Exception e) {
     			String expMsg = String.format("审核采购入库异常(P/O Rqn[%s])：%s",purInWarehsBillInfo.getEntry().get(0).getString("rqn"),e.getMessage());
@@ -1821,15 +1833,24 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		
     		
     	}
+    	String sql;
     	//保存
     	for (int i=0; i < saleIssueBillCol.size(); i++) {
     		SaleIssueBillInfo saleIssueBillInfo  = saleIssueBillCol.get(i);
     		long l = System.currentTimeMillis();
     		try {
-    			IObjectPK pk = saleIssueBill.submit(saleIssueBillInfo);
+    			saleIssueBillInfo.setBaseStatus(BillBaseStatusEnum.AUDITED);
+    			IObjectPK pk = saleIssueBill.save(saleIssueBillInfo);
+    			
+    			//更新库存
+    			sql = String.format("update T_IM_SaleIssueBill set FBaseStatus='4' where fid='%s'",pk.toString());
+    			DbUtil.execute(ctx, sql);
+    			SCMBillUtils.updateInv(ctx, pk, saleIssueBillInfo.getTransactionType());
+    			
+    		//	IObjectPK pk = saleIssueBill.submit(saleIssueBillInfo);
         		BotpUtils.saveBotpRelation(ctx, saleIssueBillInfo.getSourceBillId(), pk.toString(), "");  			
-    			if (!isAutoAudit)
-    				saleIssueBill.audit(pk);
+    		//	if (!isAutoAudit)
+    		//		saleIssueBill.audit(pk);
     			returnInfo.addSpentMsg("提交审核销售出库单", l);
     		} catch (Exception e) {
     			String expMsg = String.format("审核销售出库异常(WIP单号[%s])：%s",saleIssueBillInfo.getEntry().get(0).getString("wip"),e.getMessage());
@@ -2036,15 +2057,22 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		
     		
     	}
+    	String sql;
     	//提交审核
     	for (int i=0; i < otherIssueBillCol.size(); i++) {
     		OtherIssueBillInfo otherIssueBillInfo  = otherIssueBillCol.get(i);
     		long l = System.currentTimeMillis();
     		try {
-    			IObjectPK pk = otherIssueBill.submit(otherIssueBillInfo);
+    			//otherIssueBillInfo.setBaseStatus(BillBaseStatusEnum.AUDITED);
+    			IObjectPK pk = otherIssueBill.save(otherIssueBillInfo);
+    			//更新库存
+    			sql = String.format("update T_IM_OtherIssueBill set FBaseStatus='4' where fid='%s'",pk.toString());
+    			DbUtil.execute(ctx, sql);
+    			SCMBillUtils.updateInv(ctx, pk, otherIssueBillInfo.getTransactionType());
+    		//	IObjectPK pk = otherIssueBill.submit(otherIssueBillInfo);
         		BotpUtils.saveBotpRelation(ctx, otherIssueBillInfo.getEntry().get(0).getSourceBillId(), pk.toString(), "");
-        		if (!isAutoAudit)
-        			otherIssueBill.audit(pk);
+        	//	if (!isAutoAudit)
+        	//		otherIssueBill.audit(pk);
         		returnInfo.addSpentMsg("提交审核其他出库单", l);
     		} catch (Exception e) {
     			String expMsg = String.format("提交审核其他出库异常(WIP号[%s])：%s",otherIssueBillInfo.getEntry().get(0).getString("wip"),e.getMessage());
@@ -2256,17 +2284,23 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		
     		
     	}
-    	
+    	String sql;
     	//提交审核
     	for (int i=0; i < otherInWarehsBillCol.size(); i++) {
     		OtherInWarehsBillInfo otherInWarehsBillInfo  = otherInWarehsBillCol.get(i);
     		long l = System.currentTimeMillis();
     		try {
+    			//otherInWarehsBillInfo.setBaseStatus(BillBaseStatusEnum.AUDITED);
+    			IObjectPK pk = otherInwarehsBill.save(otherInWarehsBillInfo);
+    			//更新库存
+    			sql = String.format("update T_IM_OtherInWarehsBill set FBaseStatus='4' where fid='%s'",pk.toString());
+    			DbUtil.execute(ctx, sql);
+    			SCMBillUtils.updateInv(ctx, pk, otherInWarehsBillInfo.getTransactionType());
     			
-    			IObjectPK pk = otherInwarehsBill.submit(otherInWarehsBillInfo);
+    			//IObjectPK pk = otherInwarehsBill.submit(otherInWarehsBillInfo);
     			BotpUtils.saveBotpRelation(ctx, otherInWarehsBillInfo.getEntry().get(0).getSourceBillId(), pk.toString(), "");
-    			if (!isAutoAudit)
-    				otherInwarehsBill.audit(pk);
+    			//if (!isAutoAudit)
+    			//	otherInwarehsBill.audit(pk);
     			returnInfo.addSpentMsg("提交审核其他入库单", l);
     		} catch (Exception e) {
     			String expMsg = String.format("提交审核其他入库库异常(WIP号[%s])：%s",otherInWarehsBillInfo.getEntry().get(0).getString("wip"),e.getMessage());

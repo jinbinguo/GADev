@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizUnit xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.ga.rs</package>
+    <name>CustomerAccount</name>
+    <alias>bizUnit[com.kingdee.eas.ga.rs.CustomerAccount].alias</alias>
+    <description>bizUnit[com.kingdee.eas.ga.rs.CustomerAccount].description</description>
+    <userDefined>true</userDefined>
+    <bizType>BaseData</bizType>
+    <template>false</template>
+    <entityPK>com.kingdee.eas.ga.rs.app.CustomerAccount</entityPK>
+    <queryPK>com.kingdee.eas.ga.rs.app.CustomerAccountQuery</queryPK>
+    <editUIPK>com.kingdee.eas.ga.rs.client.CustomerAccountEditUI</editUIPK>
+    <listUIPK>com.kingdee.eas.ga.rs.client.CustomerAccountListUI</listUIPK>
+    <webEditUIPK />
+    <webListUIPK />
+    <entityFunctionPK />
+    <editUIFunctionPK />
+    <listUIFunctionPK />
+    <entryUIPK />
+    <versionDate />
+    <versionNumber />
+    <extendTablePKs />
+    <extendEntityPKs />
+    <extendQueryPKs />
+    <extendEditUIPKs />
+    <extendListUIPKs />
+    <menuPKList />
+    <bimTemplateType>DataBase</bimTemplateType>
+    <relatedTablePK />
+    <relatedEntityPK />
+    <relatedEditUIPK />
+    <genImplementCode>true</genImplementCode>
+    <webEditPagePK />
+    <webListPagePK />
+    <webPagePKS />
+    <webViewPagePK />
+    <webBriefPagePK />
+    <relatedWebEditPagePK />
+    <relatedQueryPK />
+    <resource>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.CustomerAccount].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="客户账户" />
+            <lang locale="zh_HK" value="客戶賬戶" />
+            <lang locale="zh_TW" value="客戶賬戶" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.CustomerAccount].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.CustomerAccount].extendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.CustomerAccount].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.CustomerAccount].extendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="name" />
+            <lang locale="zh_CN" value="name" />
+            <lang locale="zh_TW" value="name" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.CustomerAccount].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.ga.rs.app.CustomerAccountQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.rs.app.CustomerAccountQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.rs.app.CustomerAccountQuery" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.CustomerAccount].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.ga.rs.client.CustomerAccountEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.rs.client.CustomerAccountEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.rs.client.CustomerAccountEditUI" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.CustomerAccount].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.CustomerAccount].extendedProperty.genBusinessImplCode">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.CustomerAccount].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.CustomerAccount].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.CustomerAccount].extendedProperty.isSimpleEntity">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.CustomerAccount].extendedProperty.isUseCodeRule">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.CustomerAccount].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.ga.rs.client.CustomerAccountListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.rs.client.CustomerAccountListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.rs.client.CustomerAccountListUI" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.CustomerAccount].extendedProperty.maxFieldIndex">
+            <lang locale="en_US" value="8" />
+            <lang locale="zh_CN" value="8" />
+            <lang locale="zh_TW" value="8" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.CustomerAccount].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizUnit>
+

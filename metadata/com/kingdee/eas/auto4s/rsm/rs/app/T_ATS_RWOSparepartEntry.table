@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataTable xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.auto4s.rsm.rs.app</package>
+    <name>T_ATS_RWOSparepartEntry</name>
+    <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWOSparepartEntry].alias</alias>
+    <columns>
+        <column>
+            <name>CFWipLineNo</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWOSparepartEntry].columns.column[CFWipLineNo].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWOSparepartEntry].columns.column[CFWipLineNo].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>10</precision>
+        </column>
+        <column>
+            <name>CFWipFactLineNo</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWOSparepartEntry].columns.column[CFWipFactLineNo].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWOSparepartEntry].columns.column[CFWipFactLineNo].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>10</precision>
+        </column>
+        <column>
+            <name>CFIsCT</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWOSparepartEntry].columns.column[CFIsCT].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWOSparepartEntry].columns.column[CFIsCT].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>1</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFItemSpEntryId</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWOSparepartEntry].columns.column[CFItemSpEntryId].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWOSparepartEntry].columns.column[CFItemSpEntryId].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+    </columns>
+    <resource>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWOSparepartEntry].columns.column[CFIsCT].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否拆退" />
+            <lang locale="zh_HK" value="是否拆退" />
+            <lang locale="zh_TW" value="是否拆退" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWOSparepartEntry].columns.column[CFIsCT].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否拆退" />
+            <lang locale="zh_HK" value="是否拆退" />
+            <lang locale="zh_TW" value="是否拆退" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWOSparepartEntry].columns.column[CFItemSpEntryId].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="项目/配件明细分录ID" />
+            <lang locale="zh_HK" value="項目/配件明細分錄ID" />
+            <lang locale="zh_TW" value="項目/配件明細分錄ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWOSparepartEntry].columns.column[CFItemSpEntryId].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="项目/配件明细分录ID" />
+            <lang locale="zh_HK" value="項目/配件明細分錄ID" />
+            <lang locale="zh_TW" value="項目/配件明細分錄ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWOSparepartEntry].columns.column[CFWipFactLineNo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="DMS实际行号" />
+            <lang locale="zh_HK" value="DMS實際行號" />
+            <lang locale="zh_TW" value="DMS實際行號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWOSparepartEntry].columns.column[CFWipFactLineNo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="DMS实际行号" />
+            <lang locale="zh_HK" value="DMS實際行號" />
+            <lang locale="zh_TW" value="DMS實際行號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWOSparepartEntry].columns.column[CFWipLineNo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="DMS行号" />
+            <lang locale="zh_HK" value="DMS行號" />
+            <lang locale="zh_TW" value="DMS行號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWOSparepartEntry].columns.column[CFWipLineNo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="DMS行号" />
+            <lang locale="zh_HK" value="DMS行號" />
+            <lang locale="zh_TW" value="DMS行號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWOSparepartEntry].columns.column[FIsSelect].alias">
+            <lang locale="zh_CN" value="是否选中" />
+            <lang locale="zh_HK" value="是否選中" />
+            <lang locale="zh_TW" value="是否選中" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWOSparepartEntry].columns.column[FMaterialGroupID].alias">
+            <lang locale="zh_CN" value="物料分类" />
+            <lang locale="zh_HK" value="物料分類" />
+            <lang locale="zh_TW" value="物料分類" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWOSparepartEntry].columns.column[FRepairTypeID].alias">
+            <lang locale="zh_CN" value="维修类型" />
+            <lang locale="zh_HK" value="維修類型" />
+            <lang locale="zh_TW" value="維修類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWOSparepartEntry].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</dataTable>
+

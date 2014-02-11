@@ -1,0 +1,3759 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.auto4s.rsm.rs.app</package>
+    <name>RepairWORuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>947730a5-b74d-4048-86aa-d71c6ba99514</id>
+            <parentID />
+            <source>RWOSparepartEntry.Unit=RWOSparepartEntry.Material.baseUnit.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>9007274b-c6f8-48ed-8c3a-ac0f871c5b46</id>
+            <parentID>947730a5-b74d-4048-86aa-d71c6ba99514</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>a6ee4992-b232-4266-bd01-2bcabd2de12c</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a6ee4992-b232-4266-bd01-2bcabd2de12c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtRWOSparepartEntry.getCell(rowIndex,"Unit")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2405cd9d-8a7e-4a71-bcbd-43c96e778887</id>
+            <parentID>947730a5-b74d-4048-86aa-d71c6ba99514</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>f25629c1-794a-480b-aa29-b304be03ed65</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>aa911b86-046e-4b25-a490-eb75841a8d48</id>
+                        <expressionID>0ef6cf47-bccf-476b-b5ac-37f1f4287594</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>707ca6e7-fd1a-4d15-9e54-911bb57c32e9</id>
+                        <expressionID>a9a66f11-a271-4f5b-bead-f867fea1ede7</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f25629c1-794a-480b-aa29-b304be03ed65</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0ef6cf47-bccf-476b-b5ac-37f1f4287594</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>9ce69d51-e411-4a04-812c-987b920b04b5</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9ce69d51-e411-4a04-812c-987b920b04b5</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtRWOSparepartEntry.getCell(rowIndex,"Material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a9a66f11-a271-4f5b-bead-f867fea1ede7</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>baseUnit.name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>ad135d48-6a14-42c5-af5e-7ac64be2182a</id>
+            <parentID />
+            <source>SeriesID=Vehicle.series.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>61495960-244e-48b5-8024-dee0681e933d</id>
+            <parentID>ad135d48-6a14-42c5-af5e-7ac64be2182a</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>70ba3f92-7168-4433-bb71-e5f74ab682f7</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>70ba3f92-7168-4433-bb71-e5f74ab682f7</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtSeriesID</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4ffe1e7a-affd-46e3-9e5b-399af23194ba</id>
+            <parentID>ad135d48-6a14-42c5-af5e-7ac64be2182a</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>09b3e5a3-915f-4764-b970-30afea667a4f</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>75911ce0-339d-43fe-a801-1444d2c36177</id>
+                        <expressionID>0d82240c-6419-4ec1-a923-6c90c5a38075</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>6c85c08e-310a-40b5-9bfd-17cee7b6d377</id>
+                        <expressionID>2a6198a0-58aa-479a-b61b-30dd623cb819</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>09b3e5a3-915f-4764-b970-30afea667a4f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0d82240c-6419-4ec1-a923-6c90c5a38075</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>87f001bd-c8e3-413a-a7f1-7e173799ac1a</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>87f001bd-c8e3-413a-a7f1-7e173799ac1a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtVehicle</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2a6198a0-58aa-479a-b61b-30dd623cb819</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>series.name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>4e256068-6c34-47ea-89cd-9ffdf975ca09</id>
+            <parentID />
+            <source>ModelID=Vehicle.model.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>7950d91b-e708-4e7e-bb25-5bdd511e062d</id>
+            <parentID>4e256068-6c34-47ea-89cd-9ffdf975ca09</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>fc469799-eef6-4863-9613-0e50193915b9</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fc469799-eef6-4863-9613-0e50193915b9</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtModelID</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>58f7c0b2-0de0-4e7b-85bd-7e957e797fdf</id>
+            <parentID>4e256068-6c34-47ea-89cd-9ffdf975ca09</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>762f6849-f027-4950-9df6-1c04384f6304</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>52689053-6527-433b-b939-f0f410d881ed</id>
+                        <expressionID>18af9aa4-8c14-4c30-a70b-bc8fca15822d</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>0aabf973-2120-4920-8f85-7aeb876c897d</id>
+                        <expressionID>f9715019-553d-4050-bd04-d8103a0e2b13</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>762f6849-f027-4950-9df6-1c04384f6304</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>18af9aa4-8c14-4c30-a70b-bc8fca15822d</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>67c72a33-2cb5-402e-b619-b3dd8593cb38</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>67c72a33-2cb5-402e-b619-b3dd8593cb38</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtVehicle</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f9715019-553d-4050-bd04-d8103a0e2b13</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>model.name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>eb84c143-8d1a-45a1-8133-bb922ae70163</id>
+            <parentID />
+            <source>CustomerID=Vehicle.customer.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>7aaeb9b7-a33d-4c58-b8cc-c5e6ff7f89a8</id>
+            <parentID>eb84c143-8d1a-45a1-8133-bb922ae70163</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>1ee262b4-98ba-46c0-a82f-7022391be100</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1ee262b4-98ba-46c0-a82f-7022391be100</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtCustomerID</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>79cebf43-9a45-4a19-b5d9-2bffbafd4613</id>
+            <parentID>eb84c143-8d1a-45a1-8133-bb922ae70163</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>eefad68b-d514-40a0-b4cf-80fc01eeea0c</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>984d1ca7-2ba5-489c-b332-1fef6ae6830a</id>
+                        <expressionID>ddf74eb0-92d1-4100-806b-c0628179ee2e</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>e75e328f-2b22-4625-b4dc-41c204e2e05b</id>
+                        <expressionID>31c71d28-fbff-4b8e-bda7-5b0f2edebb55</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>eefad68b-d514-40a0-b4cf-80fc01eeea0c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ddf74eb0-92d1-4100-806b-c0628179ee2e</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>128b24e2-ddb8-4cfe-988b-26fec374aee5</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>128b24e2-ddb8-4cfe-988b-26fec374aee5</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtVehicle</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>31c71d28-fbff-4b8e-bda7-5b0f2edebb55</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>customer.name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>43d64bc7-eb1b-42b3-a2e3-84cebb9641fb</id>
+            <parentID />
+            <source>CustomerDiscountClassifyID=Customer.custType</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>6a829bfb-37e6-4dde-b6fa-18d30a19a9de</id>
+            <parentID>43d64bc7-eb1b-42b3-a2e3-84cebb9641fb</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>b1f5e4fc-f03f-493e-986c-240fae20396a</ownerID>
+                <name>selectedItem</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b1f5e4fc-f03f-493e-986c-240fae20396a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>CustomerDiscountClassifyID</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2e2919fe-4d53-4122-9c7e-a76a7022144d</id>
+            <parentID>43d64bc7-eb1b-42b3-a2e3-84cebb9641fb</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Enum</valueType>
+            <value />
+            <method>
+                <ownerID>c21a7311-cba0-4de5-a7cc-7b1ec12decdd</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>8c4b3c75-e557-4bb0-87bd-443c8cff6e41</id>
+                        <expressionID>b1b433fd-39bb-4ec5-990d-b5221f11c2e4</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>c1e1588a-426d-4793-9c2f-2638cf1cba94</id>
+                        <expressionID>31d6d0bc-c2e1-4163-a334-4647b6efdc5f</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c21a7311-cba0-4de5-a7cc-7b1ec12decdd</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b1b433fd-39bb-4ec5-990d-b5221f11c2e4</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>e4e46a14-3e6d-4b24-b4aa-3f82f7e31b8d</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e4e46a14-3e6d-4b24-b4aa-3f82f7e31b8d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtCustomer</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>31d6d0bc-c2e1-4163-a334-4647b6efdc5f</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>custType</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>6577c71f-e17e-41a2-a79f-45a472f88d10</id>
+            <parentID />
+            <source>Tel=Customer.Phone</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>ae4f9ef3-1bb3-4d7c-bab0-ea3077a8ebfb</id>
+            <parentID>6577c71f-e17e-41a2-a79f-45a472f88d10</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>aeee20d0-66ef-4d1e-909e-ac2cc71a2cf2</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>aeee20d0-66ef-4d1e-909e-ac2cc71a2cf2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtTel</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>573b1c07-1de4-4c19-b8e2-b46b721a43a7</id>
+            <parentID>6577c71f-e17e-41a2-a79f-45a472f88d10</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>e54fb9f2-59aa-42d8-a009-5fe146620cf2</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>e3bf9664-011c-4e5b-a1c8-7aefb7e61e44</id>
+                        <expressionID>9ed28408-56f5-414e-8c45-51ca6ad22966</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>2350ed75-39fe-40f8-8b23-bf006607bc37</id>
+                        <expressionID>326513ca-d9d6-4945-b4c8-844f5851eeb7</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e54fb9f2-59aa-42d8-a009-5fe146620cf2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9ed28408-56f5-414e-8c45-51ca6ad22966</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>bd48e3f7-cba8-4a3d-8146-eb8bb2612583</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bd48e3f7-cba8-4a3d-8146-eb8bb2612583</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtCustomer</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>326513ca-d9d6-4945-b4c8-844f5851eeb7</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>Phone</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>c74650f5-8aab-4bd3-bdf4-9fe698b3362b</id>
+            <parentID />
+            <source>RWORepairItemEntry.RepairItemname=RWORepairItemEntry.RepairItem.displayName</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>7efeefca-e4fc-416e-9173-f991376aad8f</id>
+            <parentID>c74650f5-8aab-4bd3-bdf4-9fe698b3362b</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType />
+            <value />
+            <property>
+                <ownerID>bb95f73a-016f-4218-ac39-958448977a84</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bb95f73a-016f-4218-ac39-958448977a84</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtRWORepairItemEntry.getCell(rowIndex,"RepairItemname")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>91edc96d-54f9-4711-9fa5-5b4d114d99d8</id>
+            <parentID>c74650f5-8aab-4bd3-bdf4-9fe698b3362b</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>57675e1b-dc9c-4912-a122-329918e11d31</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>7fb63195-133b-4d7a-9132-fad8239d95a7</id>
+                        <expressionID>a8489ead-9da6-4d0d-9ff6-37c62e35e5c2</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>558930a2-44ed-4624-b6a9-fba3f9704f5b</id>
+                        <expressionID>6c82b04c-be9c-4da2-9ebb-80f45a218e24</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>57675e1b-dc9c-4912-a122-329918e11d31</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a8489ead-9da6-4d0d-9ff6-37c62e35e5c2</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>68060906-e7ee-4779-9874-4f222c7b5481</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>68060906-e7ee-4779-9874-4f222c7b5481</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtRWORepairItemEntry.getCell(rowIndex,"RepairItem")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6c82b04c-be9c-4da2-9ebb-80f45a218e24</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>displayName</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>6066d3d5-478e-4a81-9f52-54eacea75aa8</id>
+            <parentID />
+            <source>RWOActivityEntry.name=RWOActivityEntry.ServiceActivity.Name_l2</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>4c769dd2-16c1-4efd-9ec9-45065adba7c9</id>
+            <parentID>6066d3d5-478e-4a81-9f52-54eacea75aa8</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>eb6dc5a4-ac2d-4269-a39b-dd981212629c</ownerID>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>eb6dc5a4-ac2d-4269-a39b-dd981212629c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtRWOActivityEntry</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fadcb903-6ed0-4264-897b-aa15dc10b069</id>
+            <parentID>6066d3d5-478e-4a81-9f52-54eacea75aa8</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>fb27038d-ce86-4a51-8491-1d86db29ca3a</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>289ff510-8b13-416c-ba6a-5f5707568ca1</id>
+                        <expressionID>bb8c4530-f15b-4bf6-b240-357b1cf779ec</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>44c2eb80-9899-40d9-94a9-97b10961f86d</id>
+                        <expressionID>3311fc20-a194-455f-b68c-72ccda1a08e0</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fb27038d-ce86-4a51-8491-1d86db29ca3a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bb8c4530-f15b-4bf6-b240-357b1cf779ec</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>f90ed823-4165-465f-baa9-ea9a1fc9c338</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f90ed823-4165-465f-baa9-ea9a1fc9c338</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtRWOActivityEntry.getCell(rowIndex,"ServiceActivity")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3311fc20-a194-455f-b68c-72ccda1a08e0</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>Name_l2</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>1957c69f-3898-446d-8863-7504674ac228</id>
+            <parentID />
+            <source>RWORepairItemEntry.RepairItemName=RWORepairItemEntry.RepairItem.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>4a0d7f39-9fa0-4305-9cbb-fd8d1d0cd602</id>
+            <parentID>1957c69f-3898-446d-8863-7504674ac228</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType />
+            <value />
+            <property>
+                <ownerID>70831489-6752-4669-8d4f-1bb4e70c3588</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>70831489-6752-4669-8d4f-1bb4e70c3588</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtRWORepairItemEntry.getCell(rowIndex,"RepairItemName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6d936211-e24c-4275-89ba-414ee1397a82</id>
+            <parentID>1957c69f-3898-446d-8863-7504674ac228</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>4dd76344-3430-4e55-abab-860d2f339280</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>b1082424-bd68-40a9-a8ba-ac442b00d57a</id>
+                        <expressionID>20bdd814-36cd-404e-8c02-5ff187b671b4</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>09928f3d-9d77-4aa9-ba82-2c99b764e66e</id>
+                        <expressionID>4cc2ae83-4748-4873-be9c-d14012237a67</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4dd76344-3430-4e55-abab-860d2f339280</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>20bdd814-36cd-404e-8c02-5ff187b671b4</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>5f5037e0-23c8-49b7-964a-822462e41192</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5f5037e0-23c8-49b7-964a-822462e41192</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtRWORepairItemEntry.getCell(rowIndex,"RepairItem")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4cc2ae83-4748-4873-be9c-d14012237a67</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>dbce7bb5-1288-44bd-9e92-7bbf263fc1f7</id>
+            <parentID />
+            <source>RWOSparepartEntry.MaterialName=RWOSparepartEntry.Material.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>285328b8-bdd9-4b53-af1d-54c5d9c77ca0</id>
+            <parentID>dbce7bb5-1288-44bd-9e92-7bbf263fc1f7</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType />
+            <value />
+            <property>
+                <ownerID>faccb69b-966c-4608-a029-01805f7986ea</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>faccb69b-966c-4608-a029-01805f7986ea</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtRWOSparepartEntry.getCell(rowIndex,"MaterialName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0998c97a-89e5-4c51-89fc-523306690bdc</id>
+            <parentID>dbce7bb5-1288-44bd-9e92-7bbf263fc1f7</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>609c217f-eb4d-495d-9a5b-809857e5ff51</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>caab44f6-7305-4f9d-bf86-d3b8ec766dc1</id>
+                        <expressionID>8520f114-c19c-4b80-8653-6fd25fb8ecb1</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>0bcf2fe1-dbbd-451f-97e9-b9c57b09ff8e</id>
+                        <expressionID>28b90961-36c9-46f6-9e5b-22e942617318</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>609c217f-eb4d-495d-9a5b-809857e5ff51</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8520f114-c19c-4b80-8653-6fd25fb8ecb1</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>1fb6404e-e301-4b92-b092-e403bf685090</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1fb6404e-e301-4b92-b092-e403bf685090</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtRWOSparepartEntry.getCell(rowIndex,"Material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>28b90961-36c9-46f6-9e5b-22e942617318</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>b144d142-d841-4945-864f-5357d5437e57</id>
+            <parentID />
+            <source>RWORepairPkgEntry.RepairPkgName=RWORepairPkgEntry.RepairPkg.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>902b1ada-6937-490b-95e6-1df21731eba2</id>
+            <parentID>b144d142-d841-4945-864f-5357d5437e57</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType />
+            <value />
+            <property>
+                <ownerID>047425aa-95f5-480a-8ac2-7b8891b1c0e7</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>047425aa-95f5-480a-8ac2-7b8891b1c0e7</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtRWORepairPkgEntry.getCell(rowIndex,"RepairPkgName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>14b60510-1dcc-46aa-87dc-6d7c786a8ee7</id>
+            <parentID>b144d142-d841-4945-864f-5357d5437e57</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>88fc19fb-252c-4573-bf02-49e633ba21b9</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>16be19d3-4106-494a-adbe-bee0b38d1e9f</id>
+                        <expressionID>1247a311-5bad-4595-8327-b2ffbf4b0d9f</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>80348d57-5f74-4719-9801-7b962024af6a</id>
+                        <expressionID>31a3ae34-425d-41c6-a7d6-a982299be958</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>88fc19fb-252c-4573-bf02-49e633ba21b9</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1247a311-5bad-4595-8327-b2ffbf4b0d9f</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>cd209efe-07cf-4000-9922-ef8814ef2ca4</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cd209efe-07cf-4000-9922-ef8814ef2ca4</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtRWORepairPkgEntry.getCell(rowIndex,"RepairPkg")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>31a3ae34-425d-41c6-a7d6-a982299be958</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>f355617f-e5ab-49ee-be9b-f9a4fd41fa42</id>
+            <parentID />
+            <source>VIN=Vehicle.vIN</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>61943194-e440-4d2e-bd69-3ae7723d6c00</id>
+            <parentID>f355617f-e5ab-49ee-be9b-f9a4fd41fa42</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>82576d17-a5b5-4362-a3ba-67b73b9518a9</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>82576d17-a5b5-4362-a3ba-67b73b9518a9</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtVIN</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c1dde2a5-f43a-4c57-9551-c0676feb532d</id>
+            <parentID>f355617f-e5ab-49ee-be9b-f9a4fd41fa42</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>fe46f73f-562e-4727-9352-d154ce63c1be</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>f452cb1b-0fa0-4997-9715-a350d3f9a432</id>
+                        <expressionID>6d50ee07-5130-4d21-9cf8-5100ce18a57b</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>e98a1a2e-2b16-4f20-ba9e-dabe6ef1a802</id>
+                        <expressionID>9df8bfb8-ef9d-491c-a472-411581a9c22b</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fe46f73f-562e-4727-9352-d154ce63c1be</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6d50ee07-5130-4d21-9cf8-5100ce18a57b</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>0d396fa1-62cf-42da-8879-cb4274e43f26</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0d396fa1-62cf-42da-8879-cb4274e43f26</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtVehicle</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9df8bfb8-ef9d-491c-a472-411581a9c22b</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>vIN</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>b8e81626-85bc-41e5-972c-6369347d4271</id>
+            <parentID />
+            <source>VIN=Vehicle.vIN</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>0afb9c1d-2ca1-4e44-98b8-3e90891f829f</id>
+            <parentID>b8e81626-85bc-41e5-972c-6369347d4271</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>44b60106-913d-4306-8c87-e37ff3096a5e</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>44b60106-913d-4306-8c87-e37ff3096a5e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtVIN</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f05a084e-f5af-4057-8088-e59a0465cf31</id>
+            <parentID>b8e81626-85bc-41e5-972c-6369347d4271</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>47f48c0d-585f-4dce-a9b2-67aeda1e1ed0</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>04757417-8086-45c8-a9e5-bc05591a9d9b</id>
+                        <expressionID>04c2b3ea-db1a-46a5-9e7c-5aa26c98f15c</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>1076f5ad-44d4-4969-b54b-cbb804abbc7d</id>
+                        <expressionID>1fcb965d-dc4e-4edb-96b7-f45e1e372d17</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>47f48c0d-585f-4dce-a9b2-67aeda1e1ed0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>04c2b3ea-db1a-46a5-9e7c-5aa26c98f15c</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>51801f7a-872b-4bee-9fae-09bf5cd95c05</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>51801f7a-872b-4bee-9fae-09bf5cd95c05</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtVehicle</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1fcb965d-dc4e-4edb-96b7-f45e1e372d17</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>vIN</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>a2a6be60-fe83-4eaf-93b2-e599f2f7df89</id>
+            <parentID />
+            <source>RWORepairItemEntry.RepairItemName=RWORepairItemEntry.RepairItem.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>b13ad89d-24bf-40c6-8b93-40e9aa22fe4f</id>
+            <parentID>a2a6be60-fe83-4eaf-93b2-e599f2f7df89</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType />
+            <value />
+            <property>
+                <ownerID>d06b68c3-e110-43e5-8961-1bca79664575</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d06b68c3-e110-43e5-8961-1bca79664575</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtRWORepairItemEntry.getCell(rowIndex,"RepairItemName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c5fd804a-018b-4fdb-9d42-2827beb59cab</id>
+            <parentID>a2a6be60-fe83-4eaf-93b2-e599f2f7df89</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>cd909546-af7f-4788-9e9f-00cfa5664ee3</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>7da0a3f5-fdbf-4512-ad43-e75998e7b07c</id>
+                        <expressionID>1d3aeadd-626e-4120-96ee-3768889ce509</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>143de840-01ff-471c-b6bb-aedfe2a8b027</id>
+                        <expressionID>40a0781c-ef16-403a-a4ca-da182186620e</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cd909546-af7f-4788-9e9f-00cfa5664ee3</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1d3aeadd-626e-4120-96ee-3768889ce509</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>84818ccb-8db2-4bee-9bda-948158f3d722</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>84818ccb-8db2-4bee-9bda-948158f3d722</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtRWORepairItemEntry.getCell(rowIndex,"RepairItem")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>40a0781c-ef16-403a-a4ca-da182186620e</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>1912e273-74b4-4ee7-824c-0e966c8dff69</id>
+            <parentID />
+            <source>Vin=Vehicle.vIN</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>a449dd8b-e404-4298-9e0d-67d6544f34c4</id>
+            <parentID>1912e273-74b4-4ee7-824c-0e966c8dff69</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>b6681211-6d5b-4fd0-b231-55e681976489</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b6681211-6d5b-4fd0-b231-55e681976489</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtVin</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7ab268df-5833-4271-9d3c-67c4f04c873c</id>
+            <parentID>1912e273-74b4-4ee7-824c-0e966c8dff69</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>aae7fc90-bd18-4cf4-a15b-3f2b3a50be08</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>69178e5c-a942-4de4-bff5-69a8eaea3beb</id>
+                        <expressionID>0690d566-5954-422b-b02f-21904af191ce</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>769ac4b8-fd9e-4d8b-a0b0-96f26f9494e9</id>
+                        <expressionID>77ea35c0-3a70-4493-bf13-2815e604eaf6</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>aae7fc90-bd18-4cf4-a15b-3f2b3a50be08</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0690d566-5954-422b-b02f-21904af191ce</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>409dddb5-739c-4cc2-86e7-fd4890dc4da0</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>409dddb5-739c-4cc2-86e7-fd4890dc4da0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtVehicle</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>77ea35c0-3a70-4493-bf13-2815e604eaf6</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>vIN</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>566772fb-7cb1-45ce-831b-d731803a3a8e</id>
+            <parentID />
+            <source>VIN=Vehicle.vIN</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>12b3d77a-19a3-4515-b23a-a41b4c3ed0ed</id>
+            <parentID>566772fb-7cb1-45ce-831b-d731803a3a8e</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>05fbef86-7507-4e35-a5f4-d38d2ca3ad74</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>05fbef86-7507-4e35-a5f4-d38d2ca3ad74</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtVIN</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f17da567-71ca-40b8-8952-c209bf0d0952</id>
+            <parentID>566772fb-7cb1-45ce-831b-d731803a3a8e</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>424fb5b1-5199-422a-8a41-f25957671cf9</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>15e1aed1-3d56-4cf9-999e-9ad941f3ea33</id>
+                        <expressionID>6f883e66-5326-40d0-8675-0910f39eac78</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>08260db8-3cef-454b-998c-2d7ef1594ebd</id>
+                        <expressionID>f55b8f81-dd83-40dc-8528-f9f7df1a45ac</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>424fb5b1-5199-422a-8a41-f25957671cf9</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6f883e66-5326-40d0-8675-0910f39eac78</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>3191795c-2f07-4cb7-b2c5-ad3ad51e1e22</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3191795c-2f07-4cb7-b2c5-ad3ad51e1e22</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtVehicle</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f55b8f81-dd83-40dc-8528-f9f7df1a45ac</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>vIN</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>db03d648-d102-4621-b55e-eee09be2ef8f</id>
+            <parentID />
+            <source>VIN=Vehicle.vIN</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>faf4fce7-ea92-42eb-a951-e665c8a294df</id>
+            <parentID>db03d648-d102-4621-b55e-eee09be2ef8f</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>3c8b0282-5267-433a-ac9f-9dab7021f31d</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3c8b0282-5267-433a-ac9f-9dab7021f31d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtVIN</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>76f42a4e-47ab-4e10-8a51-1f2daacfea9b</id>
+            <parentID>db03d648-d102-4621-b55e-eee09be2ef8f</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>e2877a45-011e-42e0-a4c0-a1674c812f74</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>c763371a-1710-4e0b-9b7c-341e71d949da</id>
+                        <expressionID>33ce9fe0-6f7f-4e64-b00f-079971dad6d3</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>359e3238-c352-4812-9b7f-2752cacaef38</id>
+                        <expressionID>a7a5d834-4655-4146-9dec-831b9a6dfab8</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e2877a45-011e-42e0-a4c0-a1674c812f74</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>33ce9fe0-6f7f-4e64-b00f-079971dad6d3</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>828218f2-ba34-49d6-9a21-2a1536870abd</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>828218f2-ba34-49d6-9a21-2a1536870abd</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtVehicle</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a7a5d834-4655-4146-9dec-831b9a6dfab8</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>vIN</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>3777d056-96a5-4893-89c8-4784c4fa63f2</id>
+            <parentID />
+            <source>RWOSparepartEntry.MaterialName=RWOSparepartEntry.Material.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>a9ccf33f-51ae-4d74-b791-43094f87214f</id>
+            <parentID>3777d056-96a5-4893-89c8-4784c4fa63f2</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType />
+            <value />
+            <property>
+                <ownerID>9731e069-66c0-4c29-89c7-0ec2fe36d75e</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9731e069-66c0-4c29-89c7-0ec2fe36d75e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtRWOSparepartEntry.getCell(rowIndex,"MaterialName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8941aaea-b3a8-4fa5-8be1-5d23ec1ba216</id>
+            <parentID>3777d056-96a5-4893-89c8-4784c4fa63f2</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>20044cbb-7492-412a-b3a8-c1f245661255</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>8007523e-93e2-4599-8292-327f083b8c23</id>
+                        <expressionID>9a2cadf7-e452-46fb-b2d5-abe49b81dd44</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>8c1c6082-895a-4034-973b-85da96869b2b</id>
+                        <expressionID>c682292a-7ce3-4689-a50e-eefc14b73a1c</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>20044cbb-7492-412a-b3a8-c1f245661255</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9a2cadf7-e452-46fb-b2d5-abe49b81dd44</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>0bff9e38-1984-4df0-b557-cbd120db3c95</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0bff9e38-1984-4df0-b557-cbd120db3c95</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtRWOSparepartEntry.getCell(rowIndex,"Material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c682292a-7ce3-4689-a50e-eefc14b73a1c</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>c8bb1217-ac53-416d-96f0-7e0d246cd26b</id>
+            <parentID />
+            <source>RWORepairPkgEntry.RepairPkgName=RWORepairPkgEntry.RepairPkg.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>d7b0c106-115e-4bc4-8da9-d9e4efef62ce</id>
+            <parentID>c8bb1217-ac53-416d-96f0-7e0d246cd26b</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType />
+            <value />
+            <property>
+                <ownerID>8cfc06f3-8189-4bfa-983e-785d25571ebb</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8cfc06f3-8189-4bfa-983e-785d25571ebb</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtRWORepairPkgEntry.getCell(rowIndex,"RepairPkgName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a363d17d-1171-4684-b776-7082942949d6</id>
+            <parentID>c8bb1217-ac53-416d-96f0-7e0d246cd26b</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>d1bc63b4-4207-445c-a351-723ea9633850</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>54f9617b-e004-4833-b2ca-5a23cca71557</id>
+                        <expressionID>95da35cc-81b8-47b8-9d51-5f940e7422b3</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>d95b245e-0a70-4565-84bb-55e01d051ca4</id>
+                        <expressionID>85e2bc5d-e884-438b-b3c8-9f1da8d0cbbb</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d1bc63b4-4207-445c-a351-723ea9633850</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>95da35cc-81b8-47b8-9d51-5f940e7422b3</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>b83636ef-178f-49b2-a66b-d1d077790744</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b83636ef-178f-49b2-a66b-d1d077790744</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtRWORepairPkgEntry.getCell(rowIndex,"RepairPkg")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>85e2bc5d-e884-438b-b3c8-9f1da8d0cbbb</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>167eab97-8746-404d-b4aa-7f4fe85e4bfa</id>
+            <parentID />
+            <source>RWORepairPkgEntry.Classify=RWORepairPkgEntry.RepairPkg.classify</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>01ce2932-a4b4-48d8-9735-ed54d4d0c242</id>
+            <parentID>167eab97-8746-404d-b4aa-7f4fe85e4bfa</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>9e23e01c-142e-46ae-b619-b17a5e456b6a</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9e23e01c-142e-46ae-b619-b17a5e456b6a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtRWORepairPkgEntry.getCell(rowIndex,"Classify")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3bcb8847-26c0-4f9a-8252-94cf9bda7540</id>
+            <parentID>167eab97-8746-404d-b4aa-7f4fe85e4bfa</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Enum</valueType>
+            <value />
+            <method>
+                <ownerID>f215cb7c-4eb8-4233-9537-fbd1d1189c2a</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>6c80546b-8e24-4869-9395-e5348dd235fe</id>
+                        <expressionID>4cf4a19b-12ac-4d78-b24b-699a10de7aeb</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>cddf80e3-9882-43b3-a0ac-0c74dde90729</id>
+                        <expressionID>6a5a1bf0-d5b9-4fe8-afd0-d9cd232423e2</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f215cb7c-4eb8-4233-9537-fbd1d1189c2a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4cf4a19b-12ac-4d78-b24b-699a10de7aeb</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>b1ffee9f-4a0c-4ef1-b5d9-6a267121ac71</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b1ffee9f-4a0c-4ef1-b5d9-6a267121ac71</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtRWORepairPkgEntry.getCell(rowIndex,"RepairPkg")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6a5a1bf0-d5b9-4fe8-afd0-d9cd232423e2</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>classify</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>b1078bcd-cf90-408a-be82-8cd0383fda3c</id>
+            <parentID />
+            <source>RWORepairPkgEntry.EffectTime=RWORepairPkgEntry.RepairPkg.effectTime</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>bfec1799-1ce8-48dd-a034-e5e4ed731f61</id>
+            <parentID>b1078bcd-cf90-408a-be82-8cd0383fda3c</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Date</valueType>
+            <value />
+            <property>
+                <ownerID>a5a5ad74-a1e6-4d06-893c-a74912865d1f</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a5a5ad74-a1e6-4d06-893c-a74912865d1f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtRWORepairPkgEntry.getCell(rowIndex,"EffectTime")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c3d2b041-2ddf-4540-bdcb-ee1f5b8fdc76</id>
+            <parentID>b1078bcd-cf90-408a-be82-8cd0383fda3c</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Date</valueType>
+            <value />
+            <method>
+                <ownerID>93dd8a45-d1d2-4cc1-b633-38677ebb514b</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>dd59377f-a5a6-4726-9589-2680ad51f691</id>
+                        <expressionID>ca0c825c-a770-4045-8dcf-bad276c9b608</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>28cd0f0c-2824-4dc7-8105-92df5a978a87</id>
+                        <expressionID>90d4f30b-04a9-48f6-a76d-bc14dad05d87</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>93dd8a45-d1d2-4cc1-b633-38677ebb514b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ca0c825c-a770-4045-8dcf-bad276c9b608</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>347ffd3f-9dcc-4454-b1fc-42d5796d4991</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>347ffd3f-9dcc-4454-b1fc-42d5796d4991</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtRWORepairPkgEntry.getCell(rowIndex,"RepairPkg")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>90d4f30b-04a9-48f6-a76d-bc14dad05d87</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>effectTime</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>ecbc6585-2a7c-4eba-be20-3d202dd5abd8</id>
+            <parentID />
+            <source>RWORepairPkgEntry.InvalidTime=RWORepairPkgEntry.RepairPkg.invalidTime</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>fcbb9389-61b0-41d5-b012-377cbe29023c</id>
+            <parentID>ecbc6585-2a7c-4eba-be20-3d202dd5abd8</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Date</valueType>
+            <value />
+            <property>
+                <ownerID>f2219d8c-e67d-4142-aac5-54c5f79352b8</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f2219d8c-e67d-4142-aac5-54c5f79352b8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtRWORepairPkgEntry.getCell(rowIndex,"InvalidTime")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5d8f5105-f465-46ae-bd3a-94d64fb6c6bd</id>
+            <parentID>ecbc6585-2a7c-4eba-be20-3d202dd5abd8</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Date</valueType>
+            <value />
+            <method>
+                <ownerID>053f4bdb-b4ef-49d2-918a-2fbcb249534a</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>bc06a377-1d2f-447e-8199-742a1723a426</id>
+                        <expressionID>88a6f9ea-ef00-401f-9e67-e03ded54ed18</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>58bf9ace-1cd4-4288-94a5-8ef2c7fd8548</id>
+                        <expressionID>78057877-e934-4765-94ae-0268e92b9553</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>053f4bdb-b4ef-49d2-918a-2fbcb249534a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>88a6f9ea-ef00-401f-9e67-e03ded54ed18</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>c1a8f029-afed-4ad4-9a95-e5d8513f68a6</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c1a8f029-afed-4ad4-9a95-e5d8513f68a6</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtRWORepairPkgEntry.getCell(rowIndex,"RepairPkg")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>78057877-e934-4765-94ae-0268e92b9553</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>invalidTime</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>cb0f78f3-e985-4cdf-8ef7-0f15fe2aa66b</id>
+            <parentID />
+            <source>RWORepairPkgEntry.OldPrice=RWORepairPkgEntry.RepairPkg.oldPrice</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>746bfaf4-2cb2-4e1a-8b8e-1b9f9d6b4030</id>
+            <parentID>cb0f78f3-e985-4cdf-8ef7-0f15fe2aa66b</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>8361ba17-6bd5-4751-9292-c6bf0c49ca06</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8361ba17-6bd5-4751-9292-c6bf0c49ca06</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtRWORepairPkgEntry.getCell(rowIndex,"OldPrice")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5c17a6a4-6239-45db-a566-85eeb5e3ddb4</id>
+            <parentID>cb0f78f3-e985-4cdf-8ef7-0f15fe2aa66b</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>dc0b8a61-783a-43ee-a616-2d021b0adcb0</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>0887969a-2052-4236-b50c-d96149ec9087</id>
+                        <expressionID>1d60aa4b-fbee-426e-a2df-c0cdd647a8dd</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>c8df2f3e-e887-4381-9179-3c79511bfc57</id>
+                        <expressionID>0af12fdd-026f-43df-9b71-91b612d0a4bc</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>dc0b8a61-783a-43ee-a616-2d021b0adcb0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1d60aa4b-fbee-426e-a2df-c0cdd647a8dd</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>5973595b-1e93-42b2-8370-6ad950e7ff68</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5973595b-1e93-42b2-8370-6ad950e7ff68</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtRWORepairPkgEntry.getCell(rowIndex,"RepairPkg")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0af12fdd-026f-43df-9b71-91b612d0a4bc</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>oldPrice</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>947e37db-21cc-4a9d-8130-8038ef776ff1</id>
+            <parentID />
+            <source>RWORepairPkgEntry.Price=RWORepairPkgEntry.RepairPkg.price</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>999a1d37-3d13-4259-b1c4-42f43c256374</id>
+            <parentID>947e37db-21cc-4a9d-8130-8038ef776ff1</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>62bae179-e297-4b9a-9840-751ab27d2ab6</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>62bae179-e297-4b9a-9840-751ab27d2ab6</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtRWORepairPkgEntry.getCell(rowIndex,"Price")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>979086bc-02a6-4c02-b0b1-f3ee105e5d32</id>
+            <parentID>947e37db-21cc-4a9d-8130-8038ef776ff1</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>509b5efc-8eb6-4239-8eff-593fb78f0059</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>b1d80f78-992e-47cb-9797-227db72f016d</id>
+                        <expressionID>a8c7171b-7081-4485-b547-5a3b612b7f64</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>6de51010-6c14-4f90-bbab-915522ee408e</id>
+                        <expressionID>b8560bae-31af-4b2a-af8d-010630cdd2ba</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>509b5efc-8eb6-4239-8eff-593fb78f0059</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a8c7171b-7081-4485-b547-5a3b612b7f64</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>000eb7fa-5cc9-4543-90dd-07c64412a291</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>000eb7fa-5cc9-4543-90dd-07c64412a291</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtRWORepairPkgEntry.getCell(rowIndex,"RepairPkg")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b8560bae-31af-4b2a-af8d-010630cdd2ba</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>price</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>e50316bd-4fa1-4756-a6e1-125de78c79f0</id>
+            <parentID />
+            <source>RWOAttachmentItemEntry.AttaItemName=RWOAttachmentItemEntry.AttaItem.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>da959fce-b7a7-4d53-bff9-a79b1a99f320</id>
+            <parentID>e50316bd-4fa1-4756-a6e1-125de78c79f0</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType />
+            <value />
+            <property>
+                <ownerID>c6bf1671-9b9b-4f6e-ae99-c16282aff03a</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c6bf1671-9b9b-4f6e-ae99-c16282aff03a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtRWOAttachmentItemEntry.getCell(rowIndex,"AttaItemName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7264d289-3943-430d-b84a-ace2dccb036e</id>
+            <parentID>e50316bd-4fa1-4756-a6e1-125de78c79f0</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>fdc1949c-5fa7-4fe7-ae18-89d2d70f1634</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>e92c4555-373b-4a63-bc47-33f10f0021b2</id>
+                        <expressionID>74f397df-043f-4d85-b5d6-9ef95e552b3f</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>8b14a3d3-2ecf-4a67-b069-6114b0a4b401</id>
+                        <expressionID>4542f617-d5b7-48c7-8347-3156b7f6c163</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fdc1949c-5fa7-4fe7-ae18-89d2d70f1634</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>74f397df-043f-4d85-b5d6-9ef95e552b3f</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>89c78479-0313-4c96-b7d1-66edec52daec</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>89c78479-0313-4c96-b7d1-66edec52daec</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtRWOAttachmentItemEntry.getCell(rowIndex,"AttaItem")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4542f617-d5b7-48c7-8347-3156b7f6c163</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>8fd0b66b-ffd7-4138-9226-533e9a5bf57a</id>
+            <parentID />
+            <source>RWOActivityEntry.ActivityType = RWOActivityEntry.ServiceActivity.ActivityType</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>ca2524e8-7580-407e-9dad-197d4a512925</id>
+            <parentID>8fd0b66b-ffd7-4138-9226-533e9a5bf57a</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>dd453da0-013c-45dc-a293-01050284ff9b</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>dd453da0-013c-45dc-a293-01050284ff9b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtRWOActivityEntry.getCell(rowIndex,"ActivityType")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fd4776c2-8438-47a3-918d-999f70afde4c</id>
+            <parentID>8fd0b66b-ffd7-4138-9226-533e9a5bf57a</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Enum</valueType>
+            <value />
+            <method>
+                <ownerID>e1c90c20-3dc6-4c8e-be56-bc85604ae140</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>65cd7919-692c-4599-99d1-1392370d1752</id>
+                        <expressionID>e4a3599f-d8b8-41f0-8ef2-bffd4b010fd2</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>6e93c218-73f9-4ccf-8185-850cad154bc2</id>
+                        <expressionID>597a6e12-1aa8-41fb-b8a4-9de2fe50bff5</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e1c90c20-3dc6-4c8e-be56-bc85604ae140</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e4a3599f-d8b8-41f0-8ef2-bffd4b010fd2</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>2c3de69d-e17c-45a7-a967-295e8deb33f2</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2c3de69d-e17c-45a7-a967-295e8deb33f2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtRWOActivityEntry.getCell(rowIndex,"ServiceActivity")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>597a6e12-1aa8-41fb-b8a4-9de2fe50bff5</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>ActivityType</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>f4a3897a-2b76-409f-b80d-ddd6350901fd</id>
+            <parentID />
+            <source>RWOActivityEntry.BeginTime = RWOActivityEntry.ServiceActivity.BeginTime</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>7ec21c37-b57d-483e-b5e7-6d3f5798531c</id>
+            <parentID>f4a3897a-2b76-409f-b80d-ddd6350901fd</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Date</valueType>
+            <value />
+            <property>
+                <ownerID>cc9ba5f2-baba-4535-ba48-7e1827ba2ad1</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cc9ba5f2-baba-4535-ba48-7e1827ba2ad1</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtRWOActivityEntry.getCell(rowIndex,"BeginTime")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b75609f3-3acd-4847-b872-820e3081541f</id>
+            <parentID>f4a3897a-2b76-409f-b80d-ddd6350901fd</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Date</valueType>
+            <value />
+            <method>
+                <ownerID>e5173a31-98be-4e00-8342-dca41cc08db9</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>a7b54a21-b056-4cd4-89f7-56e4caf1ae4e</id>
+                        <expressionID>e1229a59-2713-4438-8844-b0a608c5a3ee</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>4ebd5176-2d58-472a-be5e-05a735e81a4f</id>
+                        <expressionID>65783979-942a-4490-8f1b-95be53535039</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e5173a31-98be-4e00-8342-dca41cc08db9</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e1229a59-2713-4438-8844-b0a608c5a3ee</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>daf8ebc6-4327-4a8e-afdd-0763e466e161</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>daf8ebc6-4327-4a8e-afdd-0763e466e161</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtRWOActivityEntry.getCell(rowIndex,"ServiceActivity")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>65783979-942a-4490-8f1b-95be53535039</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>BeginTime</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>ed023775-1f6d-4d1e-8596-0902d57a6c10</id>
+            <parentID />
+            <source>RWOActivityEntry.FinishTime = RWOActivityEntry.ServiceActivity.FinishTime</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>f47f4b11-baa9-4b77-b38b-bcd654cd13e1</id>
+            <parentID>ed023775-1f6d-4d1e-8596-0902d57a6c10</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Date</valueType>
+            <value />
+            <property>
+                <ownerID>bce90e34-0ba4-48f8-a823-3744f58d5de2</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bce90e34-0ba4-48f8-a823-3744f58d5de2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtRWOActivityEntry.getCell(rowIndex,"FinishTime")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f63bd392-7ab3-4781-923d-019534952c51</id>
+            <parentID>ed023775-1f6d-4d1e-8596-0902d57a6c10</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Date</valueType>
+            <value />
+            <method>
+                <ownerID>839dae63-7f08-426b-9d62-e8265fd5d0ee</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>dc0d23a7-ae7d-438e-8810-696629ea6ba4</id>
+                        <expressionID>8b54a052-41dc-4cd0-a445-b59613f630be</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>335cd501-20c9-435e-88c4-e74a886d242b</id>
+                        <expressionID>675e3a4e-3643-48c1-9c91-a4516e4a1804</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>839dae63-7f08-426b-9d62-e8265fd5d0ee</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8b54a052-41dc-4cd0-a445-b59613f630be</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>f1198787-78d8-4f86-b6ab-b73ac8bacf41</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f1198787-78d8-4f86-b6ab-b73ac8bacf41</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtRWOActivityEntry.getCell(rowIndex,"ServiceActivity")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>675e3a4e-3643-48c1-9c91-a4516e4a1804</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>FinishTime</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>00906058-3324-4ca4-aaaf-d1b295a3cc96</id>
+            <parentID />
+            <source>RWOActivityEntry.FeeTotalAmount = RWOActivityEntry.ServiceActivity.FeeTotalAmount</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>c44ba899-48a4-418c-a3db-cd1c536c4fd5</id>
+            <parentID>00906058-3324-4ca4-aaaf-d1b295a3cc96</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>55caf89b-b01f-4ac6-ae67-f7ef67cf96db</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>55caf89b-b01f-4ac6-ae67-f7ef67cf96db</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtRWOActivityEntry.getCell(rowIndex,"FeeTotalAmount")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a8632098-d7b0-4462-888c-7ece51fbea34</id>
+            <parentID>00906058-3324-4ca4-aaaf-d1b295a3cc96</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>1ba4909e-fa23-46f6-949e-38918c03ae02</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>0a69aec0-1f5f-473d-954d-17aec91598dd</id>
+                        <expressionID>aaa83c5d-7c81-47e2-be55-35dc186b4cc5</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>d90610dd-109e-429e-a753-2b3c59adc4c3</id>
+                        <expressionID>cbe80ae5-3355-4d40-986c-b1fe6e83898b</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1ba4909e-fa23-46f6-949e-38918c03ae02</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>aaa83c5d-7c81-47e2-be55-35dc186b4cc5</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>04e7d96c-6862-411e-9051-a7aba7beeccf</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>04e7d96c-6862-411e-9051-a7aba7beeccf</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtRWOActivityEntry.getCell(rowIndex,"ServiceActivity")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cbe80ae5-3355-4d40-986c-b1fe6e83898b</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>FeeTotalAmount</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>e909890a-ac96-40e8-ad77-13c43d27111d</id>
+            <parentID />
+            <source>customerAccountName=CustomerAccount.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>f46e1818-2420-4b70-a71d-0e3703dae1f5</id>
+            <parentID>e909890a-ac96-40e8-ad77-13c43d27111d</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>26638b93-7ea6-4935-b043-736f03ab5d79</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>26638b93-7ea6-4935-b043-736f03ab5d79</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtcustomerAccountName</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b6f6ee63-c990-4444-a97a-cb95c2e69221</id>
+            <parentID>e909890a-ac96-40e8-ad77-13c43d27111d</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>45e376c8-4387-49aa-a31d-7cbac17d3937</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>8e43c765-d710-45f8-8dcb-4b2a02adea56</id>
+                        <expressionID>edb3367b-2385-46e8-9351-875d29f0ee5f</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>05e319bf-e995-4813-98bb-ccf6350ae142</id>
+                        <expressionID>7d09a21d-fc74-4f8b-a1d4-01f50accf6f4</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>45e376c8-4387-49aa-a31d-7cbac17d3937</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>edb3367b-2385-46e8-9351-875d29f0ee5f</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>c84116c7-3418-44af-a68c-2a8967127dad</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c84116c7-3418-44af-a68c-2a8967127dad</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtCustomerAccount</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7d09a21d-fc74-4f8b-a1d4-01f50accf6f4</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>191e1163-c667-4513-a6a4-78973ed73417</id>
+            <name>RWOSparepartEntry_Unit_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOSparepartEntry_Unit_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOSparepartEntry_Unit_ActionInfo].description</description>
+            <expressionID>947730a5-b74d-4048-86aa-d71c6ba99514</expressionID>
+        </action>
+        <action>
+            <id>1a863349-316a-4f46-8708-d3fe25343207</id>
+            <name>RepairWO_SeriesID_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_SeriesID_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_SeriesID_ActionInfo].description</description>
+            <expressionID>ad135d48-6a14-42c5-af5e-7ac64be2182a</expressionID>
+        </action>
+        <action>
+            <id>ff70e8ba-2c0e-458a-a522-9231fa8ddaaf</id>
+            <name>RepairWO_ModelID_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_ModelID_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_ModelID_ActionInfo].description</description>
+            <expressionID>4e256068-6c34-47ea-89cd-9ffdf975ca09</expressionID>
+        </action>
+        <action>
+            <id>9f2f41aa-f3a9-4d51-8423-a527d1c6c9e4</id>
+            <name>RepairWO_CustomerID_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_CustomerID_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_CustomerID_ActionInfo].description</description>
+            <expressionID>eb84c143-8d1a-45a1-8133-bb922ae70163</expressionID>
+        </action>
+        <action>
+            <id>0554a02f-81fe-4a9c-8e0b-029d8ec7da87</id>
+            <name>RepairWO_CustomerDiscountClassifyID_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_CustomerDiscountClassifyID_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_CustomerDiscountClassifyID_ActionInfo].description</description>
+            <expressionID>43d64bc7-eb1b-42b3-a2e3-84cebb9641fb</expressionID>
+        </action>
+        <action>
+            <id>b140fb3e-1877-4f04-a07f-c83abdf0a530</id>
+            <name>RepairWO_Tel_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_Tel_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_Tel_ActionInfo].description</description>
+            <expressionID>6577c71f-e17e-41a2-a79f-45a472f88d10</expressionID>
+        </action>
+        <action>
+            <id>b25da429-9721-4a9f-81cc-c9b7c995b98b</id>
+            <name>RWORepairItemEntry_RepairItemname_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairItemEntry_RepairItemname_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairItemEntry_RepairItemname_ActionInfo].description</description>
+            <expressionID>c74650f5-8aab-4bd3-bdf4-9fe698b3362b</expressionID>
+        </action>
+        <action>
+            <id>0b8dbff1-8a56-4f5c-92da-27ad17fc738d</id>
+            <name>RWOActivityEntry_name_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOActivityEntry_name_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOActivityEntry_name_ActionInfo].description</description>
+            <expressionID>6066d3d5-478e-4a81-9f52-54eacea75aa8</expressionID>
+        </action>
+        <action>
+            <id>8fd920a0-a0ee-4252-9698-7e6c7dd3542c</id>
+            <name>RWORepairItemEntry_RepairItemName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairItemEntry_RepairItemName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairItemEntry_RepairItemName_ActionInfo].description</description>
+            <expressionID>1957c69f-3898-446d-8863-7504674ac228</expressionID>
+        </action>
+        <action>
+            <id>2a2c87bb-4e93-40c4-9dc4-8a45c075f8c0</id>
+            <name>RWOSparepartEntry_MaterialName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOSparepartEntry_MaterialName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOSparepartEntry_MaterialName_ActionInfo].description</description>
+            <expressionID>dbce7bb5-1288-44bd-9e92-7bbf263fc1f7</expressionID>
+        </action>
+        <action>
+            <id>5f7e18c3-2056-4198-b805-c26d1ec29948</id>
+            <name>RWORepairPkgEntry_RepairPkgName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_RepairPkgName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_RepairPkgName_ActionInfo].description</description>
+            <expressionID>b144d142-d841-4945-864f-5357d5437e57</expressionID>
+        </action>
+        <action>
+            <id>ba7357f4-57f7-4f17-b2ed-924a038f2ea0</id>
+            <name>RepairWO_VIN_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_VIN_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_VIN_ActionInfo].description</description>
+            <expressionID>f355617f-e5ab-49ee-be9b-f9a4fd41fa42</expressionID>
+        </action>
+        <action>
+            <id>e6095a46-d5df-49af-a589-48e49c31aefe</id>
+            <name>RepairWO_VIN_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_VIN_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_VIN_ActionInfo].description</description>
+            <expressionID>b8e81626-85bc-41e5-972c-6369347d4271</expressionID>
+        </action>
+        <action>
+            <id>cbd1a706-86b6-4b4d-87e9-b1a9d00e8498</id>
+            <name>RWORepairItemEntry_RepairItemName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairItemEntry_RepairItemName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairItemEntry_RepairItemName_ActionInfo].description</description>
+            <expressionID>a2a6be60-fe83-4eaf-93b2-e599f2f7df89</expressionID>
+        </action>
+        <action>
+            <id>320bee81-242d-4353-b273-ddcc6ad0583d</id>
+            <name>RepairWO_Vin_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_Vin_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_Vin_ActionInfo].description</description>
+            <expressionID>1912e273-74b4-4ee7-824c-0e966c8dff69</expressionID>
+        </action>
+        <action>
+            <id>cb4d894d-bc60-400f-8f39-e89109880274</id>
+            <name>RepairWO_VIN_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_VIN_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_VIN_ActionInfo].description</description>
+            <expressionID>566772fb-7cb1-45ce-831b-d731803a3a8e</expressionID>
+        </action>
+        <action>
+            <id>51be00f2-77c9-4e5c-8a8b-af61369cbc83</id>
+            <name>RepairWO_VIN_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_VIN_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_VIN_ActionInfo].description</description>
+            <expressionID>db03d648-d102-4621-b55e-eee09be2ef8f</expressionID>
+        </action>
+        <action>
+            <id>8ee53d6a-9b5b-430a-9dba-878a0d13092e</id>
+            <name>RWOSparepartEntry_MaterialName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOSparepartEntry_MaterialName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOSparepartEntry_MaterialName_ActionInfo].description</description>
+            <expressionID>3777d056-96a5-4893-89c8-4784c4fa63f2</expressionID>
+        </action>
+        <action>
+            <id>c8ff4878-b273-4b5f-81a2-f9d6ce056d3f</id>
+            <name>RWORepairPkgEntry_RepairPkgName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_RepairPkgName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_RepairPkgName_ActionInfo].description</description>
+            <expressionID>c8bb1217-ac53-416d-96f0-7e0d246cd26b</expressionID>
+        </action>
+        <action>
+            <id>15af4d9e-8ae0-4402-bde8-9650a7604795</id>
+            <name>RWORepairPkgEntry_Classify_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_Classify_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_Classify_ActionInfo].description</description>
+            <expressionID>167eab97-8746-404d-b4aa-7f4fe85e4bfa</expressionID>
+        </action>
+        <action>
+            <id>0a30f42d-6dd1-49b2-a0d9-44b09f7347bc</id>
+            <name>RWORepairPkgEntry_EffectTime_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_EffectTime_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_EffectTime_ActionInfo].description</description>
+            <expressionID>b1078bcd-cf90-408a-be82-8cd0383fda3c</expressionID>
+        </action>
+        <action>
+            <id>4da31559-f230-48c4-a1a2-866ead0c7bea</id>
+            <name>RWORepairPkgEntry_InvalidTime_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_InvalidTime_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_InvalidTime_ActionInfo].description</description>
+            <expressionID>ecbc6585-2a7c-4eba-be20-3d202dd5abd8</expressionID>
+        </action>
+        <action>
+            <id>e7bcabf1-2ad1-4ff1-9db2-8da8eb86742d</id>
+            <name>RWORepairPkgEntry_OldPrice_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_OldPrice_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_OldPrice_ActionInfo].description</description>
+            <expressionID>cb0f78f3-e985-4cdf-8ef7-0f15fe2aa66b</expressionID>
+        </action>
+        <action>
+            <id>109fa45f-323d-4d37-b2d3-6bdbc2777e43</id>
+            <name>RWORepairPkgEntry_Price_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_Price_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_Price_ActionInfo].description</description>
+            <expressionID>947e37db-21cc-4a9d-8130-8038ef776ff1</expressionID>
+        </action>
+        <action>
+            <id>df1d5e4f-38c1-4e11-be9b-644d22635018</id>
+            <name>RWOAttachmentItemEntry_AttaItemName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOAttachmentItemEntry_AttaItemName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOAttachmentItemEntry_AttaItemName_ActionInfo].description</description>
+            <expressionID>e50316bd-4fa1-4756-a6e1-125de78c79f0</expressionID>
+        </action>
+        <action>
+            <id>4aa26306-afa9-4b18-a446-24225ea6b7fc</id>
+            <name>BFI42IBA</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[BFI42IBA].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[BFI42IBA].description</description>
+            <expressionID>8fd0b66b-ffd7-4138-9226-533e9a5bf57a</expressionID>
+        </action>
+        <action>
+            <id>35495153-b74d-4c2a-97d4-0034b3fdde15</id>
+            <name>RWOActivityEntry_BeginTime_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOActivityEntry_BeginTime_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOActivityEntry_BeginTime_ActionInfo].description</description>
+            <expressionID>f4a3897a-2b76-409f-b80d-ddd6350901fd</expressionID>
+        </action>
+        <action>
+            <id>45adc871-837d-45a0-b1b3-963b472777ca</id>
+            <name>RWOActivityEntry_FinishTime_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOActivityEntry_FinishTime_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOActivityEntry_FinishTime_ActionInfo].description</description>
+            <expressionID>ed023775-1f6d-4d1e-8596-0902d57a6c10</expressionID>
+        </action>
+        <action>
+            <id>ca439975-5707-4e45-8614-ee8c1b35257c</id>
+            <name>RWOActivityEntry_FeeTotalAmount_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOActivityEntry_FeeTotalAmount_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOActivityEntry_FeeTotalAmount_ActionInfo].description</description>
+            <expressionID>00906058-3324-4ca4-aaaf-d1b295a3cc96</expressionID>
+        </action>
+        <action>
+            <id>6f11a150-9313-4109-a156-d5e57a86e851</id>
+            <name>RepairWO_customerAccountName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_customerAccountName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_customerAccountName_ActionInfo].description</description>
+            <expressionID>e909890a-ac96-40e8-ad77-13c43d27111d</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>RepairWO_VIN_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWO_VIN_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWO_VIN_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="51be00f2-77c9-4e5c-8a8b-af61369cbc83" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>RepairWO_Tel_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWO_Tel_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWO_Tel_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="b140fb3e-1877-4f04-a07f-c83abdf0a530" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>RWOAttachmentItemEntry_AttaItemName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWOAttachmentItemEntry_AttaItemName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWOAttachmentItemEntry_AttaItemName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="df1d5e4f-38c1-4e11-be9b-644d22635018" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>RWOActivityEntry_name_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWOActivityEntry_name_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWOActivityEntry_name_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="0b8dbff1-8a56-4f5c-92da-27ad17fc738d" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>RepairWOBFI41$V0</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBFI41$V0].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBFI41$V0].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="4aa26306-afa9-4b18-a446-24225ea6b7fc" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>RepairWOBFI47DKY</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBFI47DKY].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBFI47DKY].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="35495153-b74d-4c2a-97d4-0034b3fdde15" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>RepairWOBFI47V5X</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBFI47V5X].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBFI47V5X].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="45adc871-837d-45a0-b1b3-963b472777ca" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>RepairWOBFI481DK</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBFI481DK].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBFI481DK].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="ca439975-5707-4e45-8614-ee8c1b35257c" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>RWORepairPkgEntry_RepairPkgName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_RepairPkgName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_RepairPkgName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="c8ff4878-b273-4b5f-81a2-f9d6ce056d3f" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>RWORepairPkgEntry_Classify_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_Classify_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_Classify_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="15af4d9e-8ae0-4402-bde8-9650a7604795" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>RWORepairPkgEntry_EffectTime_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_EffectTime_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_EffectTime_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="0a30f42d-6dd1-49b2-a0d9-44b09f7347bc" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>RWORepairPkgEntry_InvalidTime_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_InvalidTime_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_InvalidTime_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="4da31559-f230-48c4-a1a2-866ead0c7bea" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>RWORepairPkgEntry_OldPrice_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_OldPrice_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_OldPrice_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="e7bcabf1-2ad1-4ff1-9db2-8da8eb86742d" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>RWORepairPkgEntry_Price_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_Price_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_Price_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="109fa45f-323d-4d37-b2d3-6bdbc2777e43" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>RWOSparepartEntry_MaterialName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWOSparepartEntry_MaterialName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWOSparepartEntry_MaterialName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="8ee53d6a-9b5b-430a-9dba-878a0d13092e" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>RepairWOBHBZ7_DT</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBHBZ7_DT].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBHBZ7_DT].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+        </conditionRule>
+        <conditionRule>
+            <name>RepairWO_customerAccountName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWO_customerAccountName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWO_customerAccountName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="6f11a150-9313-4109-a156-d5e57a86e851" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[BFI42IBA].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_ActivityType" />
+            <lang locale="zh_HK" value="攜帶字段屬性_ActivityType" />
+            <lang locale="zh_TW" value="攜帶字段屬性_ActivityType" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[BFI42IBA].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOActivityEntry_BeginTime_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_BeginTime" />
+            <lang locale="zh_HK" value="攜帶字段屬性_BeginTime" />
+            <lang locale="zh_TW" value="攜帶字段屬性_BeginTime" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOActivityEntry_BeginTime_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOActivityEntry_FeeTotalAmount_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_FeeTotalAmount" />
+            <lang locale="zh_HK" value="攜帶字段屬性_FeeTotalAmount" />
+            <lang locale="zh_TW" value="攜帶字段屬性_FeeTotalAmount" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOActivityEntry_FeeTotalAmount_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOActivityEntry_FinishTime_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_FinishTime" />
+            <lang locale="zh_HK" value="攜帶字段屬性_FinishTime" />
+            <lang locale="zh_TW" value="攜帶字段屬性_FinishTime" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOActivityEntry_FinishTime_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOActivityEntry_name_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_Name_l2" />
+            <lang locale="zh_HK" value="攜帶字段屬性_Name_l2" />
+            <lang locale="zh_TW" value="攜帶字段屬性_Name_l2" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOActivityEntry_name_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOAttachmentItemEntry_AttaItemName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOAttachmentItemEntry_AttaItemName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairItemEntry_RepairItemName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_displayName" />
+            <lang locale="zh_HK" value="攜帶字段屬性_displayName" />
+            <lang locale="zh_TW" value="攜帶字段屬性_displayName" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairItemEntry_RepairItemName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairItemEntry_RepairItemname_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_displayName" />
+            <lang locale="zh_HK" value="攜帶字段屬性_displayName" />
+            <lang locale="zh_TW" value="攜帶字段屬性_displayName" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairItemEntry_RepairItemname_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_Classify_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_classify" />
+            <lang locale="zh_HK" value="攜帶字段屬性_classify" />
+            <lang locale="zh_TW" value="攜帶字段屬性_classify" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_Classify_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_EffectTime_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_effectTime" />
+            <lang locale="zh_HK" value="攜帶字段屬性_effectTime" />
+            <lang locale="zh_TW" value="攜帶字段屬性_effectTime" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_EffectTime_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_InvalidTime_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_invalidTime" />
+            <lang locale="zh_HK" value="攜帶字段屬性_invalidTime" />
+            <lang locale="zh_TW" value="攜帶字段屬性_invalidTime" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_InvalidTime_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_OldPrice_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_oldPrice" />
+            <lang locale="zh_HK" value="攜帶字段屬性_oldPrice" />
+            <lang locale="zh_TW" value="攜帶字段屬性_oldPrice" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_OldPrice_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_Price_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_price" />
+            <lang locale="zh_HK" value="攜帶字段屬性_price" />
+            <lang locale="zh_TW" value="攜帶字段屬性_price" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_Price_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_RepairPkgName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWORepairPkgEntry_RepairPkgName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOSparepartEntry_MaterialName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOSparepartEntry_MaterialName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOSparepartEntry_Unit_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_baseUnit" />
+            <lang locale="zh_HK" value="攜帶字段屬性_baseUnit" />
+            <lang locale="zh_TW" value="攜帶字段屬性_baseUnit" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RWOSparepartEntry_Unit_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_CustomerDiscountClassifyID_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_custType" />
+            <lang locale="zh_HK" value="攜帶字段屬性_custType" />
+            <lang locale="zh_TW" value="攜帶字段屬性_custType" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_CustomerDiscountClassifyID_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_CustomerID_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_customer" />
+            <lang locale="zh_HK" value="攜帶字段屬性_customer" />
+            <lang locale="zh_TW" value="攜帶字段屬性_customer" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_CustomerID_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_ModelID_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_ModelID_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_SeriesID_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_series" />
+            <lang locale="zh_HK" value="攜帶字段屬性_series" />
+            <lang locale="zh_TW" value="攜帶字段屬性_series" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_SeriesID_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_Tel_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_Phone" />
+            <lang locale="zh_HK" value="攜帶字段屬性_Phone" />
+            <lang locale="zh_TW" value="攜帶字段屬性_Phone" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_Tel_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_VIN_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_vIN" />
+            <lang locale="zh_HK" value="攜帶字段屬性_vIN" />
+            <lang locale="zh_TW" value="攜帶字段屬性_vIN" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_VIN_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_Vin_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_vIN" />
+            <lang locale="zh_HK" value="攜帶字段屬性_vIN" />
+            <lang locale="zh_TW" value="攜帶字段屬性_vIN" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_Vin_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_customerAccountName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_customerAccountName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].expressions.groupExpressionextendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].expressions.simpleExpressionextendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWOActivityEntry_name_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_Name_l2" />
+            <lang locale="zh_HK" value="攜帶字段屬性_Name_l2" />
+            <lang locale="zh_TW" value="攜帶字段屬性_Name_l2" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWOActivityEntry_name_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWOActivityEntry_name_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="ServiceActivity" />
+            <lang locale="zh_CN" value="ServiceActivity" />
+            <lang locale="zh_TW" value="ServiceActivity" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWOActivityEntry_name_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWOAttachmentItemEntry_AttaItemName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWOAttachmentItemEntry_AttaItemName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWOAttachmentItemEntry_AttaItemName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="AttaItem" />
+            <lang locale="zh_CN" value="AttaItem" />
+            <lang locale="zh_TW" value="AttaItem" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWOAttachmentItemEntry_AttaItemName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_Classify_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_classify" />
+            <lang locale="zh_HK" value="攜帶字段屬性_classify" />
+            <lang locale="zh_TW" value="攜帶字段屬性_classify" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_Classify_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_Classify_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="RepairPkg" />
+            <lang locale="zh_CN" value="RepairPkg" />
+            <lang locale="zh_TW" value="RepairPkg" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_Classify_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_EffectTime_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_effectTime" />
+            <lang locale="zh_HK" value="攜帶字段屬性_effectTime" />
+            <lang locale="zh_TW" value="攜帶字段屬性_effectTime" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_EffectTime_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_EffectTime_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="RepairPkg" />
+            <lang locale="zh_CN" value="RepairPkg" />
+            <lang locale="zh_TW" value="RepairPkg" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_EffectTime_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_InvalidTime_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_invalidTime" />
+            <lang locale="zh_HK" value="攜帶字段屬性_invalidTime" />
+            <lang locale="zh_TW" value="攜帶字段屬性_invalidTime" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_InvalidTime_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_InvalidTime_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="RepairPkg" />
+            <lang locale="zh_CN" value="RepairPkg" />
+            <lang locale="zh_TW" value="RepairPkg" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_InvalidTime_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_OldPrice_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_oldPrice" />
+            <lang locale="zh_HK" value="攜帶字段屬性_oldPrice" />
+            <lang locale="zh_TW" value="攜帶字段屬性_oldPrice" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_OldPrice_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_OldPrice_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="RepairPkg" />
+            <lang locale="zh_CN" value="RepairPkg" />
+            <lang locale="zh_TW" value="RepairPkg" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_OldPrice_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_Price_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_price" />
+            <lang locale="zh_HK" value="攜帶字段屬性_price" />
+            <lang locale="zh_TW" value="攜帶字段屬性_price" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_Price_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_Price_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="RepairPkg" />
+            <lang locale="zh_CN" value="RepairPkg" />
+            <lang locale="zh_TW" value="RepairPkg" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_Price_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_RepairPkgName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_RepairPkgName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_RepairPkgName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="RepairPkg" />
+            <lang locale="zh_CN" value="RepairPkg" />
+            <lang locale="zh_TW" value="RepairPkg" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWORepairPkgEntry_RepairPkgName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWOSparepartEntry_MaterialName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWOSparepartEntry_MaterialName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWOSparepartEntry_MaterialName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="Material" />
+            <lang locale="zh_CN" value="Material" />
+            <lang locale="zh_TW" value="Material" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RWOSparepartEntry_MaterialName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBFI41$V0].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_ActivityType" />
+            <lang locale="zh_HK" value="攜帶字段屬性_ActivityType" />
+            <lang locale="zh_TW" value="攜帶字段屬性_ActivityType" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBFI41$V0].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBFI41$V0].extendedProperty.columnName">
+            <lang locale="en_US" value="ServiceActivity" />
+            <lang locale="zh_CN" value="ServiceActivity" />
+            <lang locale="zh_TW" value="ServiceActivity" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBFI41$V0].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBFI47DKY].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_BeginTime" />
+            <lang locale="zh_HK" value="攜帶字段屬性_BeginTime" />
+            <lang locale="zh_TW" value="攜帶字段屬性_BeginTime" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBFI47DKY].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBFI47DKY].extendedProperty.columnName">
+            <lang locale="en_US" value="ServiceActivity" />
+            <lang locale="zh_CN" value="ServiceActivity" />
+            <lang locale="zh_TW" value="ServiceActivity" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBFI47DKY].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBFI47V5X].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_FinishTime" />
+            <lang locale="zh_HK" value="攜帶字段屬性_FinishTime" />
+            <lang locale="zh_TW" value="攜帶字段屬性_FinishTime" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBFI47V5X].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBFI47V5X].extendedProperty.columnName">
+            <lang locale="en_US" value="ServiceActivity" />
+            <lang locale="zh_CN" value="ServiceActivity" />
+            <lang locale="zh_TW" value="ServiceActivity" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBFI47V5X].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBFI481DK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_FeeTotalAmount" />
+            <lang locale="zh_HK" value="攜帶字段屬性_FeeTotalAmount" />
+            <lang locale="zh_TW" value="攜帶字段屬性_FeeTotalAmount" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBFI481DK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBFI481DK].extendedProperty.columnName">
+            <lang locale="en_US" value="ServiceActivity" />
+            <lang locale="zh_CN" value="ServiceActivity" />
+            <lang locale="zh_TW" value="ServiceActivity" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBFI481DK].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBHBZ7_DT].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_Name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_Name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_Name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBHBZ7_DT].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBHBZ7_DT].extendedProperty.columnName">
+            <lang locale="en_US" value="RepairItem" />
+            <lang locale="zh_CN" value="RepairItem" />
+            <lang locale="zh_TW" value="RepairItem" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWOBHBZ7_DT].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWO_Tel_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_Phone" />
+            <lang locale="zh_HK" value="攜帶字段屬性_Phone" />
+            <lang locale="zh_TW" value="攜帶字段屬性_Phone" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWO_Tel_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWO_Tel_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="Customer" />
+            <lang locale="zh_CN" value="Customer" />
+            <lang locale="zh_TW" value="Customer" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWO_Tel_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWO_VIN_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_vIN" />
+            <lang locale="zh_HK" value="攜帶字段屬性_vIN" />
+            <lang locale="zh_TW" value="攜帶字段屬性_vIN" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWO_VIN_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWO_VIN_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="Vehicle" />
+            <lang locale="zh_CN" value="Vehicle" />
+            <lang locale="zh_TW" value="Vehicle" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWO_VIN_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWO_customerAccountName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWO_customerAccountName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWO_customerAccountName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="CustomerAccount" />
+            <lang locale="zh_CN" value="CustomerAccount" />
+            <lang locale="zh_TW" value="CustomerAccount" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWO_customerAccountName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

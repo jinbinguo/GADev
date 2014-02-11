@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.auto4s.rsm.rs.app</package>
+    <name>RepairWORuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].alias</alias>
+    <expressions>
+        <groupExpression>
+            <id>e909890a-ac96-40e8-ad77-13c43d27111d</id>
+            <parentID />
+            <source>customerAccountName=CustomerAccount.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>f46e1818-2420-4b70-a71d-0e3703dae1f5</id>
+            <parentID>e909890a-ac96-40e8-ad77-13c43d27111d</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>26638b93-7ea6-4935-b043-736f03ab5d79</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>26638b93-7ea6-4935-b043-736f03ab5d79</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtcustomerAccountName</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b6f6ee63-c990-4444-a97a-cb95c2e69221</id>
+            <parentID>e909890a-ac96-40e8-ad77-13c43d27111d</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>45e376c8-4387-49aa-a31d-7cbac17d3937</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>8e43c765-d710-45f8-8dcb-4b2a02adea56</id>
+                        <expressionID>edb3367b-2385-46e8-9351-875d29f0ee5f</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>05e319bf-e995-4813-98bb-ccf6350ae142</id>
+                        <expressionID>7d09a21d-fc74-4f8b-a1d4-01f50accf6f4</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>45e376c8-4387-49aa-a31d-7cbac17d3937</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>edb3367b-2385-46e8-9351-875d29f0ee5f</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>c84116c7-3418-44af-a68c-2a8967127dad</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c84116c7-3418-44af-a68c-2a8967127dad</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtCustomerAccount</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7d09a21d-fc74-4f8b-a1d4-01f50accf6f4</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>6f11a150-9313-4109-a156-d5e57a86e851</id>
+            <name>RepairWO_customerAccountName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_customerAccountName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_customerAccountName_ActionInfo].description</description>
+            <expressionID>e909890a-ac96-40e8-ad77-13c43d27111d</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>RepairWO_customerAccountName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWO_customerAccountName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWO_customerAccountName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="6f11a150-9313-4109-a156-d5e57a86e851" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_customerAccountName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].actions.action[RepairWO_customerAccountName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].expressions.groupExpressionextendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].expressions.simpleExpressionextendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWO_customerAccountName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWO_customerAccountName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWO_customerAccountName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="CustomerAccount" />
+            <lang locale="zh_CN" value="CustomerAccount" />
+            <lang locale="zh_TW" value="CustomerAccount" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORuleSet].rules.conditionRule[RepairWO_customerAccountName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

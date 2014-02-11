@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permission xmlns="com.kingdee.bos.metadata">
+    <package />
+    <name>bim</name>
+    <alias>permission[.bim].alias</alias>
+    <description>permission[.bim].description</description>
+    <userDefined>false</userDefined>
+    <permissionItems>
+        <permissionItem>
+            <innerID>7351bb99-dc10-49ad-a7cb-89c72fd004cbPERMITEM</innerID>
+            <name>dmsTradeInquire</name>
+            <alias>permission[.bim].permissionItems.permissionItem[dmsTradeInquire].alias</alias>
+            <description>permission[.bim].permissionItems.permissionItem[dmsTradeInquire].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.集成管理.DMS集成平台.数据查询</groupName>
+            <group>permission[.bim].permissionItems.permissionItem[dmsTradeInquire].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>9FEBF162</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.ga.syncdata.app</package>
+                    <name>DMSInOutQuery</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>9a3c540b-016f-4d2d-bf8d-8211fd3765c2</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.syncdata.client</package>
+                        <name>DMSInOutQueryListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                        <bizProperty>
+                            <property>ActionView</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>d8f972b9-33ae-4991-abf7-c1524fe4bfc6PERMITEM</innerID>
+            <name>dmsImport</name>
+            <alias>permission[.bim].permissionItems.permissionItem[dmsImport].alias</alias>
+            <description>permission[.bim].permissionItems.permissionItem[dmsImport].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.集成管理.DMS集成平台.数据导入</groupName>
+            <group>permission[.bim].permissionItems.permissionItem[dmsImport].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>71CA40E2</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.ga.syncdata.app</package>
+                    <name>DMSWipBill</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>f41d6f33-4731-47b3-98a3-373f2956f395</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.syncdata.client</package>
+                        <name>DMSDataImport</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property />
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>a33e70ec-2e56-4aac-91ac-0f7b8009d94cPERMITEM</innerID>
+            <name>dmsWipBIll</name>
+            <alias>permission[.bim].permissionItems.permissionItem[dmsWipBIll].alias</alias>
+            <description>permission[.bim].permissionItems.permissionItem[dmsWipBIll].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.集成管理.DMS集成平台.数据查询</groupName>
+            <group>permission[.bim].permissionItems.permissionItem[dmsWipBIll].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>71CA40E2</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.ga.syncdata.app</package>
+                    <name>DMSWipBill</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>1fa68594-e620-47ff-81e8-9e705183a57c</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.syncdata.client</package>
+                        <name>DMSWipBillListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                        <bizProperty>
+                            <property>ActionView</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+    </permissionItems>
+    <dependences>
+        <dependence>
+            <id>7351bb99-dc10-49ad-a7cb-89c72fd004cbPERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="7351bb99-dc10-49ad-a7cb-89c72fd004cbPERMITEM" />
+            </referedItem>
+        </dependence>
+        <dependence>
+            <id>d8f972b9-33ae-4991-abf7-c1524fe4bfc6PERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="d8f972b9-33ae-4991-abf7-c1524fe4bfc6PERMITEM" />
+            </referedItem>
+        </dependence>
+        <dependence>
+            <id>a33e70ec-2e56-4aac-91ac-0f7b8009d94cPERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="a33e70ec-2e56-4aac-91ac-0f7b8009d94cPERMITEM" />
+            </referedItem>
+        </dependence>
+    </dependences>
+    <resource>
+        <rs key="permission[.bim].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="bim" />
+            <lang locale="zh_HK" value="bim" />
+            <lang locale="zh_TW" value="bim" />
+        </rs>
+        <rs key="permission[.bim].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsImport].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务数据导入" />
+            <lang locale="zh_HK" value="業務數據導入" />
+            <lang locale="zh_TW" value="業務數據導入" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsImport].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsImport].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.ga.syncdata.DMSWipBill" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.syncdata.DMSWipBill" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.syncdata.DMSWipBill" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsImport].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsImport].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsImport].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsImport].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.集成管理.DMS集成平台.数据导入" />
+            <lang locale="zh_HK" value="系統.集成管理.DMS集成平臺.數據導入" />
+            <lang locale="zh_TW" value="系統.集成管理.DMS集成平臺.數據導入" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsTradeInquire].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="厂家交易查询" />
+            <lang locale="zh_HK" value="廠家交易查詢" />
+            <lang locale="zh_TW" value="廠家交易查詢" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsTradeInquire].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsTradeInquire].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.ga.syncdata.DMSInOutQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.syncdata.DMSInOutQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.syncdata.DMSInOutQuery" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsTradeInquire].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsTradeInquire].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsTradeInquire].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsTradeInquire].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.集成管理.DMS集成平台.数据查询" />
+            <lang locale="zh_HK" value="系統.集成管理.DMS集成平臺.數據查詢" />
+            <lang locale="zh_TW" value="系統.集成管理.DMS集成平臺.數據查詢" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsWipBIll].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="厂家WIP单" />
+            <lang locale="zh_HK" value="廠家WIP單" />
+            <lang locale="zh_TW" value="廠家WIP單" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsWipBIll].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsWipBIll].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsWipBIll].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.集成管理.DMS集成平台.数据查询" />
+            <lang locale="zh_HK" value="系統.集成管理.DMS集成平臺.數據查詢" />
+            <lang locale="zh_TW" value="系統.集成管理.DMS集成平臺.數據查詢" />
+        </rs>
+    </resource>
+</permission>
+
