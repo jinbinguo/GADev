@@ -26,7 +26,7 @@
             <userDefined>false</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDPanel</classType>
             <isContainer>true</isContainer>
-            <constraints>0,0,400,192</constraints>
+            <constraints>0,0,400,245</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -59,7 +59,7 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
-            <constraints>10,81,270,19</constraints>
+            <constraints>297,71,270,19</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -79,7 +79,7 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
-            <constraints>10,105,270,19</constraints>
+            <constraints>297,95,270,19</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -99,7 +99,7 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
-            <constraints>10,129,270,19</constraints>
+            <constraints>9,108,270,19</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -119,19 +119,10 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDCheckBox</classType>
             <isContainer>false</isContainer>
-            <constraints>10,153,270,19</constraints>
+            <constraints>9,132,270,19</constraints>
             <tabIndex>11</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
-            <properties>
-                <property>
-                    <name>visible</name>
-                    <type>boolean</type>
-                    <value>uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[chkscheduled].properties.property[visible].value</value>
-                    <isMultiLan>false</isMultiLan>
-                    <userDefined>true</userDefined>
-                </property>
-            </properties>
             <propertyBindings>
                 <propertyBinding>
                     <propertyName>selected</propertyName>
@@ -187,6 +178,55 @@
                     <name>visible</name>
                     <type>boolean</type>
                     <value>uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[conttypeCode].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="CoreUI" />
+            </parent>
+        </component>
+        <component>
+            <name>contsettleObject</name>
+            <alias>uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[contsettleObject].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>10,81,270,19</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[contsettleObject].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[contsettleObject].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[contsettleObject].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[contsettleObject].properties.property[visible].value</value>
                     <isMultiLan>false</isMultiLan>
                     <userDefined>true</userDefined>
                 </property>
@@ -319,15 +359,6 @@
             <tabIndex>10</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
-            <properties>
-                <property>
-                    <name>visible</name>
-                    <type>boolean</type>
-                    <value>uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[boxDeletedStatus].properties.property[visible].value</value>
-                    <isMultiLan>false</isMultiLan>
-                    <userDefined>true</userDefined>
-                </property>
-            </properties>
             <propertyBindings>
                 <propertyBinding>
                     <propertyName>selectedItem</propertyName>
@@ -353,13 +384,6 @@
             <herited>false</herited>
             <bimUIObjectPK />
             <properties>
-                <property>
-                    <name>visible</name>
-                    <type>boolean</type>
-                    <value>uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[txttypeCode].properties.property[visible].value</value>
-                    <isMultiLan>false</isMultiLan>
-                    <userDefined>true</userDefined>
-                </property>
                 <property>
                     <name>horizontalAlignment</name>
                     <type>int</type>
@@ -392,6 +416,49 @@
                     <bindingObject>editData</bindingObject>
                     <bindingField>typeCode</bindingField>
                     <fieldType>String</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>settleObject</name>
+            <alias>uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[settleObject].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDComboBox</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>13</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>items</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[settleObject].properties.property[items].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>required</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[settleObject].properties.property[required].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contsettleObject" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>selectedItem</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>settleObject</bindingField>
+                    <fieldType>com.kingdee.eas.auto4s.bdm.rsm.SettlementObjectEnum</fieldType>
                     <accessType>2</accessType>
                     <autoMode>false</autoMode>
                     <herited>false</herited>
@@ -587,12 +654,6 @@
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[boxDeletedStatus].properties.property[visible].value">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_HK" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
         <rs key="uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[btnPrintPreview].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
@@ -623,12 +684,6 @@
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[chkscheduled].properties.property[visible].value">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_HK" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
         <rs key="uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[contdeletedStatus].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
@@ -640,6 +695,36 @@
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_HK" value="false" />
             <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[contsettleObject].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[contsettleObject].properties.property[boundLabelLength].value">
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_CN" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[contsettleObject].properties.property[boundLabelText].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="结算对象" />
+            <lang locale="zh_HK" value="結算對象" />
+            <lang locale="zh_TW" value="結算對象" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[contsettleObject].properties.property[boundLabelUnderline].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[contsettleObject].properties.property[visible].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[conttypeCode].alias">
             <lang locale="en_US" value="null" />
@@ -707,6 +792,29 @@
             <lang locale="zh_HK" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[settleObject].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="结算对象" />
+            <lang locale="zh_HK" value="結算對象" />
+            <lang locale="zh_TW" value="結算對象" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[settleObject].extendedProperty.requiredPrompt">
+            <lang locale="en_US" value="结算对象" />
+            <lang locale="zh_CN" value="结算对象" />
+            <lang locale="zh_TW" value="结算对象" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[settleObject].properties.property[items].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="[Enum]com.kingdee.eas.auto4s.bdm.rsm.SettlementObjectEnum" />
+            <lang locale="zh_HK" value="[Enum]com.kingdee.eas.auto4s.bdm.rsm.SettlementObjectEnum" />
+            <lang locale="zh_TW" value="[Enum]com.kingdee.eas.auto4s.bdm.rsm.SettlementObjectEnum" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[settleObject].properties.property[required].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
         <rs key="uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[txtDescription].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
@@ -749,6 +857,11 @@
             <lang locale="zh_HK" value="類別代碼" />
             <lang locale="zh_TW" value="類別代碼" />
         </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[txttypeCode].extendedProperty.requiredPrompt">
+            <lang locale="en_US" value="类别代码" />
+            <lang locale="zh_CN" value="类别代码" />
+            <lang locale="zh_TW" value="类别代码" />
+        </rs>
         <rs key="uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[txttypeCode].properties.property[horizontalAlignment].value">
             <lang locale="en_US" value="2" />
             <lang locale="zh_CN" value="2" />
@@ -762,12 +875,6 @@
             <lang locale="zh_TW" value="100" />
         </rs>
         <rs key="uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[txttypeCode].properties.property[required].value">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_HK" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="uiObject[com.kingdee.eas.ga.rs.client.WEditUI].components.component[txttypeCode].properties.property[visible].value">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_HK" value="true" />

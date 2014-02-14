@@ -198,6 +198,26 @@
                 <key name="name" value="CFTypeCode" />
             </mappingField>
         </ownProperty>
+        <ownProperty>
+            <name>settleObject</name>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.W].properties.ownProperty[settleObject].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.W].properties.ownProperty[settleObject].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Enum</dataType>
+            <metadataRef>com.kingdee.eas.auto4s.bdm.rsm.SettlementObjectEnum</metadataRef>
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>80</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.ga.rs.app.W].properties.ownProperty[settleObject].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFSettleObject" />
+            </mappingField>
+        </ownProperty>
     </properties>
     <logicalKey>
         <name>id</name>
@@ -379,6 +399,79 @@
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.W].properties.ownProperty[settleObject].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="结算对象" />
+            <lang locale="zh_HK" value="結算對象" />
+            <lang locale="zh_TW" value="結算對象" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.W].properties.ownProperty[settleObject].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="CUST" />
+            <lang locale="zh_HK" value="CUST" />
+            <lang locale="zh_TW" value="CUST" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.W].properties.ownProperty[settleObject].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="结算对象" />
+            <lang locale="zh_HK" value="結算對象" />
+            <lang locale="zh_TW" value="結算對象" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.W].properties.ownProperty[settleObject].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.W].properties.ownProperty[settleObject].extendedProperty.bizDataType">
+            <lang locale="en_US" value="ENUM" />
+            <lang locale="zh_CN" value="ENUM" />
+            <lang locale="zh_TW" value="ENUM" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.W].properties.ownProperty[settleObject].extendedProperty.defaultValue">
+            <lang locale="en_US" value="CUST" />
+            <lang locale="zh_CN" value="CUST" />
+            <lang locale="zh_TW" value="CUST" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.W].properties.ownProperty[settleObject].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.W].properties.ownProperty[settleObject].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.W].properties.ownProperty[settleObject].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.W].properties.ownProperty[settleObject].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.W].properties.ownProperty[settleObject].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.W].properties.ownProperty[settleObject].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.W].properties.ownProperty[settleObject].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.W].properties.ownProperty[settleObject].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.ga.rs.app.W].properties.ownProperty[typeCode].alias">
             <lang locale="en_US" value="null" />

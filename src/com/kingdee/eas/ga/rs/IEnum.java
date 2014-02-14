@@ -14,8 +14,10 @@ import com.kingdee.util.enums.StringEnum;
 public class IEnum extends StringEnum
 {
     public static final String I_VALUE = "I";//alias=I
+    public static final String X_VALUE = "X";//alias=X
 
     public static final IEnum I = new IEnum("I", I_VALUE);
+    public static final IEnum X = new IEnum("X", X_VALUE);
 
     /**
      * construct function

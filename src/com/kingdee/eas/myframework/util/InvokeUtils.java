@@ -53,7 +53,33 @@ public class InvokeUtils implements Serializable{
 		Class[] newParamTypes = autoAddCtxInParamTypes(ctx, paramTypes);
 		return getMethod(owner, methodName, newParamTypes);
 	}
+	/**
+	 *  待研究方法执行时如何跳过
+	 * @param owner
+	 * @param methodName
+	 * @param paramTypes
+	 * @param clsExec 执行的类
+	 * @return
+	 * @throws EASBizException
+	 * @throws BOSException
 	
+	public static Method getMethod(Object owner, String methodName, Class[] paramTypes, Class clsExec) throws EASBizException,BOSException {
+		Method method = null;
+		Class cls = owner.getClass();
+		while (method == null && cls != null) {
+			try {
+				if (cls.getName().equals(clsExec.getName()))
+						method = cls.getDeclaredMethod(methodName, paramTypes);
+			} catch (Exception e) {}
+			cls = cls.getSuperclass();
+		}
+		if (method == null) {
+			throw new EASBizException(new NumericExceptionSubItem("",String.format("执行对象%s不存在方法%s(%s)",clsExec.getName(),methodName,paramTypes.toString())));
+		}
+		method.setAccessible(true);
+		return method;
+	}
+	 */
 	public static Method getMethod(Object owner, String methodName, Class[] paramTypes) throws EASBizException,BOSException {
 		Method method = null;
 		Class cls = owner.getClass();
@@ -104,6 +130,8 @@ public class InvokeUtils implements Serializable{
 		}
 		return returnValues;
 	}
+	
+
 	
 	private static Class[] autoAddCtxInParamTypes(Context ctx, Class[] paramTypes) {
 		if (ctx == null) return paramTypes;

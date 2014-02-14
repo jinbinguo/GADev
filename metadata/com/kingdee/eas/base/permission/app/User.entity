@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entityObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.base.permission.app</package>
+    <name>User</name>
+    <alias>entityObject[com.kingdee.eas.base.permission.app.User].alias</alias>
+    <methods>
+        <method>
+            <innerID>28f2fdc1-00fb-1000-e000-0001c0a813e3</innerID>
+            <name>getValue</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>28f2fdc1-00fb-1000-e000-0002c0a813e3</innerID>
+            <name>getValue</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>28f2fdc1-00fb-1000-e000-0003c0a813e3</innerID>
+            <name>getValue</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>28f2fdc1-00fb-1000-e000-0004c0a813e3</innerID>
+            <name>getCollection</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>28f2fdc1-00fb-1000-e000-0005c0a813e3</innerID>
+            <name>getCollection</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>28f2fdc1-00fb-1000-e000-0006c0a813e3</innerID>
+            <name>getCollection</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>a18d5422-00fc-1000-e000-0001c0a813e4</innerID>
+            <name>update</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>e4f243f7-00fa-1000-e000-0002c0a813e3</innerID>
+            <name>getUserByID</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>e62081ce-00fa-1000-e000-0004c0a813e3</innerID>
+            <name>forbidUsers</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>75ceb99c-00fb-1000-e000-0001c0a813e3</innerID>
+            <name>lockUsers</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>3e0cfe0c-00fb-1000-e000-0001c0a813e3</innerID>
+            <name>updatePass</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>a7abd3bb-0101-1000-e000-0009c0a813a8</innerID>
+            <name>getUser</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>bcd5edca-0104-1000-e000-0261c0a8127c</innerID>
+            <name>checkOrgIsRelatedWithPerms</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>1c7bdf98-0115-1000-e000-0007c0a812db</innerID>
+            <name>checkOrgIsRelatedWithPerms</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>e60e9fe2-0105-1000-e000-0055c0a8127c</innerID>
+            <name>checkUserIsRelatedWithPerms</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>23e1e4a8-0106-1000-e000-0002c0a8127c</innerID>
+            <name>getDeletedUserID</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>a1d77bc5-010b-1000-e000-000dc0a81293</innerID>
+            <name>changeCtrlUnit</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>e6bdbb03-010c-1000-e000-0001c0a81293</innerID>
+            <name>createUserByPerson</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>43413587-0117-1000-e000-0008c0a812db</innerID>
+            <name>batchCreateUserByPerson</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>7ebe0706-010f-1000-e000-0003c0a812eb</innerID>
+            <name>updateLoginAuthorWay</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>984d430c-010f-1000-e000-0003c0a812eb</innerID>
+            <name>callBackUser</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>d6563bfa-010f-1000-e000-0002c0a812eb</innerID>
+            <name>haveThisNumber</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>d6563bfa-010f-1000-e000-0003c0a812eb</innerID>
+            <name>getUserInfoByNumber</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>5c261403-0110-1000-e000-0005c0a812eb</innerID>
+            <name>notOrgRangeUseCol</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>06ddd81d-0114-1000-e000-0008c0a812db</innerID>
+            <name>setUserLoginAuthWay</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>06ddd81d-0114-1000-e000-000ac0a812db</innerID>
+            <name>setRegisterResult</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>43413587-0117-1000-e000-0009c0a812db</innerID>
+            <name>saveRoleInfo</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>1bb12d9f-10c8-484a-8336-eb3d4821525c</innerID>
+            <name>updateAndDeleteOrgPermAndRole</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>8cffeb73-954f-4ef1-946d-da2d9a502b2f</innerID>
+            <name>deleteRelativePermAndRole</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>efb2357e-d204-4523-8b95-17886cc55a11</innerID>
+            <name>update</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>6fe955cb-9034-474b-bfd1-3eceadf80f43</innerID>
+            <name>matchPassword</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>4db7478f-7201-4a2c-ac84-3368e72b0b1d</innerID>
+            <name>findUserByAD</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>a340af57-b02a-4a68-b2f2-f76e6f56c7d9</innerID>
+            <name>batchCreateUserByPerson</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>b13de141-9dde-4e0d-837d-7f1c55889d2f</innerID>
+            <name>addnew</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>8be51951-ee43-4cd4-9692-a11f63c6c291</innerID>
+            <name>saveRoleInfo</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>9190539e-13ca-4add-85a3-0abc0efaafa8</innerID>
+            <name>getPersonWithContact</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>8f6d1164-c601-4b12-b1cf-50495149a86c</innerID>
+            <name>createWeiBoUser</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>97b9c480-b67f-4652-87ca-386be223a9fa</innerID>
+            <name>update</name>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <properties>
+        <ownProperty>
+            <name>number</name>
+            <length>80</length>
+            <precision>80</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>name</name>
+            <length>255</length>
+            <precision>255</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>type</name>
+            <precision>4</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>description</name>
+            <length>255</length>
+            <precision>255</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>password</name>
+            <length>80</length>
+            <precision>80</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>isDelete</name>
+            <length>4</length>
+            <precision>4</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>isLocked</name>
+            <length>4</length>
+            <precision>4</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>isForbidden</name>
+            <length>4</length>
+            <precision>4</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>effectiveDate</name>
+            <length>8</length>
+            <precision>8</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>invalidationDate</name>
+            <length>8</length>
+            <precision>8</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>defLocale</name>
+            <precision>80</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>isRegister</name>
+            <length>4</length>
+            <precision>4</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>errCount</name>
+            <length>4</length>
+            <precision>4</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>PWEffectiveDate</name>
+            <length>8</length>
+            <precision>8</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>lockedTime</name>
+            <length>8</length>
+            <precision>8</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>bizAdmin</name>
+            <length>4</length>
+            <precision>4</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>changedPW</name>
+            <length>4</length>
+            <precision>4</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>agentUser</name>
+            <length>4</length>
+            <precision>4</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>loginAuthorWay</name>
+            <precision>4</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>pwdHisStr</name>
+            <length>80</length>
+            <precision>80</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>email</name>
+            <length>80</length>
+        </ownProperty>
+        <ownProperty>
+            <name>homePhone</name>
+            <length>80</length>
+        </ownProperty>
+        <ownProperty>
+            <name>officePhone</name>
+            <length>80</length>
+        </ownProperty>
+        <ownProperty>
+            <name>backupEMail</name>
+            <length>80</length>
+        </ownProperty>
+        <ownProperty>
+            <name>cell</name>
+            <length>80</length>
+        </ownProperty>
+        <ownProperty>
+            <name>userType</name>
+            <alias>entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[userType].alias</alias>
+            <description>entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[userType].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Enum</dataType>
+            <metadataRef>com.kingdee.eas.ga.basedata.UserTypeEnum</metadataRef>
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>0</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[userType].defaultValue</defaultValue>
+            <displayFormat />
+        </ownProperty>
+    </properties>
+    <resource>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].description">
+            <lang locale="zh_CN" value="用户管理" />
+            <lang locale="zh_HK" value="用戶管理" />
+            <lang locale="zh_TW" value="用戶管理" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.base.permission.client.UserEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.base.permission.client.UserEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.base.permission.client.UserEditUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.base.permission.client.UserListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.base.permission.client.UserListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.base.permission.client.UserListUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[PWEffectiveDate].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[PWEffectiveDate].extendedProperty.bizDataType">
+            <lang locale="en_US" value="DATE" />
+            <lang locale="zh_CN" value="DATE" />
+            <lang locale="zh_TW" value="DATE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[PWEffectiveDate].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[adNumber].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[adNumber].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[adNumber].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[agentUser].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[agentUser].extendedProperty.bizDataType">
+            <lang locale="en_US" value="BOOLEAN" />
+            <lang locale="zh_CN" value="BOOLEAN" />
+            <lang locale="zh_TW" value="BOOLEAN" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[agentUser].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[backupEMail].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[backupEMail].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[bizAdmin].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[bizAdmin].extendedProperty.bizDataType">
+            <lang locale="en_US" value="BOOLEAN" />
+            <lang locale="zh_CN" value="BOOLEAN" />
+            <lang locale="zh_TW" value="BOOLEAN" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[bizAdmin].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[cell].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[cell].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[changedPW].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[changedPW].extendedProperty.bizDataType">
+            <lang locale="en_US" value="BOOLEAN" />
+            <lang locale="zh_CN" value="BOOLEAN" />
+            <lang locale="zh_TW" value="BOOLEAN" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[changedPW].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[customerID].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[customerID].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[customerID].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[defLocale].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[defLocale].extendedProperty.bizDataType">
+            <lang locale="en_US" value="ENUM" />
+            <lang locale="zh_CN" value="ENUM" />
+            <lang locale="zh_TW" value="ENUM" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[defLocale].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[description].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[description].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[description].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[effectiveDate].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[effectiveDate].extendedProperty.bizDataType">
+            <lang locale="en_US" value="DATE" />
+            <lang locale="zh_CN" value="DATE" />
+            <lang locale="zh_TW" value="DATE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[effectiveDate].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[email].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[email].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[errCount].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[errCount].extendedProperty.bizDataType">
+            <lang locale="en_US" value="INTEGER" />
+            <lang locale="zh_CN" value="INTEGER" />
+            <lang locale="zh_TW" value="INTEGER" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[errCount].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[homePhone].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[homePhone].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[invalidationDate].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[invalidationDate].extendedProperty.bizDataType">
+            <lang locale="en_US" value="DATE" />
+            <lang locale="zh_CN" value="DATE" />
+            <lang locale="zh_TW" value="DATE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[invalidationDate].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[isDelete].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[isDelete].extendedProperty.bizDataType">
+            <lang locale="en_US" value="BOOLEAN" />
+            <lang locale="zh_CN" value="BOOLEAN" />
+            <lang locale="zh_TW" value="BOOLEAN" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[isDelete].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[isForbidden].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[isForbidden].extendedProperty.bizDataType">
+            <lang locale="en_US" value="BOOLEAN" />
+            <lang locale="zh_CN" value="BOOLEAN" />
+            <lang locale="zh_TW" value="BOOLEAN" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[isForbidden].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[isLocked].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[isLocked].extendedProperty.bizDataType">
+            <lang locale="en_US" value="BOOLEAN" />
+            <lang locale="zh_CN" value="BOOLEAN" />
+            <lang locale="zh_TW" value="BOOLEAN" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[isLocked].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[isRegister].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[isRegister].extendedProperty.bizDataType">
+            <lang locale="en_US" value="BOOLEAN" />
+            <lang locale="zh_CN" value="BOOLEAN" />
+            <lang locale="zh_TW" value="BOOLEAN" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[isRegister].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[lockedTime].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[lockedTime].extendedProperty.bizDataType">
+            <lang locale="en_US" value="TIME" />
+            <lang locale="zh_CN" value="TIME" />
+            <lang locale="zh_TW" value="TIME" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[lockedTime].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[loginAuthorWay].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[loginAuthorWay].extendedProperty.bizDataType">
+            <lang locale="en_US" value="ENUM" />
+            <lang locale="zh_CN" value="ENUM" />
+            <lang locale="zh_TW" value="ENUM" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[loginAuthorWay].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[name].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[name].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[name].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[number].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[number].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[number].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[officePhone].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[officePhone].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[password].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[password].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[password].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[pwdHisStr].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[pwdHisStr].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[pwdHisStr].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[referId].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[referId].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[referId].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[supplierID].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[supplierID].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[supplierID].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[type].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[type].extendedProperty.bizDataType">
+            <lang locale="en_US" value="ENUM" />
+            <lang locale="zh_CN" value="ENUM" />
+            <lang locale="zh_TW" value="ENUM" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[type].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[userType].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="账户类别" />
+            <lang locale="zh_HK" value="賬戶類別" />
+            <lang locale="zh_TW" value="賬戶類別" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[userType].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="Repair" />
+            <lang locale="zh_HK" value="Repair" />
+            <lang locale="zh_TW" value="Repair" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.base.permission.app.User].properties.ownProperty[userType].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</entityObject>
+

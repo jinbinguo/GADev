@@ -1,0 +1,1204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataTable xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.base.permission.app</package>
+    <name>T_PM_User</name>
+    <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].alias</alias>
+    <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].description</description>
+    <userDefined>false</userDefined>
+    <bizUnitPK>com.kingdee.eas.base.permission.User</bizUnitPK>
+    <columns>
+        <column>
+            <name>FID</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FID].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>false</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>44</precision>
+        </column>
+        <column>
+            <name>FCreatorID</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCreatorID].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCreatorID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FCreateTime</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCreateTime].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCreateTime].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>8</precision>
+        </column>
+        <column>
+            <name>FLastUpdateUserID</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLastUpdateUserID].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLastUpdateUserID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FLastUpdateTime</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLastUpdateTime].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLastUpdateTime].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>8</precision>
+        </column>
+        <column>
+            <name>FControlUnitID</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FControlUnitID].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FControlUnitID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FNumber</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FNumber].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FNumber].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>80</precision>
+        </column>
+        <column>
+            <name>FName</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FName].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FName].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>true</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>255</length>
+            <scale>0</scale>
+            <precision>255</precision>
+        </column>
+        <column>
+            <name>FType</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FType].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FType].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>4</precision>
+        </column>
+        <column>
+            <name>FDescription</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FDescription].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FDescription].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>true</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>255</length>
+            <scale>0</scale>
+            <precision>255</precision>
+        </column>
+        <column>
+            <name>FPassword</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPassword].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPassword].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>80</precision>
+        </column>
+        <column>
+            <name>FIsDelete</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsDelete].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsDelete].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>4</precision>
+        </column>
+        <column>
+            <name>FIsLocked</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsLocked].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsLocked].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>4</precision>
+        </column>
+        <column>
+            <name>FForbidden</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FForbidden].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FForbidden].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>4</precision>
+        </column>
+        <column>
+            <name>FEffectiveDate</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FEffectiveDate].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FEffectiveDate].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>8</precision>
+        </column>
+        <column>
+            <name>FInvalidationDate</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FInvalidationDate].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FInvalidationDate].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>8</precision>
+        </column>
+        <column>
+            <name>FDefaultLocale</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FDefaultLocale].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FDefaultLocale].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>80</precision>
+        </column>
+        <column>
+            <name>FIsRegister</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsRegister].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsRegister].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>4</precision>
+        </column>
+        <column>
+            <name>FErrCount</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FErrCount].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FErrCount].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>4</precision>
+        </column>
+        <column>
+            <name>FGroupID</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FGroupID].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FGroupID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FPersonId</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPersonId].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPersonId].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FCustomerID</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCustomerID].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCustomerID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FSupplierID</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FSupplierID].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FSupplierID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FSecurityId</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FSecurityId].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FSecurityId].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FPWEffectiveDate</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPWEffectiveDate].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPWEffectiveDate].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>8</precision>
+        </column>
+        <column>
+            <name>FLockedTime</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLockedTime].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLockedTime].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>8</precision>
+        </column>
+        <column>
+            <name>FIsBizAdmin</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsBizAdmin].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsBizAdmin].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue>0</defaultValue>
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>4</precision>
+        </column>
+        <column>
+            <name>FIsChangedPW</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsChangedPW].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsChangedPW].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue>1</defaultValue>
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>4</precision>
+        </column>
+        <column>
+            <name>FDefOrgUnitID</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FDefOrgUnitID].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FDefOrgUnitID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FMainRoleID</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FMainRoleID].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FMainRoleID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FAgentUser</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FAgentUser].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FAgentUser].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue>0</defaultValue>
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>4</precision>
+        </column>
+        <column>
+            <name>FLoginAuthorWay</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLoginAuthorWay].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLoginAuthorWay].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue>0</defaultValue>
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>4</precision>
+        </column>
+        <column>
+            <name>FPwdHisStr</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPwdHisStr].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPwdHisStr].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>80</precision>
+        </column>
+        <column>
+            <name>FReferId</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FReferId].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FReferId].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FCell</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCell].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCell].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FBackupEMail</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FBackupEMail].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FBackupEMail].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FHomePhone</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FHomePhone].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FHomePhone].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FOfficePhone</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FOfficePhone].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FOfficePhone].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FEMail</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FEMail].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FEMail].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FAdNumber</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FAdNumber].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FAdNumber].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>255</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFUserType</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[CFUserType].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[CFUserType].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+    </columns>
+    <primaryKey>
+        <name>PK_User</name>
+        <userDefined>false</userDefined>
+        <primaryKeyColumns>
+            <primaryKeyColumn>
+                <indexID>0</indexID>
+                <sortType>ASC</sortType>
+                <column>
+                    <key name="name" value="FID" />
+                </column>
+            </primaryKeyColumn>
+        </primaryKeyColumns>
+    </primaryKey>
+    <indexes>
+        <index>
+            <name>UX_PM_User</name>
+            <isUnique>true</isUnique>
+            <isClusteredIndex>false</isClusteredIndex>
+            <userDefined>false</userDefined>
+            <indexColumns>
+                <indexColumn>
+                    <indexID>0</indexID>
+                    <sortType>ASC</sortType>
+                    <column>
+                        <key name="name" value="FID" />
+                    </column>
+                </indexColumn>
+                <indexColumn>
+                    <indexID>1</indexID>
+                    <sortType>ASC</sortType>
+                    <column>
+                        <key name="name" value="FType" />
+                    </column>
+                </indexColumn>
+            </indexColumns>
+        </index>
+    </indexes>
+    <foreignKeys>
+        <foreignKey>
+            <name>FK_PM_UserReator</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="T_PM_User" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FCreatorID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_PM_UserAstUU</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="T_PM_User" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FLastUpdateUserID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_PM_UserCU</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.org" />
+                <key name="name" value="T_ORG_CtrlUnit" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FControlUnitID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_PM_UserRoup</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="T_PM_UserGroup" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FGroupID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_PM_UserErson</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.person" />
+                <key name="name" value="T_BD_Person" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FPersonId" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_PM_UserEcurity</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="T_PM_Security" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FSecurityId" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_PM_UserEfOU</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.org" />
+                <key name="name" value="T_ORG_BaseUnit" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FDefOrgUnitID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_PM_UserAinRole</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="T_PM_Role" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FMainRoleID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+    </foreignKeys>
+    <resource>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用户" />
+            <lang locale="zh_TW" value="用戶表" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[CFUserType].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="账户类别" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[CFUserType].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="账户类别" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FAdNumber].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="AD账号" />
+            <lang locale="zh_TW" value="AD帳號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FAdNumber].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="AD账号" />
+            <lang locale="zh_TW" value="AD帳號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FAgentUser].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="代理用户" />
+            <lang locale="zh_TW" value="FAgentUser" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FAgentUser].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="是否代理用戶" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FBackupEMail].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="备用电子邮件 " />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FBackupEMail].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="备用电子邮件 " />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCell].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="手机号码" />
+            <lang locale="zh_TW" value="手機號碼" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCell].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="手机号码" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FControlUnitID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="控制单元" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FControlUnitID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="控制单元" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCreateTime].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建时间" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCreateTime].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建时间" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCreatorID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建者" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCreatorID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建者" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCustomerID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="客户id" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCustomerID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="客户id" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FDefOrgUnitID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="缺省组织" />
+            <lang locale="zh_TW" value="缺省組織" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FDefOrgUnitID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="缺省组织" />
+            <lang locale="zh_TW" value="缺省組織" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FDefaultLocale].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="缺省使用语言" />
+            <lang locale="zh_TW" value="默認語言" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FDefaultLocale].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="缺省使用语言" />
+            <lang locale="zh_TW" value="默認語言" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FDescription].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="描述" />
+            <lang locale="zh_TW" value="說明" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FDescription].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="描述，多语言字段" />
+            <lang locale="zh_TW" value="說明" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FEMail].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="电子邮件" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FEMail].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="电子邮件" />
+            <lang locale="zh_TW" value="FEMail" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FEffectiveDate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="生效时间" />
+            <lang locale="zh_TW" value="生效時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FEffectiveDate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用户生效时间" />
+            <lang locale="zh_TW" value="生效時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FErrCount].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="登录错误次数" />
+            <lang locale="zh_TW" value="錯誤次數" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FErrCount].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="登录错误次数。记录错误次数，如果正确一次就恢复置0。" />
+            <lang locale="zh_TW" value="錯誤次數" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FForbidden].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否禁用" />
+            <lang locale="zh_TW" value="是否禁用" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FForbidden].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否禁用用户" />
+            <lang locale="zh_TW" value="是否禁用" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FGroupID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="所属用户组" />
+            <lang locale="zh_TW" value="用戶組內碼" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FGroupID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="所属用户组" />
+            <lang locale="zh_TW" value="用戶組內碼" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FHomePhone].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="家庭电话" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FHomePhone].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="家庭电话" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FInvalidationDate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="失效时间" />
+            <lang locale="zh_TW" value="失效時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FInvalidationDate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用户失效时间" />
+            <lang locale="zh_TW" value="失效時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsBizAdmin].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否为业务管理员" />
+            <lang locale="zh_TW" value="授權權" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsBizAdmin].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否为业务管理员" />
+            <lang locale="zh_TW" value="授權權" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsChangedPW].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否修改过密码" />
+            <lang locale="zh_TW" value="修改過密碼" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsChangedPW].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否修改过密码" />
+            <lang locale="zh_TW" value="修改過密碼" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsDelete].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否是已经删除" />
+            <lang locale="zh_TW" value="是否刪除" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsDelete].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用于用户删除，决定用户是否是已经删除。目前采取假删除用户的策略，通过设置这个标志位来决定用户是否被删除。" />
+            <lang locale="zh_TW" value="是否刪除" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsLocked].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否锁定" />
+            <lang locale="zh_TW" value="是否鎖定" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsLocked].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否锁定，根据安全策略，在登录时连续错误一定次数后锁定用户。" />
+            <lang locale="zh_TW" value="是否鎖定" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsRegister].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否注册" />
+            <lang locale="zh_TW" value="是否註冊" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsRegister].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否注册。一旦启用注册机制，新建的用户必须注册后方可以登录。" />
+            <lang locale="zh_TW" value="是否註冊" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLastUpdateTime].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改时间" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLastUpdateTime].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改时间" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLastUpdateUserID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改者" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLastUpdateUserID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改者" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLockedTime].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用户锁定时间" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLockedTime].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用户锁定时间" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLoginAuthorWay].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="登陆认证方式" />
+            <lang locale="zh_TW" value="FLoginAuthorWay" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLoginAuthorWay].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="登陆认证方式" />
+            <lang locale="zh_TW" value="FLoginAuthorWay" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FMainRoleID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="主角色" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FMainRoleID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FName].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用户实名" />
+            <lang locale="zh_TW" value="名稱" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FName].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用户实名（用于查询）" />
+            <lang locale="zh_TW" value="名稱" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FNumber].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用户名" />
+            <lang locale="zh_TW" value="編碼" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FNumber].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用户名，唯一标识" />
+            <lang locale="zh_TW" value="編碼" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FOfficePhone].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="办公室电话" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FOfficePhone].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="办公室电话" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPWEffectiveDate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="密码生效日期" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPWEffectiveDate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="密码生效日期" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPassword].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="密码" />
+            <lang locale="zh_TW" value="密碼" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPassword].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="加密以后的密码" />
+            <lang locale="zh_TW" value="密碼" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPersonId].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="对应的操作人" />
+            <lang locale="zh_TW" value="人員內碼" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPersonId].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="对应的操作人，连接属性" />
+            <lang locale="zh_TW" value="人員內碼" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPwdHisStr].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="历史密码" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPwdHisStr].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="历史密码" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FReferId].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="引用id" />
+            <lang locale="zh_TW" value="引用id" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FReferId].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="引用其他的对象的id" />
+            <lang locale="zh_TW" value="引用id" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FSecurityId].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="密码策略" />
+            <lang locale="zh_TW" value="密碼安全" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FSecurityId].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="密码策略" />
+            <lang locale="zh_TW" value="密碼安全" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FSupplierID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="供应商id" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FSupplierID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="供应商id" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FType].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用户类型" />
+            <lang locale="zh_TW" value="用戶類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FType].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用户类型" />
+            <lang locale="zh_TW" value="用戶類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用户管理" />
+            <lang locale="zh_TW" value="用戶表" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</dataTable>
+

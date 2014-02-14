@@ -11309,6 +11309,33 @@
             <parent>com.kingdee.eas.ga.syncdata.syncdata</parent>
             <boType>9FEBF162</boType>
         </metaDataBrief>
+        <metaDataBrief>
+            <packageName />
+            <name>com.kingdee.eas.ga.rs.rs</name>
+            <metaDataType>pack</metaDataType>
+            <alias>metaDataBriefView[.com_kingdee_eas_base_codingrule].metaDataBriefs.metaDataBrief[com.kingdee.eas.ga.rs.rs].alias</alias>
+            <description>metaDataBriefView[.com_kingdee_eas_base_codingrule].metaDataBriefs.metaDataBrief[com.kingdee.eas.ga.rs.rs].description</description>
+            <parent>com.kingdee.eas.ga.ga</parent>
+            <boType />
+        </metaDataBrief>
+        <metaDataBrief>
+            <packageName />
+            <name>com.kingdee.eas.ga.rs.app.CustomerAccount</name>
+            <metaDataType>enty</metaDataType>
+            <alias>metaDataBriefView[.com_kingdee_eas_base_codingrule].metaDataBriefs.metaDataBrief[com.kingdee.eas.ga.rs.app.CustomerAccount].alias</alias>
+            <description>metaDataBriefView[.com_kingdee_eas_base_codingrule].metaDataBriefs.metaDataBrief[com.kingdee.eas.ga.rs.app.CustomerAccount].description</description>
+            <parent>com.kingdee.eas.ga.rs.rs</parent>
+            <boType>8B9E1F44</boType>
+        </metaDataBrief>
+        <metaDataBrief>
+            <packageName />
+            <name>com.kingdee.eas.ga.rs.app.W</name>
+            <metaDataType>enty</metaDataType>
+            <alias>metaDataBriefView[.com_kingdee_eas_base_codingrule].metaDataBriefs.metaDataBrief[com.kingdee.eas.ga.rs.app.W].alias</alias>
+            <description>metaDataBriefView[.com_kingdee_eas_base_codingrule].metaDataBriefs.metaDataBrief[com.kingdee.eas.ga.rs.app.W].description</description>
+            <parent>com.kingdee.eas.ga.rs.rs</parent>
+            <boType>9871DC0C</boType>
+        </metaDataBrief>
     </metaDataBriefs>
     <resource>
         <rs key="metaDataBriefView[.com_kingdee_eas_base_codingrule].alias">
@@ -13294,7 +13321,7 @@
         <rs key="metaDataBriefView[.com_kingdee_eas_base_codingrule].metaDataBriefs.metaDataBrief[com.kingdee.eas.auto4s.rsm.rs.rs].alias">
             <lang locale="en_US" value="rs" />
             <lang locale="zh_CN" value="维修服务" />
-            <lang locale="zh_TW" value="维修服务" />
+            <lang locale="zh_TW" value="維修服務" />
         </rs>
         <rs key="metaDataBriefView[.com_kingdee_eas_base_codingrule].metaDataBriefs.metaDataBrief[com.kingdee.eas.auto4s.rsm.rs.rs].description">
             <lang locale="en_US" value="null" />
@@ -13303,8 +13330,8 @@
         </rs>
         <rs key="metaDataBriefView[.com_kingdee_eas_base_codingrule].metaDataBriefs.metaDataBrief[com.kingdee.eas.auto4s.rsm.rsm].alias">
             <lang locale="en_US" value="rsm" />
-            <lang locale="zh_CN" value="售后服务管理" />
-            <lang locale="zh_TW" value="售后服务管理" />
+            <lang locale="zh_CN" value="维修管理" />
+            <lang locale="zh_TW" value="維修管理" />
         </rs>
         <rs key="metaDataBriefView[.com_kingdee_eas_base_codingrule].metaDataBriefs.metaDataBrief[com.kingdee.eas.auto4s.rsm.rsm].description">
             <lang locale="en_US" value="null" />
@@ -23880,6 +23907,36 @@
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_TW" value="單據基礎範本" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_codingrule].metaDataBriefs.metaDataBrief[com.kingdee.eas.ga.rs.app.CustomerAccount].alias">
+            <lang locale="en_US" value="CustomerAccount" />
+            <lang locale="zh_CN" value="客户账户" />
+            <lang locale="zh_TW" value="客戶賬戶" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_codingrule].metaDataBriefs.metaDataBrief[com.kingdee.eas.ga.rs.app.CustomerAccount].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="單級基礎資料範本" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_codingrule].metaDataBriefs.metaDataBrief[com.kingdee.eas.ga.rs.app.W].alias">
+            <lang locale="en_US" value="W" />
+            <lang locale="zh_CN" value="W" />
+            <lang locale="zh_TW" value="W" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_codingrule].metaDataBriefs.metaDataBrief[com.kingdee.eas.ga.rs.app.W].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="W" />
+            <lang locale="zh_TW" value="W" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_codingrule].metaDataBriefs.metaDataBrief[com.kingdee.eas.ga.rs.rs].alias">
+            <lang locale="en_US" value="rs" />
+            <lang locale="zh_CN" value="维修管理" />
+            <lang locale="zh_TW" value="維修管理" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_codingrule].metaDataBriefs.metaDataBrief[com.kingdee.eas.ga.rs.rs].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
         </rs>
     </resource>
 </metaDataBriefView>

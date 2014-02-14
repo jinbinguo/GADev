@@ -725,7 +725,7 @@ public class AbstractRepairWOInfo extends com.kingdee.eas.auto4s.autoframework.c
         put("accountCFG", item);
     }
     /**
-     * Object: 维修工单 's 项目/配件明细 property 
+     * Object: 维修工单 's 项目配件明细 property 
      */
     public com.kingdee.eas.auto4s.rsm.rs.RepairWORWOItemSpEntryCollection getRWOItemSpEntry()
     {

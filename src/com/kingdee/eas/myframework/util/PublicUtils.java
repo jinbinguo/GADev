@@ -11,6 +11,7 @@ import java.util.Set;
 import java.util.Vector;
 
 import com.kingdee.bos.dao.IObjectPK;
+import com.kingdee.bos.dao.IObjectValue;
 import com.kingdee.bos.dao.ormapping.ObjectUuidPK;
 import com.kingdee.eas.myframework.client.MsgBoxEx;
 import com.kingdee.eas.myframework.vo.BaseCollectionWithSort;
@@ -62,7 +63,9 @@ public class PublicUtils implements Serializable {
 					MsgBoxEx.showInfoTable(null, msg, msgTblInfo);
 					SysUtil.abort();
 				}
-				return obj1.equals(obj2);
+				if (obj1 instanceof IObjectValue) {
+					return ((IObjectValue) obj1).getString("id").equals(((IObjectValue)obj2).getString("id"));
+				} else return obj1.equals(obj2);
 			}
 			return false;
 		} catch (Exception e) {

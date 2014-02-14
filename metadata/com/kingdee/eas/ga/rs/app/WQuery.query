@@ -670,6 +670,37 @@
                 <key name="name" value="WQuery" />
             </query>
         </queryField>
+        <queryField>
+            <name>settleObject</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.WQuery].units.queryField[settleObject].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>78c1c19c-58e4-4b07-9522-908b94ce3138</key>
+                    <parentUnit>
+                        <key name="name" value="settleObject" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="W" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="settleObject" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="WQuery" />
+            </query>
+        </queryField>
     </units>
     <defaultFilter>
         <name>defaultFilter</name>
@@ -1270,6 +1301,22 @@
             <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.ga.rs.app.WQuery].units.queryField[scheduled].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.WQuery].units.queryField[settleObject].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="结算对象" />
+            <lang locale="zh_HK" value="結算對象" />
+            <lang locale="zh_TW" value="結算對象" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.WQuery].units.queryField[settleObject].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.WQuery].units.queryField[settleObject].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />

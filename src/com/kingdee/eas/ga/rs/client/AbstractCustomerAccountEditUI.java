@@ -114,11 +114,9 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         this.kDLabelContainer3.setVisible(false);		
         this.kDLabelContainer4.setVisible(false);		
         this.contdeletedStatus.setVisible(false);		
-        this.chkscheduled.setVisible(false);		
         this.txtSimpleName.setVisible(false);		
         this.txtDescription.setVisible(false);		
-        this.boxDeletedStatus.setEnabled(true);		
-        this.boxDeletedStatus.setVisible(false);
+        this.boxDeletedStatus.setEnabled(true);
         // contretailSaleType		
         this.contretailSaleType.setBoundLabelText(resHelper.getString("contretailSaleType.boundLabelText"));		
         this.contretailSaleType.setBoundLabelLength(100);		
@@ -155,12 +153,10 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         this.contsettlementType.setBoundLabelUnderline(true);		
         this.contsettlementType.setVisible(true);
         // txtretailSaleType		
-        this.txtretailSaleType.setVisible(true);		
         this.txtretailSaleType.setHorizontalAlignment(2);		
         this.txtretailSaleType.setMaxLength(100);		
-        this.txtretailSaleType.setRequired(false);
+        this.txtretailSaleType.setRequired(true);
         // txtretailDiscountRate		
-        this.txtretailDiscountRate.setVisible(true);		
         this.txtretailDiscountRate.setHorizontalAlignment(2);		
         this.txtretailDiscountRate.setDataType(1);		
         this.txtretailDiscountRate.setSupportedEmpty(true);		
@@ -169,7 +165,6 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         this.txtretailDiscountRate.setPrecision(2);		
         this.txtretailDiscountRate.setRequired(false);
         // txtrepairDiscountRate		
-        this.txtrepairDiscountRate.setVisible(true);		
         this.txtrepairDiscountRate.setHorizontalAlignment(2);		
         this.txtrepairDiscountRate.setDataType(1);		
         this.txtrepairDiscountRate.setSupportedEmpty(true);		
@@ -178,27 +173,23 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         this.txtrepairDiscountRate.setPrecision(2);		
         this.txtrepairDiscountRate.setRequired(false);
         // txttypeCode		
-        this.txttypeCode.setVisible(true);		
         this.txttypeCode.setHorizontalAlignment(2);		
         this.txttypeCode.setMaxLength(100);		
-        this.txttypeCode.setRequired(false);
+        this.txttypeCode.setRequired(true);
         // prmtfinCustomer		
         this.prmtfinCustomer.setQueryInfo("com.kingdee.eas.basedata.master.cssp.app.CustomerInfoQuery");		
-        this.prmtfinCustomer.setVisible(true);		
         this.prmtfinCustomer.setEditable(true);		
         this.prmtfinCustomer.setDisplayFormat("$name$");		
         this.prmtfinCustomer.setEditFormat("$number$");		
         this.prmtfinCustomer.setCommitFormat("$number$");		
-        this.prmtfinCustomer.setRequired(false);
+        this.prmtfinCustomer.setRequired(true);
         // txtrepairSaleType		
-        this.txtrepairSaleType.setVisible(true);		
         this.txtrepairSaleType.setHorizontalAlignment(2);		
         this.txtrepairSaleType.setMaxLength(100);		
-        this.txtrepairSaleType.setRequired(false);
+        this.txtrepairSaleType.setRequired(true);
         // settlementType		
-        this.settlementType.setVisible(true);		
         this.settlementType.addItems(EnumUtils.getEnumList("com.kingdee.eas.ga.rs.SettlementTypeEnum").toArray());		
-        this.settlementType.setRequired(false);
+        this.settlementType.setRequired(true);
         this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {txtNumber,txtName,txtSimpleName,txtDescription,boxDeletedStatus,chkscheduled,txtretailSaleType,txtretailDiscountRate,txtrepairSaleType,txtrepairDiscountRate,txttypeCode,prmtfinCustomer,settlementType}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding
@@ -235,9 +226,9 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         this.add(kDLabelContainer3, null);
         kDLabelContainer4.setBounds(new Rectangle(605, 67, 270, 19));
         this.add(kDLabelContainer4, null);
-        contdeletedStatus.setBounds(new Rectangle(598, 93, 270, 19));
+        contdeletedStatus.setBounds(new Rectangle(10, 141, 270, 19));
         this.add(contdeletedStatus, null);
-        chkscheduled.setBounds(new Rectangle(595, 118, 270, 19));
+        chkscheduled.setBounds(new Rectangle(293, 115, 270, 19));
         this.add(chkscheduled, null);
         contretailSaleType.setBounds(new Rectangle(10, 33, 270, 19));
         this.add(contretailSaleType, null);
@@ -656,6 +647,25 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
     }
 
 
+        
+					protected void beforeStoreFields(ActionEvent arg0) throws Exception {
+		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(txtretailSaleType.getText())) {
+			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"零售销售类型"});
+		}
+		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(txttypeCode.getText())) {
+			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"类别代码"});
+		}
+		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(prmtfinCustomer.getData())) {
+			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"对应财务客户"});
+		}
+		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(txtrepairSaleType.getText())) {
+			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"维修销售类型"});
+		}
+		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(settlementType.getSelectedItem())) {
+			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"结算类型"});
+		}
+			super.beforeStoreFields(arg0);
+		}
 
     /**
      * output getDetailTable method
@@ -668,6 +678,8 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
      */
     protected void applyDefaultValue(IObjectValue vo) {        
 		vo.put("deletedStatus",new Integer(1));
+		vo.put("retailDiscountRate",new java.math.BigDecimal(0));
+		vo.put("repairDiscountRate",new java.math.BigDecimal(0));
 vo.put("settlementType",new Integer(1));
         
     }        

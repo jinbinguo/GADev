@@ -3,8 +3,6 @@
     <package />
     <name>bim</name>
     <alias>permission[.bim].alias</alias>
-    <description>permission[.bim].description</description>
-    <userDefined>false</userDefined>
     <permissionItems>
         <permissionItem>
             <innerID>7351bb99-dc10-49ad-a7cb-89c72fd004cbPERMITEM</innerID>
@@ -122,6 +120,26 @@
                 </bizRef>
             </bizRefs>
         </permissionItem>
+        <permissionItem>
+            <innerID>3f6a83d6-0fb6-4305-84f5-9b92b8e87a82PERMITEM</innerID>
+            <name>oprtRetailLine</name>
+            <alias>permission[.bim].permissionItems.permissionItem[oprtRetailLine].alias</alias>
+            <description>permission[.bim].permissionItems.permissionItem[oprtRetailLine].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.企业建模.安全管理.权限管理.用户管理</groupName>
+            <group>permission[.bim].permissionItems.permissionItem[oprtRetailLine].group</group>
+            <userDefined>true</userDefined>
+        </permissionItem>
+        <permissionItem>
+            <innerID>29a9519e-2c4d-4d45-be95-34d677007bd3PERMITEM</innerID>
+            <name>oprtRepairLine</name>
+            <alias>permission[.bim].permissionItems.permissionItem[oprtRepairLine].alias</alias>
+            <description>permission[.bim].permissionItems.permissionItem[oprtRepairLine].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.企业建模.安全管理.权限管理.用户管理</groupName>
+            <group>permission[.bim].permissionItems.permissionItem[oprtRepairLine].group</group>
+            <userDefined>true</userDefined>
+        </permissionItem>
     </permissionItems>
     <dependences>
         <dependence>
@@ -142,19 +160,26 @@
                 <key name="innerID" value="a33e70ec-2e56-4aac-91ac-0f7b8009d94cPERMITEM" />
             </referedItem>
         </dependence>
+        <dependence>
+            <id>3f6a83d6-0fb6-4305-84f5-9b92b8e87a82PERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="3f6a83d6-0fb6-4305-84f5-9b92b8e87a82PERMITEM" />
+            </referedItem>
+        </dependence>
+        <dependence>
+            <id>29a9519e-2c4d-4d45-be95-34d677007bd3PERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="29a9519e-2c4d-4d45-be95-34d677007bd3PERMITEM" />
+            </referedItem>
+        </dependence>
     </dependences>
     <resource>
         <rs key="permission[.bim].alias">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="bim" />
             <lang locale="zh_HK" value="bim" />
             <lang locale="zh_TW" value="bim" />
         </rs>
         <rs key="permission[.bim].description">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
-            <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="permission[.bim].permissionItems.permissionItem[dmsImport].alias">
             <lang locale="en_US" value="null" />
@@ -254,6 +279,67 @@
             <lang locale="zh_CN" value="系统.集成管理.DMS集成平台.数据查询" />
             <lang locale="zh_HK" value="系統.集成管理.DMS集成平臺.數據查詢" />
             <lang locale="zh_TW" value="系統.集成管理.DMS集成平臺.數據查詢" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[oprtRepairLine].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="操作维修工单项目行" />
+            <lang locale="zh_HK" value="操作維修工單項目行" />
+            <lang locale="zh_TW" value="操作維修工單項目行" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[oprtRepairLine].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[oprtRepairLine].extendedProperty.orgRelation">
+            <lang locale="en_US" value="Admin" />
+            <lang locale="zh_CN" value="Admin" />
+            <lang locale="zh_TW" value="Admin" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[oprtRepairLine].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[oprtRepairLine].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.企业建模.安全管理.权限管理.用户管理" />
+            <lang locale="zh_HK" value="系統.企業建模.安全管理.許可權管理.用戶管理" />
+            <lang locale="zh_TW" value="系統.企業建模.安全管理.許可權管理.用戶管理" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[oprtRetailLine].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="操作维修工单配件行" />
+            <lang locale="zh_HK" value="操作維修工單配件行" />
+            <lang locale="zh_TW" value="操作維修工單配件行" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[oprtRetailLine].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[oprtRetailLine].extendedProperty.orgRelation">
+            <lang locale="en_US" value="Admin" />
+            <lang locale="zh_CN" value="Admin" />
+            <lang locale="zh_TW" value="Admin" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[oprtRetailLine].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[oprtRetailLine].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.企业建模.安全管理.权限管理.用户管理" />
+            <lang locale="zh_HK" value="系統.企業建模.安全管理.許可權管理.用戶管理" />
+            <lang locale="zh_TW" value="系統.企業建模.安全管理.許可權管理.用戶管理" />
+        </rs>
+        <rs key="permission[bim].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
         </rs>
     </resource>
 </permission>

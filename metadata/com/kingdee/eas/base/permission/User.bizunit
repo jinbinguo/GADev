@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizUnit xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.base.permission</package>
+    <name>User</name>
+    <alias>bizUnit[com.kingdee.eas.base.permission.User].alias</alias>
+    <webEditUIPK />
+    <webListUIPK />
+    <webEditPagePK />
+    <webListPagePK />
+    <webPagePKS />
+    <webViewPagePK />
+    <webBriefPagePK />
+    <relatedWebEditPagePK />
+    <relatedQueryPK />
+    <resource>
+        <rs key="bizUnit[com.kingdee.eas.base.permission.User].alias">
+            <lang locale="zh_HK" value="用戶" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.base.permission.User].description">
+            <lang locale="zh_HK" value="用戶管理" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.base.permission.User].extendedProperty.OrgType">
+            <lang locale="en_US" value="ControlUnit" />
+            <lang locale="zh_CN" value="ControlUnit" />
+            <lang locale="zh_TW" value="ControlUnit" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.base.permission.User].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.base.permission.User].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.base.permission.User].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.base.permission.app.F7AllUserQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.base.permission.app.F7AllUserQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.base.permission.app.F7AllUserQuery" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.base.permission.User].extendedProperty.maxFieldIndex">
+            <lang locale="en_US" value="1" />
+            <lang locale="zh_CN" value="1" />
+            <lang locale="zh_TW" value="1" />
+        </rs>
+    </resource>
+</bizUnit>
+

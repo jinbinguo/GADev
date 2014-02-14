@@ -189,6 +189,20 @@
             <scale>0</scale>
             <precision>0</precision>
         </column>
+        <column>
+            <name>CFSettleObject</name>
+            <alias>dataTable[com.kingdee.eas.ga.rs.app.CT_RS_W].columns.column[CFSettleObject].alias</alias>
+            <description>dataTable[com.kingdee.eas.ga.rs.app.CT_RS_W].columns.column[CFSettleObject].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>CPK_RS_WID671tudg8</name>
@@ -268,6 +282,18 @@
             <lang locale="zh_CN" value="W" />
             <lang locale="zh_HK" value="W" />
             <lang locale="zh_TW" value="W" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_W].columns.column[CFSettleObject].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="结算对象" />
+            <lang locale="zh_HK" value="結算對象" />
+            <lang locale="zh_TW" value="結算對象" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_W].columns.column[CFSettleObject].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="结算对象" />
+            <lang locale="zh_HK" value="結算對象" />
+            <lang locale="zh_TW" value="結算對象" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_W].columns.column[CFTypeCode].alias">
             <lang locale="en_US" value="null" />

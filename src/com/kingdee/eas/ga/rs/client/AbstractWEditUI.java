@@ -47,7 +47,9 @@ public abstract class AbstractWEditUI extends com.kingdee.eas.myframework.templa
 {
     private static final Logger logger = CoreUIObject.getLogger(AbstractWEditUI.class);
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer conttypeCode;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contsettleObject;
     protected com.kingdee.bos.ctrl.swing.KDTextField txttypeCode;
+    protected com.kingdee.bos.ctrl.swing.KDComboBox settleObject;
     protected com.kingdee.eas.ga.rs.WInfo editData = null;
     /**
      * output class constructor
@@ -69,30 +71,39 @@ public abstract class AbstractWEditUI extends com.kingdee.eas.myframework.templa
         this.resHelper = new ResourceBundleHelper(AbstractWEditUI.class.getName());
         this.setUITitle(resHelper.getString("this.title"));
         this.conttypeCode = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contsettleObject = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.txttypeCode = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.settleObject = new com.kingdee.bos.ctrl.swing.KDComboBox();
         this.conttypeCode.setName("conttypeCode");
+        this.contsettleObject.setName("contsettleObject");
         this.txttypeCode.setName("txttypeCode");
+        this.settleObject.setName("settleObject");
         // CoreUI		
         this.btnPrint.setVisible(false);		
         this.btnPrintPreview.setVisible(false);		
         this.kDLabelContainer3.setVisible(false);		
         this.kDLabelContainer4.setVisible(false);		
         this.contdeletedStatus.setVisible(false);		
-        this.chkscheduled.setVisible(false);		
         this.txtSimpleName.setVisible(false);		
-        this.txtDescription.setVisible(false);		
-        this.boxDeletedStatus.setVisible(false);
+        this.txtDescription.setVisible(false);
         // conttypeCode		
         this.conttypeCode.setBoundLabelText(resHelper.getString("conttypeCode.boundLabelText"));		
         this.conttypeCode.setBoundLabelLength(100);		
         this.conttypeCode.setBoundLabelUnderline(true);		
         this.conttypeCode.setVisible(true);
+        // contsettleObject		
+        this.contsettleObject.setBoundLabelText(resHelper.getString("contsettleObject.boundLabelText"));		
+        this.contsettleObject.setBoundLabelLength(100);		
+        this.contsettleObject.setBoundLabelUnderline(true);		
+        this.contsettleObject.setVisible(true);
         // txttypeCode		
-        this.txttypeCode.setVisible(true);		
         this.txttypeCode.setHorizontalAlignment(2);		
         this.txttypeCode.setMaxLength(100);		
-        this.txttypeCode.setRequired(false);
-        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {txtNumber,txtName,txtSimpleName,txtDescription,boxDeletedStatus,chkscheduled,txttypeCode}));
+        this.txttypeCode.setRequired(true);
+        // settleObject		
+        this.settleObject.addItems(EnumUtils.getEnumList("com.kingdee.eas.auto4s.bdm.rsm.SettlementObjectEnum").toArray());		
+        this.settleObject.setRequired(true);
+        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {txtNumber,txtName,txtSimpleName,txtDescription,boxDeletedStatus,chkscheduled,txttypeCode,settleObject}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding
 		registerBindings();
@@ -118,22 +129,24 @@ public abstract class AbstractWEditUI extends com.kingdee.eas.myframework.templa
      */
     public void initUIContentLayout()
     {
-        this.setBounds(new Rectangle(0, 0, 400, 192));
+        this.setBounds(new Rectangle(0, 0, 400, 245));
         this.setLayout(null);
         kDLabelContainer1.setBounds(new Rectangle(10, 10, 270, 19));
         this.add(kDLabelContainer1, null);
         kDLabelContainer2.setBounds(new Rectangle(10, 34, 270, 19));
         this.add(kDLabelContainer2, null);
-        kDLabelContainer3.setBounds(new Rectangle(10, 81, 270, 19));
+        kDLabelContainer3.setBounds(new Rectangle(297, 71, 270, 19));
         this.add(kDLabelContainer3, null);
-        kDLabelContainer4.setBounds(new Rectangle(10, 105, 270, 19));
+        kDLabelContainer4.setBounds(new Rectangle(297, 95, 270, 19));
         this.add(kDLabelContainer4, null);
-        contdeletedStatus.setBounds(new Rectangle(10, 129, 270, 19));
+        contdeletedStatus.setBounds(new Rectangle(9, 108, 270, 19));
         this.add(contdeletedStatus, null);
-        chkscheduled.setBounds(new Rectangle(10, 153, 270, 19));
+        chkscheduled.setBounds(new Rectangle(9, 132, 270, 19));
         this.add(chkscheduled, null);
         conttypeCode.setBounds(new Rectangle(10, 57, 270, 19));
         this.add(conttypeCode, null);
+        contsettleObject.setBounds(new Rectangle(10, 81, 270, 19));
+        this.add(contsettleObject, null);
         //kDLabelContainer1
         kDLabelContainer1.setBoundEditor(txtNumber);
         //kDLabelContainer2
@@ -146,6 +159,8 @@ public abstract class AbstractWEditUI extends com.kingdee.eas.myframework.templa
         contdeletedStatus.setBoundEditor(boxDeletedStatus);
         //conttypeCode
         conttypeCode.setBoundEditor(txttypeCode);
+        //contsettleObject
+        contsettleObject.setBoundEditor(settleObject);
 
     }
 
@@ -262,7 +277,8 @@ public abstract class AbstractWEditUI extends com.kingdee.eas.myframework.templa
 		dataBinder.registerBinding("simpleName", String.class, this.txtSimpleName, "text");
 		dataBinder.registerBinding("description", String.class, this.txtDescription, "_multiLangItem");
 		dataBinder.registerBinding("deletedStatus", com.kingdee.eas.basedata.ncm.DeletedStatusEnum.class, this.boxDeletedStatus, "selectedItem");
-		dataBinder.registerBinding("typeCode", String.class, this.txttypeCode, "text");		
+		dataBinder.registerBinding("typeCode", String.class, this.txttypeCode, "text");
+		dataBinder.registerBinding("settleObject", com.kingdee.eas.auto4s.bdm.rsm.SettlementObjectEnum.class, this.settleObject, "selectedItem");		
 	}
 	//Regiester UI State
 	private void registerUIState(){
@@ -415,7 +431,8 @@ public abstract class AbstractWEditUI extends com.kingdee.eas.myframework.templa
 		getValidateHelper().registerBindProperty("simpleName", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("description", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("deletedStatus", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("typeCode", ValidateHelper.ON_SAVE);    		
+		getValidateHelper().registerBindProperty("typeCode", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("settleObject", ValidateHelper.ON_SAVE);    		
 	}
 
 
@@ -461,6 +478,7 @@ public abstract class AbstractWEditUI extends com.kingdee.eas.myframework.templa
         sic.add(new SelectorItemInfo("description"));
         sic.add(new SelectorItemInfo("deletedStatus"));
         sic.add(new SelectorItemInfo("typeCode"));
+        sic.add(new SelectorItemInfo("settleObject"));
         return sic;
     }        
 
@@ -499,6 +517,16 @@ public abstract class AbstractWEditUI extends com.kingdee.eas.myframework.templa
     }
 
 
+        
+					protected void beforeStoreFields(ActionEvent arg0) throws Exception {
+		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(txttypeCode.getText())) {
+			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"类别代码"});
+		}
+		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(settleObject.getSelectedItem())) {
+			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"结算对象"});
+		}
+			super.beforeStoreFields(arg0);
+		}
 
     /**
      * output getDetailTable method
@@ -511,6 +539,7 @@ public abstract class AbstractWEditUI extends com.kingdee.eas.myframework.templa
      */
     protected void applyDefaultValue(IObjectValue vo) {        
 		vo.put("deletedStatus",new Integer(1));
+vo.put("settleObject","1");
         
     }        
 	protected void setFieldsNull(com.kingdee.bos.dao.AbstractObjectValue arg0) {

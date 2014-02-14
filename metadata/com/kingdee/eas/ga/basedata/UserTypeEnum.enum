@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizEnum xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.ga.basedata</package>
+    <name>UserTypeEnum</name>
+    <alias>bizEnum[com.kingdee.eas.ga.basedata.UserTypeEnum].alias</alias>
+    <description>bizEnum[com.kingdee.eas.ga.basedata.UserTypeEnum].description</description>
+    <userDefined>true</userDefined>
+    <className>com.kingdee.eas.ga.basedata.UserTypeEnum</className>
+    <enumDataType>STRING</enumDataType>
+    <enumValues>
+        <enumValue>
+            <name>ForRepair</name>
+            <alias>bizEnum[com.kingdee.eas.ga.basedata.UserTypeEnum].enumValues.enumValue[ForRepair].alias</alias>
+            <userDefined>true</userDefined>
+            <value>Repair</value>
+        </enumValue>
+        <enumValue>
+            <name>ForRetail</name>
+            <alias>bizEnum[com.kingdee.eas.ga.basedata.UserTypeEnum].enumValues.enumValue[ForRetail].alias</alias>
+            <userDefined>true</userDefined>
+            <value>Retail</value>
+        </enumValue>
+    </enumValues>
+    <resource>
+        <rs key="bizEnum[com.kingdee.eas.ga.basedata.UserTypeEnum].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="账户类型" />
+            <lang locale="zh_TW" value="賬戶類型" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.basedata.UserTypeEnum].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.basedata.UserTypeEnum].enumValues.enumValue[ForRepair].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修账号" />
+            <lang locale="zh_TW" value="維修賬號" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.basedata.UserTypeEnum].enumValues.enumValue[ForRetail].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="零售账号" />
+            <lang locale="zh_TW" value="零售賬號" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.basedata.UserTypeEnum].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizEnum>
+

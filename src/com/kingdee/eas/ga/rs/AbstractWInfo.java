@@ -28,6 +28,19 @@ public class AbstractWInfo extends com.kingdee.eas.myframework.template.base.Sim
     {
         setString("typeCode", item);
     }
+    /**
+     * Object:W's Ω·À„∂‘œÛproperty 
+     */
+    public com.kingdee.eas.auto4s.bdm.rsm.SettlementObjectEnum getSettleObject()
+    {
+        return com.kingdee.eas.auto4s.bdm.rsm.SettlementObjectEnum.getEnum(getString("settleObject"));
+    }
+    public void setSettleObject(com.kingdee.eas.auto4s.bdm.rsm.SettlementObjectEnum item)
+    {
+		if (item != null) {
+        setString("settleObject", item.getValue());
+		}
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("9871DC0C");

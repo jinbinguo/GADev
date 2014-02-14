@@ -18,7 +18,7 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
         super(pkField);
     }
     /**
-     * Object: 项目/配件明细 's null property 
+     * Object: 项目配件明细 's null property 
      */
     public com.kingdee.eas.auto4s.rsm.rs.RepairWOInfo getParent()
     {
@@ -29,7 +29,7 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
         put("parent", item);
     }
     /**
-     * Object:项目/配件明细's Tproperty 
+     * Object:项目配件明细's Tproperty 
      */
     public com.kingdee.eas.ga.rs.TEnum getT()
     {
@@ -42,7 +42,7 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
 		}
     }
     /**
-     * Object:项目/配件明细's 项目property 
+     * Object:项目配件明细's 项目property 
      */
     public String getItemspNum()
     {
@@ -53,7 +53,7 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
         setString("itemspNum", item);
     }
     /**
-     * Object:项目/配件明细's 项目说明property 
+     * Object:项目配件明细's 项目说明property 
      */
     public String getItemspName()
     {
@@ -64,7 +64,7 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
         setString("itemspName", item);
     }
     /**
-     * Object: 项目/配件明细 's 维修项目 property 
+     * Object: 项目配件明细 's 维修项目 property 
      */
     public com.kingdee.eas.auto4s.bdm.rsm.RepairItemInfo getRepairItem()
     {
@@ -75,7 +75,7 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
         put("repairItem", item);
     }
     /**
-     * Object: 项目/配件明细 's 维修配件 property 
+     * Object: 项目配件明细 's 维修配件 property 
      */
     public com.kingdee.eas.basedata.master.material.MaterialInfo getMaterial()
     {
@@ -86,7 +86,7 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
         put("material", item);
     }
     /**
-     * Object:项目/配件明细's 套餐property 
+     * Object:项目配件明细's 套餐property 
      */
     public String getTaocan()
     {
@@ -97,18 +97,7 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
         setString("taocan", item);
     }
     /**
-     * Object: 项目/配件明细 's W property 
-     */
-    public com.kingdee.eas.ep.DataBaseCustomInfo getW()
-    {
-        return (com.kingdee.eas.ep.DataBaseCustomInfo)get("w");
-    }
-    public void setW(com.kingdee.eas.ep.DataBaseCustomInfo item)
-    {
-        put("w", item);
-    }
-    /**
-     * Object:项目/配件明细's 数量property 
+     * Object:项目配件明细's 数量property 
      */
     public java.math.BigDecimal getQty()
     {
@@ -119,7 +108,7 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
         setBigDecimal("qty", item);
     }
     /**
-     * Object:项目/配件明细's 价格property 
+     * Object:项目配件明细's 价格property 
      */
     public java.math.BigDecimal getPrice()
     {
@@ -130,7 +119,7 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
         setBigDecimal("price", item);
     }
     /**
-     * Object:项目/配件明细's 折扣%property 
+     * Object:项目配件明细's 折扣property 
      */
     public java.math.BigDecimal getDiscountRate()
     {
@@ -141,7 +130,7 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
         setBigDecimal("discountRate", item);
     }
     /**
-     * Object:项目/配件明细's 总计property 
+     * Object:项目配件明细's 总计property 
      */
     public java.math.BigDecimal getAmount()
     {
@@ -152,7 +141,7 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
         setBigDecimal("amount", item);
     }
     /**
-     * Object:项目/配件明细's Iproperty 
+     * Object:项目配件明细's Iproperty 
      */
     public com.kingdee.eas.ga.rs.IEnum getI()
     {
@@ -165,7 +154,7 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
 		}
     }
     /**
-     * Object:项目/配件明细's 是否拆退property 
+     * Object:项目配件明细's 是否拆退property 
      */
     public boolean isIsCT()
     {
@@ -176,7 +165,7 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
         setBoolean("isCT", item);
     }
     /**
-     * Object:项目/配件明细's 未出库数property 
+     * Object:项目配件明细's 未出库数property 
      */
     public java.math.BigDecimal getUnIssueQty()
     {
@@ -187,7 +176,7 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
         setBigDecimal("unIssueQty", item);
     }
     /**
-     * Object:项目/配件明细's 已出数库property 
+     * Object:项目配件明细's 已出数库property 
      */
     public java.math.BigDecimal getIssueQty()
     {
@@ -198,7 +187,7 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
         setBigDecimal("issueQty", item);
     }
     /**
-     * Object:项目/配件明细's 税率%property 
+     * Object:项目配件明细's 税率property 
      */
     public java.math.BigDecimal getTaxRate()
     {
@@ -207,6 +196,52 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
     public void setTaxRate(java.math.BigDecimal item)
     {
         setBigDecimal("taxRate", item);
+    }
+    /**
+     * Object:项目配件明细's 结算对象property 
+     */
+    public com.kingdee.eas.auto4s.bdm.rsm.SettlementObjectEnum getSettlementObject()
+    {
+        return com.kingdee.eas.auto4s.bdm.rsm.SettlementObjectEnum.getEnum(getString("settlementObject"));
+    }
+    public void setSettlementObject(com.kingdee.eas.auto4s.bdm.rsm.SettlementObjectEnum item)
+    {
+		if (item != null) {
+        setString("settlementObject", item.getValue());
+		}
+    }
+    /**
+     * Object: 项目配件明细 's W property 
+     */
+    public com.kingdee.eas.ga.rs.WInfo getW()
+    {
+        return (com.kingdee.eas.ga.rs.WInfo)get("w");
+    }
+    public void setW(com.kingdee.eas.ga.rs.WInfo item)
+    {
+        put("w", item);
+    }
+    /**
+     * Object:项目配件明细's DMS实际行号property 
+     */
+    public int getWipFactLineNo()
+    {
+        return getInt("wipFactLineNo");
+    }
+    public void setWipFactLineNo(int item)
+    {
+        setInt("wipFactLineNo", item);
+    }
+    /**
+     * Object:项目配件明细's DMS行号property 
+     */
+    public int getWipLineNo()
+    {
+        return getInt("wipLineNo");
+    }
+    public void setWipLineNo(int item)
+    {
+        setInt("wipLineNo", item);
     }
     public BOSObjectType getBOSType()
     {

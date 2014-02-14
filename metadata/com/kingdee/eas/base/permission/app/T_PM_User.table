@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataTable xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.base.permission.app</package>
+    <name>T_PM_User</name>
+    <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].alias</alias>
+    <bizUnitPK>com.kingdee.eas.base.permission.User</bizUnitPK>
+    <columns>
+        <column>
+            <name>FDefaultLocale</name>
+            <length>100</length>
+        </column>
+        <column>
+            <name>CFUserType</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[CFUserType].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[CFUserType].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+    </columns>
+    <resource>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].alias">
+            <lang locale="zh_CN" value="用户" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[CFUserType].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="账户类别" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[CFUserType].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="账户类别" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FAdNumber].alias">
+            <lang locale="zh_CN" value="AD账号" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FAdNumber].description">
+            <lang locale="zh_CN" value="AD账号" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FAgentUser].alias">
+            <lang locale="zh_CN" value="代理用户" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FAgentUser].description">
+            <lang locale="zh_CN" value="" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FBackupEMail].alias">
+            <lang locale="zh_CN" value="备用电子邮件 " />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FBackupEMail].description">
+            <lang locale="zh_CN" value="备用电子邮件 " />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCell].description">
+            <lang locale="zh_CN" value="手机号码" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FControlUnitID].alias">
+            <lang locale="zh_CN" value="控制单元" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FControlUnitID].description">
+            <lang locale="zh_CN" value="控制单元" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCreateTime].alias">
+            <lang locale="zh_CN" value="创建时间" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCreateTime].description">
+            <lang locale="zh_CN" value="创建时间" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCreatorID].alias">
+            <lang locale="zh_CN" value="创建者" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCreatorID].description">
+            <lang locale="zh_CN" value="创建者" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCustomerID].alias">
+            <lang locale="zh_CN" value="客户id" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCustomerID].description">
+            <lang locale="zh_CN" value="客户id" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FDefaultLocale].alias">
+            <lang locale="zh_CN" value="缺省使用语言" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FDefaultLocale].description">
+            <lang locale="zh_CN" value="缺省使用语言" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FDescription].alias">
+            <lang locale="zh_CN" value="描述" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FDescription].description">
+            <lang locale="zh_CN" value="描述，多语言字段" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FEMail].alias">
+            <lang locale="zh_CN" value="电子邮件" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FEMail].description">
+            <lang locale="zh_CN" value="电子邮件" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FEffectiveDate].description">
+            <lang locale="zh_CN" value="用户生效时间" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FErrCount].alias">
+            <lang locale="zh_CN" value="登录错误次数" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FErrCount].description">
+            <lang locale="zh_CN" value="登录错误次数。记录错误次数，如果正确一次就恢复置0。" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FForbidden].description">
+            <lang locale="zh_CN" value="是否禁用用户" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FGroupID].alias">
+            <lang locale="zh_CN" value="所属用户组" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FGroupID].description">
+            <lang locale="zh_CN" value="所属用户组" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FHomePhone].alias">
+            <lang locale="zh_CN" value="家庭电话" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FHomePhone].description">
+            <lang locale="zh_CN" value="家庭电话" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FInvalidationDate].description">
+            <lang locale="zh_CN" value="用户失效时间" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsBizAdmin].alias">
+            <lang locale="zh_CN" value="是否为业务管理员" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsBizAdmin].description">
+            <lang locale="zh_CN" value="是否为业务管理员" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsChangedPW].alias">
+            <lang locale="zh_CN" value="是否修改过密码" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsChangedPW].description">
+            <lang locale="zh_CN" value="是否修改过密码" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsDelete].alias">
+            <lang locale="zh_CN" value="是否是已经删除" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsDelete].description">
+            <lang locale="zh_CN" value="用于用户删除，决定用户是否是已经删除。目前采取假删除用户的策略，通过设置这个标志位来决定用户是否被删除。" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsLocked].description">
+            <lang locale="zh_CN" value="是否锁定，根据安全策略，在登录时连续错误一定次数后锁定用户。" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsRegister].description">
+            <lang locale="zh_CN" value="是否注册。一旦启用注册机制，新建的用户必须注册后方可以登录。" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLastUpdateTime].alias">
+            <lang locale="zh_CN" value="最后修改时间" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLastUpdateTime].description">
+            <lang locale="zh_CN" value="最后修改时间" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLastUpdateUserID].alias">
+            <lang locale="zh_CN" value="最后修改者" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLastUpdateUserID].description">
+            <lang locale="zh_CN" value="最后修改者" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLockedTime].alias">
+            <lang locale="zh_CN" value="用户锁定时间" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLockedTime].description">
+            <lang locale="zh_CN" value="用户锁定时间" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLoginAuthorWay].alias">
+            <lang locale="zh_CN" value="登陆认证方式" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLoginAuthorWay].description">
+            <lang locale="zh_CN" value="登陆认证方式" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FMainRoleID].alias">
+            <lang locale="zh_CN" value="主角色" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FName].alias">
+            <lang locale="zh_CN" value="用户实名" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FName].description">
+            <lang locale="zh_CN" value="用户实名（用于查询）" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FNumber].alias">
+            <lang locale="zh_CN" value="用户名" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FNumber].description">
+            <lang locale="zh_CN" value="用户名，唯一标识" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FOfficePhone].alias">
+            <lang locale="zh_CN" value="办公室电话" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FOfficePhone].description">
+            <lang locale="zh_CN" value="办公室电话" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPWEffectiveDate].alias">
+            <lang locale="zh_CN" value="密码生效日期" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPWEffectiveDate].description">
+            <lang locale="zh_CN" value="密码生效日期" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPassword].description">
+            <lang locale="zh_CN" value="加密以后的密码" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPersonId].alias">
+            <lang locale="zh_CN" value="对应的操作人" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPersonId].description">
+            <lang locale="zh_CN" value="对应的操作人，连接属性" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPwdHisStr].alias">
+            <lang locale="zh_CN" value="历史密码" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPwdHisStr].description">
+            <lang locale="zh_CN" value="历史密码" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FReferId].description">
+            <lang locale="zh_CN" value="引用其他的对象的id" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FSecurityId].alias">
+            <lang locale="zh_CN" value="密码策略" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FSecurityId].description">
+            <lang locale="zh_CN" value="密码策略" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FSupplierID].alias">
+            <lang locale="zh_CN" value="供应商id" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FSupplierID].description">
+            <lang locale="zh_CN" value="供应商id" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].description">
+            <lang locale="zh_CN" value="用户管理" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</dataTable>
+

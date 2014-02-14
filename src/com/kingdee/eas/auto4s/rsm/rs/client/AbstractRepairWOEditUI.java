@@ -197,13 +197,11 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
     protected com.kingdee.bos.ctrl.swing.KDPanel kDPRepairInfo;
     protected com.kingdee.bos.ctrl.swing.KDPanel kDPVehicleInfo;
     protected com.kingdee.bos.ctrl.swing.KDPanel kDPHideField;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contdept;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contRemark;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contcustomInfo;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contsaleType;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contCustomerAccount;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contcustomerAccountName;
-    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtdept;
     protected com.kingdee.bos.ctrl.swing.KDScrollPane scrollPaneRemark;
     protected com.kingdee.bos.ctrl.swing.KDTextArea txtRemark;
     protected com.kingdee.bos.ctrl.swing.KDScrollPane scrollPanecustomInfo;
@@ -211,9 +209,17 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
     protected com.kingdee.bos.ctrl.swing.KDTextField txtsaleType;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtCustomerAccount;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtcustomerAccountName;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contdept;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtdept;
     protected com.kingdee.bos.ctrl.swing.KDPanel kDPRwoItemSp;
     protected com.kingdee.bos.ctrl.kdf.table.KDTable kdtRWOItemSpEntry;
 	protected com.kingdee.eas.framework.client.multiDetail.DetailPanel kdtRWOItemSpEntry_detailPanel = null;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer8;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer labRepairItem;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer labMaterial;
+    protected com.kingdee.bos.ctrl.swing.KDComboBox cmbT;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtRepairItem;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtMaterial;
     protected com.kingdee.eas.auto4s.rsm.rs.RepairWOInfo editData = null;
     protected ActionAdd actionAdd = null;
     protected ActionEnterAdd actionEnterAdd = null;
@@ -573,13 +579,11 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.kDPRepairInfo = new com.kingdee.bos.ctrl.swing.KDPanel();
         this.kDPVehicleInfo = new com.kingdee.bos.ctrl.swing.KDPanel();
         this.kDPHideField = new com.kingdee.bos.ctrl.swing.KDPanel();
-        this.contdept = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contRemark = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contcustomInfo = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contsaleType = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contCustomerAccount = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contcustomerAccountName = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.prmtdept = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.scrollPaneRemark = new com.kingdee.bos.ctrl.swing.KDScrollPane();
         this.txtRemark = new com.kingdee.bos.ctrl.swing.KDTextArea();
         this.scrollPanecustomInfo = new com.kingdee.bos.ctrl.swing.KDScrollPane();
@@ -587,8 +591,16 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.txtsaleType = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.prmtCustomerAccount = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.txtcustomerAccountName = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.contdept = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.prmtdept = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.kDPRwoItemSp = new com.kingdee.bos.ctrl.swing.KDPanel();
         this.kdtRWOItemSpEntry = new com.kingdee.bos.ctrl.kdf.table.KDTable();
+        this.kDLabelContainer8 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.labRepairItem = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.labMaterial = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.cmbT = new com.kingdee.bos.ctrl.swing.KDComboBox();
+        this.prmtRepairItem = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.prmtMaterial = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.kDSplitPane1.setName("kDSplitPane1");
         this.contOldID.setName("contOldID");
         this.contRepairBookingID.setName("contRepairBookingID");
@@ -733,13 +745,11 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.kDPRepairInfo.setName("kDPRepairInfo");
         this.kDPVehicleInfo.setName("kDPVehicleInfo");
         this.kDPHideField.setName("kDPHideField");
-        this.contdept.setName("contdept");
         this.contRemark.setName("contRemark");
         this.contcustomInfo.setName("contcustomInfo");
         this.contsaleType.setName("contsaleType");
         this.contCustomerAccount.setName("contCustomerAccount");
         this.contcustomerAccountName.setName("contcustomerAccountName");
-        this.prmtdept.setName("prmtdept");
         this.scrollPaneRemark.setName("scrollPaneRemark");
         this.txtRemark.setName("txtRemark");
         this.scrollPanecustomInfo.setName("scrollPanecustomInfo");
@@ -747,8 +757,16 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.txtsaleType.setName("txtsaleType");
         this.prmtCustomerAccount.setName("prmtCustomerAccount");
         this.txtcustomerAccountName.setName("txtcustomerAccountName");
+        this.contdept.setName("contdept");
+        this.prmtdept.setName("prmtdept");
         this.kDPRwoItemSp.setName("kDPRwoItemSp");
         this.kdtRWOItemSpEntry.setName("kdtRWOItemSpEntry");
+        this.kDLabelContainer8.setName("kDLabelContainer8");
+        this.labRepairItem.setName("labRepairItem");
+        this.labMaterial.setName("labMaterial");
+        this.cmbT.setName("cmbT");
+        this.prmtRepairItem.setName("prmtRepairItem");
+        this.prmtMaterial.setName("prmtMaterial");
         // CoreUI
         this.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent e) {
@@ -1256,7 +1274,8 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.prmtBrand.setDisplayFormat("$name$");		
         this.prmtBrand.setEditFormat("$number$");		
         this.prmtBrand.setCommitFormat("$number$");		
-        this.prmtBrand.setRequired(false);
+        this.prmtBrand.setRequired(false);		
+        this.prmtBrand.setEnabled(false);
         this.prmtBrand.addDataChangeListener(new com.kingdee.bos.ctrl.swing.event.DataChangeListener() {
             public void dataChanged(com.kingdee.bos.ctrl.swing.event.DataChangeEvent e) {
                 try {
@@ -1393,7 +1412,7 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.kDPBreak.setEnabled(false);		
         this.kDPBreak.setVisible(false);
         // kdtRWORepairItemEntry
-		String kdtRWORepairItemEntryStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol2\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol7\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol8\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol9\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol10\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol11\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol12\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol13\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol14\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol15\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol16\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol17\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol18\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol20\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol21\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol25\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol27\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol28\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol29\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol30\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol31\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol32\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol33\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol34\"><c:Protection locked=\"true\" hidden=\"true\" /></c:Style><c:Style id=\"sCol35\"><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol36\"><c:NumberFormat>&amp;int</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\" t:configured=\"true\"><t:ColumnGroup><t:Column t:key=\"ID\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"0\" t:styleID=\"sCol0\" /><t:Column t:key=\"RepairItem\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"1\" /><t:Column t:key=\"RepairItemName\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"2\" t:styleID=\"sCol2\" /><t:Column t:key=\"ItemRemark\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"3\" /><t:Column t:key=\"PaymentClassify\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"4\" /><t:Column t:key=\"SettleObject\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"5\" /><t:Column t:key=\"RepairClassify\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"6\" /><t:Column t:key=\"RepairPkg\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"7\" t:styleID=\"sCol7\" /><t:Column t:key=\"ServiceActivity\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"8\" t:styleID=\"sCol8\" /><t:Column t:key=\"StdWorkTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"9\" t:styleID=\"sCol9\" /><t:Column t:key=\"AssignWorkTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"10\" t:styleID=\"sCol10\" /><t:Column t:key=\"WorkTimePrice\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"11\" t:styleID=\"sCol11\" /><t:Column t:key=\"WorkTimeAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"12\" t:styleID=\"sCol12\" /><t:Column t:key=\"DiscountRate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"13\" t:styleID=\"sCol13\" /><t:Column t:key=\"DiscountAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"14\" t:styleID=\"sCol14\" /><t:Column t:key=\"ARAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"15\" t:styleID=\"sCol15\" /><t:Column t:key=\"ActualAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"16\" t:styleID=\"sCol16\" /><t:Column t:key=\"IsAppend\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"17\" t:styleID=\"sCol17\" /><t:Column t:key=\"IsReturnRepair\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"18\" t:styleID=\"sCol18\" /><t:Column t:key=\"ReworkReason\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"19\" /><t:Column t:key=\"IsDelete\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"20\" t:styleID=\"sCol20\" /><t:Column t:key=\"ItemStatus\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"21\" t:styleID=\"sCol21\" /><t:Column t:key=\"IsMulAssign\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"22\" /><t:Column t:key=\"WorkGroup\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"23\" /><t:Column t:key=\"Person\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"24\" /><t:Column t:key=\"repairGroupEntryId\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"25\" t:styleID=\"sCol25\" /><t:Column t:key=\"WorkStation\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"26\" /><t:Column t:key=\"ActualWorkTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"27\" t:styleID=\"sCol27\" /><t:Column t:key=\"WagePrice\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"28\" t:styleID=\"sCol28\" /><t:Column t:key=\"WorkTimeCost\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"29\" t:styleID=\"sCol29\" /><t:Column t:key=\"IsTimeEdit\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"30\" t:styleID=\"sCol30\" /><t:Column t:key=\"OldDiscountRate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"31\" t:styleID=\"sCol31\" /><t:Column t:key=\"cardRepServiceID\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"32\" t:styleID=\"sCol32\" /><t:Column t:key=\"seq\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"33\" t:styleID=\"sCol33\" /><t:Column t:key=\"WorkTimeStdPrice\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol34\" /><t:Column t:key=\"wipLineNo\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"35\" t:configured=\"true\" t:styleID=\"sCol35\" /><t:Column t:key=\"wipFactLineNo\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"36\" t:configured=\"true\" t:styleID=\"sCol36\" /><t:Column t:key=\"itemSpEntryId\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"37\" t:configured=\"true\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{ID}</t:Cell><t:Cell>$Resource{RepairItem}</t:Cell><t:Cell>$Resource{RepairItemName}</t:Cell><t:Cell>$Resource{ItemRemark}</t:Cell><t:Cell>$Resource{PaymentClassify}</t:Cell><t:Cell>$Resource{SettleObject}</t:Cell><t:Cell>$Resource{RepairClassify}</t:Cell><t:Cell>$Resource{RepairPkg}</t:Cell><t:Cell>$Resource{ServiceActivity}</t:Cell><t:Cell>$Resource{StdWorkTime}</t:Cell><t:Cell>$Resource{AssignWorkTime}</t:Cell><t:Cell>$Resource{WorkTimePrice}</t:Cell><t:Cell>$Resource{WorkTimeAmount}</t:Cell><t:Cell>$Resource{DiscountRate}</t:Cell><t:Cell>$Resource{DiscountAmount}</t:Cell><t:Cell>$Resource{ARAmount}</t:Cell><t:Cell>$Resource{ActualAmount}</t:Cell><t:Cell>$Resource{IsAppend}</t:Cell><t:Cell>$Resource{IsReturnRepair}</t:Cell><t:Cell>$Resource{ReworkReason}</t:Cell><t:Cell>$Resource{IsDelete}</t:Cell><t:Cell>$Resource{ItemStatus}</t:Cell><t:Cell>$Resource{IsMulAssign}</t:Cell><t:Cell>$Resource{WorkGroup}</t:Cell><t:Cell>$Resource{Person}</t:Cell><t:Cell>$Resource{repairGroupEntryId}</t:Cell><t:Cell>$Resource{WorkStation}</t:Cell><t:Cell>$Resource{ActualWorkTime}</t:Cell><t:Cell>$Resource{WagePrice}</t:Cell><t:Cell>$Resource{WorkTimeCost}</t:Cell><t:Cell>$Resource{IsTimeEdit}</t:Cell><t:Cell>$Resource{OldDiscountRate}</t:Cell><t:Cell>$Resource{cardRepServiceID}</t:Cell><t:Cell>$Resource{seq}</t:Cell><t:Cell>$Resource{WorkTimeStdPrice}</t:Cell><t:Cell>$Resource{wipLineNo}</t:Cell><t:Cell>$Resource{wipFactLineNo}</t:Cell><t:Cell>$Resource{itemSpEntryId}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
+		String kdtRWORepairItemEntryStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol2\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol7\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol8\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol9\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol10\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol11\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol12\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol13\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol14\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol15\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol16\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol17\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol18\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol20\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol21\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol25\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol27\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol28\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol29\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol30\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol31\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol32\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol33\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol34\"><c:Protection locked=\"true\" hidden=\"true\" /></c:Style><c:Style id=\"sCol35\"><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol36\"><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol37\"><c:Protection hidden=\"true\" /></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\" t:configured=\"true\"><t:ColumnGroup><t:Column t:key=\"ID\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"0\" t:styleID=\"sCol0\" /><t:Column t:key=\"RepairItem\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"1\" /><t:Column t:key=\"RepairItemName\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"2\" t:styleID=\"sCol2\" /><t:Column t:key=\"ItemRemark\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"3\" /><t:Column t:key=\"PaymentClassify\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"4\" /><t:Column t:key=\"SettleObject\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"5\" /><t:Column t:key=\"RepairClassify\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"6\" /><t:Column t:key=\"RepairPkg\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"7\" t:styleID=\"sCol7\" /><t:Column t:key=\"ServiceActivity\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"8\" t:styleID=\"sCol8\" /><t:Column t:key=\"StdWorkTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"9\" t:styleID=\"sCol9\" /><t:Column t:key=\"AssignWorkTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"10\" t:styleID=\"sCol10\" /><t:Column t:key=\"WorkTimePrice\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"11\" t:styleID=\"sCol11\" /><t:Column t:key=\"WorkTimeAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"12\" t:styleID=\"sCol12\" /><t:Column t:key=\"DiscountRate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"13\" t:styleID=\"sCol13\" /><t:Column t:key=\"DiscountAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"14\" t:styleID=\"sCol14\" /><t:Column t:key=\"ARAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"15\" t:styleID=\"sCol15\" /><t:Column t:key=\"ActualAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"16\" t:styleID=\"sCol16\" /><t:Column t:key=\"IsAppend\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"17\" t:styleID=\"sCol17\" /><t:Column t:key=\"IsReturnRepair\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"18\" t:styleID=\"sCol18\" /><t:Column t:key=\"ReworkReason\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"19\" /><t:Column t:key=\"IsDelete\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"20\" t:styleID=\"sCol20\" /><t:Column t:key=\"ItemStatus\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"21\" t:styleID=\"sCol21\" /><t:Column t:key=\"IsMulAssign\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"22\" /><t:Column t:key=\"WorkGroup\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"23\" /><t:Column t:key=\"Person\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"24\" /><t:Column t:key=\"repairGroupEntryId\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"25\" t:styleID=\"sCol25\" /><t:Column t:key=\"WorkStation\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"26\" /><t:Column t:key=\"ActualWorkTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"27\" t:styleID=\"sCol27\" /><t:Column t:key=\"WagePrice\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"28\" t:styleID=\"sCol28\" /><t:Column t:key=\"WorkTimeCost\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"29\" t:styleID=\"sCol29\" /><t:Column t:key=\"IsTimeEdit\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"30\" t:styleID=\"sCol30\" /><t:Column t:key=\"OldDiscountRate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"31\" t:styleID=\"sCol31\" /><t:Column t:key=\"cardRepServiceID\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"32\" t:styleID=\"sCol32\" /><t:Column t:key=\"seq\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"33\" t:styleID=\"sCol33\" /><t:Column t:key=\"WorkTimeStdPrice\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol34\" /><t:Column t:key=\"wipLineNo\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"35\" t:configured=\"true\" t:styleID=\"sCol35\" /><t:Column t:key=\"wipFactLineNo\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"36\" t:configured=\"true\" t:styleID=\"sCol36\" /><t:Column t:key=\"itemSpEntryId\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"37\" t:configured=\"true\" t:styleID=\"sCol37\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{ID}</t:Cell><t:Cell>$Resource{RepairItem}</t:Cell><t:Cell>$Resource{RepairItemName}</t:Cell><t:Cell>$Resource{ItemRemark}</t:Cell><t:Cell>$Resource{PaymentClassify}</t:Cell><t:Cell>$Resource{SettleObject}</t:Cell><t:Cell>$Resource{RepairClassify}</t:Cell><t:Cell>$Resource{RepairPkg}</t:Cell><t:Cell>$Resource{ServiceActivity}</t:Cell><t:Cell>$Resource{StdWorkTime}</t:Cell><t:Cell>$Resource{AssignWorkTime}</t:Cell><t:Cell>$Resource{WorkTimePrice}</t:Cell><t:Cell>$Resource{WorkTimeAmount}</t:Cell><t:Cell>$Resource{DiscountRate}</t:Cell><t:Cell>$Resource{DiscountAmount}</t:Cell><t:Cell>$Resource{ARAmount}</t:Cell><t:Cell>$Resource{ActualAmount}</t:Cell><t:Cell>$Resource{IsAppend}</t:Cell><t:Cell>$Resource{IsReturnRepair}</t:Cell><t:Cell>$Resource{ReworkReason}</t:Cell><t:Cell>$Resource{IsDelete}</t:Cell><t:Cell>$Resource{ItemStatus}</t:Cell><t:Cell>$Resource{IsMulAssign}</t:Cell><t:Cell>$Resource{WorkGroup}</t:Cell><t:Cell>$Resource{Person}</t:Cell><t:Cell>$Resource{repairGroupEntryId}</t:Cell><t:Cell>$Resource{WorkStation}</t:Cell><t:Cell>$Resource{ActualWorkTime}</t:Cell><t:Cell>$Resource{WagePrice}</t:Cell><t:Cell>$Resource{WorkTimeCost}</t:Cell><t:Cell>$Resource{IsTimeEdit}</t:Cell><t:Cell>$Resource{OldDiscountRate}</t:Cell><t:Cell>$Resource{cardRepServiceID}</t:Cell><t:Cell>$Resource{seq}</t:Cell><t:Cell>$Resource{WorkTimeStdPrice}</t:Cell><t:Cell>$Resource{wipLineNo}</t:Cell><t:Cell>$Resource{wipFactLineNo}</t:Cell><t:Cell>$Resource{itemSpEntryId}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
 		
         this.kdtRWORepairItemEntry.setFormatXml(resHelper.translateString("kdtRWORepairItemEntry",kdtRWORepairItemEntryStrXML));
         kdtRWORepairItemEntry.addKDTEditListener(new KDTEditAdapter() {
@@ -1460,11 +1479,6 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
 			}
 		});
 					
-        KDTextField kdtRWORepairItemEntry_RepairItemName_TextField = new KDTextField();
-        kdtRWORepairItemEntry_RepairItemName_TextField.setName("kdtRWORepairItemEntry_RepairItemName_TextField");
-        kdtRWORepairItemEntry_RepairItemName_TextField.setMaxLength(255);
-        KDTDefaultCellEditor kdtRWORepairItemEntry_RepairItemName_CellEditor = new KDTDefaultCellEditor(kdtRWORepairItemEntry_RepairItemName_TextField);
-        this.kdtRWORepairItemEntry.getColumn("RepairItemName").setEditor(kdtRWORepairItemEntry_RepairItemName_CellEditor);
         KDTextArea kdtRWORepairItemEntry_ItemRemark_TextArea = new KDTextArea();
         kdtRWORepairItemEntry_ItemRemark_TextArea.setName("kdtRWORepairItemEntry_ItemRemark_TextArea");
         kdtRWORepairItemEntry_ItemRemark_TextArea.setMaxLength(255);
@@ -1762,7 +1776,7 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         KDTDefaultCellEditor kdtRWORepairItemEntry_wipFactLineNo_CellEditor = new KDTDefaultCellEditor(kdtRWORepairItemEntry_wipFactLineNo_TextField);
         this.kdtRWORepairItemEntry.getColumn("wipFactLineNo").setEditor(kdtRWORepairItemEntry_wipFactLineNo_CellEditor);
         // kdtRWOSparepartEntry
-		String kdtRWOSparepartEntryStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol2\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol8\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol9\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol10\"><c:NumberFormat>&amp;date</c:NumberFormat></c:Style><c:Style id=\"sCol12\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol13\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol14\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol16\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol17\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol18\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol19\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol20\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol21\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol22\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol23\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol24\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol25\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol26\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol27\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol28\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol29\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol32\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol33\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol34\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol35\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol36\"><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol37\"><c:NumberFormat>&amp;int</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\" t:configured=\"true\"><t:ColumnGroup><t:Column t:key=\"ID\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol0\" /><t:Column t:key=\"Material\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"1\" /><t:Column t:key=\"MaterialName\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"2\" t:styleID=\"sCol2\" /><t:Column t:key=\"model\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"3\" /><t:Column t:key=\"PaymentClassify\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"4\" /><t:Column t:key=\"SettleObject\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"5\" /><t:Column t:key=\"RepairClassify\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"6\" /><t:Column t:key=\"RepairPkg\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"7\" /><t:Column t:key=\"ServiceActivity\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"8\" t:styleID=\"sCol8\" /><t:Column t:key=\"IsBO\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"9\" t:styleID=\"sCol9\" /><t:Column t:key=\"IntendArrivalTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"10\" t:styleID=\"sCol10\" /><t:Column t:key=\"AssistProperty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"11\" /><t:Column t:key=\"Qty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"12\" t:styleID=\"sCol12\" /><t:Column t:key=\"Unit\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"13\" t:styleID=\"sCol13\" /><t:Column t:key=\"BaseQty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"14\" t:styleID=\"sCol14\" /><t:Column t:key=\"BaseUnit\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"15\" /><t:Column t:key=\"NoIssueQty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"16\" t:styleID=\"sCol16\" /><t:Column t:key=\"IssueQty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"17\" t:styleID=\"sCol17\" /><t:Column t:key=\"TaxPrice\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"18\" t:styleID=\"sCol18\" /><t:Column t:key=\"TaxRate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"19\" t:styleID=\"sCol19\" /><t:Column t:key=\"NoTaxPrice\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"20\" t:styleID=\"sCol20\" /><t:Column t:key=\"TaxAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"21\" t:styleID=\"sCol21\" /><t:Column t:key=\"NoTaxAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"22\" t:styleID=\"sCol22\" /><t:Column t:key=\"DiscountRate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"23\" t:styleID=\"sCol23\" /><t:Column t:key=\"DiscountAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"24\" t:styleID=\"sCol24\" /><t:Column t:key=\"ARAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"25\" t:styleID=\"sCol25\" /><t:Column t:key=\"ActualAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"26\" t:styleID=\"sCol26\" /><t:Column t:key=\"Tax\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"27\" t:styleID=\"sCol27\" /><t:Column t:key=\"IsAppend\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"28\" t:styleID=\"sCol28\" /><t:Column t:key=\"IsDelete\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"29\" t:styleID=\"sCol29\" /><t:Column t:key=\"RepairItem\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"30\" /><t:Column t:key=\"Remark\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"31\" /><t:Column t:key=\"InstantStore\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"32\" t:styleID=\"sCol32\" /><t:Column t:key=\"OldDiscountRate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"33\" t:styleID=\"sCol33\" /><t:Column t:key=\"MaterialGroup\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"34\" t:styleID=\"sCol34\" /><t:Column t:key=\"seq\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"35\" t:styleID=\"sCol35\" /><t:Column t:key=\"wipLineNo\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"36\" t:configured=\"true\" t:styleID=\"sCol36\" /><t:Column t:key=\"wipFactLineNo\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"37\" t:configured=\"true\" t:styleID=\"sCol37\" /><t:Column t:key=\"isCT\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"38\" t:configured=\"true\" /><t:Column t:key=\"itemSpEntryId\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"39\" t:configured=\"true\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{ID}</t:Cell><t:Cell>$Resource{Material}</t:Cell><t:Cell>$Resource{MaterialName}</t:Cell><t:Cell>$Resource{model}</t:Cell><t:Cell>$Resource{PaymentClassify}</t:Cell><t:Cell>$Resource{SettleObject}</t:Cell><t:Cell>$Resource{RepairClassify}</t:Cell><t:Cell>$Resource{RepairPkg}</t:Cell><t:Cell>$Resource{ServiceActivity}</t:Cell><t:Cell>$Resource{IsBO}</t:Cell><t:Cell>$Resource{IntendArrivalTime}</t:Cell><t:Cell>$Resource{AssistProperty}</t:Cell><t:Cell>$Resource{Qty}</t:Cell><t:Cell>$Resource{Unit}</t:Cell><t:Cell>$Resource{BaseQty}</t:Cell><t:Cell>$Resource{BaseUnit}</t:Cell><t:Cell>$Resource{NoIssueQty}</t:Cell><t:Cell>$Resource{IssueQty}</t:Cell><t:Cell>$Resource{TaxPrice}</t:Cell><t:Cell>$Resource{TaxRate}</t:Cell><t:Cell>$Resource{NoTaxPrice}</t:Cell><t:Cell>$Resource{TaxAmount}</t:Cell><t:Cell>$Resource{NoTaxAmount}</t:Cell><t:Cell>$Resource{DiscountRate}</t:Cell><t:Cell>$Resource{DiscountAmount}</t:Cell><t:Cell>$Resource{ARAmount}</t:Cell><t:Cell>$Resource{ActualAmount}</t:Cell><t:Cell>$Resource{Tax}</t:Cell><t:Cell>$Resource{IsAppend}</t:Cell><t:Cell>$Resource{IsDelete}</t:Cell><t:Cell>$Resource{RepairItem}</t:Cell><t:Cell>$Resource{Remark}</t:Cell><t:Cell>$Resource{InstantStore}</t:Cell><t:Cell>$Resource{OldDiscountRate}</t:Cell><t:Cell>$Resource{MaterialGroup}</t:Cell><t:Cell>$Resource{seq}</t:Cell><t:Cell>$Resource{wipLineNo}</t:Cell><t:Cell>$Resource{wipFactLineNo}</t:Cell><t:Cell>$Resource{isCT}</t:Cell><t:Cell>$Resource{itemSpEntryId}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
+		String kdtRWOSparepartEntryStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol2\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol8\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol9\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol10\"><c:NumberFormat>&amp;date</c:NumberFormat></c:Style><c:Style id=\"sCol12\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol13\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol14\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol16\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol17\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol18\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol19\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol20\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol21\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol22\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol23\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol24\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol25\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol26\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol27\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol28\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol29\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol32\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol33\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol34\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol35\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol36\"><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol37\"><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol39\"><c:Protection hidden=\"true\" /></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\" t:configured=\"true\"><t:ColumnGroup><t:Column t:key=\"ID\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol0\" /><t:Column t:key=\"Material\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"1\" /><t:Column t:key=\"MaterialName\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"2\" t:styleID=\"sCol2\" /><t:Column t:key=\"model\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"3\" /><t:Column t:key=\"PaymentClassify\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"4\" /><t:Column t:key=\"SettleObject\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"5\" /><t:Column t:key=\"RepairClassify\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"6\" /><t:Column t:key=\"RepairPkg\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"7\" /><t:Column t:key=\"ServiceActivity\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"8\" t:styleID=\"sCol8\" /><t:Column t:key=\"IsBO\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"9\" t:styleID=\"sCol9\" /><t:Column t:key=\"IntendArrivalTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"10\" t:styleID=\"sCol10\" /><t:Column t:key=\"AssistProperty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"11\" /><t:Column t:key=\"Qty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"12\" t:styleID=\"sCol12\" /><t:Column t:key=\"Unit\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"13\" t:styleID=\"sCol13\" /><t:Column t:key=\"BaseQty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"14\" t:styleID=\"sCol14\" /><t:Column t:key=\"BaseUnit\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"15\" /><t:Column t:key=\"NoIssueQty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"16\" t:styleID=\"sCol16\" /><t:Column t:key=\"IssueQty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"17\" t:styleID=\"sCol17\" /><t:Column t:key=\"TaxPrice\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"18\" t:styleID=\"sCol18\" /><t:Column t:key=\"TaxRate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"19\" t:styleID=\"sCol19\" /><t:Column t:key=\"NoTaxPrice\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"20\" t:styleID=\"sCol20\" /><t:Column t:key=\"TaxAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"21\" t:styleID=\"sCol21\" /><t:Column t:key=\"NoTaxAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"22\" t:styleID=\"sCol22\" /><t:Column t:key=\"DiscountRate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"23\" t:styleID=\"sCol23\" /><t:Column t:key=\"DiscountAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"24\" t:styleID=\"sCol24\" /><t:Column t:key=\"ARAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"25\" t:styleID=\"sCol25\" /><t:Column t:key=\"ActualAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"26\" t:styleID=\"sCol26\" /><t:Column t:key=\"Tax\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"27\" t:styleID=\"sCol27\" /><t:Column t:key=\"IsAppend\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"28\" t:styleID=\"sCol28\" /><t:Column t:key=\"IsDelete\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"29\" t:styleID=\"sCol29\" /><t:Column t:key=\"RepairItem\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"30\" /><t:Column t:key=\"Remark\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"31\" /><t:Column t:key=\"InstantStore\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"32\" t:styleID=\"sCol32\" /><t:Column t:key=\"OldDiscountRate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"33\" t:styleID=\"sCol33\" /><t:Column t:key=\"MaterialGroup\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"34\" t:styleID=\"sCol34\" /><t:Column t:key=\"seq\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"35\" t:styleID=\"sCol35\" /><t:Column t:key=\"wipLineNo\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"36\" t:configured=\"true\" t:styleID=\"sCol36\" /><t:Column t:key=\"wipFactLineNo\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"37\" t:configured=\"true\" t:styleID=\"sCol37\" /><t:Column t:key=\"isCT\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"38\" t:configured=\"true\" /><t:Column t:key=\"itemSpEntryId\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"39\" t:configured=\"true\" t:styleID=\"sCol39\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{ID}</t:Cell><t:Cell>$Resource{Material}</t:Cell><t:Cell>$Resource{MaterialName}</t:Cell><t:Cell>$Resource{model}</t:Cell><t:Cell>$Resource{PaymentClassify}</t:Cell><t:Cell>$Resource{SettleObject}</t:Cell><t:Cell>$Resource{RepairClassify}</t:Cell><t:Cell>$Resource{RepairPkg}</t:Cell><t:Cell>$Resource{ServiceActivity}</t:Cell><t:Cell>$Resource{IsBO}</t:Cell><t:Cell>$Resource{IntendArrivalTime}</t:Cell><t:Cell>$Resource{AssistProperty}</t:Cell><t:Cell>$Resource{Qty}</t:Cell><t:Cell>$Resource{Unit}</t:Cell><t:Cell>$Resource{BaseQty}</t:Cell><t:Cell>$Resource{BaseUnit}</t:Cell><t:Cell>$Resource{NoIssueQty}</t:Cell><t:Cell>$Resource{IssueQty}</t:Cell><t:Cell>$Resource{TaxPrice}</t:Cell><t:Cell>$Resource{TaxRate}</t:Cell><t:Cell>$Resource{NoTaxPrice}</t:Cell><t:Cell>$Resource{TaxAmount}</t:Cell><t:Cell>$Resource{NoTaxAmount}</t:Cell><t:Cell>$Resource{DiscountRate}</t:Cell><t:Cell>$Resource{DiscountAmount}</t:Cell><t:Cell>$Resource{ARAmount}</t:Cell><t:Cell>$Resource{ActualAmount}</t:Cell><t:Cell>$Resource{Tax}</t:Cell><t:Cell>$Resource{IsAppend}</t:Cell><t:Cell>$Resource{IsDelete}</t:Cell><t:Cell>$Resource{RepairItem}</t:Cell><t:Cell>$Resource{Remark}</t:Cell><t:Cell>$Resource{InstantStore}</t:Cell><t:Cell>$Resource{OldDiscountRate}</t:Cell><t:Cell>$Resource{MaterialGroup}</t:Cell><t:Cell>$Resource{seq}</t:Cell><t:Cell>$Resource{wipLineNo}</t:Cell><t:Cell>$Resource{wipFactLineNo}</t:Cell><t:Cell>$Resource{isCT}</t:Cell><t:Cell>$Resource{itemSpEntryId}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
 		
         this.kdtRWOSparepartEntry.setFormatXml(resHelper.translateString("kdtRWOSparepartEntry",kdtRWOSparepartEntryStrXML));
         kdtRWOSparepartEntry.addKDTEditListener(new KDTEditAdapter() {
@@ -1802,11 +1816,6 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         ObjectValueRender kdtRWOSparepartEntry_Material_OVR = new ObjectValueRender();
         kdtRWOSparepartEntry_Material_OVR.setFormat(new BizDataFormat("$number$"));
         this.kdtRWOSparepartEntry.getColumn("Material").setRenderer(kdtRWOSparepartEntry_Material_OVR);
-        KDTextField kdtRWOSparepartEntry_MaterialName_TextField = new KDTextField();
-        kdtRWOSparepartEntry_MaterialName_TextField.setName("kdtRWOSparepartEntry_MaterialName_TextField");
-        kdtRWOSparepartEntry_MaterialName_TextField.setMaxLength(255);
-        KDTDefaultCellEditor kdtRWOSparepartEntry_MaterialName_CellEditor = new KDTDefaultCellEditor(kdtRWOSparepartEntry_MaterialName_TextField);
-        this.kdtRWOSparepartEntry.getColumn("MaterialName").setEditor(kdtRWOSparepartEntry_MaterialName_CellEditor);
         final KDBizPromptBox kdtRWOSparepartEntry_PaymentClassify_PromptBox = new KDBizPromptBox();
         kdtRWOSparepartEntry_PaymentClassify_PromptBox.setQueryInfo("com.kingdee.eas.auto4s.bdm.rsm.app.PaymentClassifyQuery");
         kdtRWOSparepartEntry_PaymentClassify_PromptBox.setVisible(true);
@@ -2357,11 +2366,6 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         ObjectValueRender kdtRWOAttachmentItemEntry_AttaItem_OVR = new ObjectValueRender();
         kdtRWOAttachmentItemEntry_AttaItem_OVR.setFormat(new BizDataFormat("$number$"));
         this.kdtRWOAttachmentItemEntry.getColumn("AttaItem").setRenderer(kdtRWOAttachmentItemEntry_AttaItem_OVR);
-        KDTextField kdtRWOAttachmentItemEntry_AttaItemName_TextField = new KDTextField();
-        kdtRWOAttachmentItemEntry_AttaItemName_TextField.setName("kdtRWOAttachmentItemEntry_AttaItemName_TextField");
-        kdtRWOAttachmentItemEntry_AttaItemName_TextField.setMaxLength(255);
-        KDTDefaultCellEditor kdtRWOAttachmentItemEntry_AttaItemName_CellEditor = new KDTDefaultCellEditor(kdtRWOAttachmentItemEntry_AttaItemName_TextField);
-        this.kdtRWOAttachmentItemEntry.getColumn("AttaItemName").setEditor(kdtRWOAttachmentItemEntry_AttaItemName_CellEditor);
         KDFormattedTextField kdtRWOAttachmentItemEntry_AttaItemAmount_TextField = new KDFormattedTextField();
         kdtRWOAttachmentItemEntry_AttaItemAmount_TextField.setName("kdtRWOAttachmentItemEntry_AttaItemAmount_TextField");
         kdtRWOAttachmentItemEntry_AttaItemAmount_TextField.setVisible(true);
@@ -2670,11 +2674,6 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         // kDPRepairInfo
         // kDPVehicleInfo
         // kDPHideField
-        // contdept		
-        this.contdept.setBoundLabelText(resHelper.getString("contdept.boundLabelText"));		
-        this.contdept.setBoundLabelLength(100);		
-        this.contdept.setBoundLabelUnderline(true);		
-        this.contdept.setVisible(true);
         // contRemark		
         this.contRemark.setBoundLabelText(resHelper.getString("contRemark.boundLabelText"));		
         this.contRemark.setBoundLabelLength(100);		
@@ -2700,13 +2699,6 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.contcustomerAccountName.setBoundLabelLength(100);		
         this.contcustomerAccountName.setBoundLabelUnderline(true);		
         this.contcustomerAccountName.setVisible(true);
-        // prmtdept		
-        this.prmtdept.setQueryInfo("com.kingdee.eas.basedata.org.app.AdminItemQuery");		
-        this.prmtdept.setEditable(true);		
-        this.prmtdept.setDisplayFormat("$name$");		
-        this.prmtdept.setEditFormat("$number$");		
-        this.prmtdept.setCommitFormat("$number$");		
-        this.prmtdept.setRequired(false);
         // scrollPaneRemark
         // txtRemark		
         this.txtRemark.setRequired(false);		
@@ -2718,14 +2710,15 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         // txtsaleType		
         this.txtsaleType.setHorizontalAlignment(2);		
         this.txtsaleType.setMaxLength(100);		
-        this.txtsaleType.setRequired(false);
+        this.txtsaleType.setRequired(false);		
+        this.txtsaleType.setEnabled(false);
         // prmtCustomerAccount		
         this.prmtCustomerAccount.setQueryInfo("com.kingdee.eas.ga.rs.app.CustomerAccountQuery");		
         this.prmtCustomerAccount.setEditable(true);		
         this.prmtCustomerAccount.setDisplayFormat("$number$");		
         this.prmtCustomerAccount.setEditFormat("$number$");		
         this.prmtCustomerAccount.setCommitFormat("$number$");		
-        this.prmtCustomerAccount.setRequired(false);
+        this.prmtCustomerAccount.setRequired(true);
         prmtCustomerAccount.addDataChangeListener(new DataChangeListener() {
 		public void dataChanged(DataChangeEvent e) {
 			try {
@@ -2740,14 +2733,27 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         // txtcustomerAccountName		
         this.txtcustomerAccountName.setHorizontalAlignment(2);		
         this.txtcustomerAccountName.setMaxLength(80);		
-        this.txtcustomerAccountName.setRequired(false);
+        this.txtcustomerAccountName.setRequired(false);		
+        this.txtcustomerAccountName.setEnabled(false);
+        // contdept		
+        this.contdept.setBoundLabelText(resHelper.getString("contdept.boundLabelText"));		
+        this.contdept.setBoundLabelLength(100);		
+        this.contdept.setBoundLabelUnderline(true);		
+        this.contdept.setVisible(true);
+        // prmtdept		
+        this.prmtdept.setQueryInfo("com.kingdee.eas.basedata.org.app.AdminItemQuery");		
+        this.prmtdept.setEditable(true);		
+        this.prmtdept.setDisplayFormat("$name$");		
+        this.prmtdept.setEditFormat("$number$");		
+        this.prmtdept.setCommitFormat("$number$");		
+        this.prmtdept.setRequired(false);
         // kDPRwoItemSp
         // kdtRWOItemSpEntry
-		String kdtRWOItemSpEntryStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol9\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol10\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol11\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol12\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol13\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol14\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol15\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"seq\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol0\" /><t:Column t:key=\"t\" t:width=\"40\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"itemspNum\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"repairItem\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"3\" /><t:Column t:key=\"material\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"4\" /><t:Column t:key=\"itemspName\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"5\" /><t:Column t:key=\"taocan\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"w\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"isCT\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"qty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol9\" /><t:Column t:key=\"unIssueQty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol10\" /><t:Column t:key=\"issueQty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol11\" /><t:Column t:key=\"price\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol12\" /><t:Column t:key=\"discountRate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol13\" /><t:Column t:key=\"amount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol14\" /><t:Column t:key=\"taxRate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol15\" /><t:Column t:key=\"i\" t:width=\"40\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{seq}</t:Cell><t:Cell>$Resource{t}</t:Cell><t:Cell>$Resource{itemspNum}</t:Cell><t:Cell>$Resource{repairItem}</t:Cell><t:Cell>$Resource{material}</t:Cell><t:Cell>$Resource{itemspName}</t:Cell><t:Cell>$Resource{taocan}</t:Cell><t:Cell>$Resource{w}</t:Cell><t:Cell>$Resource{isCT}</t:Cell><t:Cell>$Resource{qty}</t:Cell><t:Cell>$Resource{unIssueQty}</t:Cell><t:Cell>$Resource{issueQty}</t:Cell><t:Cell>$Resource{price}</t:Cell><t:Cell>$Resource{discountRate}</t:Cell><t:Cell>$Resource{amount}</t:Cell><t:Cell>$Resource{taxRate}</t:Cell><t:Cell>$Resource{i}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
+		String kdtRWOItemSpEntryStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol1\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol2\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol3\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol4\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol8\"><c:Protection locked=\"true\" hidden=\"true\" /></c:Style><c:Style id=\"sCol10\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol11\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol12\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol13\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol14\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol15\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol16\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol17\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol18\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol19\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"seq\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol0\" /><t:Column t:key=\"t\" t:width=\"30\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol1\" /><t:Column t:key=\"itemspNum\" t:width=\"150\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol2\" /><t:Column t:key=\"repairItem\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"3\" t:styleID=\"sCol3\" /><t:Column t:key=\"material\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"4\" t:styleID=\"sCol4\" /><t:Column t:key=\"itemspName\" t:width=\"250\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"5\" /><t:Column t:key=\"taocan\" t:width=\"50\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"w\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"settlementObject\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol8\" /><t:Column t:key=\"isCT\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"qty\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol10\" /><t:Column t:key=\"unIssueQty\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol11\" /><t:Column t:key=\"issueQty\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol12\" /><t:Column t:key=\"price\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol13\" /><t:Column t:key=\"discountRate\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol14\" /><t:Column t:key=\"amount\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol15\" /><t:Column t:key=\"taxRate\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol16\" /><t:Column t:key=\"i\" t:width=\"40\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol17\" /><t:Column t:key=\"wipFactLineNo\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol18\" /><t:Column t:key=\"wipLineNo\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol19\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{seq}</t:Cell><t:Cell>$Resource{t}</t:Cell><t:Cell>$Resource{itemspNum}</t:Cell><t:Cell>$Resource{repairItem}</t:Cell><t:Cell>$Resource{material}</t:Cell><t:Cell>$Resource{itemspName}</t:Cell><t:Cell>$Resource{taocan}</t:Cell><t:Cell>$Resource{w}</t:Cell><t:Cell>$Resource{settlementObject}</t:Cell><t:Cell>$Resource{isCT}</t:Cell><t:Cell>$Resource{qty}</t:Cell><t:Cell>$Resource{unIssueQty}</t:Cell><t:Cell>$Resource{issueQty}</t:Cell><t:Cell>$Resource{price}</t:Cell><t:Cell>$Resource{discountRate}</t:Cell><t:Cell>$Resource{amount}</t:Cell><t:Cell>$Resource{taxRate}</t:Cell><t:Cell>$Resource{i}</t:Cell><t:Cell>$Resource{wipFactLineNo}</t:Cell><t:Cell>$Resource{wipLineNo}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
 		
         this.kdtRWOItemSpEntry.setFormatXml(resHelper.translateString("kdtRWOItemSpEntry",kdtRWOItemSpEntryStrXML));
 
-                this.kdtRWOItemSpEntry.putBindContents("editData",new String[] {"seq","t","itemspNum","repairItem","material","itemspName","taocan","w","isCT","qty","unIssueQty","issueQty","price","discountRate","amount","taxRate","i"});
+                this.kdtRWOItemSpEntry.putBindContents("editData",new String[] {"seq","t","itemspNum","repairItem","material","itemspName","taocan","w","settlementObject","isCT","qty","unIssueQty","issueQty","price","discountRate","amount","taxRate","i","wipFactLineNo","wipLineNo"});
 
 
         this.kdtRWOItemSpEntry.checkParsed();
@@ -2814,7 +2820,7 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         KDTDefaultCellEditor kdtRWOItemSpEntry_taocan_CellEditor = new KDTDefaultCellEditor(kdtRWOItemSpEntry_taocan_TextField);
         this.kdtRWOItemSpEntry.getColumn("taocan").setEditor(kdtRWOItemSpEntry_taocan_CellEditor);
         final KDBizPromptBox kdtRWOItemSpEntry_w_PromptBox = new KDBizPromptBox();
-        kdtRWOItemSpEntry_w_PromptBox.setQueryInfo("com.kingdee.eas.ep.app.DataBaseCustomQuery");
+        kdtRWOItemSpEntry_w_PromptBox.setQueryInfo("com.kingdee.eas.ga.rs.app.WQuery");
         kdtRWOItemSpEntry_w_PromptBox.setVisible(true);
         kdtRWOItemSpEntry_w_PromptBox.setEditable(true);
         kdtRWOItemSpEntry_w_PromptBox.setDisplayFormat("$number$");
@@ -2823,8 +2829,14 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         KDTDefaultCellEditor kdtRWOItemSpEntry_w_CellEditor = new KDTDefaultCellEditor(kdtRWOItemSpEntry_w_PromptBox);
         this.kdtRWOItemSpEntry.getColumn("w").setEditor(kdtRWOItemSpEntry_w_CellEditor);
         ObjectValueRender kdtRWOItemSpEntry_w_OVR = new ObjectValueRender();
-        kdtRWOItemSpEntry_w_OVR.setFormat(new BizDataFormat("$name$"));
+        kdtRWOItemSpEntry_w_OVR.setFormat(new BizDataFormat("$number$"));
         this.kdtRWOItemSpEntry.getColumn("w").setRenderer(kdtRWOItemSpEntry_w_OVR);
+        KDComboBox kdtRWOItemSpEntry_settlementObject_ComboBox = new KDComboBox();
+        kdtRWOItemSpEntry_settlementObject_ComboBox.setName("kdtRWOItemSpEntry_settlementObject_ComboBox");
+        kdtRWOItemSpEntry_settlementObject_ComboBox.setVisible(true);
+        kdtRWOItemSpEntry_settlementObject_ComboBox.addItems(EnumUtils.getEnumList("com.kingdee.eas.auto4s.bdm.rsm.SettlementObjectEnum").toArray());
+        KDTDefaultCellEditor kdtRWOItemSpEntry_settlementObject_CellEditor = new KDTDefaultCellEditor(kdtRWOItemSpEntry_settlementObject_ComboBox);
+        this.kdtRWOItemSpEntry.getColumn("settlementObject").setEditor(kdtRWOItemSpEntry_settlementObject_CellEditor);
         KDCheckBox kdtRWOItemSpEntry_isCT_CheckBox = new KDCheckBox();
         kdtRWOItemSpEntry_isCT_CheckBox.setName("kdtRWOItemSpEntry_isCT_CheckBox");
         KDTDefaultCellEditor kdtRWOItemSpEntry_isCT_CellEditor = new KDTDefaultCellEditor(kdtRWOItemSpEntry_isCT_CheckBox);
@@ -2912,7 +2924,51 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         kdtRWOItemSpEntry_i_ComboBox.addItems(EnumUtils.getEnumList("com.kingdee.eas.ga.rs.IEnum").toArray());
         KDTDefaultCellEditor kdtRWOItemSpEntry_i_CellEditor = new KDTDefaultCellEditor(kdtRWOItemSpEntry_i_ComboBox);
         this.kdtRWOItemSpEntry.getColumn("i").setEditor(kdtRWOItemSpEntry_i_CellEditor);
-        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {txtRemark,prmtVehicle,txtVIN,prmtBrand,prmtOrgUnit,Status,prmtSA,pkComeTime,pkIntendDeliveryTime,txtRepairTotalAmount,chkIsStat,txtMile,OilQty,txtKeyNumber,txtConsignation,prmtWarrantyType,prmtInsuranCompany,prmtRepairType,chkIsPriorAssign,chkIsWash,chkIsWaitForStore,txtCustomerRequest,txtCompanyNumber,pkNextMaintainDate,prmtCustomer,txtRepairSender,txtTel,prmtCustomerDiscountClassify,txtOldID,txtRepairBookingID,ReturnRepair,kDRecentlyComeTime,txtNumber,kDTDis,prmtAccountCfg,chkIsPay,chekIsReceive,repairWay,prmtGroupOrgunit,prmtSupplier,prmtVip,prmtdept,txtcustomInfo,txtsaleType,prmtCustomerAccount,txtcustomerAccountName,kdtRepairBreakEntry,kdtRWOTotalAmountEntry,kdtRWOAttachmentItemEntry,kdtRWOActivityEntry,kdtRWORepairPkgEntry,kdtRWOSparepartEntry,kdtRWORepairItemEntry,kdtRWOItemSpEntry}));
+        KDFormattedTextField kdtRWOItemSpEntry_wipFactLineNo_TextField = new KDFormattedTextField();
+        kdtRWOItemSpEntry_wipFactLineNo_TextField.setName("kdtRWOItemSpEntry_wipFactLineNo_TextField");
+        kdtRWOItemSpEntry_wipFactLineNo_TextField.setVisible(true);
+        kdtRWOItemSpEntry_wipFactLineNo_TextField.setEditable(true);
+        kdtRWOItemSpEntry_wipFactLineNo_TextField.setHorizontalAlignment(2);
+        kdtRWOItemSpEntry_wipFactLineNo_TextField.setDataType(0);
+        KDTDefaultCellEditor kdtRWOItemSpEntry_wipFactLineNo_CellEditor = new KDTDefaultCellEditor(kdtRWOItemSpEntry_wipFactLineNo_TextField);
+        this.kdtRWOItemSpEntry.getColumn("wipFactLineNo").setEditor(kdtRWOItemSpEntry_wipFactLineNo_CellEditor);
+        KDFormattedTextField kdtRWOItemSpEntry_wipLineNo_TextField = new KDFormattedTextField();
+        kdtRWOItemSpEntry_wipLineNo_TextField.setName("kdtRWOItemSpEntry_wipLineNo_TextField");
+        kdtRWOItemSpEntry_wipLineNo_TextField.setVisible(true);
+        kdtRWOItemSpEntry_wipLineNo_TextField.setEditable(true);
+        kdtRWOItemSpEntry_wipLineNo_TextField.setHorizontalAlignment(2);
+        kdtRWOItemSpEntry_wipLineNo_TextField.setDataType(0);
+        KDTDefaultCellEditor kdtRWOItemSpEntry_wipLineNo_CellEditor = new KDTDefaultCellEditor(kdtRWOItemSpEntry_wipLineNo_TextField);
+        this.kdtRWOItemSpEntry.getColumn("wipLineNo").setEditor(kdtRWOItemSpEntry_wipLineNo_CellEditor);
+        // kDLabelContainer8		
+        this.kDLabelContainer8.setBoundLabelText(resHelper.getString("kDLabelContainer8.boundLabelText"));		
+        this.kDLabelContainer8.setBoundLabelUnderline(true);		
+        this.kDLabelContainer8.setBoundLabelLength(40);
+        // labRepairItem		
+        this.labRepairItem.setBoundLabelText(resHelper.getString("labRepairItem.boundLabelText"));		
+        this.labRepairItem.setBoundLabelUnderline(true);		
+        this.labRepairItem.setBoundLabelLength(40);		
+        this.labRepairItem.setVisible(false);
+        // labMaterial		
+        this.labMaterial.setBoundLabelText(resHelper.getString("labMaterial.boundLabelText"));		
+        this.labMaterial.setBoundLabelUnderline(true);		
+        this.labMaterial.setBoundLabelLength(40);
+        // cmbT		
+        this.cmbT.addItems(EnumUtils.getEnumList("com.kingdee.eas.ga.rs.TEnum").toArray());		
+        this.cmbT.setSelectedIndex(0);
+        this.cmbT.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent e) {
+                try {
+                    cmbT_itemStateChanged(e);
+                } catch (Exception exc) {
+                    handUIException(exc);
+                } finally {
+                }
+            }
+        });
+        // prmtRepairItem
+        // prmtMaterial
+        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {txtVIN,cmbT,txtRemark,prmtVehicle,prmtBrand,prmtOrgUnit,Status,prmtSA,pkComeTime,pkIntendDeliveryTime,txtRepairTotalAmount,chkIsStat,txtMile,OilQty,txtKeyNumber,txtConsignation,prmtWarrantyType,prmtInsuranCompany,prmtRepairType,chkIsPriorAssign,chkIsWash,chkIsWaitForStore,txtCustomerRequest,txtCompanyNumber,pkNextMaintainDate,prmtCustomer,txtRepairSender,txtTel,prmtCustomerDiscountClassify,txtOldID,txtRepairBookingID,ReturnRepair,kDRecentlyComeTime,txtNumber,kDTDis,prmtAccountCfg,chkIsPay,chekIsReceive,repairWay,prmtGroupOrgunit,prmtSupplier,prmtVip,prmtdept,txtcustomInfo,txtsaleType,prmtCustomerAccount,txtcustomerAccountName,kdtRepairBreakEntry,kdtRWOTotalAmountEntry,kdtRWOAttachmentItemEntry,kdtRWOActivityEntry,kdtRWORepairPkgEntry,kdtRWOSparepartEntry,kdtRWORepairItemEntry,kdtRWOItemSpEntry}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding
 		registerBindings();
@@ -2954,8 +3010,8 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         kDSplitPane1.add(kDTRWOPane, "bottom");
         //kDPanel1
         kDPanel1.setLayout(new KDLayout());
-        kDPanel1.putClientProperty("OriginalBounds", new Rectangle(0, 0, 974, 239));        contCompanyNumber.setBounds(new Rectangle(342, 10, 270, 19));
-        kDPanel1.add(contCompanyNumber, new KDLayout.Constraints(342, 10, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDPanel1.putClientProperty("OriginalBounds", new Rectangle(0, 0, 974, 239));        contCompanyNumber.setBounds(new Rectangle(343, 10, 270, 19));
+        kDPanel1.add(contCompanyNumber, new KDLayout.Constraints(343, 10, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contStatus.setBounds(new Rectangle(683, 10, 270, 19));
         kDPanel1.add(contStatus, new KDLayout.Constraints(683, 10, 270, 19, KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contNumber.setBounds(new Rectangle(2, 10, 270, 19));
@@ -2975,18 +3031,16 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         kDTabbedPane1.add(kDPHideField, resHelper.getString("kDPHideField.constraints"));
         //kDPBizInfo
         kDPBizInfo.setLayout(new KDLayout());
-        kDPBizInfo.putClientProperty("OriginalBounds", new Rectangle(0, 0, 967, 149));        contCustomer.setBounds(new Rectangle(349, 6, 270, 19));
-        kDPBizInfo.add(contCustomer, new KDLayout.Constraints(349, 6, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contSA.setBounds(new Rectangle(10, 102, 270, 19));
-        kDPBizInfo.add(contSA, new KDLayout.Constraints(10, 102, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDPBizInfo.putClientProperty("OriginalBounds", new Rectangle(0, 0, 967, 149));        contCustomer.setBounds(new Rectangle(351, 6, 276, 19));
+        kDPBizInfo.add(contCustomer, new KDLayout.Constraints(351, 6, 276, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contSA.setBounds(new Rectangle(10, 66, 270, 19));
+        kDPBizInfo.add(contSA, new KDLayout.Constraints(10, 66, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contVehicle.setBounds(new Rectangle(10, 6, 270, 19));
         kDPBizInfo.add(contVehicle, new KDLayout.Constraints(10, 6, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contOrgUnit.setBounds(new Rectangle(10, 35, 270, 19));
         kDPBizInfo.add(contOrgUnit, new KDLayout.Constraints(10, 35, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contdept.setBounds(new Rectangle(10, 66, 270, 19));
-        kDPBizInfo.add(contdept, new KDLayout.Constraints(10, 66, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contRemark.setBounds(new Rectangle(349, 94, 612, 27));
-        kDPBizInfo.add(contRemark, new KDLayout.Constraints(349, 94, 612, 27, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contRemark.setBounds(new Rectangle(10, 94, 616, 43));
+        kDPBizInfo.add(contRemark, new KDLayout.Constraints(10, 94, 616, 43, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contcustomInfo.setBounds(new Rectangle(349, 35, 277, 50));
         kDPBizInfo.add(contcustomInfo, new KDLayout.Constraints(349, 35, 277, 50, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contsaleType.setBounds(new Rectangle(689, 66, 270, 19));
@@ -3003,8 +3057,6 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         contVehicle.setBoundEditor(prmtVehicle);
         //contOrgUnit
         contOrgUnit.setBoundEditor(prmtOrgUnit);
-        //contdept
-        contdept.setBoundEditor(prmtdept);
         //contRemark
         contRemark.setBoundEditor(scrollPaneRemark);
         //scrollPaneRemark
@@ -3089,12 +3141,12 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         kDPHideField.add(contnextMaintainmiles, new KDLayout.Constraints(2, 47, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contNextMaintainDate.setBounds(new Rectangle(558, 26, 270, 19));
         kDPHideField.add(contNextMaintainDate, new KDLayout.Constraints(558, 26, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        chkIsWaitForStore.setBounds(new Rectangle(406, 2, 125, 19));
-        kDPHideField.add(chkIsWaitForStore, new KDLayout.Constraints(406, 2, 125, 19, KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        chkIsWash.setBounds(new Rectangle(653, 5, 120, 19));
-        kDPHideField.add(chkIsWash, new KDLayout.Constraints(653, 5, 120, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        chkIsPriorAssign.setBounds(new Rectangle(517, 2, 102, 19));
-        kDPHideField.add(chkIsPriorAssign, new KDLayout.Constraints(517, 2, 102, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        chkIsWaitForStore.setBounds(new Rectangle(387, 4, 88, 19));
+        kDPHideField.add(chkIsWaitForStore, new KDLayout.Constraints(387, 4, 88, 19, KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        chkIsWash.setBounds(new Rectangle(568, 5, 78, 19));
+        kDPHideField.add(chkIsWash, new KDLayout.Constraints(568, 5, 78, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        chkIsPriorAssign.setBounds(new Rectangle(476, 1, 102, 19));
+        kDPHideField.add(chkIsPriorAssign, new KDLayout.Constraints(476, 1, 102, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contRepairType.setBounds(new Rectangle(281, 69, 270, 19));
         kDPHideField.add(contRepairType, new KDLayout.Constraints(281, 69, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contWarrantyType.setBounds(new Rectangle(2, 94, 270, 19));
@@ -3131,6 +3183,8 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         kDPHideField.add(chkIsPay, new KDLayout.Constraints(424, 26, 118, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         kDLabelContainer7.setBounds(new Rectangle(5, 70, 270, 19));
         kDPHideField.add(kDLabelContainer7, new KDLayout.Constraints(5, 70, 270, 19, KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contdept.setBounds(new Rectangle(684, 1, 270, 19));
+        kDPHideField.add(contdept, new KDLayout.Constraints(684, 1, 270, 19, 0));
         //kDLabelContainer2
         kDLabelContainer2.setBoundEditor(kDRecentlyComeTime);
         //contInsuranCompany
@@ -3163,6 +3217,8 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         kDLabelContainer5.setBoundEditor(prmtGroupOrgunit);
         //kDLabelContainer7
         kDLabelContainer7.setBoundEditor(prmtAccountCfg);
+        //contdept
+        contdept.setBoundEditor(prmtdept);
         //kDTRWOPane
         kDTRWOPane.add(kDPRwoItem, resHelper.getString("kDPRwoItem.constraints"));
         kDTRWOPane.add(kDPRwoSp, resHelper.getString("kDPRwoSp.constraints"));
@@ -3237,18 +3293,32 @@ vo.put("AmountClassify","1");
         kDPBreak.add(kdtRepairBreakEntry_detailPanel, new KDLayout.Constraints(0, 0, 971, 477, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
         //kDPRwoItemSp
         kDPRwoItemSp.setLayout(new KDLayout());
-        kDPRwoItemSp.putClientProperty("OriginalBounds", new Rectangle(0, 0, 973, 480));        kdtRWOItemSpEntry.setBounds(new Rectangle(4, 4, 962, 472));
+        kDPRwoItemSp.putClientProperty("OriginalBounds", new Rectangle(0, 0, 973, 480));        kdtRWOItemSpEntry.setBounds(new Rectangle(4, 34, 962, 442));
         kdtRWOItemSpEntry_detailPanel = (com.kingdee.eas.framework.client.multiDetail.DetailPanel)com.kingdee.eas.framework.client.multiDetail.HMDUtils.buildDetail(this,dataBinder,kdtRWOItemSpEntry,new com.kingdee.eas.auto4s.rsm.rs.RepairWORWOItemSpEntryInfo(),null,false);
-        kDPRwoItemSp.add(kdtRWOItemSpEntry_detailPanel, new KDLayout.Constraints(4, 4, 962, 472, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        kDPRwoItemSp.add(kdtRWOItemSpEntry_detailPanel, new KDLayout.Constraints(4, 34, 962, 442, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
 		kdtRWOItemSpEntry_detailPanel.addAddListener(new com.kingdee.eas.framework.client.multiDetail.IDetailPanelListener() {
 			public void beforeEvent(com.kingdee.eas.framework.client.multiDetail.DetailPanelEvent event) throws Exception {
 				IObjectValue vo = event.getObjectValue();
 vo.put("t","P");
+vo.put("settlementObject","1");
+		vo.put("taxRate",new java.math.BigDecimal(17));
 vo.put("i","I");
 			}
 			public void afterEvent(com.kingdee.eas.framework.client.multiDetail.DetailPanelEvent event) throws Exception {
 			}
 		});
+        kDLabelContainer8.setBounds(new Rectangle(14, 6, 93, 19));
+        kDPRwoItemSp.add(kDLabelContainer8, new KDLayout.Constraints(14, 6, 93, 19, 0));
+        labRepairItem.setBounds(new Rectangle(153, 5, 159, 19));
+        kDPRwoItemSp.add(labRepairItem, new KDLayout.Constraints(153, 5, 159, 19, 0));
+        labMaterial.setBounds(new Rectangle(153, 5, 159, 19));
+        kDPRwoItemSp.add(labMaterial, new KDLayout.Constraints(153, 5, 159, 19, 0));
+        //kDLabelContainer8
+        kDLabelContainer8.setBoundEditor(cmbT);
+        //labRepairItem
+        labRepairItem.setBoundEditor(prmtRepairItem);
+        //labMaterial
+        labMaterial.setBoundEditor(prmtMaterial);
         //contOldID
         contOldID.setBoundEditor(txtOldID);
         //contRepairBookingID
@@ -3624,12 +3694,12 @@ vo.put("i","I");
 		dataBinder.registerBinding("OldID", String.class, this.txtOldID, "text");
 		dataBinder.registerBinding("RepairBookingID", String.class, this.txtRepairBookingID, "text");
 		dataBinder.registerBinding("ReturnRepair", com.kingdee.eas.auto4s.bdm.rsm.FReturnRepairEnum.class, this.ReturnRepair, "selectedItem");
-		dataBinder.registerBinding("dept", com.kingdee.eas.basedata.org.AdminOrgUnitInfo.class, this.prmtdept, "data");
 		dataBinder.registerBinding("Remark", String.class, this.txtRemark, "text");
 		dataBinder.registerBinding("customInfo", String.class, this.txtcustomInfo, "text");
 		dataBinder.registerBinding("saleType", String.class, this.txtsaleType, "text");
 		dataBinder.registerBinding("CustomerAccount", com.kingdee.eas.ga.rs.CustomerAccountInfo.class, this.prmtCustomerAccount, "data");
 		dataBinder.registerBinding("customerAccountName", String.class, this.txtcustomerAccountName, "text");
+		dataBinder.registerBinding("dept", com.kingdee.eas.basedata.org.AdminOrgUnitInfo.class, this.prmtdept, "data");
 		dataBinder.registerBinding("RWOItemSpEntry.seq", int.class, this.kdtRWOItemSpEntry, "seq.text");
 		dataBinder.registerBinding("RWOItemSpEntry", com.kingdee.eas.auto4s.rsm.rs.RepairWORWOItemSpEntryInfo.class, this.kdtRWOItemSpEntry, "userObject");
 		dataBinder.registerBinding("RWOItemSpEntry.t", com.kingdee.util.enums.Enum.class, this.kdtRWOItemSpEntry, "t.text");
@@ -3643,11 +3713,14 @@ vo.put("i","I");
 		dataBinder.registerBinding("RWOItemSpEntry.discountRate", java.math.BigDecimal.class, this.kdtRWOItemSpEntry, "discountRate.text");
 		dataBinder.registerBinding("RWOItemSpEntry.amount", java.math.BigDecimal.class, this.kdtRWOItemSpEntry, "amount.text");
 		dataBinder.registerBinding("RWOItemSpEntry.i", com.kingdee.util.enums.Enum.class, this.kdtRWOItemSpEntry, "i.text");
-		dataBinder.registerBinding("RWOItemSpEntry.w", com.kingdee.eas.ep.DataBaseCustomInfo.class, this.kdtRWOItemSpEntry, "w.text");
 		dataBinder.registerBinding("RWOItemSpEntry.isCT", boolean.class, this.kdtRWOItemSpEntry, "isCT.text");
 		dataBinder.registerBinding("RWOItemSpEntry.unIssueQty", java.math.BigDecimal.class, this.kdtRWOItemSpEntry, "unIssueQty.text");
 		dataBinder.registerBinding("RWOItemSpEntry.issueQty", java.math.BigDecimal.class, this.kdtRWOItemSpEntry, "issueQty.text");
-		dataBinder.registerBinding("RWOItemSpEntry.taxRate", java.math.BigDecimal.class, this.kdtRWOItemSpEntry, "taxRate.text");		
+		dataBinder.registerBinding("RWOItemSpEntry.taxRate", java.math.BigDecimal.class, this.kdtRWOItemSpEntry, "taxRate.text");
+		dataBinder.registerBinding("RWOItemSpEntry.settlementObject", com.kingdee.util.enums.Enum.class, this.kdtRWOItemSpEntry, "settlementObject.text");
+		dataBinder.registerBinding("RWOItemSpEntry.w", java.lang.Object.class, this.kdtRWOItemSpEntry, "w.text");
+		dataBinder.registerBinding("RWOItemSpEntry.wipLineNo", int.class, this.kdtRWOItemSpEntry, "wipLineNo.text");
+		dataBinder.registerBinding("RWOItemSpEntry.wipFactLineNo", int.class, this.kdtRWOItemSpEntry, "wipFactLineNo.text");		
 	}
 	//Regiester UI State
 	private void registerUIState(){		
@@ -3679,7 +3752,7 @@ vo.put("i","I");
     public void onShow() throws Exception
     {
         super.onShow();
-        this.txtRemark.requestFocusInWindow();
+        this.txtVIN.requestFocusInWindow();
     }
 
 	
@@ -3954,12 +4027,12 @@ vo.put("i","I");
 		getValidateHelper().registerBindProperty("OldID", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("RepairBookingID", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("ReturnRepair", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("dept", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("Remark", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("customInfo", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("saleType", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("CustomerAccount", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("customerAccountName", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("dept", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("RWOItemSpEntry.seq", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("RWOItemSpEntry", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("RWOItemSpEntry.t", ValidateHelper.ON_SAVE);    
@@ -3973,11 +4046,14 @@ vo.put("i","I");
 		getValidateHelper().registerBindProperty("RWOItemSpEntry.discountRate", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("RWOItemSpEntry.amount", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("RWOItemSpEntry.i", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("RWOItemSpEntry.w", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("RWOItemSpEntry.isCT", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("RWOItemSpEntry.unIssueQty", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("RWOItemSpEntry.issueQty", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("RWOItemSpEntry.taxRate", ValidateHelper.ON_SAVE);    		
+		getValidateHelper().registerBindProperty("RWOItemSpEntry.taxRate", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("RWOItemSpEntry.settlementObject", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("RWOItemSpEntry.w", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("RWOItemSpEntry.wipLineNo", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("RWOItemSpEntry.wipFactLineNo", ValidateHelper.ON_SAVE);    		
 	}
 
 
@@ -4167,6 +4243,13 @@ vo.put("i","I");
      * output kdtRWOActivityEntry_editStopped method
      */
     protected void kdtRWOActivityEntry_editStopped(com.kingdee.bos.ctrl.kdf.table.event.KDTEditEvent e) throws Exception
+    {
+    }
+
+    /**
+     * output cmbT_itemStateChanged method
+     */
+    protected void cmbT_itemStateChanged(java.awt.event.ItemEvent e) throws Exception
     {
     }
 
@@ -4804,15 +4887,6 @@ kdtRWOAttachmentItemEntry.getCell(rowIndex,"AttaItemName").setValue(com.kingdee.
         sic.add(new SelectorItemInfo("OldID"));
         sic.add(new SelectorItemInfo("RepairBookingID"));
         sic.add(new SelectorItemInfo("ReturnRepair"));
-		if(selectorAll.equalsIgnoreCase("true"))
-		{
-			sic.add(new SelectorItemInfo("dept.*"));
-		}
-		else{
-        	sic.add(new SelectorItemInfo("dept.id"));
-        	sic.add(new SelectorItemInfo("dept.number"));
-        	sic.add(new SelectorItemInfo("dept.name"));
-		}
         sic.add(new SelectorItemInfo("Remark"));
         sic.add(new SelectorItemInfo("customInfo"));
         sic.add(new SelectorItemInfo("saleType"));
@@ -4826,6 +4900,15 @@ kdtRWOAttachmentItemEntry.getCell(rowIndex,"AttaItemName").setValue(com.kingdee.
         	sic.add(new SelectorItemInfo("CustomerAccount.name"));
 		}
         sic.add(new SelectorItemInfo("customerAccountName"));
+		if(selectorAll.equalsIgnoreCase("true"))
+		{
+			sic.add(new SelectorItemInfo("dept.*"));
+		}
+		else{
+        	sic.add(new SelectorItemInfo("dept.id"));
+        	sic.add(new SelectorItemInfo("dept.number"));
+        	sic.add(new SelectorItemInfo("dept.name"));
+		}
     	sic.add(new SelectorItemInfo("RWOItemSpEntry.seq"));
 		if(selectorAll.equalsIgnoreCase("true"))
 		{
@@ -4860,19 +4943,22 @@ kdtRWOAttachmentItemEntry.getCell(rowIndex,"AttaItemName").setValue(com.kingdee.
     	sic.add(new SelectorItemInfo("RWOItemSpEntry.discountRate"));
     	sic.add(new SelectorItemInfo("RWOItemSpEntry.amount"));
     	sic.add(new SelectorItemInfo("RWOItemSpEntry.i"));
+    	sic.add(new SelectorItemInfo("RWOItemSpEntry.isCT"));
+    	sic.add(new SelectorItemInfo("RWOItemSpEntry.unIssueQty"));
+    	sic.add(new SelectorItemInfo("RWOItemSpEntry.issueQty"));
+    	sic.add(new SelectorItemInfo("RWOItemSpEntry.taxRate"));
+    	sic.add(new SelectorItemInfo("RWOItemSpEntry.settlementObject"));
 		if(selectorAll.equalsIgnoreCase("true"))
 		{
 			sic.add(new SelectorItemInfo("RWOItemSpEntry.w.*"));
 		}
 		else{
 	    	sic.add(new SelectorItemInfo("RWOItemSpEntry.w.id"));
+			sic.add(new SelectorItemInfo("RWOItemSpEntry.w.number"));
 			sic.add(new SelectorItemInfo("RWOItemSpEntry.w.name"));
-        	sic.add(new SelectorItemInfo("RWOItemSpEntry.w.number"));
 		}
-    	sic.add(new SelectorItemInfo("RWOItemSpEntry.isCT"));
-    	sic.add(new SelectorItemInfo("RWOItemSpEntry.unIssueQty"));
-    	sic.add(new SelectorItemInfo("RWOItemSpEntry.issueQty"));
-    	sic.add(new SelectorItemInfo("RWOItemSpEntry.taxRate"));
+    	sic.add(new SelectorItemInfo("RWOItemSpEntry.wipLineNo"));
+    	sic.add(new SelectorItemInfo("RWOItemSpEntry.wipFactLineNo"));
         return sic;
     }        
     	

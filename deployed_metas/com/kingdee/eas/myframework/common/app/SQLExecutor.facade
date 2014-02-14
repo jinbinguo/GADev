@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facade xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.myframework.common.app</package>
+    <name>SQLExecutor</name>
+    <alias>facade[com.kingdee.eas.myframework.common.app.SQLExecutor].alias</alias>
+    <description>facade[com.kingdee.eas.myframework.common.app.SQLExecutor].description</description>
+    <userDefined>true</userDefined>
+    <bosType>FD8403F2</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.myframework.common.SQLExecutor</businessImplName>
+    <businessControllerName>com.kingdee.eas.myframework.common.app.SQLExecutorController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>execute</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.myframework.common.app.SQLExecutor].methods.method[execute].alias</alias>
+            <description>facade[com.kingdee.eas.myframework.common.app.SQLExecutor].methods.method[execute].description</description>
+            <innerID>2c022688-1759-4f95-b2bc-710982e35b51</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>sql</name>
+                    <alias>facade[com.kingdee.eas.myframework.common.app.SQLExecutor].methods.method[execute].parameters.parameter[sql].alias</alias>
+                    <description>facade[com.kingdee.eas.myframework.common.app.SQLExecutor].methods.method[execute].parameters.parameter[sql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <exceptions>
+                <bizException>
+                    <key name="package" value="com.kingdee.eas.common" />
+                    <key name="name" value="EASBizException" />
+                </bizException>
+            </exceptions>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>executeQuery</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.myframework.common.app.SQLExecutor].methods.method[executeQuery].alias</alias>
+            <description>facade[com.kingdee.eas.myframework.common.app.SQLExecutor].methods.method[executeQuery].description</description>
+            <innerID>4dd01c9e-4a96-4943-8ddc-440249539c87</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>com.kingdee.jdbc.rowset.IRowSet</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>sql</name>
+                    <alias>facade[com.kingdee.eas.myframework.common.app.SQLExecutor].methods.method[executeQuery].parameters.parameter[sql].alias</alias>
+                    <description>facade[com.kingdee.eas.myframework.common.app.SQLExecutor].methods.method[executeQuery].parameters.parameter[sql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <exceptions>
+                <bizException>
+                    <key name="package" value="com.kingdee.eas.common" />
+                    <key name="name" value="EASBizException" />
+                </bizException>
+            </exceptions>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <resource>
+        <rs key="facade[com.kingdee.eas.myframework.common.app.SQLExecutor].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="SQL执行工具" />
+            <lang locale="zh_HK" value="SQL執行工具" />
+            <lang locale="zh_TW" value="SQL執行工具" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.myframework.common.app.SQLExecutor].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.myframework.common.app.SQLExecutor].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.myframework.common.app.SQLExecutor].methods.method[executeQuery].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="executeQuery" />
+            <lang locale="zh_HK" value="executeQuery" />
+            <lang locale="zh_TW" value="executeQuery" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.myframework.common.app.SQLExecutor].methods.method[executeQuery].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="查询SQL" />
+            <lang locale="zh_HK" value="查詢SQL" />
+            <lang locale="zh_TW" value="查詢SQL" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.myframework.common.app.SQLExecutor].methods.method[executeQuery].parameters.parameter[sql].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="SQL" />
+            <lang locale="zh_HK" value="SQL" />
+            <lang locale="zh_TW" value="SQL" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.myframework.common.app.SQLExecutor].methods.method[executeQuery].parameters.parameter[sql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="查询SQ脚本" />
+            <lang locale="zh_HK" value="查詢SQ腳本" />
+            <lang locale="zh_TW" value="查詢SQ腳本" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.myframework.common.app.SQLExecutor].methods.method[execute].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="execute" />
+            <lang locale="zh_HK" value="execute" />
+            <lang locale="zh_TW" value="execute" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.myframework.common.app.SQLExecutor].methods.method[execute].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="执行更新、删除SQL" />
+            <lang locale="zh_HK" value="執行更新、刪除SQL" />
+            <lang locale="zh_TW" value="執行更新、刪除SQL" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.myframework.common.app.SQLExecutor].methods.method[execute].parameters.parameter[sql].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="SQL" />
+            <lang locale="zh_HK" value="SQL" />
+            <lang locale="zh_TW" value="SQL" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.myframework.common.app.SQLExecutor].methods.method[execute].parameters.parameter[sql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="SQL脚本" />
+            <lang locale="zh_HK" value="SQL腳本" />
+            <lang locale="zh_TW" value="SQL腳本" />
+        </rs>
+    </resource>
+</facade>
+
