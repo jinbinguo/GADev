@@ -7,27 +7,35 @@
 	
 	<target name="jar" depends="copyfile">
 	
-		<!--==========================src backup =========================================-->
-		<jar destfile="jars/ex_eas-src.jar" basedir="src" includes="com/kingdee/eas/**"/>
-		
+		<!--==========================src backup =========================================
+		<jar destfile="jars/all_eas-src.jar" basedir="src" includes="com/kingdee/eas/**"/>
+		===================================================================================-->
+	
 		<!--==========================from classes =======================================-->
 		<!-- EAS扩展框架-->
 		<jar destfile="jars/ex_framework-client.jar" basedir="classes" includes="com/kingdee/eas/myframework/**" excludes="**/app/*.*, *.jar"/>
 		<jar destfile="jars/ex_framework-server.jar" basedir="classes" includes="com/kingdee/eas/myframework/**" excludes="**/client/*.*, *.jar"/>
 		
 		<!-- GA 模块-->
-		<jar destfile="jars/ex_ga-client.jar" basedir="classes" includes="com/kingdee/eas/ga/**" excludes="**/app/*.*, *.jar"/>
-		<jar destfile="jars/ex_ga-server.jar" basedir="classes" includes="com/kingdee/eas/ga/**" excludes="**/client/*.*, *.jar"/>
+		<jar destfile="jars/ga_ga-client.jar" basedir="classes" includes="com/kingdee/eas/ga/**" excludes="**/app/*.*, *.jar"/>
+		<jar destfile="jars/ga_ga-server.jar" basedir="classes" includes="com/kingdee/eas/ga/**" excludes="**/client/*.*, *.jar"/>
 				
+		<!-- Auto4s 模块-->
+		<jar destfile="jars/ga_auto4s-client.jar" basedir="classes" includes="com/kingdee/eas/auto4s/**" excludes="**/app/*.*, *.jar"/>
+		<jar destfile="jars/ga_auto4s-server.jar" basedir="classes" includes="com/kingdee/eas/auto4s/**" excludes="**/client/*.*, *.jar"/>
 		
 		<!-- 剩余模块-->
-		<jar destfile="jars/ex_other-client.jar" basedir="classes" includes="com/**" 
+		<jar destfile="jars/ga_other-client.jar" basedir="classes" includes="com/**" 
 			excludes="com/kingdee/eas/myframework/**,
 			com/kingdee/eas/ga/**,
+			com/kingdee/eas/base/uiframe/client/**,
+			com/kingdee/eas/base/license/client/**,
+			com/kingdee/eas/auto4s/**,
 			**/app/*.*, *.jar"/>
-		<jar destfile="jars/ex_other-server.jar" basedir="classes" includes="com/**" 
+		<jar destfile="jars/ga_other-server.jar" basedir="classes" includes="com/**" 
 			excludes="com/kingdee/eas/myframework/**,
 			com/kingdee/eas/ga/**,
+			com/kingdee/eas/auto4s/**,
 			**/client/*.*, *.jar"/>
 		
 		<!--==========================from deployed_metas ================================-->
@@ -35,16 +43,21 @@
 		<jar destfile="jars/ex_framework-metas.jar" basedir="deployed_metas" includes="com/kingdee/eas/myframework/**" excludes="*.jar"/>
 		
 		<!-- GA 模块-->
-		<jar destfile="jars/ex_ga-metas.jar" basedir="deployed_metas" includes="com/kingdee/eas/ga/**" excludes="*.jar"/>
+		<jar destfile="jars/ga_ga-metas.jar" basedir="deployed_metas" includes="com/kingdee/eas/ga/**" excludes="*.jar"/>
 
+		<!-- Auto4s 模块-->
+		<jar destfile="jars/ga_auto4s-metas.jar" basedir="deployed_metas" includes="com/kingdee/eas/auto4s/**" excludes="*.jar"/>
+
+		
 		<!-- 剩余模块-->
-		<jar destfile="jars/ex_other-metas.jar" basedir="deployed_metas" includes="com/**,/**" 
+		<jar destfile="jars/ga_other-metas.jar" basedir="deployed_metas" includes="com/**,/**" 
 			excludes="com/kingdee/eas/myframework/**,
 			com/kingdee/eas/ga/**,
+			com/kingdee/eas/auto4s/**,
 			*.jar,*.mdbview"/>
 		
 		<!-- 子系统树-->
-		<jar destfile="jars/ex_mdview-metas.jar" basedir="deployed_metas" includes="/*.mdbview" excludes="com/**,*.jar"/>
+		<jar destfile="jars/ga_mdview-metas.jar" basedir="deployed_metas" includes="/*.mdbview" excludes="com/**,*.jar"/>
 		
 	</target>
 </project>

@@ -4,19 +4,32 @@ import java.io.Serializable;
 import java.util.HashMap;
 
 import com.kingdee.bos.Context;
+import com.kingdee.bos.dao.ormapping.ObjectUuidPK;
 import com.kingdee.eas.auto4s.bdm.pbd.BrandInfo;
 import com.kingdee.eas.auto4s.bdm.pbd.IVehicle;
 import com.kingdee.eas.auto4s.bdm.pbd.VehicleFactory;
 import com.kingdee.eas.auto4s.bdm.pbd.VehicleInfo;
+import com.kingdee.eas.auto4s.bdm.rsm.IPaymentClassify;
 import com.kingdee.eas.auto4s.bdm.rsm.IRepairClassify;
+import com.kingdee.eas.auto4s.bdm.rsm.IRepairItem;
 import com.kingdee.eas.auto4s.bdm.rsm.IRepairType;
 import com.kingdee.eas.auto4s.bdm.rsm.IWarrantyType;
+import com.kingdee.eas.auto4s.bdm.rsm.PaymentClassifyFactory;
+import com.kingdee.eas.auto4s.bdm.rsm.PaymentClassifyInfo;
 import com.kingdee.eas.auto4s.bdm.rsm.RepairClassifyFactory;
 import com.kingdee.eas.auto4s.bdm.rsm.RepairClassifyInfo;
+import com.kingdee.eas.auto4s.bdm.rsm.RepairItemFactory;
+import com.kingdee.eas.auto4s.bdm.rsm.RepairItemInfo;
 import com.kingdee.eas.auto4s.bdm.rsm.RepairTypeFactory;
 import com.kingdee.eas.auto4s.bdm.rsm.RepairTypeInfo;
 import com.kingdee.eas.auto4s.bdm.rsm.WarrantyTypeFactory;
 import com.kingdee.eas.auto4s.bdm.rsm.WarrantyTypeInfo;
+import com.kingdee.eas.basedata.person.IPerson;
+import com.kingdee.eas.basedata.person.PersonFactory;
+import com.kingdee.eas.basedata.person.PersonInfo;
+import com.kingdee.eas.basedata.scm.common.ITransactionType;
+import com.kingdee.eas.basedata.scm.common.TransactionTypeFactory;
+import com.kingdee.eas.basedata.scm.common.TransactionTypeInfo;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.eas.ga.rs.CustomerAccountFactory;
 import com.kingdee.eas.ga.rs.CustomerAccountInfo;
@@ -148,7 +161,12 @@ public class GAUtils implements Serializable {
 			throw new EASBizException(new NumericExceptionSubItem("",String.format("车辆品牌[%s]不正确!",brandInfo.getName())));
 		}
 	}
-	
+	/**
+	 * 默认车辆
+	 * @param ctx
+	 * @return
+	 * @throws Exception
+	 */
 	public static VehicleInfo getDefualtVehicleInfo(Context ctx) throws Exception {
 		IVehicle vehicle = null;
 		if (ctx == null) vehicle = VehicleFactory.getRemoteInstance();
@@ -157,11 +175,147 @@ public class GAUtils implements Serializable {
 		return defaultVehicleInfo;
 	}
 	
+	/**
+	 * 默认客户账号	
+	 * @param ctx
+	 * @return
+	 * @throws Exception
+	 */
 	public static CustomerAccountInfo getDefaultCustomerAccountInfo(Context ctx) throws Exception  {
 		ICustomerAccount customerAccount = null; 
 		if (ctx == null) customerAccount = CustomerAccountFactory.getRemoteInstance();
 		else customerAccount = CustomerAccountFactory.getLocalInstance(ctx);
 		CustomerAccountInfo defaultCustomerAccountInfo = customerAccount.getCustomerAccountInfo("where number='C0000001'");
 		return defaultCustomerAccountInfo;
+	}
+	/**
+	 * 默认 维修项目
+	 * @param ctx
+	 * @param brandInfo
+	 * @return
+	 * @throws Exception
+	 */
+	public static RepairItemInfo getDefaultRepairItemInfo(Context ctx, BrandInfo brandInfo) throws Exception {
+		//品牌 
+		if (hashBrand.isEmpty()) getBrandCol(ctx);
+		BrandInfo defaultBrand_BMW = hashBrand.get("BMW"); //BMW 001
+		BrandInfo defaultBrand_MINI = hashBrand.get("MINI"); //MINI 002
+    	
+    	//维修种类
+		IRepairItem repairItem = null;
+		if (ctx == null) repairItem = RepairItemFactory.getRemoteInstance();
+		else repairItem = RepairItemFactory.getLocalInstance(ctx);
+		
+		//DMS维修类型（厦门中宝-宝马） XMZB-DMS-01
+		RepairItemInfo defaultRepairItem_BMW = repairItem.getRepairItemInfo(String.format("where number='%s'", "XMZB-DMS-01"));
+		//DMS维修类型（厦门中宝-MINI）XMZB-DMS-02
+		RepairItemInfo defaultRepairItem_MINI = repairItem.getRepairItemInfo(String.format("where number='%s'", "XMZB-DMS-02"));
+    
+    	
+		if (brandInfo == null) 
+			throw new EASBizException(new NumericExceptionSubItem("","车辆品牌不能为空"));
+		if (PublicUtils.equals(brandInfo, defaultBrand_BMW)) {
+			return defaultRepairItem_BMW;
+		} else if (PublicUtils.equals(brandInfo, defaultBrand_MINI)) {
+			return defaultRepairItem_MINI;
+		} else {
+			throw new EASBizException(new NumericExceptionSubItem("",String.format("车辆品牌[%s]不正确!",brandInfo.getName())));
+		}
+	}
+	/**
+	 * 默认 付费类别
+	 * @param ctx
+	 * @return
+	 * @throws Exception
+	 */
+	public static PaymentClassifyInfo getDefaultPaymentClassifyInfo(Context ctx) throws Exception {
+		IPaymentClassify paymentClassify = null;
+		if (ctx == null) paymentClassify = PaymentClassifyFactory.getRemoteInstance();
+		else paymentClassify = PaymentClassifyFactory.getLocalInstance(ctx);
+		PaymentClassifyInfo defaultPaymentClassifyInfo = paymentClassify.getPaymentClassifyInfo(String.format("where number='%s'","DMS"));
+		return defaultPaymentClassifyInfo;
+	}
+	/**
+	 * 默认 组织ID 厦门中宝汽车有限公司 编码1001，允当所有业务组织
+	 * @param ctx
+	 * @return
+	 * @throws Exception
+	 */
+	public static String getDefaultOrgId(Context ctx) throws Exception {
+		String sql = String.format("select fid from t_org_baseunit where fnumber='%s'", "1001");
+		IRowSet rs = DBUtils.executeQuery(ctx, sql);
+		if (rs != null && rs.next())
+			return rs.getString("fid");
+		return null;
+	}
+	
+	/**
+	 * 默认 销售人员
+	 * @param ctx
+	 * @return
+	 * @throws Exception
+	 */
+	public static PersonInfo getDefaultSAPerson(Context ctx) throws Exception {
+		IPerson person = null;
+		if (ctx == null) person = PersonFactory.getRemoteInstance();
+		else person = PersonFactory.getLocalInstance(ctx);
+		PersonInfo defaultPersonInfo = person.getPersonInfo(new ObjectUuidPK("zfcAAAADYhGA733t"));
+		return defaultPersonInfo;
+	}
+	/**
+	 * 默认 其他入库(调拨入库)事务类型
+	 * @param ctx
+	 * @return
+	 * @throws Exception
+	 */
+	public static TransactionTypeInfo getDefaultTranForTransferInWarehs(Context ctx) throws Exception {
+		ITransactionType transactionType = null;
+		if (ctx ==null) transactionType = TransactionTypeFactory.getRemoteInstance();
+		else transactionType = TransactionTypeFactory.getLocalInstance(ctx);
+		TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where id='zfcAAAADYjSwCNyn'");
+		return defaultTransactionInfo;
+	}
+	
+	/**
+	 * 默认 其他入库(盘盈入库)事务类型
+	 * @param ctx
+	 * @return
+	 * @throws Exception
+	 */
+	public static TransactionTypeInfo getDefaultTranForProfitInWarehs(Context ctx) throws Exception {
+		ITransactionType transactionType = null;
+		if (ctx ==null) transactionType = TransactionTypeFactory.getRemoteInstance();
+		else transactionType = TransactionTypeFactory.getLocalInstance(ctx);
+		TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where id='zfcAAAADYjWwCNyn'");
+		return defaultTransactionInfo;
+	}
+	
+	
+	/**
+	 * 默认 其他出库(调拨出库)事务类型
+	 * @param ctx
+	 * @return
+	 * @throws Exception
+	 */
+	public static TransactionTypeInfo getDefaultTranForTransferOutWarehs(Context ctx) throws Exception {
+		ITransactionType transactionType = null;
+		if (ctx ==null) transactionType = TransactionTypeFactory.getRemoteInstance();
+		else transactionType = TransactionTypeFactory.getLocalInstance(ctx);
+		TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where id='zfcAAAADYjawCNyn'");
+		return defaultTransactionInfo;
+	}
+	
+	/**
+	 * 默认 其他出库(盘亏出库)事务类型
+	 * @param ctx
+	 * @return
+	 * @throws Exception
+	 */
+	public static TransactionTypeInfo getDefaultTranForLossOutWarehs(Context ctx) throws Exception {
+		ITransactionType transactionType = null;
+		if (ctx ==null) transactionType = TransactionTypeFactory.getRemoteInstance();
+		else transactionType = TransactionTypeFactory.getLocalInstance(ctx);
+		TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where id='zfcAAAADYjewCNyn'");
+		return defaultTransactionInfo;
 	}
 }

@@ -243,6 +243,17 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
     {
         setInt("wipLineNo", item);
     }
+    /**
+     * Object:项目配件明细's 是否推单property 
+     */
+    public boolean isIsCreateTo()
+    {
+        return getBoolean("isCreateTo");
+    }
+    public void setIsCreateTo(boolean item)
+    {
+        setBoolean("isCreateTo", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("FF1F0E1A");

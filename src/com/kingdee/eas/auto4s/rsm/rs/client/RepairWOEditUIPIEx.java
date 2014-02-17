@@ -190,6 +190,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		registePrmtMaterialF7();
 		registePrmtRepairItemF7();
 		appendItemSpFoot();
+		setCmbT_Permission();
 		
 	}
 	private void defaultValueForAddNew() throws Exception {
@@ -906,8 +907,10 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		super.loadFields();
 		
 		try {
-			if (!isLoadOprtPermission)
+			if (!isLoadOprtPermission) {
 				getLineOprtPermission();
+				
+			}
 		} catch (Exception e) {
 			UIUtils.handUIException(e);
 		}
@@ -919,7 +922,11 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	@Override
 	protected void unLockUI() {
 		super.unLockUI();
+		setCmbT_Permission();
 		
+	}
+	
+	private void setCmbT_Permission()  {
 		if (hasPermission_OprtRepairLine && !hasPermission_OprtRetailLine) { //只有维修行权限
 			cmbT.setEnabled(false);
 			cmbT.setSelectedItem(TEnum.L);
@@ -937,9 +944,9 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			cmbT.setSelectedItem(null);
 			labRepairItem.setVisible(false);
 			labMaterial.setVisible(false);
-			
 		}
 	}
+	
 	@Override
 	protected void loadLineFields(KDTable table, IRow row, IObjectValue obj) {
 		super.loadLineFields(table, row, obj);
@@ -1319,14 +1326,14 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 					  KDTable kdTable = kdtRWOItemSpEntry;
 					  if(null == kdTable)
 				         return;
-					  KDTSelectManager selectManager = kdTable.getSelectManager();
-			          KDTSelectBlock selectBlock = selectManager.get(0);
+					 // KDTSelectManager selectManager = kdTable.getSelectManager();
+			         // KDTSelectBlock selectBlock = selectManager.get(0);
 			          int beginRowIndex = 0;
-			          if(selectBlock == null)
+			          //if(selectBlock == null)
 			        	  beginRowIndex = kdTable.getRowCount();
-			          else beginRowIndex = selectBlock.getBeginRow();
-			          if (beginRowIndex > 0 && selectBlock == null) 
-			        	  beginRowIndex--;
+			          //else beginRowIndex = selectBlock.getBeginRow();
+			          //if (beginRowIndex > 0 && selectBlock == null) 
+			        //	  beginRowIndex--;
 			          boolean isFirstRowIndex = true;
 			          
 			          int i = 0;
@@ -1335,7 +1342,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			              RepairItemEntryInfo repairItemEntryInfo = repairItemEntryInfos[i];
 			              RepairItemInfo repairItemInfo = repairItemEntryInfo.getParent();
 			              repairItemNums = repairItemNums + repairItemInfo.getNumber() + ";";
-			              if(isFirstRowIndex)  {
+			            /*  if(isFirstRowIndex)  {
 			            	  if (beginRowIndex==0)
 			            		  insertLine(kdTable, rowIndex);
 			            	  else if (kdTable.getCell(rowIndex, "repairItem").getValue() != null
@@ -1345,7 +1352,8 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			               } else {
 			                 insertLine(kdTable, rowIndex);
 			                 
-			               }
+			               }*/
+			              insertLine(kdTable, rowIndex);
 			              kdTable.getCell(rowIndex, "repairItem").setValue(repairItemInfo);
 			              kdTable.getCell(rowIndex, "t").setValue(TEnum.L);
 			              kdTable.getCell(rowIndex,"itemspNum").setValue(repairItemInfo.getNumber());
@@ -1570,18 +1578,18 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 						  KDTSelectManager selectManager = kdTable.getSelectManager();
 				          KDTSelectBlock selectBlock = selectManager.get(0);
 				          int beginRowIndex = 0;
-				          if(selectBlock == null)
+				       //   if(selectBlock == null)
 				        	  beginRowIndex  = kdTable.getRowCount();
-				          else beginRowIndex = selectBlock.getBeginRow();
-				          if (beginRowIndex > 0 && selectBlock == null) 
-				        	  beginRowIndex--;
+				        //  else beginRowIndex = selectBlock.getBeginRow();
+				        //  if (beginRowIndex > 0) 
+				        //	  beginRowIndex--;
 				          boolean isFirstRowIndex = true;
 				          
 				          int i = 0;
 				          for(int length = materialInfos.length; i < length; i++) {
 				              int rowIndex = beginRowIndex + i;
 				              MaterialInfo materialInfo = materialInfos[i];
-				              if(isFirstRowIndex)  {
+				             /* if(isFirstRowIndex)  {
 				            	  if (beginRowIndex==0)
 				            		  insertLine(kdTable, rowIndex);
 				            	  else if (kdTable.getCell(rowIndex, "material").getValue() != null ||
@@ -1591,7 +1599,8 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 				               } else {
 				                 insertLine(kdTable, rowIndex);
 				                 
-				               }
+				               }*/
+				              insertLine(kdTable, rowIndex);
 				              kdTable.getCell(rowIndex, "material").setValue(materialInfo);
 				              kdTable.getCell(rowIndex, "t").setValue(TEnum.P);
 				              kdTable.getCell(rowIndex,"itemspNum").setValue(materialInfo.getNumber());

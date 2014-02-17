@@ -503,6 +503,17 @@ public class AbstractRepairWORWOSparepartEntryInfo extends com.kingdee.eas.frame
     {
         setString("itemSpEntryId", item);
     }
+    /**
+     * Object:维修配件's 是否推单property 
+     */
+    public boolean isIsCreateTo()
+    {
+        return getBoolean("isCreateTo");
+    }
+    public void setIsCreateTo(boolean item)
+    {
+        setBoolean("isCreateTo", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("1BEE6B08");

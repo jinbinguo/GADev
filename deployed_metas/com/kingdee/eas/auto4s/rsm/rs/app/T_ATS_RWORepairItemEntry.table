@@ -721,6 +721,34 @@
             <scale>0</scale>
             <precision>0</precision>
         </column>
+        <column>
+            <name>CFWbprice</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[CFWbprice].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[CFWbprice].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NUMERIC</sqlType>
+            <length>28</length>
+            <scale>10</scale>
+            <precision>28</precision>
+        </column>
+        <column>
+            <name>CFIsCreateTo</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[CFIsCreateTo].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[CFIsCreateTo].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>1</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>PK_RepairWORWORepa</name>
@@ -972,6 +1000,18 @@
             <lang locale="zh_HK" value="維修項目" />
             <lang locale="zh_TW" value="維修項目" />
         </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[CFIsCreateTo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否推单" />
+            <lang locale="zh_HK" value="是否推單" />
+            <lang locale="zh_TW" value="是否推單" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[CFIsCreateTo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否推单" />
+            <lang locale="zh_HK" value="是否推單" />
+            <lang locale="zh_TW" value="是否推單" />
+        </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[CFItemSpEntryId].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="项目/配件明细分录ID" />
@@ -983,6 +1023,18 @@
             <lang locale="zh_CN" value="项目/配件明细分录ID" />
             <lang locale="zh_HK" value="項目/配件明細分錄ID" />
             <lang locale="zh_TW" value="項目/配件明細分錄ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[CFWbprice].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="外包价格" />
+            <lang locale="zh_HK" value="外包價格" />
+            <lang locale="zh_TW" value="外包價格" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[CFWbprice].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="外包价格" />
+            <lang locale="zh_HK" value="外包價格" />
+            <lang locale="zh_TW" value="外包價格" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RWORepairItemEntry].columns.column[CFWipFactLineNo].alias">
             <lang locale="en_US" value="null" />

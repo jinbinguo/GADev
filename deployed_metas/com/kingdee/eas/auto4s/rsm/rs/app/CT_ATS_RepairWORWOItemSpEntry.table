@@ -329,6 +329,20 @@
             <scale>0</scale>
             <precision>10</precision>
         </column>
+        <column>
+            <name>CFIsCreateTo</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFIsCreateTo].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFIsCreateTo].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>1</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>CPK_ATS_RWORWOImck</name>
@@ -456,6 +470,18 @@
             <lang locale="zh_CN" value="是否拆退" />
             <lang locale="zh_HK" value="是否拆退" />
             <lang locale="zh_TW" value="是否拆退" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFIsCreateTo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否推单" />
+            <lang locale="zh_HK" value="是否推單" />
+            <lang locale="zh_TW" value="是否推單" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFIsCreateTo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否推单" />
+            <lang locale="zh_HK" value="是否推單" />
+            <lang locale="zh_TW" value="是否推單" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFIssueQty].alias">
             <lang locale="en_US" value="null" />
