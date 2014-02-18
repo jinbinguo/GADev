@@ -273,6 +273,20 @@
             <scale>0</scale>
             <precision>0</precision>
         </column>
+        <column>
+            <name>CFAtsCustomerID</name>
+            <alias>dataTable[com.kingdee.eas.ga.rs.app.CT_RS_CustomerAccount].columns.column[CFAtsCustomerID].alias</alias>
+            <description>dataTable[com.kingdee.eas.ga.rs.app.CT_RS_CustomerAccount].columns.column[CFAtsCustomerID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>CPK_RS_Customerf72</name>
@@ -364,6 +378,25 @@
                 </fkColumnPair>
             </fkColumnPairs>
         </foreignKey>
+        <foreignKey>
+            <name>CFK_RS_RSCATsC7tlm</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="T_ATS_Customer" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="CFAtsCustomerID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
     </foreignKeys>
     <resource>
         <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_CustomerAccount].alias">
@@ -371,6 +404,18 @@
             <lang locale="zh_CN" value="客户账户" />
             <lang locale="zh_HK" value="客戶賬戶" />
             <lang locale="zh_TW" value="客戶賬戶" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_CustomerAccount].columns.column[CFAtsCustomerID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="对应行业客户" />
+            <lang locale="zh_HK" value="對應行業客戶" />
+            <lang locale="zh_TW" value="對應行業客戶" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_CustomerAccount].columns.column[CFAtsCustomerID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="对应行业客户" />
+            <lang locale="zh_HK" value="對應行業客戶" />
+            <lang locale="zh_TW" value="對應行業客戶" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_CustomerAccount].columns.column[CFFinCustomerID].alias">
             <lang locale="en_US" value="null" />

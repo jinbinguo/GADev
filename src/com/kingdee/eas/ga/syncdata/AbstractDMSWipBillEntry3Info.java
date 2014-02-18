@@ -193,6 +193,39 @@ public class AbstractDMSWipBillEntry3Info extends com.kingdee.eas.framework.Core
     {
         setBigDecimal("hourRate", item);
     }
+    /**
+     * Object:工时行's 销售类型property 
+     */
+    public String getSaleType()
+    {
+        return getString("saleType");
+    }
+    public void setSaleType(String item)
+    {
+        setString("saleType", item);
+    }
+    /**
+     * Object:工时行's 过账日期property 
+     */
+    public java.util.Date getPostingDate()
+    {
+        return getDate("postingDate");
+    }
+    public void setPostingDate(java.util.Date item)
+    {
+        setDate("postingDate", item);
+    }
+    /**
+     * Object:工时行's RTS代码property 
+     */
+    public String getRts()
+    {
+        return getString("rts");
+    }
+    public void setRts(String item)
+    {
+        setString("rts", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("305D8183");

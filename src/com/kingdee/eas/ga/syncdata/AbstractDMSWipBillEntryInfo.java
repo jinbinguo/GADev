@@ -94,6 +94,17 @@ public class AbstractDMSWipBillEntryInfo extends com.kingdee.eas.myframework.tem
     {
         setString("accountCode", item);
     }
+    /**
+     * Object:Wip表头's 部门编码property 
+     */
+    public String getDeptNum()
+    {
+        return getString("deptNum");
+    }
+    public void setDeptNum(String item)
+    {
+        setString("deptNum", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("D84514B0");

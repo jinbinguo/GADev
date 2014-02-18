@@ -103,15 +103,6 @@
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
-            <properties>
-                <property>
-                    <name>visible</name>
-                    <type>boolean</type>
-                    <value>uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[contdeletedStatus].properties.property[visible].value</value>
-                    <isMultiLan>false</isMultiLan>
-                    <userDefined>true</userDefined>
-                </property>
-            </properties>
         </component>
         <component>
             <name>chkscheduled</name>
@@ -119,7 +110,7 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDCheckBox</classType>
             <isContainer>false</isContainer>
-            <constraints>293,115,270,19</constraints>
+            <constraints>293,141,270,19</constraints>
             <tabIndex>11</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -481,6 +472,55 @@
             </parent>
         </component>
         <component>
+            <name>contatsCustomer</name>
+            <alias>uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[contatsCustomer].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>293,115,270,19</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[contatsCustomer].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[contatsCustomer].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[contatsCustomer].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[contatsCustomer].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="CoreUI" />
+            </parent>
+        </component>
+        <component>
             <name>txtNumber</name>
             <alias>uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[txtNumber].alias</alias>
             <userDefined>true</userDefined>
@@ -637,6 +677,11 @@
             <tabIndex>12</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
             <properties>
                 <property>
                     <name>horizontalAlignment</name>
@@ -687,6 +732,11 @@
             <tabIndex>13</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
             <properties>
                 <property>
                     <name>horizontalAlignment</name>
@@ -765,6 +815,11 @@
             <tabIndex>15</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
             <properties>
                 <property>
                     <name>horizontalAlignment</name>
@@ -843,6 +898,11 @@
             <tabIndex>16</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
             <properties>
                 <property>
                     <name>horizontalAlignment</name>
@@ -893,6 +953,11 @@
             <tabIndex>17</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
             <properties>
                 <property>
                     <name>queryInfo</name>
@@ -964,6 +1029,11 @@
             <tabIndex>14</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
             <properties>
                 <property>
                     <name>horizontalAlignment</name>
@@ -1014,6 +1084,11 @@
             <tabIndex>18</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
             <properties>
                 <property>
                     <name>items</name>
@@ -1040,6 +1115,84 @@
                     <bindingObject>editData</bindingObject>
                     <bindingField>settlementType</bindingField>
                     <fieldType>com.kingdee.eas.ga.rs.SettlementTypeEnum</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>prmtatsCustomer</name>
+            <alias>uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[prmtatsCustomer].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>19</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>queryInfo</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[prmtatsCustomer].properties.property[queryInfo].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[prmtatsCustomer].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>editable</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[prmtatsCustomer].properties.property[editable].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>displayFormat</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[prmtatsCustomer].properties.property[displayFormat].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>editFormat</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[prmtatsCustomer].properties.property[editFormat].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>commitFormat</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[prmtatsCustomer].properties.property[commitFormat].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>required</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[prmtatsCustomer].properties.property[required].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contatsCustomer" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>data</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>atsCustomer</bindingField>
+                    <fieldType>com.kingdee.eas.auto4s.bdm.pbd.CustomerInfo</fieldType>
                     <accessType>2</accessType>
                     <autoMode>false</autoMode>
                     <herited>false</herited>
@@ -1271,17 +1424,41 @@
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[contdeletedStatus].alias">
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[contatsCustomer].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[contdeletedStatus].properties.property[visible].value">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_HK" value="false" />
-            <lang locale="zh_TW" value="false" />
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[contatsCustomer].properties.property[boundLabelLength].value">
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_CN" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[contatsCustomer].properties.property[boundLabelText].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="对应行业客户" />
+            <lang locale="zh_HK" value="對應行業客戶" />
+            <lang locale="zh_TW" value="對應行業客戶" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[contatsCustomer].properties.property[boundLabelUnderline].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[contatsCustomer].properties.property[visible].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[contdeletedStatus].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[contfinCustomer].alias">
             <lang locale="en_US" value="null" />
@@ -1528,6 +1705,54 @@
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_HK" value="false" />
             <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[prmtatsCustomer].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="对应行业客户" />
+            <lang locale="zh_HK" value="對應行業客戶" />
+            <lang locale="zh_TW" value="對應行業客戶" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[prmtatsCustomer].properties.property[commitFormat].value">
+            <lang locale="en_US" value="$number$" />
+            <lang locale="zh_CN" value="$number$" />
+            <lang locale="zh_HK" value="$number$" />
+            <lang locale="zh_TW" value="$number$" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[prmtatsCustomer].properties.property[displayFormat].value">
+            <lang locale="en_US" value="$name$" />
+            <lang locale="zh_CN" value="$name$" />
+            <lang locale="zh_HK" value="$name$" />
+            <lang locale="zh_TW" value="$name$" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[prmtatsCustomer].properties.property[editFormat].value">
+            <lang locale="en_US" value="$number$" />
+            <lang locale="zh_CN" value="$number$" />
+            <lang locale="zh_HK" value="$number$" />
+            <lang locale="zh_TW" value="$number$" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[prmtatsCustomer].properties.property[editable].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[prmtatsCustomer].properties.property[queryInfo].value">
+            <lang locale="en_US" value="com.kingdee.eas.auto4s.bdm.pbd.app.CustomerQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.auto4s.bdm.pbd.app.CustomerQuery" />
+            <lang locale="zh_HK" value="com.kingdee.eas.auto4s.bdm.pbd.app.CustomerQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.auto4s.bdm.pbd.app.CustomerQuery" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[prmtatsCustomer].properties.property[required].value">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[prmtatsCustomer].properties.property[visible].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="uiObject[com.kingdee.eas.ga.rs.client.CustomerAccountEditUI].components.component[prmtfinCustomer].alias">
             <lang locale="en_US" value="null" />

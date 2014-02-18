@@ -202,6 +202,7 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contsaleType;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contCustomerAccount;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contcustomerAccountName;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contgaDept;
     protected com.kingdee.bos.ctrl.swing.KDScrollPane scrollPaneRemark;
     protected com.kingdee.bos.ctrl.swing.KDTextArea txtRemark;
     protected com.kingdee.bos.ctrl.swing.KDScrollPane scrollPanecustomInfo;
@@ -209,6 +210,7 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
     protected com.kingdee.bos.ctrl.swing.KDTextField txtsaleType;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtCustomerAccount;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtcustomerAccountName;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtgaDept;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contdept;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtdept;
     protected com.kingdee.bos.ctrl.swing.KDPanel kDPRwoItemSp;
@@ -220,6 +222,7 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
     protected com.kingdee.bos.ctrl.swing.KDComboBox cmbT;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtRepairItem;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtMaterial;
+    protected com.kingdee.bos.ctrl.swing.KDCheckBoxMenuItem menuItemIsShowStdItemspEntry;
     protected com.kingdee.eas.auto4s.rsm.rs.RepairWOInfo editData = null;
     protected ActionAdd actionAdd = null;
     protected ActionEnterAdd actionEnterAdd = null;
@@ -251,6 +254,7 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
     protected ActionViewVipCard actionViewVipCard = null;
     protected ActionViewVehicleAdvice actionViewVehicleAdvice = null;
     protected ActionViewVipPrefer actionViewVipPrefer = null;
+    protected ActionIsShowStdItemspEntry actionIsShowStdItemspEntry = null;
     /**
      * output class constructor
      */
@@ -435,6 +439,10 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.actionViewVipPrefer = new ActionViewVipPrefer(this);
         getActionManager().registerAction("actionViewVipPrefer", actionViewVipPrefer);
          this.actionViewVipPrefer.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+        //actionIsShowStdItemspEntry
+        this.actionIsShowStdItemspEntry = new ActionIsShowStdItemspEntry(this);
+        getActionManager().registerAction("actionIsShowStdItemspEntry", actionIsShowStdItemspEntry);
+         this.actionIsShowStdItemspEntry.addService(new com.kingdee.eas.framework.client.service.PermissionService());
         this.kDSplitPane1 = new com.kingdee.bos.ctrl.swing.KDSplitPane();
         this.contOldID = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contRepairBookingID = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
@@ -584,6 +592,7 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.contsaleType = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contCustomerAccount = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contcustomerAccountName = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contgaDept = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.scrollPaneRemark = new com.kingdee.bos.ctrl.swing.KDScrollPane();
         this.txtRemark = new com.kingdee.bos.ctrl.swing.KDTextArea();
         this.scrollPanecustomInfo = new com.kingdee.bos.ctrl.swing.KDScrollPane();
@@ -591,6 +600,7 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.txtsaleType = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.prmtCustomerAccount = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.txtcustomerAccountName = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.txtgaDept = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.contdept = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.prmtdept = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.kDPRwoItemSp = new com.kingdee.bos.ctrl.swing.KDPanel();
@@ -601,6 +611,7 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.cmbT = new com.kingdee.bos.ctrl.swing.KDComboBox();
         this.prmtRepairItem = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.prmtMaterial = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.menuItemIsShowStdItemspEntry = new com.kingdee.bos.ctrl.swing.KDCheckBoxMenuItem();
         this.kDSplitPane1.setName("kDSplitPane1");
         this.contOldID.setName("contOldID");
         this.contRepairBookingID.setName("contRepairBookingID");
@@ -750,6 +761,7 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.contsaleType.setName("contsaleType");
         this.contCustomerAccount.setName("contCustomerAccount");
         this.contcustomerAccountName.setName("contcustomerAccountName");
+        this.contgaDept.setName("contgaDept");
         this.scrollPaneRemark.setName("scrollPaneRemark");
         this.txtRemark.setName("txtRemark");
         this.scrollPanecustomInfo.setName("scrollPanecustomInfo");
@@ -757,6 +769,7 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.txtsaleType.setName("txtsaleType");
         this.prmtCustomerAccount.setName("prmtCustomerAccount");
         this.txtcustomerAccountName.setName("txtcustomerAccountName");
+        this.txtgaDept.setName("txtgaDept");
         this.contdept.setName("contdept");
         this.prmtdept.setName("prmtdept");
         this.kDPRwoItemSp.setName("kDPRwoItemSp");
@@ -767,6 +780,7 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.cmbT.setName("cmbT");
         this.prmtRepairItem.setName("prmtRepairItem");
         this.prmtMaterial.setName("prmtMaterial");
+        this.menuItemIsShowStdItemspEntry.setName("menuItemIsShowStdItemspEntry");
         // CoreUI
         this.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent e) {
@@ -1034,6 +1048,16 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         // chkIsPay		
         this.chkIsPay.setText(resHelper.getString("chkIsPay.text"));		
         this.chkIsPay.setVisible(false);
+        this.chkIsPay.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent e) {
+                try {
+                    chkIsPay_itemStateChanged(e);
+                } catch (Exception exc) {
+                    handUIException(exc);
+                } finally {
+                }
+            }
+        });
         // kDLabelContainer7		
         this.kDLabelContainer7.setBoundLabelText(resHelper.getString("kDLabelContainer7.boundLabelText"));		
         this.kDLabelContainer7.setBoundLabelLength(100);		
@@ -2718,6 +2742,11 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.contcustomerAccountName.setBoundLabelLength(100);		
         this.contcustomerAccountName.setBoundLabelUnderline(true);		
         this.contcustomerAccountName.setVisible(true);
+        // contgaDept		
+        this.contgaDept.setBoundLabelText(resHelper.getString("contgaDept.boundLabelText"));		
+        this.contgaDept.setBoundLabelLength(100);		
+        this.contgaDept.setBoundLabelUnderline(true);		
+        this.contgaDept.setVisible(true);
         // scrollPaneRemark
         // txtRemark		
         this.txtRemark.setRequired(false);		
@@ -2754,6 +2783,11 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.txtcustomerAccountName.setMaxLength(80);		
         this.txtcustomerAccountName.setRequired(false);		
         this.txtcustomerAccountName.setEnabled(false);
+        // txtgaDept		
+        this.txtgaDept.setVisible(true);		
+        this.txtgaDept.setHorizontalAlignment(2);		
+        this.txtgaDept.setMaxLength(100);		
+        this.txtgaDept.setRequired(false);
         // contdept		
         this.contdept.setBoundLabelText(resHelper.getString("contdept.boundLabelText"));		
         this.contdept.setBoundLabelLength(100);		
@@ -2768,11 +2802,11 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.prmtdept.setRequired(false);
         // kDPRwoItemSp
         // kdtRWOItemSpEntry
-		String kdtRWOItemSpEntryStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol1\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol2\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol3\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol4\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol8\"><c:Protection locked=\"true\" hidden=\"true\" /></c:Style><c:Style id=\"sCol10\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol11\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol12\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol13\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol14\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol15\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol16\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol17\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol18\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol19\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol20\"><c:Protection hidden=\"true\" /></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"seq\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol0\" /><t:Column t:key=\"t\" t:width=\"30\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol1\" /><t:Column t:key=\"itemspNum\" t:width=\"150\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol2\" /><t:Column t:key=\"repairItem\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"3\" t:styleID=\"sCol3\" /><t:Column t:key=\"material\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"4\" t:styleID=\"sCol4\" /><t:Column t:key=\"itemspName\" t:width=\"250\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"5\" /><t:Column t:key=\"taocan\" t:width=\"50\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"w\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"settlementObject\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol8\" /><t:Column t:key=\"isCT\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"qty\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol10\" /><t:Column t:key=\"unIssueQty\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol11\" /><t:Column t:key=\"issueQty\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol12\" /><t:Column t:key=\"price\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol13\" /><t:Column t:key=\"discountRate\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol14\" /><t:Column t:key=\"amount\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol15\" /><t:Column t:key=\"taxRate\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol16\" /><t:Column t:key=\"i\" t:width=\"40\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol17\" /><t:Column t:key=\"wipFactLineNo\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol18\" /><t:Column t:key=\"wipLineNo\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol19\" /><t:Column t:key=\"isCreateTo\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol20\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{seq}</t:Cell><t:Cell>$Resource{t}</t:Cell><t:Cell>$Resource{itemspNum}</t:Cell><t:Cell>$Resource{repairItem}</t:Cell><t:Cell>$Resource{material}</t:Cell><t:Cell>$Resource{itemspName}</t:Cell><t:Cell>$Resource{taocan}</t:Cell><t:Cell>$Resource{w}</t:Cell><t:Cell>$Resource{settlementObject}</t:Cell><t:Cell>$Resource{isCT}</t:Cell><t:Cell>$Resource{qty}</t:Cell><t:Cell>$Resource{unIssueQty}</t:Cell><t:Cell>$Resource{issueQty}</t:Cell><t:Cell>$Resource{price}</t:Cell><t:Cell>$Resource{discountRate}</t:Cell><t:Cell>$Resource{amount}</t:Cell><t:Cell>$Resource{taxRate}</t:Cell><t:Cell>$Resource{i}</t:Cell><t:Cell>$Resource{wipFactLineNo}</t:Cell><t:Cell>$Resource{wipLineNo}</t:Cell><t:Cell>$Resource{isCreateTo}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
+		String kdtRWOItemSpEntryStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol1\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol2\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol3\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol4\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol8\"><c:Protection locked=\"true\" hidden=\"true\" /></c:Style><c:Style id=\"sCol10\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol11\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol12\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol13\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol14\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol15\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol16\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol17\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol18\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol19\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol20\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol24\"><c:NumberFormat>&amp;date</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"seq\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol0\" /><t:Column t:key=\"t\" t:width=\"30\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol1\" /><t:Column t:key=\"itemspNum\" t:width=\"150\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol2\" /><t:Column t:key=\"repairItem\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"3\" t:styleID=\"sCol3\" /><t:Column t:key=\"material\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"4\" t:styleID=\"sCol4\" /><t:Column t:key=\"itemspName\" t:width=\"250\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"5\" /><t:Column t:key=\"taocan\" t:width=\"50\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"w\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"settlementObject\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol8\" /><t:Column t:key=\"isCT\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"qty\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol10\" /><t:Column t:key=\"unIssueQty\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol11\" /><t:Column t:key=\"issueQty\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol12\" /><t:Column t:key=\"price\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol13\" /><t:Column t:key=\"discountRate\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol14\" /><t:Column t:key=\"amount\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol15\" /><t:Column t:key=\"taxRate\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol16\" /><t:Column t:key=\"i\" t:width=\"40\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol17\" /><t:Column t:key=\"wipFactLineNo\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol18\" /><t:Column t:key=\"wipLineNo\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol19\" /><t:Column t:key=\"isCreateTo\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol20\" /><t:Column t:key=\"saleType\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"rts\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"billNum\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"postingDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol24\" /><t:Column t:key=\"isAPSettle\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{seq}</t:Cell><t:Cell>$Resource{t}</t:Cell><t:Cell>$Resource{itemspNum}</t:Cell><t:Cell>$Resource{repairItem}</t:Cell><t:Cell>$Resource{material}</t:Cell><t:Cell>$Resource{itemspName}</t:Cell><t:Cell>$Resource{taocan}</t:Cell><t:Cell>$Resource{w}</t:Cell><t:Cell>$Resource{settlementObject}</t:Cell><t:Cell>$Resource{isCT}</t:Cell><t:Cell>$Resource{qty}</t:Cell><t:Cell>$Resource{unIssueQty}</t:Cell><t:Cell>$Resource{issueQty}</t:Cell><t:Cell>$Resource{price}</t:Cell><t:Cell>$Resource{discountRate}</t:Cell><t:Cell>$Resource{amount}</t:Cell><t:Cell>$Resource{taxRate}</t:Cell><t:Cell>$Resource{i}</t:Cell><t:Cell>$Resource{wipFactLineNo}</t:Cell><t:Cell>$Resource{wipLineNo}</t:Cell><t:Cell>$Resource{isCreateTo}</t:Cell><t:Cell>$Resource{saleType}</t:Cell><t:Cell>$Resource{rts}</t:Cell><t:Cell>$Resource{billNum}</t:Cell><t:Cell>$Resource{postingDate}</t:Cell><t:Cell>$Resource{isAPSettle}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
 		
         this.kdtRWOItemSpEntry.setFormatXml(resHelper.translateString("kdtRWOItemSpEntry",kdtRWOItemSpEntryStrXML));
 
-                this.kdtRWOItemSpEntry.putBindContents("editData",new String[] {"seq","t","itemspNum","repairItem","material","itemspName","taocan","w","settlementObject","isCT","qty","unIssueQty","issueQty","price","discountRate","amount","taxRate","i","wipFactLineNo","wipLineNo","isCreateTo"});
+                this.kdtRWOItemSpEntry.putBindContents("editData",new String[] {"seq","t","itemspNum","repairItem","material","itemspName","taocan","w","settlementObject","isCT","qty","unIssueQty","issueQty","price","discountRate","amount","taxRate","i","wipFactLineNo","wipLineNo","isCreateTo","saleType","rts","billNum","postingDate","isAPSettle"});
 
 
         this.kdtRWOItemSpEntry.checkParsed();
@@ -2963,6 +2997,31 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         kdtRWOItemSpEntry_isCreateTo_CheckBox.setName("kdtRWOItemSpEntry_isCreateTo_CheckBox");
         KDTDefaultCellEditor kdtRWOItemSpEntry_isCreateTo_CellEditor = new KDTDefaultCellEditor(kdtRWOItemSpEntry_isCreateTo_CheckBox);
         this.kdtRWOItemSpEntry.getColumn("isCreateTo").setEditor(kdtRWOItemSpEntry_isCreateTo_CellEditor);
+        KDTextField kdtRWOItemSpEntry_saleType_TextField = new KDTextField();
+        kdtRWOItemSpEntry_saleType_TextField.setName("kdtRWOItemSpEntry_saleType_TextField");
+        kdtRWOItemSpEntry_saleType_TextField.setMaxLength(100);
+        KDTDefaultCellEditor kdtRWOItemSpEntry_saleType_CellEditor = new KDTDefaultCellEditor(kdtRWOItemSpEntry_saleType_TextField);
+        this.kdtRWOItemSpEntry.getColumn("saleType").setEditor(kdtRWOItemSpEntry_saleType_CellEditor);
+        KDTextField kdtRWOItemSpEntry_rts_TextField = new KDTextField();
+        kdtRWOItemSpEntry_rts_TextField.setName("kdtRWOItemSpEntry_rts_TextField");
+        kdtRWOItemSpEntry_rts_TextField.setMaxLength(100);
+        KDTDefaultCellEditor kdtRWOItemSpEntry_rts_CellEditor = new KDTDefaultCellEditor(kdtRWOItemSpEntry_rts_TextField);
+        this.kdtRWOItemSpEntry.getColumn("rts").setEditor(kdtRWOItemSpEntry_rts_CellEditor);
+        KDTextField kdtRWOItemSpEntry_billNum_TextField = new KDTextField();
+        kdtRWOItemSpEntry_billNum_TextField.setName("kdtRWOItemSpEntry_billNum_TextField");
+        kdtRWOItemSpEntry_billNum_TextField.setMaxLength(100);
+        KDTDefaultCellEditor kdtRWOItemSpEntry_billNum_CellEditor = new KDTDefaultCellEditor(kdtRWOItemSpEntry_billNum_TextField);
+        this.kdtRWOItemSpEntry.getColumn("billNum").setEditor(kdtRWOItemSpEntry_billNum_CellEditor);
+        KDDatePicker kdtRWOItemSpEntry_postingDate_DatePicker = new KDDatePicker();
+        kdtRWOItemSpEntry_postingDate_DatePicker.setName("kdtRWOItemSpEntry_postingDate_DatePicker");
+        kdtRWOItemSpEntry_postingDate_DatePicker.setVisible(true);
+        kdtRWOItemSpEntry_postingDate_DatePicker.setEditable(true);
+        KDTDefaultCellEditor kdtRWOItemSpEntry_postingDate_CellEditor = new KDTDefaultCellEditor(kdtRWOItemSpEntry_postingDate_DatePicker);
+        this.kdtRWOItemSpEntry.getColumn("postingDate").setEditor(kdtRWOItemSpEntry_postingDate_CellEditor);
+        KDCheckBox kdtRWOItemSpEntry_isAPSettle_CheckBox = new KDCheckBox();
+        kdtRWOItemSpEntry_isAPSettle_CheckBox.setName("kdtRWOItemSpEntry_isAPSettle_CheckBox");
+        KDTDefaultCellEditor kdtRWOItemSpEntry_isAPSettle_CellEditor = new KDTDefaultCellEditor(kdtRWOItemSpEntry_isAPSettle_CheckBox);
+        this.kdtRWOItemSpEntry.getColumn("isAPSettle").setEditor(kdtRWOItemSpEntry_isAPSettle_CellEditor);
         // kDLabelContainer8		
         this.kDLabelContainer8.setBoundLabelText(resHelper.getString("kDLabelContainer8.boundLabelText"));		
         this.kDLabelContainer8.setBoundLabelUnderline(true);		
@@ -2991,7 +3050,11 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         });
         // prmtRepairItem
         // prmtMaterial
-        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {txtVIN,cmbT,txtRemark,prmtVehicle,prmtBrand,prmtOrgUnit,Status,prmtSA,pkComeTime,pkIntendDeliveryTime,txtRepairTotalAmount,chkIsStat,txtMile,OilQty,txtKeyNumber,txtConsignation,prmtWarrantyType,prmtInsuranCompany,prmtRepairType,chkIsPriorAssign,chkIsWash,chkIsWaitForStore,txtCustomerRequest,txtCompanyNumber,pkNextMaintainDate,prmtCustomer,txtRepairSender,txtTel,prmtCustomerDiscountClassify,txtOldID,txtRepairBookingID,ReturnRepair,kDRecentlyComeTime,txtNumber,kDTDis,prmtAccountCfg,chkIsPay,chekIsReceive,repairWay,prmtGroupOrgunit,prmtSupplier,prmtVip,prmtdept,txtcustomInfo,txtsaleType,prmtCustomerAccount,txtcustomerAccountName,kdtRepairBreakEntry,kdtRWOTotalAmountEntry,kdtRWOAttachmentItemEntry,kdtRWOActivityEntry,kdtRWORepairPkgEntry,kdtRWOSparepartEntry,kdtRWORepairItemEntry,kdtRWOItemSpEntry}));
+        // menuItemIsShowStdItemspEntry
+        this.menuItemIsShowStdItemspEntry.setAction((IItemAction)ActionProxyFactory.getProxy(actionIsShowStdItemspEntry, new Class[] { IItemAction.class }, getServiceContext()));		
+        this.menuItemIsShowStdItemspEntry.setText(resHelper.getString("menuItemIsShowStdItemspEntry.text"));		
+        this.menuItemIsShowStdItemspEntry.setMnemonic(72);
+        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {txtVIN,cmbT,txtRemark,prmtVehicle,prmtBrand,prmtOrgUnit,Status,prmtSA,pkComeTime,pkIntendDeliveryTime,txtRepairTotalAmount,chkIsStat,txtMile,OilQty,txtKeyNumber,txtConsignation,prmtWarrantyType,prmtInsuranCompany,prmtRepairType,chkIsPriorAssign,chkIsWash,chkIsWaitForStore,txtCustomerRequest,txtCompanyNumber,pkNextMaintainDate,prmtCustomer,txtRepairSender,txtTel,prmtCustomerDiscountClassify,txtOldID,txtRepairBookingID,ReturnRepair,kDRecentlyComeTime,txtNumber,kDTDis,prmtAccountCfg,chkIsPay,chekIsReceive,repairWay,prmtGroupOrgunit,prmtSupplier,prmtVip,prmtdept,txtcustomInfo,txtsaleType,prmtCustomerAccount,txtcustomerAccountName,kdtRepairBreakEntry,kdtRWOTotalAmountEntry,kdtRWOAttachmentItemEntry,kdtRWOActivityEntry,kdtRWORepairPkgEntry,kdtRWOSparepartEntry,kdtRWORepairItemEntry,kdtRWOItemSpEntry,txtgaDept}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding
 		registerBindings();
@@ -3062,16 +3125,18 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         kDPBizInfo.add(contVehicle, new KDLayout.Constraints(10, 6, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contOrgUnit.setBounds(new Rectangle(10, 35, 270, 19));
         kDPBizInfo.add(contOrgUnit, new KDLayout.Constraints(10, 35, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contRemark.setBounds(new Rectangle(10, 94, 616, 43));
-        kDPBizInfo.add(contRemark, new KDLayout.Constraints(10, 94, 616, 43, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contRemark.setBounds(new Rectangle(349, 93, 609, 43));
+        kDPBizInfo.add(contRemark, new KDLayout.Constraints(349, 93, 609, 43, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contcustomInfo.setBounds(new Rectangle(349, 35, 277, 50));
         kDPBizInfo.add(contcustomInfo, new KDLayout.Constraints(349, 35, 277, 50, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contsaleType.setBounds(new Rectangle(689, 66, 270, 19));
-        kDPBizInfo.add(contsaleType, new KDLayout.Constraints(689, 66, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contCustomerAccount.setBounds(new Rectangle(689, 6, 270, 19));
-        kDPBizInfo.add(contCustomerAccount, new KDLayout.Constraints(689, 6, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contcustomerAccountName.setBounds(new Rectangle(689, 35, 270, 19));
-        kDPBizInfo.add(contcustomerAccountName, new KDLayout.Constraints(689, 35, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contsaleType.setBounds(new Rectangle(688, 66, 270, 19));
+        kDPBizInfo.add(contsaleType, new KDLayout.Constraints(688, 66, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contCustomerAccount.setBounds(new Rectangle(688, 6, 270, 19));
+        kDPBizInfo.add(contCustomerAccount, new KDLayout.Constraints(688, 6, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contcustomerAccountName.setBounds(new Rectangle(688, 35, 270, 19));
+        kDPBizInfo.add(contcustomerAccountName, new KDLayout.Constraints(688, 35, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contgaDept.setBounds(new Rectangle(10, 93, 270, 19));
+        kDPBizInfo.add(contgaDept, new KDLayout.Constraints(10, 93, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         //contCustomer
         contCustomer.setBoundEditor(prmtCustomer);
         //contSA
@@ -3094,6 +3159,8 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         contCustomerAccount.setBoundEditor(prmtCustomerAccount);
         //contcustomerAccountName
         contcustomerAccountName.setBoundEditor(txtcustomerAccountName);
+        //contgaDept
+        contgaDept.setBoundEditor(txtgaDept);
         //kDPRepairInfo
         kDPRepairInfo.setLayout(new KDLayout());
         kDPRepairInfo.putClientProperty("OriginalBounds", new Rectangle(0, 0, 967, 149));        contTel.setBounds(new Rectangle(342, 49, 270, 19));
@@ -3164,12 +3231,12 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         kDPHideField.add(contnextMaintainmiles, new KDLayout.Constraints(2, 47, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contNextMaintainDate.setBounds(new Rectangle(558, 26, 270, 19));
         kDPHideField.add(contNextMaintainDate, new KDLayout.Constraints(558, 26, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        chkIsWaitForStore.setBounds(new Rectangle(387, 4, 88, 19));
-        kDPHideField.add(chkIsWaitForStore, new KDLayout.Constraints(387, 4, 88, 19, KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        chkIsWash.setBounds(new Rectangle(568, 5, 78, 19));
-        kDPHideField.add(chkIsWash, new KDLayout.Constraints(568, 5, 78, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        chkIsPriorAssign.setBounds(new Rectangle(476, 1, 102, 19));
-        kDPHideField.add(chkIsPriorAssign, new KDLayout.Constraints(476, 1, 102, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        chkIsWaitForStore.setBounds(new Rectangle(380, 4, 88, 19));
+        kDPHideField.add(chkIsWaitForStore, new KDLayout.Constraints(380, 4, 88, 19, KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        chkIsWash.setBounds(new Rectangle(525, 4, 78, 19));
+        kDPHideField.add(chkIsWash, new KDLayout.Constraints(525, 4, 78, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        chkIsPriorAssign.setBounds(new Rectangle(452, 4, 102, 19));
+        kDPHideField.add(chkIsPriorAssign, new KDLayout.Constraints(452, 4, 102, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contRepairType.setBounds(new Rectangle(281, 69, 270, 19));
         kDPHideField.add(contRepairType, new KDLayout.Constraints(281, 69, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contWarrantyType.setBounds(new Rectangle(2, 94, 270, 19));
@@ -3180,8 +3247,8 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         kDPHideField.add(contKeyNumber, new KDLayout.Constraints(557, 91, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contOilQty.setBounds(new Rectangle(287, 120, 270, 19));
         kDPHideField.add(contOilQty, new KDLayout.Constraints(287, 120, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        chkIsStat.setBounds(new Rectangle(290, 4, 131, 19));
-        kDPHideField.add(chkIsStat, new KDLayout.Constraints(290, 4, 131, 19, KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        chkIsStat.setBounds(new Rectangle(282, 4, 131, 19));
+        kDPHideField.add(chkIsStat, new KDLayout.Constraints(282, 4, 131, 19, KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contRepairTotalAmount.setBounds(new Rectangle(558, 69, 270, 19));
         kDPHideField.add(contRepairTotalAmount, new KDLayout.Constraints(558, 69, 270, 19, KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contDescription.setBounds(new Rectangle(5, 122, 270, 18));
@@ -3202,12 +3269,12 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         kDPHideField.add(kDLabelContainer5, new KDLayout.Constraints(281, 46, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         chekIsReceive.setBounds(new Rectangle(281, 28, 156, 19));
         kDPHideField.add(chekIsReceive, new KDLayout.Constraints(281, 28, 156, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        chkIsPay.setBounds(new Rectangle(424, 26, 118, 19));
-        kDPHideField.add(chkIsPay, new KDLayout.Constraints(424, 26, 118, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        chkIsPay.setBounds(new Rectangle(402, 26, 118, 19));
+        kDPHideField.add(chkIsPay, new KDLayout.Constraints(402, 26, 118, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         kDLabelContainer7.setBounds(new Rectangle(5, 70, 270, 19));
         kDPHideField.add(kDLabelContainer7, new KDLayout.Constraints(5, 70, 270, 19, KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contdept.setBounds(new Rectangle(684, 1, 270, 19));
-        kDPHideField.add(contdept, new KDLayout.Constraints(684, 1, 270, 19, 0));
+        contdept.setBounds(new Rectangle(601, 2, 270, 19));
+        kDPHideField.add(contdept, new KDLayout.Constraints(601, 2, 270, 19, 0));
         //kDLabelContainer2
         kDLabelContainer2.setBoundEditor(kDRecentlyComeTime);
         //contInsuranCompany
@@ -3420,6 +3487,7 @@ vo.put("i","I");
         menuView.add(menuItemTraceDown);
         menuView.add(kDSeparator7);
         menuView.add(menuItemLocate);
+        menuView.add(menuItemIsShowStdItemspEntry);
         //menuBiz
         menuBiz.add(menuItemCancelCancel);
         menuBiz.add(menuItemCancel);
@@ -3725,6 +3793,7 @@ vo.put("i","I");
 		dataBinder.registerBinding("saleType", String.class, this.txtsaleType, "text");
 		dataBinder.registerBinding("CustomerAccount", com.kingdee.eas.ga.rs.CustomerAccountInfo.class, this.prmtCustomerAccount, "data");
 		dataBinder.registerBinding("customerAccountName", String.class, this.txtcustomerAccountName, "text");
+		dataBinder.registerBinding("gaDept", String.class, this.txtgaDept, "text");
 		dataBinder.registerBinding("dept", com.kingdee.eas.basedata.org.AdminOrgUnitInfo.class, this.prmtdept, "data");
 		dataBinder.registerBinding("RWOItemSpEntry.seq", int.class, this.kdtRWOItemSpEntry, "seq.text");
 		dataBinder.registerBinding("RWOItemSpEntry", com.kingdee.eas.auto4s.rsm.rs.RepairWORWOItemSpEntryInfo.class, this.kdtRWOItemSpEntry, "userObject");
@@ -3747,7 +3816,12 @@ vo.put("i","I");
 		dataBinder.registerBinding("RWOItemSpEntry.w", java.lang.Object.class, this.kdtRWOItemSpEntry, "w.text");
 		dataBinder.registerBinding("RWOItemSpEntry.wipLineNo", int.class, this.kdtRWOItemSpEntry, "wipLineNo.text");
 		dataBinder.registerBinding("RWOItemSpEntry.wipFactLineNo", int.class, this.kdtRWOItemSpEntry, "wipFactLineNo.text");
-		dataBinder.registerBinding("RWOItemSpEntry.isCreateTo", boolean.class, this.kdtRWOItemSpEntry, "isCreateTo.text");		
+		dataBinder.registerBinding("RWOItemSpEntry.isCreateTo", boolean.class, this.kdtRWOItemSpEntry, "isCreateTo.text");
+		dataBinder.registerBinding("RWOItemSpEntry.saleType", String.class, this.kdtRWOItemSpEntry, "saleType.text");
+		dataBinder.registerBinding("RWOItemSpEntry.rts", String.class, this.kdtRWOItemSpEntry, "rts.text");
+		dataBinder.registerBinding("RWOItemSpEntry.billNum", String.class, this.kdtRWOItemSpEntry, "billNum.text");
+		dataBinder.registerBinding("RWOItemSpEntry.postingDate", java.util.Date.class, this.kdtRWOItemSpEntry, "postingDate.text");
+		dataBinder.registerBinding("RWOItemSpEntry.isAPSettle", boolean.class, this.kdtRWOItemSpEntry, "isAPSettle.text");		
 	}
 	//Regiester UI State
 	private void registerUIState(){		
@@ -4062,6 +4136,7 @@ vo.put("i","I");
 		getValidateHelper().registerBindProperty("saleType", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("CustomerAccount", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("customerAccountName", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("gaDept", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("dept", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("RWOItemSpEntry.seq", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("RWOItemSpEntry", ValidateHelper.ON_SAVE);    
@@ -4084,7 +4159,12 @@ vo.put("i","I");
 		getValidateHelper().registerBindProperty("RWOItemSpEntry.w", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("RWOItemSpEntry.wipLineNo", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("RWOItemSpEntry.wipFactLineNo", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("RWOItemSpEntry.isCreateTo", ValidateHelper.ON_SAVE);    		
+		getValidateHelper().registerBindProperty("RWOItemSpEntry.isCreateTo", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("RWOItemSpEntry.saleType", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("RWOItemSpEntry.rts", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("RWOItemSpEntry.billNum", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("RWOItemSpEntry.postingDate", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("RWOItemSpEntry.isAPSettle", ValidateHelper.ON_SAVE);    		
 	}
 
 
@@ -4113,6 +4193,13 @@ vo.put("i","I");
      * output CoreUI_focusLost method
      */
     protected void CoreUI_focusLost(java.awt.event.FocusEvent e) throws Exception
+    {
+    }
+
+    /**
+     * output chkIsPay_itemStateChanged method
+     */
+    protected void chkIsPay_itemStateChanged(java.awt.event.ItemEvent e) throws Exception
     {
     }
 
@@ -4934,6 +5021,7 @@ kdtRWOAttachmentItemEntry.getCell(rowIndex,"AttaItemName").setValue(com.kingdee.
         	sic.add(new SelectorItemInfo("CustomerAccount.name"));
 		}
         sic.add(new SelectorItemInfo("customerAccountName"));
+        sic.add(new SelectorItemInfo("gaDept"));
 		if(selectorAll.equalsIgnoreCase("true"))
 		{
 			sic.add(new SelectorItemInfo("dept.*"));
@@ -4994,6 +5082,11 @@ kdtRWOAttachmentItemEntry.getCell(rowIndex,"AttaItemName").setValue(com.kingdee.
     	sic.add(new SelectorItemInfo("RWOItemSpEntry.wipLineNo"));
     	sic.add(new SelectorItemInfo("RWOItemSpEntry.wipFactLineNo"));
     	sic.add(new SelectorItemInfo("RWOItemSpEntry.isCreateTo"));
+    	sic.add(new SelectorItemInfo("RWOItemSpEntry.saleType"));
+    	sic.add(new SelectorItemInfo("RWOItemSpEntry.rts"));
+    	sic.add(new SelectorItemInfo("RWOItemSpEntry.billNum"));
+    	sic.add(new SelectorItemInfo("RWOItemSpEntry.postingDate"));
+    	sic.add(new SelectorItemInfo("RWOItemSpEntry.isAPSettle"));
         return sic;
     }        
     	
@@ -5277,6 +5370,14 @@ kdtRWOAttachmentItemEntry.getCell(rowIndex,"AttaItemName").setValue(com.kingdee.
      * output actionViewVipPrefer_actionPerformed method
      */
     public void actionViewVipPrefer_actionPerformed(ActionEvent e) throws Exception
+    {
+    }
+    	
+
+    /**
+     * output actionIsShowStdItemspEntry_actionPerformed method
+     */
+    public void actionIsShowStdItemspEntry_actionPerformed(ActionEvent e) throws Exception
     {
     }
 	public RequestContext prepareActionSubmit(IItemAction itemAction) throws Exception {
@@ -5640,6 +5741,17 @@ kdtRWOAttachmentItemEntry.getCell(rowIndex,"AttaItemName").setValue(com.kingdee.
     }
 	
 	public boolean isPrepareActionViewVipPrefer() {
+    	return false;
+    }
+	public RequestContext prepareActionIsShowStdItemspEntry(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareActionIsShowStdItemspEntry() {
     	return false;
     }
 
@@ -6557,6 +6669,37 @@ kdtRWOAttachmentItemEntry.getCell(rowIndex,"AttaItemName").setValue(com.kingdee.
         {
         	getUIContext().put("ORG.PK", getOrgPK(this));
             innerActionPerformed("eas", AbstractRepairWOEditUI.this, "ActionViewVipPrefer", "actionViewVipPrefer_actionPerformed", e);
+        }
+    }
+
+    /**
+     * output ActionIsShowStdItemspEntry class
+     */     
+    protected class ActionIsShowStdItemspEntry extends ItemAction {     
+    
+        public ActionIsShowStdItemspEntry()
+        {
+            this(null);
+        }
+
+        public ActionIsShowStdItemspEntry(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            this.putValue(ItemAction.ACCELERATOR_KEY, KeyStroke.getKeyStroke("ctrl H"));
+            _tempStr = resHelper.getString("ActionIsShowStdItemspEntry.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionIsShowStdItemspEntry.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionIsShowStdItemspEntry.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractRepairWOEditUI.this, "ActionIsShowStdItemspEntry", "actionIsShowStdItemspEntry_actionPerformed", e);
         }
     }
 

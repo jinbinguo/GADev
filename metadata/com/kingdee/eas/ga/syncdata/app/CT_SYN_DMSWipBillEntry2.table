@@ -15,7 +15,7 @@
             <isMultilingual>false</isMultilingual>
             <isEncoded>false</isEncoded>
             <isNullable>false</isNullable>
-            <defaultValue />
+            <defaultValue>''</defaultValue>
             <sqlType>VARCHAR</sqlType>
             <length>44</length>
             <scale>0</scale>
@@ -29,7 +29,7 @@
             <isMultilingual>false</isMultilingual>
             <isEncoded>false</isEncoded>
             <isNullable>false</isNullable>
-            <defaultValue />
+            <defaultValue>0</defaultValue>
             <sqlType>INT</sqlType>
             <length>4</length>
             <scale>0</scale>
@@ -43,7 +43,7 @@
             <isMultilingual>false</isMultilingual>
             <isEncoded>false</isEncoded>
             <isNullable>false</isNullable>
-            <defaultValue />
+            <defaultValue>''</defaultValue>
             <sqlType>VARCHAR</sqlType>
             <length>44</length>
             <scale>0</scale>
@@ -273,6 +273,20 @@
             <scale>0</scale>
             <precision>0</precision>
         </column>
+        <column>
+            <name>CFSaleType</name>
+            <alias>dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSWipBillEntry2].columns.column[CFSaleType].alias</alias>
+            <description>dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSWipBillEntry2].columns.column[CFSaleType].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>CPK_SYN_DMSWBE2j4v</name>
@@ -296,9 +310,9 @@
         </rs>
         <rs key="dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSWipBillEntry2].columns.column[CFAccountCode].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="帐户编号" />
-            <lang locale="zh_HK" value="帳戶編號" />
-            <lang locale="zh_TW" value="帳戶編號" />
+            <lang locale="zh_CN" value="账户编号" />
+            <lang locale="zh_HK" value="賬戶編號" />
+            <lang locale="zh_TW" value="賬戶編號" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSWipBillEntry2].columns.column[CFAccountCode].description">
             <lang locale="en_US" value="null" />
@@ -449,6 +463,18 @@
             <lang locale="zh_CN" value="销售价格" />
             <lang locale="zh_HK" value="銷售價格" />
             <lang locale="zh_TW" value="銷售價格" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSWipBillEntry2].columns.column[CFSaleType].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="销售类型" />
+            <lang locale="zh_HK" value="銷售類型" />
+            <lang locale="zh_TW" value="銷售類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSWipBillEntry2].columns.column[CFSaleType].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="销售类型" />
+            <lang locale="zh_HK" value="銷售類型" />
+            <lang locale="zh_TW" value="銷售類型" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.ga.syncdata.app.CT_SYN_DMSWipBillEntry2].columns.column[CFSeq].alias">
             <lang locale="en_US" value="null" />

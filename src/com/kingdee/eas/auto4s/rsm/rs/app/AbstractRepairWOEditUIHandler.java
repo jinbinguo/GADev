@@ -164,4 +164,9 @@ public abstract class AbstractRepairWOEditUIHandler extends com.kingdee.eas.auto
 	}
 	protected void _handleActionViewVipPrefer(RequestContext request,ResponseContext response, Context context) throws Exception {
 	}
+	public void handleActionIsShowStdItemspEntry(RequestContext request,ResponseContext response, Context context) throws Exception {
+		_handleActionIsShowStdItemspEntry(request,response,context);
+	}
+	protected void _handleActionIsShowStdItemspEntry(RequestContext request,ResponseContext response, Context context) throws Exception {
+	}
 }

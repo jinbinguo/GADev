@@ -56,6 +56,23 @@ public class GAUtils implements Serializable {
 	}
 	
 	/**
+	 * 获取品牌
+	 * @param ctx
+	 * @param brandName
+	 * @return
+	 * @throws Exception 
+	 */
+	public static BrandInfo getBrandByName(Context ctx, String brandName) throws Exception {
+		//品牌 
+		if (hashBrand.isEmpty()) getBrandCol(ctx);
+		BrandInfo defaultBrand = hashBrand.get(brandName);
+		if (defaultBrand != null) {
+			return defaultBrand;
+		} else {
+			throw new EASBizException(new NumericExceptionSubItem("",String.format("车辆品牌[%s]不正确!",brandName)));
+		}
+	}
+	/**
 	 * 按品牌获取默认“保修类型”
 	 * @param brand
 	 * @return
@@ -256,11 +273,17 @@ public class GAUtils implements Serializable {
 	 * @throws Exception
 	 */
 	public static PersonInfo getDefaultSAPerson(Context ctx) throws Exception {
-		IPerson person = null;
-		if (ctx == null) person = PersonFactory.getRemoteInstance();
-		else person = PersonFactory.getLocalInstance(ctx);
-		PersonInfo defaultPersonInfo = person.getPersonInfo(new ObjectUuidPK("zfcAAAADYhGA733t"));
-		return defaultPersonInfo;
+		String sql = "select FID,FName_L2,FNumber from T_BD_Person where FNumber='DMS'";
+		IRowSet rs = DBUtils.executeQuery(ctx, sql);
+		if (rs != null && rs.next()) {
+			PersonInfo defaultPersonInfo = new PersonInfo();
+			defaultPersonInfo.put("id", rs.getString("FID"));
+			defaultPersonInfo.put("name", rs.getString("FName_l2"));
+			defaultPersonInfo.put("number", rs.getString("FNumber"));
+			return defaultPersonInfo;
+		} else {
+			throw new EASBizException(new NumericExceptionSubItem("","不存在编码为DMS的职员，请先添加。"));
+		}
 	}
 	/**
 	 * 默认 其他入库(调拨入库)事务类型
@@ -272,7 +295,7 @@ public class GAUtils implements Serializable {
 		ITransactionType transactionType = null;
 		if (ctx ==null) transactionType = TransactionTypeFactory.getRemoteInstance();
 		else transactionType = TransactionTypeFactory.getLocalInstance(ctx);
-		TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where id='zfcAAAADYjSwCNyn'");
+		TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where number='034-1'");
 		return defaultTransactionInfo;
 	}
 	
@@ -286,7 +309,7 @@ public class GAUtils implements Serializable {
 		ITransactionType transactionType = null;
 		if (ctx ==null) transactionType = TransactionTypeFactory.getRemoteInstance();
 		else transactionType = TransactionTypeFactory.getLocalInstance(ctx);
-		TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where id='zfcAAAADYjWwCNyn'");
+		TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where id='034-2'");
 		return defaultTransactionInfo;
 	}
 	
@@ -301,7 +324,7 @@ public class GAUtils implements Serializable {
 		ITransactionType transactionType = null;
 		if (ctx ==null) transactionType = TransactionTypeFactory.getRemoteInstance();
 		else transactionType = TransactionTypeFactory.getLocalInstance(ctx);
-		TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where id='zfcAAAADYjawCNyn'");
+		TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where id='030-1'");
 		return defaultTransactionInfo;
 	}
 	
@@ -315,7 +338,7 @@ public class GAUtils implements Serializable {
 		ITransactionType transactionType = null;
 		if (ctx ==null) transactionType = TransactionTypeFactory.getRemoteInstance();
 		else transactionType = TransactionTypeFactory.getLocalInstance(ctx);
-		TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where id='zfcAAAADYjewCNyn'");
+		TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where id='030-2'");
 		return defaultTransactionInfo;
 	}
 }

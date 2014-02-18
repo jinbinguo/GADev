@@ -53,6 +53,7 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contfinCustomer;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contrepairSaleType;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contsettlementType;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contatsCustomer;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtretailSaleType;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtretailDiscountRate;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtrepairDiscountRate;
@@ -60,6 +61,7 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtfinCustomer;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtrepairSaleType;
     protected com.kingdee.bos.ctrl.swing.KDComboBox settlementType;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtatsCustomer;
     protected com.kingdee.eas.ga.rs.CustomerAccountInfo editData = null;
     /**
      * output class constructor
@@ -87,6 +89,7 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         this.contfinCustomer = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contrepairSaleType = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contsettlementType = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contatsCustomer = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.txtretailSaleType = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.txtretailDiscountRate = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.txtrepairDiscountRate = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
@@ -94,6 +97,7 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         this.prmtfinCustomer = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.txtrepairSaleType = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.settlementType = new com.kingdee.bos.ctrl.swing.KDComboBox();
+        this.prmtatsCustomer = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.contretailSaleType.setName("contretailSaleType");
         this.contretailDiscountRate.setName("contretailDiscountRate");
         this.contrepairDiscountRate.setName("contrepairDiscountRate");
@@ -101,6 +105,7 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         this.contfinCustomer.setName("contfinCustomer");
         this.contrepairSaleType.setName("contrepairSaleType");
         this.contsettlementType.setName("contsettlementType");
+        this.contatsCustomer.setName("contatsCustomer");
         this.txtretailSaleType.setName("txtretailSaleType");
         this.txtretailDiscountRate.setName("txtretailDiscountRate");
         this.txtrepairDiscountRate.setName("txtrepairDiscountRate");
@@ -108,12 +113,12 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         this.prmtfinCustomer.setName("prmtfinCustomer");
         this.txtrepairSaleType.setName("txtrepairSaleType");
         this.settlementType.setName("settlementType");
+        this.prmtatsCustomer.setName("prmtatsCustomer");
         // CoreUI		
         this.btnPrint.setVisible(false);		
         this.btnPrintPreview.setVisible(false);		
         this.kDLabelContainer3.setVisible(false);		
         this.kDLabelContainer4.setVisible(false);		
-        this.contdeletedStatus.setVisible(false);		
         this.txtSimpleName.setVisible(false);		
         this.txtDescription.setVisible(false);		
         this.boxDeletedStatus.setEnabled(true);
@@ -152,6 +157,11 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         this.contsettlementType.setBoundLabelLength(100);		
         this.contsettlementType.setBoundLabelUnderline(true);		
         this.contsettlementType.setVisible(true);
+        // contatsCustomer		
+        this.contatsCustomer.setBoundLabelText(resHelper.getString("contatsCustomer.boundLabelText"));		
+        this.contatsCustomer.setBoundLabelLength(100);		
+        this.contatsCustomer.setBoundLabelUnderline(true);		
+        this.contatsCustomer.setVisible(true);
         // txtretailSaleType		
         this.txtretailSaleType.setHorizontalAlignment(2);		
         this.txtretailSaleType.setMaxLength(100);		
@@ -190,7 +200,15 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         // settlementType		
         this.settlementType.addItems(EnumUtils.getEnumList("com.kingdee.eas.ga.rs.SettlementTypeEnum").toArray());		
         this.settlementType.setRequired(true);
-        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {txtNumber,txtName,txtSimpleName,txtDescription,boxDeletedStatus,chkscheduled,txtretailSaleType,txtretailDiscountRate,txtrepairSaleType,txtrepairDiscountRate,txttypeCode,prmtfinCustomer,settlementType}));
+        // prmtatsCustomer		
+        this.prmtatsCustomer.setQueryInfo("com.kingdee.eas.auto4s.bdm.pbd.app.CustomerQuery");		
+        this.prmtatsCustomer.setVisible(true);		
+        this.prmtatsCustomer.setEditable(true);		
+        this.prmtatsCustomer.setDisplayFormat("$name$");		
+        this.prmtatsCustomer.setEditFormat("$number$");		
+        this.prmtatsCustomer.setCommitFormat("$number$");		
+        this.prmtatsCustomer.setRequired(false);
+        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {txtNumber,txtName,txtSimpleName,txtDescription,boxDeletedStatus,chkscheduled,txtretailSaleType,txtretailDiscountRate,txtrepairSaleType,txtrepairDiscountRate,txttypeCode,prmtfinCustomer,settlementType,prmtatsCustomer}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding
 		registerBindings();
@@ -228,7 +246,7 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         this.add(kDLabelContainer4, null);
         contdeletedStatus.setBounds(new Rectangle(10, 141, 270, 19));
         this.add(contdeletedStatus, null);
-        chkscheduled.setBounds(new Rectangle(293, 115, 270, 19));
+        chkscheduled.setBounds(new Rectangle(293, 141, 270, 19));
         this.add(chkscheduled, null);
         contretailSaleType.setBounds(new Rectangle(10, 33, 270, 19));
         this.add(contretailSaleType, null);
@@ -244,6 +262,8 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         this.add(contrepairSaleType, null);
         contsettlementType.setBounds(new Rectangle(10, 115, 270, 19));
         this.add(contsettlementType, null);
+        contatsCustomer.setBounds(new Rectangle(293, 115, 270, 19));
+        this.add(contatsCustomer, null);
         //kDLabelContainer1
         kDLabelContainer1.setBoundEditor(txtNumber);
         //kDLabelContainer2
@@ -268,6 +288,8 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         contrepairSaleType.setBoundEditor(txtrepairSaleType);
         //contsettlementType
         contsettlementType.setBoundEditor(settlementType);
+        //contatsCustomer
+        contatsCustomer.setBoundEditor(prmtatsCustomer);
 
     }
 
@@ -390,7 +412,8 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
 		dataBinder.registerBinding("typeCode", String.class, this.txttypeCode, "text");
 		dataBinder.registerBinding("finCustomer", com.kingdee.eas.basedata.master.cssp.CustomerInfo.class, this.prmtfinCustomer, "data");
 		dataBinder.registerBinding("repairSaleType", String.class, this.txtrepairSaleType, "text");
-		dataBinder.registerBinding("settlementType", com.kingdee.eas.ga.rs.SettlementTypeEnum.class, this.settlementType, "selectedItem");		
+		dataBinder.registerBinding("settlementType", com.kingdee.eas.ga.rs.SettlementTypeEnum.class, this.settlementType, "selectedItem");
+		dataBinder.registerBinding("atsCustomer", com.kingdee.eas.auto4s.bdm.pbd.CustomerInfo.class, this.prmtatsCustomer, "data");		
 	}
 	//Regiester UI State
 	private void registerUIState(){
@@ -549,7 +572,8 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
 		getValidateHelper().registerBindProperty("typeCode", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("finCustomer", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("repairSaleType", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("settlementType", ValidateHelper.ON_SAVE);    		
+		getValidateHelper().registerBindProperty("settlementType", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("atsCustomer", ValidateHelper.ON_SAVE);    		
 	}
 
 
@@ -609,6 +633,15 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
 		}
         sic.add(new SelectorItemInfo("repairSaleType"));
         sic.add(new SelectorItemInfo("settlementType"));
+		if(selectorAll.equalsIgnoreCase("true"))
+		{
+			sic.add(new SelectorItemInfo("atsCustomer.*"));
+		}
+		else{
+        	sic.add(new SelectorItemInfo("atsCustomer.id"));
+        	sic.add(new SelectorItemInfo("atsCustomer.number"));
+        	sic.add(new SelectorItemInfo("atsCustomer.name"));
+		}
         return sic;
     }        
 

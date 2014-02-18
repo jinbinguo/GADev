@@ -183,7 +183,7 @@ public class AbstractDMSWipBillEntry2Info extends com.kingdee.eas.framework.Core
         setString("taxBillCode", item);
     }
     /**
-     * Object:零件行's 帐户编号property 
+     * Object:零件行's 账户编号property 
      */
     public String getAccountCode()
     {
@@ -192,6 +192,17 @@ public class AbstractDMSWipBillEntry2Info extends com.kingdee.eas.framework.Core
     public void setAccountCode(String item)
     {
         setString("accountCode", item);
+    }
+    /**
+     * Object:零件行's 销售类型property 
+     */
+    public String getSaleType()
+    {
+        return getString("saleType");
+    }
+    public void setSaleType(String item)
+    {
+        setString("saleType", item);
     }
     public BOSObjectType getBOSType()
     {

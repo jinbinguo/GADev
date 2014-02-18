@@ -1,11 +1,12 @@
 package com.kingdee.eas.ga.syncdata.parsedata;
 
 import java.io.File;
-import java.io.FileInputStream;
+import java.util.Date;
 
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.eas.ga.syncdata.DMSWipBillEntry3Collection;
 import com.kingdee.eas.ga.syncdata.DMSWipBillEntry3Info;
+import com.kingdee.eas.myframework.util.PublicUtils;
 import com.kingdee.util.NumericExceptionSubItem;
 
 public class WipBillManHourParse extends BaseExcelParse {
@@ -23,13 +24,16 @@ public class WipBillManHourParse extends BaseExcelParse {
 			{"payCode","付款代码","string"},
 			{"billNum","账单编号","string"},
 			{"billStatus","账单状态","string"},
-			{"realLineSeq","实际行号（排序）","int"},
+			{"realLineSeq","实际行（排序）","int"},
 			{"standardHour","标准时间","decimal"},
 			{"lastEditTime","编辑日期","date"},
 			{"discountRate","折扣百分比","decimal"},
 			{"lineSeq","行号","int"},
 			{"unitMI","单位分钟数","decimal"},
-			{"hourRate","小时工时率","decimal"}
+			{"hourRate","小时工时率","decimal"},
+			{"saleType","销售类型","string"},
+			{"postingDate","过账日期","date"},
+			{"rts","RTS代码","string"}
 	};
 	private String keyTitleName = "编辑日期";
 	
@@ -52,8 +56,17 @@ public class WipBillManHourParse extends BaseExcelParse {
 					String titleField = titleNames[i][0];
 					String titleName = titleNames[i][1];
 					String dataType = titleNames[i][2];
-					Object value = getCellValue(rowIndex, titleName, dataType);
-					
+					Object value = null;
+					if (PublicUtils.equals(titleField,"postingDate")) {
+						 try {
+							 value = getCellValue(rowIndex,titleName,dataType);
+						 } catch (Exception e) {
+							 value = null;
+						 }
+						
+					} else {
+						 value = getCellValue(rowIndex, titleName, dataType);
+					}
 					dmsWipBillEntry3Info.put(titleField, value);
 				}
 				dmsWipBillEntry3Collection.add(dmsWipBillEntry3Info);

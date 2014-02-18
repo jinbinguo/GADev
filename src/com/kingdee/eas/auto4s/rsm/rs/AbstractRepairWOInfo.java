@@ -786,6 +786,17 @@ public class AbstractRepairWOInfo extends com.kingdee.eas.auto4s.autoframework.c
     {
         setString("customerAccountName", item);
     }
+    /**
+     * Object:维修工单's 部门property 
+     */
+    public String getGaDept()
+    {
+        return getString("gaDept");
+    }
+    public void setGaDept(String item)
+    {
+        setString("gaDept", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("FDBE5ECA");

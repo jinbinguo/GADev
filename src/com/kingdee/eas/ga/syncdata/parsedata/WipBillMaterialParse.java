@@ -29,7 +29,9 @@ public class WipBillMaterialParse extends BaseExcelParse {
 			{"lineSeq","行号","int"},
 			{"orderQty","定货数量","int"},
 			{"salePrice","销售价格","decimal"},
-			{"taxBillCode","增值税代码","string"}
+			{"taxBillCode","增值税代码","string"},
+			{"saleType","销售类型","string"}
+			
 			
 	};
 	private String keyTitleName = "零件编号";

@@ -224,7 +224,7 @@ public abstract class AbstractDMSDataImport extends CoreUIObject
         this.contSpentInfo.setTitle(resHelper.getString("contSpentInfo.title"));
         // chkShowSpent		
         this.chkShowSpent.setText(resHelper.getString("chkShowSpent.text"));		
-        this.chkShowSpent.setMnemonic(68);
+        this.chkShowSpent.setMnemonic(72);
         this.chkShowSpent.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent e) {
                 try {

@@ -5,6 +5,8 @@ import java.io.PrintWriter;
 import java.io.Serializable;
 import java.io.StringWriter;
 import java.math.BigDecimal;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -130,5 +132,36 @@ public class PublicUtils implements Serializable {
         pw.flush();
         sw.flush();
         return sw.toString();
+    }
+    
+    public static boolean isDate(Object value) {
+    	if (value == null) return false;
+    	if (value instanceof String) {
+    		try {
+    			Date date = new Date(value.toString());
+    			return true;
+    		} catch (Exception e ) {
+    			return false;
+    		}
+    	} else if (value instanceof Date) {
+    		return true;
+    	} else return false;
+    }
+    public static BigDecimal getBigDecimal(Object value) throws Exception {
+    	try {
+	    	if (value == null) return BIGDECIMAL0;
+	    	else if (value instanceof BigDecimal) return (BigDecimal)value;
+	    	else if (value instanceof String) return new BigDecimal((String)value);
+	    	else if (value instanceof Double) return new BigDecimal((Double)value);
+	    	else if (value instanceof Integer) return new BigDecimal((Integer)value);
+	    	else {
+	    		String msg = String.format("getBigDecimal参数类型[%s]异常", value.getClass().getName());
+	    		throw new Exception(msg);
+	    	}
+    	} catch (Exception e) {
+    		String msg = String.format("getBigDecimal参数类型[%s],值[%s]异常", value.getClass().getName(),value.toString());
+    		throw new Exception(msg);
+	    }
+
     }
 }

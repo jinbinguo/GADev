@@ -13,6 +13,7 @@ import java.util.HashMap;
 import java.util.Set;
 
 import javax.swing.Action;
+import javax.swing.event.ChangeEvent;
 import javax.swing.event.EventListenerList;
 
 import com.kingdee.bos.BOSException;
@@ -154,6 +155,13 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		} 
 	}
 	@Override
+	public void setOprtState(String oprtType) {
+		super.setOprtState(oprtType);
+		prmtCustomerAccount.setEditable(true);
+	    prmtCustomerAccount.setReadOnly(false);
+	    prmtCustomerAccount.setEnabled(true);
+	}
+	@Override
 	public void onLoad() throws Exception {
 		
 		super.onLoad();
@@ -173,14 +181,33 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		//----------隐藏页签
 		
 		kDTabbedPane1.remove(kDPHideField);
-		//kDTRWOPane.remove(kDPRwoItem);
-		//kDTRWOPane.remove(kDPRwoSp);
+		kDTRWOPane.remove(kDPRwoItem);
+		kDTRWOPane.remove(kDPRwoSp);
 		kDTRWOPane.remove(kDPSpk);
 		kDTRWOPane.remove(kDPAct);
 		kDTRWOPane.remove(kDPAcc);
+
+		//-----------隐藏工具栏按钮
+		actionSubmit.setVisible(false); //提交
+		actionInvalid.setVisible(false); //作废
+		actionUninvalid.setVisible(false);//取消作废
+		actionAdd.setVisible(false);//追加项目
+		actionEnterAdd.setVisible(false);//追加确认
+		actionSuggest.setVisible(false);//建议维修项目
+		actionBo.setVisible(false);//BO件确认
+		actionCancelBo.setVisible(false);//BO件反确认
+		actionDispatching.setVisible(false);//派工
+		actionCancelAssign.setVisible(false);//取消派工
+		actionItemIssue.setVisible(false);//出库
+		actionTimeBooking.setVisible(false);//工时登记
+		actionUnTimeBooking.setVisible(false);//取消工时等级
+		actionAdjust.setVisible(false);//整单调整
 		
 		
-		//--------------
+		
+		
+		
+		
 		
 		txtCompanyNumber.setEnabled(false);
 		
@@ -191,6 +218,10 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		registePrmtRepairItemF7();
 		appendItemSpFoot();
 		setCmbT_Permission();
+		
+		prmtCustomerAccount.setEditable(true);
+	    prmtCustomerAccount.setReadOnly(false);
+	    prmtCustomerAccount.setEnabled(true);
 		
 	}
 	private void defaultValueForAddNew() throws Exception {
@@ -258,8 +289,11 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 				IRow row = kdtRWOItemSpEntry.getRow(rowIndex);
 				resetItemSpEditorLocked(row);
 				Object newObj = kdteditevent.getValue();
-				if (!PublicUtils.equals(oldValue, newObj))
-					valueChangedForItemSpEntry(kdteditevent);
+				if (!PublicUtils.equals(oldValue, newObj)) {
+					try {
+						valueChangedForItemSpEntry(kdteditevent);
+					} catch (Exception e) {UIUtils.handUIException(e);}
+				}
 			}
 			@Override
 			public void editValueChanged(KDTEditEvent kdteditevent) {
@@ -759,7 +793,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		footRow.getCell(totalTaxAmountIndex+1).getStyleAttributes().setHorizontalAlign(HorizontalAlignment.LEFT);
 		
 	}
-	private void valueChangedForItemSpEntry(KDTEditEvent e) {
+	private void valueChangedForItemSpEntry(KDTEditEvent e) throws Exception {
 		int rowIndex = e.getRowIndex();
 		int colIndex = e.getColIndex();
 		
@@ -808,7 +842,30 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		} else if (!hasPermission_OprtRepairLine && PublicUtils.equals("L", cellT.getValue().toString())) {
 			row.getStyleAttributes().setLocked(true);
 		}
+		try {
+			BigDecimal issueQty = PublicUtils.getBigDecimal(row.getCell("issueQty").getValue());
+			boolean isAPSettle = (Boolean)row.getCell("isAPSettle").getValue();
+			IEnum iType = (IEnum) row.getCell("i").getValue();
+			if (issueQty.compareTo(BIGDEC0) != 0) { //已有出库
+				row.getStyleAttributes().setLocked(true);
+				row.getCell("w").getStyleAttributes().setLocked(false);
+			} 
+			if (isAPSettle) {
+				row.getStyleAttributes().setLocked(true);
+			}
+			
+			if (PublicUtils.equals(IEnum.X, iType) && !PublicUtils.equals(getOprtState(), OprtState.ADDNEW)) {
+				row.getStyleAttributes().setLocked(true);
+			}
+			row.getCell("taocan").getStyleAttributes().setLocked(false);
+			
+		} catch (Exception e) {
+			UIUtils.handUIException(e);
+		}
+	
 	}
+		
+	
 
 	private void resetBtnAction(KDWorkButton btn, Action action) {
 		ActionListener[] l = btn.getActionListeners();
@@ -2022,13 +2079,13 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     	initItemSpRepairItemEntryF7(null,cell);
     }
     
-    private void calItemSpEntryAmount(IRow row) {
+    private void calItemSpEntryAmount(IRow row) throws Exception {
     	//总计=数量*(1+税率%/100)*价格*(1-折扣%/100)
     	TEnum tType = (TEnum)row.getCell("t").getValue(); //T
-    	BigDecimal qty = (BigDecimal) row.getCell("qty").getValue(); //数量/工时
-		BigDecimal price = (BigDecimal)row.getCell("price").getValue(); //不含单价
-		BigDecimal discountRate = (BigDecimal)row.getCell("discountRate").getValue(); //折扣
-		BigDecimal taxRate = (BigDecimal)row.getCell("taxRate").getValue(); //税率
+    	BigDecimal qty = PublicUtils.getBigDecimal(row.getCell("qty").getValue()); //数量/工时
+		BigDecimal price = PublicUtils.getBigDecimal(row.getCell("price").getValue()); //不含单价
+		BigDecimal discountRate = PublicUtils.getBigDecimal(row.getCell("discountRate").getValue()); //折扣
+		BigDecimal taxRate = PublicUtils.getBigDecimal(row.getCell("taxRate").getValue()); //税率
 		BigDecimal amount = qty.multiply(price).multiply(BIGDEC1.subtract(discountRate.divide(BIGDEC100,10,BigDecimal.ROUND_HALF_UP)));
 		row.getCell("amount").setValue(amount);
 		
@@ -2238,5 +2295,17 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			SysUtil.abort();
 		}
 	}
+    
+    @Override
+    public void actionIsShowStdItemspEntry_actionPerformed(ActionEvent e)
+    		throws Exception {
+    	if (menuItemIsShowStdItemspEntry.isSelected()) {
+    		kDTRWOPane.insertTab(resHelper.getString("kDPRwoItem.constraints"), null, kDPRwoItem, resHelper.getString("kDPRwoItem.constraints"), 1);
+    		kDTRWOPane.insertTab(resHelper.getString("kDPRwoSp.constraints"), null, kDPRwoSp, resHelper.getString("kDPRwoSp.constraints"), 2);
+    	} else {
+    		kDTRWOPane.remove(kDPRwoItem);
+    		kDTRWOPane.remove(kDPRwoSp);
+    	}
+    }
 
 }

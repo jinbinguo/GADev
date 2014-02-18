@@ -23,7 +23,8 @@ public class WipBillHeadParse extends BaseExcelParse {
 			{"mileage","进厂里程","decimal"},
 			{"plateNum","牌照号","string"},
 			{"wip","WIP号","string"},
-			{"accountCode","账户代码","string"}	
+			{"accountCode","账户代码","string"},
+			{"deptNum","部门","string"}
 	};
 	private String keyTitleName = "WIP号";
 	

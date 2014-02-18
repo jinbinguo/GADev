@@ -254,6 +254,61 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
     {
         setBoolean("isCreateTo", item);
     }
+    /**
+     * Object:项目配件明细's 销售类型property 
+     */
+    public String getSaleType()
+    {
+        return getString("saleType");
+    }
+    public void setSaleType(String item)
+    {
+        setString("saleType", item);
+    }
+    /**
+     * Object:项目配件明细's RTS代码property 
+     */
+    public String getRts()
+    {
+        return getString("rts");
+    }
+    public void setRts(String item)
+    {
+        setString("rts", item);
+    }
+    /**
+     * Object:项目配件明细's 账单编号property 
+     */
+    public String getBillNum()
+    {
+        return getString("billNum");
+    }
+    public void setBillNum(String item)
+    {
+        setString("billNum", item);
+    }
+    /**
+     * Object:项目配件明细's 过账日期property 
+     */
+    public java.util.Date getPostingDate()
+    {
+        return getDate("postingDate");
+    }
+    public void setPostingDate(java.util.Date item)
+    {
+        setDate("postingDate", item);
+    }
+    /**
+     * Object:项目配件明细's 应付结算property 
+     */
+    public boolean isIsAPSettle()
+    {
+        return getBoolean("isAPSettle");
+    }
+    public void setIsAPSettle(boolean item)
+    {
+        setBoolean("isAPSettle", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("FF1F0E1A");

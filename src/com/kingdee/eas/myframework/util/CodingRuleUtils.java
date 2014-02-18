@@ -152,8 +152,7 @@ public class CodingRuleUtils implements Serializable {
 			}
 
 		}
-		CodingRuleInfo codingRuleInfo = iCodingRuleManager.getCodingRule(
-				coreBaseInfo, orgId);
+		CodingRuleInfo codingRuleInfo = iCodingRuleManager.getCodingRule(coreBaseInfo, orgId);
 		return codingRuleInfo;
 	}
 

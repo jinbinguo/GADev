@@ -96,6 +96,17 @@ public class AbstractCustomerAccountInfo extends com.kingdee.eas.myframework.tem
         setInt("settlementType", item.getValue());
 		}
     }
+    /**
+     * Object: 客户账户 's 对应行业客户 property 
+     */
+    public com.kingdee.eas.auto4s.bdm.pbd.CustomerInfo getAtsCustomer()
+    {
+        return (com.kingdee.eas.auto4s.bdm.pbd.CustomerInfo)get("atsCustomer");
+    }
+    public void setAtsCustomer(com.kingdee.eas.auto4s.bdm.pbd.CustomerInfo item)
+    {
+        put("atsCustomer", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("8B9E1F44");
