@@ -1,0 +1,1410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataTable xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.auto4s.arp.aar.app</package>
+    <name>T_ATS_ReceivingBill</name>
+    <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].alias</alias>
+    <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].description</description>
+    <userDefined>false</userDefined>
+    <bizUnitPK>com.kingdee.eas.auto4s.arp.aar.ReceivingBill</bizUnitPK>
+    <columns>
+        <column>
+            <name>FCreatorID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FCreatorID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FCreatorID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FCreateTime</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FCreateTime].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FCreateTime].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>8</precision>
+        </column>
+        <column>
+            <name>FLastUpdateUserID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FLastUpdateUserID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FLastUpdateUserID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FLastUpdateTime</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FLastUpdateTime].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FLastUpdateTime].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>8</precision>
+        </column>
+        <column>
+            <name>FControlUnitID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FControlUnitID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FControlUnitID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FNumber</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FNumber].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FNumber].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>80</precision>
+        </column>
+        <column>
+            <name>FBizDate</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FBizDate].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FBizDate].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>8</precision>
+        </column>
+        <column>
+            <name>FHandlerID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FHandlerID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FHandlerID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FDescription</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FDescription].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FDescription].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>80</precision>
+        </column>
+        <column>
+            <name>FHasEffected</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FHasEffected].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FHasEffected].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>4</precision>
+        </column>
+        <column>
+            <name>FAuditorID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FAuditorID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FAuditorID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FSourceBillID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FSourceBillID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FSourceBillID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>80</precision>
+        </column>
+        <column>
+            <name>FSourceFunction</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FSourceFunction].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FSourceFunction].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>80</precision>
+        </column>
+        <column>
+            <name>FID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>false</isNullable>
+            <defaultValue>''</defaultValue>
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>44</precision>
+        </column>
+        <column>
+            <name>FFivouchered</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FFivouchered].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FFivouchered].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>1</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FDate</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FDate].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FDate].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FStatus</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FStatus].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FStatus].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FPersonID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FPersonID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FPersonID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FCurrencyID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FCurrencyID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FCurrencyID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FExchangeRate</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FExchangeRate].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FExchangeRate].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NUMERIC</sqlType>
+            <length>13</length>
+            <scale>10</scale>
+            <precision>13</precision>
+        </column>
+        <column>
+            <name>FOrgUnitID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FOrgUnitID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FOrgUnitID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FBrandID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FBrandID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FBrandID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FRemark</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FRemark].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FRemark].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>255</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FAuditTime</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FAuditTime].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FAuditTime].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FReceiveObjectID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FReceiveObjectID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FReceiveObjectID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue>''</defaultValue>
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FReceiveObjectType</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FReceiveObjectType].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FReceiveObjectType].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FReceiveObjectNumber</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FReceiveObjectNumber].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FReceiveObjectNumber].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>160</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FReceiveObjectName</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FReceiveObjectName].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FReceiveObjectName].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>160</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FActualPayer</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FActualPayer].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FActualPayer].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>40</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FBizTypeID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FBizTypeID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FBizTypeID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FIsAccount</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FIsAccount].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FIsAccount].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>1</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FVoucherID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FVoucherID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FVoucherID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FReceivingAmt</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FReceivingAmt].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FReceivingAmt].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NUMERIC</sqlType>
+            <length>28</length>
+            <scale>10</scale>
+            <precision>28</precision>
+        </column>
+        <column>
+            <name>FSavingCardAmt</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FSavingCardAmt].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FSavingCardAmt].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NUMERIC</sqlType>
+            <length>28</length>
+            <scale>10</scale>
+            <precision>28</precision>
+        </column>
+        <column>
+            <name>FCashCouponAmt</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FCashCouponAmt].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FCashCouponAmt].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NUMERIC</sqlType>
+            <length>28</length>
+            <scale>10</scale>
+            <precision>28</precision>
+        </column>
+        <column>
+            <name>FPointToCashAmt</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FPointToCashAmt].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FPointToCashAmt].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NUMERIC</sqlType>
+            <length>28</length>
+            <scale>10</scale>
+            <precision>28</precision>
+        </column>
+        <column>
+            <name>FIsSendSms</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FIsSendSms].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FIsSendSms].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>1</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FCardID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FCardID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FCardID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FReadSN</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FReadSN].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FReadSN].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FPaymentTypeID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FPaymentTypeID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FPaymentTypeID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FWOPRAmount</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FWOPRAmount].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FWOPRAmount].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NUMERIC</sqlType>
+            <length>28</length>
+            <scale>10</scale>
+            <precision>28</precision>
+        </column>
+        <column>
+            <name>FDepartmentID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FDepartmentID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FDepartmentID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFSrcEntryIds</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[CFSrcEntryIds].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[CFSrcEntryIds].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>2000</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+    </columns>
+    <primaryKey>
+        <name>PK_ATS_RsvngBID</name>
+        <userDefined>false</userDefined>
+        <primaryKeyColumns>
+            <primaryKeyColumn>
+                <indexID>0</indexID>
+                <sortType>ASC</sortType>
+                <column>
+                    <key name="name" value="FID" />
+                </column>
+            </primaryKeyColumn>
+        </primaryKeyColumns>
+    </primaryKey>
+    <foreignKeys>
+        <foreignKey>
+            <name>FK_ATS_RsvngBCrtv6</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="T_PM_User" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FCreatorID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_RsvngBLUUv6</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="T_PM_User" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FLastUpdateUserID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_RsvngBCnUv6</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.org" />
+                <key name="name" value="T_ORG_OUPartCtrl" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FUnitID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FControlUnitID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_RsvngBHndv6</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="T_PM_User" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FHandlerID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_RsvngBAdtv6</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="T_PM_User" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FAuditorID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_Receivingp8</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.person" />
+                <key name="name" value="T_BD_Person" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FPersonID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_RsvngBUrnud</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.assistant" />
+                <key name="name" value="T_BD_Currency" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FCurrencyID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_RsvngBRgUpn</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.org" />
+                <key name="name" value="T_ORG_Company" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FOrgUnitID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_Receivingea</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="T_ATS_Brand" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FBrandID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_RsvngBIzThg</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.fm.fs.app" />
+                <key name="name" value="T_FS_SettBizType" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FBizTypeID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_Receiving8o</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.auto4s.vip.mb.app" />
+                <key name="name" value="T_ATS_Card" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FCardID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_RsvngBAmn7b</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.assistant" />
+                <key name="name" value="T_BD_PaymentType" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FPaymentTypeID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>FK_ATS_RsvngBEpr8m</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.org" />
+                <key name="name" value="T_ORG_Admin" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FDepartmentID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+    </foreignKeys>
+    <resource>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="前台收款单" />
+            <lang locale="zh_HK" value="前台收款單" />
+            <lang locale="zh_TW" value="前台收款單" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[CFSrcEntryIds].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="源单分录Ids" />
+            <lang locale="zh_HK" value="源單分錄Ids" />
+            <lang locale="zh_TW" value="源單分錄Ids" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[CFSrcEntryIds].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="源单分录Ids" />
+            <lang locale="zh_HK" value="源單分錄Ids" />
+            <lang locale="zh_TW" value="源單分錄Ids" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FActualPayer].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="实际缴款人" />
+            <lang locale="zh_HK" value="實際繳款人" />
+            <lang locale="zh_TW" value="實際繳款人" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FActualPayer].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="实际缴款人" />
+            <lang locale="zh_HK" value="實際繳款人" />
+            <lang locale="zh_TW" value="實際繳款人" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FAuditTime].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审核时间" />
+            <lang locale="zh_HK" value="審核時間" />
+            <lang locale="zh_TW" value="審核時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FAuditTime].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审核时间" />
+            <lang locale="zh_HK" value="審核時間" />
+            <lang locale="zh_TW" value="審核時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FAuditorID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审核人" />
+            <lang locale="zh_HK" value="審核人" />
+            <lang locale="zh_TW" value="審核人" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FAuditorID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审核人" />
+            <lang locale="zh_HK" value="審核人" />
+            <lang locale="zh_TW" value="審核人" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FBizDate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务日期" />
+            <lang locale="zh_HK" value="業務日期" />
+            <lang locale="zh_TW" value="業務日期" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FBizDate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务日期" />
+            <lang locale="zh_HK" value="業務日期" />
+            <lang locale="zh_TW" value="業務日期" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FBizTypeID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务种类" />
+            <lang locale="zh_HK" value="業務種類" />
+            <lang locale="zh_TW" value="業務種類" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FBizTypeID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务种类" />
+            <lang locale="zh_HK" value="業務種類" />
+            <lang locale="zh_TW" value="業務種類" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FBrandID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="品牌" />
+            <lang locale="zh_HK" value="品牌" />
+            <lang locale="zh_TW" value="品牌" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FBrandID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="品牌" />
+            <lang locale="zh_HK" value="品牌" />
+            <lang locale="zh_TW" value="品牌" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FCardID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="会员卡" />
+            <lang locale="zh_HK" value="會員卡" />
+            <lang locale="zh_TW" value="會員卡" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FCardID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="会员卡" />
+            <lang locale="zh_HK" value="會員卡" />
+            <lang locale="zh_TW" value="會員卡" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FCashCouponAmt].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="代金券金额" />
+            <lang locale="zh_HK" value="代金券金額" />
+            <lang locale="zh_TW" value="代金券金額" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FCashCouponAmt].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="代金券金额" />
+            <lang locale="zh_HK" value="代金券金額" />
+            <lang locale="zh_TW" value="代金券金額" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FControlUnitID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="控制单元" />
+            <lang locale="zh_HK" value="控制單元" />
+            <lang locale="zh_TW" value="控制單元" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FControlUnitID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="控制单元" />
+            <lang locale="zh_HK" value="控制單元" />
+            <lang locale="zh_TW" value="控制單元" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FCreateTime].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建时间" />
+            <lang locale="zh_HK" value="創建時間" />
+            <lang locale="zh_TW" value="創建時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FCreateTime].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建时间" />
+            <lang locale="zh_HK" value="創建時間" />
+            <lang locale="zh_TW" value="創建時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FCreatorID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建者" />
+            <lang locale="zh_HK" value="創建者" />
+            <lang locale="zh_TW" value="創建者" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FCreatorID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建者" />
+            <lang locale="zh_HK" value="創建者" />
+            <lang locale="zh_TW" value="創建者" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FCurrencyID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="币别" />
+            <lang locale="zh_HK" value="幣別" />
+            <lang locale="zh_TW" value="幣別" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FCurrencyID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="币别" />
+            <lang locale="zh_HK" value="幣別" />
+            <lang locale="zh_TW" value="幣別" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FDate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款日期" />
+            <lang locale="zh_HK" value="收款日期" />
+            <lang locale="zh_TW" value="收款日期" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FDate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款日期" />
+            <lang locale="zh_HK" value="收款日期" />
+            <lang locale="zh_TW" value="收款日期" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FDepartmentID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="部门" />
+            <lang locale="zh_HK" value="部門" />
+            <lang locale="zh_TW" value="部門" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FDepartmentID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="部门" />
+            <lang locale="zh_HK" value="部門" />
+            <lang locale="zh_TW" value="部門" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FDescription].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="参考信息" />
+            <lang locale="zh_HK" value="參考信息" />
+            <lang locale="zh_TW" value="參考信息" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FDescription].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="参考信息" />
+            <lang locale="zh_HK" value="參考信息" />
+            <lang locale="zh_TW" value="參考信息" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FExchangeRate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="汇率" />
+            <lang locale="zh_HK" value="匯率" />
+            <lang locale="zh_TW" value="匯率" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FExchangeRate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="汇率" />
+            <lang locale="zh_HK" value="匯率" />
+            <lang locale="zh_TW" value="匯率" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FFivouchered].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否生成凭证" />
+            <lang locale="zh_HK" value="是否生成憑證" />
+            <lang locale="zh_TW" value="是否生成憑證" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FFivouchered].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否生成凭证" />
+            <lang locale="zh_HK" value="是否生成憑證" />
+            <lang locale="zh_TW" value="是否生成憑證" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FHandlerID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="经手人" />
+            <lang locale="zh_HK" value="經手人" />
+            <lang locale="zh_TW" value="經手人" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FHandlerID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="经手人" />
+            <lang locale="zh_HK" value="經手人" />
+            <lang locale="zh_TW" value="經手人" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FHasEffected].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否曾经生效" />
+            <lang locale="zh_HK" value="是否曾經生效" />
+            <lang locale="zh_TW" value="是否曾經生效" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FHasEffected].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否曾经生效" />
+            <lang locale="zh_HK" value="是否曾經生效" />
+            <lang locale="zh_TW" value="是否曾經生效" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FIsAccount].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="记账标识" />
+            <lang locale="zh_HK" value="記賬標識" />
+            <lang locale="zh_TW" value="記賬標識" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FIsAccount].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="记账标识" />
+            <lang locale="zh_HK" value="記賬標識" />
+            <lang locale="zh_TW" value="記賬標識" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FIsSendSms].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否发送短信" />
+            <lang locale="zh_HK" value="是否發送短信" />
+            <lang locale="zh_TW" value="是否發送短信" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FIsSendSms].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否发送短信" />
+            <lang locale="zh_HK" value="是否發送短信" />
+            <lang locale="zh_TW" value="是否發送短信" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FLastUpdateTime].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改时间" />
+            <lang locale="zh_HK" value="最後修改時間" />
+            <lang locale="zh_TW" value="最後修改時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FLastUpdateTime].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改时间" />
+            <lang locale="zh_HK" value="最後修改時間" />
+            <lang locale="zh_TW" value="最後修改時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FLastUpdateUserID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改者" />
+            <lang locale="zh_HK" value="最後修改者" />
+            <lang locale="zh_TW" value="最後修改者" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FLastUpdateUserID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改者" />
+            <lang locale="zh_HK" value="最後修改者" />
+            <lang locale="zh_TW" value="最後修改者" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FNumber].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据编号" />
+            <lang locale="zh_HK" value="單據編號" />
+            <lang locale="zh_TW" value="單據編號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FNumber].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据编号" />
+            <lang locale="zh_HK" value="單據編號" />
+            <lang locale="zh_TW" value="單據編號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FOrgUnitID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FOrgUnitID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FPaymentTypeID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="付款方式" />
+            <lang locale="zh_HK" value="付款方式" />
+            <lang locale="zh_TW" value="付款方式" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FPaymentTypeID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="付款方式" />
+            <lang locale="zh_HK" value="付款方式" />
+            <lang locale="zh_TW" value="付款方式" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FPersonID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款人" />
+            <lang locale="zh_HK" value="收款人" />
+            <lang locale="zh_TW" value="收款人" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FPersonID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款人" />
+            <lang locale="zh_HK" value="收款人" />
+            <lang locale="zh_TW" value="收款人" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FPointToCashAmt].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="积分抵现金额" />
+            <lang locale="zh_HK" value="積分抵現金額" />
+            <lang locale="zh_TW" value="積分抵現金額" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FPointToCashAmt].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="积分抵现金额" />
+            <lang locale="zh_HK" value="積分抵現金額" />
+            <lang locale="zh_TW" value="積分抵現金額" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FReadSN].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="读会员卡号" />
+            <lang locale="zh_HK" value="讀會員卡號" />
+            <lang locale="zh_TW" value="讀會員卡號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FReadSN].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="读会员卡号" />
+            <lang locale="zh_HK" value="讀會員卡號" />
+            <lang locale="zh_TW" value="讀會員卡號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FReceiveObjectID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款对象" />
+            <lang locale="zh_HK" value="收款對象" />
+            <lang locale="zh_TW" value="收款對象" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FReceiveObjectID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FReceiveObjectName].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款对象名称" />
+            <lang locale="zh_HK" value="收款對象名稱" />
+            <lang locale="zh_TW" value="收款對象名稱" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FReceiveObjectName].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款对象名称" />
+            <lang locale="zh_HK" value="收款對象名稱" />
+            <lang locale="zh_TW" value="收款對象名稱" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FReceiveObjectNumber].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款对象编码" />
+            <lang locale="zh_HK" value="收款對象編碼" />
+            <lang locale="zh_TW" value="收款對象編碼" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FReceiveObjectNumber].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款对象编码" />
+            <lang locale="zh_HK" value="收款對象編碼" />
+            <lang locale="zh_TW" value="收款對象編碼" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FReceiveObjectType].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款对象类型" />
+            <lang locale="zh_HK" value="收款對象類型" />
+            <lang locale="zh_TW" value="收款對象類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FReceiveObjectType].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款对象类型" />
+            <lang locale="zh_HK" value="收款對象類型" />
+            <lang locale="zh_TW" value="收款對象類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FReceivingAmt].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款合计" />
+            <lang locale="zh_HK" value="收款合計" />
+            <lang locale="zh_TW" value="收款合計" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FReceivingAmt].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款合计" />
+            <lang locale="zh_HK" value="收款合計" />
+            <lang locale="zh_TW" value="收款合計" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FRemark].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款备注" />
+            <lang locale="zh_HK" value="收款備註" />
+            <lang locale="zh_TW" value="收款備註" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FRemark].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款备注" />
+            <lang locale="zh_HK" value="收款備註" />
+            <lang locale="zh_TW" value="收款備註" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FSavingCardAmt].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="储值卡金额" />
+            <lang locale="zh_HK" value="儲值卡金額" />
+            <lang locale="zh_TW" value="儲值卡金額" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FSavingCardAmt].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="储值卡金额" />
+            <lang locale="zh_HK" value="儲值卡金額" />
+            <lang locale="zh_TW" value="儲值卡金額" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FSourceBillID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="原始单据ID" />
+            <lang locale="zh_HK" value="原始單據ID" />
+            <lang locale="zh_TW" value="原始單據ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FSourceBillID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="原始单据ID" />
+            <lang locale="zh_HK" value="原始單據ID" />
+            <lang locale="zh_TW" value="原始單據ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FSourceFunction].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="来源功能" />
+            <lang locale="zh_HK" value="來源功能" />
+            <lang locale="zh_TW" value="來源功能" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FSourceFunction].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="来源功能" />
+            <lang locale="zh_HK" value="來源功能" />
+            <lang locale="zh_TW" value="來源功能" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FStatus].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="状态" />
+            <lang locale="zh_HK" value="狀態" />
+            <lang locale="zh_TW" value="狀態" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FStatus].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="状态" />
+            <lang locale="zh_HK" value="狀態" />
+            <lang locale="zh_TW" value="狀態" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FVoucherID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="凭证号" />
+            <lang locale="zh_HK" value="憑證號" />
+            <lang locale="zh_TW" value="憑證號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FVoucherID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="凭证号" />
+            <lang locale="zh_HK" value="憑證號" />
+            <lang locale="zh_TW" value="憑證號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FWOPRAmount].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="冲预收金额" />
+            <lang locale="zh_HK" value="沖預收金額" />
+            <lang locale="zh_TW" value="沖預收金額" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].columns.column[FWOPRAmount].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="冲预收金额" />
+            <lang locale="zh_HK" value="沖預收金額" />
+            <lang locale="zh_TW" value="沖預收金額" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款单" />
+            <lang locale="zh_HK" value="收款單" />
+            <lang locale="zh_TW" value="收款單" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.arp.aar.app.T_ATS_ReceivingBill].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</dataTable>
+

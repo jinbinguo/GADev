@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entityObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.auto4s.arp.aar.app</package>
+    <name>ReceivingBill</name>
+    <alias>entityObject[com.kingdee.eas.auto4s.arp.aar.app.ReceivingBill].alias</alias>
+    <properties>
+        <ownProperty>
+            <name>srcEntryIds</name>
+            <alias>entityObject[com.kingdee.eas.auto4s.arp.aar.app.ReceivingBill].properties.ownProperty[srcEntryIds].alias</alias>
+            <description>entityObject[com.kingdee.eas.auto4s.arp.aar.app.ReceivingBill].properties.ownProperty[srcEntryIds].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>2000</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.auto4s.arp.aar.app.ReceivingBill].properties.ownProperty[srcEntryIds].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFSrcEntryIds" />
+            </mappingField>
+        </ownProperty>
+    </properties>
+    <resource>
+        <rs key="entityObject[com.kingdee.eas.auto4s.arp.aar.app.ReceivingBill].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.arp.aar.app.ReceivingBill].extendedProperty.controllerBeanEx">
+            <lang locale="en_US" value="com.kingdee.eas.auto4s.arp.aar.app.ReceivingBillControllerBeanEx" />
+            <lang locale="zh_CN" value="com.kingdee.eas.auto4s.arp.aar.app.ReceivingBillControllerBeanEx" />
+            <lang locale="zh_TW" value="com.kingdee.eas.auto4s.arp.aar.app.ReceivingBillControllerBeanEx" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.arp.aar.app.ReceivingBill].properties.ownProperty[srcEntryIds].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="源单分录Ids" />
+            <lang locale="zh_HK" value="源單分錄Ids" />
+            <lang locale="zh_TW" value="源單分錄Ids" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.arp.aar.app.ReceivingBill].properties.ownProperty[srcEntryIds].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.arp.aar.app.ReceivingBill].properties.ownProperty[srcEntryIds].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="源单分录Ids" />
+            <lang locale="zh_HK" value="源單分錄Ids" />
+            <lang locale="zh_TW" value="源單分錄Ids" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.arp.aar.app.ReceivingBill].properties.ownProperty[srcEntryIds].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.arp.aar.app.ReceivingBill].properties.ownProperty[srcEntryIds].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.arp.aar.app.ReceivingBill].properties.ownProperty[srcEntryIds].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.arp.aar.app.ReceivingBill].properties.ownProperty[srcEntryIds].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.arp.aar.app.ReceivingBill].properties.ownProperty[srcEntryIds].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.arp.aar.app.ReceivingBill].properties.ownProperty[srcEntryIds].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.arp.aar.app.ReceivingBill].properties.ownProperty[srcEntryIds].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.arp.aar.app.ReceivingBill].properties.ownProperty[srcEntryIds].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.arp.aar.app.ReceivingBill].properties.ownProperty[srcEntryIds].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</entityObject>
+

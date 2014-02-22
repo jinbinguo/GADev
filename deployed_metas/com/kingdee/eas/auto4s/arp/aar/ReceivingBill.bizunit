@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizUnit xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.auto4s.arp.aar</package>
+    <name>ReceivingBill</name>
+    <alias>bizUnit[com.kingdee.eas.auto4s.arp.aar.ReceivingBill].alias</alias>
+    <description>bizUnit[com.kingdee.eas.auto4s.arp.aar.ReceivingBill].description</description>
+    <userDefined>false</userDefined>
+    <bizType>BusinessBill</bizType>
+    <template>false</template>
+    <entityPK>com.kingdee.eas.auto4s.arp.aar.app.ReceivingBill</entityPK>
+    <queryPK>com.kingdee.eas.auto4s.arp.aar.app.ReceivingBillQuery</queryPK>
+    <editUIPK>com.kingdee.eas.auto4s.arp.aar.client.ReceivingBillEditUI</editUIPK>
+    <listUIPK>com.kingdee.eas.auto4s.arp.aar.client.ReceivingBillListUI</listUIPK>
+    <webEditUIPK />
+    <webListUIPK />
+    <entityFunctionPK />
+    <editUIFunctionPK>com.kingdee.eas.auto4s.arp.aar.app.ReceivingBillEditUIFunction</editUIFunctionPK>
+    <listUIFunctionPK>com.kingdee.eas.auto4s.arp.aar.app.ReceivingBillListUIFunction</listUIFunctionPK>
+    <entryUIPK />
+    <versionDate />
+    <versionNumber />
+    <extendTablePKs />
+    <extendEntityPKs />
+    <extendQueryPKs />
+    <extendEditUIPKs />
+    <extendListUIPKs />
+    <menuPKList />
+    <bimTemplateType>MCoreBillBase</bimTemplateType>
+    <relatedTablePK />
+    <relatedEntityPK />
+    <relatedEditUIPK />
+    <genImplementCode>false</genImplementCode>
+    <webEditPagePK />
+    <webListPagePK />
+    <webPagePKS />
+    <webViewPagePK />
+    <webBriefPagePK />
+    <relatedWebEditPagePK />
+    <relatedQueryPK />
+    <resource>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.arp.aar.ReceivingBill].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="前台收款单" />
+            <lang locale="zh_HK" value="前台收款單" />
+            <lang locale="zh_TW" value="前台收款單" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.arp.aar.ReceivingBill].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款单" />
+            <lang locale="zh_HK" value="收款單" />
+            <lang locale="zh_TW" value="收款單" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.arp.aar.ReceivingBill].extendedProperty.BizStatusFieldName">
+            <lang locale="en_US" value="Status" />
+            <lang locale="zh_CN" value="Status" />
+            <lang locale="zh_TW" value="Status" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.arp.aar.ReceivingBill].extendedProperty.MainOrgFieldName">
+            <lang locale="en_US" value="OrgUnit" />
+            <lang locale="zh_CN" value="OrgUnit" />
+            <lang locale="zh_TW" value="OrgUnit" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.arp.aar.ReceivingBill].extendedProperty.OrgType">
+            <lang locale="en_US" value="Company" />
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.arp.aar.ReceivingBill].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.arp.aar.ReceivingBill].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.arp.aar.ReceivingBill].extendedProperty.configured">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.arp.aar.ReceivingBill].extendedProperty.controllerBeanEx">
+            <lang locale="en_US" value="com.kingdee.eas.auto4s.arp.aar.app.ReceivingBillControllerBeanEx" />
+            <lang locale="zh_CN" value="com.kingdee.eas.auto4s.arp.aar.app.ReceivingBillControllerBeanEx" />
+            <lang locale="zh_TW" value="com.kingdee.eas.auto4s.arp.aar.app.ReceivingBillControllerBeanEx" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.arp.aar.ReceivingBill].extendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.arp.aar.ReceivingBill].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.auto4s.arp.aar.app.ReceivingBillQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.auto4s.arp.aar.app.ReceivingBillQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.auto4s.arp.aar.app.ReceivingBillQuery" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.arp.aar.ReceivingBill].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.auto4s.arp.aar.client.ReceivingBillEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.auto4s.arp.aar.client.ReceivingBillEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.auto4s.arp.aar.client.ReceivingBillEditUI" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.arp.aar.ReceivingBill].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.arp.aar.ReceivingBill].extendedProperty.genBusinessImplCode">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.arp.aar.ReceivingBill].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.arp.aar.ReceivingBill].extendedProperty.isDelRelationsWithoutEntries">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.arp.aar.ReceivingBill].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.arp.aar.ReceivingBill].extendedProperty.isUseCodeRule">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.arp.aar.ReceivingBill].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.auto4s.arp.aar.client.ReceivingBillListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.auto4s.arp.aar.client.ReceivingBillListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.auto4s.arp.aar.client.ReceivingBillListUI" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.arp.aar.ReceivingBill].extendedProperty.maxFieldIndex">
+            <lang locale="en_US" value="158" />
+            <lang locale="zh_CN" value="158" />
+            <lang locale="zh_TW" value="158" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.arp.aar.ReceivingBill].extendedProperty.useTableEditUI">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</bizUnit>
+

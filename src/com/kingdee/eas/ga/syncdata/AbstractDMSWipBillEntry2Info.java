@@ -204,6 +204,17 @@ public class AbstractDMSWipBillEntry2Info extends com.kingdee.eas.framework.Core
     {
         setString("saleType", item);
     }
+    /**
+     * Object:零件行's 成本价格property 
+     */
+    public java.math.BigDecimal getCostPrice()
+    {
+        return getBigDecimal("costPrice");
+    }
+    public void setCostPrice(java.math.BigDecimal item)
+    {
+        setBigDecimal("costPrice", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("305D8182");

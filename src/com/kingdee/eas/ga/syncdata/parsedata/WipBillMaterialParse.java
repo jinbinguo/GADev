@@ -30,7 +30,8 @@ public class WipBillMaterialParse extends BaseExcelParse {
 			{"orderQty","定货数量","int"},
 			{"salePrice","销售价格","decimal"},
 			{"taxBillCode","增值税代码","string"},
-			{"saleType","销售类型","string"}
+			{"saleType","销售类型","string"},
+			{"costPrice","成本价格","decimal"}
 			
 			
 	};

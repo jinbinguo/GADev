@@ -360,10 +360,11 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
         		.append("from T_ATS_Vehicle a ")
         		.append("left join T_ATS_Brand b on a.FBrandID=b.FID ")
         		.append("left join T_ATS_Customer c on c.Fid=a.FCustomerID ");
-        		if (vin.length() == 17)
+        		int vinLength = vin.length();
+        		if (vinLength == 17)
         			sqlBuf1.append("where a.FVIN='").append(vin).append("'");
         		else
-        			sqlBuf1.append("where right(a.FVIN,7)='").append(vin).append("'");
+        			sqlBuf1.append("where right(a.FVIN,7)='").append(vin.substring(vinLength-7)).append("'");
         		
     		//	sql = String.format("select FID,FOrderCustomerID,FOwnerName,FPhone,FBrandID " +
     		//			"from T_ATS_Vehicle where FVIN='%s'", vin);
@@ -505,6 +506,7 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     	HashMap<String,HashMap<Integer,RepairWORWOItemSpEntryInfo>> hashSp  = new HashMap<String, HashMap<Integer,RepairWORWOItemSpEntryInfo>>();
     	for (int i = 0; i < wipMaterialCol.size(); i++) {
     		DMSWipBillEntry2Info wipMaterialInfo = wipMaterialCol.get(i);
+    		
     		String accountCode = wipMaterialInfo.getAccountCode();
     		if (isIgnoreWipForStocktaking(accountCode)) continue;
     		int seq = wipMaterialInfo.getSeq();
@@ -687,9 +689,11 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		//实收金额=含税金额-优惠金额
     		sparepartEntryInfo.setActualAmount(saleTaxAmount.subtract(discountAmount));
     		
-    		//TODO 是否删除，DMS定货状态="D",则为作废行，这个可能与EAS的是否删除一样，待确认    
+    		 
     		if ("D".equals(wipMaterialInfo.getOrderStatus())) {
     			sparepartEntryInfo.setIsDelete(true);
+    		} else {
+    			sparepartEntryInfo.setIsDelete(false);
     		}
     		//付费类别
     		sparepartEntryInfo.setPaymentClassify(defaultPaymentclassify);
@@ -776,6 +780,13 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		itemspInfo.setSaleType(wipMaterialInfo.getSaleType());
     		itemspInfo.setBillNum(wipMaterialInfo.getBillNum());
     		itemspInfo.setRts(materialInfo.getNumber());
+    		itemspInfo.setCostAmount(wipMaterialInfo.getCostPrice());
+    		itemspInfo.setAccount(wipMaterialInfo.getAccountCode());
+    		if ("D".equals(wipMaterialInfo.getOrderStatus())) {
+    			itemspInfo.setIsDelete(true);
+    		} else {
+    			itemspInfo.setIsDelete(false);
+    		}
     		
     	}
     	
@@ -1026,7 +1037,7 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		BigDecimal discountRate = wipManHourInfo.getDiscountRate();
     		repairItemEntryInfo.setDiscountRate(discountRate);
     		//折扣金额
-    		BigDecimal discountAmount = workTimeAmount.multiply(discountRate).setScale(2, BigDecimal.ROUND_DOWN);;
+    		BigDecimal discountAmount = workTimeAmount.multiply(discountRate.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP)).setScale(2, BigDecimal.ROUND_DOWN);;
     		//应收金额=工时金额-折扣金额
     		repairItemEntryInfo.setARAmount(workTimeAmount.subtract(discountAmount));
     		//TODO 维修项目状态
@@ -1049,6 +1060,12 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		repairItemEntryInfo.setWorkTimeStdPrice(workTimePrice);
     		
     		repairItemEntryInfo.setItemSpEntryId(itemSpId.toString());
+    		
+    		if ("D".equals(wipManHourInfo.getDispatchStatus())) {
+    			repairItemEntryInfo.setIsDelete(true);
+    		} else {
+    			repairItemEntryInfo.setIsDelete(false);
+    		}
     		
     		//-------------------------项目/配件分录值设置------------------------
     		itemspInfo.setId(itemSpId);
@@ -1081,6 +1098,13 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		itemspInfo.setPostingDate(wipManHourInfo.getPostingDate());
     		itemspInfo.setRts(wipManHourInfo.getRts());
     		itemspInfo.setBillNum(wipManHourInfo.getBillNum());
+    		itemspInfo.setCostAmount(BigDecimal.ZERO);
+    		itemspInfo.setAccount(wipManHourInfo.getAccountCode());
+    		if ("D".equals(wipManHourInfo.getDispatchStatus())) {
+    			itemspInfo.setIsDelete(true);
+    		} else {
+    			itemspInfo.setIsDelete(false);
+    		}
     		
     	}
     	
@@ -1151,7 +1175,7 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     			BigDecimal notTaxAmount = 
     				repairItemEntryInfo.getARAmount().divide(BigDecimal.ONE.add(taxRate.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP)),10,BigDecimal.ROUND_HALF_UP);
     			totalAmountBySettObj.repairItemNotTaxAmout = totalAmountBySettObj.repairItemNotTaxAmout.add(notTaxAmount);
-    			totalAmountBySettObj.repairItemTax = totalAmountBySettObj.repairItemTax.add(taxRate.multiply(notTaxAmount));
+    			totalAmountBySettObj.repairItemTax = totalAmountBySettObj.repairItemTax.add(taxRate.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP).multiply(notTaxAmount));
     		}
 
     		RepairWORWOTotalAmountEntryCollection totalAmountEntryCol = new RepairWORWOTotalAmountEntryCollection(); //累计金额

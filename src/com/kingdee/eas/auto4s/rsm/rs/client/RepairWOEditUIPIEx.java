@@ -846,17 +846,26 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			BigDecimal issueQty = PublicUtils.getBigDecimal(row.getCell("issueQty").getValue());
 			boolean isAPSettle = (Boolean)row.getCell("isAPSettle").getValue();
 			IEnum iType = (IEnum) row.getCell("i").getValue();
+			BigDecimal amount = PublicUtils.getBigDecimal(row.getCell("amount").getValue());
+			
+
+			if (PublicUtils.equals(IEnum.X, iType)
+					&& amount.compareTo(BIGDEC0) != 0) {	
+				row.getStyleAttributes().setLocked(true);
+			}
 			if (issueQty.compareTo(BIGDEC0) != 0) { //已有出库
 				row.getStyleAttributes().setLocked(true);
-				row.getCell("w").getStyleAttributes().setLocked(false);
-			} 
-			if (isAPSettle) {
-				row.getStyleAttributes().setLocked(true);
-			}
+				if (!PublicUtils.equals(IEnum.X, iType))
+					row.getCell("w").getStyleAttributes().setLocked(false);
+			}  
 			
-			if (PublicUtils.equals(IEnum.X, iType) && !PublicUtils.equals(getOprtState(), OprtState.ADDNEW)) {
+			if (isAPSettle) { //应付结算
 				row.getStyleAttributes().setLocked(true);
-			}
+				if (!PublicUtils.equals(IEnum.X, iType))
+					row.getCell("w").getStyleAttributes().setLocked(false);
+			} 
+			
+
 			row.getCell("taocan").getStyleAttributes().setLocked(false);
 			
 		} catch (Exception e) {
@@ -1354,7 +1363,15 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			public void willShow(SelectorEvent e) {
 				try {
 					repairItemEntryF7ListUI = new RepairItemEntryListUI();
-					repairItemEntryF7ListUI.setExpandFilter(getVehicleFilterInfo());
+					FilterInfo filterInfo = getVehicleFilterInfo();
+					
+					BrandInfo brandInfo = (BrandInfo) prmtBrand.getValue();
+					if (brandInfo != null) {
+						FilterInfo filterBrand = new FilterInfo();
+						filterBrand.getFilterItems().add(new FilterItemInfo("parent.brand.id",brandInfo.getString("id")));
+						filterInfo.mergeFilter(filterBrand, "AND");
+					}
+					repairItemEntryF7ListUI.setExpandFilter(filterInfo);
 					repairItemEntryF7ListUI.setSingleSelect(false);
 					repairItemEntryF7ListUI.setF7Use(true, null);
 					prmtRepairItem.setSelector(repairItemEntryF7ListUI);

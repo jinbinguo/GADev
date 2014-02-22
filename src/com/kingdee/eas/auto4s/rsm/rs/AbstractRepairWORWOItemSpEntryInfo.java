@@ -309,6 +309,39 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
     {
         setBoolean("isAPSettle", item);
     }
+    /**
+     * Object:项目配件明细's 成本价property 
+     */
+    public java.math.BigDecimal getCostAmount()
+    {
+        return getBigDecimal("costAmount");
+    }
+    public void setCostAmount(java.math.BigDecimal item)
+    {
+        setBigDecimal("costAmount", item);
+    }
+    /**
+     * Object:项目配件明细's 账户property 
+     */
+    public String getAccount()
+    {
+        return getString("account");
+    }
+    public void setAccount(String item)
+    {
+        setString("account", item);
+    }
+    /**
+     * Object:项目配件明细's 是否删除property 
+     */
+    public boolean isIsDelete()
+    {
+        return getBoolean("isDelete");
+    }
+    public void setIsDelete(boolean item)
+    {
+        setBoolean("isDelete", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("FF1F0E1A");

@@ -192,7 +192,7 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         this.prmtfinCustomer.setDisplayFormat("$name$");		
         this.prmtfinCustomer.setEditFormat("$number$");		
         this.prmtfinCustomer.setCommitFormat("$number$");		
-        this.prmtfinCustomer.setRequired(true);
+        this.prmtfinCustomer.setRequired(false);
         // txtrepairSaleType		
         this.txtrepairSaleType.setHorizontalAlignment(2);		
         this.txtrepairSaleType.setMaxLength(100);		
@@ -687,9 +687,6 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
 		}
 		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(txttypeCode.getText())) {
 			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"类别代码"});
-		}
-		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(prmtfinCustomer.getData())) {
-			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"对应财务客户"});
 		}
 		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(txtrepairSaleType.getText())) {
 			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"维修销售类型"});
