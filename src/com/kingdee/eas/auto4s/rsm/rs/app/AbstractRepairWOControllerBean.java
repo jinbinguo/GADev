@@ -717,6 +717,46 @@ public abstract class AbstractRepairWOControllerBean extends AutoBillBaseControl
     }
     protected abstract Map _getRWOFromRepairBooking(Context ctx, Map paramMap) throws BOSException, EASBizException;
 
+    public void audit(Context ctx, RepairWOInfo model) throws BOSException
+    {
+        try {
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("e54a3bcf-2175-41a8-bcb5-0bf9bd6db134"), new Object[]{ctx, model});
+            invokeServiceBefore(svcCtx);
+              if(!svcCtx.invokeBreak()) {
+            _audit(ctx, model);
+            }
+            invokeServiceAfter(svcCtx);
+        } catch (BOSException ex) {
+            throw ex;
+        } finally {
+            super.cleanUpServiceState();
+        }
+    }
+    protected void _audit(Context ctx, IObjectValue model) throws BOSException
+    {    	
+        return;
+    }
+
+    public void unAudit(Context ctx, RepairWOInfo model) throws BOSException
+    {
+        try {
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("953887c4-0ff5-44bf-a210-04102b6f4fdc"), new Object[]{ctx, model});
+            invokeServiceBefore(svcCtx);
+              if(!svcCtx.invokeBreak()) {
+            _unAudit(ctx, model);
+            }
+            invokeServiceAfter(svcCtx);
+        } catch (BOSException ex) {
+            throw ex;
+        } finally {
+            super.cleanUpServiceState();
+        }
+    }
+    protected void _unAudit(Context ctx, IObjectValue model) throws BOSException
+    {    	
+        return;
+    }
+
 					protected com.kingdee.eas.basedata.org.OrgUnitInfo getMainBizOrgUnit(Context ctx,com.kingdee.eas.framework.CoreBillBaseInfo model) {
 			Object obj = model.get("OrgUnit");
 			if (obj != null && obj instanceof com.kingdee.eas.basedata.org.OrgUnitInfo)

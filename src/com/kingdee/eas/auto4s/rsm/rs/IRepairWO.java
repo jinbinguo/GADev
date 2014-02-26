@@ -52,4 +52,6 @@ public interface IRepairWO extends IAutoBillBase
     public void unInspect(Map paramMap) throws BOSException, EASBizException;
     public void updateRWOVersion(RepairWOInfo model) throws BOSException, EASBizException;
     public Map getRWOFromRepairBooking(Map paramMap) throws BOSException, EASBizException;
+    public void audit(RepairWOInfo model) throws BOSException;
+    public void unAudit(RepairWOInfo model) throws BOSException;
 }

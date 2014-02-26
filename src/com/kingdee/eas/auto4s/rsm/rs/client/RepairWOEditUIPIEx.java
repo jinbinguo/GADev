@@ -107,6 +107,10 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	private RepairTypeInfo defaultRepairTypeInfo = null;
 	private boolean hasPermission_OprtRetailLine = false; //零售行操作权限 
 	private boolean hasPermission_OprtRepairLine = false; //维修行操作权限
+	private boolean hasPermission_OprtRetailItemspName = false; //操作配件行说明权限
+	private BigDecimal maxRepairDiscountRate = null; //最大项目折扣率
+	private BigDecimal maxRetailDiscountRate = null; //最大零售折扣率
+	
 	private boolean isLoadOprtPermission = false; //是否加载了操作权限
 	
 	public RepairWOEditUIPIEx() throws Exception {
@@ -125,13 +129,14 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		ServiceOrgUnitInfo seriveOrgInfo =  (ServiceOrgUnitInfo)prmtOrgUnit.getValue();
 		hasPermission_OprtRetailLine = PermUtils.hasFunctionPermission(null, userInfo, seriveOrgInfo, "oprtRetailLine");
 		hasPermission_OprtRepairLine = PermUtils.hasFunctionPermission(null, userInfo, seriveOrgInfo, "oprtRepairLine");
+		hasPermission_OprtRetailItemspName = PermUtils.hasFunctionPermission(null, userInfo, seriveOrgInfo, "oprtRetailItemspName");
 		isLoadOprtPermission = true;
  
 	}
 	@Override
 	protected IObjectValue createNewData() {
 		IObjectValue value =  super.createNewData();
-		value.put("Mile", 1);
+		//value.put("Mile", 1);
 		return value;
 	}
 	
@@ -204,11 +209,6 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		actionAdjust.setVisible(false);//整单调整
 		
 		
-		
-		
-		
-		
-		
 		txtCompanyNumber.setEnabled(false);
 		
 		defaultValueForAddNew();
@@ -222,7 +222,20 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		prmtCustomerAccount.setEditable(true);
 	    prmtCustomerAccount.setReadOnly(false);
 	    prmtCustomerAccount.setEnabled(true);
+	    
+	    actionAudit.setVisible(false);
+	    actionUnAudit.setVisible(false);
+	    
+	    //获取维修、零售最大折扣率
 		
+	    UserInfo userInfo = SysContext.getSysContext().getCurrentUserInfo();
+	    String sql = String.format("select isnull(CFMaxRepairDiscountRate,0) maxRepairDiscountRate," +
+	    		"isnull(CFMaxRetailDiscountRate,0) maxRetailDiscountRate from T_PM_User where FID='%s'",userInfo.getString("id"));
+	    IRowSet rs = DBUtils.executeQuery(null, sql);
+	    if (rs!=null && rs.next()) {
+	    	maxRepairDiscountRate = rs.getBigDecimal("maxRepairDiscountRate");
+	    	maxRetailDiscountRate = rs.getBigDecimal("maxRetailDiscountRate");
+	    }
 	}
 	private void defaultValueForAddNew() throws Exception {
 		if (getOprtState().equals(OprtState.ADDNEW)) {
@@ -231,6 +244,14 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			
 			CustomerAccountInfo defaultCustomerAccountInfo = GAUtils.getDefaultCustomerAccountInfo(null);
 			prmtCustomerAccount.setValue(defaultCustomerAccountInfo);
+			
+			/**上次里程+1*/
+			String sql = String.format("select isnull(Max(FMile),0)+1 from T_ATS_RepairWO where FVehicleID='%s'", defaultVehicleInfo.getString("id"));
+			IRowSet rs = DBUtils.executeQuery(null, sql);
+			if (rs != null && rs.next()) {
+				BigDecimal mile = rs.getBigDecimal(1);
+				txtMile.setValue(mile);
+			}
 			
 		}
 		BrandInfo brandInfo = (BrandInfo) prmtBrand.getValue();
@@ -291,7 +312,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 				Object newObj = kdteditevent.getValue();
 				if (!PublicUtils.equals(oldValue, newObj)) {
 					try {
-						valueChangedForItemSpEntry(kdteditevent);
+						valueChangedForItemSpEntry(oldValue,kdteditevent);
 					} catch (Exception e) {UIUtils.handUIException(e);}
 				}
 			}
@@ -793,7 +814,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		footRow.getCell(totalTaxAmountIndex+1).getStyleAttributes().setHorizontalAlign(HorizontalAlignment.LEFT);
 		
 	}
-	private void valueChangedForItemSpEntry(KDTEditEvent e) throws Exception {
+	private void valueChangedForItemSpEntry(Object oldValue,KDTEditEvent e) throws Exception {
 		int rowIndex = e.getRowIndex();
 		int colIndex = e.getColIndex();
 		
@@ -804,15 +825,25 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		int priceIndex = kdtRWOItemSpEntry.getColumnIndex("price");
 		int discountRateIndex = kdtRWOItemSpEntry.getColumnIndex("discountRate");
 		int wIndex = kdtRWOItemSpEntry.getColumnIndex("w");
-		int settlementObjectIndex = kdtRWOItemSpEntry.getColumnIndex("settlementObject");
-		
+		int settlementObjectIndex = kdtRWOItemSpEntry.getColumnIndex("valueChangedForItemSpEntrysettlementObject");
+		TEnum tType = (TEnum) kdtRWOItemSpEntry.getRow(rowIndex).getCell("t").getValue();
 		if (colIndex == wIndex) {
 			WInfo wInfo = (WInfo) e.getValue();
 			if (wInfo != null)
 				 kdtRWOItemSpEntry.getRow(rowIndex).getCell(settlementObjectIndex).setValue(wInfo.getSettleObject());
-		} else if (colIndex == qtyIndex || colIndex == priceIndex || colIndex == discountRateIndex) {
+		} else if (colIndex == qtyIndex || colIndex == priceIndex || colIndex == discountRateIndex) {		
+			if (colIndex == discountRateIndex) {
+				BigDecimal discountRate = PublicUtils.getBigDecimal(e.getValue());
+				if (PublicUtils.equals(TEnum.L, tType) && discountRate.compareTo(maxRepairDiscountRate) > 0) {
+					MsgBoxEx.showInfo("折扣不能高于折扣权限！");
+					kdtRWOItemSpEntry.getRow(rowIndex).getCell(discountRateIndex).setValue(oldValue);
+				} else if (PublicUtils.equals(TEnum.P, tType) && discountRate.compareTo(maxRetailDiscountRate) > 0) {
+					MsgBoxEx.showInfo("折扣不能高于折扣权限！");
+					kdtRWOItemSpEntry.getRow(rowIndex).getCell(discountRateIndex).setValue(oldValue);
+				}				
+			}
 			calItemSpEntryAmount(kdtRWOItemSpEntry.getRow(rowIndex));
-		}
+		}  
 
 	}
 	
@@ -835,13 +866,17 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			cellSp.getStyleAttributes().setLocked(false);
 			//initItemSpMaterialF7(cellItemSp);
 			cellIsCT.getStyleAttributes().setLocked(false);
+			row.getCell("itemspName").getStyleAttributes().setLocked(!hasPermission_OprtRetailItemspName);
 		}
+		
+		
 		if (!hasPermission_OprtRetailLine && PublicUtils.equals("P", cellT.getValue().toString())) {
 			row.getStyleAttributes().setLocked(true);
 			
 		} else if (!hasPermission_OprtRepairLine && PublicUtils.equals("L", cellT.getValue().toString())) {
 			row.getStyleAttributes().setLocked(true);
 		}
+		
 		try {
 			BigDecimal issueQty = PublicUtils.getBigDecimal(row.getCell("issueQty").getValue());
 			boolean isAPSettle = (Boolean)row.getCell("isAPSettle").getValue();
@@ -849,21 +884,18 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			BigDecimal amount = PublicUtils.getBigDecimal(row.getCell("amount").getValue());
 			
 
-			if (PublicUtils.equals(IEnum.X, iType)
-					&& amount.compareTo(BIGDEC0) != 0) {	
+			if (PublicUtils.equals(IEnum.X, iType) && amount.compareTo(BIGDEC0) != 0) {	
 				row.getStyleAttributes().setLocked(true);
 			}
 			if (issueQty.compareTo(BIGDEC0) != 0) { //已有出库
 				row.getStyleAttributes().setLocked(true);
-				if (!PublicUtils.equals(IEnum.X, iType))
-					row.getCell("w").getStyleAttributes().setLocked(false);
 			}  
 			
 			if (isAPSettle) { //应付结算
 				row.getStyleAttributes().setLocked(true);
-				if (!PublicUtils.equals(IEnum.X, iType))
-					row.getCell("w").getStyleAttributes().setLocked(false);
 			} 
+			if (!PublicUtils.equals(IEnum.X, iType))
+				row.getCell("w").getStyleAttributes().setLocked(false);
 			
 
 			row.getCell("taocan").getStyleAttributes().setLocked(false);
@@ -1029,7 +1061,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	@Override
 	protected void setTableToSumField() {
 		super.setTableToSumField();
-		setTableToSumField(kdtRWOItemSpEntry, new String[]{"qty"});
+		//setTableToSumField(kdtRWOItemSpEntry, new String[]{"qty"});
 	}
 	/**
 	 * 重新处理addline事件，因为tab页签位置变更
@@ -1112,7 +1144,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     	//检查是否可删除
     	boolean isCanRemoveLine = true;
     	StringBuilder errMsg = new StringBuilder();
-    	for (int i = 0; i < iSelRow.length; i++) {
+    	for (int i = 0; iSelRow != null && i < iSelRow.length; i++) {
     		IRow rowItemSpEntry = kdtRWOItemSpEntry.getRow(iSelRow[i]);
     		RepairWORWOItemSpEntryInfo rwoItemSpEntryInfo = (RepairWORWOItemSpEntryInfo) rowItemSpEntry.getUserObject();
     		String itemSpEntryId = rwoItemSpEntryInfo.getString("id");
@@ -1385,6 +1417,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 
 			public void dataChanged(DataChangeEvent eventObj) {
 				String repairItemNums = "";
+				int beginRowIndex = 0;
 				  if(null != eventObj && null != eventObj.getNewValue())  {
 					  Object newObject = prmtRepairItem.getValue();
 					  RepairItemEntryInfo repairItemEntryInfos[] = null;
@@ -1402,7 +1435,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 				         return;
 					 // KDTSelectManager selectManager = kdTable.getSelectManager();
 			         // KDTSelectBlock selectBlock = selectManager.get(0);
-			          int beginRowIndex = 0;
+			          
 			          //if(selectBlock == null)
 			        	  beginRowIndex = kdTable.getRowCount();
 			          //else beginRowIndex = selectBlock.getBeginRow();
@@ -1436,6 +1469,8 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			              kdTable.getCell(rowIndex, "unIssueQty").setValue(null);
 			              isFirstRowIndex = false;
 			          }
+			          int qtyIndex = kdTable.getColumnIndex("qty");
+	            	  kdTable.getEditManager().editCellAt(beginRowIndex, qtyIndex);
 				  }
 			prmtRepairItem.setValue(repairItemNums);
 			}
@@ -1632,7 +1667,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 						}
 					});
 			prmtMaterial.addDataChangeListener(new DataChangeListener() {
-
+				
 				public void dataChanged(DataChangeEvent eventObj) {
 					  if(null != eventObj && null != eventObj.getNewValue())  {
 						  Object newObject = prmtMaterial.getValue();
@@ -1680,8 +1715,27 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 				              kdTable.getCell(rowIndex,"itemspNum").setValue(materialInfo.getNumber());
 				              kdTable.getCell(rowIndex,"itemspName").setValue(materialInfo.getName());
 				              isFirstRowIndex = false;
+				              kdTable.getRow(rowIndex).getCell("itemspName").getStyleAttributes().setLocked(!hasPermission_OprtRetailItemspName);
+				              String sql = String.format("select isnull(FPrice,0) from T_BD_MaterialSales where FMaterialID='%s' and FOrgUnit='%s'",
+				            		  materialInfo.getString("id"),orgUnitInfo.getString("id"));
+				              try {
+								IRowSet rs = DBUtils.executeQuery(null, sql);
+								if (rs != null && rs.next()) {
+									kdTable.getCell(rowIndex, "price").setValue(rs.getBigDecimal(1));
+									IRow row = kdTable.getRow(rowIndex);
+									calItemSpEntryAmount(row);
+									kdTable.getCell(rowIndex, "price").getStyleAttributes().setLocked(true);
+								}
+								
+							} catch (Exception e) {
+								UIUtils.handUIException(e);
+							}
+				              
 				          }
+				          int qtyIndex = kdTable.getColumnIndex("qty");
+		            	  kdTable.getEditManager().editCellAt(beginRowIndex, qtyIndex);
 					  }	
+					  
 				}
 			});
 		}
@@ -2104,7 +2158,12 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		BigDecimal discountRate = PublicUtils.getBigDecimal(row.getCell("discountRate").getValue()); //折扣
 		BigDecimal taxRate = PublicUtils.getBigDecimal(row.getCell("taxRate").getValue()); //税率
 		BigDecimal amount = qty.multiply(price).multiply(BIGDEC1.subtract(discountRate.divide(BIGDEC100,10,BigDecimal.ROUND_HALF_UP)));
+		BigDecimal taxPrice = price.multiply(BIGDEC1.add(taxRate.divide(BIGDEC100,10,BigDecimal.ROUND_HALF_UP))); //含税单价
+		BigDecimal taxAmount =  qty.multiply(taxPrice).multiply(BIGDEC1.subtract(discountRate.divide(BIGDEC100,10,BigDecimal.ROUND_HALF_UP)));//含税总计
+		
 		row.getCell("amount").setValue(amount);
+		row.getCell("taxPrice").setValue(taxPrice);
+		row.getCell("taxAmount").setValue(taxAmount);
 		
 		if (BIGDEC0.compareTo(amount) == 0) row.getCell("i").setValue(IEnum.X);
 		else row.getCell("i").setValue(IEnum.I);
@@ -2323,6 +2382,18 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     		kDTRWOPane.remove(kDPRwoItem);
     		kDTRWOPane.remove(kDPRwoSp);
     	}
+    }
+    
+    @Override
+    public void actionAudit_actionPerformed(ActionEvent e) throws Exception {
+    	// TODO Auto-generated method stub
+    	super.actionAudit_actionPerformed(e);
+    }
+    
+    @Override
+    public void actionUnAudit_actionPerformed(ActionEvent e) throws Exception {
+    	// TODO Auto-generated method stub
+    	super.actionUnAudit_actionPerformed(e);
     }
 
 }

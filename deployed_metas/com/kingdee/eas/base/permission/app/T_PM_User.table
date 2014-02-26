@@ -15,7 +15,7 @@
             <isMultilingual>false</isMultilingual>
             <isEncoded>false</isEncoded>
             <isNullable>false</isNullable>
-            <defaultValue />
+            <defaultValue>''</defaultValue>
             <sqlType>VARCHAR</sqlType>
             <length>44</length>
             <scale>0</scale>
@@ -581,6 +581,34 @@
             <scale>0</scale>
             <precision>0</precision>
         </column>
+        <column>
+            <name>CFMaxRepairDiscountRate</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[CFMaxRepairDiscountRate].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[CFMaxRepairDiscountRate].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NUMERIC</sqlType>
+            <length>5</length>
+            <scale>2</scale>
+            <precision>5</precision>
+        </column>
+        <column>
+            <name>CFMaxRetailDiscountRate</name>
+            <alias>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[CFMaxRetailDiscountRate].alias</alias>
+            <description>dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[CFMaxRetailDiscountRate].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NUMERIC</sqlType>
+            <length>5</length>
+            <scale>2</scale>
+            <precision>5</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>PK_User</name>
@@ -777,302 +805,386 @@
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="用户" />
-            <lang locale="zh_TW" value="用戶表" />
+            <lang locale="zh_HK" value="用戶" />
+            <lang locale="zh_TW" value="用戶" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[CFMaxRepairDiscountRate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="项目最大折扣率" />
+            <lang locale="zh_HK" value="項目最大折扣率" />
+            <lang locale="zh_TW" value="項目最大折扣率" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[CFMaxRepairDiscountRate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="项目最大折扣率" />
+            <lang locale="zh_HK" value="項目最大折扣率" />
+            <lang locale="zh_TW" value="項目最大折扣率" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[CFMaxRetailDiscountRate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="配件最大折扣率" />
+            <lang locale="zh_HK" value="配件最大折扣率" />
+            <lang locale="zh_TW" value="配件最大折扣率" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[CFMaxRetailDiscountRate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="项目最大折扣率" />
+            <lang locale="zh_HK" value="項目最大折扣率" />
+            <lang locale="zh_TW" value="項目最大折扣率" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[CFUserType].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="账户类别" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="賬戶類別" />
+            <lang locale="zh_TW" value="賬戶類別" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[CFUserType].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="账户类别" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="賬戶類別" />
+            <lang locale="zh_TW" value="賬戶類別" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FAdNumber].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="AD账号" />
-            <lang locale="zh_TW" value="AD帳號" />
+            <lang locale="zh_HK" value="AD賬號" />
+            <lang locale="zh_TW" value="AD賬號" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FAdNumber].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="AD账号" />
-            <lang locale="zh_TW" value="AD帳號" />
+            <lang locale="zh_HK" value="AD賬號" />
+            <lang locale="zh_TW" value="AD賬號" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FAgentUser].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="代理用户" />
-            <lang locale="zh_TW" value="FAgentUser" />
+            <lang locale="zh_HK" value="代理用戶" />
+            <lang locale="zh_TW" value="代理用戶" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FAgentUser].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="" />
+            <lang locale="zh_HK" value="是否代理用戶" />
             <lang locale="zh_TW" value="是否代理用戶" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FBackupEMail].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="备用电子邮件 " />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="備用電子郵件 " />
+            <lang locale="zh_TW" value="備用電子郵件 " />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FBackupEMail].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="备用电子邮件 " />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="備用電子郵件 " />
+            <lang locale="zh_TW" value="備用電子郵件 " />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCell].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="手机号码" />
+            <lang locale="zh_HK" value="手機號碼" />
             <lang locale="zh_TW" value="手機號碼" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCell].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="手机号码" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="手機號碼" />
+            <lang locale="zh_TW" value="手機號碼" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FControlUnitID].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="控制单元" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="控制單元" />
+            <lang locale="zh_TW" value="控制單元" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FControlUnitID].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="控制单元" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="控制單元" />
+            <lang locale="zh_TW" value="控制單元" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCreateTime].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="创建时间" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="創建時間" />
+            <lang locale="zh_TW" value="創建時間" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCreateTime].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="创建时间" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="創建時間" />
+            <lang locale="zh_TW" value="創建時間" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCreatorID].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="创建者" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="創建者" />
+            <lang locale="zh_TW" value="創建者" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCreatorID].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="创建者" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="創建者" />
+            <lang locale="zh_TW" value="創建者" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCustomerID].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="客户id" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="客戶id" />
+            <lang locale="zh_TW" value="客戶id" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FCustomerID].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="客户id" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="客戶id" />
+            <lang locale="zh_TW" value="客戶id" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FDefOrgUnitID].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="缺省组织" />
+            <lang locale="zh_HK" value="缺省組織" />
             <lang locale="zh_TW" value="缺省組織" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FDefOrgUnitID].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="缺省组织" />
+            <lang locale="zh_HK" value="缺省組織" />
             <lang locale="zh_TW" value="缺省組織" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FDefaultLocale].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="缺省使用语言" />
-            <lang locale="zh_TW" value="默認語言" />
+            <lang locale="zh_HK" value="缺省使用語言" />
+            <lang locale="zh_TW" value="缺省使用語言" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FDefaultLocale].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="缺省使用语言" />
-            <lang locale="zh_TW" value="默認語言" />
+            <lang locale="zh_HK" value="缺省使用語言" />
+            <lang locale="zh_TW" value="缺省使用語言" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FDescription].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="描述" />
-            <lang locale="zh_TW" value="說明" />
+            <lang locale="zh_HK" value="描述" />
+            <lang locale="zh_TW" value="描述" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FDescription].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="描述，多语言字段" />
-            <lang locale="zh_TW" value="說明" />
+            <lang locale="zh_HK" value="描述，多語言字段" />
+            <lang locale="zh_TW" value="描述，多語言字段" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FEMail].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="电子邮件" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="電子郵件" />
+            <lang locale="zh_TW" value="電子郵件" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FEMail].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="电子邮件" />
-            <lang locale="zh_TW" value="FEMail" />
+            <lang locale="zh_HK" value="電子郵件" />
+            <lang locale="zh_TW" value="電子郵件" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FEffectiveDate].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="生效时间" />
+            <lang locale="zh_HK" value="生效時間" />
             <lang locale="zh_TW" value="生效時間" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FEffectiveDate].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="用户生效时间" />
-            <lang locale="zh_TW" value="生效時間" />
+            <lang locale="zh_HK" value="用戶生效時間" />
+            <lang locale="zh_TW" value="用戶生效時間" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FErrCount].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="登录错误次数" />
-            <lang locale="zh_TW" value="錯誤次數" />
+            <lang locale="zh_HK" value="登錄錯誤次數" />
+            <lang locale="zh_TW" value="登錄錯誤次數" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FErrCount].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="登录错误次数。记录错误次数，如果正确一次就恢复置0。" />
-            <lang locale="zh_TW" value="錯誤次數" />
+            <lang locale="zh_HK" value="登錄錯誤次數。記錄錯誤次數，如果正確一次就恢復置0。" />
+            <lang locale="zh_TW" value="登錄錯誤次數。記錄錯誤次數，如果正確一次就恢復置0。" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FForbidden].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="是否禁用" />
+            <lang locale="zh_HK" value="是否禁用" />
             <lang locale="zh_TW" value="是否禁用" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FForbidden].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="是否禁用用户" />
-            <lang locale="zh_TW" value="是否禁用" />
+            <lang locale="zh_HK" value="是否禁用用戶" />
+            <lang locale="zh_TW" value="是否禁用用戶" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FGroupID].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="所属用户组" />
-            <lang locale="zh_TW" value="用戶組內碼" />
+            <lang locale="zh_HK" value="所屬用戶組" />
+            <lang locale="zh_TW" value="所屬用戶組" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FGroupID].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="所属用户组" />
-            <lang locale="zh_TW" value="用戶組內碼" />
+            <lang locale="zh_HK" value="所屬用戶組" />
+            <lang locale="zh_TW" value="所屬用戶組" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FHomePhone].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="家庭电话" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="家庭電話" />
+            <lang locale="zh_TW" value="家庭電話" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FHomePhone].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="家庭电话" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="家庭電話" />
+            <lang locale="zh_TW" value="家庭電話" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FID].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FID].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FInvalidationDate].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="失效时间" />
+            <lang locale="zh_HK" value="失效時間" />
             <lang locale="zh_TW" value="失效時間" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FInvalidationDate].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="用户失效时间" />
-            <lang locale="zh_TW" value="失效時間" />
+            <lang locale="zh_HK" value="用戶失效時間" />
+            <lang locale="zh_TW" value="用戶失效時間" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsBizAdmin].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="是否为业务管理员" />
-            <lang locale="zh_TW" value="授權權" />
+            <lang locale="zh_HK" value="是否為業務管理員" />
+            <lang locale="zh_TW" value="是否為業務管理員" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsBizAdmin].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="是否为业务管理员" />
-            <lang locale="zh_TW" value="授權權" />
+            <lang locale="zh_HK" value="是否為業務管理員" />
+            <lang locale="zh_TW" value="是否為業務管理員" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsChangedPW].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="是否修改过密码" />
-            <lang locale="zh_TW" value="修改過密碼" />
+            <lang locale="zh_HK" value="是否修改過密碼" />
+            <lang locale="zh_TW" value="是否修改過密碼" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsChangedPW].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="是否修改过密码" />
-            <lang locale="zh_TW" value="修改過密碼" />
+            <lang locale="zh_HK" value="是否修改過密碼" />
+            <lang locale="zh_TW" value="是否修改過密碼" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsDelete].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="是否是已经删除" />
-            <lang locale="zh_TW" value="是否刪除" />
+            <lang locale="zh_HK" value="是否是已經刪除" />
+            <lang locale="zh_TW" value="是否是已經刪除" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsDelete].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="用于用户删除，决定用户是否是已经删除。目前采取假删除用户的策略，通过设置这个标志位来决定用户是否被删除。" />
-            <lang locale="zh_TW" value="是否刪除" />
+            <lang locale="zh_HK" value="用於用戶刪除，決定用戶是否是已經刪除。目前採取假刪除用戶的策略，通過設置這個標誌位來決定用戶是否被刪除。" />
+            <lang locale="zh_TW" value="用於用戶刪除，決定用戶是否是已經刪除。目前採取假刪除用戶的策略，通過設置這個標誌位來決定用戶是否被刪除。" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsLocked].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="是否锁定" />
+            <lang locale="zh_HK" value="是否鎖定" />
             <lang locale="zh_TW" value="是否鎖定" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsLocked].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="是否锁定，根据安全策略，在登录时连续错误一定次数后锁定用户。" />
-            <lang locale="zh_TW" value="是否鎖定" />
+            <lang locale="zh_HK" value="是否鎖定，根據安全策略，在登錄時連續錯誤一定次數後鎖定用戶。" />
+            <lang locale="zh_TW" value="是否鎖定，根據安全策略，在登錄時連續錯誤一定次數後鎖定用戶。" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsRegister].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="是否注册" />
+            <lang locale="zh_HK" value="是否註冊" />
             <lang locale="zh_TW" value="是否註冊" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FIsRegister].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="是否注册。一旦启用注册机制，新建的用户必须注册后方可以登录。" />
-            <lang locale="zh_TW" value="是否註冊" />
+            <lang locale="zh_HK" value="是否註冊。一旦啟用註冊機制，新建的用戶必須註冊後方可以登錄。" />
+            <lang locale="zh_TW" value="是否註冊。一旦啟用註冊機制，新建的用戶必須註冊後方可以登錄。" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLastUpdateTime].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="最后修改时间" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="最後修改時間" />
+            <lang locale="zh_TW" value="最後修改時間" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLastUpdateTime].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="最后修改时间" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="最後修改時間" />
+            <lang locale="zh_TW" value="最後修改時間" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLastUpdateUserID].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="最后修改者" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="最後修改者" />
+            <lang locale="zh_TW" value="最後修改者" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLastUpdateUserID].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="最后修改者" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="最後修改者" />
+            <lang locale="zh_TW" value="最後修改者" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLockedTime].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="用户锁定时间" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="用戶鎖定時間" />
+            <lang locale="zh_TW" value="用戶鎖定時間" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLockedTime].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="用户锁定时间" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="用戶鎖定時間" />
+            <lang locale="zh_TW" value="用戶鎖定時間" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLoginAuthorWay].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="登陆认证方式" />
-            <lang locale="zh_TW" value="FLoginAuthorWay" />
+            <lang locale="zh_HK" value="登陸認證方式" />
+            <lang locale="zh_TW" value="登陸認證方式" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FLoginAuthorWay].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="登陆认证方式" />
-            <lang locale="zh_TW" value="FLoginAuthorWay" />
+            <lang locale="zh_HK" value="登陸認證方式" />
+            <lang locale="zh_TW" value="登陸認證方式" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FMainRoleID].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="主角色" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="主角色" />
+            <lang locale="zh_TW" value="主角色" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FMainRoleID].description">
             <lang locale="en_US" value="null" />
@@ -1082,117 +1194,140 @@
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FName].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="用户实名" />
-            <lang locale="zh_TW" value="名稱" />
+            <lang locale="zh_HK" value="用戶實名" />
+            <lang locale="zh_TW" value="用戶實名" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FName].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="用户实名（用于查询）" />
-            <lang locale="zh_TW" value="名稱" />
+            <lang locale="zh_HK" value="用戶實名（用於查詢）" />
+            <lang locale="zh_TW" value="用戶實名（用於查詢）" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FNumber].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="用户名" />
-            <lang locale="zh_TW" value="編碼" />
+            <lang locale="zh_HK" value="用戶名" />
+            <lang locale="zh_TW" value="用戶名" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FNumber].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="用户名，唯一标识" />
-            <lang locale="zh_TW" value="編碼" />
+            <lang locale="zh_HK" value="用戶名，唯一標識" />
+            <lang locale="zh_TW" value="用戶名，唯一標識" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FOfficePhone].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="办公室电话" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="辦公室電話" />
+            <lang locale="zh_TW" value="辦公室電話" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FOfficePhone].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="办公室电话" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="辦公室電話" />
+            <lang locale="zh_TW" value="辦公室電話" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPWEffectiveDate].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="密码生效日期" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="密碼生效日期" />
+            <lang locale="zh_TW" value="密碼生效日期" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPWEffectiveDate].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="密码生效日期" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="密碼生效日期" />
+            <lang locale="zh_TW" value="密碼生效日期" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPassword].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="密码" />
+            <lang locale="zh_HK" value="密碼" />
             <lang locale="zh_TW" value="密碼" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPassword].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="加密以后的密码" />
-            <lang locale="zh_TW" value="密碼" />
+            <lang locale="zh_HK" value="加密以後的密碼" />
+            <lang locale="zh_TW" value="加密以後的密碼" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPersonId].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="对应的操作人" />
-            <lang locale="zh_TW" value="人員內碼" />
+            <lang locale="zh_HK" value="對應的操作人" />
+            <lang locale="zh_TW" value="對應的操作人" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPersonId].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="对应的操作人，连接属性" />
-            <lang locale="zh_TW" value="人員內碼" />
+            <lang locale="zh_HK" value="對應的操作人，連接屬性" />
+            <lang locale="zh_TW" value="對應的操作人，連接屬性" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPwdHisStr].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="历史密码" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="歷史密碼" />
+            <lang locale="zh_TW" value="歷史密碼" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FPwdHisStr].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="历史密码" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="歷史密碼" />
+            <lang locale="zh_TW" value="歷史密碼" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FReferId].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="引用id" />
+            <lang locale="zh_HK" value="引用id" />
             <lang locale="zh_TW" value="引用id" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FReferId].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="引用其他的对象的id" />
-            <lang locale="zh_TW" value="引用id" />
+            <lang locale="zh_HK" value="引用其他的對象的id" />
+            <lang locale="zh_TW" value="引用其他的對象的id" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FSecurityId].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="密码策略" />
-            <lang locale="zh_TW" value="密碼安全" />
+            <lang locale="zh_HK" value="密碼策略" />
+            <lang locale="zh_TW" value="密碼策略" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FSecurityId].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="密码策略" />
-            <lang locale="zh_TW" value="密碼安全" />
+            <lang locale="zh_HK" value="密碼策略" />
+            <lang locale="zh_TW" value="密碼策略" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FSupplierID].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="供应商id" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="供應商id" />
+            <lang locale="zh_TW" value="供應商id" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FSupplierID].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="供应商id" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_HK" value="供應商id" />
+            <lang locale="zh_TW" value="供應商id" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FType].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="用户类型" />
+            <lang locale="zh_HK" value="用戶類型" />
             <lang locale="zh_TW" value="用戶類型" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].columns.column[FType].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="用户类型" />
+            <lang locale="zh_HK" value="用戶類型" />
             <lang locale="zh_TW" value="用戶類型" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="用户管理" />
-            <lang locale="zh_TW" value="用戶表" />
+            <lang locale="zh_HK" value="用戶管理" />
+            <lang locale="zh_TW" value="用戶管理" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.base.permission.app.T_PM_User].extendedProperty.PI_Extend">
             <lang locale="en_US" value="true" />

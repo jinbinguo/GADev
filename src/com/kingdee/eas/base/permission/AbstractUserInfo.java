@@ -442,6 +442,28 @@ public class AbstractUserInfo extends com.kingdee.eas.framework.ObjectBaseInfo i
         setString("userType", item.getValue());
 		}
     }
+    /**
+     * Object:用户's 项目最大折扣率property 
+     */
+    public java.math.BigDecimal getMaxRepairDiscountRate()
+    {
+        return getBigDecimal("maxRepairDiscountRate");
+    }
+    public void setMaxRepairDiscountRate(java.math.BigDecimal item)
+    {
+        setBigDecimal("maxRepairDiscountRate", item);
+    }
+    /**
+     * Object:用户's 配件最大折扣率property 
+     */
+    public java.math.BigDecimal getMaxRetailDiscountRate()
+    {
+        return getBigDecimal("maxRetailDiscountRate");
+    }
+    public void setMaxRetailDiscountRate(java.math.BigDecimal item)
+    {
+        setBigDecimal("maxRetailDiscountRate", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("13B7DE7F");

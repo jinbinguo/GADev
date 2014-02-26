@@ -58,4 +58,6 @@ public interface RepairWOController extends AutoBillBaseController
     public void unInspect(Context ctx, Map paramMap) throws BOSException, EASBizException, RemoteException;
     public void updateRWOVersion(Context ctx, RepairWOInfo model) throws BOSException, EASBizException, RemoteException;
     public Map getRWOFromRepairBooking(Context ctx, Map paramMap) throws BOSException, EASBizException, RemoteException;
+    public void audit(Context ctx, RepairWOInfo model) throws BOSException, RemoteException;
+    public void unAudit(Context ctx, RepairWOInfo model) throws BOSException, RemoteException;
 }

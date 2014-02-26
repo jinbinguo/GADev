@@ -6,15 +6,15 @@
     <components>
         <component>
             <name>CoreUI</name>
-            <constraints>10,10,550,417</constraints>
+            <constraints>10,10,550,458</constraints>
         </component>
         <component>
             <name>mlaDescription</name>
-            <constraints>10,305,530,98</constraints>
+            <constraints>10,332,530,98</constraints>
         </component>
         <component>
             <name>lblDescription</name>
-            <constraints>10,283,100,19</constraints>
+            <constraints>10,310,100,19</constraints>
         </component>
         <component>
             <name>contuserType</name>
@@ -66,6 +66,104 @@
             </parent>
         </component>
         <component>
+            <name>contmaxRepairDiscountRate</name>
+            <alias>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[contmaxRepairDiscountRate].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>10,279,250,19</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[contmaxRepairDiscountRate].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[contmaxRepairDiscountRate].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[contmaxRepairDiscountRate].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[contmaxRepairDiscountRate].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="CoreUI" />
+            </parent>
+        </component>
+        <component>
+            <name>contmaxRetailDiscountRate</name>
+            <alias>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[contmaxRetailDiscountRate].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>290,279,250,19</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[contmaxRetailDiscountRate].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[contmaxRetailDiscountRate].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[contmaxRetailDiscountRate].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[contmaxRetailDiscountRate].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="CoreUI" />
+            </parent>
+        </component>
+        <component>
             <name>userType</name>
             <alias>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[userType].alias</alias>
             <userDefined>true</userDefined>
@@ -107,6 +205,176 @@
                 <key name="name" value="contuserType" />
             </parent>
         </component>
+        <component>
+            <name>txtmaxRepairDiscountRate</name>
+            <alias>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRepairDiscountRate].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDFormattedTextField</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>45</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRepairDiscountRate].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>horizontalAlignment</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRepairDiscountRate].properties.property[horizontalAlignment].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>dataType</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRepairDiscountRate].properties.property[dataType].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>supportedEmpty</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRepairDiscountRate].properties.property[supportedEmpty].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>minimumValue</name>
+                    <type>java.math.BigDecimal</type>
+                    <value>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRepairDiscountRate].properties.property[minimumValue].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>maximumValue</name>
+                    <type>java.math.BigDecimal</type>
+                    <value>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRepairDiscountRate].properties.property[maximumValue].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>precision</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRepairDiscountRate].properties.property[precision].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>required</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRepairDiscountRate].properties.property[required].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contmaxRepairDiscountRate" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>value</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>entityUser</bindingObject>
+                    <bindingField>maxRepairDiscountRate</bindingField>
+                    <fieldType>java.math.BigDecimal</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>txtmaxRetailDiscountRate</name>
+            <alias>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRetailDiscountRate].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDFormattedTextField</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRetailDiscountRate].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>horizontalAlignment</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRetailDiscountRate].properties.property[horizontalAlignment].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>dataType</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRetailDiscountRate].properties.property[dataType].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>supportedEmpty</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRetailDiscountRate].properties.property[supportedEmpty].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>minimumValue</name>
+                    <type>java.math.BigDecimal</type>
+                    <value>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRetailDiscountRate].properties.property[minimumValue].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>maximumValue</name>
+                    <type>java.math.BigDecimal</type>
+                    <value>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRetailDiscountRate].properties.property[maximumValue].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>precision</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRetailDiscountRate].properties.property[precision].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>required</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRetailDiscountRate].properties.property[required].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contmaxRetailDiscountRate" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>value</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>entityUser</bindingObject>
+                    <bindingField>maxRetailDiscountRate</bindingField>
+                    <fieldType>java.math.BigDecimal</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
     </components>
     <actions>
         <action>
@@ -138,6 +406,66 @@
         </dataObject>
     </dataObjects>
     <resource>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[contmaxRepairDiscountRate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[contmaxRepairDiscountRate].properties.property[boundLabelLength].value">
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_CN" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[contmaxRepairDiscountRate].properties.property[boundLabelText].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修最大折扣率" />
+            <lang locale="zh_HK" value="維修最大折扣率" />
+            <lang locale="zh_TW" value="維修最大折扣率" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[contmaxRepairDiscountRate].properties.property[boundLabelUnderline].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[contmaxRepairDiscountRate].properties.property[visible].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[contmaxRetailDiscountRate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[contmaxRetailDiscountRate].properties.property[boundLabelLength].value">
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_CN" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[contmaxRetailDiscountRate].properties.property[boundLabelText].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="零售最大折扣率" />
+            <lang locale="zh_HK" value="零售最大折扣率" />
+            <lang locale="zh_TW" value="零售最大折扣率" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[contmaxRetailDiscountRate].properties.property[boundLabelUnderline].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[contmaxRetailDiscountRate].properties.property[visible].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
         <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[contuserType].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
@@ -168,11 +496,119 @@
             <lang locale="zh_HK" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRepairDiscountRate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="项目最大折扣率" />
+            <lang locale="zh_HK" value="項目最大折扣率" />
+            <lang locale="zh_TW" value="項目最大折扣率" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRepairDiscountRate].properties.property[dataType].value">
+            <lang locale="en_US" value="1" />
+            <lang locale="zh_CN" value="1" />
+            <lang locale="zh_HK" value="1" />
+            <lang locale="zh_TW" value="1" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRepairDiscountRate].properties.property[horizontalAlignment].value">
+            <lang locale="en_US" value="2" />
+            <lang locale="zh_CN" value="2" />
+            <lang locale="zh_HK" value="2" />
+            <lang locale="zh_TW" value="2" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRepairDiscountRate].properties.property[maximumValue].value">
+            <lang locale="en_US" value="&quot;999.99&quot;" />
+            <lang locale="zh_CN" value="&quot;999.99&quot;" />
+            <lang locale="zh_HK" value="&quot;999.99&quot;" />
+            <lang locale="zh_TW" value="&quot;999.99&quot;" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRepairDiscountRate].properties.property[minimumValue].value">
+            <lang locale="en_US" value="&quot;-999.99&quot;" />
+            <lang locale="zh_CN" value="&quot;-999.99&quot;" />
+            <lang locale="zh_HK" value="&quot;-999.99&quot;" />
+            <lang locale="zh_TW" value="&quot;-999.99&quot;" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRepairDiscountRate].properties.property[precision].value">
+            <lang locale="en_US" value="2" />
+            <lang locale="zh_CN" value="2" />
+            <lang locale="zh_HK" value="2" />
+            <lang locale="zh_TW" value="2" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRepairDiscountRate].properties.property[required].value">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRepairDiscountRate].properties.property[supportedEmpty].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRepairDiscountRate].properties.property[visible].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRetailDiscountRate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="配件最大折扣率" />
+            <lang locale="zh_HK" value="配件最大折扣率" />
+            <lang locale="zh_TW" value="配件最大折扣率" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRetailDiscountRate].properties.property[dataType].value">
+            <lang locale="en_US" value="1" />
+            <lang locale="zh_CN" value="1" />
+            <lang locale="zh_HK" value="1" />
+            <lang locale="zh_TW" value="1" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRetailDiscountRate].properties.property[horizontalAlignment].value">
+            <lang locale="en_US" value="2" />
+            <lang locale="zh_CN" value="2" />
+            <lang locale="zh_HK" value="2" />
+            <lang locale="zh_TW" value="2" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRetailDiscountRate].properties.property[maximumValue].value">
+            <lang locale="en_US" value="&quot;999.99&quot;" />
+            <lang locale="zh_CN" value="&quot;999.99&quot;" />
+            <lang locale="zh_HK" value="&quot;999.99&quot;" />
+            <lang locale="zh_TW" value="&quot;999.99&quot;" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRetailDiscountRate].properties.property[minimumValue].value">
+            <lang locale="en_US" value="&quot;-999.99&quot;" />
+            <lang locale="zh_CN" value="&quot;-999.99&quot;" />
+            <lang locale="zh_HK" value="&quot;-999.99&quot;" />
+            <lang locale="zh_TW" value="&quot;-999.99&quot;" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRetailDiscountRate].properties.property[precision].value">
+            <lang locale="en_US" value="2" />
+            <lang locale="zh_CN" value="2" />
+            <lang locale="zh_HK" value="2" />
+            <lang locale="zh_TW" value="2" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRetailDiscountRate].properties.property[required].value">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRetailDiscountRate].properties.property[supportedEmpty].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[txtmaxRetailDiscountRate].properties.property[visible].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
         <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[userType].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="账户类别" />
-            <lang locale="zh_HK" value="賬戶類別" />
-            <lang locale="zh_TW" value="賬戶類別" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="uiObject[com.kingdee.eas.base.permission.client.UserEditUI].components.component[userType].properties.property[items].value">
             <lang locale="en_US" value="null" />

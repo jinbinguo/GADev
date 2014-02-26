@@ -96,7 +96,11 @@ public abstract class AbstractUserEditUI extends com.kingdee.eas.framework.clien
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer lbcAdNumber;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtAdNumber;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contuserType;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contmaxRepairDiscountRate;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contmaxRetailDiscountRate;
     protected com.kingdee.bos.ctrl.swing.KDComboBox userType;
+    protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtmaxRepairDiscountRate;
+    protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtmaxRetailDiscountRate;
     protected com.kingdee.eas.base.permission.UserInfo entityUser = null;
     protected ActionAddNew actionAddNew = null;
     protected ActionSubmit actionSubmit = null;
@@ -188,7 +192,11 @@ public abstract class AbstractUserEditUI extends com.kingdee.eas.framework.clien
         this.lbcAdNumber = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.txtAdNumber = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.contuserType = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contmaxRepairDiscountRate = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contmaxRetailDiscountRate = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.userType = new com.kingdee.bos.ctrl.swing.KDComboBox();
+        this.txtmaxRepairDiscountRate = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
+        this.txtmaxRetailDiscountRate = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.lbcNumber.setName("lbcNumber");
         this.txtNumber.setName("txtNumber");
         this.lbcUserRelation.setName("lbcUserRelation");
@@ -239,7 +247,11 @@ public abstract class AbstractUserEditUI extends com.kingdee.eas.framework.clien
         this.lbcAdNumber.setName("lbcAdNumber");
         this.txtAdNumber.setName("txtAdNumber");
         this.contuserType.setName("contuserType");
+        this.contmaxRepairDiscountRate.setName("contmaxRepairDiscountRate");
+        this.contmaxRetailDiscountRate.setName("contmaxRetailDiscountRate");
         this.userType.setName("userType");
+        this.txtmaxRepairDiscountRate.setName("txtmaxRepairDiscountRate");
+        this.txtmaxRetailDiscountRate.setName("txtmaxRetailDiscountRate");
         // CoreUI
         // lbcNumber		
         this.lbcNumber.setBoundLabelText(resHelper.getString("lbcNumber.boundLabelText"));		
@@ -484,11 +496,39 @@ public abstract class AbstractUserEditUI extends com.kingdee.eas.framework.clien
         this.contuserType.setBoundLabelLength(100);		
         this.contuserType.setBoundLabelUnderline(true);		
         this.contuserType.setVisible(true);
+        // contmaxRepairDiscountRate		
+        this.contmaxRepairDiscountRate.setBoundLabelText(resHelper.getString("contmaxRepairDiscountRate.boundLabelText"));		
+        this.contmaxRepairDiscountRate.setBoundLabelLength(100);		
+        this.contmaxRepairDiscountRate.setBoundLabelUnderline(true);		
+        this.contmaxRepairDiscountRate.setVisible(true);
+        // contmaxRetailDiscountRate		
+        this.contmaxRetailDiscountRate.setBoundLabelText(resHelper.getString("contmaxRetailDiscountRate.boundLabelText"));		
+        this.contmaxRetailDiscountRate.setBoundLabelLength(100);		
+        this.contmaxRetailDiscountRate.setBoundLabelUnderline(true);		
+        this.contmaxRetailDiscountRate.setVisible(true);
         // userType		
         this.userType.setVisible(true);		
         this.userType.setRequired(false);		
         this.userType.addItems(EnumUtils.getEnumList("com.kingdee.eas.ga.basedata.UserTypeEnum").toArray());
-        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {userType}));
+        // txtmaxRepairDiscountRate		
+        this.txtmaxRepairDiscountRate.setVisible(true);		
+        this.txtmaxRepairDiscountRate.setHorizontalAlignment(2);		
+        this.txtmaxRepairDiscountRate.setDataType(1);		
+        this.txtmaxRepairDiscountRate.setSupportedEmpty(true);		
+        this.txtmaxRepairDiscountRate.setMinimumValue( new java.math.BigDecimal("-999.99"));		
+        this.txtmaxRepairDiscountRate.setMaximumValue( new java.math.BigDecimal("999.99"));		
+        this.txtmaxRepairDiscountRate.setPrecision(2);		
+        this.txtmaxRepairDiscountRate.setRequired(false);
+        // txtmaxRetailDiscountRate		
+        this.txtmaxRetailDiscountRate.setVisible(true);		
+        this.txtmaxRetailDiscountRate.setHorizontalAlignment(2);		
+        this.txtmaxRetailDiscountRate.setDataType(1);		
+        this.txtmaxRetailDiscountRate.setSupportedEmpty(true);		
+        this.txtmaxRetailDiscountRate.setMinimumValue( new java.math.BigDecimal("-999.99"));		
+        this.txtmaxRetailDiscountRate.setMaximumValue( new java.math.BigDecimal("999.99"));		
+        this.txtmaxRetailDiscountRate.setPrecision(2);		
+        this.txtmaxRetailDiscountRate.setRequired(false);
+        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {userType,txtmaxRepairDiscountRate}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding
 		registerBindings();
@@ -514,7 +554,7 @@ public abstract class AbstractUserEditUI extends com.kingdee.eas.framework.clien
      */
     public void initUIContentLayout()
     {
-        this.setBounds(new Rectangle(10, 10, 550, 417));
+        this.setBounds(new Rectangle(10, 10, 550, 458));
         this.setLayout(null);
         lbcNumber.setBounds(new Rectangle(10, 10, 250, 19));
         this.add(lbcNumber, null);
@@ -540,9 +580,9 @@ public abstract class AbstractUserEditUI extends com.kingdee.eas.framework.clien
         this.add(lbcDefLang, null);
         lbcConfirmPassword.setBounds(new Rectangle(290, 120, 250, 19));
         this.add(lbcConfirmPassword, null);
-        mlaDescription.setBounds(new Rectangle(10, 305, 530, 98));
+        mlaDescription.setBounds(new Rectangle(10, 332, 530, 98));
         this.add(mlaDescription, null);
-        lblDescription.setBounds(new Rectangle(10, 283, 100, 19));
+        lblDescription.setBounds(new Rectangle(10, 310, 100, 19));
         this.add(lblDescription, null);
         lbcCU.setBounds(new Rectangle(290, 32, 250, 19));
         this.add(lbcCU, null);
@@ -568,6 +608,10 @@ public abstract class AbstractUserEditUI extends com.kingdee.eas.framework.clien
         this.add(lbcAdNumber, null);
         contuserType.setBounds(new Rectangle(10, 253, 250, 19));
         this.add(contuserType, null);
+        contmaxRepairDiscountRate.setBounds(new Rectangle(10, 279, 250, 19));
+        this.add(contmaxRepairDiscountRate, null);
+        contmaxRetailDiscountRate.setBounds(new Rectangle(290, 279, 250, 19));
+        this.add(contmaxRetailDiscountRate, null);
         //lbcNumber
         lbcNumber.setBoundEditor(txtNumber);
         //lbcUserRelation
@@ -612,6 +656,10 @@ public abstract class AbstractUserEditUI extends com.kingdee.eas.framework.clien
         lbcAdNumber.setBoundEditor(txtAdNumber);
         //contuserType
         contuserType.setBoundEditor(userType);
+        //contmaxRepairDiscountRate
+        contmaxRepairDiscountRate.setBoundEditor(txtmaxRepairDiscountRate);
+        //contmaxRetailDiscountRate
+        contmaxRetailDiscountRate.setBoundEditor(txtmaxRetailDiscountRate);
 
     }
 
@@ -671,7 +719,9 @@ public abstract class AbstractUserEditUI extends com.kingdee.eas.framework.clien
     }
 
 	//Regiester control's property binding.
-	private void registerBindings(){		
+	private void registerBindings(){
+		dataBinder.registerBinding("maxRepairDiscountRate", java.math.BigDecimal.class, this.txtmaxRepairDiscountRate, "value");
+		dataBinder.registerBinding("maxRetailDiscountRate", java.math.BigDecimal.class, this.txtmaxRetailDiscountRate, "value");		
 	}
 	//Regiester UI State
 	private void registerUIState(){		
@@ -749,7 +799,9 @@ public abstract class AbstractUserEditUI extends com.kingdee.eas.framework.clien
 	 * ????????§µ??
 	 */
 	protected void registerValidator() {
-    	getValidateHelper().setCustomValidator( getValidator() );		
+    	getValidateHelper().setCustomValidator( getValidator() );
+		getValidateHelper().registerBindProperty("maxRepairDiscountRate", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("maxRetailDiscountRate", ValidateHelper.ON_SAVE);    		
 	}
 
 
@@ -829,6 +881,8 @@ public abstract class AbstractUserEditUI extends com.kingdee.eas.framework.clien
 		if(StringUtils.isEmpty(selectorAll)){
 			selectorAll = "true";
 		}
+        sic.add(new SelectorItemInfo("maxRepairDiscountRate"));
+        sic.add(new SelectorItemInfo("maxRetailDiscountRate"));
         return sic;
     }        
     	
@@ -1025,6 +1079,9 @@ public abstract class AbstractUserEditUI extends com.kingdee.eas.framework.clien
      * output applyDefaultValue method
      */
     protected void applyDefaultValue(IObjectValue vo) {        
+				vo.put("maxRepairDiscountRate",new java.math.BigDecimal(0));
+		vo.put("maxRetailDiscountRate",new java.math.BigDecimal(0));
+        
     }        
 	protected void setFieldsNull(com.kingdee.bos.dao.AbstractObjectValue arg0) {
 		super.setFieldsNull(arg0);

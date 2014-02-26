@@ -455,6 +455,34 @@
             <scale>0</scale>
             <precision>0</precision>
         </column>
+        <column>
+            <name>CFTaxPrice</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFTaxPrice].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFTaxPrice].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NUMERIC</sqlType>
+            <length>28</length>
+            <scale>10</scale>
+            <precision>28</precision>
+        </column>
+        <column>
+            <name>CFTaxAmount</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFTaxAmount].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFTaxAmount].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NUMERIC</sqlType>
+            <length>28</length>
+            <scale>10</scale>
+            <precision>28</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>CPK_ATS_RWORWOImck</name>
@@ -597,9 +625,9 @@
         </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFI].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="I" />
-            <lang locale="zh_HK" value="I" />
-            <lang locale="zh_TW" value="I" />
+            <lang locale="zh_CN" value="账单状态" />
+            <lang locale="zh_HK" value="賬單狀態" />
+            <lang locale="zh_TW" value="賬單狀態" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFI].description">
             <lang locale="en_US" value="null" />
@@ -717,9 +745,9 @@
         </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFPrice].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="价格" />
-            <lang locale="zh_HK" value="價格" />
-            <lang locale="zh_TW" value="價格" />
+            <lang locale="zh_CN" value="未税价格" />
+            <lang locale="zh_HK" value="未稅價格" />
+            <lang locale="zh_TW" value="未稅價格" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFPrice].description">
             <lang locale="en_US" value="null" />
@@ -821,6 +849,30 @@
             <lang locale="zh_CN" value="套餐" />
             <lang locale="zh_HK" value="套餐" />
             <lang locale="zh_TW" value="套餐" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFTaxAmount].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="含税总计" />
+            <lang locale="zh_HK" value="含稅總計" />
+            <lang locale="zh_TW" value="含稅總計" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFTaxAmount].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="含税总计" />
+            <lang locale="zh_HK" value="含稅總計" />
+            <lang locale="zh_TW" value="含稅總計" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFTaxPrice].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="含税价格" />
+            <lang locale="zh_HK" value="含稅價格" />
+            <lang locale="zh_TW" value="含稅價格" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFTaxPrice].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="含税价格" />
+            <lang locale="zh_HK" value="含稅價格" />
+            <lang locale="zh_TW" value="含稅價格" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFTaxRate].alias">
             <lang locale="en_US" value="null" />

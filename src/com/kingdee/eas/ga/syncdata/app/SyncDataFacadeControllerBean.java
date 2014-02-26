@@ -782,6 +782,10 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		itemspInfo.setRts(materialInfo.getNumber());
     		itemspInfo.setCostAmount(wipMaterialInfo.getCostPrice());
     		itemspInfo.setAccount(wipMaterialInfo.getAccountCode());
+
+    		itemspInfo.setTaxPrice(saleTaxPrice);
+    		itemspInfo.setTaxAmount(saleTaxAmount.subtract(discountAmount));
+    		
     		if ("D".equals(wipMaterialInfo.getOrderStatus())) {
     			itemspInfo.setIsDelete(true);
     		} else {
@@ -1015,26 +1019,44 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		//标准工时
     		BigDecimal standardHour = wipManHourInfo.getStandardHour();
     		repairItemEntryInfo.setStdWorkTime(standardHour);
-    		//工时单价=DMS小时工时率/(60/DMS单位分钟数)，DMS单位分钟数为0则工时单价为0
-    		BigDecimal workTimePrice = null;
+    		
+    		//工时单价=DMS小时工时率/(60/DMS单位分钟数)，DMS单位分钟数为0则工时单价为0(不含税)
+    		BigDecimal notTaxWorkTimePrice = null;
     		BigDecimal hourRate = wipManHourInfo.getHourRate(); //小时工时率
     		int unitMI = wipManHourInfo.getUnitMI(); //单价分钟数
     		if (hourRate == null || unitMI == 0) {
-    			workTimePrice = BigDecimal.ZERO;	
+    			notTaxWorkTimePrice = BigDecimal.ZERO;	
     		} else {
-    			workTimePrice = hourRate.divide(new BigDecimal(60).divide(new BigDecimal(unitMI),10,BigDecimal.ROUND_HALF_UP),10,BigDecimal.ROUND_HALF_UP);
+    			notTaxWorkTimePrice = hourRate.divide(new BigDecimal(60).divide(new BigDecimal(unitMI),10,BigDecimal.ROUND_HALF_UP),10,BigDecimal.ROUND_HALF_UP);
     		}
-    		workTimePrice = workTimePrice.setScale(2, BigDecimal.ROUND_DOWN);
+    		notTaxWorkTimePrice = notTaxWorkTimePrice.setScale(2, BigDecimal.ROUND_DOWN);
     		BigDecimal taxRate = new BigDecimal(17.00);
-    		//不含税工时单价=工时单价/(1+税率/100)
-    		BigDecimal notTaxWorkTimePrice = workTimePrice.divide(BigDecimal.ONE.add(taxRate.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP)),10,BigDecimal.ROUND_HALF_UP);
-    			
-    		repairItemEntryInfo.setWorkTimePrice(workTimePrice);
-    		//工时金额=标准工时*工时单价
-    		BigDecimal workTimeAmount = wipManHourInfo.getStandardHour().multiply(workTimePrice).setScale(2, BigDecimal.ROUND_DOWN);;
-    		repairItemEntryInfo.setWorkTimeAmount(workTimeAmount);
     		//折扣率
     		BigDecimal discountRate = wipManHourInfo.getDiscountRate();
+    		
+    		//含税工时单价=工时单价* (1 + 税率/100.00)
+    		BigDecimal taxWorkTimePrice = notTaxWorkTimePrice.multiply(BigDecimal.ONE.add(taxRate.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP)));
+    			
+    		
+    		//实际含税单价
+    		BigDecimal factTaxPrice = taxWorkTimePrice.multiply(BigDecimal.ONE.subtract(discountRate.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP)));
+    		
+    		//实际不含税单价
+    		BigDecimal factNotTaxPrice = notTaxWorkTimePrice.multiply(BigDecimal.ONE.subtract(discountRate.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP)));
+    		
+    		//实际含税金额
+    		BigDecimal factTaxAmount = factTaxPrice.multiply(standardHour).setScale(2,BigDecimal.ROUND_DOWN);
+    		
+    		//实际不含税金额
+    		BigDecimal factNotTaxAmount = factNotTaxPrice.multiply(standardHour).setScale(2,BigDecimal.ROUND_DOWN);
+    		
+    		
+    		repairItemEntryInfo.setWorkTimePrice(taxWorkTimePrice);
+    		//工时金额=标准工时*工时单价(含税）
+    		BigDecimal workTimeAmount = standardHour.multiply(taxWorkTimePrice).setScale(2, BigDecimal.ROUND_DOWN);
+    		
+    		repairItemEntryInfo.setWorkTimeAmount(workTimeAmount);
+    		
     		repairItemEntryInfo.setDiscountRate(discountRate);
     		//折扣金额
     		BigDecimal discountAmount = workTimeAmount.multiply(discountRate.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP)).setScale(2, BigDecimal.ROUND_DOWN);;
@@ -1052,12 +1074,12 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		repairItemEntryInfo.setActualAmount(workTimeAmount.subtract(discountAmount));
     		
     		//工资单价=DMS工时单价
-    		repairItemEntryInfo.setWagePrice(workTimePrice);
+    		repairItemEntryInfo.setWagePrice(notTaxWorkTimePrice);
     		//工时成本=DMS工时单价 * 标准工时
-    		repairItemEntryInfo.setWorkTimeCost(workTimePrice.multiply(standardHour).setScale(2, BigDecimal.ROUND_DOWN));
+    		repairItemEntryInfo.setWorkTimeCost(factNotTaxAmount);
     		
     		//工时标准单价=DMS工时单价
-    		repairItemEntryInfo.setWorkTimeStdPrice(workTimePrice);
+    		repairItemEntryInfo.setWorkTimeStdPrice(taxWorkTimePrice);
     		
     		repairItemEntryInfo.setItemSpEntryId(itemSpId.toString());
     		
@@ -1077,7 +1099,7 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		itemspInfo.setUnIssueQty(null);
     		itemspInfo.setI(IEnum.getEnum(wipManHourInfo.getBillStatus()));
    
-    		itemspInfo.setAmount(notTaxWorkTimePrice.multiply(standardHour).setScale(2, BigDecimal.ROUND_DOWN));
+    		itemspInfo.setAmount(factNotTaxAmount);
     		itemspInfo.setDiscountRate(discountRate);
     		itemspInfo.setPrice(notTaxWorkTimePrice);
     		itemspInfo.setQty(standardHour);
@@ -1105,6 +1127,8 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		} else {
     			itemspInfo.setIsDelete(false);
     		}
+    		itemspInfo.setTaxPrice(taxWorkTimePrice);
+    		itemspInfo.setTaxAmount(factTaxAmount);
     		
     	}
     	

@@ -108,7 +108,7 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
         setBigDecimal("qty", item);
     }
     /**
-     * Object:项目配件明细's 价格property 
+     * Object:项目配件明细's 未税价格property 
      */
     public java.math.BigDecimal getPrice()
     {
@@ -141,7 +141,7 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
         setBigDecimal("amount", item);
     }
     /**
-     * Object:项目配件明细's Iproperty 
+     * Object:项目配件明细's 账单状态property 
      */
     public com.kingdee.eas.ga.rs.IEnum getI()
     {
@@ -341,6 +341,28 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
     public void setIsDelete(boolean item)
     {
         setBoolean("isDelete", item);
+    }
+    /**
+     * Object:项目配件明细's 含税价格property 
+     */
+    public java.math.BigDecimal getTaxPrice()
+    {
+        return getBigDecimal("taxPrice");
+    }
+    public void setTaxPrice(java.math.BigDecimal item)
+    {
+        setBigDecimal("taxPrice", item);
+    }
+    /**
+     * Object:项目配件明细's 含税总计property 
+     */
+    public java.math.BigDecimal getTaxAmount()
+    {
+        return getBigDecimal("taxAmount");
+    }
+    public void setTaxAmount(java.math.BigDecimal item)
+    {
+        setBigDecimal("taxAmount", item);
     }
     public BOSObjectType getBOSType()
     {

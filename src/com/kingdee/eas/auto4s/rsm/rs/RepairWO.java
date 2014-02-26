@@ -428,4 +428,30 @@ public class RepairWO extends AutoBillBase implements IRepairWO
             throw new EJBRemoteException(err);
         }
     }
+    /**
+     *…Û∫À-User defined method
+     *@param model model
+     */
+    public void audit(RepairWOInfo model) throws BOSException
+    {
+        try {
+            getController().audit(getContext(), model);
+        }
+        catch(RemoteException err) {
+            throw new EJBRemoteException(err);
+        }
+    }
+    /**
+     *∑¥…Û∫À-User defined method
+     *@param model model
+     */
+    public void unAudit(RepairWOInfo model) throws BOSException
+    {
+        try {
+            getController().unAudit(getContext(), model);
+        }
+        catch(RemoteException err) {
+            throw new EJBRemoteException(err);
+        }
+    }
 }
