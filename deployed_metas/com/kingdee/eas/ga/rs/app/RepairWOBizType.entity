@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entityObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.ga.rs.app</package>
+    <name>RepairWOBizType</name>
+    <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].alias</alias>
+    <description>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].description</description>
+    <userDefined>true</userDefined>
+    <bosType>8CCB6ADD</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.ga.rs.RepairWOBizType</businessImplName>
+    <businessControllerName>com.kingdee.eas.ga.rs.app.RepairWOBizTypeController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getValue].description</description>
+            <innerID>8de2e88b-666b-46b4-adcf-2f46aa927ad9</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.rs.app.RepairWOBizType</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getValue].description</description>
+            <innerID>325b5cb1-387a-482d-b18b-0f084fb4ef43</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.rs.app.RepairWOBizType</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>selector</name>
+                    <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getValue].parameters.parameter[selector].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getValue].parameters.parameter[selector].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SelectorItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getValue].description</description>
+            <innerID>95307519-1e37-4a64-9a19-cf180af52ef0</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.rs.app.RepairWOBizType</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getValue].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getValue].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getCollection].description</description>
+            <innerID>dd2053ae-0077-4dad-a6fb-8043fd24bc52</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.rs.app.RepairWOBizType</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getCollection].description</description>
+            <innerID>a1d1ab25-f398-4781-a81d-b478cad82115</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.rs.app.RepairWOBizType</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>view</name>
+                    <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getCollection].parameters.parameter[view].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getCollection].parameters.parameter[view].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.EntityViewInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getCollection].description</description>
+            <innerID>42cf2b2d-3722-485f-b0cf-e076e9993b14</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.rs.app.RepairWOBizType</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getCollection].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getCollection].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <isAbstract>false</isAbstract>
+    <bizUnitPK>com.kingdee.eas.ga.rs.RepairWOBizType</bizUnitPK>
+    <baseEntity>
+        <key name="package" value="com.kingdee.eas.myframework.template.base.app" />
+        <key name="name" value="SimpleDatabase" />
+    </baseEntity>
+    <table>
+        <key name="package" value="com.kingdee.eas.ga.rs.app" />
+        <key name="name" value="CT_RS_RepairWOBizType" />
+    </table>
+    <logicalKey>
+        <name>id</name>
+        <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].logicalKey[id].alias</alias>
+        <description>entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].logicalKey[id].description</description>
+        <keyClass>com.kingdee.bos.dao.IObjectPK</keyClass>
+        <userDefined>true</userDefined>
+        <keyProperties>
+            <baseProperty>
+                <key name="name" value="id" />
+            </baseProperty>
+        </keyProperties>
+    </logicalKey>
+    <resource>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务类型" />
+            <lang locale="zh_TW" value="簡單基礎資料模版" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单级基础资料模板" />
+            <lang locale="zh_TW" value="單級基礎資料範本" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].extendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].extendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="name" />
+            <lang locale="zh_CN" value="name" />
+            <lang locale="zh_TW" value="name" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.ga.rs.app.RepairWOBizTypeQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.rs.app.RepairWOBizTypeQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.rs.app.RepairWOBizTypeQuery" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.ga.rs.client.RepairWOBizTypeEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.rs.client.RepairWOBizTypeEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.rs.client.RepairWOBizTypeEditUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].extendedProperty.isSimpleEntity">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].extendedProperty.isUseCodeRule">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.ga.rs.client.RepairWOBizTypeListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.rs.client.RepairWOBizTypeListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.rs.client.RepairWOBizTypeListUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].logicalKey[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].logicalKey[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getCollection].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getCollection].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getCollection].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getCollection].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getCollection].parameters.parameter[view].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getCollection].parameters.parameter[view].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getValue].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getValue].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getValue].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getValue].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getValue].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getValue].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getValue].parameters.parameter[selector].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairWOBizType].methods.method[getValue].parameters.parameter[selector].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</entityObject>
+

@@ -86,17 +86,6 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
         put("material", item);
     }
     /**
-     * Object:项目配件明细's 套餐property 
-     */
-    public String getTaocan()
-    {
-        return getString("taocan");
-    }
-    public void setTaocan(String item)
-    {
-        setString("taocan", item);
-    }
-    /**
      * Object:项目配件明细's 数量property 
      */
     public java.math.BigDecimal getQty()
@@ -363,6 +352,17 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
     public void setTaxAmount(java.math.BigDecimal item)
     {
         setBigDecimal("taxAmount", item);
+    }
+    /**
+     * Object: 项目配件明细 's 套餐 property 
+     */
+    public com.kingdee.eas.ga.rs.RepairPackageInfo getRepairPkg()
+    {
+        return (com.kingdee.eas.ga.rs.RepairPackageInfo)get("repairPkg");
+    }
+    public void setRepairPkg(com.kingdee.eas.ga.rs.RepairPackageInfo item)
+    {
+        put("repairPkg", item);
     }
     public BOSObjectType getBOSType()
     {

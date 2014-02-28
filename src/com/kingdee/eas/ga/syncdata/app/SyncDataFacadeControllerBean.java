@@ -81,6 +81,7 @@ import com.kingdee.eas.framework.CoreBaseCollection;
 import com.kingdee.eas.framework.Result;
 import com.kingdee.eas.ga.rs.CustomerAccountInfo;
 import com.kingdee.eas.ga.rs.IEnum;
+import com.kingdee.eas.ga.rs.RepairWOBizTypeInfo;
 import com.kingdee.eas.ga.rs.TEnum;
 import com.kingdee.eas.ga.syncdata.DMSInOutQueryEntryCollection;
 import com.kingdee.eas.ga.syncdata.DMSInOutQueryEntryInfo;
@@ -260,6 +261,9 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     	
     	//客户账号
     	CustomerAccountInfo defaultCustomerAccountInfo = GAUtils.getDefaultCustomerAccountInfo(ctx);
+    	
+    	//业务类型
+    	RepairWOBizTypeInfo defaultBizType = GAUtils.getDefaultBizType(ctx);
     	
     	long startTime = System.currentTimeMillis();
     	String number = dmsWipBillInfo.getNumber();
@@ -452,6 +456,7 @@ public class SyncDataFacadeControllerBean extends AbstractSyncDataFacadeControll
     		repairWOInfo.setCustomerAccount(defaultCustomerAccountInfo);
     		repairWOInfo.setCustomerAccountName(defaultCustomerAccountInfo.getName());
     		repairWOInfo.setSaleType(defaultCustomerAccountInfo.getRetailSaleType());
+    		repairWOInfo.setRepairBizType(defaultBizType);
     		
     		hashRepairWOInfo.put(keyWip, repairWOInfo);
     	}

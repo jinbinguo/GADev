@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uiObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.ga.rs.client</package>
+    <name>RepairPackageEditUI</name>
+    <alias>uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].alias</alias>
+    <description>uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].description</description>
+    <userDefined>true</userDefined>
+    <releasePackage>com.kingdee.eas.ga.rs.client</releasePackage>
+    <releaseClass>RepairPackageEditUI</releaseClass>
+    <title>uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].title</title>
+    <uitype />
+    <defaultbutton />
+    <bizUnitPK>com.kingdee.eas.ga.rs.RepairPackage</bizUnitPK>
+    <ruleSet>
+        <key name="package" value="com.kingdee.eas.ga.rs.app" />
+        <key name="name" value="RepairPackageRuleSet" />
+    </ruleSet>
+    <parent>
+        <key name="package" value="com.kingdee.eas.myframework.template.base.client" />
+        <key name="name" value="SimpleDatabaseEditUI" />
+    </parent>
+    <components>
+        <component>
+            <name>CoreUI</name>
+            <alias>uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].components.component[CoreUI].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDPanel</classType>
+            <isContainer>true</isContainer>
+            <constraints>0,0,400,192</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+        </component>
+        <component>
+            <name>chkscheduled</name>
+            <alias>uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].components.component[chkscheduled].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDCheckBox</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>selected</propertyName>
+                    <propertyType>boolean</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>scheduled</bindingField>
+                    <fieldType>boolean</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>true</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>txtNumber</name>
+            <alias>uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].components.component[txtNumber].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDTextField</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>text</propertyName>
+                    <propertyType>java.lang.String</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>number</bindingField>
+                    <fieldType>String</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>true</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>txtName</name>
+            <alias>uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].components.component[txtName].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.extendcontrols.KDBizMultiLangBox</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>_multiLangItem</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>name</bindingField>
+                    <fieldType>String</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>true</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>txtSimpleName</name>
+            <alias>uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].components.component[txtSimpleName].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDTextField</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>text</propertyName>
+                    <propertyType>java.lang.String</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>simpleName</bindingField>
+                    <fieldType>String</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>true</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>txtDescription</name>
+            <alias>uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].components.component[txtDescription].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.extendcontrols.KDBizMultiLangBox</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>_multiLangItem</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>description</bindingField>
+                    <fieldType>String</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>true</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>boxDeletedStatus</name>
+            <alias>uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].components.component[boxDeletedStatus].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDComboBox</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>selectedItem</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>deletedStatus</bindingField>
+                    <fieldType>com.kingdee.eas.basedata.ncm.DeletedStatusEnum</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>true</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>btnPrint</name>
+            <alias>uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].components.component[btnPrint].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDWorkButton</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].components.component[btnPrint].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+        </component>
+        <component>
+            <name>btnPrintPreview</name>
+            <alias>uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].components.component[btnPrintPreview].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDWorkButton</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].components.component[btnPrintPreview].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+        </component>
+    </components>
+    <dataObjects>
+        <dataObject>
+            <name>editData</name>
+            <type>com.kingdee.eas.ga.rs.app.RepairPackage</type>
+            <objectType>enty</objectType>
+            <herited>true</herited>
+            <userDefined>true</userDefined>
+        </dataObject>
+    </dataObjects>
+    <statuses>
+        <status>
+            <id />
+            <name>ADDNEW</name>
+            <alias>uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].statuses.status[ADDNEW].alias</alias>
+            <default />
+            <description>uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].statuses.status[ADDNEW].description</description>
+            <herited>false</herited>
+            <userDefined>true</userDefined>
+            <statusItems>
+                <statusItem>
+                    <name>txtName</name>
+                    <visible />
+                    <enabled>true</enabled>
+                    <herited>true</herited>
+                    <userDefined>true</userDefined>
+                </statusItem>
+                <statusItem>
+                    <name>txtDescription</name>
+                    <visible />
+                    <enabled>true</enabled>
+                    <herited>true</herited>
+                    <userDefined>true</userDefined>
+                </statusItem>
+                <statusItem>
+                    <name>txtNumber</name>
+                    <visible />
+                    <enabled>true</enabled>
+                    <herited>true</herited>
+                    <userDefined>true</userDefined>
+                </statusItem>
+                <statusItem>
+                    <name>txtSimpleName</name>
+                    <visible />
+                    <enabled>true</enabled>
+                    <herited>true</herited>
+                    <userDefined>true</userDefined>
+                </statusItem>
+            </statusItems>
+        </status>
+        <status>
+            <id />
+            <name>EDIT</name>
+            <alias>uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].statuses.status[EDIT].alias</alias>
+            <default />
+            <description>uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].statuses.status[EDIT].description</description>
+            <herited>false</herited>
+            <userDefined>true</userDefined>
+            <statusItems>
+                <statusItem>
+                    <name>txtName</name>
+                    <visible />
+                    <enabled>true</enabled>
+                    <herited>true</herited>
+                    <userDefined>true</userDefined>
+                </statusItem>
+                <statusItem>
+                    <name>txtDescription</name>
+                    <visible />
+                    <enabled>true</enabled>
+                    <herited>true</herited>
+                    <userDefined>true</userDefined>
+                </statusItem>
+                <statusItem>
+                    <name>txtNumber</name>
+                    <visible />
+                    <enabled>true</enabled>
+                    <herited>true</herited>
+                    <userDefined>true</userDefined>
+                </statusItem>
+                <statusItem>
+                    <name>txtSimpleName</name>
+                    <visible />
+                    <enabled>true</enabled>
+                    <herited>true</herited>
+                    <userDefined>true</userDefined>
+                </statusItem>
+            </statusItems>
+        </status>
+        <status>
+            <id />
+            <name>VIEW</name>
+            <alias>uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].statuses.status[VIEW].alias</alias>
+            <default />
+            <description>uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].statuses.status[VIEW].description</description>
+            <herited>false</herited>
+            <userDefined>true</userDefined>
+            <statusItems>
+                <statusItem>
+                    <name>txtName</name>
+                    <visible />
+                    <enabled>false</enabled>
+                    <herited>true</herited>
+                    <userDefined>true</userDefined>
+                </statusItem>
+                <statusItem>
+                    <name>txtDescription</name>
+                    <visible />
+                    <enabled>false</enabled>
+                    <herited>true</herited>
+                    <userDefined>true</userDefined>
+                </statusItem>
+                <statusItem>
+                    <name>txtNumber</name>
+                    <visible />
+                    <enabled>false</enabled>
+                    <herited>true</herited>
+                    <userDefined>true</userDefined>
+                </statusItem>
+                <statusItem>
+                    <name>txtSimpleName</name>
+                    <visible />
+                    <enabled>false</enabled>
+                    <herited>true</herited>
+                    <userDefined>true</userDefined>
+                </statusItem>
+            </statusItems>
+        </status>
+    </statuses>
+    <resource>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修套餐" />
+            <lang locale="zh_TW" value="簡單基礎資料模版" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].components.component[CoreUI].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].components.component[boxDeletedStatus].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].components.component[btnPrintPreview].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].components.component[btnPrintPreview].properties.property[visible].value">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].components.component[btnPrint].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].components.component[btnPrint].properties.property[visible].value">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].components.component[chkscheduled].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].components.component[txtDescription].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].components.component[txtName].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].components.component[txtNumber].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].components.component[txtSimpleName].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单级基础资料模板界面" />
+            <lang locale="zh_TW" value="單級基礎資料範本介面" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].extendedProperty.bimTemplateType">
+            <lang locale="en_US" value="DataBase" />
+            <lang locale="zh_CN" value="DataBase" />
+            <lang locale="zh_TW" value="DataBase" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].extendedProperty.bimUIType">
+            <lang locale="en_US" value="EditUI" />
+            <lang locale="zh_CN" value="EditUI" />
+            <lang locale="zh_TW" value="EditUI" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].statuses.status[ADDNEW].alias">
+            <lang locale="en_US" value="AddNew" />
+            <lang locale="zh_CN" value="AddNew" />
+            <lang locale="zh_TW" value="AddNew" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].statuses.status[ADDNEW].description">
+            <lang locale="en_US" value="AddNew" />
+            <lang locale="zh_CN" value="AddNew" />
+            <lang locale="zh_TW" value="AddNew" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].statuses.status[EDIT].alias">
+            <lang locale="en_US" value="EDIT" />
+            <lang locale="zh_CN" value="EDIT" />
+            <lang locale="zh_TW" value="EDIT" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].statuses.status[EDIT].description">
+            <lang locale="en_US" value="EDIT" />
+            <lang locale="zh_CN" value="EDIT" />
+            <lang locale="zh_TW" value="EDIT" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].statuses.status[VIEW].alias">
+            <lang locale="en_US" value="View" />
+            <lang locale="zh_CN" value="View" />
+            <lang locale="zh_TW" value="View" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].statuses.status[VIEW].description">
+            <lang locale="en_US" value="View" />
+            <lang locale="zh_CN" value="View" />
+            <lang locale="zh_TW" value="View" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.rs.client.RepairPackageEditUI].title">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修套餐" />
+            <lang locale="zh_TW" value="簡單基礎資料模版" />
+        </rs>
+    </resource>
+</uiObject>
+

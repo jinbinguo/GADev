@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.HashMap;
 
 import com.kingdee.bos.Context;
-import com.kingdee.bos.dao.ormapping.ObjectUuidPK;
 import com.kingdee.eas.auto4s.bdm.pbd.BrandInfo;
 import com.kingdee.eas.auto4s.bdm.pbd.IVehicle;
 import com.kingdee.eas.auto4s.bdm.pbd.VehicleFactory;
@@ -24,8 +23,6 @@ import com.kingdee.eas.auto4s.bdm.rsm.RepairTypeFactory;
 import com.kingdee.eas.auto4s.bdm.rsm.RepairTypeInfo;
 import com.kingdee.eas.auto4s.bdm.rsm.WarrantyTypeFactory;
 import com.kingdee.eas.auto4s.bdm.rsm.WarrantyTypeInfo;
-import com.kingdee.eas.basedata.person.IPerson;
-import com.kingdee.eas.basedata.person.PersonFactory;
 import com.kingdee.eas.basedata.person.PersonInfo;
 import com.kingdee.eas.basedata.scm.common.ITransactionType;
 import com.kingdee.eas.basedata.scm.common.TransactionTypeFactory;
@@ -34,6 +31,9 @@ import com.kingdee.eas.common.EASBizException;
 import com.kingdee.eas.ga.rs.CustomerAccountFactory;
 import com.kingdee.eas.ga.rs.CustomerAccountInfo;
 import com.kingdee.eas.ga.rs.ICustomerAccount;
+import com.kingdee.eas.ga.rs.IRepairWOBizType;
+import com.kingdee.eas.ga.rs.RepairWOBizTypeFactory;
+import com.kingdee.eas.ga.rs.RepairWOBizTypeInfo;
 import com.kingdee.eas.myframework.util.DBUtils;
 import com.kingdee.eas.myframework.util.PublicUtils;
 import com.kingdee.jdbc.rowset.IRowSet;
@@ -309,7 +309,7 @@ public class GAUtils implements Serializable {
 		ITransactionType transactionType = null;
 		if (ctx ==null) transactionType = TransactionTypeFactory.getRemoteInstance();
 		else transactionType = TransactionTypeFactory.getLocalInstance(ctx);
-		TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where id='034-2'");
+		TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where number='034-2'");
 		return defaultTransactionInfo;
 	}
 	
@@ -324,7 +324,7 @@ public class GAUtils implements Serializable {
 		ITransactionType transactionType = null;
 		if (ctx ==null) transactionType = TransactionTypeFactory.getRemoteInstance();
 		else transactionType = TransactionTypeFactory.getLocalInstance(ctx);
-		TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where id='030-1'");
+		TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where number='030-1'");
 		return defaultTransactionInfo;
 	}
 	
@@ -338,7 +338,21 @@ public class GAUtils implements Serializable {
 		ITransactionType transactionType = null;
 		if (ctx ==null) transactionType = TransactionTypeFactory.getRemoteInstance();
 		else transactionType = TransactionTypeFactory.getLocalInstance(ctx);
-		TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where id='030-2'");
+		TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where number='030-2'");
 		return defaultTransactionInfo;
+	}
+	
+	/**
+	 * 默认 业务类型
+	 * @param ctx
+	 * @return
+	 * @throws Exception
+	 */
+	public static RepairWOBizTypeInfo getDefaultBizType(Context ctx) throws Exception {
+		IRepairWOBizType repairWOBizType = null;
+		if (repairWOBizType == null) repairWOBizType = RepairWOBizTypeFactory.getRemoteInstance();
+		else repairWOBizType = RepairWOBizTypeFactory.getLocalInstance(ctx);
+		RepairWOBizTypeInfo defaultBizType = repairWOBizType.getRepairWOBizTypeInfo("where number='0001'");
+		return defaultBizType;
 	}
 }
