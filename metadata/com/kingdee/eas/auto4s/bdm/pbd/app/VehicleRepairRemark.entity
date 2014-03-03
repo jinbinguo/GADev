@@ -616,6 +616,60 @@
                 <key name="name" value="R_Vehicle_VehicleRepairRemark" />
             </relationship>
         </linkProperty>
+        <ownProperty>
+            <name>remark</name>
+            <alias>entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[remark].alias</alias>
+            <description>entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[remark].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>255</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[remark].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFRemark" />
+            </mappingField>
+        </ownProperty>
+        <linkProperty>
+            <name>repairWO</name>
+            <alias>entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.linkProperty[repairWO].alias</alias>
+            <description>entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.linkProperty[repairWO].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="CFRepairWOID" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="R_VehicleRepairRemark_RepairWO_repairWO" />
+            </relationship>
+        </linkProperty>
+        <ownProperty>
+            <name>createTime</name>
+            <alias>entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[createTime].alias</alias>
+            <description>entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[createTime].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Date</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>8</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[createTime].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFCreateTime" />
+            </mappingField>
+        </ownProperty>
     </properties>
     <logicalKey>
         <name>id</name>
@@ -629,12 +683,29 @@
             </baseProperty>
         </keyProperties>
     </logicalKey>
+    <defaultView>
+        <name />
+        <alias>entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].defaultViewalias</alias>
+        <description>entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].defaultViewdescription</description>
+    </defaultView>
     <resource>
         <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="维修备注" />
             <lang locale="zh_HK" value="維修備註" />
             <lang locale="zh_TW" value="維修備註" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].defaultViewalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].defaultViewdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].description">
             <lang locale="en_US" value="null" />
@@ -1053,6 +1124,199 @@
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.linkProperty[repairWO].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修工单" />
+            <lang locale="zh_HK" value="維修工單" />
+            <lang locale="zh_TW" value="維修工單" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.linkProperty[repairWO].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修工单" />
+            <lang locale="zh_HK" value="維修工單" />
+            <lang locale="zh_TW" value="維修工單" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.linkProperty[repairWO].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.linkProperty[repairWO].extendedProperty.dataField">
+            <lang locale="en_US" value="number" />
+            <lang locale="zh_CN" value="number" />
+            <lang locale="zh_TW" value="number" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.linkProperty[repairWO].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.linkProperty[repairWO].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.linkProperty[repairWO].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.linkProperty[repairWO].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.linkProperty[repairWO].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.linkProperty[repairWO].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.linkProperty[repairWO].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[createTime].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建日期" />
+            <lang locale="zh_HK" value="創建日期" />
+            <lang locale="zh_TW" value="創建日期" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[createTime].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[createTime].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建日期" />
+            <lang locale="zh_HK" value="創建日期" />
+            <lang locale="zh_TW" value="創建日期" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[createTime].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[createTime].extendedProperty.bizDataType">
+            <lang locale="en_US" value="DATE" />
+            <lang locale="zh_CN" value="DATE" />
+            <lang locale="zh_TW" value="DATE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[createTime].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[createTime].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[createTime].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[createTime].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[createTime].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[createTime].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[createTime].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[createTime].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[remark].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="备注" />
+            <lang locale="zh_HK" value="備註" />
+            <lang locale="zh_TW" value="備註" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[remark].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[remark].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="备注" />
+            <lang locale="zh_HK" value="備註" />
+            <lang locale="zh_TW" value="備註" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[remark].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[remark].extendedProperty.bizDataType">
+            <lang locale="en_US" value="NOTE" />
+            <lang locale="zh_CN" value="NOTE" />
+            <lang locale="zh_TW" value="NOTE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[remark].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[remark].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[remark].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[remark].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[remark].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[remark].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[remark].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairRemark].properties.ownProperty[remark].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
         </rs>
     </resource>
 </entityObject>

@@ -63,6 +63,48 @@
             <scale>0</scale>
             <precision>0</precision>
         </column>
+        <column>
+            <name>CFName</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.bdm.pbd.app.CT_ATS_VehicleRepairSender].columns.column[CFName].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.bdm.pbd.app.CT_ATS_VehicleRepairSender].columns.column[CFName].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFTel</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.bdm.pbd.app.CT_ATS_VehicleRepairSender].columns.column[CFTel].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.bdm.pbd.app.CT_ATS_VehicleRepairSender].columns.column[CFTel].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFAddr</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.bdm.pbd.app.CT_ATS_VehicleRepairSender].columns.column[CFAddr].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.bdm.pbd.app.CT_ATS_VehicleRepairSender].columns.column[CFAddr].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>255</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>CPK_ATS_VhclRSI9hr</name>
@@ -84,6 +126,30 @@
             <lang locale="zh_HK" value="維修人信息" />
             <lang locale="zh_TW" value="維修人信息" />
         </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.bdm.pbd.app.CT_ATS_VehicleRepairSender].columns.column[CFAddr].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="送修人地址" />
+            <lang locale="zh_HK" value="送修人地址" />
+            <lang locale="zh_TW" value="送修人地址" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.bdm.pbd.app.CT_ATS_VehicleRepairSender].columns.column[CFAddr].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="送修人地址" />
+            <lang locale="zh_HK" value="送修人地址" />
+            <lang locale="zh_TW" value="送修人地址" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.bdm.pbd.app.CT_ATS_VehicleRepairSender].columns.column[CFName].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="送修人姓名" />
+            <lang locale="zh_HK" value="送修人姓名" />
+            <lang locale="zh_TW" value="送修人姓名" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.bdm.pbd.app.CT_ATS_VehicleRepairSender].columns.column[CFName].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="送修人姓名" />
+            <lang locale="zh_HK" value="送修人姓名" />
+            <lang locale="zh_TW" value="送修人姓名" />
+        </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.bdm.pbd.app.CT_ATS_VehicleRepairSender].columns.column[CFSeq].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="单据分录序列号" />
@@ -94,6 +160,18 @@
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="" />
             <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.bdm.pbd.app.CT_ATS_VehicleRepairSender].columns.column[CFTel].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="送修人电话" />
+            <lang locale="zh_HK" value="送修人電話" />
+            <lang locale="zh_TW" value="送修人電話" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.bdm.pbd.app.CT_ATS_VehicleRepairSender].columns.column[CFTel].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="送修人电话" />
+            <lang locale="zh_HK" value="送修人電話" />
+            <lang locale="zh_TW" value="送修人電話" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.bdm.pbd.app.CT_ATS_VehicleRepairSender].columns.column[FID].alias">
             <lang locale="en_US" value="null" />

@@ -616,6 +616,66 @@
                 <key name="name" value="R_Vehicle_VehicleRepairSender" />
             </relationship>
         </linkProperty>
+        <ownProperty>
+            <name>name</name>
+            <alias>entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[name].alias</alias>
+            <description>entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[name].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>100</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[name].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFName" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>tel</name>
+            <alias>entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[tel].alias</alias>
+            <description>entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[tel].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>100</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[tel].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFTel" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>addr</name>
+            <alias>entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[addr].alias</alias>
+            <description>entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[addr].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>255</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[addr].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFAddr" />
+            </mappingField>
+        </ownProperty>
     </properties>
     <logicalKey>
         <name>id</name>
@@ -1054,6 +1114,210 @@
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[addr].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="送修人地址" />
+            <lang locale="zh_HK" value="送修人地址" />
+            <lang locale="zh_TW" value="送修人地址" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[addr].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[addr].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="送修人地址" />
+            <lang locale="zh_HK" value="送修人地址" />
+            <lang locale="zh_TW" value="送修人地址" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[addr].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[addr].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[addr].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[addr].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[addr].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[addr].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[addr].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[addr].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[addr].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[addr].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[name].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="送修人姓名" />
+            <lang locale="zh_HK" value="送修人姓名" />
+            <lang locale="zh_TW" value="送修人姓名" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[name].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[name].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="送修人姓名" />
+            <lang locale="zh_HK" value="送修人姓名" />
+            <lang locale="zh_TW" value="送修人姓名" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[name].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[name].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[name].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[name].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[name].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[name].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[name].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[name].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[name].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[name].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[tel].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="送修人电话" />
+            <lang locale="zh_HK" value="送修人電話" />
+            <lang locale="zh_TW" value="送修人電話" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[tel].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[tel].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="送修人电话" />
+            <lang locale="zh_HK" value="送修人電話" />
+            <lang locale="zh_TW" value="送修人電話" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[tel].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[tel].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[tel].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[tel].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[tel].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[tel].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[tel].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[tel].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[tel].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleRepairSender].properties.ownProperty[tel].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
         </rs>
     </resource>
 </entityObject>
