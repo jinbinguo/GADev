@@ -84,6 +84,7 @@ import com.kingdee.eas.base.permission.UserInfo;
 import com.kingdee.eas.basedata.assistant.MeasureUnitInfo;
 import com.kingdee.eas.basedata.master.material.MaterialInfo;
 import com.kingdee.eas.basedata.master.material.UsedStatusEnum;
+import com.kingdee.eas.basedata.org.StorageOrgUnitInfo;
 import com.kingdee.eas.basedata.orgext.ServiceOrgUnitInfo;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.eas.common.client.OprtState;
@@ -275,7 +276,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			prmtCustomerAccount.setValue(defaultCustomerAccountInfo);
 			
 			/**上次里程+1*/
-			String sql = String.format("select isnull(max(FReturnMile),0)+1 from T_ATS_WarrRemind where FVehicleID='%s'", defaultVehicleInfo.getString("id"));
+			String sql = String.format("select isnull(max(FMile),0)+1 from T_ATS_RepairWO where FVehicleID='%s'", defaultVehicleInfo.getString("id"));
 			IRowSet rs = DBUtils.executeQuery(null, sql);
 			if (rs != null && rs.next()) {
 				BigDecimal mile = rs.getBigDecimal(1);
@@ -955,15 +956,29 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 				kdtRWOItemSpEntry.getRow(rowIndex).getCell(colIndex).setValue(oldValue);
 				return;
 			}
+			
 			kdtRWOItemSpEntry.getRow(rowIndex).getCell(amountIndex).setValue(amount);
 			kdtRWOItemSpEntry.getRow(rowIndex).getCell(taxAmountIndex).setValue(taxAmount);
 			kdtRWOItemSpEntry.getRow(rowIndex).getCell(discountRateIndex).setValue(discountRate);
 			calItemSpEntryAmount(kdtRWOItemSpEntry.getRow(rowIndex));
 			
-			
-			
 		}
 
+	}
+	
+	private BigDecimal getMaterialCostPrice(String stroageUnitId,MaterialInfo materialInfo) throws Exception {
+		if (stroageUnitId == null || materialInfo == null) return BIGDEC0;
+		
+
+		String sql = String.format("select isnull(CFCostPrice,0) from  T_BD_MaterialInventory where FMaterialID='%s' and FOrgUnit='%s'",
+				materialInfo.getString("id"),stroageUnitId);
+		IRowSet rs = DBUtils.executeQuery(null, sql);
+		
+		if (rs != null && rs.next()) {
+			BigDecimal costPrice = PublicUtils.getBigDecimal(rs.getBigDecimal(1));
+			return costPrice;
+		}
+		return BIGDEC0;
 	}
 	
 	private void resetItemSpEditorLocked(IRow row) {
@@ -1042,7 +1057,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	@Override
 	protected void prmtVehicle_dataChanged(DataChangeEvent e) throws Exception {
 		super.prmtVehicle_dataChanged(e);
-		txtMile.setText(null);
+		txtMile.setValue(null);
 	}
 
 	private void resetBtnAction(KDWorkButton btn, Action action) {
@@ -1074,6 +1089,11 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		kDTRWOPane.insertTab(resHelper.getString("kDPRwoItemSp.constraints"), null, kDPRwoItemSp, resHelper.getString("kDPRwoItemSp.constraints"), 0);
 		kDTRWOPane.setSelectedIndex(0);
 		
+	}
+	@Override
+	protected void clearItemData() {
+		super.clearItemData();
+		kdtRWOItemSpEntry.removeRows();
 	}
 	@Override
 	protected KDTable getDetailTable() {
@@ -1321,7 +1341,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     		MsgBoxEx.showDetailAndOK(this, "删除行失败，请查看明细", errMsg.toString(), MsgBox.OK);
     		return false;
     	}
-    	for (int i = 0; i < iSelRow.length; i++) {
+    	for (int i = 0; iSelRow != null && i < iSelRow.length; i++) {
     		IRow rowItemSpEntry = kdtRWOItemSpEntry.getRow(iSelRow[i]);
     		RepairWORWOItemSpEntryInfo rwoItemSpEntryInfo = (RepairWORWOItemSpEntryInfo) rowItemSpEntry.getUserObject();
     		String itemSpEntryId = rwoItemSpEntryInfo.getString("id");
@@ -1557,6 +1577,8 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		prmtRepairItem.addDataChangeListener(new DataChangeListener() {
 
 			public void dataChanged(DataChangeEvent eventObj) {
+				
+				
 				String repairItemNums = "";
 				int beginRowIndex = 0;
 				  if(null != eventObj && null != eventObj.getNewValue())  {
@@ -1625,7 +1647,10 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	private void prmtRepairItem_dataChange(KDTable kdTable, RepairItemEntryInfo[] repairItemEntryInfos) {
 		 // KDTSelectManager selectManager = kdTable.getSelectManager();
         // KDTSelectBlock selectBlock = selectManager.get(0);
-         
+		if (PublicUtils.isEmpty(txtMile.getText())) {
+			MsgBoxEx.showInfo("进厂行驶里程不能为空");
+			return;
+		}
          //if(selectBlock == null)
        	 int beginRowIndex = kdTable.getRowCount();
          //else beginRowIndex = selectBlock.getBeginRow();
@@ -1826,6 +1851,12 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			prmtMaterial.addDataChangeListener(new DataChangeListener() {
 				
 				public void dataChanged(DataChangeEvent eventObj) {
+					if (PublicUtils.isEmpty(txtMile.getText())) {
+						MsgBox.showInfo(RepairWOEditUIPIEx.this, "进厂行驶里程不能为空");
+						prmtMaterial.setValue(null);
+						return;
+					}
+					
 					  if(null != eventObj && null != eventObj.getNewValue())  {
 						  Object newObject = prmtMaterial.getValue();
 						  MaterialInfo materialInfos[] = null;
@@ -2009,7 +2040,10 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     
     @Override
     protected void beforeStoreFields(ActionEvent arg0) throws Exception {
-
+    	//检查配件行，成本价与可用数量
+    	checkReparirSpCostAndInvQty();
+    	
+    	//保存至标准产品分录
     	saveRepairItemAndSpToEntry();
     	
     	//---begin--原4S标准代码，调整，取消对负数控制
@@ -2181,10 +2215,34 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		
 		//---end--原4S标准代码，调整，取消对负数控制
 		
-		saveVehicleMile();
+		//saveVehicleMile();
     }
     
-    @Override
+    private void checkReparirSpCostAndInvQty() throws Exception {
+    	String orgId = orgUnitInfo.getString("id");
+    	StringBuilder msg = new StringBuilder();
+    	for (int i = 0; i < kdtRWOItemSpEntry.getRowCount(); i++) {
+    		IRow row = kdtRWOItemSpEntry.getRow(i);
+    		TEnum tType = (TEnum) row.getCell("t").getValue();
+    		if (!PublicUtils.equals(TEnum.P, tType)) continue;
+    		MaterialInfo materialInfo = (MaterialInfo) row.getCell("material").getValue(); 
+    		BigDecimal price = PublicUtils.getBigDecimal(row.getCell("price").getValue()); //不含税
+    		BigDecimal discountRate = PublicUtils.getBigDecimal(row.getCell("discountRate").getValue());
+    		BigDecimal factPrice = price.multiply(BIGDEC1.subtract(discountRate.divide(BIGDEC100,10,BigDecimal.ROUND_HALF_UP)));
+    		BigDecimal costPrice =  getMaterialCostPrice(orgId, materialInfo);
+    		String spName = (String) row.getCell("itemspName").getValue();
+    		if (factPrice.compareTo(costPrice)<0) {
+    			msg.append(String.format("第%d行，[%s]折后价格不能低于成本价", i+1,spName)).append(CR);
+    		}	
+    	}
+    	if (msg.length() > 0) {
+    		MsgBoxEx.showDetailAndOK(this, "保存异常", msg.toString(), MsgBox.YES);
+    		abort();
+    	}
+    	
+		
+	}
+	@Override
     public SelectorItemCollection getSelectors() {
     	SelectorItemCollection sic = super.getSelectors();
     	sic.add(new SelectorItemInfo("lastUpdateTime"));
@@ -2568,19 +2626,26 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     }
     
     public void saveVehicleMile() throws Exception {
+    	if (PublicUtils.isEmpty(editData.getString("id"))) return;
     	
     	IWarrRemind warrRemind = WarrRemindFactory.getRemoteInstance();
     	WarrRemindInfo warrRemindInfo = null;
     	if (vehicleInfo == null) return;
-    	SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    	SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
     	Date dateComeTime = (Date) pkComeTime.getValue();
     	dateComeTime.setSeconds(1);
   
     	BigDecimal mile = txtMile.getBigDecimalValue();
     	
-    	String sql = String.format("select FID from T_ATS_WarrRemind WHERE FVehicleID='%s' and convert(varchar(20),FReturnTime,120)='%s'",
-    			vehicleInfo.getString("id"),sf.format(dateComeTime));
+    	
     	try {
+    		String sql = "";
+    		sql = String.format("delete T_ATS_WarrRemind where FRepairWOID='%s'", editData.getString("id"));
+    		DBUtils.execute(null, sql);
+  
+        	sql = String.format("select FID from T_ATS_WarrRemind WHERE FVehicleID='%s' and convert(varchar(10),FReturnTime,120)='%s' order by FReturnTime desc",
+        			vehicleInfo.getString("id"),sf.format(dateComeTime));
+        	
     		IRowSet rs = DBUtils.executeQueryForDialect(null, sql);
     		if (rs != null && rs.next()) {
     			warrRemindInfo = warrRemind.getWarrRemindInfo(new ObjectUuidPK(rs.getString(1)));
@@ -2607,6 +2672,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     public void actionSave_actionPerformed(ActionEvent e) throws Exception {
     	checkDataChange();
     	super.actionSave_actionPerformed(e);
+    	saveVehicleMile();
     }
     
     @Override
