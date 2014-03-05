@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relationship xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.auto4s.rsm.rs.app</package>
+    <name>R_RepairWO_VehicleRepairSender_repairMan</name>
+    <alias>relationship[com.kingdee.eas.auto4s.rsm.rs.app.R_RepairWO_VehicleRepairSender_repairMan].alias</alias>
+    <description>relationship[com.kingdee.eas.auto4s.rsm.rs.app.R_RepairWO_VehicleRepairSender_repairMan].description</description>
+    <userDefined>true</userDefined>
+    <type>Association</type>
+    <clientCardinality>1</clientCardinality>
+    <supplierCardinality>0..1</supplierCardinality>
+    <xmlNodeRelationship />
+    <clientObject>
+        <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+        <key name="name" value="RepairWO" />
+    </clientObject>
+    <supplierObject>
+        <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+        <key name="name" value="VehicleRepairSender" />
+    </supplierObject>
+    <resource>
+        <rs key="relationship[com.kingdee.eas.auto4s.rsm.rs.app.R_RepairWO_VehicleRepairSender_repairMan].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="relationship[com.kingdee.eas.auto4s.rsm.rs.app.R_RepairWO_VehicleRepairSender_repairMan].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</relationship>
+

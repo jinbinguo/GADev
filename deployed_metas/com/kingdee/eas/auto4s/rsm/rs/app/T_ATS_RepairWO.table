@@ -1099,6 +1099,20 @@
             <scale>0</scale>
             <precision>0</precision>
         </column>
+        <column>
+            <name>CFGaBillStatus</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[CFGaBillStatus].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[CFGaBillStatus].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>PK_ATS_RepairWOID</name>
@@ -1531,6 +1545,18 @@
             <lang locale="zh_HK" value="部門" />
             <lang locale="zh_TW" value="部門" />
         </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[CFGaBillStatus].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据状态" />
+            <lang locale="zh_HK" value="單據狀態" />
+            <lang locale="zh_TW" value="單據狀態" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[CFGaBillStatus].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据状态" />
+            <lang locale="zh_HK" value="單據狀態" />
+            <lang locale="zh_TW" value="單據狀態" />
+        </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[CFGaDept].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="部门" />
@@ -1735,15 +1761,15 @@
         </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCustomerID].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="客户" />
-            <lang locale="zh_HK" value="客戶" />
-            <lang locale="zh_TW" value="客戶" />
+            <lang locale="zh_CN" value="车主" />
+            <lang locale="zh_HK" value="車主" />
+            <lang locale="zh_TW" value="車主" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCustomerID].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="客户" />
-            <lang locale="zh_HK" value="客戶" />
-            <lang locale="zh_TW" value="客戶" />
+            <lang locale="zh_CN" value="车主" />
+            <lang locale="zh_HK" value="車主" />
+            <lang locale="zh_TW" value="車主" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FCustomerRequest].alias">
             <lang locale="en_US" value="null" />

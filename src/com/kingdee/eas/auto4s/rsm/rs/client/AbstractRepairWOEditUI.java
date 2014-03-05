@@ -1560,11 +1560,6 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
 			}
 		});
 					
-        KDTextField kdtRWORepairItemEntry_RepairItemName_TextField = new KDTextField();
-        kdtRWORepairItemEntry_RepairItemName_TextField.setName("kdtRWORepairItemEntry_RepairItemName_TextField");
-        kdtRWORepairItemEntry_RepairItemName_TextField.setMaxLength(255);
-        KDTDefaultCellEditor kdtRWORepairItemEntry_RepairItemName_CellEditor = new KDTDefaultCellEditor(kdtRWORepairItemEntry_RepairItemName_TextField);
-        this.kdtRWORepairItemEntry.getColumn("RepairItemName").setEditor(kdtRWORepairItemEntry_RepairItemName_CellEditor);
         KDTextArea kdtRWORepairItemEntry_ItemRemark_TextArea = new KDTextArea();
         kdtRWORepairItemEntry_ItemRemark_TextArea.setName("kdtRWORepairItemEntry_ItemRemark_TextArea");
         kdtRWORepairItemEntry_ItemRemark_TextArea.setMaxLength(255);
@@ -1917,11 +1912,6 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         ObjectValueRender kdtRWOSparepartEntry_Material_OVR = new ObjectValueRender();
         kdtRWOSparepartEntry_Material_OVR.setFormat(new BizDataFormat("$number$"));
         this.kdtRWOSparepartEntry.getColumn("Material").setRenderer(kdtRWOSparepartEntry_Material_OVR);
-        KDTextField kdtRWOSparepartEntry_MaterialName_TextField = new KDTextField();
-        kdtRWOSparepartEntry_MaterialName_TextField.setName("kdtRWOSparepartEntry_MaterialName_TextField");
-        kdtRWOSparepartEntry_MaterialName_TextField.setMaxLength(255);
-        KDTDefaultCellEditor kdtRWOSparepartEntry_MaterialName_CellEditor = new KDTDefaultCellEditor(kdtRWOSparepartEntry_MaterialName_TextField);
-        this.kdtRWOSparepartEntry.getColumn("MaterialName").setEditor(kdtRWOSparepartEntry_MaterialName_CellEditor);
         final KDBizPromptBox kdtRWOSparepartEntry_PaymentClassify_PromptBox = new KDBizPromptBox();
         kdtRWOSparepartEntry_PaymentClassify_PromptBox.setQueryInfo("com.kingdee.eas.auto4s.bdm.rsm.app.PaymentClassifyQuery");
         kdtRWOSparepartEntry_PaymentClassify_PromptBox.setVisible(true);
@@ -2476,11 +2466,6 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         ObjectValueRender kdtRWOAttachmentItemEntry_AttaItem_OVR = new ObjectValueRender();
         kdtRWOAttachmentItemEntry_AttaItem_OVR.setFormat(new BizDataFormat("$number$"));
         this.kdtRWOAttachmentItemEntry.getColumn("AttaItem").setRenderer(kdtRWOAttachmentItemEntry_AttaItem_OVR);
-        KDTextField kdtRWOAttachmentItemEntry_AttaItemName_TextField = new KDTextField();
-        kdtRWOAttachmentItemEntry_AttaItemName_TextField.setName("kdtRWOAttachmentItemEntry_AttaItemName_TextField");
-        kdtRWOAttachmentItemEntry_AttaItemName_TextField.setMaxLength(255);
-        KDTDefaultCellEditor kdtRWOAttachmentItemEntry_AttaItemName_CellEditor = new KDTDefaultCellEditor(kdtRWOAttachmentItemEntry_AttaItemName_TextField);
-        this.kdtRWOAttachmentItemEntry.getColumn("AttaItemName").setEditor(kdtRWOAttachmentItemEntry_AttaItemName_CellEditor);
         KDFormattedTextField kdtRWOAttachmentItemEntry_AttaItemAmount_TextField = new KDFormattedTextField();
         kdtRWOAttachmentItemEntry_AttaItemAmount_TextField.setName("kdtRWOAttachmentItemEntry_AttaItemAmount_TextField");
         kdtRWOAttachmentItemEntry_AttaItemAmount_TextField.setVisible(true);
@@ -3290,18 +3275,16 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         kDTabbedPane1.add(kDPRemark, resHelper.getString("kDPRemark.constraints"));
         //kDPBizInfo
         kDPBizInfo.setLayout(new KDLayout());
-        kDPBizInfo.putClientProperty("OriginalBounds", new Rectangle(0, 0, 967, 149));        contCustomer.setBounds(new Rectangle(351, 6, 276, 19));
-        kDPBizInfo.add(contCustomer, new KDLayout.Constraints(351, 6, 276, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contSA.setBounds(new Rectangle(10, 66, 270, 19));
+        kDPBizInfo.putClientProperty("OriginalBounds", new Rectangle(0, 0, 967, 149));        contSA.setBounds(new Rectangle(10, 66, 270, 19));
         kDPBizInfo.add(contSA, new KDLayout.Constraints(10, 66, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contVehicle.setBounds(new Rectangle(10, 6, 270, 19));
         kDPBizInfo.add(contVehicle, new KDLayout.Constraints(10, 6, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contOrgUnit.setBounds(new Rectangle(10, 35, 270, 19));
         kDPBizInfo.add(contOrgUnit, new KDLayout.Constraints(10, 35, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contRemark.setBounds(new Rectangle(349, 93, 609, 43));
-        kDPBizInfo.add(contRemark, new KDLayout.Constraints(349, 93, 609, 43, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contcustomInfo.setBounds(new Rectangle(349, 35, 277, 50));
-        kDPBizInfo.add(contcustomInfo, new KDLayout.Constraints(349, 35, 277, 50, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contRemark.setBounds(new Rectangle(351, 93, 609, 43));
+        kDPBizInfo.add(contRemark, new KDLayout.Constraints(351, 93, 609, 43, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contcustomInfo.setBounds(new Rectangle(351, 35, 277, 50));
+        kDPBizInfo.add(contcustomInfo, new KDLayout.Constraints(351, 35, 277, 50, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contsaleType.setBounds(new Rectangle(688, 66, 270, 19));
         kDPBizInfo.add(contsaleType, new KDLayout.Constraints(688, 66, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contCustomerAccount.setBounds(new Rectangle(688, 6, 270, 19));
@@ -3310,10 +3293,8 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         kDPBizInfo.add(contcustomerAccountName, new KDLayout.Constraints(688, 35, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contgaDept.setBounds(new Rectangle(10, 93, 270, 19));
         kDPBizInfo.add(contgaDept, new KDLayout.Constraints(10, 93, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contrepairBizType.setBounds(new Rectangle(10, 117, 270, 19));
-        kDPBizInfo.add(contrepairBizType, new KDLayout.Constraints(10, 117, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        //contCustomer
-        contCustomer.setBoundEditor(prmtCustomer);
+        contrepairBizType.setBounds(new Rectangle(351, 6, 277, 19));
+        kDPBizInfo.add(contrepairBizType, new KDLayout.Constraints(351, 6, 277, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         //contSA
         contSA.setBoundEditor(prmtSA);
         //contVehicle
@@ -3356,8 +3337,8 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         kDPRepairInfo.add(kDLabelContainer4, new KDLayout.Constraints(13, 86, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         kDLabelContainer6.setBounds(new Rectangle(342, 86, 270, 19));
         kDPRepairInfo.add(kDLabelContainer6, new KDLayout.Constraints(342, 86, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        btnShowRepairSender.setBounds(new Rectangle(261, 49, 22, 19));
-        kDPRepairInfo.add(btnShowRepairSender, new KDLayout.Constraints(261, 49, 22, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE));
+        btnShowRepairSender.setBounds(new Rectangle(263, 49, 22, 19));
+        kDPRepairInfo.add(btnShowRepairSender, new KDLayout.Constraints(263, 49, 22, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE));
         //contTel
         contTel.setBoundEditor(txtTel);
         //contRepairSender
@@ -3382,10 +3363,12 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         kDPVehicleInfo.add(kDLabelContainer1, new KDLayout.Constraints(352, 10, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contSeries.setBounds(new Rectangle(352, 44, 270, 19));
         kDPVehicleInfo.add(contSeries, new KDLayout.Constraints(352, 44, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contModel.setBounds(new Rectangle(686, 41, 270, 19));
-        kDPVehicleInfo.add(contModel, new KDLayout.Constraints(686, 41, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contModel.setBounds(new Rectangle(680, 41, 270, 19));
+        kDPVehicleInfo.add(contModel, new KDLayout.Constraints(680, 41, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contVIN.setBounds(new Rectangle(17, 10, 270, 19));
         kDPVehicleInfo.add(contVIN, new KDLayout.Constraints(17, 10, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contCustomer.setBounds(new Rectangle(680, 10, 270, 19));
+        kDPVehicleInfo.add(contCustomer, new KDLayout.Constraints(680, 10, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contBrand.setBounds(new Rectangle(19, 44, 270, 19));
         kDPVehicleInfo.add(contBrand, new KDLayout.Constraints(19, 44, 270, 19, KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         //kDLabelContainer1
@@ -3396,6 +3379,8 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         contModel.setBoundEditor(txtModel);
         //contVIN
         contVIN.setBoundEditor(txtVIN);
+        //contCustomer
+        contCustomer.setBoundEditor(prmtCustomer);
         //contBrand
         contBrand.setBoundEditor(prmtBrand);
         //kDPHideField
@@ -3592,8 +3577,8 @@ vo.put("i","I");
         kDPRwoItemSp.add(kDLabelContainer8, new KDLayout.Constraints(14, 6, 93, 19, 0));
         labRepairItem.setBounds(new Rectangle(153, 5, 265, 19));
         kDPRwoItemSp.add(labRepairItem, new KDLayout.Constraints(153, 5, 265, 19, 0));
-        labMaterial.setBounds(new Rectangle(153, 5, 159, 19));
-        kDPRwoItemSp.add(labMaterial, new KDLayout.Constraints(153, 5, 159, 19, 0));
+        labMaterial.setBounds(new Rectangle(153, 5, 265, 19));
+        kDPRwoItemSp.add(labMaterial, new KDLayout.Constraints(153, 5, 265, 19, 0));
         //kDLabelContainer8
         kDLabelContainer8.setBoundEditor(cmbT);
         //labRepairItem

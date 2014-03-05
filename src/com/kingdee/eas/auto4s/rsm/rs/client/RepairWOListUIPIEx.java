@@ -33,12 +33,14 @@ public class RepairWOListUIPIEx extends RepairWOListUI {
 
 	@Override
 	public void onLoad() throws Exception {
+		cmbGABillStatus.insertItemAt("全部", 0);
+		cmbGABillStatus.setSelectedIndex(0);
+		
 		super.onLoad();
 		int intendDeliveryTimeIndex = tblMain.getColumnIndex("IntendDeliveryTime");
 		tblMain.getHead().getRow(0).getCell(intendDeliveryTimeIndex).setValue("预计出厂时间");
 		
-		cmbGABillStatus.insertItemAt("全部", 0);
-		cmbGABillStatus.setSelectedIndex(0);
+		
 	}
 	
 	@Override
@@ -47,6 +49,7 @@ public class RepairWOListUIPIEx extends RepairWOListUI {
 			FilterInfo myFilterInfo = (FilterInfo) InvokeUtils.getFieldValue(this, "myFilterInfo");
 			if (cmbGABillStatus.getSelectedItem() != null && cmbGABillStatus.getSelectedItem().toString() != quanBu) {
 				FilterInfo filterInfo = new FilterInfo();
+				
 				filterInfo.getFilterItems().add(new FilterItemInfo("gaBillStatus", ((RepairWOStatusEnum) cmbGABillStatus.getShowSelectedItem()).getValue(),CompareType.EQUALS));
 				myFilterInfo.mergeFilter(filterInfo,"and");
 			}

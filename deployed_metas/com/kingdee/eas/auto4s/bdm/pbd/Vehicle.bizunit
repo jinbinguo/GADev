@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizUnit xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.auto4s.bdm.pbd</package>
+    <name>Vehicle</name>
+    <alias>bizUnit[com.kingdee.eas.auto4s.bdm.pbd.Vehicle].alias</alias>
+    <description>bizUnit[com.kingdee.eas.auto4s.bdm.pbd.Vehicle].description</description>
+    <userDefined>false</userDefined>
+    <bizType>BaseData</bizType>
+    <template>false</template>
+    <entityPK>com.kingdee.eas.auto4s.bdm.pbd.app.Vehicle</entityPK>
+    <queryPK>com.kingdee.eas.auto4s.bdm.pbd.app.VehicleQuery</queryPK>
+    <editUIPK>com.kingdee.eas.auto4s.bdm.pbd.client.VehicleEditUI</editUIPK>
+    <listUIPK>com.kingdee.eas.auto4s.bdm.pbd.client.VehicleListUI</listUIPK>
+    <webEditUIPK />
+    <webListUIPK />
+    <entityFunctionPK />
+    <editUIFunctionPK />
+    <listUIFunctionPK />
+    <entryUIPK />
+    <versionDate />
+    <versionNumber />
+    <extendTablePKs />
+    <extendEntityPKs />
+    <extendQueryPKs />
+    <extendEditUIPKs />
+    <extendListUIPKs />
+    <menuPKList />
+    <bimTemplateType>DataBase</bimTemplateType>
+    <relatedTablePK />
+    <relatedEntityPK />
+    <relatedEditUIPK />
+    <genImplementCode>false</genImplementCode>
+    <webEditPagePK />
+    <webListPagePK />
+    <webPagePKS />
+    <webViewPagePK />
+    <webBriefPagePK />
+    <relatedWebEditPagePK />
+    <relatedQueryPK />
+    <resource>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.bdm.pbd.Vehicle].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="车辆" />
+            <lang locale="zh_HK" value="車輛" />
+            <lang locale="zh_TW" value="車輛" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.bdm.pbd.Vehicle].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.bdm.pbd.Vehicle].extendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.bdm.pbd.Vehicle].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.bdm.pbd.Vehicle].extendedProperty.acctCussentQueryPK">
+            <lang locale="en_US" value="com.kingdee.eas.fi.gl.app.AcctCussentQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.fi.gl.app.AcctCussentQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.fi.gl.app.AcctCussentQuery" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.bdm.pbd.Vehicle].extendedProperty.asstAcctObjectPK">
+            <lang locale="en_US" value="com.kingdee.eas.basedata.master.auxacct.app.AssistantHG" />
+            <lang locale="zh_CN" value="com.kingdee.eas.basedata.master.auxacct.app.AssistantHG" />
+            <lang locale="zh_TW" value="com.kingdee.eas.basedata.master.auxacct.app.AssistantHG" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.bdm.pbd.Vehicle].extendedProperty.asstAcctType">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.bdm.pbd.Vehicle].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.bdm.pbd.Vehicle].extendedProperty.configured">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.bdm.pbd.Vehicle].extendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="name" />
+            <lang locale="zh_CN" value="name" />
+            <lang locale="zh_TW" value="name" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.bdm.pbd.Vehicle].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.auto4s.bdm.pbd.app.VehicleF7Query" />
+            <lang locale="zh_CN" value="com.kingdee.eas.auto4s.bdm.pbd.app.VehicleF7Query" />
+            <lang locale="zh_TW" value="com.kingdee.eas.auto4s.bdm.pbd.app.VehicleF7Query" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.bdm.pbd.Vehicle].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.auto4s.bdm.pbd.client.VehicleEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.auto4s.bdm.pbd.client.VehicleEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.auto4s.bdm.pbd.client.VehicleEditUI" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.bdm.pbd.Vehicle].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.bdm.pbd.Vehicle].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.bdm.pbd.Vehicle].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.bdm.pbd.Vehicle].extendedProperty.isSimpleEntity">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.bdm.pbd.Vehicle].extendedProperty.isUseCodeRule">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.bdm.pbd.Vehicle].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.auto4s.bdm.pbd.client.VehicleListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.auto4s.bdm.pbd.client.VehicleListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.auto4s.bdm.pbd.client.VehicleListUI" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.bdm.pbd.Vehicle].extendedProperty.maxFieldIndex">
+            <lang locale="en_US" value="103" />
+            <lang locale="zh_CN" value="103" />
+            <lang locale="zh_TW" value="103" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.bdm.pbd.Vehicle].extendedProperty.notHasPublicAsstAcct">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.auto4s.bdm.pbd.Vehicle].extendedProperty.useTableEditUI">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</bizUnit>
+

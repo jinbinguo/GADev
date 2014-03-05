@@ -459,7 +459,7 @@ public class AbstractRepairWOInfo extends com.kingdee.eas.auto4s.autoframework.c
         setInt("SourceBillEntrySeq", item);
     }
     /**
-     * Object: 维修工单 's 客户 property 
+     * Object: 维修工单 's 车主 property 
      */
     public com.kingdee.eas.auto4s.bdm.pbd.CustomerInfo getCustomer()
     {

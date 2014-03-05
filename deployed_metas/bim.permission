@@ -3,6 +3,8 @@
     <package />
     <name>bim</name>
     <alias>permission[.bim].alias</alias>
+    <description>permission[.bim].description</description>
+    <userDefined>false</userDefined>
     <permissionItems>
         <permissionItem>
             <innerID>7351bb99-dc10-49ad-a7cb-89c72fd004cbPERMITEM</innerID>
@@ -170,6 +172,26 @@
             <group>permission[.bim].permissionItems.permissionItem[oprtRetailItemspName].group</group>
             <userDefined>true</userDefined>
         </permissionItem>
+        <permissionItem>
+            <innerID>b09feb1b-6d26-49ef-8cd2-4fd0702eb790PERMITEM</innerID>
+            <name>oprtRetailPrice</name>
+            <alias>permission[.bim].permissionItems.permissionItem[oprtRetailPrice].alias</alias>
+            <description>permission[.bim].permissionItems.permissionItem[oprtRetailPrice].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.汽车4S行业产品.维修管理.前台接待.维修工单</groupName>
+            <group>permission[.bim].permissionItems.permissionItem[oprtRetailPrice].group</group>
+            <userDefined>true</userDefined>
+        </permissionItem>
+        <permissionItem>
+            <innerID>4f2ee912-a358-46bd-9b59-72b6bd77bbbdPERMITEM</innerID>
+            <name>oprtRetailBelowCost</name>
+            <alias>permission[.bim].permissionItems.permissionItem[oprtRetailBelowCost].alias</alias>
+            <description>permission[.bim].permissionItems.permissionItem[oprtRetailBelowCost].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.汽车4S行业产品.维修管理.前台接待.维修工单</groupName>
+            <group>permission[.bim].permissionItems.permissionItem[oprtRetailBelowCost].group</group>
+            <userDefined>true</userDefined>
+        </permissionItem>
     </permissionItems>
     <dependences>
         <dependence>
@@ -220,14 +242,31 @@
                 <key name="innerID" value="afb767c1-3ddf-4e3d-83fe-39754c8e68f0PERMITEM" />
             </referedItem>
         </dependence>
+        <dependence>
+            <id>b09feb1b-6d26-49ef-8cd2-4fd0702eb790PERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="b09feb1b-6d26-49ef-8cd2-4fd0702eb790PERMITEM" />
+            </referedItem>
+        </dependence>
+        <dependence>
+            <id>4f2ee912-a358-46bd-9b59-72b6bd77bbbdPERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="4f2ee912-a358-46bd-9b59-72b6bd77bbbdPERMITEM" />
+            </referedItem>
+        </dependence>
     </dependences>
     <resource>
         <rs key="permission[.bim].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="bim" />
             <lang locale="zh_HK" value="bim" />
             <lang locale="zh_TW" value="bim" />
         </rs>
         <rs key="permission[.bim].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="permission[.bim].permissionItems.permissionItem[dmsImport].alias">
             <lang locale="en_US" value="null" />
@@ -384,6 +423,34 @@
             <lang locale="zh_HK" value="EAS系統.汽車4S行業產品.維修管理.前台接待.維修工單" />
             <lang locale="zh_TW" value="EAS系統.汽車4S行業產品.維修管理.前台接待.維修工單" />
         </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[oprtRetailBelowCost].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="配件低于成本价销售" />
+            <lang locale="zh_HK" value="配件低於成本價銷售" />
+            <lang locale="zh_TW" value="配件低於成本價銷售" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[oprtRetailBelowCost].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[oprtRetailBelowCost].extendedProperty.orgRelation">
+            <lang locale="en_US" value="Admin" />
+            <lang locale="zh_CN" value="Admin" />
+            <lang locale="zh_TW" value="Admin" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[oprtRetailBelowCost].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[oprtRetailBelowCost].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.汽车4S行业产品.维修管理.前台接待.维修工单" />
+            <lang locale="zh_HK" value="系統.汽車4S行業產品.維修管理.前台接待.維修工單" />
+            <lang locale="zh_TW" value="系統.汽車4S行業產品.維修管理.前台接待.維修工單" />
+        </rs>
         <rs key="permission[.bim].permissionItems.permissionItem[oprtRetailDiscountRate].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="操作零件行折扣率" />
@@ -467,6 +534,34 @@
             <lang locale="zh_CN" value="EAS系统.汽车4S行业产品.维修管理.前台接待.维修工单" />
             <lang locale="zh_HK" value="EAS系統.汽車4S行業產品.維修管理.前台接待.維修工單" />
             <lang locale="zh_TW" value="EAS系統.汽車4S行業產品.維修管理.前台接待.維修工單" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[oprtRetailPrice].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="操作配件行价格" />
+            <lang locale="zh_HK" value="操作配件行價格" />
+            <lang locale="zh_TW" value="操作配件行價格" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[oprtRetailPrice].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[oprtRetailPrice].extendedProperty.orgRelation">
+            <lang locale="en_US" value="Admin" />
+            <lang locale="zh_CN" value="Admin" />
+            <lang locale="zh_TW" value="Admin" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[oprtRetailPrice].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[oprtRetailPrice].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.汽车4S行业产品.维修管理.前台接待.维修工单" />
+            <lang locale="zh_HK" value="系統.汽車4S行業產品.維修管理.前台接待.維修工單" />
+            <lang locale="zh_TW" value="系統.汽車4S行業產品.維修管理.前台接待.維修工單" />
         </rs>
         <rs key="permission[bim].extendedProperty.PI_Extend">
             <lang locale="en_US" value="true" />
