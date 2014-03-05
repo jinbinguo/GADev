@@ -178,6 +178,79 @@ public class GAUtils implements Serializable {
 			throw new EASBizException(new NumericExceptionSubItem("",String.format("车辆品牌[%s]不正确!",brandInfo.getName())));
 		}
 	}
+	
+	/**
+	 *  按品牌获取默认“维修项目-TXT”
+	 * @param ctx
+	 * @param brandInfo
+	 * @return
+	 * @throws Exception
+	 */
+	public static RepairItemInfo getDefaultRepairItemForTXT(Context ctx,BrandInfo brandInfo) throws Exception {
+
+		//品牌 
+		if (hashBrand.isEmpty()) getBrandCol(ctx);
+		BrandInfo defaultBrand_BMW = hashBrand.get("BMW"); //BMW 001
+		BrandInfo defaultBrand_MINI = hashBrand.get("MINI"); //MINI 002
+		//维修项目
+		IRepairItem repairItem = null;
+		if (ctx == null) repairItem = RepairItemFactory.getRemoteInstance();
+		else repairItem = RepairItemFactory.getLocalInstance(ctx);
+		
+		//DMS维修项目TXT（厦门中宝-宝马） TXT-1
+		RepairItemInfo defaultRepairItemTXT_BMW = repairItem.getRepairItemInfo(String.format("where number='%s'", "TXT-1"));
+		//DMS维修项目TXT（厦门中宝-MINI）TXT-2
+		RepairItemInfo defaultRepairItemTXT_MINI = repairItem.getRepairItemInfo(String.format("where number='%s'", "TXT-2"));
+    
+    	
+		if (brandInfo == null) 
+			throw new EASBizException(new NumericExceptionSubItem("","车辆品牌不能为空"));
+		if (PublicUtils.equals(brandInfo, defaultBrand_BMW)) {
+			return defaultRepairItemTXT_BMW;
+		} else if (PublicUtils.equals(brandInfo, defaultBrand_MINI)) {
+			return defaultRepairItemTXT_MINI;
+		} else {
+			throw new EASBizException(new NumericExceptionSubItem("",String.format("车辆品牌[%s]不正确!",brandInfo.getName())));
+		}
+	
+	}
+	
+	/**
+	 *  按品牌获取默认“维修项目-代金券”
+	 * @param ctx
+	 * @param brandInfo
+	 * @return
+	 * @throws Exception
+	 */
+	public static RepairItemInfo getDefaultRepairItemForDJQ(Context ctx,BrandInfo brandInfo) throws Exception {
+
+		//品牌 
+		if (hashBrand.isEmpty()) getBrandCol(ctx);
+		BrandInfo defaultBrand_BMW = hashBrand.get("BMW"); //BMW 001
+		BrandInfo defaultBrand_MINI = hashBrand.get("MINI"); //MINI 002
+		//维修项目
+		IRepairItem repairItem = null;
+		if (ctx == null) repairItem = RepairItemFactory.getRemoteInstance();
+		else repairItem = RepairItemFactory.getLocalInstance(ctx);
+		
+		//DMS维修项目-代金券（厦门中宝-宝马）DJQ-1
+		RepairItemInfo defaultRepairItemDJQ_BMW = repairItem.getRepairItemInfo(String.format("where number='%s'", "DJQ-1"));
+		//DMS维修项目-代金券（厦门中宝-MINI）DJQ-2
+		RepairItemInfo defaultRepairItemDJQ_MINI = repairItem.getRepairItemInfo(String.format("where number='%s'", "DJQ-2"));
+    
+    	
+		if (brandInfo == null) 
+			throw new EASBizException(new NumericExceptionSubItem("","车辆品牌不能为空"));
+		if (PublicUtils.equals(brandInfo, defaultBrand_BMW)) {
+			return defaultRepairItemDJQ_BMW;
+		} else if (PublicUtils.equals(brandInfo, defaultBrand_MINI)) {
+			return defaultRepairItemDJQ_MINI;
+		} else {
+			throw new EASBizException(new NumericExceptionSubItem("",String.format("车辆品牌[%s]不正确!",brandInfo.getName())));
+		}
+	
+	}
+	
 	/**
 	 * 默认车辆
 	 * @param ctx

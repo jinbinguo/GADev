@@ -808,6 +808,19 @@ public class AbstractRepairWOInfo extends com.kingdee.eas.auto4s.autoframework.c
     {
         put("repairBizType", item);
     }
+    /**
+     * Object:维修工单's 单据状态property 
+     */
+    public com.kingdee.eas.ga.rs.RepairWOStatusEnum getGaBillStatus()
+    {
+        return com.kingdee.eas.ga.rs.RepairWOStatusEnum.getEnum(getString("gaBillStatus"));
+    }
+    public void setGaBillStatus(com.kingdee.eas.ga.rs.RepairWOStatusEnum item)
+    {
+		if (item != null) {
+        setString("gaBillStatus", item.getValue());
+		}
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("FDBE5ECA");

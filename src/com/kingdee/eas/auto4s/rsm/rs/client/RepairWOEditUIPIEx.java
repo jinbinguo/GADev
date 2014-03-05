@@ -9,10 +9,10 @@ import java.awt.event.KeyEvent;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import javax.swing.Action;
@@ -25,6 +25,8 @@ import com.kingdee.bos.ctrl.kdf.table.ICell;
 import com.kingdee.bos.ctrl.kdf.table.IColumn;
 import com.kingdee.bos.ctrl.kdf.table.IRow;
 import com.kingdee.bos.ctrl.kdf.table.KDTDefaultCellEditor;
+import com.kingdee.bos.ctrl.kdf.table.KDTMergeManager;
+import com.kingdee.bos.ctrl.kdf.table.KDTRow;
 import com.kingdee.bos.ctrl.kdf.table.KDTSelectBlock;
 import com.kingdee.bos.ctrl.kdf.table.KDTSelectManager;
 import com.kingdee.bos.ctrl.kdf.table.KDTSortManager;
@@ -56,10 +58,19 @@ import com.kingdee.bos.metadata.entity.SelectorItemCollection;
 import com.kingdee.bos.metadata.entity.SelectorItemInfo;
 import com.kingdee.bos.metadata.entity.SorterItemInfo;
 import com.kingdee.bos.metadata.query.util.CompareType;
+import com.kingdee.bos.ui.face.IUIFactory;
+import com.kingdee.bos.ui.face.IUIWindow;
+import com.kingdee.bos.ui.face.UIFactory;
 import com.kingdee.bos.ui.face.UIRuleUtil;
 import com.kingdee.bos.util.BOSUuid;
 import com.kingdee.eas.auto4s.bdm.pbd.BrandInfo;
+import com.kingdee.eas.auto4s.bdm.pbd.IVehicleRepairRemark;
+import com.kingdee.eas.auto4s.bdm.pbd.MakeControl;
 import com.kingdee.eas.auto4s.bdm.pbd.VehicleInfo;
+import com.kingdee.eas.auto4s.bdm.pbd.VehicleRepairRemarkCollection;
+import com.kingdee.eas.auto4s.bdm.pbd.VehicleRepairRemarkFactory;
+import com.kingdee.eas.auto4s.bdm.pbd.VehicleRepairRemarkInfo;
+import com.kingdee.eas.auto4s.bdm.pbd.VehicleRepairSenderInfo;
 import com.kingdee.eas.auto4s.bdm.rsm.PaymentClassifyInfo;
 import com.kingdee.eas.auto4s.bdm.rsm.RepairBillStatusEnum;
 import com.kingdee.eas.auto4s.bdm.rsm.RepairClassifyInfo;
@@ -84,18 +95,20 @@ import com.kingdee.eas.base.permission.UserInfo;
 import com.kingdee.eas.basedata.assistant.MeasureUnitInfo;
 import com.kingdee.eas.basedata.master.material.MaterialInfo;
 import com.kingdee.eas.basedata.master.material.UsedStatusEnum;
-import com.kingdee.eas.basedata.org.StorageOrgUnitInfo;
 import com.kingdee.eas.basedata.orgext.ServiceOrgUnitInfo;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.eas.common.client.OprtState;
 import com.kingdee.eas.common.client.SysContext;
+import com.kingdee.eas.common.client.UIFactoryName;
 import com.kingdee.eas.framework.client.multiDetail.DetailPanel;
 import com.kingdee.eas.ga.basedata.UserTypeEnum;
 import com.kingdee.eas.ga.rs.CustomerAccountInfo;
 import com.kingdee.eas.ga.rs.IEnum;
 import com.kingdee.eas.ga.rs.RepairWOBizTypeInfo;
+import com.kingdee.eas.ga.rs.RepairWOStatusEnum;
 import com.kingdee.eas.ga.rs.TEnum;
 import com.kingdee.eas.ga.rs.WInfo;
+import com.kingdee.eas.ga.rs.client.RepairSenderF7UI;
 import com.kingdee.eas.ga.util.GAUtils;
 import com.kingdee.eas.myframework.client.MsgBoxEx;
 import com.kingdee.eas.myframework.common.SortTypeEnum;
@@ -120,6 +133,9 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	private UserTypeEnum curUserType = null;
 	//private WarrantyTypeInfo defaultWarrantTypeInfo = null;
 	private RepairClassifyInfo defaultRepairClassifyInfo = null;
+	private RepairItemInfo defaultRepairItemForTXT = null;
+	private RepairItemInfo defaultRepairItemForDJQ = null;
+	
 	private RepairTypeInfo defaultRepairTypeInfo = null;
 	private boolean hasPermission_OprtRetailLine = false; //零售行操作权限 
 	private boolean hasPermission_OprtRepairLine = false; //维修行操作权限
@@ -219,6 +235,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		kDTRWOPane.remove(kDPSpk);
 		kDTRWOPane.remove(kDPAct);
 		kDTRWOPane.remove(kDPAcc);
+		kDTRWOPane.remove(KDPAmount);
 
 		//-----------隐藏工具栏按钮
 		actionSubmit.setVisible(false); //提交
@@ -241,9 +258,9 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		
 		defaultValueForAddNew();
 		
-
 		registePrmtMaterialF7();
 		registePrmtRepairItemF7();
+		//registePrmtRepairManF7();
 		appendItemSpFoot();
 		setCmbT_Permission();
 		
@@ -266,7 +283,10 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	    }
 	    
 	    prmtBrand.setEnabled(false);
+	    actionShowRemarkList.setEnabled(true);
+	    txtTel.setRequired(false);
 	}
+
 	private void defaultValueForAddNew() throws Exception {
 		if (getOprtState().equals(OprtState.ADDNEW)) {
 			VehicleInfo defaultVehicleInfo = GAUtils.getDefualtVehicleInfo(null);
@@ -851,7 +871,9 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			kdtRWOItemSpEntry.setFootManager(footManager);
 			footManager.addFootView();
 		} 
+
 		footRow = footManager.getFootRow(0);
+		//footManager.getMergeManager().setMergeMode(KDTMergeManager.FREE_COLUMN_MERGE);
 		if (footRow == null) footRow =footManager.addFootRow(0);
 		for (int i = 0; i < kdtRWOItemSpEntry.getRowCount(); i++) {
 			IRow row = kdtRWOItemSpEntry.getRow(i);
@@ -865,27 +887,58 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			
 		}
 		totalTaxAmount = totalAmount.add(totalTax);
-		int totalAmountIndex = kdtRWOItemSpEntry.getColumnIndex("itemspNum");
-		footRow.getCell(totalAmountIndex).setValue("总额合计(含税)");
-		footRow.getCell(totalAmountIndex).getStyleAttributes().setHorizontalAlign(HorizontalAlignment.RIGHT);
-		int totalAmountIndex1 = kdtRWOItemSpEntry.getColumnIndex("itemspName");
-		footRow.getCell(totalAmountIndex1).setValue(totalTaxAmount);
-		footRow.getCell(totalAmountIndex1).getStyleAttributes().setNumberFormat("%r{#,##0.00}f");
-		footRow.getCell(totalAmountIndex1).getStyleAttributes().setHorizontalAlign(HorizontalAlignment.LEFT);
 		
-		int totalTaxIndex = kdtRWOItemSpEntry.getColumnIndex("isCT");
-		footRow.getCell(totalTaxIndex).setValue("增值税");
-		footRow.getCell(totalTaxIndex).getStyleAttributes().setHorizontalAlign(HorizontalAlignment.RIGHT);
-		footRow.getCell(totalTaxIndex+1).setValue(totalTax);
-		footRow.getCell(totalTaxIndex+1).getStyleAttributes().setNumberFormat("%r{#,##0.00}f");
-		footRow.getCell(totalTaxIndex+1).getStyleAttributes().setHorizontalAlign(HorizontalAlignment.LEFT);
+		KDTMergeManager footMerge = footManager.getMergeManager();
+		footRow.setMergeable(true);
 		
-		int totalTaxAmountIndex = kdtRWOItemSpEntry.getColumnIndex("issueQty");
-		footRow.getCell(totalTaxAmountIndex).setValue("总额合计");
-		footRow.getCell(totalTaxAmountIndex).getStyleAttributes().setHorizontalAlign(HorizontalAlignment.RIGHT);
-		footRow.getCell(totalTaxAmountIndex+1).setValue(totalAmount);
-		footRow.getCell(totalTaxAmountIndex+1).getStyleAttributes().setNumberFormat("%r{#,##0.00}f");
-		footRow.getCell(totalTaxAmountIndex+1).getStyleAttributes().setHorizontalAlign(HorizontalAlignment.LEFT);
+		for (int i = 0; i < kdtRWOItemSpEntry.getColumnCount(); i++) {
+			footRow.getCell(i).setValue("");
+		}
+		
+		int tIndex = kdtRWOItemSpEntry.getColumnIndex("t");
+		int itemspNumIndex = kdtRWOItemSpEntry.getColumnIndex("itemspNum");
+		footMerge.mergeBlock(0, tIndex, 0, itemspNumIndex);
+		
+		int itemspNameIndex = kdtRWOItemSpEntry.getColumnIndex("itemspName");
+		
+		int repairPkgIndex = kdtRWOItemSpEntry.getColumnIndex("repairPkg");
+		int isCTIndex = kdtRWOItemSpEntry.getColumnIndex("isCT");
+		footMerge.mergeBlock(0, repairPkgIndex, 0, isCTIndex);
+		
+		int qtyIndex =  kdtRWOItemSpEntry.getColumnIndex("qty");
+		int issueQtyIndex =  kdtRWOItemSpEntry.getColumnIndex("issueQty");
+		footMerge.mergeBlock(0, qtyIndex, 0, issueQtyIndex);
+		
+		int priceIndex = kdtRWOItemSpEntry.getColumnIndex("price");
+		int taxPriceIndex = kdtRWOItemSpEntry.getColumnIndex("taxPrice");
+		footMerge.mergeBlock(0, priceIndex, 0, taxPriceIndex);
+		
+		int discountRateIndex = kdtRWOItemSpEntry.getColumnIndex("discountRate");
+		int lastIndex = kdtRWOItemSpEntry.getColumnCount() -1;
+		footMerge.mergeBlock(0, discountRateIndex, 0, lastIndex);
+		
+		
+		footRow.getCell(tIndex).setValue("未税合计");
+		footRow.getCell(tIndex).getStyleAttributes().setHorizontalAlign(HorizontalAlignment.RIGHT);
+
+		footRow.getCell(itemspNameIndex).setValue(totalAmount);
+		footRow.getCell(itemspNameIndex).getStyleAttributes().setNumberFormat("%r{#,##0.00}f");
+		footRow.getCell(itemspNameIndex).getStyleAttributes().setHorizontalAlign(HorizontalAlignment.LEFT);
+		
+		
+		footRow.getCell(repairPkgIndex).setValue("增值税");
+		footRow.getCell(repairPkgIndex).getStyleAttributes().setHorizontalAlign(HorizontalAlignment.RIGHT);
+		footRow.getCell(qtyIndex).setValue(totalTax);
+		footRow.getCell(qtyIndex).getStyleAttributes().setNumberFormat("%r{#,##0.00}f");
+		footRow.getCell(qtyIndex).getStyleAttributes().setHorizontalAlign(HorizontalAlignment.LEFT);
+		
+
+		footRow.getCell(priceIndex).setValue("含税合计");
+		footRow.getCell(priceIndex).getStyleAttributes().setHorizontalAlign(HorizontalAlignment.RIGHT);
+		
+		footRow.getCell(discountRateIndex).setValue(totalTaxAmount);
+		footRow.getCell(discountRateIndex).getStyleAttributes().setNumberFormat("%r{#,##0.00}f");
+		footRow.getCell(discountRateIndex).getStyleAttributes().setHorizontalAlign(HorizontalAlignment.LEFT);
 		
 	}
 	private void valueChangedForItemSpEntry(Object oldValue,KDTEditEvent e) throws Exception {
@@ -1057,7 +1110,38 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	@Override
 	protected void prmtVehicle_dataChanged(DataChangeEvent e) throws Exception {
 		super.prmtVehicle_dataChanged(e);
+		boolean isChange = true;
+		isChange = MakeControl.isF7ValueChanged(e);
+		if(!isChange)
+			return;
 		txtMile.setValue(null);
+		kdtRemarkList.removeRows();
+		//---自动带出默认送修人及电话
+		vehicleInfo = (VehicleInfo) prmtVehicle.getValue();
+		txtRepairSender.setText("");
+		txtTel.setText("");
+		if (vehicleInfo != null) {
+			
+			IRowSet rs = DBUtils.executeQuery(null, String.format("SELECT CFName,CFTel,CFAddr from CT_ATS_VehicleRepairSender where FParentID='%s'", vehicleInfo.getString("id")));
+			if (rs != null && rs.next()) {
+				String name = rs.getString("CFName");
+				String tel = rs.getString("CFTel");
+				String addr = rs.getString("CFAddr");
+				if (!rs.next()) {
+					txtRepairSender.setText(name);
+					txtTel.setText(tel);
+					
+					String strCustomerInfo = name + " " + tel + CR + addr;
+					txtcustomInfo.setText(strCustomerInfo);
+				} else {
+					btnShowRepairSender_actionPerformed(null);
+				}
+			} else {
+				btnShowRepairSender_actionPerformed(null);
+			}
+			
+		}
+		
 	}
 
 	private void resetBtnAction(KDWorkButton btn, Action action) {
@@ -1538,7 +1622,62 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	public void initItemSpMaterialF7(ICell cell) {
 		initItemSpMaterialF7(null,cell);
 	}
+	/*
+	private void registePrmtRepairManF7() {
+		prmtrepairMan.setDisplayFormat("$name$");
+		prmtrepairMan.setCommitFormat("$name$;tel");
+		prmtrepairMan.setEditFormat("$name$");
+		prmtrepairMan.setEnabledMultiSelection(false);
+		prmtrepairMan.addSelectorListener(new SelectorListener() {
+			RepairSenderF7UI f7 = null;
+			public void willShow(SelectorEvent arg0) { 
+				try {
+					if (vehicleInfo == null) {
+						throw new EASBizException(new NumericExceptionSubItem("","请先录入车辆信息！"));
+					}
+					Map uictx = new HashMap();
+					uictx.put("vehicleInfo", vehicleInfo);
+					uictx.put("curRepairSenderInfo", prmtrepairMan.getValue());
+					IUIFactory iUIFactory = UIFactory.createUIFactory(UIFactoryName.MODEL);
+					IUIWindow iUIWindowSizesHEdit = iUIFactory.create(RepairSenderF7UI.class.getName(),uictx); // 获取FeedRecListUI的IUIWindow
+					f7 = (RepairSenderF7UI) iUIWindowSizesHEdit.getUIObject();
+					iUIWindowSizesHEdit.show();
+					prmtrepairMan.setSelector(f7);
+				} catch (Exception e) {
+					UIUtils.handUIExceptionAndAbort(e);
+				}
+			}
+		});
+		prmtrepairMan.addDataChangeListener(new DataChangeListener() {
+			public void dataChanged(DataChangeEvent datachangeevent) {
+				Object obj =  prmtrepairMan.getValue();
+				VehicleRepairSenderInfo repairManInfo = null;
+				if (obj instanceof VehicleRepairSenderInfo) {
+					repairManInfo = (VehicleRepairSenderInfo)obj;
+				} else if (obj instanceof Object[]){
+					repairManInfo =	(VehicleRepairSenderInfo)((Object[])obj)[0];
+				}
+				
+				if (repairManInfo != null) {
+					txtRepairSender.setText(repairManInfo.getName());
+					txtTel.setText(repairManInfo.getTel());
+				} else {
+					txtRepairSender.setText(null);
+					txtTel.setText(null);
+				}
+			}
+			
+		});
+		
+		prmtrepairMan.getEditor().addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				super.keyPressed(e);
+			}
+		});
+	}
 	
+	*/
 	private void registePrmtRepairItemF7() {
 
 		//prmtRepairItem.setVisible(true);
@@ -1682,7 +1821,14 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
              kdTable.getCell(rowIndex,"itemspName").setValue(repairItemInfo.getName());
              kdTable.getCell(rowIndex, "issueQty").setValue(null);
              kdTable.getCell(rowIndex, "unIssueQty").setValue(null);
-             kdTable.getCell(rowIndex, "price").setValue(new BigDecimal(39));
+             if (PublicUtils.equals(repairItemInfo, defaultRepairItemForTXT)) {
+            	 kdTable.getCell(rowIndex, "price").setValue(BIGDEC0);
+             } else {
+            	 kdTable.getCell(rowIndex, "price").setValue(new BigDecimal(39));
+             }
+             if (PublicUtils.equals(repairItemInfo, defaultRepairItemForDJQ)) {
+            	 kdTable.getCell(rowIndex, "qty").setValue(new BigDecimal(-1));
+             }
              try {
 				calItemSpEntryAmount(kdTable.getRow(rowIndex));
 			} catch (Exception e) {
@@ -1691,7 +1837,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
           //   isFirstRowIndex = false;
          }
          int qtyIndex = kdTable.getColumnIndex("qty");
-   	  kdTable.getEditManager().editCellAt(beginRowIndex, qtyIndex);
+   	  	kdTable.getEditManager().editCellAt(beginRowIndex, qtyIndex);
 		
 	}
 	
@@ -2052,9 +2198,9 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		//super.beforeStoreFields(arg0);
     	//--begin 添加抽象类AbstractRepairWOEditUI.beforeStoreFields 
     	
-    	if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(txtTel.getText())) {
-			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"送修人电话"});
-		}
+    	//if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(txtTel.getText())) {
+		//	throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"送修人电话"});
+		//}
 		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(txtRepairSender.getText())) {
 			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"送修人"});
 		}
@@ -2216,6 +2362,21 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		//---end--原4S标准代码，调整，取消对负数控制
 		
 		//saveVehicleMile();
+		//设置GA单据状态
+		HashMap<String,String> hashSettleFlag = new HashMap<String, String>();
+		for (int i = 0; i < kdtRWOItemSpEntry.getRowCount(); i++) {
+			IRow row = kdtRWOItemSpEntry.getRow(i);
+			IEnum iType = (IEnum) row.getCell("i").getValue();
+			hashSettleFlag.put(iType.getValue(),iType.getValue());
+			
+		}
+		if (hashSettleFlag.get(IEnum.X_VALUE) != null && hashSettleFlag.get(IEnum.I_VALUE) != null) { //部分结算
+			gaBillStatus.setSelectedItem(RepairWOStatusEnum.partSettle);
+		} else if (hashSettleFlag.get(IEnum.X_VALUE) != null && hashSettleFlag.get(IEnum.I_VALUE) == null) { //全部结算
+			gaBillStatus.setSelectedItem(RepairWOStatusEnum.AllSettle);
+		} else if (hashSettleFlag.get(IEnum.X_VALUE) == null && hashSettleFlag.get(IEnum.I_VALUE) != null) { //未结算
+			gaBillStatus.setSelectedItem(RepairWOStatusEnum.notSettle);
+		}
     }
     
     private void checkReparirSpCostAndInvQty() throws Exception {
@@ -2511,6 +2672,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     		.append("left join T_ATS_Brand b on a.FBrandID=b.FID ")
     		.append("left join T_ATS_Customer c on c.Fid=a.FCustomerID ")
     		.append(String.format("where a.FID='%s'", vehicleInfo.getString("id")));
+    		
     		try {
     			IRowSet rs = DBUtils.executeQuery(null, sql.toString());
     			if (rs != null && rs.next()) {
@@ -2521,10 +2683,15 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     				prmtBrand.setValue(brandInfo);
     				String strCustomerInfo = rs.getString("CustomerName") + " " + rs.getString("CustomerPhone")
     					+ CR + rs.getString("CustomerAddr");
-    				txtcustomInfo.setText(strCustomerInfo);
+    				///txtcustomInfo.setText(strCustomerInfo);
     				//按品牌获取默认维修类型与维修种类
     				defaultRepairTypeInfo = GAUtils.getDefaultRepairType(null,brandInfo);
     				prmtRepairType.setValue(defaultRepairTypeInfo);
+    				
+ 
+    				//按品牌带出默认维修项目TXT && 维修项目-代金券
+    				defaultRepairItemForTXT = GAUtils.getDefaultRepairItemForTXT(null, brandInfo);
+    				defaultRepairItemForDJQ = GAUtils.getDefaultRepairItemForDJQ(null, brandInfo);
     				
     			}
     		} catch (Exception e) {
@@ -2673,9 +2840,45 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     	checkDataChange();
     	super.actionSave_actionPerformed(e);
     	saveVehicleMile();
+    //	saveRepairSender();
+    	saveRemark();
     }
     
-    @Override
+    private void saveRemark() throws Exception {
+    	if (PublicUtils.isEmpty(editData.getString("id"))) return;
+    	if (PublicUtils.isEmpty(txtRemark.getText().trim())) return;
+    	IVehicleRepairRemark repairRemark = VehicleRepairRemarkFactory.getRemoteInstance();
+    	VehicleRepairRemarkInfo repairRemarkInfo = null;
+    	try {
+    		repairRemarkInfo = repairRemark.getVehicleRepairRemarkInfo(String.format("where repairwo.id='%s'",editData.getString("id")));
+    	} catch (Exception e) {
+    		repairRemarkInfo = new VehicleRepairRemarkInfo();
+    	}
+    	repairRemarkInfo.setRemark(txtRemark.getText());
+    	repairRemarkInfo.setCreateTime(DBUtils.getAppServerTime(null));
+    	repairRemarkInfo.setRepairWO(editData);
+    	repairRemarkInfo.setParent(vehicleInfo);
+    	repairRemark.save(repairRemarkInfo);
+    }
+  /*  private void saveRepairSender() throws Exception {
+    	if (PublicUtils.isEmpty(editData.getString("id"))) return;
+    	IContactPerson contactPerson = ContactPersonFactory.getRemoteInstance();
+		String repairSender = txtRepairSender.getText();
+		String repairTel = txtTel.getText();
+		ContactPersonInfo cPersonInfo = new ContactPersonInfo(); 
+		try {
+			cPersonInfo = contactPerson.getContactPersonInfo(String.format("where name='%s'",repairSender.trim()));
+		} catch (Exception e) {
+			cPersonInfo = new ContactPersonInfo();
+		}
+		cPersonInfo.setName(repairSender);
+		cPersonInfo.setContactMobile(repairTel);
+		contactPerson.save(cPersonInfo);
+    	
+    	
+	}
+	*/
+	@Override
     public void actionEdit_actionPerformed(ActionEvent e) throws Exception {
     	checkDataChange();
     	super.actionEdit_actionPerformed(e);
@@ -2699,4 +2902,44 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     	}
     	
     }
+    @Override
+    public void actionShowRemarkList_actionPerformed(ActionEvent e)
+    		throws Exception {
+    	if (vehicleInfo == null) throw new EASBizException(new NumericExceptionSubItem("","车辆不能为空！"));
+    	IVehicleRepairRemark repairRemark = VehicleRepairRemarkFactory.getRemoteInstance();
+    	kdtRemarkList.removeRows();
+    	kdtRemarkList.getStyleAttributes().setLocked(true);
+    	VehicleRepairRemarkCollection repairRemarkCol =  repairRemark.getVehicleRepairRemarkCollection(String.format("where parent.id='%s' order by createTime desc",vehicleInfo.getString("id")));
+    	for (int i = 0; repairRemarkCol != null && i < repairRemarkCol.size(); i++) {
+    		VehicleRepairRemarkInfo repairRemarkInfo = repairRemarkCol.get(i);
+    		IRow row = kdtRemarkList.addRow();
+    		row.getCell("remark").setValue(repairRemarkInfo.getRemark());
+    		row.getCell("createTime").setValue(repairRemarkInfo.getCreateTime());
+    		
+    	}
+    }
+    
+    @Override
+    protected void btnShowRepairSender_actionPerformed(ActionEvent e)
+    		throws Exception {
+    	Map uictx = new HashMap();
+		uictx.put("vehicleInfo", vehicleInfo);
+		//uictx.put("curRepairSenderInfo", prmtrepairMan.getValue());
+		IUIFactory iUIFactory = UIFactory.createUIFactory(UIFactoryName.MODEL);
+		IUIWindow iUIWindowSizesHEdit = iUIFactory.create(RepairSenderF7UI.class.getName(),uictx); // 获取FeedRecListUI的IUIWindow
+		RepairSenderF7UI f7 = (RepairSenderF7UI) iUIWindowSizesHEdit.getUIObject();
+		iUIWindowSizesHEdit.show();
+		VehicleRepairSenderInfo repairSenderInfo =  (VehicleRepairSenderInfo) f7.getData();
+		if (repairSenderInfo != null && txtRepairSender.isEditable()) {
+			txtRepairSender.setText(repairSenderInfo.getName());
+			txtTel.setText(repairSenderInfo.getTel());
+			
+			String strCustomerInfo = repairSenderInfo.getName() + " " + repairSenderInfo.getTel()
+			+ CR + repairSenderInfo.getAddr();
+			txtcustomInfo.setText(strCustomerInfo);
+		}
+		
+    }
+    
+    
 }

@@ -179,4 +179,9 @@ public abstract class AbstractRepairWOEditUIHandler extends com.kingdee.eas.auto
 	}
 	protected void _handleActionUnAudit(RequestContext request,ResponseContext response, Context context) throws Exception {
 	}
+	public void handleActionShowRemarkList(RequestContext request,ResponseContext response, Context context) throws Exception {
+		_handleActionShowRemarkList(request,response,context);
+	}
+	protected void _handleActionShowRemarkList(RequestContext request,ResponseContext response, Context context) throws Exception {
+	}
 }
