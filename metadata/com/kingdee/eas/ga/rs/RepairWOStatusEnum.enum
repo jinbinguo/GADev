@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizEnum xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.ga.rs</package>
+    <name>RepairWOStatusEnum</name>
+    <alias>bizEnum[com.kingdee.eas.ga.rs.RepairWOStatusEnum].alias</alias>
+    <description>bizEnum[com.kingdee.eas.ga.rs.RepairWOStatusEnum].description</description>
+    <userDefined>true</userDefined>
+    <className>com.kingdee.eas.ga.rs.RepairWOStatusEnum</className>
+    <enumDataType>STRING</enumDataType>
+    <enumValues>
+        <enumValue>
+            <name>notSettle</name>
+            <alias>bizEnum[com.kingdee.eas.ga.rs.RepairWOStatusEnum].enumValues.enumValue[notSettle].alias</alias>
+            <userDefined>true</userDefined>
+            <value>1</value>
+        </enumValue>
+        <enumValue>
+            <name>partSettle</name>
+            <alias>bizEnum[com.kingdee.eas.ga.rs.RepairWOStatusEnum].enumValues.enumValue[partSettle].alias</alias>
+            <userDefined>true</userDefined>
+            <value>2</value>
+        </enumValue>
+        <enumValue>
+            <name>AllSettle</name>
+            <alias>bizEnum[com.kingdee.eas.ga.rs.RepairWOStatusEnum].enumValues.enumValue[AllSettle].alias</alias>
+            <userDefined>true</userDefined>
+            <value>3</value>
+        </enumValue>
+    </enumValues>
+    <resource>
+        <rs key="bizEnum[com.kingdee.eas.ga.rs.RepairWOStatusEnum].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修工单状态" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.rs.RepairWOStatusEnum].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.rs.RepairWOStatusEnum].enumValues.enumValue[AllSettle].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="全部结算" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.rs.RepairWOStatusEnum].enumValues.enumValue[notSettle].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="未结算" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.rs.RepairWOStatusEnum].enumValues.enumValue[partSettle].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="部分结算" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</bizEnum>
+
