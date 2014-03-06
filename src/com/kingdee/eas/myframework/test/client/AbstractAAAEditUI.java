@@ -56,6 +56,8 @@ public abstract class AbstractAAAEditUI extends com.kingdee.eas.framework.client
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contAuditor;
     protected com.kingdee.bos.ctrl.kdf.table.KDTable kdtEntrys;
 	protected com.kingdee.eas.framework.client.multiDetail.DetailPanel kdtEntrys_detailPanel = null;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contTest1;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contTest2;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtCreator;
     protected com.kingdee.bos.ctrl.swing.KDDatePicker kDDateCreateTime;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtLastUpdateUser;
@@ -64,6 +66,8 @@ public abstract class AbstractAAAEditUI extends com.kingdee.eas.framework.client
     protected com.kingdee.bos.ctrl.swing.KDDatePicker pkBizDate;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtDescription;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtAuditor;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtTest1;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtTest2;
     protected com.kingdee.eas.myframework.test.AAAInfo editData = null;
     /**
      * output class constructor
@@ -137,6 +141,8 @@ public abstract class AbstractAAAEditUI extends com.kingdee.eas.framework.client
         this.contDescription = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contAuditor = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.kdtEntrys = new com.kingdee.bos.ctrl.kdf.table.KDTable();
+        this.contTest1 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contTest2 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.prmtCreator = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.kDDateCreateTime = new com.kingdee.bos.ctrl.swing.KDDatePicker();
         this.prmtLastUpdateUser = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
@@ -145,6 +151,8 @@ public abstract class AbstractAAAEditUI extends com.kingdee.eas.framework.client
         this.pkBizDate = new com.kingdee.bos.ctrl.swing.KDDatePicker();
         this.txtDescription = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.prmtAuditor = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.prmtTest1 = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.prmtTest2 = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.contCreator.setName("contCreator");
         this.contCreateTime.setName("contCreateTime");
         this.contLastUpdateUser.setName("contLastUpdateUser");
@@ -154,6 +162,8 @@ public abstract class AbstractAAAEditUI extends com.kingdee.eas.framework.client
         this.contDescription.setName("contDescription");
         this.contAuditor.setName("contAuditor");
         this.kdtEntrys.setName("kdtEntrys");
+        this.contTest1.setName("contTest1");
+        this.contTest2.setName("contTest2");
         this.prmtCreator.setName("prmtCreator");
         this.kDDateCreateTime.setName("kDDateCreateTime");
         this.prmtLastUpdateUser.setName("prmtLastUpdateUser");
@@ -162,6 +172,8 @@ public abstract class AbstractAAAEditUI extends com.kingdee.eas.framework.client
         this.pkBizDate.setName("pkBizDate");
         this.txtDescription.setName("txtDescription");
         this.prmtAuditor.setName("prmtAuditor");
+        this.prmtTest1.setName("prmtTest1");
+        this.prmtTest2.setName("prmtTest2");
         // CoreUI		
         this.btnTraceUp.setVisible(false);		
         this.btnTraceDown.setVisible(false);		
@@ -233,6 +245,16 @@ public abstract class AbstractAAAEditUI extends com.kingdee.eas.framework.client
 
 
         this.kdtEntrys.checkParsed();
+        // contTest1		
+        this.contTest1.setBoundLabelText(resHelper.getString("contTest1.boundLabelText"));		
+        this.contTest1.setBoundLabelLength(100);		
+        this.contTest1.setBoundLabelUnderline(true);		
+        this.contTest1.setVisible(true);
+        // contTest2		
+        this.contTest2.setBoundLabelText(resHelper.getString("contTest2.boundLabelText"));		
+        this.contTest2.setBoundLabelLength(100);		
+        this.contTest2.setBoundLabelUnderline(true);		
+        this.contTest2.setVisible(true);
         // prmtCreator		
         this.prmtCreator.setEnabled(false);
         // kDDateCreateTime		
@@ -252,6 +274,24 @@ public abstract class AbstractAAAEditUI extends com.kingdee.eas.framework.client
         this.txtDescription.setMaxLength(80);
         // prmtAuditor		
         this.prmtAuditor.setEnabled(false);
+        // prmtTest1		
+        this.prmtTest1.setQueryInfo("com.kingdee.eas.auto4s.rsm.rs.app.AdviceRepairItemMainQuery");		
+        this.prmtTest1.setVisible(true);		
+        this.prmtTest1.setEditable(true);		
+        this.prmtTest1.setDisplayFormat("$number$ $number$");		
+        this.prmtTest1.setEditFormat("$number$");		
+        this.prmtTest1.setCommitFormat("$number$");		
+        this.prmtTest1.setRequired(false);
+        // prmtTest2		
+        this.prmtTest2.setQueryInfo("com.kingdee.eas.auto4s.rsm.rs.app.AdviceRepairItemMainQuery");		
+        this.prmtTest2.setVisible(true);		
+        this.prmtTest2.setEditable(true);		
+        this.prmtTest2.setDisplayFormat("$name$ABC $number$DEF");		
+        this.prmtTest2.setEditFormat("$number$");		
+        this.prmtTest2.setCommitFormat("$number$");		
+        this.prmtTest2.setRequired(false);
+        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {prmtTest1,prmtTest2}));
+        this.setFocusCycleRoot(true);
 		//Register control's property binding
 		registerBindings();
 		registerUIState();
@@ -297,6 +337,10 @@ public abstract class AbstractAAAEditUI extends com.kingdee.eas.framework.client
         kdtEntrys.setBounds(new Rectangle(12, 99, 991, 413));
         kdtEntrys_detailPanel = (com.kingdee.eas.framework.client.multiDetail.DetailPanel)com.kingdee.eas.framework.client.multiDetail.HMDUtils.buildDetail(this,dataBinder,kdtEntrys,new com.kingdee.eas.myframework.test.AAAEntryInfo(),null,false);
         this.add(kdtEntrys_detailPanel, null);
+        contTest1.setBounds(new Rectangle(14, 17, 270, 19));
+        this.add(contTest1, null);
+        contTest2.setBounds(new Rectangle(44, 58, 270, 19));
+        this.add(contTest2, null);
         //contCreator
         contCreator.setBoundEditor(prmtCreator);
         //contCreateTime
@@ -313,6 +357,10 @@ public abstract class AbstractAAAEditUI extends com.kingdee.eas.framework.client
         contDescription.setBoundEditor(txtDescription);
         //contAuditor
         contAuditor.setBoundEditor(prmtAuditor);
+        //contTest1
+        contTest1.setBoundEditor(prmtTest1);
+        //contTest2
+        contTest2.setBoundEditor(prmtTest2);
 
     }
 
@@ -494,7 +542,9 @@ public abstract class AbstractAAAEditUI extends com.kingdee.eas.framework.client
 		dataBinder.registerBinding("number", String.class, this.txtNumber, "text");
 		dataBinder.registerBinding("bizDate", java.util.Date.class, this.pkBizDate, "value");
 		dataBinder.registerBinding("description", String.class, this.txtDescription, "text");
-		dataBinder.registerBinding("auditor", com.kingdee.eas.base.permission.UserInfo.class, this.prmtAuditor, "data");		
+		dataBinder.registerBinding("auditor", com.kingdee.eas.base.permission.UserInfo.class, this.prmtAuditor, "data");
+		dataBinder.registerBinding("Test1", com.kingdee.eas.auto4s.rsm.rs.AdviceRepairItemMainInfo.class, this.prmtTest1, "data");
+		dataBinder.registerBinding("Test2", com.kingdee.eas.auto4s.rsm.rs.AdviceRepairItemMainInfo.class, this.prmtTest2, "data");		
 	}
 	//Regiester UI State
 	private void registerUIState(){		
@@ -520,6 +570,14 @@ public abstract class AbstractAAAEditUI extends com.kingdee.eas.framework.client
     }
 
 
+    /**
+     * output onShow method
+     */
+    public void onShow() throws Exception
+    {
+        super.onShow();
+        this.prmtTest1.requestFocusInWindow();
+    }
 
 	
 	
@@ -630,7 +688,9 @@ public abstract class AbstractAAAEditUI extends com.kingdee.eas.framework.client
 		getValidateHelper().registerBindProperty("number", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("bizDate", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("description", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("auditor", ValidateHelper.ON_SAVE);    		
+		getValidateHelper().registerBindProperty("auditor", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("Test1", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("Test2", ValidateHelper.ON_SAVE);    		
 	}
 
 
@@ -696,6 +756,24 @@ public abstract class AbstractAAAEditUI extends com.kingdee.eas.framework.client
         	sic.add(new SelectorItemInfo("auditor.id"));
         	sic.add(new SelectorItemInfo("auditor.number"));
         	sic.add(new SelectorItemInfo("auditor.name"));
+		}
+		if(selectorAll.equalsIgnoreCase("true"))
+		{
+			sic.add(new SelectorItemInfo("Test1.*"));
+		}
+		else{
+        	sic.add(new SelectorItemInfo("Test1.id"));
+        	sic.add(new SelectorItemInfo("Test1.number"));
+        	sic.add(new SelectorItemInfo("Test1.name"));
+		}
+		if(selectorAll.equalsIgnoreCase("true"))
+		{
+			sic.add(new SelectorItemInfo("Test2.*"));
+		}
+		else{
+        	sic.add(new SelectorItemInfo("Test2.id"));
+        	sic.add(new SelectorItemInfo("Test2.number"));
+        	sic.add(new SelectorItemInfo("Test2.name"));
 		}
         return sic;
     }        

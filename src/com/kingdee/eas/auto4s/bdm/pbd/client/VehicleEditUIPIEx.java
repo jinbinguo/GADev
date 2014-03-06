@@ -11,6 +11,7 @@ import java.util.Set;
 import org.apache.log4j.Logger;
 
 import com.kingdee.bos.ctrl.kdf.table.IRow;
+import com.kingdee.bos.dao.IObjectValue;
 import com.kingdee.bos.metadata.entity.SelectorItemCollection;
 import com.kingdee.bos.metadata.entity.SelectorItemInfo;
 import com.kingdee.bos.ui.face.CoreUIObject;
@@ -38,34 +39,16 @@ public class VehicleEditUIPIEx extends VehicleEditUI
         super();
     }
     
+ 
     @Override
-    public void onLoad() throws Exception {
-    	super.onLoad();
-    	sortForRepairRemark();
-    	
-    }
-    @Override
-    public void actionFirst_actionPerformed(ActionEvent e) throws Exception {
-    	super.actionFirst_actionPerformed(e);
-    	sortForRepairRemark();
-    }
-    
-    @Override
-    public void actionNext_actionPerformed(ActionEvent e) throws Exception {
-    	super.actionNext_actionPerformed(e);
-    	sortForRepairRemark();
-    }
-    @Override
-    public void actionPre_actionPerformed(ActionEvent e) throws Exception {
-
-    	super.actionPre_actionPerformed(e);
-    	sortForRepairRemark();
-    }
-    @Override
-    public void actionLast_actionPerformed(ActionEvent e) throws Exception {
-
-    	super.actionLast_actionPerformed(e);
-    	sortForRepairRemark();
+    protected void initOldData(IObjectValue dataObject) {
+    	super.initOldData(dataObject);
+    	try {
+			sortForRepairRemark();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
     
     private void sortForRepairRemark () throws Exception {
@@ -101,7 +84,8 @@ public class VehicleEditUIPIEx extends VehicleEditUI
                 txtplateNum.requestFocus();
                 SysUtil.abort();
             }
-        } else if(source.getSelectedItem() != null && source.getSelectedItem().equals(VehicleSourceEnum.OWN) && UIRuleUtil.isNull(super.txtvIN.getText())) {
+        }
+        else if(source.getSelectedItem() != null && source.getSelectedItem().equals(VehicleSourceEnum.OWN) && UIRuleUtil.isNull(super.txtvIN.getText())) {
             MsgBox.showInfo(EASResource.getString("com.kingdee.eas.auto4s.bdm.pbd.client.PbdResource", "VinNotNull"));
             txtvIN.requestFocus();
             SysUtil.abort();

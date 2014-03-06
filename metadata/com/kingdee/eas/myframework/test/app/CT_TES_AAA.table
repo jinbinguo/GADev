@@ -217,6 +217,34 @@
             <scale>0</scale>
             <precision>0</precision>
         </column>
+        <column>
+            <name>CFTest1ID</name>
+            <alias>dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[CFTest1ID].alias</alias>
+            <description>dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[CFTest1ID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFTest2ID</name>
+            <alias>dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[CFTest2ID].alias</alias>
+            <description>dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[CFTest2ID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>CPK_TES_AAAIDiliq4</name>
@@ -327,166 +355,259 @@
                 </fkColumnPair>
             </fkColumnPairs>
         </foreignKey>
+        <foreignKey>
+            <name>CFK_TES_TES_AAAE2t</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+                <key name="name" value="T_ATS_AdviceRepairItemMain" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="CFTest1ID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>CFK_TES_TES_AAAEqt</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+                <key name="name" value="T_ATS_AdviceRepairItemMain" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="CFTest2ID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
     </foreignKeys>
     <resource>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="AAA" />
-            <lang locale="zh_TW" value="多分錄基礎單據範本" />
+            <lang locale="zh_HK" value="AAA" />
+            <lang locale="zh_TW" value="AAA" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[CFTest1ID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="Test1" />
+            <lang locale="zh_HK" value="Test1" />
+            <lang locale="zh_TW" value="Test1" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[CFTest1ID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="Test1" />
+            <lang locale="zh_HK" value="Test1" />
+            <lang locale="zh_TW" value="Test1" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[CFTest2ID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="Test2" />
+            <lang locale="zh_HK" value="Test2" />
+            <lang locale="zh_TW" value="Test2" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[CFTest2ID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="Test2" />
+            <lang locale="zh_HK" value="Test2" />
+            <lang locale="zh_TW" value="Test2" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FAuditorID].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_CN" value="审核人" />
+            <lang locale="zh_HK" value="審核人" />
+            <lang locale="zh_TW" value="審核人" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FAuditorID].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_CN" value="审核人" />
+            <lang locale="zh_HK" value="審核人" />
+            <lang locale="zh_TW" value="審核人" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FBizDate].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="业务日期" />
+            <lang locale="zh_HK" value="業務日期" />
             <lang locale="zh_TW" value="業務日期" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FBizDate].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="业务日期" />
+            <lang locale="zh_HK" value="業務日期" />
             <lang locale="zh_TW" value="業務日期" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FControlUnitID].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_CN" value="控制单元" />
+            <lang locale="zh_HK" value="控制單元" />
+            <lang locale="zh_TW" value="控制單元" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FControlUnitID].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_CN" value="控制单元" />
+            <lang locale="zh_HK" value="控制單元" />
+            <lang locale="zh_TW" value="控制單元" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FCreateTime].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_CN" value="创建时间" />
+            <lang locale="zh_HK" value="創建時間" />
+            <lang locale="zh_TW" value="創建時間" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FCreateTime].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_CN" value="创建时间" />
+            <lang locale="zh_HK" value="創建時間" />
+            <lang locale="zh_TW" value="創建時間" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FCreatorID].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_CN" value="创建者" />
+            <lang locale="zh_HK" value="創建者" />
+            <lang locale="zh_TW" value="創建者" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FCreatorID].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_CN" value="创建者" />
+            <lang locale="zh_HK" value="創建者" />
+            <lang locale="zh_TW" value="創建者" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FDescription].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_CN" value="参考信息" />
+            <lang locale="zh_HK" value="參考信息" />
+            <lang locale="zh_TW" value="參考信息" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FDescription].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_CN" value="参考信息" />
+            <lang locale="zh_HK" value="參考信息" />
+            <lang locale="zh_TW" value="參考信息" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FFivouchered].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="是否生成凭证" />
+            <lang locale="zh_HK" value="是否生成憑證" />
             <lang locale="zh_TW" value="是否生成憑證" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FFivouchered].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="是否生成凭证" />
+            <lang locale="zh_HK" value="是否生成憑證" />
             <lang locale="zh_TW" value="是否生成憑證" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FHandlerID].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_CN" value="经手人" />
+            <lang locale="zh_HK" value="經手人" />
+            <lang locale="zh_TW" value="經手人" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FHandlerID].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_CN" value="经手人" />
+            <lang locale="zh_HK" value="經手人" />
+            <lang locale="zh_TW" value="經手人" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FHasEffected].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_CN" value="是否曾经生效" />
+            <lang locale="zh_HK" value="是否曾經生效" />
+            <lang locale="zh_TW" value="是否曾經生效" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FHasEffected].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_CN" value="是否曾经生效" />
+            <lang locale="zh_HK" value="是否曾經生效" />
+            <lang locale="zh_TW" value="是否曾經生效" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FID].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FID].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FLastUpdateTime].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_CN" value="最后修改时间" />
+            <lang locale="zh_HK" value="最後修改時間" />
+            <lang locale="zh_TW" value="最後修改時間" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FLastUpdateTime].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_CN" value="最后修改时间" />
+            <lang locale="zh_HK" value="最後修改時間" />
+            <lang locale="zh_TW" value="最後修改時間" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FLastUpdateUserID].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_CN" value="最后修改者" />
+            <lang locale="zh_HK" value="最後修改者" />
+            <lang locale="zh_TW" value="最後修改者" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FLastUpdateUserID].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_CN" value="最后修改者" />
+            <lang locale="zh_HK" value="最後修改者" />
+            <lang locale="zh_TW" value="最後修改者" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FNumber].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_CN" value="单据编号" />
+            <lang locale="zh_HK" value="單據編號" />
+            <lang locale="zh_TW" value="單據編號" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FNumber].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_CN" value="单据编号" />
+            <lang locale="zh_HK" value="單據編號" />
+            <lang locale="zh_TW" value="單據編號" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FSourceBillID].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_CN" value="原始单据ID" />
+            <lang locale="zh_HK" value="原始單據ID" />
+            <lang locale="zh_TW" value="原始單據ID" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FSourceBillID].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_CN" value="原始单据ID" />
+            <lang locale="zh_HK" value="原始單據ID" />
+            <lang locale="zh_TW" value="原始單據ID" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FSourceFunction].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_CN" value="来源功能" />
+            <lang locale="zh_HK" value="來源功能" />
+            <lang locale="zh_TW" value="來源功能" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].columns.column[FSourceFunction].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_TW" value="null" />
+            <lang locale="zh_CN" value="来源功能" />
+            <lang locale="zh_HK" value="來源功能" />
+            <lang locale="zh_TW" value="來源功能" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.myframework.test.app.CT_TES_AAA].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="多分录基础单据模板" />
+            <lang locale="zh_CN" value="" />
             <lang locale="zh_TW" value="多分錄基礎單據範本" />
         </rs>
     </resource>

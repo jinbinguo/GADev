@@ -87,6 +87,32 @@
                 <key name="name" value="User" />
             </entityRef>
         </subEntity>
+        <subEntity>
+            <name>Test1</name>
+            <alias>joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].subObjects.subEntity[Test1].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.myframework.test.app" />
+                <key name="name" value="AAAQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+                <key name="name" value="AdviceRepairItemMain" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>Test2</name>
+            <alias>joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].subObjects.subEntity[Test2].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.myframework.test.app" />
+                <key name="name" value="AAAQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+                <key name="name" value="AdviceRepairItemMain" />
+            </entityRef>
+        </subEntity>
     </subObjects>
     <units>
         <propertyUnit>
@@ -926,6 +952,192 @@
                 <key name="name" value="AAAQuery" />
             </query>
         </queryField>
+        <queryField>
+            <name>Test1.number</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[Test1.number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>8a5a488f-075d-49c9-879d-acdbd6181ef4</key>
+                    <parentUnit>
+                        <key name="name" value="Test1.number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Test1" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.myframework.test.app" />
+                <key name="name" value="AAAQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>a3db39fd-9744-4b73-a4f7-28e2fb13995d</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.propertyUnit[a3db39fd-9744-4b73-a4f7-28e2fb13995d].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>e362634d-884f-47a4-91d1-aa61176d4f1f</key>
+                    <parentUnit>
+                        <key name="name" value="a3db39fd-9744-4b73-a4f7-28e2fb13995d" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AAA" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="Test1" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.myframework.test.app" />
+                <key name="name" value="AAAQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>0b4e5280-0b9f-44a1-8018-c05951a9ed4a</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.propertyUnit[0b4e5280-0b9f-44a1-8018-c05951a9ed4a].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>5f5bced6-a580-44f7-a036-a4f1b8022495</key>
+                    <parentUnit>
+                        <key name="name" value="0b4e5280-0b9f-44a1-8018-c05951a9ed4a" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Test1" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.myframework.test.app" />
+                <key name="name" value="AAAQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>Test2.name</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[Test2.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>472b804f-7cdd-41f7-83d8-307188c5868a</key>
+                    <parentUnit>
+                        <key name="name" value="Test2.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Test2" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.myframework.test.app" />
+                <key name="name" value="AAAQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>8d5358f9-8359-4e19-8ebb-530d0ea713f5</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.propertyUnit[8d5358f9-8359-4e19-8ebb-530d0ea713f5].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>b1e46286-a13a-4338-94d6-92b7f6d4df8f</key>
+                    <parentUnit>
+                        <key name="name" value="8d5358f9-8359-4e19-8ebb-530d0ea713f5" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AAA" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="Test2" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.myframework.test.app" />
+                <key name="name" value="AAAQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>0f28a705-852d-4ab0-868d-b01bddd82ad7</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.propertyUnit[0f28a705-852d-4ab0-868d-b01bddd82ad7].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>3ef65e6a-92b2-4807-995d-daacfc241c91</key>
+                    <parentUnit>
+                        <key name="name" value="0f28a705-852d-4ab0-868d-b01bddd82ad7" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Test2" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.myframework.test.app" />
+                <key name="name" value="AAAQuery" />
+            </query>
+        </propertyUnit>
     </units>
     <defaultFilter>
         <name>defaultFilter</name>
@@ -1122,12 +1334,73 @@
                 <key name="name" value="AAAQuery" />
             </query>
         </join>
+        <join>
+            <name>ff583261-02e1-4bb5-926d-da747f7b9dd6</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="AAA" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="Test1" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>d8167732-e387-4f40-92d6-bff5e757696a</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="a3db39fd-9744-4b73-a4f7-28e2fb13995d" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="0b4e5280-0b9f-44a1-8018-c05951a9ed4a" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="ff583261-02e1-4bb5-926d-da747f7b9dd6" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.myframework.test.app" />
+                <key name="name" value="AAAQuery" />
+            </query>
+        </join>
+        <join>
+            <name>b5e86225-b913-4e43-b84e-205fc34de068</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="AAA" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="Test2" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>a28e58d0-8607-46c7-ac90-b1968ca07d45</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="8d5358f9-8359-4e19-8ebb-530d0ea713f5" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="0f28a705-852d-4ab0-868d-b01bddd82ad7" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="b5e86225-b913-4e43-b84e-205fc34de068" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.myframework.test.app" />
+                <key name="name" value="AAAQuery" />
+            </query>
+        </join>
     </joins>
     <resource>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="AAA" />
-            <lang locale="zh_TW" value="多分錄基礎單據查詢" />
+            <lang locale="zh_HK" value="AAA" />
+            <lang locale="zh_TW" value="AAA" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].defaultSorters.querySorterItemextendedProperty.f7WindowTitle">
             <lang locale="en_US" value="多分录基础单据模板" />
@@ -1137,6 +1410,7 @@
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="多分录基础单据查询" />
+            <lang locale="zh_HK" value="多分錄基礎單據查詢" />
             <lang locale="zh_TW" value="多分錄基礎單據查詢" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].extendedProperty.F7WindowTitle">
@@ -1152,96 +1426,151 @@
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].queryPK[QueryPK].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].queryPK[QueryPK].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].subObjects.subEntity[AAA].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].subObjects.subEntity[Test1].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].subObjects.subEntity[Test2].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].subObjects.subEntity[auditor].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].subObjects.subEntity[creator].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].subObjects.subEntity[entrys].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].subObjects.subEntity[handler].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].subObjects.subEntity[lastUpdateUser].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.propertyUnit[0b4e5280-0b9f-44a1-8018-c05951a9ed4a].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.propertyUnit[0f28a705-852d-4ab0-868d-b01bddd82ad7].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.propertyUnit[8d5358f9-8359-4e19-8ebb-530d0ea713f5].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.propertyUnit[NewUnit0].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.propertyUnit[NewUnit1].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.propertyUnit[NewUnit2].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.propertyUnit[NewUnit3].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.propertyUnit[NewUnit4].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.propertyUnit[NewUnit5].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.propertyUnit[NewUnit6].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.propertyUnit[NewUnit7].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.propertyUnit[NewUnit8].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.propertyUnit[NewUnit9].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.propertyUnit[a3db39fd-9744-4b73-a4f7-28e2fb13995d].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[Fivouchered].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="是否生成凭证" />
+            <lang locale="zh_HK" value="是否生成憑證" />
             <lang locale="zh_TW" value="是否生成憑證" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[Fivouchered].extendedProperty.isCommonQueryFilter">
@@ -1254,19 +1583,64 @@
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
+        <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[Test1.number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="Test1" />
+            <lang locale="zh_HK" value="Test1" />
+            <lang locale="zh_TW" value="Test1" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[Test1.number].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[Test1.number].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[Test1.number].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[Test2.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="Test2" />
+            <lang locale="zh_HK" value="Test2" />
+            <lang locale="zh_TW" value="Test2" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[Test2.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[Test2.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[Test2.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[auditor.name].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="别名" />
+            <lang locale="zh_HK" value="別名" />
             <lang locale="zh_TW" value="別名" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[auditor.number].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="用户名" />
+            <lang locale="zh_HK" value="用戶名" />
             <lang locale="zh_TW" value="用戶名" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[bizDate].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="业务日期" />
+            <lang locale="zh_HK" value="業務日期" />
             <lang locale="zh_TW" value="業務日期" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[bizDate].extendedProperty.isCommonQueryFilter">
@@ -1282,67 +1656,130 @@
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[createTime].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="创建时间" />
+            <lang locale="zh_HK" value="創建時間" />
             <lang locale="zh_TW" value="創建時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[createTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[createTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[creator.name].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="别名" />
+            <lang locale="zh_HK" value="別名" />
             <lang locale="zh_TW" value="別名" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[creator.number].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="用户名" />
+            <lang locale="zh_HK" value="用戶名" />
             <lang locale="zh_TW" value="用戶名" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[description].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="参考信息" />
+            <lang locale="zh_HK" value="參考信息" />
             <lang locale="zh_TW" value="參考信息" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[description].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[description].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[entrys.id].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[entrys.seq].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="单据分录序列号" />
+            <lang locale="zh_HK" value="單據分錄序列號" />
             <lang locale="zh_TW" value="單據分錄序列號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[entrys.seq].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[entrys.seq].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[handler.name].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="别名" />
+            <lang locale="zh_HK" value="別名" />
             <lang locale="zh_TW" value="別名" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[handler.number].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="用户名" />
+            <lang locale="zh_HK" value="用戶名" />
             <lang locale="zh_TW" value="用戶名" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[id].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[lastUpdateTime].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="最后修改时间" />
+            <lang locale="zh_HK" value="最後修改時間" />
             <lang locale="zh_TW" value="最後修改時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[lastUpdateTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[lastUpdateTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[lastUpdateUser.name].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="别名" />
+            <lang locale="zh_HK" value="別名" />
             <lang locale="zh_TW" value="別名" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[lastUpdateUser.number].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="用户名" />
+            <lang locale="zh_HK" value="用戶名" />
             <lang locale="zh_TW" value="用戶名" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[number].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="单据编号" />
+            <lang locale="zh_HK" value="單據編號" />
             <lang locale="zh_TW" value="單據編號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[number].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.myframework.test.app.AAAQuery].units.queryField[number].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
         </rs>
     </resource>
 </joinQuery>

@@ -198,28 +198,28 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
     protected com.kingdee.bos.ctrl.swing.KDPanel kDPRepairInfo;
     protected com.kingdee.bos.ctrl.swing.KDPanel kDPVehicleInfo;
     protected com.kingdee.bos.ctrl.swing.KDPanel kDPHideField;
-    protected com.kingdee.bos.ctrl.swing.KDPanel kDPRemark;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contRemark;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contcustomInfo;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contsaleType;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contCustomerAccount;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contcustomerAccountName;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contgaDept;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contrepairBizType;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer9;
     protected com.kingdee.bos.ctrl.swing.KDScrollPane scrollPaneRemark;
     protected com.kingdee.bos.ctrl.swing.KDTextArea txtRemark;
     protected com.kingdee.bos.ctrl.swing.KDScrollPane scrollPanecustomInfo;
     protected com.kingdee.bos.ctrl.swing.KDTextArea txtcustomInfo;
-    protected com.kingdee.bos.ctrl.swing.KDTextField txtsaleType;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtCustomerAccount;
-    protected com.kingdee.bos.ctrl.swing.KDTextField txtcustomerAccountName;
-    protected com.kingdee.bos.ctrl.swing.KDTextField txtgaDept;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtrepairBizType;
+    protected com.kingdee.bos.ctrl.swing.KDScrollPane kDScrollPane1;
+    protected com.kingdee.bos.ctrl.swing.KDTextArea txtRemarkList;
     protected com.kingdee.bos.ctrl.swing.KDWorkButton btnShowRepairSender;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contdept;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contsaleType;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contgaDept;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contcustomerAccountName;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtdept;
-    protected com.kingdee.bos.ctrl.kdf.table.KDTable kdtRemarkList;
-    protected com.kingdee.bos.ctrl.swing.KDButton btnShowRemarkList;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtsaleType;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtgaDept;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtcustomerAccountName;
     protected com.kingdee.bos.ctrl.swing.KDComboBox gaBillStatus;
     protected com.kingdee.bos.ctrl.swing.KDPanel kDPRwoItemSp;
     protected com.kingdee.bos.ctrl.kdf.table.KDTable kdtRWOItemSpEntry;
@@ -625,28 +625,28 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.kDPRepairInfo = new com.kingdee.bos.ctrl.swing.KDPanel();
         this.kDPVehicleInfo = new com.kingdee.bos.ctrl.swing.KDPanel();
         this.kDPHideField = new com.kingdee.bos.ctrl.swing.KDPanel();
-        this.kDPRemark = new com.kingdee.bos.ctrl.swing.KDPanel();
         this.contRemark = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contcustomInfo = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.contsaleType = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contCustomerAccount = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.contcustomerAccountName = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.contgaDept = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contrepairBizType = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDLabelContainer9 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.scrollPaneRemark = new com.kingdee.bos.ctrl.swing.KDScrollPane();
         this.txtRemark = new com.kingdee.bos.ctrl.swing.KDTextArea();
         this.scrollPanecustomInfo = new com.kingdee.bos.ctrl.swing.KDScrollPane();
         this.txtcustomInfo = new com.kingdee.bos.ctrl.swing.KDTextArea();
-        this.txtsaleType = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.prmtCustomerAccount = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
-        this.txtcustomerAccountName = new com.kingdee.bos.ctrl.swing.KDTextField();
-        this.txtgaDept = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.prmtrepairBizType = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.kDScrollPane1 = new com.kingdee.bos.ctrl.swing.KDScrollPane();
+        this.txtRemarkList = new com.kingdee.bos.ctrl.swing.KDTextArea();
         this.btnShowRepairSender = new com.kingdee.bos.ctrl.swing.KDWorkButton();
         this.contdept = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contsaleType = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contgaDept = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contcustomerAccountName = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.prmtdept = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
-        this.kdtRemarkList = new com.kingdee.bos.ctrl.kdf.table.KDTable();
-        this.btnShowRemarkList = new com.kingdee.bos.ctrl.swing.KDButton();
+        this.txtsaleType = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.txtgaDept = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.txtcustomerAccountName = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.gaBillStatus = new com.kingdee.bos.ctrl.swing.KDComboBox();
         this.kDPRwoItemSp = new com.kingdee.bos.ctrl.swing.KDPanel();
         this.kdtRWOItemSpEntry = new com.kingdee.bos.ctrl.kdf.table.KDTable();
@@ -804,28 +804,28 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.kDPRepairInfo.setName("kDPRepairInfo");
         this.kDPVehicleInfo.setName("kDPVehicleInfo");
         this.kDPHideField.setName("kDPHideField");
-        this.kDPRemark.setName("kDPRemark");
         this.contRemark.setName("contRemark");
         this.contcustomInfo.setName("contcustomInfo");
-        this.contsaleType.setName("contsaleType");
         this.contCustomerAccount.setName("contCustomerAccount");
-        this.contcustomerAccountName.setName("contcustomerAccountName");
-        this.contgaDept.setName("contgaDept");
         this.contrepairBizType.setName("contrepairBizType");
+        this.kDLabelContainer9.setName("kDLabelContainer9");
         this.scrollPaneRemark.setName("scrollPaneRemark");
         this.txtRemark.setName("txtRemark");
         this.scrollPanecustomInfo.setName("scrollPanecustomInfo");
         this.txtcustomInfo.setName("txtcustomInfo");
-        this.txtsaleType.setName("txtsaleType");
         this.prmtCustomerAccount.setName("prmtCustomerAccount");
-        this.txtcustomerAccountName.setName("txtcustomerAccountName");
-        this.txtgaDept.setName("txtgaDept");
         this.prmtrepairBizType.setName("prmtrepairBizType");
+        this.kDScrollPane1.setName("kDScrollPane1");
+        this.txtRemarkList.setName("txtRemarkList");
         this.btnShowRepairSender.setName("btnShowRepairSender");
         this.contdept.setName("contdept");
+        this.contsaleType.setName("contsaleType");
+        this.contgaDept.setName("contgaDept");
+        this.contcustomerAccountName.setName("contcustomerAccountName");
         this.prmtdept.setName("prmtdept");
-        this.kdtRemarkList.setName("kdtRemarkList");
-        this.btnShowRemarkList.setName("btnShowRemarkList");
+        this.txtsaleType.setName("txtsaleType");
+        this.txtgaDept.setName("txtgaDept");
+        this.txtcustomerAccountName.setName("txtcustomerAccountName");
         this.gaBillStatus.setName("gaBillStatus");
         this.kDPRwoItemSp.setName("kDPRwoItemSp");
         this.kdtRWOItemSpEntry.setName("kdtRWOItemSpEntry");
@@ -2779,7 +2779,6 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         // kDPRepairInfo
         // kDPVehicleInfo
         // kDPHideField
-        // kDPRemark
         // contRemark		
         this.contRemark.setBoundLabelText(resHelper.getString("contRemark.boundLabelText"));		
         this.contRemark.setBoundLabelLength(100);		
@@ -2790,31 +2789,20 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.contcustomInfo.setBoundLabelLength(100);		
         this.contcustomInfo.setBoundLabelUnderline(true);		
         this.contcustomInfo.setVisible(true);
-        // contsaleType		
-        this.contsaleType.setBoundLabelText(resHelper.getString("contsaleType.boundLabelText"));		
-        this.contsaleType.setBoundLabelLength(100);		
-        this.contsaleType.setBoundLabelUnderline(true);		
-        this.contsaleType.setVisible(true);
         // contCustomerAccount		
         this.contCustomerAccount.setBoundLabelText(resHelper.getString("contCustomerAccount.boundLabelText"));		
         this.contCustomerAccount.setBoundLabelLength(100);		
         this.contCustomerAccount.setBoundLabelUnderline(true);		
         this.contCustomerAccount.setVisible(true);
-        // contcustomerAccountName		
-        this.contcustomerAccountName.setBoundLabelText(resHelper.getString("contcustomerAccountName.boundLabelText"));		
-        this.contcustomerAccountName.setBoundLabelLength(100);		
-        this.contcustomerAccountName.setBoundLabelUnderline(true);		
-        this.contcustomerAccountName.setVisible(true);
-        // contgaDept		
-        this.contgaDept.setBoundLabelText(resHelper.getString("contgaDept.boundLabelText"));		
-        this.contgaDept.setBoundLabelLength(100);		
-        this.contgaDept.setBoundLabelUnderline(true);		
-        this.contgaDept.setVisible(true);
         // contrepairBizType		
         this.contrepairBizType.setBoundLabelText(resHelper.getString("contrepairBizType.boundLabelText"));		
         this.contrepairBizType.setBoundLabelLength(100);		
         this.contrepairBizType.setBoundLabelUnderline(true);		
         this.contrepairBizType.setVisible(true);
+        // kDLabelContainer9		
+        this.kDLabelContainer9.setBoundLabelText(resHelper.getString("kDLabelContainer9.boundLabelText"));		
+        this.kDLabelContainer9.setBoundLabelLength(100);		
+        this.kDLabelContainer9.setBoundLabelUnderline(true);
         // scrollPaneRemark
         // txtRemark		
         this.txtRemark.setRequired(false);		
@@ -2823,18 +2811,14 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         // txtcustomInfo		
         this.txtcustomInfo.setRequired(false);		
         this.txtcustomInfo.setMaxLength(255);
-        // txtsaleType		
-        this.txtsaleType.setHorizontalAlignment(2);		
-        this.txtsaleType.setMaxLength(100);		
-        this.txtsaleType.setRequired(false);		
-        this.txtsaleType.setEnabled(false);
         // prmtCustomerAccount		
         this.prmtCustomerAccount.setQueryInfo("com.kingdee.eas.ga.rs.app.CustomerAccountQuery");		
         this.prmtCustomerAccount.setEditable(true);		
         this.prmtCustomerAccount.setDisplayFormat("$number$");		
         this.prmtCustomerAccount.setEditFormat("$number$");		
         this.prmtCustomerAccount.setCommitFormat("$number$;$name$");		
-        this.prmtCustomerAccount.setRequired(true);
+        this.prmtCustomerAccount.setRequired(true);		
+        this.prmtCustomerAccount.setLabelVisible(true);
         prmtCustomerAccount.addDataChangeListener(new DataChangeListener() {
 		public void dataChanged(DataChangeEvent e) {
 			try {
@@ -2846,15 +2830,6 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
 		}
 	});
 
-        // txtcustomerAccountName		
-        this.txtcustomerAccountName.setHorizontalAlignment(2);		
-        this.txtcustomerAccountName.setMaxLength(80);		
-        this.txtcustomerAccountName.setRequired(false);		
-        this.txtcustomerAccountName.setEnabled(false);
-        // txtgaDept		
-        this.txtgaDept.setHorizontalAlignment(2);		
-        this.txtgaDept.setMaxLength(100);		
-        this.txtgaDept.setRequired(false);
         // prmtrepairBizType		
         this.prmtrepairBizType.setQueryInfo("com.kingdee.eas.ga.rs.app.RepairWOBizTypeQuery");		
         this.prmtrepairBizType.setEditable(true);		
@@ -2862,6 +2837,9 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.prmtrepairBizType.setEditFormat("$number$");		
         this.prmtrepairBizType.setCommitFormat("$number$");		
         this.prmtrepairBizType.setRequired(false);
+        // kDScrollPane1
+        // txtRemarkList		
+        this.txtRemarkList.setEditable(false);
         // btnShowRepairSender		
         this.btnShowRepairSender.setText(resHelper.getString("btnShowRepairSender.text"));
         this.btnShowRepairSender.addActionListener(new java.awt.event.ActionListener() {
@@ -2881,6 +2859,21 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.contdept.setBoundLabelLength(100);		
         this.contdept.setBoundLabelUnderline(true);		
         this.contdept.setVisible(true);
+        // contsaleType		
+        this.contsaleType.setBoundLabelText(resHelper.getString("contsaleType.boundLabelText"));		
+        this.contsaleType.setBoundLabelLength(100);		
+        this.contsaleType.setBoundLabelUnderline(true);		
+        this.contsaleType.setVisible(true);
+        // contgaDept		
+        this.contgaDept.setBoundLabelText(resHelper.getString("contgaDept.boundLabelText"));		
+        this.contgaDept.setBoundLabelLength(100);		
+        this.contgaDept.setBoundLabelUnderline(true);		
+        this.contgaDept.setVisible(true);
+        // contcustomerAccountName		
+        this.contcustomerAccountName.setBoundLabelText(resHelper.getString("contcustomerAccountName.boundLabelText"));		
+        this.contcustomerAccountName.setBoundLabelLength(100);		
+        this.contcustomerAccountName.setBoundLabelUnderline(true);		
+        this.contcustomerAccountName.setVisible(true);
         // prmtdept		
         this.prmtdept.setQueryInfo("com.kingdee.eas.basedata.org.app.AdminItemQuery");		
         this.prmtdept.setEditable(true);		
@@ -2888,17 +2881,20 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.prmtdept.setEditFormat("$number$");		
         this.prmtdept.setCommitFormat("$number$");		
         this.prmtdept.setRequired(false);
-        // kdtRemarkList
-		String kdtRemarkListStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sTable\"><c:Alignment horizontal=\"left\" /><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol0\"><c:NumberFormat>yyyy-MM-dd</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\" t:styleID=\"sTable\"><t:ColumnGroup><t:Column t:key=\"createTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"0\" t:styleID=\"sCol0\" /><t:Column t:key=\"remark\" t:width=\"1500\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"1\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header1\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{createTime}</t:Cell><t:Cell>$Resource{remark}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
-		
-        this.kdtRemarkList.setFormatXml(resHelper.translateString("kdtRemarkList",kdtRemarkListStrXML));
-
-        
-
-        this.kdtRemarkList.checkParsed();
-        // btnShowRemarkList
-        this.btnShowRemarkList.setAction((IItemAction)ActionProxyFactory.getProxy(actionShowRemarkList, new Class[] { IItemAction.class }, getServiceContext()));		
-        this.btnShowRemarkList.setText(resHelper.getString("btnShowRemarkList.text"));
+        // txtsaleType		
+        this.txtsaleType.setHorizontalAlignment(2);		
+        this.txtsaleType.setMaxLength(100);		
+        this.txtsaleType.setRequired(false);		
+        this.txtsaleType.setEnabled(false);
+        // txtgaDept		
+        this.txtgaDept.setHorizontalAlignment(2);		
+        this.txtgaDept.setMaxLength(100);		
+        this.txtgaDept.setRequired(false);
+        // txtcustomerAccountName		
+        this.txtcustomerAccountName.setHorizontalAlignment(2);		
+        this.txtcustomerAccountName.setMaxLength(80);		
+        this.txtcustomerAccountName.setRequired(false);		
+        this.txtcustomerAccountName.setEnabled(false);
         // gaBillStatus		
         this.gaBillStatus.setVisible(true);		
         this.gaBillStatus.addItems(EnumUtils.getEnumList("com.kingdee.eas.ga.rs.RepairWOStatusEnum").toArray());		
@@ -3272,29 +3268,24 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         kDTabbedPane1.add(kDPRepairInfo, resHelper.getString("kDPRepairInfo.constraints"));
         kDTabbedPane1.add(kDPVehicleInfo, resHelper.getString("kDPVehicleInfo.constraints"));
         kDTabbedPane1.add(kDPHideField, resHelper.getString("kDPHideField.constraints"));
-        kDTabbedPane1.add(kDPRemark, resHelper.getString("kDPRemark.constraints"));
         //kDPBizInfo
         kDPBizInfo.setLayout(new KDLayout());
-        kDPBizInfo.putClientProperty("OriginalBounds", new Rectangle(0, 0, 967, 149));        contSA.setBounds(new Rectangle(10, 66, 270, 19));
-        kDPBizInfo.add(contSA, new KDLayout.Constraints(10, 66, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDPBizInfo.putClientProperty("OriginalBounds", new Rectangle(0, 0, 967, 149));        contSA.setBounds(new Rectangle(10, 58, 270, 19));
+        kDPBizInfo.add(contSA, new KDLayout.Constraints(10, 58, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contVehicle.setBounds(new Rectangle(10, 6, 270, 19));
         kDPBizInfo.add(contVehicle, new KDLayout.Constraints(10, 6, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contOrgUnit.setBounds(new Rectangle(10, 35, 270, 19));
-        kDPBizInfo.add(contOrgUnit, new KDLayout.Constraints(10, 35, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contRemark.setBounds(new Rectangle(351, 93, 609, 43));
-        kDPBizInfo.add(contRemark, new KDLayout.Constraints(351, 93, 609, 43, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contcustomInfo.setBounds(new Rectangle(351, 35, 277, 50));
-        kDPBizInfo.add(contcustomInfo, new KDLayout.Constraints(351, 35, 277, 50, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contsaleType.setBounds(new Rectangle(688, 66, 270, 19));
-        kDPBizInfo.add(contsaleType, new KDLayout.Constraints(688, 66, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contOrgUnit.setBounds(new Rectangle(10, 31, 270, 19));
+        kDPBizInfo.add(contOrgUnit, new KDLayout.Constraints(10, 31, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contRemark.setBounds(new Rectangle(688, 30, 269, 47));
+        kDPBizInfo.add(contRemark, new KDLayout.Constraints(688, 30, 269, 47, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contcustomInfo.setBounds(new Rectangle(351, 30, 277, 47));
+        kDPBizInfo.add(contcustomInfo, new KDLayout.Constraints(351, 30, 277, 47, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contCustomerAccount.setBounds(new Rectangle(688, 6, 270, 19));
         kDPBizInfo.add(contCustomerAccount, new KDLayout.Constraints(688, 6, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contcustomerAccountName.setBounds(new Rectangle(688, 35, 270, 19));
-        kDPBizInfo.add(contcustomerAccountName, new KDLayout.Constraints(688, 35, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contgaDept.setBounds(new Rectangle(10, 93, 270, 19));
-        kDPBizInfo.add(contgaDept, new KDLayout.Constraints(10, 93, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contrepairBizType.setBounds(new Rectangle(351, 6, 277, 19));
         kDPBizInfo.add(contrepairBizType, new KDLayout.Constraints(351, 6, 277, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDLabelContainer9.setBounds(new Rectangle(9, 84, 942, 60));
+        kDPBizInfo.add(kDLabelContainer9, new KDLayout.Constraints(9, 84, 942, 60, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
         //contSA
         contSA.setBoundEditor(prmtSA);
         //contVehicle
@@ -3309,16 +3300,14 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         contcustomInfo.setBoundEditor(scrollPanecustomInfo);
         //scrollPanecustomInfo
         scrollPanecustomInfo.getViewport().add(txtcustomInfo, null);
-        //contsaleType
-        contsaleType.setBoundEditor(txtsaleType);
         //contCustomerAccount
         contCustomerAccount.setBoundEditor(prmtCustomerAccount);
-        //contcustomerAccountName
-        contcustomerAccountName.setBoundEditor(txtcustomerAccountName);
-        //contgaDept
-        contgaDept.setBoundEditor(txtgaDept);
         //contrepairBizType
         contrepairBizType.setBoundEditor(prmtrepairBizType);
+        //kDLabelContainer9
+        kDLabelContainer9.setBoundEditor(kDScrollPane1);
+        //kDScrollPane1
+        kDScrollPane1.getViewport().add(txtRemarkList, null);
         //kDPRepairInfo
         kDPRepairInfo.setLayout(new KDLayout());
         kDPRepairInfo.putClientProperty("OriginalBounds", new Rectangle(0, 0, 967, 149));        contTel.setBounds(new Rectangle(342, 49, 270, 19));
@@ -3441,6 +3430,12 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         kDPHideField.add(kDLabelContainer7, new KDLayout.Constraints(5, 70, 270, 19, KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contdept.setBounds(new Rectangle(601, 2, 270, 19));
         kDPHideField.add(contdept, new KDLayout.Constraints(601, 2, 270, 19, 0));
+        contsaleType.setBounds(new Rectangle(686, 129, 270, 19));
+        kDPHideField.add(contsaleType, new KDLayout.Constraints(686, 129, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contgaDept.setBounds(new Rectangle(442, 131, 270, 19));
+        kDPHideField.add(contgaDept, new KDLayout.Constraints(442, 131, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contcustomerAccountName.setBounds(new Rectangle(192, 130, 270, 19));
+        kDPHideField.add(contcustomerAccountName, new KDLayout.Constraints(192, 130, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         //kDLabelContainer2
         kDLabelContainer2.setBoundEditor(kDRecentlyComeTime);
         //contInsuranCompany
@@ -3477,12 +3472,12 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         kDLabelContainer7.setBoundEditor(prmtAccountCfg);
         //contdept
         contdept.setBoundEditor(prmtdept);
-        //kDPRemark
-        kDPRemark.setLayout(new KDLayout());
-        kDPRemark.putClientProperty("OriginalBounds", new Rectangle(0, 0, 967, 149));        kdtRemarkList.setBounds(new Rectangle(0, 23, 960, 123));
-        kDPRemark.add(kdtRemarkList, new KDLayout.Constraints(0, 23, 960, 123, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
-        btnShowRemarkList.setBounds(new Rectangle(844, 0, 112, 21));
-        kDPRemark.add(btnShowRemarkList, new KDLayout.Constraints(844, 0, 112, 21, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_RIGHT));
+        //contsaleType
+        contsaleType.setBoundEditor(txtsaleType);
+        //contgaDept
+        contgaDept.setBoundEditor(txtgaDept);
+        //contcustomerAccountName
+        contcustomerAccountName.setBoundEditor(txtcustomerAccountName);
         //contgaBillStatus
         contgaBillStatus.setBoundEditor(gaBillStatus);
         //kDTRWOPane
@@ -3968,12 +3963,12 @@ vo.put("i","I");
 		dataBinder.registerBinding("ReturnRepair", com.kingdee.eas.auto4s.bdm.rsm.FReturnRepairEnum.class, this.ReturnRepair, "selectedItem");
 		dataBinder.registerBinding("Remark", String.class, this.txtRemark, "text");
 		dataBinder.registerBinding("customInfo", String.class, this.txtcustomInfo, "text");
-		dataBinder.registerBinding("saleType", String.class, this.txtsaleType, "text");
 		dataBinder.registerBinding("CustomerAccount", com.kingdee.eas.ga.rs.CustomerAccountInfo.class, this.prmtCustomerAccount, "data");
-		dataBinder.registerBinding("customerAccountName", String.class, this.txtcustomerAccountName, "text");
-		dataBinder.registerBinding("gaDept", String.class, this.txtgaDept, "text");
 		dataBinder.registerBinding("repairBizType", com.kingdee.eas.ga.rs.RepairWOBizTypeInfo.class, this.prmtrepairBizType, "data");
 		dataBinder.registerBinding("dept", com.kingdee.eas.basedata.org.AdminOrgUnitInfo.class, this.prmtdept, "data");
+		dataBinder.registerBinding("saleType", String.class, this.txtsaleType, "text");
+		dataBinder.registerBinding("gaDept", String.class, this.txtgaDept, "text");
+		dataBinder.registerBinding("customerAccountName", String.class, this.txtcustomerAccountName, "text");
 		dataBinder.registerBinding("gaBillStatus", com.kingdee.eas.ga.rs.RepairWOStatusEnum.class, this.gaBillStatus, "selectedItem");
 		dataBinder.registerBinding("RWOItemSpEntry.seq", int.class, this.kdtRWOItemSpEntry, "seq.text");
 		dataBinder.registerBinding("RWOItemSpEntry", com.kingdee.eas.auto4s.rsm.rs.RepairWORWOItemSpEntryInfo.class, this.kdtRWOItemSpEntry, "userObject");
@@ -4318,12 +4313,12 @@ vo.put("i","I");
 		getValidateHelper().registerBindProperty("ReturnRepair", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("Remark", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("customInfo", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("saleType", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("CustomerAccount", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("customerAccountName", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("gaDept", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("repairBizType", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("dept", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("saleType", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("gaDept", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("customerAccountName", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("gaBillStatus", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("RWOItemSpEntry.seq", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("RWOItemSpEntry", ValidateHelper.ON_SAVE);    
@@ -5209,7 +5204,6 @@ kdtRWOAttachmentItemEntry.getCell(rowIndex,"AttaItemName").setValue(com.kingdee.
         sic.add(new SelectorItemInfo("ReturnRepair"));
         sic.add(new SelectorItemInfo("Remark"));
         sic.add(new SelectorItemInfo("customInfo"));
-        sic.add(new SelectorItemInfo("saleType"));
 		if(selectorAll.equalsIgnoreCase("true"))
 		{
 			sic.add(new SelectorItemInfo("CustomerAccount.*"));
@@ -5219,8 +5213,6 @@ kdtRWOAttachmentItemEntry.getCell(rowIndex,"AttaItemName").setValue(com.kingdee.
         	sic.add(new SelectorItemInfo("CustomerAccount.number"));
         	sic.add(new SelectorItemInfo("CustomerAccount.name"));
 		}
-        sic.add(new SelectorItemInfo("customerAccountName"));
-        sic.add(new SelectorItemInfo("gaDept"));
 		if(selectorAll.equalsIgnoreCase("true"))
 		{
 			sic.add(new SelectorItemInfo("repairBizType.*"));
@@ -5239,6 +5231,9 @@ kdtRWOAttachmentItemEntry.getCell(rowIndex,"AttaItemName").setValue(com.kingdee.
         	sic.add(new SelectorItemInfo("dept.number"));
         	sic.add(new SelectorItemInfo("dept.name"));
 		}
+        sic.add(new SelectorItemInfo("saleType"));
+        sic.add(new SelectorItemInfo("gaDept"));
+        sic.add(new SelectorItemInfo("customerAccountName"));
         sic.add(new SelectorItemInfo("gaBillStatus"));
     	sic.add(new SelectorItemInfo("RWOItemSpEntry.seq"));
 		if(selectorAll.equalsIgnoreCase("true"))
@@ -7161,7 +7156,7 @@ kdtRWOAttachmentItemEntry.getCell(rowIndex,"AttaItemName").setValue(com.kingdee.
      * output getDetailTable method
      */
     protected KDTable getDetailTable() {
-        return kdtRemarkList;
+        return kdtRWORepairItemEntry;
 	}
     /**
      * output applyDefaultValue method

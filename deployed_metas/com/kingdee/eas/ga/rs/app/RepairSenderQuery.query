@@ -1,0 +1,1419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.ga.rs.app</package>
+    <name>RepairSenderQuery</name>
+    <alias>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].alias</alias>
+    <description>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].description</description>
+    <userDefined>true</userDefined>
+    <reportDataSource />
+    <bizUnitPK />
+    <connectionProvider />
+    <subObjects>
+        <subEntity>
+            <name>Vehicle</name>
+            <alias>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].subObjects.subEntity[Vehicle].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="Vehicle" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>orgUnit</name>
+            <alias>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].subObjects.subEntity[orgUnit].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="AdminOrgUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>series</name>
+            <alias>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].subObjects.subEntity[series].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="Series" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>model</name>
+            <alias>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].subObjects.subEntity[model].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="Model" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>RepairSender</name>
+            <alias>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].subObjects.subEntity[RepairSender].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="VehicleRepairSender" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>brand</name>
+            <alias>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].subObjects.subEntity[brand].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="Brand" />
+            </entityRef>
+        </subEntity>
+    </subObjects>
+    <units>
+        <propertyUnit>
+            <name>bf531fa7-86e6-4ba0-98fe-e131e32dcfc5</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.propertyUnit[bf531fa7-86e6-4ba0-98fe-e131e32dcfc5].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>d05e9b63-8b7f-4cda-8728-80d4192e8f10</key>
+                    <parentUnit>
+                        <key name="name" value="bf531fa7-86e6-4ba0-98fe-e131e32dcfc5" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Vehicle" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="orgUnit" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>854e7e91-4376-4c18-a987-fe2bad88b1bc</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.propertyUnit[854e7e91-4376-4c18-a987-fe2bad88b1bc].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>65dcc753-f100-4eda-838e-4cb47f8c8c04</key>
+                    <parentUnit>
+                        <key name="name" value="854e7e91-4376-4c18-a987-fe2bad88b1bc" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="orgUnit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>cbde11f1-4f58-4d44-9db3-6606f09443e8</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.propertyUnit[cbde11f1-4f58-4d44-9db3-6606f09443e8].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>1ac731b0-a4ff-4bae-aa42-b666399a1589</key>
+                    <parentUnit>
+                        <key name="name" value="cbde11f1-4f58-4d44-9db3-6606f09443e8" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Vehicle" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="series" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>45442bdb-2f6a-4cd4-8fa1-49643f14b550</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.propertyUnit[45442bdb-2f6a-4cd4-8fa1-49643f14b550].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>9199eb2a-56d3-4014-ae27-d96204672365</key>
+                    <parentUnit>
+                        <key name="name" value="45442bdb-2f6a-4cd4-8fa1-49643f14b550" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="series" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>e0374ec8-851b-4d07-b528-538aab7e53a8</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.propertyUnit[e0374ec8-851b-4d07-b528-538aab7e53a8].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>f9153a07-543c-48d1-a355-5b2d349a1eb5</key>
+                    <parentUnit>
+                        <key name="name" value="e0374ec8-851b-4d07-b528-538aab7e53a8" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Vehicle" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="model" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>6965033a-5923-4e7f-9789-76bcef14fc37</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.propertyUnit[6965033a-5923-4e7f-9789-76bcef14fc37].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>aec1637d-c651-4b37-bb49-a398c120cd59</key>
+                    <parentUnit>
+                        <key name="name" value="6965033a-5923-4e7f-9789-76bcef14fc37" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="model" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>142e96d4-e768-4675-94ff-6faa777759b6</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.propertyUnit[142e96d4-e768-4675-94ff-6faa777759b6].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>e5afb408-95cf-4463-ad79-039c87b99cf2</key>
+                    <parentUnit>
+                        <key name="name" value="142e96d4-e768-4675-94ff-6faa777759b6" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Vehicle" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>6ec21d42-a87c-43a7-9fd4-0c3d02c8cb48</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.propertyUnit[6ec21d42-a87c-43a7-9fd4-0c3d02c8cb48].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>56052744-0d0f-40a5-bfd1-52c7a1d25d43</key>
+                    <parentUnit>
+                        <key name="name" value="6ec21d42-a87c-43a7-9fd4-0c3d02c8cb48" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairSender" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="parent" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>23f31c12-b1cf-4ad7-ac94-8005a510a7f5</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.propertyUnit[23f31c12-b1cf-4ad7-ac94-8005a510a7f5].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>5c240f3c-c436-4dec-9665-9fe72ade56d8</key>
+                    <parentUnit>
+                        <key name="name" value="23f31c12-b1cf-4ad7-ac94-8005a510a7f5" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Vehicle" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="brand" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>e59b57a1-7118-4d4e-af9f-075dcfd792d7</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.propertyUnit[e59b57a1-7118-4d4e-af9f-075dcfd792d7].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>34ccb7f4-32f7-4757-8386-409f6b58eacc</key>
+                    <parentUnit>
+                        <key name="name" value="e59b57a1-7118-4d4e-af9f-075dcfd792d7" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="brand" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>vIN</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[vIN].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>e21106a8-edee-4b41-81fe-2bfaac47a284</key>
+                    <parentUnit>
+                        <key name="name" value="vIN" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Vehicle" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="vIN" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>engineNum</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[engineNum].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>37d2b156-b23d-4438-ac4e-1a9a195d71a7</key>
+                    <parentUnit>
+                        <key name="name" value="engineNum" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Vehicle" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="engineNum" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>plateNum</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[plateNum].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>6eb63862-0ea9-4fe1-b902-b9bfb5c1a0e5</key>
+                    <parentUnit>
+                        <key name="name" value="plateNum" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Vehicle" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="plateNum" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>ed34ee67-5f62-4894-a504-efc2f05db30c</key>
+                    <parentUnit>
+                        <key name="name" value="number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Vehicle" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>orgUnit.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[orgUnit.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>33092377-8f51-4ee7-9abf-f57e85a94d50</key>
+                    <parentUnit>
+                        <key name="name" value="orgUnit.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="orgUnit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>series.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[series.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>195bc31c-76f0-4f86-a04b-0fdba2275e28</key>
+                    <parentUnit>
+                        <key name="name" value="series.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="series" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>model.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[model.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>81e98910-2f6c-4a95-bf20-2f099a490f69</key>
+                    <parentUnit>
+                        <key name="name" value="model.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="model" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>brand.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[brand.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>7fb47fee-c22d-4b90-9b5f-8f8135e971ba</key>
+                    <parentUnit>
+                        <key name="name" value="brand.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="brand" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>RepairSender.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[RepairSender.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>77c4dd59-1943-48b6-8476-004518f11cb9</key>
+                    <parentUnit>
+                        <key name="name" value="RepairSender.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairSender" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>RepairSender.tel</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[RepairSender.tel].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>e683d95e-54c9-46e0-9ed4-b85e9b4edf6d</key>
+                    <parentUnit>
+                        <key name="name" value="RepairSender.tel" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairSender" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="tel" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>RepairSender.addr</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[RepairSender.addr].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>9ff59d84-2f67-4eaf-a5f2-b865afa50f7f</key>
+                    <parentUnit>
+                        <key name="name" value="RepairSender.addr" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairSender" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="addr" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>RepairSender.zipCode</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[RepairSender.zipCode].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b5cdaf0b-6769-4bb5-a9c4-71c3dc7b91bc</key>
+                    <parentUnit>
+                        <key name="name" value="RepairSender.zipCode" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairSender" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="zipCode" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>RepairSender.idNumber</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[RepairSender.idNumber].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>96493b09-d573-47cd-b9dd-b860f3a8fbf9</key>
+                    <parentUnit>
+                        <key name="name" value="RepairSender.idNumber" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairSender" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="idNumber" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>RepairSender.email</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[RepairSender.email].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>4262eae6-c94b-4b37-9d34-73d0319d7847</key>
+                    <parentUnit>
+                        <key name="name" value="RepairSender.email" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairSender" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="email" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>orgUnit.id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[orgUnit.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>fb927b86-7974-4e7a-a739-5766268334db</key>
+                    <parentUnit>
+                        <key name="name" value="orgUnit.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="orgUnit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>baaacd68-5ca2-4f44-87ae-2677267bb738</key>
+                    <parentUnit>
+                        <key name="name" value="id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Vehicle" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </queryField>
+    </units>
+    <defaultFilter>
+        <name>defaultFilter</name>
+        <formulaString />
+        <query>
+            <key name="package" value="com.kingdee.eas.ga.rs.app" />
+            <key name="name" value="RepairSenderQuery" />
+        </query>
+    </defaultFilter>
+    <defaultSorters>
+        <querySorterItem>
+            <propertyName>number</propertyName>
+            <sortType>ASC</sortType>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+            <configured>false</configured>
+        </querySorterItem>
+    </defaultSorters>
+    <isDistinct>false</isDistinct>
+    <joins>
+        <join>
+            <name>d88b1d3a-1751-4fe0-89d7-128a9ccf3a5f</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="Vehicle" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="orgUnit" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>4b478700-8efa-48e8-85d6-a9ff54813a97</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="bf531fa7-86e6-4ba0-98fe-e131e32dcfc5" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="854e7e91-4376-4c18-a987-fe2bad88b1bc" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="d88b1d3a-1751-4fe0-89d7-128a9ccf3a5f" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </join>
+        <join>
+            <name>ba409c7a-88d5-4b1d-b26c-f107cdecdf30</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="Vehicle" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="series" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>aaa492c2-c1d8-4078-b48d-b0cc73002334</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="cbde11f1-4f58-4d44-9db3-6606f09443e8" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="45442bdb-2f6a-4cd4-8fa1-49643f14b550" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="ba409c7a-88d5-4b1d-b26c-f107cdecdf30" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </join>
+        <join>
+            <name>6097c3ca-07f8-4779-a152-f0bedaeb234d</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="Vehicle" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="model" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>d496e9a6-7f4b-4fe9-a107-729af2daa459</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="e0374ec8-851b-4d07-b528-538aab7e53a8" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="6965033a-5923-4e7f-9789-76bcef14fc37" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="6097c3ca-07f8-4779-a152-f0bedaeb234d" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </join>
+        <join>
+            <name>8e250118-eeff-498b-8f27-5378217f2cd8</name>
+            <formulaString>#0</formulaString>
+            <type>RIGHT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="Vehicle" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="RepairSender" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>bc4a2700-c256-4199-b8ea-ac38f0211bb2</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="142e96d4-e768-4675-94ff-6faa777759b6" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="6ec21d42-a87c-43a7-9fd4-0c3d02c8cb48" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="8e250118-eeff-498b-8f27-5378217f2cd8" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </join>
+        <join>
+            <name>896367bb-3684-4f22-8917-e3802e94038d</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="Vehicle" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="brand" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>4f1c65ad-2e78-4bbe-bb6c-676d3ca21842</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="23f31c12-b1cf-4ad7-ac94-8005a510a7f5" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="e59b57a1-7118-4d4e-af9f-075dcfd792d7" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="896367bb-3684-4f22-8917-e3802e94038d" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairSenderQuery" />
+            </query>
+        </join>
+    </joins>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].subObjects.subEntity[RepairSender].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].subObjects.subEntity[Vehicle].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].subObjects.subEntity[brand].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].subObjects.subEntity[model].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].subObjects.subEntity[orgUnit].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].subObjects.subEntity[series].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.propertyUnit[142e96d4-e768-4675-94ff-6faa777759b6].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.propertyUnit[23f31c12-b1cf-4ad7-ac94-8005a510a7f5].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.propertyUnit[45442bdb-2f6a-4cd4-8fa1-49643f14b550].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.propertyUnit[6965033a-5923-4e7f-9789-76bcef14fc37].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.propertyUnit[6ec21d42-a87c-43a7-9fd4-0c3d02c8cb48].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.propertyUnit[854e7e91-4376-4c18-a987-fe2bad88b1bc].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.propertyUnit[bf531fa7-86e6-4ba0-98fe-e131e32dcfc5].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.propertyUnit[cbde11f1-4f58-4d44-9db3-6606f09443e8].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.propertyUnit[e0374ec8-851b-4d07-b528-538aab7e53a8].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.propertyUnit[e59b57a1-7118-4d4e-af9f-075dcfd792d7].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[RepairSender.addr].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="地址" />
+            <lang locale="zh_HK" value="地址" />
+            <lang locale="zh_TW" value="地址" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[RepairSender.addr].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[RepairSender.addr].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[RepairSender.email].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="邮箱" />
+            <lang locale="zh_HK" value="郵箱" />
+            <lang locale="zh_TW" value="郵箱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[RepairSender.email].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[RepairSender.email].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[RepairSender.idNumber].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="身份证号" />
+            <lang locale="zh_HK" value="身份證號" />
+            <lang locale="zh_TW" value="身份證號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[RepairSender.idNumber].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[RepairSender.idNumber].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[RepairSender.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="送修人姓名" />
+            <lang locale="zh_HK" value="送修人姓名" />
+            <lang locale="zh_TW" value="送修人姓名" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[RepairSender.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[RepairSender.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[RepairSender.tel].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="电话" />
+            <lang locale="zh_HK" value="電話" />
+            <lang locale="zh_TW" value="電話" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[RepairSender.tel].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[RepairSender.tel].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[RepairSender.zipCode].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="邮编" />
+            <lang locale="zh_HK" value="郵編" />
+            <lang locale="zh_TW" value="郵編" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[RepairSender.zipCode].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[RepairSender.zipCode].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[brand.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="品牌名称" />
+            <lang locale="zh_HK" value="品牌名稱" />
+            <lang locale="zh_TW" value="品牌名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[brand.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[brand.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[engineNum].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="发动机号" />
+            <lang locale="zh_HK" value="發動機號" />
+            <lang locale="zh_TW" value="發動機號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[engineNum].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[engineNum].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[model.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="车型名称" />
+            <lang locale="zh_HK" value="車型名稱" />
+            <lang locale="zh_TW" value="車型名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[model.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[model.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="编码" />
+            <lang locale="zh_HK" value="編碼" />
+            <lang locale="zh_TW" value="編碼" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[number].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[number].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[orgUnit.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[orgUnit.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司名称" />
+            <lang locale="zh_HK" value="公司名稱" />
+            <lang locale="zh_TW" value="公司名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[orgUnit.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[orgUnit.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[plateNum].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="车牌号" />
+            <lang locale="zh_HK" value="車牌號" />
+            <lang locale="zh_TW" value="車牌號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[plateNum].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[plateNum].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[series.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="车系名称" />
+            <lang locale="zh_HK" value="車系名稱" />
+            <lang locale="zh_TW" value="車系名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[series.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[series.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[vIN].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="底盘号" />
+            <lang locale="zh_HK" value="底盤號" />
+            <lang locale="zh_TW" value="底盤號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[vIN].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairSenderQuery].units.queryField[vIN].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</joinQuery>
+
