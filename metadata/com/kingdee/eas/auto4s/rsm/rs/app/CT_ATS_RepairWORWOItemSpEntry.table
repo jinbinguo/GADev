@@ -483,6 +483,62 @@
             <scale>0</scale>
             <precision>0</precision>
         </column>
+        <column>
+            <name>CFDefaultDiscountRate</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFDefaultDiscountRate].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFDefaultDiscountRate].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NUMERIC</sqlType>
+            <length>5</length>
+            <scale>2</scale>
+            <precision>5</precision>
+        </column>
+        <column>
+            <name>CFAllocateExenseRate</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFAllocateExenseRate].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFAllocateExenseRate].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NUMERIC</sqlType>
+            <length>5</length>
+            <scale>2</scale>
+            <precision>5</precision>
+        </column>
+        <column>
+            <name>CFRepairWay</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFRepairWay].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFRepairWay].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFSupplierID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFSupplierID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFSupplierID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>CPK_ATS_RWORWOImck</name>
@@ -574,6 +630,25 @@
                 </fkColumnPair>
             </fkColumnPairs>
         </foreignKey>
+        <foreignKey>
+            <name>CFK_ATS_ATSRWORWqn</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.master.cssp.app" />
+                <key name="name" value="T_BD_Supplier" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="CFSupplierID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
     </foreignKeys>
     <resource>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].alias">
@@ -593,6 +668,18 @@
             <lang locale="zh_CN" value="账户" />
             <lang locale="zh_HK" value="賬戶" />
             <lang locale="zh_TW" value="賬戶" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFAllocateExenseRate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="费用分担" />
+            <lang locale="zh_HK" value="費用分擔" />
+            <lang locale="zh_TW" value="費用分擔" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFAllocateExenseRate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="费用分担" />
+            <lang locale="zh_HK" value="費用分擔" />
+            <lang locale="zh_TW" value="費用分擔" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFAmount].alias">
             <lang locale="en_US" value="null" />
@@ -629,6 +716,18 @@
             <lang locale="zh_CN" value="成本价" />
             <lang locale="zh_HK" value="成本價" />
             <lang locale="zh_TW" value="成本價" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFDefaultDiscountRate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="默认折扣" />
+            <lang locale="zh_HK" value="默認折扣" />
+            <lang locale="zh_TW" value="默認折扣" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFDefaultDiscountRate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="默认折扣" />
+            <lang locale="zh_HK" value="默認折扣" />
+            <lang locale="zh_TW" value="默認折扣" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFDiscountRate].alias">
             <lang locale="en_US" value="null" />
@@ -810,6 +909,18 @@
             <lang locale="zh_HK" value="套餐" />
             <lang locale="zh_TW" value="套餐" />
         </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFRepairWay].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修方式" />
+            <lang locale="zh_HK" value="維修方式" />
+            <lang locale="zh_TW" value="維修方式" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFRepairWay].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修方式" />
+            <lang locale="zh_HK" value="維修方式" />
+            <lang locale="zh_TW" value="維修方式" />
+        </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFRts].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="RTS代码" />
@@ -856,6 +967,18 @@
             <lang locale="zh_CN" value="结算对象" />
             <lang locale="zh_HK" value="結算對象" />
             <lang locale="zh_TW" value="結算對象" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFSupplierID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修外包公司" />
+            <lang locale="zh_HK" value="維修外包公司" />
+            <lang locale="zh_TW" value="維修外包公司" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFSupplierID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修外包公司" />
+            <lang locale="zh_HK" value="維修外包公司" />
+            <lang locale="zh_TW" value="維修外包公司" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFT].alias">
             <lang locale="en_US" value="null" />
