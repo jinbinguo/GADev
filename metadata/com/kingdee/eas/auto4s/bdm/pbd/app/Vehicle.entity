@@ -5,17 +5,6 @@
     <alias>entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.Vehicle].alias</alias>
     <properties>
         <linkProperty>
-            <name>RepairSender</name>
-            <alias>entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.Vehicle].properties.linkProperty[RepairSender].alias</alias>
-            <description>entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.Vehicle].properties.linkProperty[RepairSender].description</description>
-            <userDefined>true</userDefined>
-            <configured>false</configured>
-            <relationship>
-                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
-                <key name="name" value="R_Vehicle_VehicleRepairSender" />
-            </relationship>
-        </linkProperty>
-        <linkProperty>
             <name>RepairRemark</name>
             <alias>entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.Vehicle].properties.linkProperty[RepairRemark].alias</alias>
             <description>entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.Vehicle].properties.linkProperty[RepairRemark].description</description>
@@ -43,18 +32,6 @@
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="" />
             <lang locale="zh_TW" value="null" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.Vehicle].properties.linkProperty[RepairSender].alias">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="维修人信息" />
-            <lang locale="zh_HK" value="維修人信息" />
-            <lang locale="zh_TW" value="維修人信息" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.auto4s.bdm.pbd.app.Vehicle].properties.linkProperty[RepairSender].description">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="维修人信息" />
-            <lang locale="zh_HK" value="維修人信息" />
-            <lang locale="zh_TW" value="維修人信息" />
         </rs>
     </resource>
 </entityObject>

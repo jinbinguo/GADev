@@ -258,8 +258,8 @@ public abstract class AbstractVehicleEditUI extends com.kingdee.eas.framework.cl
     protected com.kingdee.bos.ctrl.swing.KDWorkButton kDViewVehicleAdvice;
     protected com.kingdee.bos.ctrl.swing.KDPanel kDPanel6;
     protected com.kingdee.bos.ctrl.swing.KDPanel kDPanel8;
-    protected com.kingdee.bos.ctrl.kdf.table.KDTable kdtRepairSender;
-	protected com.kingdee.eas.framework.client.multiDetail.DetailPanel kdtRepairSender_detailPanel = null;
+    protected com.kingdee.bos.ctrl.kdf.table.KDTable kdtRepairMan;
+    protected com.kingdee.bos.ctrl.swing.KDButton btnEditRepairMan;
     protected com.kingdee.bos.ctrl.kdf.table.KDTable kdtRepairRemark;
 	protected com.kingdee.eas.framework.client.multiDetail.DetailPanel kdtRepairRemark_detailPanel = null;
     protected com.kingdee.eas.auto4s.bdm.pbd.VehicleInfo editData = null;
@@ -282,6 +282,7 @@ public abstract class AbstractVehicleEditUI extends com.kingdee.eas.framework.cl
     protected ActionGetVehicleMiles actionGetVehicleMiles = null;
     protected ActionViewVehicleAdvice actionViewVehicleAdvice = null;
     protected ActionAutoVehicleRepairWOItem actionautoVehicleRepairWOItem = null;
+    protected ActionEditRepairMan actionEditRepairMan = null;
     /**
      * output class constructor
      */
@@ -406,6 +407,10 @@ public abstract class AbstractVehicleEditUI extends com.kingdee.eas.framework.cl
         this.actionautoVehicleRepairWOItem = new ActionAutoVehicleRepairWOItem(this);
         getActionManager().registerAction("actionautoVehicleRepairWOItem", actionautoVehicleRepairWOItem);
          this.actionautoVehicleRepairWOItem.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+        //actionEditRepairMan
+        this.actionEditRepairMan = new ActionEditRepairMan(this);
+        getActionManager().registerAction("actionEditRepairMan", actionEditRepairMan);
+         this.actionEditRepairMan.addService(new com.kingdee.eas.framework.client.service.PermissionService());
         this.contnumber = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contsource = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contbrand = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
@@ -617,7 +622,8 @@ public abstract class AbstractVehicleEditUI extends com.kingdee.eas.framework.cl
         this.kDViewVehicleAdvice = new com.kingdee.bos.ctrl.swing.KDWorkButton();
         this.kDPanel6 = new com.kingdee.bos.ctrl.swing.KDPanel();
         this.kDPanel8 = new com.kingdee.bos.ctrl.swing.KDPanel();
-        this.kdtRepairSender = new com.kingdee.bos.ctrl.kdf.table.KDTable();
+        this.kdtRepairMan = new com.kingdee.bos.ctrl.kdf.table.KDTable();
+        this.btnEditRepairMan = new com.kingdee.bos.ctrl.swing.KDButton();
         this.kdtRepairRemark = new com.kingdee.bos.ctrl.kdf.table.KDTable();
         this.contnumber.setName("contnumber");
         this.contsource.setName("contsource");
@@ -830,7 +836,8 @@ public abstract class AbstractVehicleEditUI extends com.kingdee.eas.framework.cl
         this.kDViewVehicleAdvice.setName("kDViewVehicleAdvice");
         this.kDPanel6.setName("kDPanel6");
         this.kDPanel8.setName("kDPanel8");
-        this.kdtRepairSender.setName("kdtRepairSender");
+        this.kdtRepairMan.setName("kdtRepairMan");
+        this.btnEditRepairMan.setName("btnEditRepairMan");
         this.kdtRepairRemark.setName("kdtRepairRemark");
         // CoreUI		
         this.btnSave.setVisible(false);		
@@ -2194,45 +2201,17 @@ public abstract class AbstractVehicleEditUI extends com.kingdee.eas.framework.cl
         this.kDViewVehicleAdvice.setIcon(com.kingdee.eas.util.client.EASResource.getIcon("imgTree_view"));
         // kDPanel6
         // kDPanel8
-        // kdtRepairSender
-		String kdtRepairSenderStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol6\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"name\" t:width=\"100\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"-1\" /><t:Column t:key=\"tel\" t:width=\"100\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"addr\" t:width=\"800\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"zipCode\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"idNumber\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"email\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"seq\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol6\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{name}</t:Cell><t:Cell>$Resource{tel}</t:Cell><t:Cell>$Resource{addr}</t:Cell><t:Cell>$Resource{zipCode}</t:Cell><t:Cell>$Resource{idNumber}</t:Cell><t:Cell>$Resource{email}</t:Cell><t:Cell>$Resource{seq}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
+        // kdtRepairMan
+		String kdtRepairManStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sTable\"><c:Alignment horizontal=\"left\" /><c:Protection locked=\"true\" /></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\" t:styleID=\"sTable\"><t:ColumnGroup><t:Column t:key=\"number\" t:width=\"120\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"0\" /><t:Column t:key=\"name\" t:width=\"100\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"1\" /><t:Column t:key=\"tel\" t:width=\"100\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"2\" /><t:Column t:key=\"addr\" t:width=\"800\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"3\" /><t:Column t:key=\"zipCode\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"4\" /><t:Column t:key=\"idNumber\" t:width=\"130\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"5\" /><t:Column t:key=\"email\" t:width=\"150\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"6\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{number}</t:Cell><t:Cell>$Resource{name}</t:Cell><t:Cell>$Resource{tel}</t:Cell><t:Cell>$Resource{addr}</t:Cell><t:Cell>$Resource{zipCode}</t:Cell><t:Cell>$Resource{idNumber}</t:Cell><t:Cell>$Resource{email}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
 		
-        this.kdtRepairSender.setFormatXml(resHelper.translateString("kdtRepairSender",kdtRepairSenderStrXML));
+        this.kdtRepairMan.setFormatXml(resHelper.translateString("kdtRepairMan",kdtRepairManStrXML));
 
-                this.kdtRepairSender.putBindContents("editData",new String[] {"name","tel","addr","zipCode","idNumber","email","seq"});
+        
 
-
-        this.kdtRepairSender.checkParsed();
-        KDTextField kdtRepairSender_name_TextField = new KDTextField();
-        kdtRepairSender_name_TextField.setName("kdtRepairSender_name_TextField");
-        kdtRepairSender_name_TextField.setMaxLength(100);
-        KDTDefaultCellEditor kdtRepairSender_name_CellEditor = new KDTDefaultCellEditor(kdtRepairSender_name_TextField);
-        this.kdtRepairSender.getColumn("name").setEditor(kdtRepairSender_name_CellEditor);
-        KDTextField kdtRepairSender_tel_TextField = new KDTextField();
-        kdtRepairSender_tel_TextField.setName("kdtRepairSender_tel_TextField");
-        kdtRepairSender_tel_TextField.setMaxLength(100);
-        KDTDefaultCellEditor kdtRepairSender_tel_CellEditor = new KDTDefaultCellEditor(kdtRepairSender_tel_TextField);
-        this.kdtRepairSender.getColumn("tel").setEditor(kdtRepairSender_tel_CellEditor);
-        KDTextField kdtRepairSender_addr_TextField = new KDTextField();
-        kdtRepairSender_addr_TextField.setName("kdtRepairSender_addr_TextField");
-        kdtRepairSender_addr_TextField.setMaxLength(255);
-        KDTDefaultCellEditor kdtRepairSender_addr_CellEditor = new KDTDefaultCellEditor(kdtRepairSender_addr_TextField);
-        this.kdtRepairSender.getColumn("addr").setEditor(kdtRepairSender_addr_CellEditor);
-        KDTextField kdtRepairSender_zipCode_TextField = new KDTextField();
-        kdtRepairSender_zipCode_TextField.setName("kdtRepairSender_zipCode_TextField");
-        kdtRepairSender_zipCode_TextField.setMaxLength(100);
-        KDTDefaultCellEditor kdtRepairSender_zipCode_CellEditor = new KDTDefaultCellEditor(kdtRepairSender_zipCode_TextField);
-        this.kdtRepairSender.getColumn("zipCode").setEditor(kdtRepairSender_zipCode_CellEditor);
-        KDTextField kdtRepairSender_idNumber_TextField = new KDTextField();
-        kdtRepairSender_idNumber_TextField.setName("kdtRepairSender_idNumber_TextField");
-        kdtRepairSender_idNumber_TextField.setMaxLength(18);
-        KDTDefaultCellEditor kdtRepairSender_idNumber_CellEditor = new KDTDefaultCellEditor(kdtRepairSender_idNumber_TextField);
-        this.kdtRepairSender.getColumn("idNumber").setEditor(kdtRepairSender_idNumber_CellEditor);
-        KDTextField kdtRepairSender_email_TextField = new KDTextField();
-        kdtRepairSender_email_TextField.setName("kdtRepairSender_email_TextField");
-        kdtRepairSender_email_TextField.setMaxLength(100);
-        KDTDefaultCellEditor kdtRepairSender_email_CellEditor = new KDTDefaultCellEditor(kdtRepairSender_email_TextField);
-        this.kdtRepairSender.getColumn("email").setEditor(kdtRepairSender_email_CellEditor);
+        this.kdtRepairMan.checkParsed();
+        // btnEditRepairMan
+        this.btnEditRepairMan.setAction((IItemAction)ActionProxyFactory.getProxy(actionEditRepairMan, new Class[] { IItemAction.class }, getServiceContext()));		
+        this.btnEditRepairMan.setText(resHelper.getString("btnEditRepairMan.text"));
         // kdtRepairRemark
 		String kdtRepairRemarkStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:NumberFormat>&amp;date</c:NumberFormat></c:Style><c:Style id=\"sCol2\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol3\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"createTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"0\" t:styleID=\"sCol0\" /><t:Column t:key=\"remark\" t:width=\"1500\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"1\" /><t:Column t:key=\"repairWO\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"2\" t:styleID=\"sCol2\" /><t:Column t:key=\"seq\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"3\" t:styleID=\"sCol3\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{createTime}</t:Cell><t:Cell>$Resource{remark}</t:Cell><t:Cell>$Resource{repairWO}</t:Cell><t:Cell>$Resource{seq}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
 		
@@ -2269,7 +2248,7 @@ public abstract class AbstractVehicleEditUI extends com.kingdee.eas.framework.cl
 		evikdtRepairRemark_repairWO_PromptBox.setFilter(com.kingdee.eas.framework.FrameWorkUtils.getF7FilterInfoByAuthorizedOrg(com.kingdee.eas.basedata.org.OrgType.getEnum("Admin"),"OrgUnit.id"));
 		kdtRepairRemark_repairWO_PromptBox.setEntityViewInfo(evikdtRepairRemark_repairWO_PromptBox);
 					
-        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {pklastUpdateTime,prmtlastUpdateUser,pkcreateTime,prmtcreator,prmtcity,pkbridgeFeeDate,txttraffInsuNumber,pktraffInvalidDate,txtzipCode,trustStatus,prmtbelongOrgUnit,pkvRCRegDate,pkplateDate,pksaleDate,prmtsaleOrg,txtinsuranceNumber,pkinsuInvalidDate,prmtinsuCompany,chkisDecoration,txtkeepingOrgUnit,chkisMortgage,txtmodelVersion,chkinitVehicle,pkpurReceiveDate,txtiDNum,prmtvRCBelongPlace,kdtRepairRemark,prmtmainUser,kdtRepairSender,vehicleStatus,txtwarrantyMile,txtaddress,pkgreenLabelExpireDate,pkyearExamineExpireDate,pkvRCExpireDate,pkwarrantyEndDate,pkwarrantyStartDate,pktoServiceDate,prmtservicePerson,prmtrepairOrgUnit,txttransferRemark,pktransferDate,txtbankAccount,txtphone,kdtBelong,txtownerName,prmtcustomer,txtkeyPlace,txtkeyNum,txtvehicleInfo,txtinspectionNum,txtimportDocNum,txtcertificationNum,txtguaranteeNum,pkproductDate,prmtlocation,prmtwarehouse,prmtorgUnit,prmtbuyAutoOrgUnit,virtualIssueStatus,assignStatus,reservedStatus,pDIStatus,onRoadStatus,vehicleCreateType,prmtseries,prmtbrand,source,prmtmodel,txtvIN,txtengineNum,txtNumber,txtplateNum,plateColor,chkotherBrandVehicle,txtvehicleRemark,prmtinner,prmtcolor,prmtoptionitemcombine,prmtorderCustomer,substoreStatus,prmtsubAutoStore,chkisSpecialPrice,txtkeepingLocation,pkofflineDate}));
+        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {pklastUpdateTime,prmtlastUpdateUser,pkcreateTime,prmtcreator,prmtcity,pkbridgeFeeDate,txttraffInsuNumber,pktraffInvalidDate,txtzipCode,trustStatus,prmtbelongOrgUnit,pkvRCRegDate,pkplateDate,pksaleDate,prmtsaleOrg,txtinsuranceNumber,pkinsuInvalidDate,prmtinsuCompany,chkisDecoration,txtkeepingOrgUnit,chkisMortgage,txtmodelVersion,chkinitVehicle,pkpurReceiveDate,txtiDNum,prmtvRCBelongPlace,kdtRepairRemark,prmtmainUser,vehicleStatus,txtwarrantyMile,txtaddress,pkgreenLabelExpireDate,pkyearExamineExpireDate,pkvRCExpireDate,pkwarrantyEndDate,pkwarrantyStartDate,pktoServiceDate,prmtservicePerson,prmtrepairOrgUnit,txttransferRemark,pktransferDate,txtbankAccount,txtphone,kdtBelong,txtownerName,prmtcustomer,txtkeyPlace,txtkeyNum,txtvehicleInfo,txtinspectionNum,txtimportDocNum,txtcertificationNum,txtguaranteeNum,pkproductDate,prmtlocation,prmtwarehouse,prmtorgUnit,prmtbuyAutoOrgUnit,virtualIssueStatus,assignStatus,reservedStatus,pDIStatus,onRoadStatus,vehicleCreateType,prmtseries,prmtbrand,source,prmtmodel,txtvIN,txtengineNum,txtNumber,txtplateNum,plateColor,chkotherBrandVehicle,txtvehicleRemark,prmtinner,prmtcolor,prmtoptionitemcombine,prmtorderCustomer,substoreStatus,prmtsubAutoStore,chkisSpecialPrice,txtkeepingLocation,pkofflineDate}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding
 		registerBindings();
@@ -2714,9 +2693,10 @@ public abstract class AbstractVehicleEditUI extends com.kingdee.eas.framework.cl
         contcity.setBoundEditor(prmtcity);
         //kDPanel6
         kDPanel6.setLayout(new KDLayout());
-        kDPanel6.putClientProperty("OriginalBounds", new Rectangle(0, 0, 933, 371));        kdtRepairSender.setBounds(new Rectangle(2, 4, 924, 364));
-        kdtRepairSender_detailPanel = (com.kingdee.eas.framework.client.multiDetail.DetailPanel)com.kingdee.eas.framework.client.multiDetail.HMDUtils.buildDetail(this,dataBinder,kdtRepairSender,new com.kingdee.eas.auto4s.bdm.pbd.VehicleRepairSenderInfo(),null,false);
-        kDPanel6.add(kdtRepairSender_detailPanel, new KDLayout.Constraints(2, 4, 924, 364, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        kDPanel6.putClientProperty("OriginalBounds", new Rectangle(0, 0, 933, 371));        kdtRepairMan.setBounds(new Rectangle(2, 27, 924, 341));
+        kDPanel6.add(kdtRepairMan, new KDLayout.Constraints(2, 27, 924, 341, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        btnEditRepairMan.setBounds(new Rectangle(850, 2, 73, 21));
+        kDPanel6.add(btnEditRepairMan, new KDLayout.Constraints(850, 2, 73, 21, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_RIGHT));
         //kDPanel8
         kDPanel8.setLayout(new KDLayout());
         kDPanel8.putClientProperty("OriginalBounds", new Rectangle(0, 0, 933, 371));        kdtRepairRemark.setBounds(new Rectangle(1, 0, 928, 370));
@@ -2941,14 +2921,6 @@ public abstract class AbstractVehicleEditUI extends com.kingdee.eas.framework.cl
 		dataBinder.registerBinding("series", com.kingdee.eas.auto4s.bdm.pbd.SeriesInfo.class, this.prmtseries, "data");
 		dataBinder.registerBinding("vehicleCreateType", com.kingdee.eas.auto4s.bdm.pbd.VehicleCreateTypeEnum.class, this.vehicleCreateType, "selectedItem");
 		dataBinder.registerBinding("vehicleRemark", String.class, this.txtvehicleRemark, "text");
-		dataBinder.registerBinding("RepairSender.seq", int.class, this.kdtRepairSender, "seq.text");
-		dataBinder.registerBinding("RepairSender", com.kingdee.eas.auto4s.bdm.pbd.VehicleRepairSenderInfo.class, this.kdtRepairSender, "userObject");
-		dataBinder.registerBinding("RepairSender.name", String.class, this.kdtRepairSender, "name.text");
-		dataBinder.registerBinding("RepairSender.tel", String.class, this.kdtRepairSender, "tel.text");
-		dataBinder.registerBinding("RepairSender.addr", String.class, this.kdtRepairSender, "addr.text");
-		dataBinder.registerBinding("RepairSender.zipCode", String.class, this.kdtRepairSender, "zipCode.text");
-		dataBinder.registerBinding("RepairSender.idNumber", String.class, this.kdtRepairSender, "idNumber.text");
-		dataBinder.registerBinding("RepairSender.email", String.class, this.kdtRepairSender, "email.text");
 		dataBinder.registerBinding("RepairRemark.seq", int.class, this.kdtRepairRemark, "seq.text");
 		dataBinder.registerBinding("RepairRemark", com.kingdee.eas.auto4s.bdm.pbd.VehicleRepairRemarkInfo.class, this.kdtRepairRemark, "userObject");
 		dataBinder.registerBinding("RepairRemark.remark", String.class, this.kdtRepairRemark, "remark.text");
@@ -3179,14 +3151,6 @@ public abstract class AbstractVehicleEditUI extends com.kingdee.eas.framework.cl
 		getValidateHelper().registerBindProperty("series", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("vehicleCreateType", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("vehicleRemark", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("RepairSender.seq", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("RepairSender", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("RepairSender.name", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("RepairSender.tel", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("RepairSender.addr", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("RepairSender.zipCode", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("RepairSender.idNumber", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("RepairSender.email", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("RepairRemark.seq", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("RepairRemark", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("RepairRemark.remark", ValidateHelper.ON_SAVE);    
@@ -3796,6 +3760,14 @@ public abstract class AbstractVehicleEditUI extends com.kingdee.eas.framework.cl
     public void actionAutoVehicleRepairWOItem_actionPerformed(ActionEvent e) throws Exception
     {
     }
+    	
+
+    /**
+     * output actionEditRepairMan_actionPerformed method
+     */
+    public void actionEditRepairMan_actionPerformed(ActionEvent e) throws Exception
+    {
+    }
 	public RequestContext prepareActionPrint(IItemAction itemAction) throws Exception {
 			RequestContext request = super.prepareActionPrint(itemAction);		
 		if (request != null) {
@@ -4025,6 +3997,17 @@ public abstract class AbstractVehicleEditUI extends com.kingdee.eas.framework.cl
     }
 	
 	public boolean isPrepareActionAutoVehicleRepairWOItem() {
+    	return false;
+    }
+	public RequestContext prepareActionEditRepairMan(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareActionEditRepairMan() {
     	return false;
     }
 
@@ -4599,6 +4582,36 @@ public abstract class AbstractVehicleEditUI extends com.kingdee.eas.framework.cl
     }
 
     /**
+     * output ActionEditRepairMan class
+     */     
+    protected class ActionEditRepairMan extends ItemAction {     
+    
+        public ActionEditRepairMan()
+        {
+            this(null);
+        }
+
+        public ActionEditRepairMan(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            _tempStr = resHelper.getString("ActionEditRepairMan.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionEditRepairMan.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionEditRepairMan.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractVehicleEditUI.this, "ActionEditRepairMan", "actionEditRepairMan_actionPerformed", e);
+        }
+    }
+
+    /**
      * output getMetaDataPK method
      */
     public IMetaDataPK getMetaDataPK()
@@ -4637,11 +4650,6 @@ public abstract class AbstractVehicleEditUI extends com.kingdee.eas.framework.cl
 					protected void beforeStoreFields(ActionEvent arg0) throws Exception {
 		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(source.getSelectedItem())) {
 			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"车辆来源"});
-		}
-		for (int i=0,n=kdtRepairSender.getRowCount();i<n;i++) {
-			if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(kdtRepairSender.getCell(i,"name").getValue())) {
-				throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"送修人姓名"});
-			}
 		}
 			super.beforeStoreFields(arg0);
 		}

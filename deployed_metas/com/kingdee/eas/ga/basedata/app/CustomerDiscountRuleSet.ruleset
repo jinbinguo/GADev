@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.ga.basedata.app</package>
+    <name>CustomerDiscountRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.ga.basedata.app.CustomerDiscountRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.ga.basedata.app.CustomerDiscountRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>acac14bd-ba9e-4ada-9549-32e005f24312</id>
+            <parentID />
+            <source>entrys.atsCustomerName=entrys.atsCustomer.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>99dc9cc8-2d7e-4df3-83d9-6f8d191a9a26</id>
+            <parentID>acac14bd-ba9e-4ada-9549-32e005f24312</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType />
+            <value />
+            <property>
+                <ownerID>5152b46f-67a3-45c4-a15c-cc20deb7fa1a</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5152b46f-67a3-45c4-a15c-cc20deb7fa1a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"atsCustomerName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9ceaa579-90e8-4983-a53c-c11613ee6101</id>
+            <parentID>acac14bd-ba9e-4ada-9549-32e005f24312</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>dd64d5a2-70d2-482e-8be9-dda1868a129f</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>2f16f44b-7128-40ad-bf17-1af19f60d1b7</id>
+                        <expressionID>be688101-c171-42fc-8e7e-f5b221037f9e</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>3a486433-3964-4fd3-869c-67674b0c8258</id>
+                        <expressionID>6ee2f811-dae2-4712-8447-4782c4e6a4ef</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>dd64d5a2-70d2-482e-8be9-dda1868a129f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>be688101-c171-42fc-8e7e-f5b221037f9e</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>e343e478-84ad-4d94-87fc-f4c533aa41da</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e343e478-84ad-4d94-87fc-f4c533aa41da</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"atsCustomer")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6ee2f811-dae2-4712-8447-4782c4e6a4ef</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>26ac2569-5576-4d93-a9b9-131b2bec3272</id>
+            <name>entrys_atsCustomerName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.ga.basedata.app.CustomerDiscountRuleSet].actions.action[entrys_atsCustomerName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.ga.basedata.app.CustomerDiscountRuleSet].actions.action[entrys_atsCustomerName_ActionInfo].description</description>
+            <expressionID>acac14bd-ba9e-4ada-9549-32e005f24312</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>entrys_atsCustomerName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.ga.basedata.app.CustomerDiscountRuleSet].rules.conditionRule[entrys_atsCustomerName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.ga.basedata.app.CustomerDiscountRuleSet].rules.conditionRule[entrys_atsCustomerName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="26ac2569-5576-4d93-a9b9-131b2bec3272" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.ga.basedata.app.CustomerDiscountRuleSet].actions.action[entrys_atsCustomerName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.basedata.app.CustomerDiscountRuleSet].actions.action[entrys_atsCustomerName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.basedata.app.CustomerDiscountRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.basedata.app.CustomerDiscountRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.basedata.app.CustomerDiscountRuleSet].rules.conditionRule[entrys_atsCustomerName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.basedata.app.CustomerDiscountRuleSet].rules.conditionRule[entrys_atsCustomerName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.basedata.app.CustomerDiscountRuleSet].rules.conditionRule[entrys_atsCustomerName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="atsCustomer" />
+            <lang locale="zh_CN" value="atsCustomer" />
+            <lang locale="zh_TW" value="atsCustomer" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.basedata.app.CustomerDiscountRuleSet].rules.conditionRule[entrys_atsCustomerName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

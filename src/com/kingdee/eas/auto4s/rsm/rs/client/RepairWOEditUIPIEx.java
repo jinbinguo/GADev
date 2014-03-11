@@ -27,7 +27,6 @@ import com.kingdee.bos.ctrl.kdf.table.IColumn;
 import com.kingdee.bos.ctrl.kdf.table.IRow;
 import com.kingdee.bos.ctrl.kdf.table.KDTDefaultCellEditor;
 import com.kingdee.bos.ctrl.kdf.table.KDTMergeManager;
-import com.kingdee.bos.ctrl.kdf.table.KDTRow;
 import com.kingdee.bos.ctrl.kdf.table.KDTSelectBlock;
 import com.kingdee.bos.ctrl.kdf.table.KDTSelectManager;
 import com.kingdee.bos.ctrl.kdf.table.KDTSortManager;
@@ -40,7 +39,6 @@ import com.kingdee.bos.ctrl.kdf.table.event.KDTSelectListener;
 import com.kingdee.bos.ctrl.kdf.table.foot.KDTFootManager;
 import com.kingdee.bos.ctrl.kdf.util.render.ObjectValueRender;
 import com.kingdee.bos.ctrl.kdf.util.style.Styles.HorizontalAlignment;
-import com.kingdee.bos.ctrl.swing.KDContainer;
 import com.kingdee.bos.ctrl.swing.KDLayout;
 import com.kingdee.bos.ctrl.swing.KDTextField;
 import com.kingdee.bos.ctrl.swing.KDWorkButton;
@@ -67,13 +65,13 @@ import com.kingdee.bos.ui.face.UIFactory;
 import com.kingdee.bos.ui.face.UIRuleUtil;
 import com.kingdee.bos.util.BOSUuid;
 import com.kingdee.eas.auto4s.bdm.pbd.BrandInfo;
+import com.kingdee.eas.auto4s.bdm.pbd.CustomerInfo;
 import com.kingdee.eas.auto4s.bdm.pbd.IVehicleRepairRemark;
 import com.kingdee.eas.auto4s.bdm.pbd.MakeControl;
 import com.kingdee.eas.auto4s.bdm.pbd.VehicleInfo;
 import com.kingdee.eas.auto4s.bdm.pbd.VehicleRepairRemarkCollection;
 import com.kingdee.eas.auto4s.bdm.pbd.VehicleRepairRemarkFactory;
 import com.kingdee.eas.auto4s.bdm.pbd.VehicleRepairRemarkInfo;
-import com.kingdee.eas.auto4s.bdm.pbd.VehicleRepairSenderInfo;
 import com.kingdee.eas.auto4s.bdm.rsm.PaymentClassifyInfo;
 import com.kingdee.eas.auto4s.bdm.rsm.RepairBillStatusEnum;
 import com.kingdee.eas.auto4s.bdm.rsm.RepairClassifyInfo;
@@ -107,11 +105,12 @@ import com.kingdee.eas.framework.client.multiDetail.DetailPanel;
 import com.kingdee.eas.ga.basedata.UserTypeEnum;
 import com.kingdee.eas.ga.rs.CustomerAccountInfo;
 import com.kingdee.eas.ga.rs.IEnum;
+import com.kingdee.eas.ga.rs.RepairManInfo;
 import com.kingdee.eas.ga.rs.RepairWOBizTypeInfo;
 import com.kingdee.eas.ga.rs.RepairWOStatusEnum;
 import com.kingdee.eas.ga.rs.TEnum;
 import com.kingdee.eas.ga.rs.WInfo;
-import com.kingdee.eas.ga.rs.client.RepairSenderF7UI;
+import com.kingdee.eas.ga.rs.client.RepairManF7UI;
 import com.kingdee.eas.ga.util.GAUtils;
 import com.kingdee.eas.myframework.client.MsgBoxEx;
 import com.kingdee.eas.myframework.common.SortTypeEnum;
@@ -129,7 +128,6 @@ import com.kingdee.eas.util.client.MsgBox;
 import com.kingdee.jdbc.rowset.IRowSet;
 import com.kingdee.util.NumericExceptionSubItem;
 import com.kingdee.util.StringUtils;
-import com.tool.simplecode.Invoke;
 
 public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	
@@ -151,6 +149,10 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	private BigDecimal maxRetailDiscountRate = null; //最大零售折扣率
 	
 	private boolean isLoadOprtPermission = false; //是否加载了操作权限
+	
+	private static final String RetailDiscountRate = "RetailDiscountRate"; //配件折扣率
+	private static final String RepairDiscountRate = "RetailDiscountRate"; //维修折扣率
+	private SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
 	
 	public RepairWOEditUIPIEx() throws Exception {
 		super();
@@ -1112,7 +1114,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			if (PublicUtils.equals(IEnum.X, iType) && amount.compareTo(BIGDEC0) != 0) {	
 				row.getStyleAttributes().setLocked(true);
 			}
-			if (issueQty.compareTo(BIGDEC0) != 0) { //已有出库
+			if (issueQty.compareTo(BIGDEC0) != 0 && PublicUtils.equals(IEnum.X, iType)) { //已有出库
 				row.getStyleAttributes().setLocked(true);
 			}  
 			
@@ -1123,7 +1125,9 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 				row.getCell("w").getStyleAttributes().setLocked(false);
 			if (PublicUtils.equals(IEnum.X, iType) && amount.compareTo(BIGDEC0) == 0)
 				row.getCell("w").getStyleAttributes().setLocked(false);
-		
+			
+			
+			
 			
 
 			row.getCell("repairPkg").getStyleAttributes().setLocked(false);
@@ -1154,12 +1158,17 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		txtRepairSender.setText("");
 		txtTel.setText("");
 		if (vehicleInfo != null) {
-			
-			IRowSet rs = DBUtils.executeQuery(null, String.format("SELECT isnull(CFName,'') CFName,isnull(CFTel,'') CFTel,isnull(CFAddr,'') CFAddr from CT_ATS_VehicleRepairSender where FParentID='%s'", vehicleInfo.getString("id")));
+			StringBuilder sql = new StringBuilder();
+	    	sql.append("SELECT b.fid, b.fnumber, b.cfname, b.cftel, b.cfemail,b.cfidnumber,b.cfzipcode,b.cfaddr, a.fid fentryId")
+	    	.append(" FROM ct_rs_repairmanentry a")
+			.append(" LEFT JOIN ct_rs_repairman b ON a.fparentid = b.fid")
+			.append(String.format(" where a.cfvehicleid='%s'",vehicleInfo.getString("id")));
+	    	
+			IRowSet rs = DBUtils.executeQuery(null,sql.toString() );
 			if (rs != null && rs.next()) {
-				String name = rs.getString("CFName");
-				String tel = rs.getString("CFTel");
-				String addr = rs.getString("CFAddr");
+				String name = rs.getString("cfname");
+				String tel = rs.getString("cftel");
+				String addr = rs.getString("cfaddr");
 				if (!rs.next()) {
 					txtRepairSender.setText(name);
 					txtTel.setText(tel);
@@ -1275,6 +1284,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			RepairWORWOItemSpEntryInfo itemSpEntryInfo = new RepairWORWOItemSpEntryInfo();
 			itemSpEntryInfo.setId(BOSUuid.create("FF1F0E1A"));
 			itemSpEntryInfo.put("t",cmbT.getSelectedItem());
+			/*
 			CustomerAccountInfo caInfo = (CustomerAccountInfo) prmtCustomerAccount.getData();
 			if (caInfo != null) {
 				String sql = String.format("select isnull(CFRetailDiscountRate,0) CFRetailDiscountRate,isnull(CFRepairDiscountRate,0) CFRepairDiscountRate from CT_RS_CustomerAccount where FID='%s'",caInfo.getString("id"));
@@ -1296,6 +1306,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 				
 				}
 			} else itemSpEntryInfo.setDiscountRate(BIGDEC0);
+			*/
 			
 			itemSpEntryInfo.setI(IEnum.X);
 			itemSpEntryInfo.setQty(BIGDEC1);
@@ -1312,6 +1323,39 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		} else {
 			return super.createNewDetailData(table);
 		}
+	}
+	private HashMap<String,BigDecimal> getDiscountRate() throws Exception {
+		HashMap<String,BigDecimal> hashDiscountRate = new HashMap<String, BigDecimal>();
+		CustomerAccountInfo caInfo = (CustomerAccountInfo) prmtCustomerAccount.getData();
+		String sql = null;
+		if (caInfo != null) {
+			sql = String.format("select isnull(CFRetailDiscountRate,0) CFRetailDiscountRate,isnull(CFRepairDiscountRate,0) CFRepairDiscountRate from CT_RS_CustomerAccount where FID='%s'",caInfo.getString("id"));
+			IRowSet rs  = DBUtils.executeQuery(null, sql);
+			if (rs != null && rs.next()) {
+				hashDiscountRate.put(RetailDiscountRate, rs.getBigDecimal("CFRetailDiscountRate"));
+				hashDiscountRate.put(RepairDiscountRate, rs.getBigDecimal("CFRepairDiscountRate"));
+				return hashDiscountRate;
+			}
+		}
+		CustomerInfo atsCustomerInfo = (CustomerInfo) prmtCustomer.getValue();
+		Date dateComeTime = (Date) pkComeTime.getValue();
+		if (atsCustomerInfo == null || dateComeTime == null) return hashDiscountRate;
+		String comeTime = sf.format(pkComeTime.getValue());
+		StringBuilder sqlBuilder = new StringBuilder();
+		sqlBuilder.append(" select top 1 isnull(b.CFRetailDiscountRate,0) CFRetailDiscountRate,isnull(b.CFRepairDiscountRate,0) CFRepairDiscountRate from CT_BD_CustomerDiscount a")
+		.append("left join CT_BD_CustomerDiscountEntry b on a.fid=b.FParentID")
+		.append(String.format("where b.CFAtsCustomerID='%s'",atsCustomerInfo.getString("id")))
+		.append(String.format(" and convert(varchar(10),a.CFEffectiveDate,120) >='%s'",comeTime))
+		.append(String.format(" and  convert(varchar(10),a.CFExpirationDate,120) <='%s'",comeTime))
+		.append("and a.FBaseStatus='4' order by a.FAuditTime DESC");
+		IRowSet rs = DBUtils.executeQueryForDialect(null, sqlBuilder.toString());
+		if (rs != null && rs.next()) {
+			hashDiscountRate.put(RetailDiscountRate, rs.getBigDecimal("CFRetailDiscountRate"));
+			hashDiscountRate.put(RepairDiscountRate, rs.getBigDecimal("CFRepairDiscountRate"));
+			return hashDiscountRate;
+		}
+
+		return hashDiscountRate;
 	}
 	@Override
 	public void loadFields() {
@@ -1849,7 +1893,15 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 						repairItemEntryF7ListUI = new RepairItemEntryListUI();
 						repairItemEntryF7ListUI.setSingleSelect(false);
 						repairItemEntryF7ListUI.setParentNumber(repairtItemWhereLikeStr);
-						repairItemEntryF7ListUI.setExpandFilter(getVehicleFilterInfo());
+						FilterInfo filterInfo = getVehicleFilterInfo();
+						
+						BrandInfo brandInfo = (BrandInfo) prmtBrand.getValue();
+						if (brandInfo != null) {
+							FilterInfo filterBrand = new FilterInfo();
+							filterBrand.getFilterItems().add(new FilterItemInfo("parent.brand.id",brandInfo.getString("id")));
+							filterInfo.mergeFilter(filterBrand, "AND");
+						}
+						repairItemEntryF7ListUI.setExpandFilter(filterInfo);
 						repairItemEntryF7ListUI.setF7Use(true, null);
 						KDTextField txtSearch = (KDTextField) InvokeUtils.getFieldValue(repairItemEntryF7ListUI, "fastSearchTextField");
 						txtSearch.setText(repairtItemWhereLikeStr);
@@ -2934,7 +2986,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     	IWarrRemind warrRemind = WarrRemindFactory.getRemoteInstance();
     	WarrRemindInfo warrRemindInfo = null;
     	if (vehicleInfo == null) return;
-    	SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
+    	
     	Date dateComeTime = (Date) pkComeTime.getValue();
     	dateComeTime.setSeconds(1);
   
@@ -3043,20 +3095,33 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     @Override
     protected void btnShowRepairSender_actionPerformed(ActionEvent e)
     		throws Exception {
+    	UserInfo userInfo = SysContext.getSysContext().getCurrentUserInfo();
+		ServiceOrgUnitInfo seriveOrgInfo =  (ServiceOrgUnitInfo)prmtOrgUnit.getValue();
+		boolean hasPermission_RepairManView = PermUtils.hasFunctionPermission(null, userInfo, seriveOrgInfo, "repairMan_View");
+		if (!hasPermission_RepairManView) {
+			if (e != null)
+				MsgBoxEx.showInfo("无送修人查看权限！");
+			return;
+		}
+		
+	
     	Map uictx = new HashMap();
 		uictx.put("vehicleInfo", vehicleInfo);
+		uictx.put("orgUnit", seriveOrgInfo);
 		//uictx.put("curRepairSenderInfo", prmtrepairMan.getValue());
 		IUIFactory iUIFactory = UIFactory.createUIFactory(UIFactoryName.MODEL);
-		IUIWindow iUIWindowSizesHEdit = iUIFactory.create(RepairSenderF7UI.class.getName(),uictx); // 获取FeedRecListUI的IUIWindow
-		RepairSenderF7UI f7 = (RepairSenderF7UI) iUIWindowSizesHEdit.getUIObject();
+		//IUIWindow iUIWindowSizesHEdit = iUIFactory.create(RepairSenderF7UI.class.getName(),uictx); // 获取FeedRecListUI的IUIWindow
+		//RepairSenderF7UI f7 = (RepairSenderF7UI) iUIWindowSizesHEdit.getUIObject();
+		IUIWindow iUIWindowSizesHEdit = iUIFactory.create(RepairManF7UI.class.getName(),uictx); // 获取FeedRecListUI的IUIWindow
+		RepairManF7UI f7 = (RepairManF7UI) iUIWindowSizesHEdit.getUIObject();
 		iUIWindowSizesHEdit.show();
-		VehicleRepairSenderInfo repairSenderInfo =  (VehicleRepairSenderInfo) f7.getData();
-		if (repairSenderInfo != null && txtRepairSender.isEditable()) {
-			txtRepairSender.setText(repairSenderInfo.getName());
-			txtTel.setText(repairSenderInfo.getTel());
+		RepairManInfo repairManInfo =  (RepairManInfo) f7.getData();
+		if (repairManInfo != null && txtRepairSender.isEditable()) {
+			txtRepairSender.setText(repairManInfo.getName());
+			txtTel.setText(repairManInfo.getTel());
 			
-			String strCustomerInfo = StringUtils.cnulls(repairSenderInfo.getName()) + " " +  StringUtils.cnulls(repairSenderInfo.getTel())
-			+ CR +  StringUtils.cnulls(repairSenderInfo.getAddr());
+			String strCustomerInfo = StringUtils.cnulls(repairManInfo.getName()) + " " +  StringUtils.cnulls(repairManInfo.getTel())
+			+ CR +  StringUtils.cnulls(repairManInfo.getAddr());
 			txtcustomInfo.setText(strCustomerInfo);
 		}
 		

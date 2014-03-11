@@ -821,6 +821,17 @@ public class AbstractRepairWOInfo extends com.kingdee.eas.auto4s.autoframework.c
         setString("gaBillStatus", item.getValue());
 		}
     }
+    /**
+     * Object:维修工单's 首登日期property 
+     */
+    public java.util.Date getFirstBookInDate()
+    {
+        return getDate("firstBookInDate");
+    }
+    public void setFirstBookInDate(java.util.Date item)
+    {
+        setDate("firstBookInDate", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("FDBE5ECA");

@@ -109,4 +109,9 @@ public abstract class AbstractVehicleEditUIHandler extends com.kingdee.eas.frame
 	}
 	protected void _handleActionAutoVehicleRepairWOItem(RequestContext request,ResponseContext response, Context context) throws Exception {
 	}
+	public void handleActionEditRepairMan(RequestContext request,ResponseContext response, Context context) throws Exception {
+		_handleActionEditRepairMan(request,response,context);
+	}
+	protected void _handleActionEditRepairMan(RequestContext request,ResponseContext response, Context context) throws Exception {
+	}
 }

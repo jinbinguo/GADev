@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizUnit xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.ga.rs</package>
+    <name>RepairMan</name>
+    <alias>bizUnit[com.kingdee.eas.ga.rs.RepairMan].alias</alias>
+    <description>bizUnit[com.kingdee.eas.ga.rs.RepairMan].description</description>
+    <userDefined>true</userDefined>
+    <bizType>BusinessBill</bizType>
+    <template>false</template>
+    <entityPK>com.kingdee.eas.ga.rs.app.RepairMan</entityPK>
+    <queryPK>com.kingdee.eas.ga.rs.app.RepairManQuery</queryPK>
+    <editUIPK>com.kingdee.eas.ga.rs.client.RepairManEditUI</editUIPK>
+    <listUIPK>com.kingdee.eas.ga.rs.client.RepairManListUI</listUIPK>
+    <webEditUIPK />
+    <webListUIPK />
+    <entityFunctionPK>com.kingdee.eas.ga.rs.app.RepairManFunction</entityFunctionPK>
+    <editUIFunctionPK />
+    <listUIFunctionPK />
+    <entryUIPK />
+    <versionDate />
+    <versionNumber />
+    <extendTablePKs />
+    <extendEntityPKs />
+    <extendQueryPKs />
+    <extendEditUIPKs />
+    <extendListUIPKs />
+    <menuPKList />
+    <bimTemplateType>BillBase</bimTemplateType>
+    <relatedTablePK />
+    <relatedEntityPK />
+    <relatedEditUIPK />
+    <genImplementCode>true</genImplementCode>
+    <webEditPagePK />
+    <webListPagePK />
+    <webPagePKS />
+    <webViewPagePK />
+    <webBriefPagePK />
+    <relatedWebEditPagePK />
+    <relatedQueryPK />
+    <resource>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.RepairMan].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="送修人" />
+            <lang locale="zh_HK" value="送修人" />
+            <lang locale="zh_TW" value="送修人" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.RepairMan].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.RepairMan].extendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.RepairMan].extendedProperty.bimTemplateType">
+            <lang locale="en_US" value="BillBase" />
+            <lang locale="zh_CN" value="BillBase" />
+            <lang locale="zh_TW" value="BillBase" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.RepairMan].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.RepairMan].extendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.RepairMan].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.ga.rs.app.RepairManQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.rs.app.RepairManQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.rs.app.RepairManQuery" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.RepairMan].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.ga.rs.client.RepairManEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.rs.client.RepairManEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.rs.client.RepairManEditUI" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.RepairMan].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.RepairMan].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.RepairMan].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.RepairMan].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.ga.rs.client.RepairManListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.rs.client.RepairManListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.rs.client.RepairManListUI" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.RepairMan].extendedProperty.maxFieldIndex">
+            <lang locale="en_US" value="14" />
+            <lang locale="zh_CN" value="14" />
+            <lang locale="zh_TW" value="14" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.ga.rs.RepairMan].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizUnit>
+

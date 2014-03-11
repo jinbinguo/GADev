@@ -4,8 +4,10 @@
 package com.kingdee.eas.auto4s.bdm.pbd.client;
 
 import java.awt.event.ActionEvent;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.apache.log4j.Logger;
@@ -15,17 +17,34 @@ import com.kingdee.bos.dao.IObjectValue;
 import com.kingdee.bos.metadata.entity.SelectorItemCollection;
 import com.kingdee.bos.metadata.entity.SelectorItemInfo;
 import com.kingdee.bos.ui.face.CoreUIObject;
+import com.kingdee.bos.ui.face.IUIFactory;
+import com.kingdee.bos.ui.face.IUIWindow;
+import com.kingdee.bos.ui.face.UIFactory;
 import com.kingdee.bos.ui.face.UIRuleUtil;
 import com.kingdee.eas.auto4s.bdm.pbd.VehicleSourceEnum;
 import com.kingdee.eas.auto4s.commonutil.CommonUtils;
+import com.kingdee.eas.base.permission.UserInfo;
+import com.kingdee.eas.basedata.org.AdminOrgUnitInfo;
+import com.kingdee.eas.basedata.orgext.ServiceOrgUnitInfo;
 import com.kingdee.eas.common.EASBizException;
+import com.kingdee.eas.common.client.SysContext;
+import com.kingdee.eas.common.client.UIFactoryName;
+import com.kingdee.eas.ga.rs.RepairManInfo;
+import com.kingdee.eas.ga.rs.client.RepairManF7UI;
+import com.kingdee.eas.myframework.client.MsgBoxEx;
 import com.kingdee.eas.myframework.common.SortTypeEnum;
 import com.kingdee.eas.myframework.comparators.table.KDTableComparatorUtils;
 import com.kingdee.eas.myframework.comparators.table.SortColumnCollection;
 import com.kingdee.eas.myframework.comparators.table.SortColumnInfo;
+import com.kingdee.eas.myframework.util.DBUtils;
+import com.kingdee.eas.myframework.util.PermUtils;
+import com.kingdee.eas.myframework.util.PublicUtils;
+import com.kingdee.eas.myframework.util.UIUtils;
 import com.kingdee.eas.util.SysUtil;
 import com.kingdee.eas.util.client.EASResource;
 import com.kingdee.eas.util.client.MsgBox;
+import com.kingdee.jdbc.rowset.IRowSet;
+import com.kingdee.util.StringUtils;
 
 /**
  * output class name
@@ -45,9 +64,9 @@ public class VehicleEditUIPIEx extends VehicleEditUI
     	super.initOldData(dataObject);
     	try {
 			sortForRepairRemark();
+			getRepairMan();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			UIUtils.handUIException(e);
 		}
     }
     
@@ -63,12 +82,34 @@ public class VehicleEditUIPIEx extends VehicleEditUI
     		kdtRepairRemark.addRow(i, lstRow.get(i));
     	}
     }
+    private void  getRepairMan() throws Exception {
+    	String vehicleId = editData.getString("id");
+    	kdtRepairMan.removeRows();
+    	if (PublicUtils.isEmpty(vehicleId)) return;
+      	StringBuilder sql = new StringBuilder();
+    	sql.append("SELECT b.fid, b.fnumber, b.cfname, b.cftel, b.cfemail,b.cfidnumber,b.cfzipcode,b.cfaddr, a.fid fentryId")
+    	.append(" FROM ct_rs_repairmanentry a")
+		.append(" LEFT JOIN ct_rs_repairman b ON a.fparentid = b.fid")
+		.append(String.format(" where a.cfvehicleid='%s'",vehicleId));
+    	IRowSet rs = DBUtils.executeQuery(null, sql.toString());
+    	
+    	while (rs != null && rs.next()) {
+    		IRow row = kdtRepairMan.addRow();
+ 
+    		row.getCell("number").setValue(rs.getString("fnumber"));
+    		row.getCell("name").setValue(rs.getString("cfname"));
+    		row.getCell("tel").setValue(rs.getString("cftel"));
+    		row.getCell("addr").setValue(rs.getString("cfaddr"));
+    		row.getCell("zipCode").setValue(rs.getString("cfzipcode"));
+    		row.getCell("email").setValue(rs.getString("cfemail"));
+    		row.getCell("idNumber").setValue(rs.getString("cfidnumber"));
+    	}	
+    }
     
 
     @Override
     public SelectorItemCollection getSelectors() {
     	SelectorItemCollection sic = super.getSelectors();
-		sic.add(new SelectorItemInfo("RepairSender.*"));
 		sic.add(new SelectorItemInfo("RepairRemark.*"));
     	return sic;
     }
@@ -175,11 +216,35 @@ public class VehicleEditUIPIEx extends VehicleEditUI
            SysUtil.abort();
        }
     	
-    	for (int i=0,n=kdtRepairSender.getRowCount();i<n;i++) {
-			if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(kdtRepairSender.getCell(i,"name").getValue())) {
-				throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"送修人姓名"});
-			}
+    }
+    
+    @Override
+    public void actionEditRepairMan_actionPerformed(ActionEvent e)
+    		throws Exception {
+    	String vehicleId = editData.getString("id");
+    	if (PublicUtils.isEmpty(vehicleId)) {
+    		MsgBoxEx.showInfo("车辆档案必须先保存!");
+    		return;
+    	}
+    	UserInfo userInfo = SysContext.getSysContext().getCurrentUserInfo();
+		AdminOrgUnitInfo adminOrgInfo = SysContext.getSysContext().getCurrentAdminUnit();
+		boolean hasPermission_RepairManView = PermUtils.hasFunctionPermission(null, userInfo, adminOrgInfo, "repairMan_View");
+		if (!hasPermission_RepairManView) {
+			if (e != null)
+				MsgBoxEx.showInfo("无送修人查看权限！");
+			return;
 		}
+		
+    	Map uictx = new HashMap();
+		uictx.put("vehicleInfo", editData);
+		uictx.put("isFromVehicleEdit", true);
+		IUIFactory iUIFactory = UIFactory.createUIFactory(UIFactoryName.MODEL);
+		IUIWindow iUIWindowSizesHEdit = iUIFactory.create(RepairManF7UI.class.getName(),uictx); // 获取FeedRecListUI的IUIWindow
+		RepairManF7UI f7 = (RepairManF7UI) iUIWindowSizesHEdit.getUIObject();
+		f7.setUITitle("送修人");
+		iUIWindowSizesHEdit.show();
+		getRepairMan();
+		
     }
     
    

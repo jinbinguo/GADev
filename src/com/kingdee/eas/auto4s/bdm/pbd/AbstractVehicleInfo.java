@@ -16,7 +16,6 @@ public class AbstractVehicleInfo extends com.kingdee.eas.framework.DataBaseInfo 
     protected AbstractVehicleInfo(String pkField)
     {
         super(pkField);
-        put("RepairSender", new com.kingdee.eas.auto4s.bdm.pbd.VehicleRepairSenderCollection());
         put("Belong", new com.kingdee.eas.auto4s.bdm.pbd.VehicleBelongCollection());
         put("RepairRemark", new com.kingdee.eas.auto4s.bdm.pbd.VehicleRepairRemarkCollection());
     }
@@ -895,13 +894,6 @@ public class AbstractVehicleInfo extends com.kingdee.eas.framework.DataBaseInfo 
     public void setOfflineDate(java.util.Date item)
     {
         setDate("offlineDate", item);
-    }
-    /**
-     * Object: 车辆 's 维修人信息 property 
-     */
-    public com.kingdee.eas.auto4s.bdm.pbd.VehicleRepairSenderCollection getRepairSender()
-    {
-        return (com.kingdee.eas.auto4s.bdm.pbd.VehicleRepairSenderCollection)get("RepairSender");
     }
     /**
      * Object: 车辆 's 维修备注 property 

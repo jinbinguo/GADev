@@ -1,0 +1,1302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permission xmlns="com.kingdee.bos.metadata">
+    <package />
+    <name>ga_bdm</name>
+    <alias>permission[.ga_bdm].alias</alias>
+    <description>permission[.ga_bdm].description</description>
+    <userDefined>true</userDefined>
+    <permissionItems>
+        <permissionItem>
+            <innerID>24116d61-2fbb-41ad-a950-937267d78611PERMITEM</innerID>
+            <name>repairMan_addnew</name>
+            <alias>permission[.ga_bdm].permissionItems.permissionItem[repairMan_addnew].alias</alias>
+            <description>permission[.ga_bdm].permissionItems.permissionItem[repairMan_addnew].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.汽车4S行业产品.行业基础资料.公共基础资料.送修人</groupName>
+            <group>permission[.ga_bdm].permissionItems.permissionItem[repairMan_addnew].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>40C83D22</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.ga.rs.app</package>
+                    <name>RepairMan</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>39747723-b937-401e-a372-48235251893c</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.rs.client</package>
+                        <name>RepairManEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionAddNew</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>5c0e40cd-087e-4604-b22a-1ab1353cdfc9</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.rs.client</package>
+                        <name>RepairManListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionAddNew</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>fc044bf1-4e6c-422a-983f-a3810fa2b83d</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.rs.client</package>
+                        <name>RepairManF7UI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionAddNew</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>13594bc7-a3f5-4050-acec-372a5e7ffd69PERMITEM</innerID>
+            <name>repairMan_Edit</name>
+            <alias>permission[.ga_bdm].permissionItems.permissionItem[repairMan_Edit].alias</alias>
+            <description>permission[.ga_bdm].permissionItems.permissionItem[repairMan_Edit].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.汽车4S行业产品.行业基础资料.公共基础资料.送修人</groupName>
+            <group>permission[.ga_bdm].permissionItems.permissionItem[repairMan_Edit].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>40C83D22</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.ga.rs.app</package>
+                    <name>RepairMan</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>69053eaa-c57a-4f3f-a627-b8b9e2e55aa0</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.rs.client</package>
+                        <name>RepairManEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionEdit</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>e6ca62ae-c469-48b4-9c41-795e36ccb289</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.rs.client</package>
+                        <name>RepairManListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionEdit</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>74c85ecf-ec4a-41c5-988a-9ffee2c5eee4</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.rs.client</package>
+                        <name>RepairManF7UI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionEdit</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>4154bb33-6618-468b-9301-0b50fe8e69dePERMITEM</innerID>
+            <name>repairMan_Remove</name>
+            <alias>permission[.ga_bdm].permissionItems.permissionItem[repairMan_Remove].alias</alias>
+            <description>permission[.ga_bdm].permissionItems.permissionItem[repairMan_Remove].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.汽车4S行业产品.行业基础资料.公共基础资料.送修人</groupName>
+            <group>permission[.ga_bdm].permissionItems.permissionItem[repairMan_Remove].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>40C83D22</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.ga.rs.app</package>
+                    <name>RepairMan</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>a1ad9521-c3b8-4603-89ae-2b7b67224c64</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.rs.client</package>
+                        <name>RepairManEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionRemove</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>ec8419e7-f168-4dfc-9a3c-e09008e02962</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.rs.client</package>
+                        <name>RepairManListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionRemove</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>3295f16a-c3b5-4e79-b99e-2e23a7c50e26</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.rs.client</package>
+                        <name>RepairManF7UI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionDelete</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>238e730c-86d4-4dd3-bf4d-ead66f8cf493PERMITEM</innerID>
+            <name>repairMan_View</name>
+            <alias>permission[.ga_bdm].permissionItems.permissionItem[repairMan_View].alias</alias>
+            <description>permission[.ga_bdm].permissionItems.permissionItem[repairMan_View].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.汽车4S行业产品.行业基础资料.公共基础资料.送修人</groupName>
+            <group>permission[.ga_bdm].permissionItems.permissionItem[repairMan_View].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>40C83D22</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.ga.rs.app</package>
+                    <name>RepairMan</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>e6302307-64a1-418c-9a08-70b7cda757d4</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.rs.client</package>
+                        <name>RepairManListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionView</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>b45cfb23-7d44-48ec-9173-7dc2b7cb3cf7</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.rs.client</package>
+                        <name>RepairManEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>3e18026d-7846-4237-bc3c-ef521cfa0a1e</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.rs.client</package>
+                        <name>RepairManF7UI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>fa427fde-22af-49f1-8600-41dcc19abc84PERMITEM</innerID>
+            <name>CustomerAccount_View</name>
+            <alias>permission[.ga_bdm].permissionItems.permissionItem[CustomerAccount_View].alias</alias>
+            <description>permission[.ga_bdm].permissionItems.permissionItem[CustomerAccount_View].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.汽车4S行业产品.行业基础资料.维修管理.客户账户</groupName>
+            <group>permission[.ga_bdm].permissionItems.permissionItem[CustomerAccount_View].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>8B9E1F44</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.ga.rs.app</package>
+                    <name>CustomerAccount</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>ec88337b-0366-4752-98d9-88f91fe8d01d</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.rs.client</package>
+                        <name>CustomerAccountListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionView</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>1bc04e19-53d6-40ff-9aa8-8e79169c7930PERMITEM</innerID>
+            <name>repairPkg_View</name>
+            <alias>permission[.ga_bdm].permissionItems.permissionItem[repairPkg_View].alias</alias>
+            <description>permission[.ga_bdm].permissionItems.permissionItem[repairPkg_View].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.汽车4S行业产品.行业基础资料.维修管理.套餐</groupName>
+            <group>permission[.ga_bdm].permissionItems.permissionItem[repairPkg_View].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>988AA80E</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.ga.rs.app</package>
+                    <name>RepairPackage</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>71fd3448-5dc6-4a47-a85f-41ac9b14c8f1</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.rs.client</package>
+                        <name>RepairPackageListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionView</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>bcc745e8-98f9-45b6-84b1-8bb996a741d1PERMITEM</innerID>
+            <name>rwoBizType_View</name>
+            <alias>permission[.ga_bdm].permissionItems.permissionItem[rwoBizType_View].alias</alias>
+            <description>permission[.ga_bdm].permissionItems.permissionItem[rwoBizType_View].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.汽车4S行业产品.行业基础资料.维修管理.业务类型</groupName>
+            <group>permission[.ga_bdm].permissionItems.permissionItem[rwoBizType_View].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>8CCB6ADD</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.ga.rs.app</package>
+                    <name>RepairWOBizType</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>0520d387-5eda-4483-a507-e0b49f5edd8f</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.rs.client</package>
+                        <name>RepairWOBizTypeListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionView</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>f82e45c3-ea9e-41d0-a6f5-eca76063a85aPERMITEM</innerID>
+            <name>W_View</name>
+            <alias>permission[.ga_bdm].permissionItems.permissionItem[W_View].alias</alias>
+            <description>permission[.ga_bdm].permissionItems.permissionItem[W_View].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.汽车4S行业产品.行业基础资料.维修管理.W</groupName>
+            <group>permission[.ga_bdm].permissionItems.permissionItem[W_View].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>9871DC0C</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.ga.rs.app</package>
+                    <name>W</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>014feeaa-517d-4077-8924-b5f5a846859a</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.rs.client</package>
+                        <name>WListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionView</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>fc191974-5de5-4e2b-b63b-2816f1da9c60PERMITEM</innerID>
+            <name>customerDiscount_addnew</name>
+            <alias>permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_addnew].alias</alias>
+            <description>permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_addnew].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.汽车4S行业产品.行业基础资料.维修管理.客户折扣</groupName>
+            <group>permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_addnew].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>E9F46AD0</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.ga.basedata.app</package>
+                    <name>CustomerDiscount</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>aeb679a3-2487-471d-a50c-a7573dab1375</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.basedata.client</package>
+                        <name>CustomerDiscountEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionAddNew</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>45b3b969-116c-4cc4-b96b-d7059ae0fb03</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.basedata.client</package>
+                        <name>CustomerDiscountListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionAddNew</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>4721b48a-0882-4858-ad4d-b2714bed17ddPERMITEM</innerID>
+            <name>customerDiscount_unAudit</name>
+            <alias>permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_unAudit].alias</alias>
+            <description>permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_unAudit].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.汽车4S行业产品.行业基础资料.维修管理.客户折扣</groupName>
+            <group>permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_unAudit].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>E9F46AD0</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.ga.basedata.app</package>
+                    <name>CustomerDiscount</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>051a5d24-097d-4a65-aba7-d16f60bead24</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.basedata.client</package>
+                        <name>CustomerDiscountEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionUnAudit</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>9bf56697-3268-4a6e-8368-040f80161607</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.basedata.client</package>
+                        <name>CustomerDiscountListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionUnAudit</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>149af51d-8fd4-49cb-834b-96c42f4c24b6PERMITEM</innerID>
+            <name>customerDiscount_audit</name>
+            <alias>permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_audit].alias</alias>
+            <description>permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_audit].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.汽车4S行业产品.行业基础资料.维修管理.客户折扣</groupName>
+            <group>permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_audit].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>E9F46AD0</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.ga.basedata.app</package>
+                    <name>CustomerDiscount</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>bcd32309-dbed-4986-9bef-edc3787c684c</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.basedata.client</package>
+                        <name>CustomerDiscountEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionAudit</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>e7d0c695-3fd5-4583-b200-d4a47409dac0</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.basedata.client</package>
+                        <name>CustomerDiscountListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionAudit</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>7c4db4ec-da91-4431-9a2e-c9c394dc1d5cPERMITEM</innerID>
+            <name>customerDiscount_Edit</name>
+            <alias>permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_Edit].alias</alias>
+            <description>permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_Edit].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.汽车4S行业产品.行业基础资料.维修管理.客户折扣</groupName>
+            <group>permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_Edit].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>E9F46AD0</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.ga.basedata.app</package>
+                    <name>CustomerDiscount</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>f3dc469a-08cf-441b-a2de-9540f15223d7</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.basedata.client</package>
+                        <name>CustomerDiscountEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionEdit</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>7cf9b3b7-05ee-42a8-a618-c7b43c092842</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.basedata.client</package>
+                        <name>CustomerDiscountListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionEdit</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>486deeb7-0345-4293-8c3d-89ee30b2ef44PERMITEM</innerID>
+            <name>customerDiscount_Remove</name>
+            <alias>permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_Remove].alias</alias>
+            <description>permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_Remove].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.汽车4S行业产品.行业基础资料.维修管理.客户折扣</groupName>
+            <group>permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_Remove].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>E9F46AD0</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.ga.basedata.app</package>
+                    <name>CustomerDiscount</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>10540dd7-c666-4f63-a25b-5719964a25f7</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.basedata.client</package>
+                        <name>CustomerDiscountEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionRemove</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>94a56cd0-9f5f-429e-8ece-2765cea8003e</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.basedata.client</package>
+                        <name>CustomerDiscountListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionRemove</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>cee5677f-4182-4694-93e0-5ef404aa1176PERMITEM</innerID>
+            <name>customerDiscount_View</name>
+            <alias>permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_View].alias</alias>
+            <description>permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_View].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.汽车4S行业产品.行业基础资料.维修管理.客户折扣</groupName>
+            <group>permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_View].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>E9F46AD0</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.ga.basedata.app</package>
+                    <name>CustomerDiscount</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>5aa3680e-3d49-427a-9bea-889495db7b3b</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.basedata.client</package>
+                        <name>CustomerDiscountListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionView</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+    </permissionItems>
+    <dependences>
+        <dependence>
+            <id>7351bb99-dc10-49ad-a7cb-89c72fd004cbPERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="7351bb99-dc10-49ad-a7cb-89c72fd004cbPERMITEM" />
+            </referedItem>
+        </dependence>
+        <dependence>
+            <id>d8f972b9-33ae-4991-abf7-c1524fe4bfc6PERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="d8f972b9-33ae-4991-abf7-c1524fe4bfc6PERMITEM" />
+            </referedItem>
+        </dependence>
+        <dependence>
+            <id>a33e70ec-2e56-4aac-91ac-0f7b8009d94cPERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="a33e70ec-2e56-4aac-91ac-0f7b8009d94cPERMITEM" />
+            </referedItem>
+        </dependence>
+        <dependence>
+            <id>3f6a83d6-0fb6-4305-84f5-9b92b8e87a82PERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="3f6a83d6-0fb6-4305-84f5-9b92b8e87a82PERMITEM" />
+            </referedItem>
+        </dependence>
+        <dependence>
+            <id>29a9519e-2c4d-4d45-be95-34d677007bd3PERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="29a9519e-2c4d-4d45-be95-34d677007bd3PERMITEM" />
+            </referedItem>
+        </dependence>
+        <dependence>
+            <id>afb767c1-3ddf-4e3d-83fe-39754c8e68f0PERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="afb767c1-3ddf-4e3d-83fe-39754c8e68f0PERMITEM" />
+            </referedItem>
+        </dependence>
+        <dependence>
+            <id>b09feb1b-6d26-49ef-8cd2-4fd0702eb790PERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="b09feb1b-6d26-49ef-8cd2-4fd0702eb790PERMITEM" />
+            </referedItem>
+        </dependence>
+        <dependence>
+            <id>4f2ee912-a358-46bd-9b59-72b6bd77bbbdPERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="4f2ee912-a358-46bd-9b59-72b6bd77bbbdPERMITEM" />
+            </referedItem>
+        </dependence>
+        <dependence>
+            <id>1d2b930e-9dcf-4b64-97d0-95f07181c675PERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="1d2b930e-9dcf-4b64-97d0-95f07181c675PERMITEM" />
+            </referedItem>
+        </dependence>
+        <dependence>
+            <id>24116d61-2fbb-41ad-a950-937267d78611PERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="24116d61-2fbb-41ad-a950-937267d78611PERMITEM" />
+            </referedItem>
+        </dependence>
+        <dependence>
+            <id>238e730c-86d4-4dd3-bf4d-ead66f8cf493PERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="238e730c-86d4-4dd3-bf4d-ead66f8cf493PERMITEM" />
+            </referedItem>
+        </dependence>
+        <dependence>
+            <id>13594bc7-a3f5-4050-acec-372a5e7ffd69PERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="13594bc7-a3f5-4050-acec-372a5e7ffd69PERMITEM" />
+            </referedItem>
+        </dependence>
+        <dependence>
+            <id>4154bb33-6618-468b-9301-0b50fe8e69dePERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="4154bb33-6618-468b-9301-0b50fe8e69dePERMITEM" />
+            </referedItem>
+        </dependence>
+    </dependences>
+    <resource>
+        <rs key="permission[.ga_bdm].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ga_bdm" />
+            <lang locale="zh_HK" value="ga_bdm" />
+            <lang locale="zh_TW" value="ga_bdm" />
+        </rs>
+        <rs key="permission[.ga_bdm].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[CustomerAccount_View].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="客户账户_查看" />
+            <lang locale="zh_HK" value="客戶賬戶_查看" />
+            <lang locale="zh_TW" value="客戶賬戶_查看" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[CustomerAccount_View].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[CustomerAccount_View].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.ga.rs.CustomerAccount" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.rs.CustomerAccount" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.rs.CustomerAccount" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[CustomerAccount_View].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[CustomerAccount_View].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[CustomerAccount_View].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[CustomerAccount_View].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.汽车4S行业产品.行业基础资料.维修管理.客户账户" />
+            <lang locale="zh_HK" value="系統.汽車4S行業產品.行業基礎資料.維修管理.客戶賬戶" />
+            <lang locale="zh_TW" value="系統.汽車4S行業產品.行業基礎資料.維修管理.客戶賬戶" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[W_View].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="W_查看" />
+            <lang locale="zh_HK" value="W_查看" />
+            <lang locale="zh_TW" value="W_查看" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[W_View].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[W_View].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.ga.rs.W" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.rs.W" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.rs.W" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[W_View].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[W_View].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[W_View].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[W_View].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.汽车4S行业产品.行业基础资料.维修管理.W" />
+            <lang locale="zh_HK" value="系統.汽車4S行業產品.行業基礎資料.維修管理.W" />
+            <lang locale="zh_TW" value="系統.汽車4S行業產品.行業基礎資料.維修管理.W" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_Edit].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="客户折扣_修改" />
+            <lang locale="zh_HK" value="客戶折扣_修改" />
+            <lang locale="zh_TW" value="客戶折扣_修改" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_Edit].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_Edit].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.ga.basedata.CustomerDiscount" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.basedata.CustomerDiscount" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.basedata.CustomerDiscount" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_Edit].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_Edit].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_Edit].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_Edit].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.汽车4S行业产品.行业基础资料.维修管理.客户折扣" />
+            <lang locale="zh_HK" value="系統.汽車4S行業產品.行業基礎資料.維修管理.客戶折扣" />
+            <lang locale="zh_TW" value="系統.汽車4S行業產品.行業基礎資料.維修管理.客戶折扣" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_Remove].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="客户折扣_删除" />
+            <lang locale="zh_HK" value="客戶折扣_刪除" />
+            <lang locale="zh_TW" value="客戶折扣_刪除" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_Remove].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_Remove].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.ga.basedata.CustomerDiscount" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.basedata.CustomerDiscount" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.basedata.CustomerDiscount" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_Remove].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_Remove].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_Remove].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_Remove].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.汽车4S行业产品.行业基础资料.维修管理.客户折扣" />
+            <lang locale="zh_HK" value="系統.汽車4S行業產品.行業基礎資料.維修管理.客戶折扣" />
+            <lang locale="zh_TW" value="系統.汽車4S行業產品.行業基礎資料.維修管理.客戶折扣" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_View].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="客户折扣_查看" />
+            <lang locale="zh_HK" value="客戶折扣_查看" />
+            <lang locale="zh_TW" value="客戶折扣_查看" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_View].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_View].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.ga.basedata.CustomerDiscount" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.basedata.CustomerDiscount" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.basedata.CustomerDiscount" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_View].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_View].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_View].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_View].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.汽车4S行业产品.行业基础资料.维修管理.客户折扣" />
+            <lang locale="zh_HK" value="系統.汽車4S行業產品.行業基礎資料.維修管理.客戶折扣" />
+            <lang locale="zh_TW" value="系統.汽車4S行業產品.行業基礎資料.維修管理.客戶折扣" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_addnew].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="客户折扣_新增" />
+            <lang locale="zh_HK" value="客戶折扣_新增" />
+            <lang locale="zh_TW" value="客戶折扣_新增" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_addnew].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_addnew].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.ga.basedata.CustomerDiscount" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.basedata.CustomerDiscount" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.basedata.CustomerDiscount" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_addnew].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_addnew].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_addnew].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_addnew].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.汽车4S行业产品.行业基础资料.维修管理.客户折扣" />
+            <lang locale="zh_HK" value="系統.汽車4S行業產品.行業基礎資料.維修管理.客戶折扣" />
+            <lang locale="zh_TW" value="系統.汽車4S行業產品.行業基礎資料.維修管理.客戶折扣" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_audit].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="客户折扣_审核" />
+            <lang locale="zh_HK" value="客戶折扣_審核" />
+            <lang locale="zh_TW" value="客戶折扣_審核" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_audit].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_audit].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.ga.basedata.CustomerDiscount" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.basedata.CustomerDiscount" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.basedata.CustomerDiscount" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_audit].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_audit].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_audit].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_audit].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.汽车4S行业产品.行业基础资料.维修管理.客户折扣" />
+            <lang locale="zh_HK" value="系統.汽車4S行業產品.行業基礎資料.維修管理.客戶折扣" />
+            <lang locale="zh_TW" value="系統.汽車4S行業產品.行業基礎資料.維修管理.客戶折扣" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_unAudit].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="客户折扣_反审核" />
+            <lang locale="zh_HK" value="客戶折扣_反審核" />
+            <lang locale="zh_TW" value="客戶折扣_反審核" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_unAudit].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_unAudit].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.ga.basedata.CustomerDiscount" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.basedata.CustomerDiscount" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.basedata.CustomerDiscount" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_unAudit].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_unAudit].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_unAudit].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[customerDiscount_unAudit].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.汽车4S行业产品.行业基础资料.维修管理.客户折扣" />
+            <lang locale="zh_HK" value="系統.汽車4S行業產品.行業基礎資料.維修管理.客戶折扣" />
+            <lang locale="zh_TW" value="系統.汽車4S行業產品.行業基礎資料.維修管理.客戶折扣" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairMan_Edit].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="送修人_修改" />
+            <lang locale="zh_HK" value="送修人_修改" />
+            <lang locale="zh_TW" value="送修人_修改" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairMan_Edit].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairMan_Edit].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.ga.rs.RepairMan" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.rs.RepairMan" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.rs.RepairMan" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairMan_Edit].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairMan_Edit].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairMan_Edit].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairMan_Edit].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.汽车4S行业产品.行业基础资料.公共基础资料.送修人" />
+            <lang locale="zh_HK" value="系統.汽車4S行業產品.行業基礎資料.公共基礎資料.送修人" />
+            <lang locale="zh_TW" value="系統.汽車4S行業產品.行業基礎資料.公共基礎資料.送修人" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairMan_Remove].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="送修人_删除" />
+            <lang locale="zh_HK" value="送修人_刪除" />
+            <lang locale="zh_TW" value="送修人_刪除" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairMan_Remove].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairMan_Remove].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.ga.rs.RepairMan" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.rs.RepairMan" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.rs.RepairMan" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairMan_Remove].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairMan_Remove].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairMan_Remove].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairMan_Remove].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.汽车4S行业产品.行业基础资料.公共基础资料.送修人" />
+            <lang locale="zh_HK" value="系統.汽車4S行業產品.行業基礎資料.公共基礎資料.送修人" />
+            <lang locale="zh_TW" value="系統.汽車4S行業產品.行業基礎資料.公共基礎資料.送修人" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairMan_View].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="送修人_查看" />
+            <lang locale="zh_HK" value="送修人_查看" />
+            <lang locale="zh_TW" value="送修人_查看" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairMan_View].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairMan_View].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairMan_View].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairMan_View].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.汽车4S行业产品.行业基础资料.公共基础资料.送修人" />
+            <lang locale="zh_HK" value="系統.汽車4S行業產品.行業基礎資料.公共基礎資料.送修人" />
+            <lang locale="zh_TW" value="系統.汽車4S行業產品.行業基礎資料.公共基礎資料.送修人" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairMan_addnew].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="送修人_新增" />
+            <lang locale="zh_HK" value="送修人_新增" />
+            <lang locale="zh_TW" value="送修人_新增" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairMan_addnew].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairMan_addnew].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairMan_addnew].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairMan_addnew].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.汽车4S行业产品.行业基础资料.公共基础资料.送修人" />
+            <lang locale="zh_HK" value="系統.汽車4S行業產品.行業基礎資料.公共基礎資料.送修人" />
+            <lang locale="zh_TW" value="系統.汽車4S行業產品.行業基礎資料.公共基礎資料.送修人" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairPkg_View].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="套餐_查看" />
+            <lang locale="zh_HK" value="套餐_查看" />
+            <lang locale="zh_TW" value="套餐_查看" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairPkg_View].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairPkg_View].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.ga.rs.RepairPackage" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.rs.RepairPackage" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.rs.RepairPackage" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairPkg_View].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairPkg_View].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairPkg_View].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[repairPkg_View].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.汽车4S行业产品.行业基础资料.维修管理.套餐" />
+            <lang locale="zh_HK" value="系統.汽車4S行業產品.行業基礎資料.維修管理.套餐" />
+            <lang locale="zh_TW" value="系統.汽車4S行業產品.行業基礎資料.維修管理.套餐" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[rwoBizType_View].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务类型_查看" />
+            <lang locale="zh_HK" value="業務類型_查看" />
+            <lang locale="zh_TW" value="業務類型_查看" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[rwoBizType_View].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[rwoBizType_View].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.ga.rs.RepairWOBizType" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.rs.RepairWOBizType" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.rs.RepairWOBizType" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[rwoBizType_View].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[rwoBizType_View].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[rwoBizType_View].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[.ga_bdm].permissionItems.permissionItem[rwoBizType_View].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.汽车4S行业产品.行业基础资料.维修管理.业务类型" />
+            <lang locale="zh_HK" value="系統.汽車4S行業產品.行業基礎資料.維修管理.業務類型" />
+            <lang locale="zh_TW" value="系統.汽車4S行業產品.行業基礎資料.維修管理.業務類型" />
+        </rs>
+    </resource>
+</permission>
+

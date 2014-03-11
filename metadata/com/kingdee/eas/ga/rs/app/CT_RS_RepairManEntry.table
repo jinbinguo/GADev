@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataTable xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.ga.rs.app</package>
+    <name>CT_RS_RepairManEntry</name>
+    <alias>dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].alias</alias>
+    <description>dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].description</description>
+    <userDefined>true</userDefined>
+    <bizUnitPK />
+    <columns>
+        <column>
+            <name>FSeq</name>
+            <alias>dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].columns.column[FSeq].alias</alias>
+            <description>dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].columns.column[FSeq].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>4</precision>
+        </column>
+        <column>
+            <name>FID</name>
+            <alias>dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].columns.column[FID].alias</alias>
+            <description>dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].columns.column[FID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>false</isNullable>
+            <defaultValue>''</defaultValue>
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>44</precision>
+        </column>
+        <column>
+            <name>FParentID</name>
+            <alias>dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].columns.column[FParentID].alias</alias>
+            <description>dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].columns.column[FParentID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>false</isNullable>
+            <defaultValue>''</defaultValue>
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FLineStatus</name>
+            <alias>dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].columns.column[FLineStatus].alias</alias>
+            <description>dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].columns.column[FLineStatus].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>false</isNullable>
+            <defaultValue>0</defaultValue>
+            <sqlType>INT</sqlType>
+            <length>0</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FLineDesc</name>
+            <alias>dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].columns.column[FLineDesc].alias</alias>
+            <description>dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].columns.column[FLineDesc].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>255</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFVehicleID</name>
+            <alias>dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].columns.column[CFVehicleID].alias</alias>
+            <description>dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].columns.column[CFVehicleID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+    </columns>
+    <primaryKey>
+        <name>CPK_RS_RepairME726</name>
+        <userDefined>true</userDefined>
+        <primaryKeyColumns>
+            <primaryKeyColumn>
+                <indexID>0</indexID>
+                <sortType>ASC</sortType>
+                <column>
+                    <key name="name" value="FID" />
+                </column>
+            </primaryKeyColumn>
+        </primaryKeyColumns>
+    </primaryKey>
+    <foreignKeys>
+        <foreignKey>
+            <name>CFK_RS_RSRMEEhicvd</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="T_ATS_Vehicle" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="CFVehicleID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+    </foreignKeys>
+    <resource>
+        <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="分录" />
+            <lang locale="zh_HK" value="分錄" />
+            <lang locale="zh_TW" value="分錄" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].columns.column[CFVehicleID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="车辆" />
+            <lang locale="zh_HK" value="車輛" />
+            <lang locale="zh_TW" value="車輛" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].columns.column[CFVehicleID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="车辆" />
+            <lang locale="zh_HK" value="車輛" />
+            <lang locale="zh_TW" value="車輛" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].columns.column[FID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].columns.column[FID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].columns.column[FLineDesc].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="行备注" />
+            <lang locale="zh_HK" value="行備註" />
+            <lang locale="zh_TW" value="行備註" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].columns.column[FLineDesc].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="備註" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].columns.column[FLineStatus].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="行状态" />
+            <lang locale="zh_HK" value="行狀態" />
+            <lang locale="zh_TW" value="行狀態" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].columns.column[FLineStatus].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="行狀態" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].columns.column[FParentID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="父ID" />
+            <lang locale="zh_HK" value="父ID" />
+            <lang locale="zh_TW" value="父ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].columns.column[FParentID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据头ID" />
+            <lang locale="zh_HK" value="單據頭ID" />
+            <lang locale="zh_TW" value="單據頭ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].columns.column[FSeq].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据分录序列号" />
+            <lang locale="zh_HK" value="單據分錄序列號" />
+            <lang locale="zh_TW" value="單據分錄序列號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].columns.column[FSeq].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据分录序列号（定义为序列属性即使用{seq}）" />
+            <lang locale="zh_HK" value="單據分錄序列號（定義為序列屬性即使用{seq}）" />
+            <lang locale="zh_TW" value="單據分錄序列號（定義為序列屬性即使用{seq}）" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairManEntry].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="分录" />
+            <lang locale="zh_HK" value="分錄" />
+            <lang locale="zh_TW" value="分錄" />
+        </rs>
+    </resource>
+</dataTable>
+

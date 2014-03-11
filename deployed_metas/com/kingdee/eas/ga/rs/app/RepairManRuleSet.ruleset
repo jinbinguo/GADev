@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.ga.rs.app</package>
+    <name>RepairManRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>29a8fc39-f361-4ad6-be2e-9bdc3bb4dcb0</id>
+            <parentID />
+            <source>entrys.plateNum=entrys.vehicle.plateNum</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>d7fc66f2-6a9a-4f55-8e76-368bcd3bfcd7</id>
+            <parentID>29a8fc39-f361-4ad6-be2e-9bdc3bb4dcb0</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType />
+            <value />
+            <property>
+                <ownerID>34317b7b-fd05-4ca2-85dc-3b326a1a9393</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>34317b7b-fd05-4ca2-85dc-3b326a1a9393</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"plateNum")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f8ec04a6-6297-4985-b8b1-5641eb5ca02f</id>
+            <parentID>29a8fc39-f361-4ad6-be2e-9bdc3bb4dcb0</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>e5b6da58-cafc-46b2-8bbc-310768d046f9</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>6a4d0e4a-3f0f-49e0-9254-f28c20bd43ac</id>
+                        <expressionID>36af3602-6e8e-4735-9b86-da1937f9856b</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>c991ffd6-ebb9-4e8c-85ed-ed25d9cd56ef</id>
+                        <expressionID>44e6de46-8d25-4401-9cf1-7362f8323794</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e5b6da58-cafc-46b2-8bbc-310768d046f9</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>36af3602-6e8e-4735-9b86-da1937f9856b</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>f6e8e8f6-142a-435f-9aba-494f9476b9c5</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f6e8e8f6-142a-435f-9aba-494f9476b9c5</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"vehicle")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>44e6de46-8d25-4401-9cf1-7362f8323794</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>plateNum</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>50237b61-2401-4f51-8931-572497e77945</id>
+            <parentID />
+            <source>entrys.vIN=entrys.vehicle.vIN</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>2fd7c061-dd9d-4179-8688-ae9ace3c97f4</id>
+            <parentID>50237b61-2401-4f51-8931-572497e77945</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType />
+            <value />
+            <property>
+                <ownerID>caea30d6-5e5d-45c3-96f8-d5b2f442bd95</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>caea30d6-5e5d-45c3-96f8-d5b2f442bd95</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"vIN")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>433bb63e-10dc-43e0-8507-da82d58e7ed4</id>
+            <parentID>50237b61-2401-4f51-8931-572497e77945</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>db090dbb-0080-4322-9a93-4d9d3a4e9150</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>6e360f24-29e6-4a2b-8a99-0500b34edb05</id>
+                        <expressionID>c4cd7251-f0cf-417e-8894-d9923b766480</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>35ae58f0-5cef-4e10-b79e-562d6991bb83</id>
+                        <expressionID>b14c7ac0-2a97-4cc0-b141-44d14f79d866</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>db090dbb-0080-4322-9a93-4d9d3a4e9150</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c4cd7251-f0cf-417e-8894-d9923b766480</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>73ae49d9-0958-4c7b-a21c-179f832ebf4f</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>73ae49d9-0958-4c7b-a21c-179f832ebf4f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"vehicle")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b14c7ac0-2a97-4cc0-b141-44d14f79d866</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>vIN</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>da00ff43-cb66-4647-8e22-10729b49ac7a</id>
+            <parentID />
+            <source>entrys.engineNum=entrys.vehicle.engineNum</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>830275dd-0fe7-40a0-aed5-f422602fbbbf</id>
+            <parentID>da00ff43-cb66-4647-8e22-10729b49ac7a</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType />
+            <value />
+            <property>
+                <ownerID>fb88eb5b-550f-4bec-a974-ccce154f9d0c</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fb88eb5b-550f-4bec-a974-ccce154f9d0c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"engineNum")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2ef5c73c-02e2-4392-bf85-d2d305cad36f</id>
+            <parentID>da00ff43-cb66-4647-8e22-10729b49ac7a</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>35de6f0b-77bf-4621-8c8a-818ff9c8ffd4</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>7e91ec6a-ebbb-4ff0-8f30-9c372bdde721</id>
+                        <expressionID>df76ba19-d372-406d-917a-17feba52c7bd</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>596ac7bd-0006-472e-9758-453cd20c1137</id>
+                        <expressionID>9e911201-e6ee-47c4-8481-00d0d30dca97</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>35de6f0b-77bf-4621-8c8a-818ff9c8ffd4</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>df76ba19-d372-406d-917a-17feba52c7bd</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>fcc7c17c-d102-45fb-8966-c25ed4723422</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fcc7c17c-d102-45fb-8966-c25ed4723422</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"vehicle")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9e911201-e6ee-47c4-8481-00d0d30dca97</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>engineNum</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>d71d6716-23a8-4dfc-9bf5-b2fa07c75ec8</id>
+            <parentID />
+            <source>entrys.seriesName=entrys.vehicle.series.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>31f920e2-ad63-449b-9117-3c3afe350bf9</id>
+            <parentID>d71d6716-23a8-4dfc-9bf5-b2fa07c75ec8</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType />
+            <value />
+            <property>
+                <ownerID>d2f68532-2a9f-4365-a7c1-8432c8a61200</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d2f68532-2a9f-4365-a7c1-8432c8a61200</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"seriesName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>66042418-c0db-41f9-af76-f37af8c42d6a</id>
+            <parentID>d71d6716-23a8-4dfc-9bf5-b2fa07c75ec8</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>3f29a259-93b5-42c8-b937-3505c6b8264b</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>ad50294c-dc37-4efc-ae90-24ae371fa2c3</id>
+                        <expressionID>95e32518-c922-4d6f-ad81-09f214f8bd50</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>413741d5-a01f-450f-bca3-6f5be84f166c</id>
+                        <expressionID>686923b6-2422-481b-b9c6-524ebd25e7fe</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3f29a259-93b5-42c8-b937-3505c6b8264b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>95e32518-c922-4d6f-ad81-09f214f8bd50</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>158a90c3-4701-447d-9e98-fde6d9ef1666</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>158a90c3-4701-447d-9e98-fde6d9ef1666</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"vehicle")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>686923b6-2422-481b-b9c6-524ebd25e7fe</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>series.name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>8b0b4642-582f-438a-aea6-c2266cb61ffc</id>
+            <parentID />
+            <source>entrys.modelName=entrys.vehicle.model.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>5d735706-c5cc-4526-9046-f75ca1faa0b2</id>
+            <parentID>8b0b4642-582f-438a-aea6-c2266cb61ffc</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType />
+            <value />
+            <property>
+                <ownerID>0f89c63d-0611-497a-ba55-e029eb8bc2da</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0f89c63d-0611-497a-ba55-e029eb8bc2da</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"modelName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>495e8fe2-be91-4607-8df8-0138710296fe</id>
+            <parentID>8b0b4642-582f-438a-aea6-c2266cb61ffc</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>02c0c48a-0867-46c8-9069-2d899b3c67a7</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>c45d552d-6754-4956-a9ba-0cda4e8a240e</id>
+                        <expressionID>84041ae5-6acd-47d2-a4ab-62bc98627c3a</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>d343b9bd-78c8-4f70-b91b-3b004d2653db</id>
+                        <expressionID>f0531521-d75e-433f-a3fa-2c2da20b704e</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>02c0c48a-0867-46c8-9069-2d899b3c67a7</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>84041ae5-6acd-47d2-a4ab-62bc98627c3a</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>06cca5b6-e004-49c4-883f-9214e60093ae</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>06cca5b6-e004-49c4-883f-9214e60093ae</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"vehicle")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f0531521-d75e-433f-a3fa-2c2da20b704e</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>model.name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>c3348f6c-ef13-48a4-8f65-d7b4885e2a3d</id>
+            <parentID />
+            <source>entrys.brandName=entrys.vehicle.brand.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>ddd4bce3-0f2c-4998-ad09-103befe0c68d</id>
+            <parentID>c3348f6c-ef13-48a4-8f65-d7b4885e2a3d</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType />
+            <value />
+            <property>
+                <ownerID>0dd52830-2c89-4754-ab90-4ebca8f469ec</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0dd52830-2c89-4754-ab90-4ebca8f469ec</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"brandName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>74cee390-3185-4085-b181-0f7bf2726542</id>
+            <parentID>c3348f6c-ef13-48a4-8f65-d7b4885e2a3d</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>a44c2ab4-77f7-4cc0-90ab-35d85aaef3cd</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>dc2f8523-1de4-4fe1-95c6-5e8cf6619225</id>
+                        <expressionID>4fd1a954-c4fc-4df5-9965-298adb6ec722</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>e60af5d7-80d3-4dc2-8f08-c0db67fef9d0</id>
+                        <expressionID>6ce0ee69-8e96-4e73-8c54-4fc287b29a14</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a44c2ab4-77f7-4cc0-90ab-35d85aaef3cd</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4fd1a954-c4fc-4df5-9965-298adb6ec722</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>07bef379-98ba-49b1-a8dc-5ff2ed2d03ac</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>07bef379-98ba-49b1-a8dc-5ff2ed2d03ac</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"vehicle")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6ce0ee69-8e96-4e73-8c54-4fc287b29a14</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>brand.name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>4c8c7fff-2912-40ee-b4e0-d3910f0fff3e</id>
+            <name>entrys_plateNum_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].actions.action[entrys_plateNum_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].actions.action[entrys_plateNum_ActionInfo].description</description>
+            <expressionID>29a8fc39-f361-4ad6-be2e-9bdc3bb4dcb0</expressionID>
+        </action>
+        <action>
+            <id>7538a72a-88e6-4198-8e0f-2a616ad9293b</id>
+            <name>entrys_vIN_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].actions.action[entrys_vIN_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].actions.action[entrys_vIN_ActionInfo].description</description>
+            <expressionID>50237b61-2401-4f51-8931-572497e77945</expressionID>
+        </action>
+        <action>
+            <id>6028cb5d-56b6-42a5-a391-2e743aca5877</id>
+            <name>entrys_engineNum_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].actions.action[entrys_engineNum_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].actions.action[entrys_engineNum_ActionInfo].description</description>
+            <expressionID>da00ff43-cb66-4647-8e22-10729b49ac7a</expressionID>
+        </action>
+        <action>
+            <id>b7514a09-dd9f-4991-8a3a-540a123985fa</id>
+            <name>entrys_seriesName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].actions.action[entrys_seriesName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].actions.action[entrys_seriesName_ActionInfo].description</description>
+            <expressionID>d71d6716-23a8-4dfc-9bf5-b2fa07c75ec8</expressionID>
+        </action>
+        <action>
+            <id>7c75560a-4591-4484-ad47-a800b6997739</id>
+            <name>entrys_modelName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].actions.action[entrys_modelName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].actions.action[entrys_modelName_ActionInfo].description</description>
+            <expressionID>8b0b4642-582f-438a-aea6-c2266cb61ffc</expressionID>
+        </action>
+        <action>
+            <id>efbc55bd-af72-4849-9dab-e2e2d07df719</id>
+            <name>entrys_brandName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].actions.action[entrys_brandName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].actions.action[entrys_brandName_ActionInfo].description</description>
+            <expressionID>c3348f6c-ef13-48a4-8f65-d7b4885e2a3d</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>entrys_plateNum_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_plateNum_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_plateNum_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="4c8c7fff-2912-40ee-b4e0-d3910f0fff3e" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>entrys_vIN_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_vIN_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_vIN_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="7538a72a-88e6-4198-8e0f-2a616ad9293b" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>entrys_engineNum_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_engineNum_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_engineNum_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="6028cb5d-56b6-42a5-a391-2e743aca5877" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>entrys_seriesName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_seriesName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_seriesName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="b7514a09-dd9f-4991-8a3a-540a123985fa" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>entrys_modelName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_modelName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_modelName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="7c75560a-4591-4484-ad47-a800b6997739" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>entrys_brandName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_brandName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_brandName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="efbc55bd-af72-4849-9dab-e2e2d07df719" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].actions.action[entrys_brandName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_brand" />
+            <lang locale="zh_HK" value="攜帶字段屬性_brand" />
+            <lang locale="zh_TW" value="攜帶字段屬性_brand" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].actions.action[entrys_brandName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].actions.action[entrys_engineNum_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_engineNum" />
+            <lang locale="zh_HK" value="攜帶字段屬性_engineNum" />
+            <lang locale="zh_TW" value="攜帶字段屬性_engineNum" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].actions.action[entrys_engineNum_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].actions.action[entrys_modelName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].actions.action[entrys_modelName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].actions.action[entrys_plateNum_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_plateNum" />
+            <lang locale="zh_HK" value="攜帶字段屬性_plateNum" />
+            <lang locale="zh_TW" value="攜帶字段屬性_plateNum" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].actions.action[entrys_plateNum_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].actions.action[entrys_seriesName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_series" />
+            <lang locale="zh_HK" value="攜帶字段屬性_series" />
+            <lang locale="zh_TW" value="攜帶字段屬性_series" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].actions.action[entrys_seriesName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].actions.action[entrys_vIN_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_vIN" />
+            <lang locale="zh_HK" value="攜帶字段屬性_vIN" />
+            <lang locale="zh_TW" value="攜帶字段屬性_vIN" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].actions.action[entrys_vIN_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_brandName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_brand" />
+            <lang locale="zh_HK" value="攜帶字段屬性_brand" />
+            <lang locale="zh_TW" value="攜帶字段屬性_brand" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_brandName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_brandName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="vehicle" />
+            <lang locale="zh_CN" value="vehicle" />
+            <lang locale="zh_TW" value="vehicle" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_brandName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_engineNum_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_engineNum" />
+            <lang locale="zh_HK" value="攜帶字段屬性_engineNum" />
+            <lang locale="zh_TW" value="攜帶字段屬性_engineNum" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_engineNum_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_engineNum_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="vehicle" />
+            <lang locale="zh_CN" value="vehicle" />
+            <lang locale="zh_TW" value="vehicle" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_engineNum_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_modelName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_modelName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_modelName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="vehicle" />
+            <lang locale="zh_CN" value="vehicle" />
+            <lang locale="zh_TW" value="vehicle" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_modelName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_plateNum_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_plateNum" />
+            <lang locale="zh_HK" value="攜帶字段屬性_plateNum" />
+            <lang locale="zh_TW" value="攜帶字段屬性_plateNum" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_plateNum_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_plateNum_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="vehicle" />
+            <lang locale="zh_CN" value="vehicle" />
+            <lang locale="zh_TW" value="vehicle" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_plateNum_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_seriesName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_series" />
+            <lang locale="zh_HK" value="攜帶字段屬性_series" />
+            <lang locale="zh_TW" value="攜帶字段屬性_series" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_seriesName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_seriesName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="vehicle" />
+            <lang locale="zh_CN" value="vehicle" />
+            <lang locale="zh_TW" value="vehicle" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_seriesName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_vIN_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_vIN" />
+            <lang locale="zh_HK" value="攜帶字段屬性_vIN" />
+            <lang locale="zh_TW" value="攜帶字段屬性_vIN" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_vIN_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_vIN_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="vehicle" />
+            <lang locale="zh_CN" value="vehicle" />
+            <lang locale="zh_TW" value="vehicle" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.ga.rs.app.RepairManRuleSet].rules.conditionRule[entrys_vIN_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+
