@@ -26,13 +26,12 @@ import com.kingdee.bos.ctrl.swing.event.DataChangeListener;
 import com.kingdee.bos.dao.IObjectValue;
 import com.kingdee.bos.ui.face.CoreUIObject;
 import com.kingdee.eas.auto4s.bdm.pbd.CustomerInfo;
-import com.kingdee.eas.auto4s.commonutil.ATSSubject;
-import com.kingdee.eas.auto4s.rsm.rs.util.client.RsUtils;
-import com.kingdee.eas.basedata.master.material.MaterialInfo;
 import com.kingdee.eas.basedata.org.SaleOrgUnitInfo;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.eas.common.client.SysContext;
+import com.kingdee.eas.ga.basedata.CustomerDiscountEntryInfo;
 import com.kingdee.eas.myframework.client.MsgBoxEx;
+import com.kingdee.eas.myframework.util.KDTableUtils;
 import com.kingdee.eas.myframework.util.PublicUtils;
 import com.kingdee.eas.myframework.util.UIUtils;
 import com.kingdee.eas.myframework.vo.RequireCompCollection;
@@ -72,12 +71,20 @@ public class CustomerDiscountEditUI extends AbstractCustomerDiscountEditUI {
     	}
     	prmtsaleOrgUnit.setValue(saleOrgUnitInfo);
     	kdtEntrys.addKDTEditListener(new KDTEditAdapter() {
-    		public void editValueChanged(KDTEditEvent e) {
-    			kdtEntrys_editValueChanged(e);
+    		private Object oldValue = null;
+    		public void editStarting(KDTEditEvent e) {
+    			oldValue = e.getValue();
+    		}
+    		@Override
+    		public void editStopped(KDTEditEvent e) {
+    			Object newValue = e.getValue();
+    			if (!PublicUtils.equals(newValue, oldValue)) {
+    				kdtEntrys_editStopped(e);
+    			}
     		}
     	});
-    	UIUtils.formatDecimal(kdtEntrys, "repairDiscountRate", false);
-    	UIUtils.formatDecimal(kdtEntrys, "retailDiscountRate", false);
+    	KDTableUtils.formatDecimal(kdtEntrys, "repairDiscountRate", false);
+    	KDTableUtils.formatDecimal(kdtEntrys, "retailDiscountRate", false);
     	KDFormattedTextField txtRepairDiscountRate = (KDFormattedTextField)kdtEntrys.getColumn("repairDiscountRate").getEditor().getComponent();
     	KDFormattedTextField txtRetailDiscountRate = (KDFormattedTextField)kdtEntrys.getColumn("retailDiscountRate").getEditor().getComponent();
     	txtRepairDiscountRate.setMinimumValue(BigDecimal.ZERO);
@@ -94,9 +101,13 @@ public class CustomerDiscountEditUI extends AbstractCustomerDiscountEditUI {
     }
 
 
-    protected IObjectValue createNewDetailData(KDTable table) {
-		
-        return new com.kingdee.eas.ga.basedata.CustomerDiscountEntryInfo();
+    protected IObjectValue createNewDetailData(KDTable table) {	
+    	CustomerDiscountEntryInfo entryInfo =  new CustomerDiscountEntryInfo();
+    	if (kdtEntrys.getRowCount() > 0) {
+    		entryInfo.put("repairDiscountRate", kdtEntrys.getRow(0).getCell("repairDiscountRate").getValue());
+    		entryInfo.put("retailDiscountRate", kdtEntrys.getRow(0).getCell("retailDiscountRate").getValue());
+    	}
+    	return entryInfo;
     }
 
     protected com.kingdee.bos.dao.IObjectValue createNewData() {
@@ -105,6 +116,7 @@ public class CustomerDiscountEditUI extends AbstractCustomerDiscountEditUI {
 		
         return objectValue;
     }
+    
     
     private void initCustPromptBox() {
 		KDBizPromptBox kdtEntrys_cust_PromptBox = new KDBizPromptBox();
@@ -165,8 +177,27 @@ public class CustomerDiscountEditUI extends AbstractCustomerDiscountEditUI {
         }
     }
     
-    private void kdtEntrys_editValueChanged(KDTEditEvent e) {
+    private void kdtEntrys_editStopped(KDTEditEvent e) {
+    	int rowIndex = e.getRowIndex();
+    	int colIndex = e.getColIndex();
+    	int repairDiscountRateIndex = kdtEntrys.getColumnIndex("repairDiscountRate");
+    	int retailDiscountRateIndex = kdtEntrys.getColumnIndex("retailDiscountRate");
+    	BigDecimal repairDiscountRate = (BigDecimal) kdtEntrys.getRow(rowIndex).getCell(repairDiscountRateIndex).getValue();
+    	BigDecimal retailDiscountRate = (BigDecimal) kdtEntrys.getRow(rowIndex).getCell(retailDiscountRateIndex).getValue();
     	
+    	if (colIndex == repairDiscountRateIndex && (repairDiscountRate != null && repairDiscountRate.compareTo(BigDecimal.ZERO) != 0)) {
+    		for (int i = rowIndex+1; rowIndex == 0 && i < kdtEntrys.getRowCount(); i++) {
+    			if (kdtEntrys.getRow(i).getCell(repairDiscountRateIndex).getValue() != null) continue;
+				kdtEntrys.getRow(i).getCell(repairDiscountRateIndex).setValue(repairDiscountRate);
+    		}
+    		
+    	} if (colIndex == retailDiscountRateIndex && (retailDiscountRate != null && retailDiscountRate.compareTo(BigDecimal.ZERO) != 0)) {
+    		for (int i = rowIndex+1; rowIndex == 0 && i < kdtEntrys.getRowCount(); i++) {
+    			if (kdtEntrys.getRow(i).getCell(retailDiscountRateIndex).getValue() != null) continue;
+				kdtEntrys.getRow(i).getCell(retailDiscountRateIndex).setValue(retailDiscountRate);
+    		}
+    		
+    	}
     }
     
    @Override

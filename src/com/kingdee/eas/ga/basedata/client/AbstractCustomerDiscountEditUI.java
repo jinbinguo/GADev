@@ -210,11 +210,6 @@ public abstract class AbstractCustomerDiscountEditUI extends com.kingdee.eas.myf
         ObjectValueRender kdtEntrys_atsCustomer_OVR = new ObjectValueRender();
         kdtEntrys_atsCustomer_OVR.setFormat(new BizDataFormat("$number$"));
         this.kdtEntrys.getColumn("atsCustomer").setRenderer(kdtEntrys_atsCustomer_OVR);
-        KDTextField kdtEntrys_atsCustomerName_TextField = new KDTextField();
-        kdtEntrys_atsCustomerName_TextField.setName("kdtEntrys_atsCustomerName_TextField");
-        kdtEntrys_atsCustomerName_TextField.setMaxLength(255);
-        KDTDefaultCellEditor kdtEntrys_atsCustomerName_CellEditor = new KDTDefaultCellEditor(kdtEntrys_atsCustomerName_TextField);
-        this.kdtEntrys.getColumn("atsCustomerName").setEditor(kdtEntrys_atsCustomerName_CellEditor);
         KDFormattedTextField kdtEntrys_repairDiscountRate_TextField = new KDFormattedTextField();
         kdtEntrys_repairDiscountRate_TextField.setName("kdtEntrys_repairDiscountRate_TextField");
         kdtEntrys_repairDiscountRate_TextField.setVisible(true);
@@ -237,11 +232,6 @@ public abstract class AbstractCustomerDiscountEditUI extends com.kingdee.eas.myf
         kdtEntrys_retailDiscountRate_TextField.setPrecision(2);
         KDTDefaultCellEditor kdtEntrys_retailDiscountRate_CellEditor = new KDTDefaultCellEditor(kdtEntrys_retailDiscountRate_TextField);
         this.kdtEntrys.getColumn("retailDiscountRate").setEditor(kdtEntrys_retailDiscountRate_CellEditor);
-        KDTextField kdtEntrys_lineDesc_TextField = new KDTextField();
-        kdtEntrys_lineDesc_TextField.setName("kdtEntrys_lineDesc_TextField");
-        kdtEntrys_lineDesc_TextField.setMaxLength(255);
-        KDTDefaultCellEditor kdtEntrys_lineDesc_CellEditor = new KDTDefaultCellEditor(kdtEntrys_lineDesc_TextField);
-        this.kdtEntrys.getColumn("lineDesc").setEditor(kdtEntrys_lineDesc_CellEditor);
         KDComboBox kdtEntrys_lineStatus_ComboBox = new KDComboBox();
         kdtEntrys_lineStatus_ComboBox.setName("kdtEntrys_lineStatus_ComboBox");
         kdtEntrys_lineStatus_ComboBox.setVisible(true);
@@ -274,7 +264,8 @@ public abstract class AbstractCustomerDiscountEditUI extends com.kingdee.eas.myf
         this.prmtsaleOrgUnit.setDisplayFormat("$name$");		
         this.prmtsaleOrgUnit.setEditFormat("$number$");		
         this.prmtsaleOrgUnit.setCommitFormat("$number$");		
-        this.prmtsaleOrgUnit.setRequired(false);
+        this.prmtsaleOrgUnit.setRequired(false);		
+        this.prmtsaleOrgUnit.setEnabled(false);
         this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {txtNumber,prmtsaleOrgUnit,boxBaseStatus,pkeffectiveDate,pkexpirationDate,txtDescription,kDDateAuditTime,prmtAuditor,prmtCreator,kDDateCreateTime,prmtLastUpdateUser,kDDateLastUpdateTime,pkBizDate,kdtEntrys}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding

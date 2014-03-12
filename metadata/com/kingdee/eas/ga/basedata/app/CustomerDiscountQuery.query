@@ -1294,6 +1294,37 @@
             </query>
         </propertyUnit>
         <queryField>
+            <name>entrys_atsCustomer.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.basedata.app.CustomerDiscountQuery].units.queryField[entrys_atsCustomer.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>a4824b97-8a8e-4aac-a589-2d6de22c5b21</key>
+                    <parentUnit>
+                        <key name="name" value="entrys_atsCustomer.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entrys_atsCustomer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.basedata.app" />
+                <key name="name" value="CustomerDiscountQuery" />
+            </query>
+        </queryField>
+        <queryField>
             <name>effectiveDate</name>
             <userDefined>true</userDefined>
             <formulaString>#0</formulaString>
@@ -2283,9 +2314,9 @@
         </rs>
         <rs key="joinQuery[com.kingdee.eas.ga.basedata.app.CustomerDiscountQuery].units.queryField[entrys.atsCustomer.number].displayName">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="客户" />
-            <lang locale="zh_HK" value="客戶" />
-            <lang locale="zh_TW" value="客戶" />
+            <lang locale="zh_CN" value="客户编码" />
+            <lang locale="zh_HK" value="客戶編碼" />
+            <lang locale="zh_TW" value="客戶編碼" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.ga.basedata.app.CustomerDiscountQuery].units.queryField[entrys.atsCustomer.number].extendedProperty.isCommonQueryFilter">
             <lang locale="en_US" value="true" />
@@ -2412,6 +2443,12 @@
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.basedata.app.CustomerDiscountQuery].units.queryField[entrys_atsCustomer.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="客户名称" />
+            <lang locale="zh_HK" value="客戶名稱" />
+            <lang locale="zh_TW" value="客戶名稱" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.ga.basedata.app.CustomerDiscountQuery].units.queryField[expirationDate].displayName">
             <lang locale="en_US" value="null" />

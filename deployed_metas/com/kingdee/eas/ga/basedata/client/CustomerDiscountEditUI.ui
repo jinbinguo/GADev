@@ -731,6 +731,13 @@
                     <isMultiLan>false</isMultiLan>
                     <userDefined>true</userDefined>
                 </property>
+                <property>
+                    <name>enabled</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.ga.basedata.client.CustomerDiscountEditUI].components.component[prmtsaleOrgUnit].properties.property[enabled].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
             </properties>
             <parent>
                 <key name="name" value="contsaleOrgUnit" />
@@ -1371,6 +1378,12 @@
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_HK" value="true" />
             <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.ga.basedata.client.CustomerDiscountEditUI].components.component[prmtsaleOrgUnit].properties.property[enabled].value">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
         </rs>
         <rs key="uiObject[com.kingdee.eas.ga.basedata.client.CustomerDiscountEditUI].components.component[prmtsaleOrgUnit].properties.property[queryInfo].value">
             <lang locale="en_US" value="com.kingdee.eas.basedata.org.app.SaleItemQuery" />

@@ -233,18 +233,5 @@ public class UIUtils implements Serializable {
     		tbl.addRow(i, lstRow.get(i));
     	}
     } 
-    /**
-     * 精度默认为2
-     * @param tblMain
-     * @param columnName
-     * @param isNegatived 是否支持录入负数
-     * @throws EASBizException
-     * @throws BOSException
-     */
-    public static void formatDecimal(KDTable tblMain, String columnName,boolean isNegatived) {
-    	KDTDefaultCellEditor editor = FormattedEditorFactory.getBigDecimalCellEditor(2, isNegatived);
-		tblMain.getColumn(columnName).setEditor(editor);
-		tblMain.getColumn(columnName).getStyleAttributes().setNumberFormat("%r{#,##0.00}f");
-		tblMain.getColumn(columnName).getStyleAttributes().setHorizontalAlign(HorizontalAlignment.RIGHT);
-	}
+
 }

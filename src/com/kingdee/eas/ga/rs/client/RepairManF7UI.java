@@ -50,6 +50,7 @@ public class RepairManF7UI extends AbstractRepairManF7UI implements KDPromptSele
     private IRepairManEntry repairManEntry = RepairManEntryFactory.getRemoteInstance();
     private RepairManInfo oldRepairManInfo = null; //当前维修人(用于回写及初始选中)
     private RepairManInfo newRepairManInfo = null; //选中维修人(用于编辑保存)
+    private RepairManInfo returnRepairManInfo = null; //返回维修人(用于返回值)
     private OrgUnitInfo orgUnitInfo = null;
     
     private boolean isViewMode = true; //查看方式
@@ -110,6 +111,7 @@ public class RepairManF7UI extends AbstractRepairManF7UI implements KDPromptSele
 			    	boolean isFromVehicle =  uictx.get("isFromVehicleEdit") == null ? false : (Boolean) uictx.get("isFromVehicle");
 			    	if (isFromVehicle) return;
 					newRepairManInfo = getSelRepairManInfo();
+					returnRepairManInfo = getSelRepairManInfo();
 					destroyWindow();
 					
 				}
@@ -179,7 +181,7 @@ public class RepairManF7UI extends AbstractRepairManF7UI implements KDPromptSele
     }
 
 	public Object getData() {
-		return newRepairManInfo;
+		return returnRepairManInfo;
 	}
 
 	public boolean isCanceled() {

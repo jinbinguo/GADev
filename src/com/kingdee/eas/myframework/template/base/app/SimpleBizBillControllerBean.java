@@ -44,6 +44,18 @@ public class SimpleBizBillControllerBean extends AbstractSimpleBizBillController
    	 		_checkNumberDup(ctx, pk, model); //检查编码是否重复
     	return pk;
     }
+    
+    @Override
+    protected void _update(Context ctx, IObjectPK pk, IObjectValue model)
+    		throws BOSException, EASBizException {
+    	
+    	super._update(ctx, pk, model);
+    	String number= model.getString("number");
+    	if (!StringUtils.isEmpty(number)) {
+    		model = _getValue(ctx, pk); //再次重取值,cu没有传过来
+    		super._checkNumberDup(ctx, pk, model); //检查编码是否重复
+    	}
+    }
    
     
     /**

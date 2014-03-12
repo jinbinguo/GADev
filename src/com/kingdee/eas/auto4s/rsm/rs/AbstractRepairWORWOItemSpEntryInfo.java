@@ -364,6 +364,63 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
     {
         put("repairPkg", item);
     }
+    /**
+     * Object:项目配件明细's 费用分担property 
+     */
+    public java.math.BigDecimal getAllocateExenseRate()
+    {
+        return getBigDecimal("allocateExenseRate");
+    }
+    public void setAllocateExenseRate(java.math.BigDecimal item)
+    {
+        setBigDecimal("allocateExenseRate", item);
+    }
+    /**
+     * Object:项目配件明细's 维修方式property 
+     */
+    public com.kingdee.eas.auto4s.rsm.rs.RepairWayEnum getRepairWay()
+    {
+        return com.kingdee.eas.auto4s.rsm.rs.RepairWayEnum.getEnum(getString("repairWay"));
+    }
+    public void setRepairWay(com.kingdee.eas.auto4s.rsm.rs.RepairWayEnum item)
+    {
+		if (item != null) {
+        setString("repairWay", item.getValue());
+		}
+    }
+    /**
+     * Object: 项目配件明细 's 维修外包公司 property 
+     */
+    public com.kingdee.eas.basedata.master.cssp.SupplierInfo getSupplier()
+    {
+        return (com.kingdee.eas.basedata.master.cssp.SupplierInfo)get("supplier");
+    }
+    public void setSupplier(com.kingdee.eas.basedata.master.cssp.SupplierInfo item)
+    {
+        put("supplier", item);
+    }
+    /**
+     * Object:项目配件明细's 初始实际单价property 
+     */
+    public java.math.BigDecimal getInitFactPrice()
+    {
+        return getBigDecimal("initFactPrice");
+    }
+    public void setInitFactPrice(java.math.BigDecimal item)
+    {
+        setBigDecimal("initFactPrice", item);
+    }
+    /**
+     * Object:项目配件明细's 外包价格property 
+     */
+    public java.math.BigDecimal getWprice()
+    {
+        return getBigDecimal("wprice");
+    }
+    public void setWprice(java.math.BigDecimal item)
+    {
+        setBigDecimal("wprice", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("FF1F0E1A");

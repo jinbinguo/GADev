@@ -8,6 +8,7 @@ import org.apache.log4j.Logger;
 import com.kingdee.bos.ui.face.CoreUIObject;
 import com.kingdee.bos.dao.IObjectValue;
 import com.kingdee.eas.framework.*;
+import com.kingdee.eas.myframework.util.KDTableUtils;
 
 /**
  * output class name
@@ -19,12 +20,19 @@ public class CustomerAccountEditUI extends AbstractCustomerAccountEditUI
 
     public CustomerAccountEditUI() throws Exception {
         super();
-        txtretailDiscountRate.setMaximumValue(100);
+        
+        
+    }
+    
+    @Override
+    public void onLoad() throws Exception {
+    	super.onLoad();
+    	txtretailDiscountRate.setMaximumValue(100);
         txtretailDiscountRate.setMinimumValue(0);
         
         txtrepairDiscountRate.setMaximumValue(100);
         txtrepairDiscountRate.setMinimumValue(0);
-        
+       
     }
   
 

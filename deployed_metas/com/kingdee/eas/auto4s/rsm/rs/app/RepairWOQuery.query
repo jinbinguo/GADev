@@ -4022,37 +4022,6 @@
                 <key name="name" value="RepairWOQuery" />
             </query>
         </queryField>
-        <queryField>
-            <name>firstBookInDate</name>
-            <userDefined>true</userDefined>
-            <formulaString>#0</formulaString>
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[firstBookInDate].displayName</displayName>
-            <groupType />
-            <isSelector>true</isSelector>
-            <isFilter>true</isFilter>
-            <isSorter>true</isSorter>
-            <isParameter>false</isParameter>
-            <returnType>Date</returnType>
-            <propertyRefs>
-                <propertyRef>
-                    <key>9a3c7ab3-fcec-4ac4-8ffc-579986bfc4f8</key>
-                    <parentUnit>
-                        <key name="name" value="firstBookInDate" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="RepairWO" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="firstBookInDate" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
-                <key name="name" value="RepairWOQuery" />
-            </query>
-        </queryField>
     </units>
     <defaultFilter>
         <name>defaultFilter</name>
@@ -6274,22 +6243,6 @@
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[firstBookInDate].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="首登日期" />
-            <lang locale="zh_HK" value="首登日期" />
-            <lang locale="zh_TW" value="首登日期" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[firstBookInDate].extendedProperty.isCommonQueryFilter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[firstBookInDate].extendedProperty.isCommonQuerySorter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[gaBillStatus].displayName">
             <lang locale="en_US" value="null" />

@@ -39,7 +39,7 @@ public class RepairWOListUIPIEx extends RepairWOListUI {
 		super.onLoad();
 		int intendDeliveryTimeIndex = tblMain.getColumnIndex("IntendDeliveryTime");
 		tblMain.getHead().getRow(0).getCell(intendDeliveryTimeIndex).setValue("预计出厂时间");
-		
+		setUITitle("维修历史");
 		
 	}
 	

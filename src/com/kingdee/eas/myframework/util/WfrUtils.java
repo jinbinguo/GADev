@@ -2,13 +2,17 @@ package com.kingdee.eas.myframework.util;
 
 import java.io.Serializable;
 
+import com.kingdee.bos.BOSException;
+import com.kingdee.bos.Context;
 import com.kingdee.bos.ui.face.CoreUIObject;
 import com.kingdee.bos.ui.face.IUIFactory;
 import com.kingdee.bos.ui.face.IUIWindow;
 import com.kingdee.bos.ui.face.UIFactory;
 import com.kingdee.bos.workflow.ProcessDefInfo;
+import com.kingdee.bos.workflow.ProcessInstInfo;
 import com.kingdee.bos.workflow.define.ProcessDef;
 import com.kingdee.bos.workflow.service.ormrpc.EnactmentServiceFactory;
+import com.kingdee.bos.workflow.service.ormrpc.IEnactmentService;
 import com.kingdee.eas.common.client.SysContext;
 import com.kingdee.eas.common.client.UIContext;
 import com.kingdee.eas.common.client.UIFactoryName;
@@ -57,6 +61,39 @@ public class WfrUtils implements Serializable {
 			uiWindow.show();
 			return;
 		}
+	}
+	
+	/**
+	 * ??是否运行于工作流中
+	 * @param ctx
+	 * @param objId
+	 * @return
+	 * @throws BOSException
+	 */
+	public static boolean isRunningWorkflow(Context ctx, String objId)
+			throws BOSException {
+		boolean hasWorkflow = false;
+		IEnactmentService service2 = null;
+		if (ctx != null)
+			service2 = EnactmentServiceFactory.createEnactService(ctx);
+		else
+			service2 = EnactmentServiceFactory.createRemoteEnactService();
+		ProcessInstInfo procInsts[] = service2.getProcessInstanceByHoldedObjectId(objId);
+		int i = 0;
+		int n = procInsts.length;
+		do {
+			if (i >= n)
+				break;
+			if ("open.running".equals(procInsts[i].getState())
+					|| "open.not_running.suspended".equals(procInsts[i].getState())
+					|| "open.not_running.blocked".equals(procInsts[i].getState())
+					|| "open.running.rollbacked".equals(procInsts[i].getState())) {
+				hasWorkflow = true;
+				break;
+			}
+			i++;
+		} while (true);
+		return hasWorkflow;
 	}
 
 }
