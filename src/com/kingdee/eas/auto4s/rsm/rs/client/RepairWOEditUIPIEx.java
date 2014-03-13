@@ -8,6 +8,7 @@ import java.awt.event.ItemEvent;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.math.BigDecimal;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -113,6 +114,7 @@ import com.kingdee.eas.ga.rs.RepairWOStatusEnum;
 import com.kingdee.eas.ga.rs.TEnum;
 import com.kingdee.eas.ga.rs.WInfo;
 import com.kingdee.eas.ga.rs.client.RepairManF7UI;
+import com.kingdee.eas.ga.rs.client.RepairWOAllocateExpenseUI;
 import com.kingdee.eas.ga.util.GAUtils;
 import com.kingdee.eas.myframework.client.MsgBoxEx;
 import com.kingdee.eas.myframework.common.SortTypeEnum;
@@ -2130,26 +2132,30 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
              kdTable.getCell(rowIndex,"itemspName").setValue(repairItemInfo.getName());
              kdTable.getCell(rowIndex, "issueQty").setValue(null);
              kdTable.getCell(rowIndex, "unIssueQty").setValue(null);
-             if (PublicUtils.equals(repairItemInfo, defaultRepairItemForTXT)) {
-            	 kdTable.getCell(rowIndex, "price").setValue(BIGDEC0);
-             } else {
-            	 BigDecimal defaultPrice = repairItemInfo.getBigDecimal("price"); //参数售价
-            	 if (defaultPrice != null && defaultPrice.compareTo(BIGDEC0) != 0)
-            		 kdTable.getCell(rowIndex, "price").setValue(defaultPrice);
-            	 else kdTable.getCell(rowIndex, "price").setValue(new BigDecimal(39));
-             }
-             if (PublicUtils.equals(repairItemInfo, defaultRepairItemForDJQ)) {
-            	 kdTable.getCell(rowIndex, "qty").setValue(new BigDecimal(-1));
-             }
-             if (rowIndex > 0) {
-				  WInfo wInfo =(WInfo) kdTable.getRow(0).getCell("w").getValue();
-					if (wInfo != null) {
-						kdTable.getCell(rowIndex,"w").setValue(wInfo);
-						kdtRWOItemSpEntry.getRow(rowIndex).getCell("settlementObject").setValue(wInfo.getSettleObject());
-						
-					}
-			 }
              try {
+	             if (PublicUtils.equals(repairItemInfo, defaultRepairItemForTXT)) {
+	            	 kdTable.getCell(rowIndex, "price").setValue(BIGDEC0);
+	             } else {
+	            	 BigDecimal defaultTaxPrice = repairItemInfo.getBigDecimal("price"); //参数售价(含税)
+	            	 
+	            	 if (defaultTaxPrice != null && defaultTaxPrice.compareTo(BIGDEC0) != 0) {
+	            		BigDecimal taxRate = PublicUtils.getBigDecimal(kdTable.getRow(rowIndex).getCell("taxRate").getValue());
+	            		BigDecimal defaultPrice = defaultTaxPrice.divide(BIGDEC1.add(taxRate.divide(BIGDEC100,10,BigDecimal.ROUND_HALF_UP)),10,BigDecimal.ROUND_HALF_UP);
+	            		kdTable.getCell(rowIndex, "price").setValue(defaultPrice);
+	            	 } else kdTable.getCell(rowIndex, "price").setValue(new BigDecimal(39));
+	             }
+	             if (PublicUtils.equals(repairItemInfo, defaultRepairItemForDJQ)) {
+	            	 kdTable.getCell(rowIndex, "qty").setValue(new BigDecimal(-1));
+	             }
+	             if (rowIndex > 0) {
+					  WInfo wInfo =(WInfo) kdTable.getRow(0).getCell("w").getValue();
+						if (wInfo != null) {
+							kdTable.getCell(rowIndex,"w").setValue(wInfo);
+							kdtRWOItemSpEntry.getRow(rowIndex).getCell("settlementObject").setValue(wInfo.getSettleObject());
+							
+						}
+				 }
+            
 				calItemSpEntryAmount(kdTable.getRow(rowIndex));
 			} catch (Exception e) {
 				UIUtils.handUIException(e);
@@ -2811,7 +2817,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     	initItemSpRepairItemEntryF7(null,cell);
     }
     
-    private void calItemSpEntryAmount(IRow row) throws Exception {
+    public void calItemSpEntryAmount(IRow row) throws Exception {
     	//总计=数量*(1+税率%/100)*价格*(1-折扣%/100)
     	TEnum tType = (TEnum)row.getCell("t").getValue(); //T
     	BigDecimal qty = PublicUtils.getBigDecimal(row.getCell("qty").getValue()); //数量/工时
@@ -2919,6 +2925,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
         KDTableUtils.formatDecimal(kdtRWOAttachmentItemEntry, Cell_ARAmount,true);
         KDTableUtils.formatDecimal(kdtRWOAttachmentItemEntry, Cell_DiscountAmount,true);
         KDTableUtils.formatDecimal(kdtRWOAttachmentItemEntry, "Cost",true);
+       
         
         //ItemSPEntry
         KDTableUtils.formatDecimal(kdtRWOItemSpEntry, "qty",true);
@@ -2930,7 +2937,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
         KDTableUtils.formatDecimal(kdtRWOItemSpEntry, "taxRate",false);
         KDTableUtils.formatDecimal(kdtRWOItemSpEntry, "issueQty",true);
         KDTableUtils.formatDecimal(kdtRWOItemSpEntry, "unIssueQty",true);
-        
+        KDTableUtils.formatDecimal(kdtRWOItemSpEntry, "allocateExenseRate",false);
         
     }
 
@@ -3241,7 +3248,39 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     
     @Override
     public void actionSplitLine_actionPerformed(ActionEvent e) throws Exception {
-    	super.actionSplitLine_actionPerformed(e);
+    	
+    	if (true) {
+    		return;
+    	}
+    	kdtRWOItemSpEntry.getColumn("originalEntryId").getStyleAttributes().setHided(false);
+    	kdtRWOItemSpEntry.getColumn("originalQty").getStyleAttributes().setHided(false);
+    	
+    	Integer[] iSel = KDTableUtils.getSelectedRowIndex(kdtRWOItemSpEntry, false);
+    	int selRowIndex = iSel[0].intValue();
+    	IRow selRow = kdtRWOItemSpEntry.getRow(selRowIndex);
+    	TEnum tType = (TEnum) selRow.getCell("t").getValue();
+    	BigDecimal unIssueQty = PublicUtils.getBigDecimal(selRow.getCell("unIssueQty").getValue());
+    	BigDecimal qty = PublicUtils.getBigDecimal(selRow.getCell("qty").getValue()); 
+    	if (qty.compareTo(BIGDEC0) == 0) {
+    		throw new EASBizException(new NumericExceptionSubItem("","数量为0的数据行，不允许分担!"));
+    	}
+    	if (PublicUtils.equals(TEnum.P, tType) &&
+    			unIssueQty.compareTo(BIGDEC0) != 0) { //配件行
+    		throw new EASBizException(new NumericExceptionSubItem("","配件未完全出库，不允许分担!"));
+    	}
+    	Map uictx = new HashMap();
+    	uictx.put("ui",this);
+    	uictx.put("kdtable", kdtRWOItemSpEntry);
+    	uictx.put("originalRow",selRow);
+    	BigDecimal amount = PublicUtils.getBigDecimal(selRow.getCell("amount").getValue());
+    	String itemspName = (String)selRow.getCell("itemspName").getValue();
+		IUIFactory iUIFactory = UIFactory.createUIFactory(UIFactoryName.MODEL);
+		IUIWindow iUIWindowSizesHEdit = iUIFactory.create(RepairWOAllocateExpenseUI.class.getName(),uictx); 
+		RepairWOAllocateExpenseUI allocateExpenseUI = (RepairWOAllocateExpenseUI) iUIWindowSizesHEdit.getUIObject();
+		//allocateExpenseUI.setUITitle(String.format("[%s] - [%s]",new DecimalFormat(",###.00").format(amount),itemspName));
+		allocateExpenseUI.setUITitle(String.format("[%s]",itemspName));
+		iUIWindowSizesHEdit.show();
+    	
     }
     
 }

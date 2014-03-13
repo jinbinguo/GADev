@@ -36,9 +36,9 @@ public class RepairManListUI extends AbstractRepairManListUI {
     	super.onLoad();
     	RsQueryF7Utils.makeVehicleF7(prmtVehicle);
     
-    	//KDTableUtils.setColumnMerge(tblMain, getMergeColumnKeys());
-    	KDTableUtils.setPageRowCount(tblMain, 150);
-    	
+    	KDTableUtils.setColumnMerge(tblMain, getMergeColumnKeys());
+    	//KDTableUtils.setPageRowCount(tblMain, 150);
+    	logger.info("=============onload===================");
     	actionAudit.setVisible(false);
     	actionUnAudit.setVisible(false);
     	
@@ -66,6 +66,7 @@ public class RepairManListUI extends AbstractRepairManListUI {
 			//"plateNum","vIN","engineNum","seriesName",
 			//"modelName","brandName"
 		};
+
 	}
 	@Override
 	public void actionSearch_actionPerformed(ActionEvent e) throws Exception {
@@ -101,7 +102,10 @@ public class RepairManListUI extends AbstractRepairManListUI {
 		} catch (Exception exc) {
 			UIUtils.handUIExceptionAndAbort(exc);
 		}
+		long l = System.currentTimeMillis();
+		logger.info("====================start==============" + String.valueOf(l));
 		super.tblMain_doRequestRowSet(e);
+		logger.info("====================end==============" + String.valueOf(System.currentTimeMillis()-l));
 	}
 
 }

@@ -109,6 +109,12 @@ public class PublicUtils implements Serializable {
 		vec.toArray(str);
 		return str;
 	}
+	public static Integer[] vectorToInteger(Vector<Integer> vec) {
+		if (vec == null || vec.isEmpty()) return null;
+		Integer[] i = new Integer[vec.size()];
+		vec.toArray(i);
+		return i;
+	}
 	
 	public static String[] hashKeyToArray(Map<String,?> hash) {
 		if (hash == null || hash.isEmpty()) return null;

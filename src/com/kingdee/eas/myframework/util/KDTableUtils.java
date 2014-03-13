@@ -1,6 +1,10 @@
 package com.kingdee.eas.myframework.util;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Set;
 
 import javax.swing.event.EventListenerList;
 
@@ -8,12 +12,17 @@ import com.kingdee.bos.BOSException;
 import com.kingdee.bos.ctrl.kdf.table.IColumn;
 import com.kingdee.bos.ctrl.kdf.table.KDTDataRequestManager;
 import com.kingdee.bos.ctrl.kdf.table.KDTDefaultCellEditor;
+import com.kingdee.bos.ctrl.kdf.table.KDTSelectBlock;
+import com.kingdee.bos.ctrl.kdf.table.KDTSelectManager;
 import com.kingdee.bos.ctrl.kdf.table.KDTable;
 import com.kingdee.bos.ctrl.kdf.table.event.KDTEditEvent;
 import com.kingdee.bos.ctrl.kdf.table.event.KDTEditListener;
 import com.kingdee.bos.ctrl.kdf.util.style.Styles.HorizontalAlignment;
 import com.kingdee.eas.common.EASBizException;
+import com.kingdee.eas.myframework.client.MsgBoxEx;
 import com.kingdee.eas.scm.common.client.helper.FormattedEditorFactory;
+import com.kingdee.util.NumericExceptionSubItem;
+
 
 public class KDTableUtils implements Serializable {
 	
@@ -102,5 +111,37 @@ public class KDTableUtils implements Serializable {
 			return false;
 		}
 		return true;
+	}
+	
+	public static Integer[] getSelectedRowIndex(KDTable table,boolean isMultiRowSelected) throws Exception {
+		KDTSelectManager sm = table.getSelectManager();
+    	if (sm == null) {
+    		throw new EASBizException(new NumericExceptionSubItem("","请先选择数据行!"));    		
+    	}
+    	HashMap<Integer,Integer> hashSelRow = new HashMap<Integer, Integer>();
+    	ArrayList<KDTSelectBlock> lstBlocks = sm.getBlocks();
+    	if (lstBlocks == null || lstBlocks.isEmpty()) {
+    		throw new EASBizException(new NumericExceptionSubItem("","请先选择数据行!"));
+    		
+    	}
+    	for (int i = 0; i < lstBlocks.size(); i++) {
+    		KDTSelectBlock sb = lstBlocks.get(i);
+    		for (int j = sb.getBeginRow(); j <= sb.getEndRow(); j++) {
+    			hashSelRow.put(j, j);
+    		}
+    	}
+    	if (!isMultiRowSelected && hashSelRow.size() > 1) {
+    		throw new EASBizException(new NumericExceptionSubItem("","请选择一行数据行!"));
+    	}
+    	Integer[] iSel = new Integer[hashSelRow.size()];
+    	Set<Integer> setSel = hashSelRow.keySet();
+    	iSel = PublicUtils.setToInteger(setSel);
+    	
+    	return iSel;
+    	
+    	
+    	
+		
+		
 	}
 }
