@@ -553,6 +553,34 @@
             <scale>10</scale>
             <precision>28</precision>
         </column>
+        <column>
+            <name>CFOriginalEntryId</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFOriginalEntryId].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFOriginalEntryId].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFOriginalQty</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFOriginalQty].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFOriginalQty].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NUMERIC</sqlType>
+            <length>28</length>
+            <scale>10</scale>
+            <precision>28</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>CPK_ATS_RWORWOImck</name>
@@ -862,6 +890,30 @@
             <lang locale="zh_CN" value="维修配件" />
             <lang locale="zh_HK" value="維修配件" />
             <lang locale="zh_TW" value="維修配件" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFOriginalEntryId].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="原始分录ID" />
+            <lang locale="zh_HK" value="原始分錄ID" />
+            <lang locale="zh_TW" value="原始分錄ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFOriginalEntryId].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="原始分录ID" />
+            <lang locale="zh_HK" value="原始分錄ID" />
+            <lang locale="zh_TW" value="原始分錄ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFOriginalQty].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="原始数量" />
+            <lang locale="zh_HK" value="原始數量" />
+            <lang locale="zh_TW" value="原始數量" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFOriginalQty].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="原始数量" />
+            <lang locale="zh_HK" value="原始數量" />
+            <lang locale="zh_TW" value="原始數量" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFPostingDate].alias">
             <lang locale="en_US" value="null" />
