@@ -4,10 +4,8 @@
 package com.kingdee.eas.ga.rs.client;
 
 import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.Rectangle;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.Map;
@@ -16,21 +14,17 @@ import java.util.Vector;
 import javax.swing.KeyStroke;
 
 import org.apache.log4j.Logger;
-import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 
-import com.kingdee.bos.ui.face.CoreUIObject;
-import com.kingdee.bos.util.BOSUuid;
 import com.kingdee.bos.ctrl.kdf.table.IRow;
 import com.kingdee.bos.ctrl.kdf.table.KDTable;
-import com.kingdee.bos.ctrl.kdf.table.KDTableHelper;
 import com.kingdee.bos.ctrl.kdf.table.event.KDTEditAdapter;
 import com.kingdee.bos.ctrl.kdf.table.event.KDTEditEvent;
 import com.kingdee.bos.ctrl.kdf.table.foot.KDTFootManager;
 import com.kingdee.bos.ctrl.kdf.util.style.Styles.HorizontalAlignment;
-import com.kingdee.bos.dao.IObjectValue;
+import com.kingdee.bos.ui.face.CoreUIObject;
 import com.kingdee.eas.auto4s.rsm.rs.RepairWORWOItemSpEntryInfo;
 import com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUIPIEx;
-import com.kingdee.eas.framework.*;
+import com.kingdee.eas.ga.rs.TEnum;
 import com.kingdee.eas.myframework.util.KDTableUtils;
 import com.kingdee.eas.myframework.util.PublicUtils;
 import com.kingdee.eas.myframework.util.UIUtils;
@@ -258,45 +252,81 @@ public class RepairWOAllocateExpenseUI extends AbstractRepairWOAllocateExpenseUI
     	}
     	Integer[] selRows = PublicUtils.vectorToInteger(vec);
     	Arrays.sort(selRows);
-    //	IRow newRow = (IRow) originalRow.clone();
+    	IRow newRow = (IRow) originalRow.clone();
     	
-    	BigDecimal qty = PublicUtils.getBigDecimal(originalRow.getCell("qty").getValue());
-		String id = ((RepairWORWOItemSpEntryInfo)originalRow.getUserObject()).getString("id");
+    	BigDecimal qty_original = PublicUtils.getBigDecimal(originalRow.getCell("originalQty").getValue());
+    	if (qty_original.compareTo(BigDecimal.ZERO) == 0) qty_original = PublicUtils.getBigDecimal(originalRow.getCell("qty").getValue());
+    	BigDecimal taxAmount_original = PublicUtils.getBigDecimal(originalRow.getCell("taxAmount").getValue());
+    	BigDecimal amount_original = PublicUtils.getBigDecimal(originalRow.getCell("amount").getValue());
+    	taxAmount_original = taxAmount_original.setScale(2, BigDecimal.ROUND_HALF_UP);
+    	amount_original = amount_original.setScale(2, BigDecimal.ROUND_HALF_UP);
+    	TEnum tType_original = (TEnum)originalRow.getCell("t").getValue();
+    	
+    	BigDecimal totalAmount = BigDecimal.ZERO;
+    	BigDecimal totalTaxAmount = BigDecimal.ZERO;
+    	
+		String id_original = (String)originalRow.getCell("originalEntryId").getValue();
+		if (PublicUtils.isEmpty(id_original)) id_original = ((RepairWORWOItemSpEntryInfo)originalRow.getUserObject()).getString("id");
+		
     	for (int i = 0; i < selRows.length; i++) {
     		int rowIndex = selRows[i];
     		BigDecimal percent = PublicUtils.getBigDecimal(tblMain.getRow(rowIndex).getCell("percent").getValue());
-    		BigDecimal amount = PublicUtils.getBigDecimal(tblMain.getRow(rowIndex).getCell("amount").getValue());
-    		
-    		
 			
     		if (i == 0) { //第一行
-    			originalRow.getCell("originalQty").setValue(qty);
-    			originalRow.getCell("originalEntryId").setValue(id);
-    			originalRow.getCell("qty").setValue(qty.multiply(percent.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP)));
+    			originalRow.getCell("originalQty").setValue(qty_original);
+    			originalRow.getCell("originalEntryId").setValue(id_original);
+    			originalRow.getCell("allocateExenseRate").setValue(percent);
+    			originalRow.getCell("qty").setValue(qty_original.multiply(percent.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP)));
+    			if (PublicUtils.equals(TEnum.P, tType_original))
+    				originalRow.getCell("issueQty").setValue(qty_original.multiply(percent.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP)));
     			parentUI.calItemSpEntryAmount(originalRow);
+    			BigDecimal amount = PublicUtils.getBigDecimal(originalRow.getCell("amount").getValue());
+    			BigDecimal taxAmount = PublicUtils.getBigDecimal(originalRow.getCell("taxAmount").getValue());
+    			totalAmount = totalAmount.add(amount);
+    			totalTaxAmount = totalTaxAmount.add(taxAmount);
+    			
     		} else if (i == selRows.length -1) { //最后一行
-    			IRow row = (IRow) originalRow.clone();
-    			rwoTable.addRow(originalRow.getRowIndex()+i, row);
-    			((RepairWORWOItemSpEntryInfo)row.getUserObject()).setId(BOSUuid.create("FF1F0E1A"));
-    			row.getCell("originalQty").setValue(qty);
-    			row.getCell("originalEntryId").setValue(id);
-    			row.getCell("qty").setValue(qty.multiply(percent.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP)));
+    			IRow row = (IRow) newRow.clone();
+    			rwoTable.addRow(newRow.getRowIndex()+i, row);
+    			row.setUserObject(null);
+    			row.getCell("originalQty").setValue(qty_original);
+    			row.getCell("originalEntryId").setValue(id_original);
+    			row.getCell("allocateExenseRate").setValue(percent);
+    			row.getCell("qty").setValue(qty_original.multiply(percent.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP)));
+    			if (PublicUtils.equals(TEnum.P, tType_original))
+    				row.getCell("issueQty").setValue(qty_original.multiply(percent.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP)));
     			parentUI.calItemSpEntryAmount(row);
+    			
+    			BigDecimal amount = PublicUtils.getBigDecimal(row.getCell("amount").getValue());
+    			BigDecimal taxAmount = PublicUtils.getBigDecimal(row.getCell("taxAmount").getValue());
+    			amount = amount_original.subtract(totalAmount);
+    			taxAmount = taxAmount_original.subtract(totalTaxAmount);
+    			row.getCell("amount").setValue(amount);
+    			row.getCell("taxAmount").setValue(taxAmount);
     			
     			
     		} else { //其他行
-    			IRow row = (IRow) originalRow.clone();
-    			rwoTable.addRow(originalRow.getRowIndex()+i, row);
-    			((RepairWORWOItemSpEntryInfo)row.getUserObject()).setId(BOSUuid.create("FF1F0E1A"));
-    			row.getCell("originalQty").setValue(qty);
-    			row.getCell("originalEntryId").setValue(id);
-    			row.getCell("qty").setValue(qty.multiply(percent.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP)));
+    			IRow row = (IRow) newRow.clone();
+    			
+    			rwoTable.addRow(newRow.getRowIndex()+i, row);
+    			row.setUserObject(null);
+    			row.getCell("originalQty").setValue(qty_original);
+    			row.getCell("originalEntryId").setValue(id_original);
+    			row.getCell("allocateExenseRate").setValue(percent);
+    			row.getCell("qty").setValue(qty_original.multiply(percent.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP)));
+    			if (PublicUtils.equals(TEnum.P, tType_original))
+    				row.getCell("issueQty").setValue(qty_original.multiply(percent.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP)));
     			parentUI.calItemSpEntryAmount(row);
+    			BigDecimal amount = PublicUtils.getBigDecimal(row.getCell("amount").getValue());
+    			BigDecimal taxAmount = PublicUtils.getBigDecimal(row.getCell("taxAmount").getValue());
+    			totalAmount = totalAmount.add(amount);
+    			totalTaxAmount = totalTaxAmount.add(taxAmount);
     		}
     		
     	}
-    	
-    	
+    	//RepairWORWOItemSpEntryInfo itemSpEntryInfo = new RepairWORWOItemSpEntryInfo();
+		//itemSpEntryInfo.setId(BOSUuid.create("FF1F0E1A"));
+    	parentUI.storeFields();
     //	destroyWindow();
     }
     

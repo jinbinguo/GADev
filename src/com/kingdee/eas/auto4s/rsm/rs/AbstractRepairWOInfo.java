@@ -832,6 +832,17 @@ public class AbstractRepairWOInfo extends com.kingdee.eas.auto4s.autoframework.c
     {
         setDate("firstBookInDate", item);
     }
+    /**
+     * Object:维修工单's 业务员property 
+     */
+    public String getSaler()
+    {
+        return getString("Saler");
+    }
+    public void setSaler(String item)
+    {
+        setString("Saler", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("FDBE5ECA");
