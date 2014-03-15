@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
 <project name="publisher" default="jar" basedir=".">
 	
-    <target name="copyfile">
+	<!-- 创建目录-->
+    <target name="createDir">
     	<mkdir dir="jars"/>
     </target>
 	
-	<target name="jar" depends="copyfile">
+	<!-- 打包jar包-->
+	<target name="jar" depends="createDir">
 	
 		<!--==========================src backup =========================================
 		<jar destfile="jars/all_eas-src.jar" basedir="src" includes="com/kingdee/eas/**"/>
@@ -59,5 +61,8 @@
 		<!-- 子系统树-->
 		<jar destfile="jars/ga_mdview-metas.jar" basedir="deployed_metas" includes="/*.mdbview" excludes="com/**,*.jar"/>
 		
+		<!-- zip打包所有jar包-->
+		<zip destfile="jars/AllJar.zip" basedir="jars" includes="/*.jar"> </zip>
 	</target>
+	
 </project>
