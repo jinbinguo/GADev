@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entityObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.fi.ar.app</package>
+    <name>OtherBill</name>
+    <alias>entityObject[com.kingdee.eas.fi.ar.app.OtherBill].alias</alias>
+    <properties>
+        <ownProperty>
+            <name>totalBadAmount</name>
+            <length>13</length>
+            <precision>17</precision>
+            <decimalDigits>4</decimalDigits>
+        </ownProperty>
+        <ownProperty>
+            <name>totalBadAmountLocal</name>
+            <length>13</length>
+            <precision>17</precision>
+            <decimalDigits>4</decimalDigits>
+        </ownProperty>
+        <ownProperty>
+            <name>SYNbillType</name>
+            <length>44</length>
+        </ownProperty>
+        <ownProperty>
+            <name>SYNbillNumber</name>
+            <length>80</length>
+        </ownProperty>
+        <ownProperty>
+            <name>SYNBillID</name>
+            <length>44</length>
+        </ownProperty>
+        <ownProperty>
+            <name>SYNBillEntryID</name>
+            <length>44</length>
+        </ownProperty>
+    </properties>
+    <resource>
+        <rs key="entityObject[com.kingdee.eas.fi.ar.app.OtherBill].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fi.ar.app.OtherBill].extendedProperty.controllerBeanEx">
+            <lang locale="en_US" value="com.kingdee.eas.fi.ar.app.OtherBillControllerBeanEx" />
+            <lang locale="zh_CN" value="com.kingdee.eas.fi.ar.app.OtherBillControllerBeanEx" />
+            <lang locale="zh_TW" value="com.kingdee.eas.fi.ar.app.OtherBillControllerBeanEx" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fi.ar.app.OtherBill].extendedProperty.isUseCodeRule">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fi.ar.app.OtherBill].properties.ownProperty[SYNBillEntryID].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fi.ar.app.OtherBill].properties.ownProperty[SYNBillEntryID].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fi.ar.app.OtherBill].properties.ownProperty[SYNBillEntryID].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fi.ar.app.OtherBill].properties.ownProperty[SYNBillID].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fi.ar.app.OtherBill].properties.ownProperty[SYNBillID].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fi.ar.app.OtherBill].properties.ownProperty[SYNBillID].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fi.ar.app.OtherBill].properties.ownProperty[SYNbillNumber].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fi.ar.app.OtherBill].properties.ownProperty[SYNbillNumber].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fi.ar.app.OtherBill].properties.ownProperty[SYNbillNumber].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fi.ar.app.OtherBill].properties.ownProperty[SYNbillType].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fi.ar.app.OtherBill].properties.ownProperty[SYNbillType].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fi.ar.app.OtherBill].properties.ownProperty[SYNbillType].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fi.ar.app.OtherBill].properties.ownProperty[billType].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fi.ar.app.OtherBill].properties.ownProperty[billType].extendedProperty.bizDataType">
+            <lang locale="en_US" value="ENUM" />
+            <lang locale="zh_CN" value="ENUM" />
+            <lang locale="zh_TW" value="ENUM" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fi.ar.app.OtherBill].properties.ownProperty[billType_SourceBill].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fi.ar.app.OtherBill].properties.ownProperty[billType_SourceBill].extendedProperty.bizDataType">
+            <lang locale="en_US" value="ENUM" />
+            <lang locale="zh_CN" value="ENUM" />
+            <lang locale="zh_TW" value="ENUM" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fi.ar.app.OtherBill].properties.ownProperty[billType_SourceBill].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fi.ar.app.OtherBill].properties.ownProperty[totalBadAmountLocal].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fi.ar.app.OtherBill].properties.ownProperty[totalBadAmountLocal].extendedProperty.bizDataType">
+            <lang locale="en_US" value="DECIMAL" />
+            <lang locale="zh_CN" value="DECIMAL" />
+            <lang locale="zh_TW" value="DECIMAL" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fi.ar.app.OtherBill].properties.ownProperty[totalBadAmount].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fi.ar.app.OtherBill].properties.ownProperty[totalBadAmount].extendedProperty.bizDataType">
+            <lang locale="en_US" value="DECIMAL" />
+            <lang locale="zh_CN" value="DECIMAL" />
+            <lang locale="zh_TW" value="DECIMAL" />
+        </rs>
+    </resource>
+</entityObject>
+
