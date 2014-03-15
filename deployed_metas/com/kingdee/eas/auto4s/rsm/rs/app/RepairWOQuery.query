@@ -4022,6 +4022,37 @@
                 <key name="name" value="RepairWOQuery" />
             </query>
         </queryField>
+        <queryField>
+            <name>Saler</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[Saler].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>96cb31bf-b32e-4c64-a35d-d4ece0775b9f</key>
+                    <parentUnit>
+                        <key name="name" value="Saler" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairWO" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="Saler" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+                <key name="name" value="RepairWOQuery" />
+            </query>
+        </queryField>
     </units>
     <defaultFilter>
         <name>defaultFilter</name>
@@ -5884,6 +5915,22 @@
             <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[SA.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[Saler].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务员" />
+            <lang locale="zh_HK" value="業務員" />
+            <lang locale="zh_TW" value="業務員" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[Saler].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[Saler].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
