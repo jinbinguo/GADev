@@ -35,6 +35,37 @@
                 <key name="name" value="RepairWOQuery" />
             </query>
         </queryField>
+        <queryField>
+            <name>isPrintedSettle</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[isPrintedSettle].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Boolean</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>15a36500-a287-4239-9d20-e7f270aa7f95</key>
+                    <parentUnit>
+                        <key name="name" value="isPrintedSettle" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairWO" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="isPrintedSettle" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+                <key name="name" value="RepairWOQuery" />
+            </query>
+        </queryField>
     </units>
     <resource>
         <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].extendedProperty.PI_Extend">
@@ -109,6 +140,22 @@
             <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[gaBillStatus].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[isPrintedSettle].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="结算打印" />
+            <lang locale="zh_HK" value="結算列印" />
+            <lang locale="zh_TW" value="結算列印" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[isPrintedSettle].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[isPrintedSettle].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />

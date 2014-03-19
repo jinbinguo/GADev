@@ -90,7 +90,7 @@
         </component>
         <component>
             <name>contCompanyNumber</name>
-            <constraints>341,10,270,19,385</constraints>
+            <constraints>250,10,208,19,385</constraints>
         </component>
         <component>
             <name>contCustomerRequest</name>
@@ -238,7 +238,7 @@
         </component>
         <component>
             <name>contNumber</name>
-            <constraints>2,10,270,19,385</constraints>
+            <constraints>2,10,208,19,261</constraints>
         </component>
         <component>
             <name>kDBtnMulAssign</name>
@@ -980,7 +980,7 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
-            <constraints>683,10,270,19,137</constraints>
+            <constraints>498,10,208,19,385</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -1022,6 +1022,61 @@
             <parent>
                 <key name="name" value="kDPanel1" />
             </parent>
+        </component>
+        <component>
+            <name>chkisPrintedSettle</name>
+            <alias>uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[chkisPrintedSettle].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDCheckBox</classType>
+            <isContainer>false</isContainer>
+            <constraints>748,10,208,18,137</constraints>
+            <tabIndex>92</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>text</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[chkisPrintedSettle].properties.property[text].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[chkisPrintedSettle].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>horizontalAlignment</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[chkisPrintedSettle].properties.property[horizontalAlignment].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="kDPanel1" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>selected</propertyName>
+                    <propertyType>boolean</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>isPrintedSettle</bindingField>
+                    <fieldType>boolean</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
         </component>
         <component>
             <name>kDPBizInfo</name>
@@ -3756,6 +3811,30 @@
             <lang locale="zh_HK" value="已生成內部應付" />
             <lang locale="zh_TW" value="已生成內部應付" />
         </rs>
+        <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[chkisPrintedSettle].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否打印结算单" />
+            <lang locale="zh_HK" value="是否列印結算單" />
+            <lang locale="zh_TW" value="是否列印結算單" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[chkisPrintedSettle].properties.property[horizontalAlignment].value">
+            <lang locale="en_US" value="2" />
+            <lang locale="zh_CN" value="2" />
+            <lang locale="zh_HK" value="2" />
+            <lang locale="zh_TW" value="2" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[chkisPrintedSettle].properties.property[text].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="结算打印" />
+            <lang locale="zh_HK" value="結算列印" />
+            <lang locale="zh_TW" value="結算列印" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[chkisPrintedSettle].properties.property[visible].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
         <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[cmbT].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
@@ -3781,6 +3860,12 @@
             <lang locale="zh_TW" value="80" />
         </rs>
         <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[contComeTime].properties.property[boundLabelLength].value">
+            <lang locale="en_US" value="80" />
+            <lang locale="zh_CN" value="80" />
+            <lang locale="zh_HK" value="80" />
+            <lang locale="zh_TW" value="80" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[contCompanyNumber].properties.property[boundLabelLength].value">
             <lang locale="en_US" value="80" />
             <lang locale="zh_CN" value="80" />
             <lang locale="zh_HK" value="80" />
@@ -3850,6 +3935,12 @@
             <lang locale="zh_TW" value="80" />
         </rs>
         <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[contModel].properties.property[boundLabelLength].value">
+            <lang locale="en_US" value="80" />
+            <lang locale="zh_CN" value="80" />
+            <lang locale="zh_HK" value="80" />
+            <lang locale="zh_TW" value="80" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[contNumber].properties.property[boundLabelLength].value">
             <lang locale="en_US" value="80" />
             <lang locale="zh_CN" value="80" />
             <lang locale="zh_HK" value="80" />
@@ -4108,10 +4199,10 @@
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[contgaBillStatus].properties.property[boundLabelLength].value">
-            <lang locale="en_US" value="100" />
-            <lang locale="zh_CN" value="100" />
-            <lang locale="zh_HK" value="100" />
-            <lang locale="zh_TW" value="100" />
+            <lang locale="en_US" value="80" />
+            <lang locale="zh_CN" value="80" />
+            <lang locale="zh_HK" value="80" />
+            <lang locale="zh_TW" value="80" />
         </rs>
         <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUI].components.component[contgaBillStatus].properties.property[boundLabelText].value">
             <lang locale="en_US" value="null" />
