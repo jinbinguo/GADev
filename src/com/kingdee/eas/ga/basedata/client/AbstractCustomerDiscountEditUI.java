@@ -210,6 +210,11 @@ public abstract class AbstractCustomerDiscountEditUI extends com.kingdee.eas.myf
         ObjectValueRender kdtEntrys_atsCustomer_OVR = new ObjectValueRender();
         kdtEntrys_atsCustomer_OVR.setFormat(new BizDataFormat("$number$"));
         this.kdtEntrys.getColumn("atsCustomer").setRenderer(kdtEntrys_atsCustomer_OVR);
+        KDTextField kdtEntrys_atsCustomerName_TextField = new KDTextField();
+        kdtEntrys_atsCustomerName_TextField.setName("kdtEntrys_atsCustomerName_TextField");
+        kdtEntrys_atsCustomerName_TextField.setMaxLength(255);
+        KDTDefaultCellEditor kdtEntrys_atsCustomerName_CellEditor = new KDTDefaultCellEditor(kdtEntrys_atsCustomerName_TextField);
+        this.kdtEntrys.getColumn("atsCustomerName").setEditor(kdtEntrys_atsCustomerName_CellEditor);
         KDFormattedTextField kdtEntrys_repairDiscountRate_TextField = new KDFormattedTextField();
         kdtEntrys_repairDiscountRate_TextField.setName("kdtEntrys_repairDiscountRate_TextField");
         kdtEntrys_repairDiscountRate_TextField.setVisible(true);
@@ -232,6 +237,11 @@ public abstract class AbstractCustomerDiscountEditUI extends com.kingdee.eas.myf
         kdtEntrys_retailDiscountRate_TextField.setPrecision(2);
         KDTDefaultCellEditor kdtEntrys_retailDiscountRate_CellEditor = new KDTDefaultCellEditor(kdtEntrys_retailDiscountRate_TextField);
         this.kdtEntrys.getColumn("retailDiscountRate").setEditor(kdtEntrys_retailDiscountRate_CellEditor);
+        KDTextField kdtEntrys_lineDesc_TextField = new KDTextField();
+        kdtEntrys_lineDesc_TextField.setName("kdtEntrys_lineDesc_TextField");
+        kdtEntrys_lineDesc_TextField.setMaxLength(255);
+        KDTDefaultCellEditor kdtEntrys_lineDesc_CellEditor = new KDTDefaultCellEditor(kdtEntrys_lineDesc_TextField);
+        this.kdtEntrys.getColumn("lineDesc").setEditor(kdtEntrys_lineDesc_CellEditor);
         KDComboBox kdtEntrys_lineStatus_ComboBox = new KDComboBox();
         kdtEntrys_lineStatus_ComboBox.setName("kdtEntrys_lineStatus_ComboBox");
         kdtEntrys_lineStatus_ComboBox.setVisible(true);
@@ -596,7 +606,7 @@ public abstract class AbstractCustomerDiscountEditUI extends com.kingdee.eas.myf
     protected void removeByPK(IObjectPK pk) throws Exception {
     	IObjectValue editData = this.editData;
     	super.removeByPK(pk);
-    	recycleNumberByOrg(editData,"NONE",editData.getString("number"));
+    	recycleNumberByOrg(editData,"Admin",editData.getString("number"));
     }
     
     protected void recycleNumberByOrg(IObjectValue editData,String orgType,String number) {
@@ -652,13 +662,17 @@ public abstract class AbstractCustomerDiscountEditUI extends com.kingdee.eas.myf
             }
         }
     }
+			protected com.kingdee.eas.basedata.org.OrgType getMainBizOrgType() {
+			return com.kingdee.eas.basedata.org.OrgType.getEnum("Admin");
+		}
+
 
     /**
      * output loadFields method
      */
     public void loadFields()
     {
-        		setAutoNumberByOrg("NONE");
+        		setAutoNumberByOrg("Admin");
         dataBinder.loadFields();
     }
 		protected void setOrgF7(KDBizPromptBox f7,com.kingdee.eas.basedata.org.OrgType orgType) throws Exception

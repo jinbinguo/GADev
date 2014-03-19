@@ -33,13 +33,41 @@
         </component>
         <component>
             <name>Status</name>
-            <constraints>385,107,170,19,0</constraints>
+            <constraints>648,4,170,19,0</constraints>
             <properties>
                 <property>
                     <name>visible</name>
                     <type>boolean</type>
                     <value>uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOListUI].components.component[Status].properties.property[visible].value</value>
                     <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="CoreUI" />
+            </parent>
+        </component>
+        <component>
+            <name>chkSettlePrinted</name>
+            <alias>uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOListUI].components.component[chkSettlePrinted].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDCheckBox</classType>
+            <isContainer>false</isContainer>
+            <constraints>365,106,270,19,385</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>text</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOListUI].components.component[chkSettlePrinted].properties.property[text].value</value>
+                    <isMultiLan>true</isMultiLan>
                     <userDefined>true</userDefined>
                 </property>
             </properties>
@@ -199,6 +227,18 @@
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_HK" value="false" />
             <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOListUI].components.component[chkSettlePrinted].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOListUI].components.component[chkSettlePrinted].properties.property[text].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="结算打印" />
+            <lang locale="zh_HK" value="結算列印" />
+            <lang locale="zh_TW" value="結算列印" />
         </rs>
         <rs key="uiObject[com.kingdee.eas.auto4s.rsm.rs.client.RepairWOListUI].components.component[cmbGABillStatus].alias">
             <lang locale="en_US" value="null" />

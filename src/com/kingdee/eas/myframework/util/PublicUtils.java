@@ -90,6 +90,22 @@ public class PublicUtils implements Serializable {
 	public static boolean isEmpty(String str) {
 		return str == null || "".equals(str);
 	}
+	/**
+	 * 字符串是否包含在字符数组里(字符数组lstStr是否存在一个str里字符
+	 * @param lstStr
+	 * @param str
+	 * @return
+	 */
+	public static boolean contain(String[] lstStr, String str) {
+		if (lstStr == null || lstStr.length == 0) return false;
+		if (str == null) return false;
+		for (int i = 0; i < lstStr.length; i++) {
+			boolean b = equals(lstStr[i], str);
+			if (b) return b;
+		}
+		return false;
+		
+	}
 	
 	public static String[] setToString(Set<String> set) {
 		if (set == null || set.isEmpty()) return null;

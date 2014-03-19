@@ -454,6 +454,28 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
     {
         setBoolean("isCreateTo2", item);
     }
+    /**
+     * Object:项目配件明细's 结算日期property 
+     */
+    public java.util.Date getSettleDate()
+    {
+        return getDate("settleDate");
+    }
+    public void setSettleDate(java.util.Date item)
+    {
+        setDate("settleDate", item);
+    }
+    /**
+     * Object: 项目配件明细 's 维修技师 property 
+     */
+    public com.kingdee.eas.basedata.person.PersonInfo getPerson()
+    {
+        return (com.kingdee.eas.basedata.person.PersonInfo)get("person");
+    }
+    public void setPerson(com.kingdee.eas.basedata.person.PersonInfo item)
+    {
+        put("person", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("FF1F0E1A");

@@ -388,6 +388,10 @@ public abstract class AbstractCustomerDiscountListUI extends com.kingdee.eas.myf
             }
         }
     }
+			protected com.kingdee.eas.basedata.org.OrgType getMainBizOrgType() {
+			return com.kingdee.eas.basedata.org.OrgType.getEnum("Admin");
+		}
+
 
     /**
      * output loadFields method

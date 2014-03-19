@@ -41,18 +41,20 @@ public class RepairWOListUIPIEx extends RepairWOListUI {
 		tblMain.getHead().getRow(0).getCell(intendDeliveryTimeIndex).setValue("预计出厂时间");
 		setUITitle("维修历史");
 		
+		actionPrint.setVisible(false);
+		actionPrintPreview.setVisible(false);
 	}
 	
 	@Override
 	protected void tblMain_doRequestRowSet(RequestRowSetEvent e) {
 		try {
 			FilterInfo myFilterInfo = (FilterInfo) InvokeUtils.getFieldValue(this, "myFilterInfo");
+			FilterInfo filterInfo = new FilterInfo();
 			if (cmbGABillStatus.getSelectedItem() != null && cmbGABillStatus.getSelectedItem().toString() != quanBu) {
-				FilterInfo filterInfo = new FilterInfo();
-				
 				filterInfo.getFilterItems().add(new FilterItemInfo("gaBillStatus", ((RepairWOStatusEnum) cmbGABillStatus.getShowSelectedItem()).getValue(),CompareType.EQUALS));
-				myFilterInfo.mergeFilter(filterInfo,"and");
 			}
+			filterInfo.getFilterItems().add(new FilterItemInfo("isPrintedSettle",chkSettlePrinted.isSelected()));
+			myFilterInfo.mergeFilter(filterInfo,"and");
 			
 		} catch (Exception ee) {}
 		super.tblMain_doRequestRowSet(e);

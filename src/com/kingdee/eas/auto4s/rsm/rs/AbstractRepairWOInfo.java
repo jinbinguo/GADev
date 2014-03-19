@@ -843,6 +843,17 @@ public class AbstractRepairWOInfo extends com.kingdee.eas.auto4s.autoframework.c
     {
         setString("Saler", item);
     }
+    /**
+     * Object:维修工单's 是否打印结算单property 
+     */
+    public boolean isIsPrintedSettle()
+    {
+        return getBoolean("isPrintedSettle");
+    }
+    public void setIsPrintedSettle(boolean item)
+    {
+        setBoolean("isPrintedSettle", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("FDBE5ECA");

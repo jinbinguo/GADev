@@ -55,8 +55,8 @@ public class RepairWOAllocateExpenseUI extends AbstractRepairWOAllocateExpenseUI
     	}
     	
     	
-    	KDTableUtils.formatDecimal(tblMain, "percent", false);
-    	KDTableUtils.formatDecimal(tblMain, "amount", false);
+    	KDTableUtils.formatDecimal(tblMain, "percent", true);
+    	KDTableUtils.formatDecimal(tblMain, "amount", true);
     	
     	Map uictx = getUIContext();
     	parentUI = (RepairWOEditUIPIEx) uictx.get("ui");
@@ -139,7 +139,7 @@ public class RepairWOAllocateExpenseUI extends AbstractRepairWOAllocateExpenseUI
     		//计算当前行百分比
     		totalPercent = totalPercent.subtract(curPercent);
     		curPercent = curAmount.divide(uiAmount,10,BigDecimal.ROUND_HALF_UP).multiply(uiPercent).setScale(2,BigDecimal.ROUND_HALF_UP);
-    		if (totalAmount.compareTo(uiAmount) > 0) {
+    		if (totalAmount.abs().compareTo(uiAmount.abs()) > 0) {
     			actionOK.setEnabled(false);
     			tblMain.getEditManager().editCellAt(rowIndex, colIndex);
     			totalPercent = totalPercent.add(curPercent);
@@ -156,7 +156,7 @@ public class RepairWOAllocateExpenseUI extends AbstractRepairWOAllocateExpenseUI
     		tblMain.getRow(rowIndex).getCell("percent").setValue(curPercent.compareTo(BigDecimal.ZERO) == 0 ? null : curPercent);
     		
     	}
-    	if (totalAmount.compareTo(uiAmount) == 0 && totalPercent.compareTo(uiPercent) == 0) {
+    	if (totalAmount.abs().compareTo(uiAmount.abs()) == 0 && totalPercent.compareTo(uiPercent) == 0) {
     		actionOK.setEnabled(true);
     	}
     	
@@ -258,6 +258,7 @@ public class RepairWOAllocateExpenseUI extends AbstractRepairWOAllocateExpenseUI
     	if (qty_original.compareTo(BigDecimal.ZERO) == 0) qty_original = PublicUtils.getBigDecimal(originalRow.getCell("qty").getValue());
     	BigDecimal taxAmount_original = PublicUtils.getBigDecimal(originalRow.getCell("taxAmount").getValue());
     	BigDecimal amount_original = PublicUtils.getBigDecimal(originalRow.getCell("amount").getValue());
+    	
     	taxAmount_original = taxAmount_original.setScale(2, BigDecimal.ROUND_HALF_UP);
     	amount_original = amount_original.setScale(2, BigDecimal.ROUND_HALF_UP);
     	TEnum tType_original = (TEnum)originalRow.getCell("t").getValue();
@@ -280,6 +281,7 @@ public class RepairWOAllocateExpenseUI extends AbstractRepairWOAllocateExpenseUI
     			if (PublicUtils.equals(TEnum.P, tType_original))
     				originalRow.getCell("issueQty").setValue(qty_original.multiply(percent.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP)));
     			parentUI.calItemSpEntryAmount(originalRow);
+    			parentUI.resetItemSpEditorLocked(originalRow);
     			BigDecimal amount = PublicUtils.getBigDecimal(originalRow.getCell("amount").getValue());
     			BigDecimal taxAmount = PublicUtils.getBigDecimal(originalRow.getCell("taxAmount").getValue());
     			totalAmount = totalAmount.add(amount);
@@ -296,7 +298,7 @@ public class RepairWOAllocateExpenseUI extends AbstractRepairWOAllocateExpenseUI
     			if (PublicUtils.equals(TEnum.P, tType_original))
     				row.getCell("issueQty").setValue(qty_original.multiply(percent.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP)));
     			parentUI.calItemSpEntryAmount(row);
-    			
+    			parentUI.resetItemSpEditorLocked(row);
     			BigDecimal amount = PublicUtils.getBigDecimal(row.getCell("amount").getValue());
     			BigDecimal taxAmount = PublicUtils.getBigDecimal(row.getCell("taxAmount").getValue());
     			amount = amount_original.subtract(totalAmount);
@@ -317,6 +319,7 @@ public class RepairWOAllocateExpenseUI extends AbstractRepairWOAllocateExpenseUI
     			if (PublicUtils.equals(TEnum.P, tType_original))
     				row.getCell("issueQty").setValue(qty_original.multiply(percent.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP)));
     			parentUI.calItemSpEntryAmount(row);
+    			parentUI.resetItemSpEditorLocked(row);
     			BigDecimal amount = PublicUtils.getBigDecimal(row.getCell("amount").getValue());
     			BigDecimal taxAmount = PublicUtils.getBigDecimal(row.getCell("taxAmount").getValue());
     			totalAmount = totalAmount.add(amount);
@@ -327,7 +330,7 @@ public class RepairWOAllocateExpenseUI extends AbstractRepairWOAllocateExpenseUI
     	//RepairWORWOItemSpEntryInfo itemSpEntryInfo = new RepairWORWOItemSpEntryInfo();
 		//itemSpEntryInfo.setId(BOSUuid.create("FF1F0E1A"));
     	parentUI.storeFields();
-    //	destroyWindow();
+    	destroyWindow();
     }
     
     @Override

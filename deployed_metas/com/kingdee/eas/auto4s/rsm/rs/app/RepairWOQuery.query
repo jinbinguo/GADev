@@ -4023,28 +4023,28 @@
             </query>
         </queryField>
         <queryField>
-            <name>Saler</name>
+            <name>isPrintedSettle</name>
             <userDefined>true</userDefined>
             <formulaString>#0</formulaString>
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[Saler].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[isPrintedSettle].displayName</displayName>
             <groupType />
             <isSelector>true</isSelector>
             <isFilter>true</isFilter>
             <isSorter>true</isSorter>
             <isParameter>false</isParameter>
-            <returnType>String</returnType>
+            <returnType>Boolean</returnType>
             <propertyRefs>
                 <propertyRef>
-                    <key>96cb31bf-b32e-4c64-a35d-d4ece0775b9f</key>
+                    <key>15a36500-a287-4239-9d20-e7f270aa7f95</key>
                     <parentUnit>
-                        <key name="name" value="Saler" />
+                        <key name="name" value="isPrintedSettle" />
                     </parentUnit>
                     <subEntity>
                         <key name="name" value="RepairWO" />
                     </subEntity>
                     <refProperty>
-                        <key name="name" value="Saler" />
+                        <key name="name" value="isPrintedSettle" />
                     </refProperty>
                 </propertyRef>
             </propertyRefs>
@@ -5919,22 +5919,6 @@
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[Saler].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="业务员" />
-            <lang locale="zh_HK" value="業務員" />
-            <lang locale="zh_TW" value="業務員" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[Saler].extendedProperty.isCommonQueryFilter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[Saler].extendedProperty.isCommonQuerySorter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
         <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[SourceBillEntryID].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="源单分录ID" />
@@ -6370,6 +6354,22 @@
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[isPrintedSettle].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="结算打印" />
+            <lang locale="zh_HK" value="結算列印" />
+            <lang locale="zh_TW" value="結算列印" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[isPrintedSettle].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[isPrintedSettle].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[lastUpdateTime].displayName">
             <lang locale="en_US" value="null" />

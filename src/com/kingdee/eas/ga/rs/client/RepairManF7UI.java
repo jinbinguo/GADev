@@ -39,6 +39,7 @@ import com.kingdee.eas.myframework.util.PublicUtils;
 import com.kingdee.eas.rptclient.newrpt.util.MsgBox;
 import com.kingdee.jdbc.rowset.IRowSet;
 import com.kingdee.util.NumericExceptionSubItem;
+import com.kingdee.util.StringUtils;
 
 /**
  * output class name
@@ -160,12 +161,36 @@ public class RepairManF7UI extends AbstractRepairManF7UI implements KDPromptSele
 
     private void Query(String vehicleId) throws Exception {
     	StringBuilder sql = new StringBuilder();
-    	sql.append("SELECT b.fid, b.fnumber, b.cfname, b.cftel, b.cfemail,b.cfidnumber,b.cfzipcode,b.cfaddr, a.fid fentryId")
+    	
+    	tblMain.removeRows();
+    	sql.append("select b.FNumber, b.FName_l2, b.FPhone, b.FEmail,b.FPapersNum,b.FZipCode,b.FAddress from T_ATS_Vehicle a ")
+    		.append("left join T_ATS_Customer b on a.FCustomerID=b.FID ")
+    		.append("where  a.FID='").append(vehicleId).append("'");
+    	IRowSet rs  = DBUtils.executeQuery(null, sql.toString());
+    	while ( rs!= null && rs.next()) {
+    		IRow row  = tblMain.addRow();
+    		//row.getCell("id").setValue(rs.getString("fid"));
+    		//row.getCell("entryId").setValue(rs.getString("fentryId"));
+    		String name = rs.getString("FName_l2");
+    		if (PublicUtils.equals("无名称", name)) name = "现结客户";
+    		String tel = rs.getString("FPhone");
+			if (PublicUtils.equals("无号码", tel)) tel = ""; 
+			
+    		row.getCell("number").setValue(rs.getString("FNumber"));
+    		row.getCell("name").setValue(name);
+    		row.getCell("tel").setValue(tel);
+    		row.getCell("addr").setValue(rs.getString("FAddress"));
+    		row.getCell("zipcode").setValue(rs.getString("FZipCode"));
+    		row.getCell("email").setValue(rs.getString("FEmail"));
+    		row.getCell("idNumber").setValue(rs.getString("FPapersNum"));
+    	}
+    	
+    	StringBuilder sql1 = new StringBuilder();
+    	sql1.append("SELECT b.fid, b.fnumber, b.cfname, b.cftel, b.cfemail,b.cfidnumber,b.cfzipcode,b.cfaddr, a.fid fentryId")
     	.append(" FROM ct_rs_repairmanentry a")
 		.append(" LEFT JOIN ct_rs_repairman b ON a.fparentid = b.fid")
 		.append(String.format(" where a.cfvehicleid='%s'",vehicleId));
-    	IRowSet rs = DBUtils.executeQuery(null, sql.toString());
-    	tblMain.removeRows();
+    	rs = DBUtils.executeQuery(null, sql1.toString());
     	while (rs != null && rs.next()) {
     		IRow row = tblMain.addRow();
     		row.getCell("id").setValue(rs.getString("fid"));
@@ -285,6 +310,10 @@ public class RepairManF7UI extends AbstractRepairManF7UI implements KDPromptSele
 				MsgBoxEx.showInfo("无送修人新增权限！");
 			return;
 		}
+		if (PublicUtils.isEmpty(txtSenderId.getText())) {
+			MsgBoxEx.showInfo("车主信息不能通过送修人修改！");
+			return;
+		}
 		
 		isViewMode = false;
 		selRowIndex = getSelectRowIndex();
@@ -295,6 +324,10 @@ public class RepairManF7UI extends AbstractRepairManF7UI implements KDPromptSele
 	@Override
 	public void actionDelete_actionPerformed(ActionEvent e) throws Exception {
 		checkSelectRow();
+		if (PublicUtils.isEmpty(txtSenderId.getText())) {
+			MsgBoxEx.showInfo("车主信息不能通过送修人修改！");
+			return;
+		}
 		if (MsgBoxEx.showConfirm2("是否删除？") != MsgBox.YES) return;
 		UserInfo userInfo = SysContext.getSysContext().getCurrentUserInfo();
 		boolean hasPermission_RepairManRemove = PermUtils.hasFunctionPermission(null, userInfo, orgUnitInfo, "repairMan_Remove");
