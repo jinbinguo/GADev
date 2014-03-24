@@ -189,4 +189,9 @@ public abstract class AbstractRepairWOEditUIHandler extends com.kingdee.eas.auto
 	}
 	protected void _handleActionSplitLine(RequestContext request,ResponseContext response, Context context) throws Exception {
 	}
+	public void handleActionPrintContinue(RequestContext request,ResponseContext response, Context context) throws Exception {
+		_handleActionPrintContinue(request,response,context);
+	}
+	protected void _handleActionPrintContinue(RequestContext request,ResponseContext response, Context context) throws Exception {
+	}
 }

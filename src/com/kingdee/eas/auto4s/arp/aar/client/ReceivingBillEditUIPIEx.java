@@ -32,6 +32,8 @@ public class ReceivingBillEditUIPIEx extends ReceivingBillEditUI {
 			txtsrcEntryIds.setText(srcEntryIds.toString());
 		}
 		getUIContext().put("txtsrcEntryIds", txtsrcEntryIds.getText());
+		
+		actionSave.setVisible(false);
 	}
 	
 	@Override
@@ -75,6 +77,14 @@ public class ReceivingBillEditUIPIEx extends ReceivingBillEditUI {
 		}
 		storeFields();
 		getBizInterface().update(new ObjectUuidPK(editData.getString("id")),editData);
+		
+		
+		//自动审核，收款
+		actionAudit_actionPerformed(e);
+		actionRec_actionPerformed(e);
+		getUIWindow().close();
 	}
+	
+	
 	
 }

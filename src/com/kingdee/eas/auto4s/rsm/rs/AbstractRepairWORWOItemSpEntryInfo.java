@@ -476,6 +476,17 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
     {
         put("person", item);
     }
+    /**
+     * Object:项目配件明细's 分担次数property 
+     */
+    public int getAllocateCount()
+    {
+        return getInt("allocateCount");
+    }
+    public void setAllocateCount(int item)
+    {
+        setInt("allocateCount", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("FF1F0E1A");

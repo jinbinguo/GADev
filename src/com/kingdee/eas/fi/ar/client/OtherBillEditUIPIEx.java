@@ -19,6 +19,19 @@ public class OtherBillEditUIPIEx extends OtherBillEditUI {
 		super();
 	}
 
+	@Override
+	public void onLoad() throws Exception {
+		super.onLoad();
+		actionSave.setVisible(false);
+	}
+	
+	@Override
+	public void actionSubmit_actionPerformed(ActionEvent arg0) throws Exception {
+		super.actionSubmit_actionPerformed(arg0);
+		getUIWindow().close();
+	}
+
+	
 	protected void checkTable() {
 		int planRowCount = kdtPlan.getRowCount();
 		int entryRowCount = kdtEntry.getRowCount();
@@ -78,36 +91,6 @@ public class OtherBillEditUIPIEx extends OtherBillEditUI {
 	}
 	
 	
-	/*	费用分担为了解决收款问题，所以不能控制收款单
-	@Override
-	public void actionRemove_actionPerformed(ActionEvent arg0) throws Exception {
-		if (isSourceBillHasAllocate()) {
-			MsgBoxEx.showInfo("来源维修工单已做了费用分担，不允许删除应收单！");
-			return;
-		}
-		super.actionRemove_actionPerformed(arg0);
-	}
-	
-	
-	@Override
-	protected void beforeStoreFields(ActionEvent e) throws Exception {
-		if (isSourceBillHasAllocate() && editData.isValueChange()) {
-			throw new EASBizException(new NumericExceptionSubItem("","来源维修工单已做了费用分担，不允许修改保存应收单！"));
-		}
-		super.beforeStoreFields(e);
-	}
-	
-	private boolean isSourceBillHasAllocate() throws Exception {
-		if (PublicUtils.isEmpty(editData.getString("id"))) return false;
-		StringBuilder sql = new StringBuilder();
-		sql.append("select 1 from T_AR_OtherBillentry a")
-			.append(" where exists (select 1 from CT_ATS_RepairWORWOItemSpEntry b")
-			.append(" where b.fid=a.FSourceBillEntryId and b.cforiginalEntryId is not NULL)")
-			.append(" and a.FCoreBillTypeID='HM+nytJ+S7izjFHd2/madkY+1VI='")
-			.append(String.format(" and a.FParentID='%s'",editData.getString("id")));
-		IRowSet rs = DBUtils.executeQueryForDialect(null, sql.toString());
-		if (rs != null && rs.next()) return true;
-		return false;
-	}*/
+
 
 }

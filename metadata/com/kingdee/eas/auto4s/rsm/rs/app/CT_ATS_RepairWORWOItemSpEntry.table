@@ -623,6 +623,20 @@
             <scale>0</scale>
             <precision>0</precision>
         </column>
+        <column>
+            <name>CFAllocateCount</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFAllocateCount].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFAllocateCount].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>10</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>CPK_ATS_RWORWOImck</name>
@@ -771,6 +785,18 @@
             <lang locale="zh_CN" value="账户" />
             <lang locale="zh_HK" value="賬戶" />
             <lang locale="zh_TW" value="賬戶" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFAllocateCount].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="分担次数" />
+            <lang locale="zh_HK" value="分擔次數" />
+            <lang locale="zh_TW" value="分擔次數" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFAllocateCount].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="拆分次数" />
+            <lang locale="zh_HK" value="拆分次數" />
+            <lang locale="zh_TW" value="拆分次數" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFAllocateExenseRate].alias">
             <lang locale="en_US" value="null" />

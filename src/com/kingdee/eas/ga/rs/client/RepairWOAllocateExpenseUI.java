@@ -258,6 +258,7 @@ public class RepairWOAllocateExpenseUI extends AbstractRepairWOAllocateExpenseUI
     	if (qty_original.compareTo(BigDecimal.ZERO) == 0) qty_original = PublicUtils.getBigDecimal(originalRow.getCell("qty").getValue());
     	BigDecimal taxAmount_original = PublicUtils.getBigDecimal(originalRow.getCell("taxAmount").getValue());
     	BigDecimal amount_original = PublicUtils.getBigDecimal(originalRow.getCell("amount").getValue());
+    	BigDecimal allocateCount_original = PublicUtils.getBigDecimal(originalRow.getCell("allocateCount").getValue());
     	
     	taxAmount_original = taxAmount_original.setScale(2, BigDecimal.ROUND_HALF_UP);
     	amount_original = amount_original.setScale(2, BigDecimal.ROUND_HALF_UP);
@@ -329,6 +330,16 @@ public class RepairWOAllocateExpenseUI extends AbstractRepairWOAllocateExpenseUI
     	}
     	//RepairWORWOItemSpEntryInfo itemSpEntryInfo = new RepairWORWOItemSpEntryInfo();
 		//itemSpEntryInfo.setId(BOSUuid.create("FF1F0E1A"));
+    	//重计算分担次数，用于控制下游单据防修改，删除标记
+    	allocateCount_original = allocateCount_original.add(BigDecimal.ONE);
+    	for (int i = 0; i < rwoTable.getRowCount(); i++) {
+    		IRow row = rwoTable.getRow(i);
+    		String orginalEntryId = (String)originalRow.getCell("originalEntryId").getValue(); 
+    		if (PublicUtils.equals(id_original, orginalEntryId)) {
+    			row.getCell("allocateCount").setValue(allocateCount_original);
+    		}
+    	}
+    	
     	parentUI.storeFields();
     	destroyWindow();
     }

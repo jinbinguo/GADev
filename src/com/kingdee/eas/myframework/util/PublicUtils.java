@@ -12,6 +12,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Vector;
 
+import com.kingdee.bos.dao.IObjectCollection;
 import com.kingdee.bos.dao.IObjectPK;
 import com.kingdee.bos.dao.IObjectValue;
 import com.kingdee.bos.dao.ormapping.ObjectUuidPK;
@@ -78,6 +79,9 @@ public class PublicUtils implements Serializable {
 	public static boolean isEmpty(BaseCollectionWithSort cols) {
 		return cols == null || cols.isEmpty();
 	}
+	public static boolean isEmpty(IObjectCollection cols) {
+		return cols == null || cols.isEmpty();
+	}
 	public static boolean isEmpty(List lst) {
 		return lst == null || lst.isEmpty();
 	}
@@ -90,6 +94,7 @@ public class PublicUtils implements Serializable {
 	public static boolean isEmpty(String str) {
 		return str == null || "".equals(str);
 	}
+	
 	/**
 	 * 字符串是否包含在字符数组里(字符数组lstStr是否存在一个str里字符
 	 * @param lstStr

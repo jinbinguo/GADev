@@ -9,7 +9,6 @@ import java.awt.event.ItemEvent;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.math.BigDecimal;
-import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -21,8 +20,6 @@ import java.util.Set;
 import javax.swing.Action;
 import javax.swing.SwingUtilities;
 import javax.swing.event.EventListenerList;
-
-import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 
 import com.kingdee.bos.BOSException;
 import com.kingdee.bos.ctrl.extendcontrols.BizDataFormat;
@@ -67,9 +64,7 @@ import com.kingdee.bos.metadata.entity.SelectorItemCollection;
 import com.kingdee.bos.metadata.entity.SelectorItemInfo;
 import com.kingdee.bos.metadata.entity.SorterItemInfo;
 import com.kingdee.bos.metadata.query.util.CompareType;
-import com.kingdee.bos.ui.face.CoreUIObject;
 import com.kingdee.bos.ui.face.IUIFactory;
-import com.kingdee.bos.ui.face.IUIObject;
 import com.kingdee.bos.ui.face.IUIWindow;
 import com.kingdee.bos.ui.face.UIFactory;
 import com.kingdee.bos.ui.face.UIRuleUtil;
@@ -82,11 +77,15 @@ import com.kingdee.eas.auto4s.bdm.pbd.VehicleInfo;
 import com.kingdee.eas.auto4s.bdm.pbd.VehicleRepairRemarkCollection;
 import com.kingdee.eas.auto4s.bdm.pbd.VehicleRepairRemarkFactory;
 import com.kingdee.eas.auto4s.bdm.pbd.VehicleRepairRemarkInfo;
+import com.kingdee.eas.auto4s.bdm.rsm.IRepairItemSpEntry;
 import com.kingdee.eas.auto4s.bdm.rsm.PaymentClassifyInfo;
 import com.kingdee.eas.auto4s.bdm.rsm.RepairBillStatusEnum;
 import com.kingdee.eas.auto4s.bdm.rsm.RepairClassifyInfo;
 import com.kingdee.eas.auto4s.bdm.rsm.RepairItemEntryInfo;
 import com.kingdee.eas.auto4s.bdm.rsm.RepairItemInfo;
+import com.kingdee.eas.auto4s.bdm.rsm.RepairItemSpEntryCollection;
+import com.kingdee.eas.auto4s.bdm.rsm.RepairItemSpEntryFactory;
+import com.kingdee.eas.auto4s.bdm.rsm.RepairItemSpEntryInfo;
 import com.kingdee.eas.auto4s.bdm.rsm.RepairItemStatusEnum;
 import com.kingdee.eas.auto4s.bdm.rsm.RepairTypeInfo;
 import com.kingdee.eas.auto4s.bdm.rsm.SettlementObjectEnum;
@@ -136,6 +135,7 @@ import com.kingdee.eas.myframework.comparators.table.SortColumnInfo;
 import com.kingdee.eas.myframework.util.DBUtils;
 import com.kingdee.eas.myframework.util.InvokeUtils;
 import com.kingdee.eas.myframework.util.KDTableUtils;
+import com.kingdee.eas.myframework.util.MutexUtils;
 import com.kingdee.eas.myframework.util.ParamUtils;
 import com.kingdee.eas.myframework.util.PermUtils;
 import com.kingdee.eas.myframework.util.PublicUtils;
@@ -196,7 +196,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	@Override
 	protected void loadData() throws Exception {
 		super.loadData();
-		
+
 	}
 	
 	private void getLineOprtPermission() throws Exception {
@@ -238,15 +238,82 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	}
 	@Override
 	public void setOprtState(String oprtType) {
-		super.setOprtState(oprtType);
+		super.setOprtState(oprtType);    
+	}
+	@Override
+	protected void unLockUIAndAction() {
+		super.unLockUIAndAction();
+		
+	}
+	@Override
+	protected void unLockUI() {
+		super.unLockUI();
+		setCmbT_Permission();
+		try {
+			
+			if (!canChangeBillHeadValue()) {
+				setBillHeadEnabled(false);
+			} else {
+				setBillHeadEnabled(true);
+			}
+			boolean isCanChangeVehicleInfo = canChangeVehicle();
+
+			prmtVehicle.setEnabled(isCanChangeVehicleInfo);
+			prmtVin.setEnabled(isCanChangeVehicleInfo);
+			
+		} catch (Exception e) {
+			UIUtils.handUIException(e);
+		}
+		
+	}
+	
+	private void setBillHeadEnabled(boolean isEnabled) {
+		
+		prmtVehicle.setEnabled(isEnabled);
+		prmtSA.setEnabled(isEnabled);
+		prmtVin.setEnabled(isEnabled);
+		txtRepairSender.setEnabled(isEnabled);
+		prmtrepairBizType.setEnabled(isEnabled);
+		btnShowRepairSender.setEnabled(isEnabled);
+		txtTel.setEnabled(isEnabled);
+		prmtCustomerAccount.setEnabled(isEnabled);
+		pkComeTime.setEnabled(isEnabled);
+		pkIntendDeliveryTime.setEnabled(isEnabled);
+		txtMile.setEnabled(isEnabled);
+		pkfirstBookInDate.setEnabled(isEnabled);
+		txtSaler.setEnabled(isEnabled);
+		txtcustomInfo.setEnabled(isEnabled);
+		
+		prmtBrand.setEnabled(isEnabled);
+		prmtOrgUnit.setEnabled(isEnabled);
+		//repairWay.setEnabled(isEnabled);
+		//prmtSupplier.setEnabled(isEnabled);
+		txtRemark.setEnabled(isEnabled);
+	}
+	
+	@Override
+	protected void lockUIForViewStatus() {
+		super.lockUIForViewStatus();
 		prmtCustomerAccount.setEditable(true);
 	    prmtCustomerAccount.setReadOnly(false);
 	    prmtCustomerAccount.setEnabled(true);
 	    
-	    repairWay.setEditable(true);
-	    repairWay.setEnabled(true);
-	    
+		repairWay.setAccessAuthority(0);
+    	repairWay.setEditable(true);
+		repairWay.setEnabled(true);
+		repairWay.setReadOnly(false);
+		
 	}
+	
+	@Override
+	protected void lockUIAndAction() {
+		super.lockUIAndAction();
+		
+		
+
+	}
+	
+	
 	@Override
 	public void onLoad() throws Exception {
 		
@@ -303,10 +370,6 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		registePrmtVehicleF7_Vin();
 		appendItemSpFoot();
 		setCmbT_Permission();
-		
-		prmtCustomerAccount.setEditable(true);
-	    prmtCustomerAccount.setReadOnly(false);
-	    prmtCustomerAccount.setEnabled(true);
 	    
 	    actionAudit.setVisible(false);
 	    actionUnAudit.setVisible(false);
@@ -335,6 +398,17 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		    					
 		    //按品牌获取默认维修类型与维修种类
 		    defaultRepairTypeInfo = GAUtils.getDefaultRepairType(null,brandInfo);
+	    }
+	    
+	    KDBizPromptBox prmtPersonEntry = (KDBizPromptBox) kdtRWOItemSpEntry.getColumn("person").getEditor().getComponent();
+	    prmtPersonEntry.setCommitFormat("$number$;$name$");
+	    
+	    
+	    boolean isCanChangeVehicleInfo = canChangeVehicle();
+		prmtVehicle.setEnabled(isCanChangeVehicleInfo);
+		prmtVin.setEnabled(isCanChangeVehicleInfo);
+	    if (!canChangeBillHeadValue()) {
+	    	setBillHeadEnabled(false);
 	    }
 	}
 
@@ -1156,7 +1230,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	//	ICell cellItemSp = row.getCell("itemspNum");
 		ICell cellIsCT = row.getCell("isCT");
 		ICell cellOriginalEntryId = row.getCell("originalEntryId");
-		RepairWayEnum repairWay = (RepairWayEnum) row.getCell(repairWayIndex).getValue();
+		RepairWayEnum eNumRepairWay = (RepairWayEnum) row.getCell(repairWayIndex).getValue();
 		
 		if ("L".equals(cellT.getValue().toString())) {  //项目
 			cellItem.getStyleAttributes().setLocked(false);
@@ -1187,7 +1261,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			row.getStyleAttributes().setLocked(true);
 		}
 		
-		if (PublicUtils.equals(RepairWayEnum.REPAIRSUPPLY, repairWay)) {
+		if (PublicUtils.equals(RepairWayEnum.REPAIRSUPPLY, eNumRepairWay)) {
 			row.getCell(supplierIndex).getStyleAttributes().setLocked(false);
 		} else {
 			row.getCell(supplierIndex).getStyleAttributes().setLocked(true);
@@ -1222,12 +1296,10 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 				row.getCell(unIssueIndex).getStyleAttributes().setBackground(null);
 			} else row.getCell(unIssueIndex).getStyleAttributes().setBackground(Color.RED);
 			
+			
 		} catch (Exception e) {
 			UIUtils.handUIException(e);
-		}
-		
-		
-	
+		}		
 	}
 		
 	@Override
@@ -1367,8 +1439,12 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	}
 	@Override
 	protected void clearItemData() {
-		super.clearItemData();
-		kdtRWOItemSpEntry.removeRows();
+		//super.clearItemData();
+		//kdtRWOItemSpEntry.removeRows();
+	}
+	@Override
+	protected boolean confirmClearData() {
+		return true;
 	}
 	@Override
 	protected KDTable getDetailTable() {
@@ -1499,12 +1575,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		prmtVin.setValue(prmtVehicle.getValue());
 		
 	}
-	@Override
-	protected void unLockUI() {
-		super.unLockUI();
-		setCmbT_Permission();
-		
-	}
+
 	
 	private void setCmbT_Permission()  {
 		if (hasPermission_OprtRepairLine && !hasPermission_OprtRetailLine) { //只有维修行权限
@@ -2114,6 +2185,26 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			RepairItemEntryListUI repairItemEntryF7ListUI;
 		});
 	}
+	private RepairItemSpEntryCollection getRepairItemSPEntryCollection(RepairItemInfo repairItemInfo) throws Exception {
+		IRepairItemSpEntry repairItemSpEntry = RepairItemSpEntryFactory.getRemoteInstance();
+		SelectorItemCollection sc = new SelectorItemCollection();
+		sc.add(new SelectorItemInfo("material.id"));
+		sc.add(new SelectorItemInfo("material.name"));
+		sc.add(new SelectorItemInfo("material.number"));
+		sc.add(new SelectorItemInfo("materialName"));
+		sc.add(new SelectorItemInfo("unit.id"));
+		sc.add(new SelectorItemInfo("unit.name"));
+		sc.add(new SelectorItemInfo("unit.number"));
+		sc.add(new SelectorItemInfo("qty"));
+		
+		FilterInfo filterInfo = new FilterInfo();
+		filterInfo.getFilterItems().add(new FilterItemInfo("parent.id",repairItemInfo.getString("id")));
+		EntityViewInfo entityViewInfo = new EntityViewInfo();
+		entityViewInfo.setFilter(filterInfo);
+		entityViewInfo.setSelector(sc);
+		return repairItemSpEntry.getRepairItemSpEntryCollection(entityViewInfo);
+		
+	}
 	private void prmtMaterial_dataChange(DataChangeEvent eventObj)  {
 		try {
 			super.isNotNull();
@@ -2140,11 +2231,14 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			 if(materialInfos == null || materialInfos.length <= 0)
 		         return;
 			  //已全部结算，不允许添加数据
-			 if (PublicUtils.equals(gaBillStatus.getSelectedItem(),RepairWOStatusEnum.AllSettle)) {
-				  MsgBoxEx.showInfo(RepairWOEditUIPIEx.this,"已全部结算，不允许添加新项目！");
+			 try {
+				  if (!canChangeBillHeadValue()) {
+					  MsgBoxEx.showInfo(RepairWOEditUIPIEx.this,"已全部结算，不允许添加新项目！");
 					  prmtMaterial.setValue(null);
 					  SysUtil.abort();
+		
 				  }
+	       	 } catch (Exception exc) {UIUtils.handUIException(exc);} 
 			  
 			  KDTable kdTable = kdtRWOItemSpEntry;
 			  if(null == kdTable)
@@ -2225,14 +2319,17 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
        //	  beginRowIndex--;
        //  boolean isFirstRowIndex = true;
        //已全部结算，不允许添加数据
-		  if (PublicUtils.equals(gaBillStatus.getSelectedItem(),RepairWOStatusEnum.AllSettle)) {
-			  MsgBoxEx.showInfo("已全部结算，不允许添加新项目！");
-			  prmtRepairItem.setValue(null);
-			  return;
-		  }
+       	 try {
+			  if (!canChangeBillHeadValue()) {
+				  MsgBoxEx.showInfo("已全部结算，不允许添加新项目！");
+				  prmtRepairItem.setValue(null);
+				  return;
+			  }
+       	 } catch (Exception exc) {UIUtils.handUIException(exc);} 
          int i = 0;
+         int rowIndex = beginRowIndex;
          for(int length = repairItemEntryInfos.length; i < length; i++) {
-             int rowIndex = beginRowIndex + i;
+              
              RepairItemEntryInfo repairItemEntryInfo = repairItemEntryInfos[i];
              RepairItemInfo repairItemInfo = repairItemEntryInfo.getParent();
             // repairItemNums = repairItemNums + repairItemInfo.getNumber() + ";";
@@ -2279,6 +2376,62 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 				 }
             
 				calItemSpEntryAmount(kdTable.getRow(rowIndex));
+				rowIndex++;
+				//自动带出关联配件
+				RepairItemSpEntryCollection repairItemSpEntryCol = getRepairItemSPEntryCollection(repairItemInfo);
+				if (!PublicUtils.isEmpty(repairItemSpEntryCol)) {
+					for (int j = 0; j < repairItemSpEntryCol.size(); j++) {
+						RepairItemSpEntryInfo repairItemSpEntryInfo = repairItemSpEntryCol.get(j);
+						MaterialInfo materialInfo = repairItemSpEntryInfo.getMaterial();
+						BigDecimal qty = PublicUtils.getBigDecimal(repairItemSpEntryInfo.getBigDecimal("qty"));
+						
+						insertLine(kdTable, rowIndex);
+						kdTable.getCell(rowIndex, "material").setValue(materialInfo);
+						kdTable.getCell(rowIndex, "t").setValue(TEnum.P);
+						kdTable.getCell(rowIndex,"itemspNum").setValue(materialInfo.getNumber());
+						kdTable.getCell(rowIndex,"itemspName").setValue(materialInfo.getName());
+						kdTable.getCell(rowIndex, "qty").setValue(qty);
+						
+						BigDecimal retailDiscountRate = BIGDEC0;
+						HashMap<String, BigDecimal> hashDiscountRate = getDiscountRate();
+						if (!PublicUtils.isEmpty(hashDiscountRate)) {
+							retailDiscountRate = hashDiscountRate.get(DiscountDate_Retail);
+						}
+						kdTable.getCell(rowIndex,"discountRate").setValue(retailDiscountRate);
+						kdTable.getCell(rowIndex,"unIssueQty").setValue(qty);
+						if (rowIndex > 0) {
+							  WInfo wInfo =(WInfo) kdTable.getRow(0).getCell("w").getValue();
+								if (wInfo != null) {
+									kdTable.getCell(rowIndex,"w").setValue(wInfo);
+									kdtRWOItemSpEntry.getRow(rowIndex).getCell("settlementObject").setValue(wInfo.getSettleObject());
+								}
+						}
+						kdTable.getRow(rowIndex).getCell("itemspName").getStyleAttributes().setLocked(!hasPermission_OprtRetailItemspName);
+						String sql = String.format("select isnull(FPrice,0) from T_BD_MaterialSales where FMaterialID='%s' and FOrgUnit='%s'",
+							  materialInfo.getString("id"),orgUnitInfo.getString("id"));
+						IRowSet rs = DBUtils.executeQuery(null, sql);
+						if (rs != null && rs.next()) {
+							kdTable.getCell(rowIndex, "price").setValue(rs.getBigDecimal(1));
+							IRow row = kdTable.getRow(rowIndex);
+							calItemSpEntryAmount(row);
+							//默认首次计算出初始的实际含税单价
+							BigDecimal taxPrice = (BigDecimal) row.getCell("taxPrice").getValue(); //含税
+							BigDecimal discountRate = (BigDecimal) row.getCell("discountRate").getValue();
+							BigDecimal initFactPrice = taxPrice.multiply(BIGDEC1.subtract(discountRate.divide(BIGDEC100,10,BigDecimal.ROUND_HALF_UP)));
+							row.getCell("initFactPrice").setValue(initFactPrice);
+							kdTable.getCell(rowIndex, "price").getStyleAttributes().setLocked(!hasPermission_OprtRetailPrice);
+							kdTable.getCell(rowIndex, "taxPrice").getStyleAttributes().setLocked(!hasPermission_OprtRetailPrice);
+						 } else {
+							  throw new EASBizException(new NumericExceptionSubItem("",String.format("物料[%s],销售组织[%s]未分配销售页签，请先分配",materialInfo.getName(),orgUnitInfo.getString("name"))));
+						 }
+						 resetItemSpEditorLocked(kdTable.getRow(rowIndex)); 
+						  
+						
+						rowIndex++;
+					}
+				}
+ 				
+				
 			} catch (Exception e) {
 				UIUtils.handUIException(e);
 			}
@@ -2400,6 +2553,8 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		});
 		return prmt;
 	}
+	
+	
 	
 	private void registePrmtMaterialF7() {
 
@@ -3295,6 +3450,9 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	@Override
     public void actionEdit_actionPerformed(ActionEvent e) throws Exception {
     	checkDataChange();
+    	if (editData != null && !PublicUtils.isEmpty(editData.getString("id"))) {
+    		MutexUtils.throwsLockBillException(null,editData.getString("id"));
+    	}
     	super.actionEdit_actionPerformed(e);
     }
     
@@ -3444,8 +3602,11 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     	    appHlp.print(getTDFileName(), multiDataSourceProviderProxy, SwingUtilities.getWindowAncestor(this));
     	    PrintIntegrationInfo newPIInfo = getPrintIntegrationInfo(); 	    
     	    setSettlePrintFlag(appHlp.getPrintedTemplatePath(),oldPIInfo,newPIInfo);
-    	  
+    	   
+    	    getUIWindow().close();
+    	    
     	}
+    	
     }
     
     @Override
@@ -3466,9 +3627,15 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     	    
     	    PrintIntegrationInfo newPIInfo = getPrintIntegrationInfo(); 	    
     	    setSettlePrintFlag(appHlp.getPrintedTemplatePath(),oldPIInfo,newPIInfo);
-   
+    	    getUIWindow().close();
     	 
     	}
+    }
+    
+    @Override
+    public void actionPrintContinue_actionPerformed(ActionEvent e)
+    		throws Exception {
+    	super.actionPrintContinue_actionPerformed(e);
     }
     
     private PrintIntegrationInfo getPrintIntegrationInfo() throws Exception {
@@ -3500,6 +3667,50 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     	
     	actionRefresh_actionPerformed(null);
     	
+    }
+    /**
+     * 当单据状态处于全部结算并且存在总计不为0的明细行时，维修工单表头的所有数据都应该不允许修改
+     * @return
+     * @throws Exception
+     */
+    private boolean canChangeBillHeadValue() throws Exception {
+    	
+    	if (PublicUtils.equals(gaBillStatus.getSelectedItem(), RepairWOStatusEnum.AllSettle)) {
+	    	for (int i = 0; i < kdtRWOItemSpEntry.getRowCount(); i++) {
+	    		IRow row = kdtRWOItemSpEntry.getRow(i);
+	    		BigDecimal taxAmount = PublicUtils.getBigDecimal(row.getCell("taxAmount").getValue());
+	    		if (taxAmount.compareTo(BIGDEC0) != 0) return false;
+	    	}
+    	}
+	    	
+    	return true;
+    }
+    /**
+     * 当单据状态处于部分结算时，判断该单据是否存在总计不为0并且处于X状态的明细行，如果存在则不允许修改车牌号和底盘号，否则允许修改
+     * @return
+     * @throws Exception
+     */
+    private boolean canChangeVehicle() throws Exception {
+    	if (PublicUtils.equals(gaBillStatus.getSelectedItem(), RepairWOStatusEnum.partSettle) ||
+    		PublicUtils.equals(gaBillStatus.getSelectedItem(), RepairWOStatusEnum.AllSettle)) {
+    		for (int i = 0; i < kdtRWOItemSpEntry.getRowCount(); i++) {
+    			IRow row = kdtRWOItemSpEntry.getRow(i);
+    			BigDecimal taxAmount = PublicUtils.getBigDecimal(row.getCell("taxAmount").getValue());
+    			IEnum iType = (IEnum) row.getCell("i").getValue();
+    			if (taxAmount.compareTo(BIGDEC0) != 0 && PublicUtils.equals(IEnum.X, iType)) {
+    				return false;
+    			}
+    		}
+    		
+    	}
+    	
+    	return true;
+    }
+    
+    @Override
+    public void actionCreateTo_actionPerformed(ActionEvent e) throws Exception {
+    	super.actionCreateTo_actionPerformed(e);
+    	//getUIWindow().close();
     }
     
 }

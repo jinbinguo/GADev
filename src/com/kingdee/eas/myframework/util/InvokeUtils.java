@@ -14,24 +14,29 @@ import com.kingdee.util.NumericExceptionSubItem;
 public class InvokeUtils implements Serializable{
 	
 	
+	public static void setFieldValue(Object owner, String fieldName, Object value) throws Exception {
+		Field field = getField(owner, fieldName);
+		field.set(owner, value);
+	}
+	
 	public static Object getFieldValue(Object owner, String fieldName) throws Exception {
 		Field field = getField(owner, fieldName);
 		return field.get(owner);
 	}
 	
-	private static Field getField(Object owner,String filedName) throws EASBizException,BOSException {
+	private static Field getField(Object owner,String fieldName) throws EASBizException,BOSException {
 		Class cls = owner.getClass();
 		Field field = null;
 		while (field == null && cls != null) {
 			try {
-				field = cls.getDeclaredField(filedName);
+				field = cls.getDeclaredField(fieldName);
 			} catch (Exception e) {
 				
 			}
 			cls = cls.getSuperclass();
 		}
 		if (field == null) {
-			throw new EASBizException(new NumericExceptionSubItem("",String.format("对象%s不存在属性%s",owner.getClass().getName(),filedName)));
+			throw new EASBizException(new NumericExceptionSubItem("",String.format("对象%s不存在属性%s",owner.getClass().getName(),fieldName)));
 		}
 		field.setAccessible(true);
 		return field;

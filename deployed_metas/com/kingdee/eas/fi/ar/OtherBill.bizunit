@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizUnit xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.fi.ar</package>
+    <name>OtherBill</name>
+    <alias>bizUnit[com.kingdee.eas.fi.ar.OtherBill].alias</alias>
+    <description>bizUnit[com.kingdee.eas.fi.ar.OtherBill].description</description>
+    <userDefined>false</userDefined>
+    <bizType>BusinessBill</bizType>
+    <template>false</template>
+    <entityPK>com.kingdee.eas.fi.ar.app.OtherBill</entityPK>
+    <queryPK>com.kingdee.eas.fi.ar.app.OtherBill</queryPK>
+    <editUIPK>com.kingdee.eas.fi.ar.client.OtherBillEditUI</editUIPK>
+    <listUIPK>com.kingdee.eas.fi.ar.client.OtherBillListUI</listUIPK>
+    <entityFunctionPK>com.kingdee.eas.fi.ar.app.OtherBillEditUIFunc</entityFunctionPK>
+    <editUIFunctionPK />
+    <listUIFunctionPK />
+    <entryUIPK />
+    <versionDate />
+    <versionNumber />
+    <extendTablePKs />
+    <extendEntityPKs />
+    <extendQueryPKs />
+    <extendEditUIPKs />
+    <extendListUIPKs />
+    <menuPKList />
+    <bimTemplateType />
+    <relatedTablePK />
+    <relatedEntityPK />
+    <relatedEditUIPK />
+    <genImplementCode>false</genImplementCode>
+    <webEditUIPK />
+    <webListUIPK />
+    <webEditPagePK />
+    <webListPagePK />
+    <webPagePKS />
+    <webViewPagePK />
+    <webBriefPagePK />
+    <relatedWebEditPagePK />
+    <relatedQueryPK />
+    <resource>
+        <rs key="bizUnit[com.kingdee.eas.fi.ar.OtherBill].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="应收单" />
+            <lang locale="zh_HK" value="應收單" />
+            <lang locale="zh_TW" value="應收單" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.fi.ar.OtherBill].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="应收单" />
+            <lang locale="zh_HK" value="應收單" />
+            <lang locale="zh_TW" value="應收單" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.fi.ar.OtherBill].extendedProperty.BizUnitDeployed">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.fi.ar.OtherBill].extendedProperty.CRAddNoBreak">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.fi.ar.OtherBill].extendedProperty.CRNumberEdit">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.fi.ar.OtherBill].extendedProperty.CRNumberEdit ">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.fi.ar.OtherBill].extendedProperty.IsSaveBotpEntryRelation">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.fi.ar.OtherBill].extendedProperty.OrgType">
+            <lang locale="en_US" value="Company" />
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.fi.ar.OtherBill].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.fi.ar.OtherBill].extendedProperty.billFormulaClass">
+            <lang locale="en_US" value="com.kingdee.eas.fi.gl.common.GLFormulaFunctions" />
+            <lang locale="zh_CN" value="com.kingdee.eas.fi.gl.common.GLFormulaFunctions" />
+            <lang locale="zh_TW" value="com.kingdee.eas.fi.gl.common.GLFormulaFunctions" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.fi.ar.OtherBill].extendedProperty.bimTemplateType">
+            <lang locale="en_US" value="BillBase" />
+            <lang locale="zh_CN" value="BillBase" />
+            <lang locale="zh_TW" value="BillBase" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.fi.ar.OtherBill].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.fi.ar.OtherBill].extendedProperty.configured">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.fi.ar.OtherBill].extendedProperty.controllerBeanEx">
+            <lang locale="en_US" value="com.kingdee.eas.fi.ar.app.OtherBillControllerBeanEx" />
+            <lang locale="zh_CN" value="com.kingdee.eas.fi.ar.app.OtherBillControllerBeanEx" />
+            <lang locale="zh_TW" value="com.kingdee.eas.fi.ar.app.OtherBillControllerBeanEx" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.fi.ar.OtherBill].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.fi.ar.app.OtherBill" />
+            <lang locale="zh_CN" value="com.kingdee.eas.fi.ar.app.OtherBill" />
+            <lang locale="zh_TW" value="com.kingdee.eas.fi.ar.app.OtherBill" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.fi.ar.OtherBill].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.fi.ar.client.OtherBillEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.fi.ar.client.OtherBillEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.fi.ar.client.OtherBillEditUI" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.fi.ar.OtherBill].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.fi.ar.OtherBill].extendedProperty.isDelRelationsWithoutEntries">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.fi.ar.OtherBill].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.fi.ar.OtherBill].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.fi.ar.client.OtherBillListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.fi.ar.client.OtherBillListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.fi.ar.client.OtherBillListUI" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.fi.ar.OtherBill].extendedProperty.useTableEditUI">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.fi.ar.OtherBill].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</bizUnit>
+
