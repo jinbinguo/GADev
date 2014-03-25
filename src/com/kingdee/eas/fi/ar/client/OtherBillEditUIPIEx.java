@@ -3,6 +3,7 @@ package com.kingdee.eas.fi.ar.client;
 import java.awt.event.ActionEvent;
 import java.math.BigDecimal;
 
+import com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUIPIEx;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.eas.fi.arap.client.util.ArApBillUIUtil;
 import com.kingdee.eas.myframework.client.MsgBoxEx;
@@ -28,6 +29,10 @@ public class OtherBillEditUIPIEx extends OtherBillEditUI {
 	@Override
 	public void actionSubmit_actionPerformed(ActionEvent arg0) throws Exception {
 		super.actionSubmit_actionPerformed(arg0);
+		if (RepairWOEditUIPIEx.rwoUI != null) {
+			RepairWOEditUIPIEx.rwoUI.actionRefresh_actionPerformed(arg0);
+			RepairWOEditUIPIEx.rwoUI = null;
+		}
 		getUIWindow().close();
 	}
 

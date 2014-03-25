@@ -76,7 +76,7 @@ public class VehicleEditUIPIEx extends VehicleEditUI
 	
 		KDTableComparatorUtils tblComparatorUtils = new KDTableComparatorUtils(kdtRepairRemark, sortColumns);
     	List<IRow> lstRow = tblComparatorUtils.sort();
-    	loadFields();
+    	//loadFields();
     	kdtRepairRemark.removeRows();
     	for (int i = 0; i < lstRow.size(); i++) {
     		kdtRepairRemark.addRow(i, lstRow.get(i));

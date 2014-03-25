@@ -239,6 +239,7 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
     protected com.kingdee.bos.ctrl.swing.KDWorkButton btnPrintContinue;
     protected com.kingdee.bos.ctrl.swing.KDWorkButton btnAudit;
     protected com.kingdee.bos.ctrl.swing.KDWorkButton btnUnAudit;
+    protected com.kingdee.bos.ctrl.swing.KDMenuItem menuItemPrintContinue;
     protected com.kingdee.bos.ctrl.swing.KDCheckBoxMenuItem menuItemIsShowStdItemspEntry;
     protected com.kingdee.eas.auto4s.rsm.rs.RepairWOInfo editData = null;
     protected ActionAdd actionAdd = null;
@@ -682,6 +683,7 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.btnPrintContinue = new com.kingdee.bos.ctrl.swing.KDWorkButton();
         this.btnAudit = new com.kingdee.bos.ctrl.swing.KDWorkButton();
         this.btnUnAudit = new com.kingdee.bos.ctrl.swing.KDWorkButton();
+        this.menuItemPrintContinue = new com.kingdee.bos.ctrl.swing.KDMenuItem();
         this.menuItemIsShowStdItemspEntry = new com.kingdee.bos.ctrl.swing.KDCheckBoxMenuItem();
         this.kDSplitPane1.setName("kDSplitPane1");
         this.contOldID.setName("contOldID");
@@ -868,6 +870,7 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.btnPrintContinue.setName("btnPrintContinue");
         this.btnAudit.setName("btnAudit");
         this.btnUnAudit.setName("btnUnAudit");
+        this.menuItemPrintContinue.setName("menuItemPrintContinue");
         this.menuItemIsShowStdItemspEntry.setName("menuItemIsShowStdItemspEntry");
         // CoreUI
         this.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -3355,6 +3358,10 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         // btnUnAudit
         this.btnUnAudit.setAction((IItemAction)ActionProxyFactory.getProxy(actionUnAudit, new Class[] { IItemAction.class }, getServiceContext()));		
         this.btnUnAudit.setText(resHelper.getString("btnUnAudit.text"));
+        // menuItemPrintContinue
+        this.menuItemPrintContinue.setAction((IItemAction)ActionProxyFactory.getProxy(actionPrintContinue, new Class[] { IItemAction.class }, getServiceContext()));		
+        this.menuItemPrintContinue.setText(resHelper.getString("menuItemPrintContinue.text"));		
+        this.menuItemPrintContinue.setIcon(com.kingdee.eas.util.client.EASResource.getIcon("imgTbtn_printcontinue"));
         // menuItemIsShowStdItemspEntry
         this.menuItemIsShowStdItemspEntry.setAction((IItemAction)ActionProxyFactory.getProxy(actionIsShowStdItemspEntry, new Class[] { IItemAction.class }, getServiceContext()));		
         this.menuItemIsShowStdItemspEntry.setText(resHelper.getString("menuItemIsShowStdItemspEntry.text"));		
@@ -3785,6 +3792,7 @@ vo.put("repairWay","0");
         menuFile.add(menuItemPageSetup);
         menuFile.add(menuItemPrint);
         menuFile.add(menuItemPrintPreview);
+        menuFile.add(menuItemPrintContinue);
         menuFile.add(kDSeparator6);
         menuFile.add(menuItemSendMail);
         menuFile.add(kDSeparator3);
@@ -3910,8 +3918,8 @@ vo.put("repairWay","0");
         this.toolBar.add(separator10);
         this.toolBar.add(btnPricePrint);
         this.toolBar.add(btnPrint);
-        this.toolBar.add(btnPrintPreview);
         this.toolBar.add(btnPrintContinue);
+        this.toolBar.add(btnPrintPreview);
         this.toolBar.add(separatorFW2);
         this.toolBar.add(btnFirst);
         this.toolBar.add(btnPre);

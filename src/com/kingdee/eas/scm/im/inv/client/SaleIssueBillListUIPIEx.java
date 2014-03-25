@@ -13,12 +13,18 @@ public class SaleIssueBillListUIPIEx extends SaleIssueBillListUI {
 	}
 	
 	@Override
+	public void onLoad() throws Exception {
+		super.onLoad();
+		actionAddNew.setVisible(false);
+	}
+	
+	@Override
 	public void actionRemove_actionPerformed(ActionEvent e) throws Exception {
-	//	checkSelected();
-	//	if (isSourceBillHasAllocate()) {
-	//		MsgBoxEx.showInfo("来源维修工单已做了费用分担，不允许删除销售出库单！");
-	//		return;
-	//	}
+		checkSelected();
+		if (isSourceBillHasAllocate()) {
+			MsgBoxEx.showInfo("来源维修工单已做了费用分担，不允许删除销售出库单！");
+			return;
+		}
 		super.actionRemove_actionPerformed(e);
 	}
 	

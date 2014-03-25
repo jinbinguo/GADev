@@ -2,6 +2,7 @@ package com.kingdee.eas.fi.ap.client;
 
 import java.awt.event.ActionEvent;
 
+import com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUIPIEx;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.eas.myframework.client.MsgBoxEx;
 import com.kingdee.eas.myframework.util.DBUtils;
@@ -24,24 +25,30 @@ public class OtherBillEditUIPIEx extends OtherBillEditUI {
 	@Override
 	public void actionSubmit_actionPerformed(ActionEvent arg0) throws Exception {
 		super.actionSubmit_actionPerformed(arg0);
+		if (RepairWOEditUIPIEx.rwoUI != null) {
+			RepairWOEditUIPIEx.rwoUI.actionRefresh_actionPerformed(arg0);
+			RepairWOEditUIPIEx.rwoUI = null;
+		}
+		
+		
 		getUIWindow().close();
 	}
 	
 	@Override
 	public void actionRemove_actionPerformed(ActionEvent arg0) throws Exception {
-		//if (isSourceBillHasAllocate()) {
-		//	MsgBoxEx.showInfo("来源维修工单已做了费用分担，不允许删除应付单！");
-		//	return;
-		//}
+		if (isSourceBillHasAllocate()) {
+			MsgBoxEx.showInfo("来源维修工单已做了费用分担，不允许删除应付单！");
+			return;
+		}
 		super.actionRemove_actionPerformed(arg0);
 	}
 	
 	
 	@Override
 	protected void beforeStoreFields(ActionEvent e) throws Exception {
-		//if (editData.isValueChange() && isSourceBillHasAllocate()) {
-		//	throw new EASBizException(new NumericExceptionSubItem("","来源维修工单已做了费用分担，不允许修改保存应付单！"));
-		//}
+		if (editData.isValueChange() && isSourceBillHasAllocate()) {
+			throw new EASBizException(new NumericExceptionSubItem("","来源维修工单已做了费用分担，不允许修改保存应付单！"));
+		}
 		super.beforeStoreFields(e);
 	}
 	

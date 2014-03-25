@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import com.kingdee.bos.ctrl.kdf.table.IRow;
 import com.kingdee.bos.dao.ormapping.ObjectUuidPK;
 import com.kingdee.eas.auto4s.arp.aar.IReceivingBill;
+import com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUIPIEx;
 import com.kingdee.eas.myframework.util.PublicUtils;
 
 public class ReceivingBillEditUIPIEx extends ReceivingBillEditUI {
@@ -82,6 +83,11 @@ public class ReceivingBillEditUIPIEx extends ReceivingBillEditUI {
 		//自动审核，收款
 		actionAudit_actionPerformed(e);
 		actionRec_actionPerformed(e);
+		
+		if (RepairWOEditUIPIEx.rwoUI != null) {
+			RepairWOEditUIPIEx.rwoUI.actionRefresh_actionPerformed(e);
+			RepairWOEditUIPIEx.rwoUI = null;
+		}
 		getUIWindow().close();
 	}
 	

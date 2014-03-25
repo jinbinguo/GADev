@@ -2,6 +2,7 @@ package com.kingdee.eas.scm.im.inv.client;
 
 import java.awt.event.ActionEvent;
 
+import com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUIPIEx;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.eas.framework.batchaction.BatchActionEnum;
 import com.kingdee.eas.framework.batchaction.BatchSelectionEntries;
@@ -21,6 +22,7 @@ public class SaleIssueBillEditUIPIEx extends SaleIssueBillEditUI {
 	public void onLoad() throws Exception {
 		super.onLoad();
 		actionSave.setVisible(false);
+		actionAddNew.setVisible(false);
 	}
 	
 	@Override
@@ -29,25 +31,59 @@ public class SaleIssueBillEditUIPIEx extends SaleIssueBillEditUI {
 		super.afterAction(bizAction, selectionEntries, countSuccess);
 		if (PublicUtils.equals(bizAction, BatchActionEnum.SUBMIT) &&
 				countSuccess > 0) {
-			getUIWindow().close();
+			
 		}
 		
 	}
 	
+	@Override
+	public void actionPrint_actionPerformed(ActionEvent e) throws Exception {
+		super.actionPrint_actionPerformed(e);
+		if (RepairWOEditUIPIEx.rwoUI != null) {
+			RepairWOEditUIPIEx.rwoUI.actionRefresh_actionPerformed(e);
+			RepairWOEditUIPIEx.rwoUI = null;
+		}
+		getUIWindow().close();
+	}
+	
+	@Override
+	public void actionPrintPreview_actionPerformed(ActionEvent e)
+			throws Exception {
+		super.actionPrintPreview_actionPerformed(e);
+		if (RepairWOEditUIPIEx.rwoUI != null) {
+			RepairWOEditUIPIEx.rwoUI.actionRefresh_actionPerformed(e);
+			RepairWOEditUIPIEx.rwoUI = null;
+		}
+		getUIWindow().close();
+	}
+	
+	@Override
+	protected void disposeUIWindow() {
+		if (RepairWOEditUIPIEx.rwoUI != null) {
+			try {
+				RepairWOEditUIPIEx.rwoUI.actionRefresh_actionPerformed(null);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			RepairWOEditUIPIEx.rwoUI = null;
+		}
+		super.disposeUIWindow();
+	}
+	
 	public void actionRemove_actionPerformed(ActionEvent arg0) throws Exception {
-	//	if (isSourceBillHasAllocate()) {
-	//		MsgBoxEx.showInfo("来源维修工单已做了费用分担，不允许删除销售出库单！");
-	//		return;
-	//	}
+		if (isSourceBillHasAllocate()) {
+			MsgBoxEx.showInfo("来源维修工单已做了费用分担，不允许删除销售出库单！");
+			return;
+		}
 		super.actionRemove_actionPerformed(arg0);
 	}
 	
 	
 	@Override
 	protected void beforeStoreFields(ActionEvent e) throws Exception {
-	//	if (editData.isValueChange() && isSourceBillHasAllocate()) {
-	//		throw new EASBizException(new NumericExceptionSubItem("","来源维修工单已做了费用分担，不允许修改保存销售出库单！"));
-	//	}
+		if (editData.isValueChange() && isSourceBillHasAllocate()) {
+			throw new EASBizException(new NumericExceptionSubItem("","来源维修工单已做了费用分担，不允许修改保存销售出库单！"));
+		}
 		super.beforeStoreFields(e);
 	}
 	

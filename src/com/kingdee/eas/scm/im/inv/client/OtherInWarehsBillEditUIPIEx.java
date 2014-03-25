@@ -2,6 +2,7 @@ package com.kingdee.eas.scm.im.inv.client;
 
 import java.awt.event.ActionEvent;
 
+import com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUIPIEx;
 import com.kingdee.eas.framework.batchaction.BatchActionEnum;
 import com.kingdee.eas.framework.batchaction.BatchSelectionEntries;
 import com.kingdee.eas.myframework.util.PublicUtils;
@@ -21,6 +22,10 @@ public class OtherInWarehsBillEditUIPIEx extends OtherInWarehsBillEditUI {
 	@Override
 	public void actionSubmit_actionPerformed(ActionEvent e) throws Exception {
 		super.actionSubmit_actionPerformed(e);
+		if (RepairWOEditUIPIEx.rwoUI != null) {
+			RepairWOEditUIPIEx.rwoUI.actionRefresh_actionPerformed(e);
+			RepairWOEditUIPIEx.rwoUI = null;
+		}
 		getUIWindow().close();
 	}
 

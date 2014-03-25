@@ -15,11 +15,11 @@ public class OtherBillListUIPIEx extends OtherBillListUI {
 	
 	@Override
 	public void actionRemove_actionPerformed(ActionEvent e) throws Exception {
-		//checkSelected();
-		//if (isSourceBillHasAllocate()) {
-		//	MsgBoxEx.showInfo("来源维修工单已做了费用分担，不允许删除应付单！");
-		//	return;
-		//}
+		checkSelected();
+		if (isSourceBillHasAllocate()) {
+			MsgBoxEx.showInfo("来源维修工单已做了费用分担，不允许删除应付单！");
+			return;
+		}
 		super.actionRemove_actionPerformed(e);
 	}
 	

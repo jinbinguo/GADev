@@ -2,12 +2,10 @@ package com.kingdee.eas.myframework.util;
 
 import java.io.Serializable;
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 import com.kingdee.bos.BOSException;
 import com.kingdee.bos.Context;
-import com.kingdee.bos.framework.batch.BatchExecuteParamsEntry;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.util.NumericExceptionSubItem;
 
@@ -44,6 +42,7 @@ public class InvokeUtils implements Serializable{
 	}
 	
 	
+	/*
 	public static Method getMethod(Context ctx, Object owner, String methodName, BatchExecuteParamsEntry param) throws EASBizException,BOSException {
 		Class[] paramTypes = param.getParamTypes();
 		return getMethod(ctx, owner, methodName, paramTypes);
@@ -53,7 +52,7 @@ public class InvokeUtils implements Serializable{
 	public static Method getMethod(Object owner, String methodName, BatchExecuteParamsEntry param) throws EASBizException,BOSException {
 		return getMethod(null, owner, methodName, param);
 	}
-	
+	*/
 	public static Method getMethod(Context ctx, Object owner, String methodName, Class[] paramTypes) throws EASBizException,BOSException {	
 		Class[] newParamTypes = autoAddCtxInParamTypes(ctx, paramTypes);
 		return getMethod(owner, methodName, newParamTypes);
@@ -101,7 +100,7 @@ public class InvokeUtils implements Serializable{
 		return method;
 	}
 	
-	public static Object invokeMethod(Context ctx, Object owner, String methodName, BatchExecuteParamsEntry param) throws EASBizException,BOSException {
+	/*public static Object invokeMethod(Context ctx, Object owner, String methodName, BatchExecuteParamsEntry param) throws EASBizException,BOSException {
 		Method method = getMethod(ctx,owner, methodName, param);
 		return invokeMethod(ctx,owner, method, param);
 	}
@@ -118,7 +117,7 @@ public class InvokeUtils implements Serializable{
 	public static Object invokeMethod(Object owner, Method method, BatchExecuteParamsEntry param) throws EASBizException,BOSException {
 		Object[] paramValues = param.toArray();
 		return invokeMethod(owner, method, paramValues);
-	}
+	}*/
 			
 	public static Object invokeMethod(Context ctx,Object owner, Method method, Object[] paramValues) throws EASBizException,BOSException {
 		Object[] newParamValues = autoAddCtxInParamValues(ctx, paramValues);
@@ -134,6 +133,11 @@ public class InvokeUtils implements Serializable{
 			throw new EASBizException(new NumericExceptionSubItem("",e.getMessage()));
 		}
 		return returnValues;
+	}
+	
+	public static Object invokeMethod(Object owner, String methodName, Class[] paramTypes, Object[] paramValues) throws EASBizException,BOSException {
+		Method method = getMethod(owner, methodName, paramTypes);
+		return invokeMethod(owner, method, paramValues);
 	}
 	
 

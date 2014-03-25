@@ -43,6 +43,7 @@ import com.kingdee.bos.ctrl.kdf.util.render.ObjectValueRender;
 import com.kingdee.bos.ctrl.kdf.util.style.Styles.HorizontalAlignment;
 import com.kingdee.bos.ctrl.report.forapp.kdnote.client.DefaultNoteDataProvider;
 import com.kingdee.bos.ctrl.report.forapp.kdnote.client.KDNoteHelper;
+import com.kingdee.bos.ctrl.report.forapp.kdnote.client.KDNoteHelperEx;
 import com.kingdee.bos.ctrl.swing.KDComboBox;
 import com.kingdee.bos.ctrl.swing.KDLayout;
 import com.kingdee.bos.ctrl.swing.KDTextField;
@@ -115,6 +116,8 @@ import com.kingdee.eas.common.EASBizException;
 import com.kingdee.eas.common.client.OprtState;
 import com.kingdee.eas.common.client.SysContext;
 import com.kingdee.eas.common.client.UIFactoryName;
+import com.kingdee.eas.framework.CoreBillBaseInfo;
+import com.kingdee.eas.framework.client.IBTPBillEdit;
 import com.kingdee.eas.framework.client.multiDetail.DetailPanel;
 import com.kingdee.eas.ga.basedata.UserTypeEnum;
 import com.kingdee.eas.ga.rs.CustomerAccountInfo;
@@ -283,8 +286,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		pkfirstBookInDate.setEnabled(isEnabled);
 		txtSaler.setEnabled(isEnabled);
 		txtcustomInfo.setEnabled(isEnabled);
-		
-		prmtBrand.setEnabled(isEnabled);
+		prmtBrand.setEnabled(prmtVehicle.getValue() == null);
 		prmtOrgUnit.setEnabled(isEnabled);
 		//repairWay.setEnabled(isEnabled);
 		//prmtSupplier.setEnabled(isEnabled);
@@ -302,6 +304,12 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     	repairWay.setEditable(true);
 		repairWay.setEnabled(true);
 		repairWay.setReadOnly(false);
+		if (PublicUtils.equals(repairWay.getSelectedItem(),RepairWayEnum.REPAIRSUPPLY)) {
+			prmtSupplier.setEditable(true);
+			prmtSupplier.setReadOnly(false);
+			prmtSupplier.setEnabled(true);
+		}
+		
 		
 	}
 	
@@ -359,7 +367,6 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		actionUnTimeBooking.setVisible(false);//取消工时等级
 		actionAdjust.setVisible(false);//整单调整
 		
-		
 		txtCompanyNumber.setEnabled(false);
 		
 		defaultValueForAddNew();
@@ -373,6 +380,9 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	    
 	    actionAudit.setVisible(false);
 	    actionUnAudit.setVisible(false);
+	    
+	    toolBar.add(btnPrintContinue,45);
+	    actionPrintContinue.setVisible(false); //暂时隐藏，功能未完全
 	    
 	    //获取维修、零售最大折扣率
 		
@@ -443,10 +453,13 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			defaultRepairClassifyInfo = GAUtils.getDefaultRepairClassify(null,brandInfo);
 		
 	}
+	
+  
 	@Override
 	public void actionAddNew_actionPerformed(ActionEvent e) throws Exception {
 		super.actionAddNew_actionPerformed(e);
 		defaultValueForAddNew();
+		unLockUI();
 	}
 	@Override
 	public void initF7Filter() {
@@ -1230,6 +1243,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	//	ICell cellItemSp = row.getCell("itemspNum");
 		ICell cellIsCT = row.getCell("isCT");
 		ICell cellOriginalEntryId = row.getCell("originalEntryId");
+		
 		RepairWayEnum eNumRepairWay = (RepairWayEnum) row.getCell(repairWayIndex).getValue();
 		
 		if ("L".equals(cellT.getValue().toString())) {  //项目
@@ -1283,13 +1297,20 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			
 			if (isAPSettle) { //应付结算
 				row.getStyleAttributes().setLocked(true);
-			} 
+				
+			} else {
+				row.getCell("repairWay").getStyleAttributes().setLocked(false);
+				row.getCell("supplier").getStyleAttributes().setLocked(false);
+			}
+			
 			if (!PublicUtils.equals(IEnum.X, iType))
 				row.getCell("w").getStyleAttributes().setLocked(false);
 			if (PublicUtils.equals(IEnum.X, iType) && amount.compareTo(BIGDEC0) == 0)
 				row.getCell("w").getStyleAttributes().setLocked(false);
 
 			row.getCell("repairPkg").getStyleAttributes().setLocked(false);
+			row.getCell("person").getStyleAttributes().setLocked(false);
+			
 			
 			BigDecimal unIssueQty = PublicUtils.getBigDecimal(row.getCell(unIssueIndex).getValue());
 			if (unIssueQty.compareTo(BIGDEC0) == 0) {
@@ -3474,7 +3495,13 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     	}
     	
     }
-  
+    
+    @Override
+    public void actionRefresh_actionPerformed(ActionEvent e) throws Exception {
+    	super.actionRefresh_actionPerformed(e);
+    	if (PublicUtils.equals(OprtState.EDIT, getOprtState()))
+    		unLockUI();
+    }
     
     @Override
     protected void btnShowRepairSender_actionPerformed(ActionEvent e)
@@ -3635,7 +3662,24 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     @Override
     public void actionPrintContinue_actionPerformed(ActionEvent e)
     		throws Exception {
-    	super.actionPrintContinue_actionPerformed(e);
+    	ArrayList idList = new ArrayList();
+    	if(editData != null && !StringUtils.isEmpty(editData.getString("id")))
+    		 idList.add(editData.getString("id"));
+    	if(idList == null || idList.size() == 0 || getTDQueryPK() == null || getTDFileName() == null) {
+    	    return;
+    	} else {
+    		PrintIntegrationInfo oldPIInfo = getPrintIntegrationInfo();
+    		DefaultNoteDataProvider multiDataSourceProviderProxy = new DefaultNoteDataProvider(idList);
+    		initDefaultNoteDataProvider(multiDataSourceProviderProxy);
+    		KDNoteHelperEx appHlp = new KDNoteHelperEx();
+    	    PrintIntegrationManager.initPrint(appHlp, editData.getBOSType(), idList, getTDFileName(), "com.kingdee.eas.scm.common.SCMResource", true);
+    	    appHlp.print(getTDFileName(), multiDataSourceProviderProxy, SwingUtilities.getWindowAncestor(this));
+    	    PrintIntegrationInfo newPIInfo = getPrintIntegrationInfo(); 	    
+    	    setSettlePrintFlag(appHlp.getPrintedTemplatePath(),oldPIInfo,newPIInfo);
+    	   
+    	   // getUIWindow().close();
+    	    
+    	}
     }
     
     private PrintIntegrationInfo getPrintIntegrationInfo() throws Exception {
@@ -3706,11 +3750,13 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     	
     	return true;
     }
-    
+    //用于BOTP转单后，自动刷新当前UI
+    public static RepairWOEditUIPIEx rwoUI = null;
     @Override
     public void actionCreateTo_actionPerformed(ActionEvent e) throws Exception {
+    	rwoUI = this;
     	super.actionCreateTo_actionPerformed(e);
-    	//getUIWindow().close();
     }
+
     
 }
