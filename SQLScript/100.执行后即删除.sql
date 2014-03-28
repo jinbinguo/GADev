@@ -38,5 +38,8 @@ where CFSourceEntryAllocateCount is null
 
 
 
+update T_BD_Supplier
+set FTaxRate=17
+where FTaxRate=0 or FTaxRate is null
 
 

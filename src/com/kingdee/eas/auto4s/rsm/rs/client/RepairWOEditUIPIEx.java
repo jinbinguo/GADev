@@ -1527,7 +1527,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			itemSpEntryInfo.setSettlementObject(SettlementObjectEnum.CUST);
 			
 			itemSpEntryInfo.setRepairWay((RepairWayEnum) repairWay.getSelectedItem());
-			itemSpEntryInfo.setSupplier((SupplierInfo) prmtSupplier.getValue());
+		//	itemSpEntryInfo.setSupplier((SupplierInfo) prmtSupplier.getValue());
 			
 			
 			return itemSpEntryInfo;

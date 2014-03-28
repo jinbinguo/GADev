@@ -24,13 +24,19 @@ public class OtherBillListUIPIEx extends OtherBillListUI {
 	}
 	
 	private boolean isSourceBillHasAllocate() throws Exception {
-		String id = getSelectedKeyValue();
+		String idArray[] = getSelectedIds();
+		if (idArray == null) return false;
+		String parentIds = "";
+		for (int i = 0; i < idArray.length; i++) {
+			parentIds = parentIds + "'" + idArray[i] + "'";
+			if (i != idArray.length -1) parentIds = parentIds + ",";
+		}
 		StringBuilder sql = new StringBuilder();
 		sql.append("select 1 from T_AP_OtherBillentry a")
 			.append(" where exists (select 1 from CT_ATS_RepairWORWOItemSpEntry b")
 			.append(" where b.fid=a.FSourceBillEntryId and b.CFAllocateCount<>a.CFSourceEntryAllocateCount)")
 			.append(" and a.FCoreBillTypeID='HM+nytJ+S7izjFHd2/madkY+1VI='")
-			.append(String.format(" and a.FParentID='%s'",id));
+			.append(String.format(" and a.FParentID in (%s)",parentIds));
 		IRowSet rs = DBUtils.executeQueryForDialect(null, sql.toString());
 		if (rs != null && rs.next()) return true;
 		return false;

@@ -191,4 +191,25 @@ public class PublicUtils implements Serializable {
 	    }
 
     }
+    
+    /**
+     * 值转换为布尔型，并判断是否为真
+     * @param value
+     * @return
+     */
+    public static boolean isTrue(String value) {
+    	if (isEmpty(value)) return false;
+    	if (PublicUtils.equals("1", value)) return true;
+    	if (PublicUtils.equals("true", value.toLowerCase())) return true;
+    	return false;
+    }
+    
+    /**
+     * 值转换为布尔型，并判断是否为真
+     * @param value
+     * @return
+     */
+    public static boolean isTrue(int value) {
+    	return 1 == value;
+    }
 }

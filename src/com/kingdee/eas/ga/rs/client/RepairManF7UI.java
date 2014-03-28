@@ -20,8 +20,8 @@ import com.kingdee.bos.ctrl.swing.KDPromptSelector;
 import com.kingdee.bos.dao.ormapping.ObjectUuidPK;
 import com.kingdee.bos.ui.face.CoreUIObject;
 import com.kingdee.eas.auto4s.bdm.pbd.VehicleInfo;
+import com.kingdee.eas.base.codingrule.CodingRuleInfo;
 import com.kingdee.eas.base.permission.UserInfo;
-import com.kingdee.eas.basedata.org.AdminOrgUnitInfo;
 import com.kingdee.eas.basedata.org.OrgUnitInfo;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.eas.common.client.SysContext;
@@ -33,13 +33,13 @@ import com.kingdee.eas.ga.rs.RepairManEntryInfo;
 import com.kingdee.eas.ga.rs.RepairManFactory;
 import com.kingdee.eas.ga.rs.RepairManInfo;
 import com.kingdee.eas.myframework.client.MsgBoxEx;
+import com.kingdee.eas.myframework.util.CodingRuleUtils;
 import com.kingdee.eas.myframework.util.DBUtils;
 import com.kingdee.eas.myframework.util.PermUtils;
 import com.kingdee.eas.myframework.util.PublicUtils;
 import com.kingdee.eas.rptclient.newrpt.util.MsgBox;
 import com.kingdee.jdbc.rowset.IRowSet;
 import com.kingdee.util.NumericExceptionSubItem;
-import com.kingdee.util.StringUtils;
 
 /**
  * output class name
@@ -57,6 +57,7 @@ public class RepairManF7UI extends AbstractRepairManF7UI implements KDPromptSele
     private boolean isViewMode = true; //查看方式
     private int selRowIndex = 0;
     private VehicleInfo vehicleInfo = null;
+    private CodingRuleInfo codingRuleInfo = null; //编码规则
     
     public RepairManF7UI() throws Exception {
         super();
@@ -122,8 +123,8 @@ public class RepairManF7UI extends AbstractRepairManF7UI implements KDPromptSele
  
     	
     	setUIEnable(false);
-
-    
+    	codingRuleInfo = CodingRuleUtils.getCodingRule(new RepairManInfo(), orgUnitInfo.getString("id"));
+    	tblMain.getSelectManager().select(0, 0);
     }
     
     private RepairManInfo getSelRepairManInfo() {
@@ -240,11 +241,21 @@ public class RepairManF7UI extends AbstractRepairManF7UI implements KDPromptSele
 		txtEntryId.setText("");
 		setUIEnable(true);
 		
+		
+		if (!CodingRuleUtils.isModifiable(codingRuleInfo)) {
+			txtNumber.setEnabled(false);
+		}
+		if (CodingRuleUtils.isAddView(codingRuleInfo)) {
+			txtNumber.setText(CodingRuleUtils.getNumber(null, newRepairManInfo, orgUnitInfo.getString("id")));
+		}
+		
+		
+		
 	}
 	@Override
 	public void actionSave_actionPerformed(ActionEvent e) throws Exception {
 		
-		if (PublicUtils.isEmpty(txtNumber.getText())) {
+		if (PublicUtils.isEmpty(txtNumber.getText()) && CodingRuleUtils.isAddView(codingRuleInfo)) {
 			MsgBoxEx.showInfo("编号不能为空！");
 			return;
 		}
@@ -344,6 +355,7 @@ public class RepairManF7UI extends AbstractRepairManF7UI implements KDPromptSele
 		IRow row = tblMain.getRow(rowIndex);
 		String senderId = (String) row.getCell("id").getValue();
 		String entryId = (String) row.getCell("entryId").getValue();
+		String number = (String) row.getCell("number").getValue();
 		boolean isRemoveEntry = false;
 		IRowSet rs = DBUtils.executeQueryForDialect(null, String.format("select count(1) as cnt from CT_RS_RepairManEntry where fparentid='%s'", senderId));
 		if (rs != null && rs.next()) {
@@ -356,6 +368,9 @@ public class RepairManF7UI extends AbstractRepairManF7UI implements KDPromptSele
 			repairManEntry.delete(new ObjectUuidPK(entryId));
 		} else {
 			repairMan.delete(new ObjectUuidPK(senderId));
+		}
+		if (CodingRuleUtils.isUseIntermitNumber(codingRuleInfo)) {
+			CodingRuleUtils.recycleNumber(null, newRepairManInfo, orgUnitInfo.getString("id"), number);
 		}
 		MsgBoxEx.showInfo("删除成功！");
 		Query(vehicleId);
@@ -370,7 +385,10 @@ public class RepairManF7UI extends AbstractRepairManF7UI implements KDPromptSele
 			if (tblMain.getRowCount() > 0)
 				tblMain.getSelectManager().select(0, 1, 2);
 		}
+		String number= txtNumber.getText();
+		
 		if (oldRepairManInfo != null) {
+			txtNumber.setText(oldRepairManInfo.getNumber());
 			txtName.setText(oldRepairManInfo.getName());
 			txtTel.setText(oldRepairManInfo.getTel());
 			txtAddr.setText(oldRepairManInfo.getAddr());
@@ -379,9 +397,15 @@ public class RepairManF7UI extends AbstractRepairManF7UI implements KDPromptSele
 			txtIdNumber.setText(oldRepairManInfo.getIdNumber());
 			txtSenderId.setText(oldRepairManInfo.getString("id"));
 			txtEntryId.setText(oldRepairManInfo.getString("entryId"));
+		}  
+		if (PublicUtils.isEmpty(newRepairManInfo.getString("id")) && CodingRuleUtils.isAddView(codingRuleInfo) && CodingRuleUtils.isUseIntermitNumber(codingRuleInfo)) {
+			CodingRuleUtils.recycleNumber(null, newRepairManInfo, orgUnitInfo.getString("id"), number);
 		}
 		
+		
+		
 		setUIEnable(false);
+		
 	}
 	
 	private void checkSelectRow() throws Exception {	

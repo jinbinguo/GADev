@@ -4,11 +4,13 @@ import java.awt.event.ActionEvent;
 
 import com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUIPIEx;
 import com.kingdee.eas.common.EASBizException;
+import com.kingdee.eas.common.client.OprtState;
 import com.kingdee.eas.framework.batchaction.BatchActionEnum;
 import com.kingdee.eas.framework.batchaction.BatchSelectionEntries;
 import com.kingdee.eas.myframework.client.MsgBoxEx;
 import com.kingdee.eas.myframework.util.DBUtils;
 import com.kingdee.eas.myframework.util.PublicUtils;
+import com.kingdee.eas.myframework.util.UIUtils;
 import com.kingdee.jdbc.rowset.IRowSet;
 import com.kingdee.util.NumericExceptionSubItem;
 
@@ -23,16 +25,32 @@ public class SaleIssueBillEditUIPIEx extends SaleIssueBillEditUI {
 		super.onLoad();
 		actionSave.setVisible(false);
 		actionAddNew.setVisible(false);
+		if (PublicUtils.equals(OprtState.EDIT, getOprtState()) && isSourceBillHasAllocate()) {
+			lockUIForViewStatus();
+			MsgBoxEx.showInfo("来源维修工单已做了费用分担，将不允许修改销售出库单数据！");
+		}
 	}
 	
 	@Override
 	public void afterAction(BatchActionEnum bizAction,
 			BatchSelectionEntries selectionEntries, int countSuccess) {
 		super.afterAction(bizAction, selectionEntries, countSuccess);
-		if (PublicUtils.equals(bizAction, BatchActionEnum.SUBMIT) &&
-				countSuccess > 0) {
-			
+
+	}
+	
+	@Override
+	public void actionEdit_actionPerformed(ActionEvent e) throws Exception {
+		super.actionEdit_actionPerformed(e);
+		if (isSourceBillHasAllocate()) {
+			MsgBoxEx.showInfo("来源维修工单已做了费用分担，将不允许修改销售出库单数据！");
+			lockUIForViewStatus();
 		}
+	}
+	
+	@Override
+	public boolean beforeAction(BatchActionEnum bizAction,
+			BatchSelectionEntries selectionEntries, ActionEvent event) {
+		return super.beforeAction(bizAction, selectionEntries, event);
 		
 	}
 	
@@ -81,9 +99,6 @@ public class SaleIssueBillEditUIPIEx extends SaleIssueBillEditUI {
 	
 	@Override
 	protected void beforeStoreFields(ActionEvent e) throws Exception {
-		if (editData.isValueChange() && isSourceBillHasAllocate()) {
-			throw new EASBizException(new NumericExceptionSubItem("","来源维修工单已做了费用分担，不允许修改保存销售出库单！"));
-		}
 		super.beforeStoreFields(e);
 	}
 	
@@ -93,7 +108,7 @@ public class SaleIssueBillEditUIPIEx extends SaleIssueBillEditUI {
 		sql.append("select 1 from T_IM_SaleIssueEntry a")
 			.append(" where exists (select 1 from CT_ATS_RepairWORWOItemSpEntry b")
 			.append(" where b.fid=a.FSourceBillEntryId and b.CFAllocateCount<>a.CFSourceEntryAllocateCount)")
-			.append(" and a.FCoreBillTypeID='HM+nytJ+S7izjFHd2/madkY+1VI='")
+			.append(" and a.FSourceBillTypeID='HM+nytJ+S7izjFHd2/madkY+1VI='")
 			.append(String.format(" and a.FParentID='%s'",editData.getString("id")));
 		IRowSet rs = DBUtils.executeQueryForDialect(null, sql.toString());
 		if (rs != null && rs.next()) return true;
