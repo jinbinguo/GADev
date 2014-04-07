@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entityObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.ga.syncdata.app</package>
+    <name>DMSPrintContentEntry</name>
+    <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].alias</alias>
+    <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].description</description>
+    <userDefined>true</userDefined>
+    <bosType>5C9DBE63</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.ga.syncdata.DMSPrintContentEntry</businessImplName>
+    <businessControllerName>com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntryController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getValue].description</description>
+            <innerID>c2c82297-d6fe-4720-9af0-3772f42a2caa</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getValue].description</description>
+            <innerID>9a0967e1-4977-4fa8-a21c-3e1ca48eff4b</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>selector</name>
+                    <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getValue].parameters.parameter[selector].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getValue].parameters.parameter[selector].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SelectorItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getValue].description</description>
+            <innerID>294b2947-083a-4974-85ad-de6138592c76</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getValue].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getValue].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getCollection].description</description>
+            <innerID>20002f71-a3fd-41ba-8b17-ef6b166d7698</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getCollection].description</description>
+            <innerID>4049e614-1b7e-4ee5-bcd9-b1c04162c390</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>view</name>
+                    <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getCollection].parameters.parameter[view].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getCollection].parameters.parameter[view].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.EntityViewInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getCollection].description</description>
+            <innerID>3298b1ed-7330-466e-b07a-abfb7d355c65</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getCollection].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getCollection].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <isAbstract>false</isAbstract>
+    <bizUnitPK>com.kingdee.eas.ga.syncdata.DMSPrintContent</bizUnitPK>
+    <baseEntity>
+        <key name="package" value="com.kingdee.eas.myframework.template.base.app" />
+        <key name="name" value="SimpleBizBillEntry" />
+    </baseEntity>
+    <table>
+        <key name="package" value="com.kingdee.eas.ga.syncdata.app" />
+        <key name="name" value="CT_SYN_DMSPrintContentEntry" />
+    </table>
+    <properties>
+        <linkProperty>
+            <name>Parent</name>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].properties.linkProperty[Parent].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].properties.linkProperty[Parent].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FParentID" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.ga.syncdata.app" />
+                <key name="name" value="R_DMSPrintContent_DMSPrintContentEntry_entrys" />
+            </relationship>
+        </linkProperty>
+        <ownProperty>
+            <name>content</name>
+            <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].properties.ownProperty[content].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].properties.ownProperty[content].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>2000</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].properties.ownProperty[content].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFContent" />
+            </mappingField>
+        </ownProperty>
+    </properties>
+    <logicalKey>
+        <name>id</name>
+        <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].logicalKey[id].alias</alias>
+        <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].logicalKey[id].description</description>
+        <keyClass>com.kingdee.bos.dao.IObjectPK</keyClass>
+        <userDefined>true</userDefined>
+        <keyProperties>
+            <baseProperty>
+                <key name="name" value="id" />
+            </baseProperty>
+        </keyProperties>
+    </logicalKey>
+    <defaultView>
+        <name />
+        <alias>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].defaultViewalias</alias>
+        <description>entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].defaultViewdescription</description>
+    </defaultView>
+    <resource>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="分录" />
+            <lang locale="zh_HK" value="分錄" />
+            <lang locale="zh_TW" value="分錄" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].defaultViewalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].defaultViewdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].defaultViewextendedProperty.bimTemplateType">
+            <lang locale="en_US" value="BillBase" />
+            <lang locale="zh_CN" value="BillBase" />
+            <lang locale="zh_TW" value="BillBase" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="分录" />
+            <lang locale="zh_HK" value="分錄" />
+            <lang locale="zh_TW" value="分錄" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].extendedProperty.bimTemplateType">
+            <lang locale="en_US" value="BillBase" />
+            <lang locale="zh_CN" value="BillBase" />
+            <lang locale="zh_TW" value="BillBase" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].extendedProperty.genBusinessImplCode">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].logicalKey[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].logicalKey[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getCollection].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getCollection].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getCollection].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getCollection].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getCollection].parameters.parameter[view].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getCollection].parameters.parameter[view].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getValue].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getValue].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getValue].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getValue].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getValue].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getValue].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getValue].parameters.parameter[selector].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].methods.method[getValue].parameters.parameter[selector].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].properties.linkProperty[Parent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据头" />
+            <lang locale="zh_HK" value="單據頭" />
+            <lang locale="zh_TW" value="單據頭" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].properties.linkProperty[Parent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据头" />
+            <lang locale="zh_HK" value="單據頭" />
+            <lang locale="zh_TW" value="單據頭" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].properties.linkProperty[Parent].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].properties.linkProperty[Parent].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].properties.linkProperty[Parent].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].properties.linkProperty[Parent].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].properties.ownProperty[content].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="内容" />
+            <lang locale="zh_HK" value="內容" />
+            <lang locale="zh_TW" value="內容" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].properties.ownProperty[content].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].properties.ownProperty[content].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="内容" />
+            <lang locale="zh_HK" value="內容" />
+            <lang locale="zh_TW" value="內容" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].properties.ownProperty[content].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].properties.ownProperty[content].extendedProperty.bizDataType">
+            <lang locale="en_US" value="NOTE" />
+            <lang locale="zh_CN" value="NOTE" />
+            <lang locale="zh_TW" value="NOTE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].properties.ownProperty[content].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].properties.ownProperty[content].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].properties.ownProperty[content].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].properties.ownProperty[content].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].properties.ownProperty[content].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].properties.ownProperty[content].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.syncdata.app.DMSPrintContentEntry].properties.ownProperty[content].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</entityObject>
+

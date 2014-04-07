@@ -15,9 +15,13 @@ public class DMSImpTypeEnum extends StringEnum
 {
     public static final String WIPBILL_VALUE = "WIPBILL";//alias=WIP单
     public static final String TRADEINQUIRE_VALUE = "TRADEINQUIRE";//alias=交易查询
+    public static final String TXT_VALUE = "TXT";//alias=文本文件
+    public static final String AUTO_VALUE = "AUTO";//alias=自动
 
     public static final DMSImpTypeEnum WIPBILL = new DMSImpTypeEnum("WIPBILL", WIPBILL_VALUE);
     public static final DMSImpTypeEnum TRADEINQUIRE = new DMSImpTypeEnum("TRADEINQUIRE", TRADEINQUIRE_VALUE);
+    public static final DMSImpTypeEnum TXT = new DMSImpTypeEnum("TXT", TXT_VALUE);
+    public static final DMSImpTypeEnum Auto = new DMSImpTypeEnum("Auto", AUTO_VALUE);
 
     /**
      * construct function

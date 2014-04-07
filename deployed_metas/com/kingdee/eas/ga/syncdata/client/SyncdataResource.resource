@@ -17,6 +17,16 @@
             <value>i18nResource[com.kingdee.eas.ga.syncdata.client.SyncdataResource].resourceItems.resourceItem[DMSInOutQueryQueryF7WindowTitle].value</value>
             <userDefined>true</userDefined>
         </resourceItem>
+        <resourceItem>
+            <name>DMSPrintMonitoringQueryF7WindowTitle</name>
+            <value>i18nResource[com.kingdee.eas.ga.syncdata.client.SyncdataResource].resourceItems.resourceItem[DMSPrintMonitoringQueryF7WindowTitle].value</value>
+            <userDefined>true</userDefined>
+        </resourceItem>
+        <resourceItem>
+            <name>DMSPrintContentQueryF7WindowTitle</name>
+            <value>i18nResource[com.kingdee.eas.ga.syncdata.client.SyncdataResource].resourceItems.resourceItem[DMSPrintContentQueryF7WindowTitle].value</value>
+            <userDefined>true</userDefined>
+        </resourceItem>
     </resourceItems>
     <resource>
         <rs key="i18nResource[com.kingdee.eas.ga.syncdata.client.SyncdataResource].alias">
@@ -36,6 +46,18 @@
             <lang locale="zh_CN" value="DMS交易查询" />
             <lang locale="zh_HK" value="DMS交易查詢" />
             <lang locale="zh_TW" value="DMS交易查詢" />
+        </rs>
+        <rs key="i18nResource[com.kingdee.eas.ga.syncdata.client.SyncdataResource].resourceItems.resourceItem[DMSPrintContentQueryF7WindowTitle].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="DMS打印内容" />
+            <lang locale="zh_HK" value="DMS列印內容" />
+            <lang locale="zh_TW" value="DMS列印內容" />
+        </rs>
+        <rs key="i18nResource[com.kingdee.eas.ga.syncdata.client.SyncdataResource].resourceItems.resourceItem[DMSPrintMonitoringQueryF7WindowTitle].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="DMS打印监控" />
+            <lang locale="zh_HK" value="DMS列印監控" />
+            <lang locale="zh_TW" value="DMS列印監控" />
         </rs>
         <rs key="i18nResource[com.kingdee.eas.ga.syncdata.client.SyncdataResource].resourceItems.resourceItem[DMSWipBillQueryF7WindowTitle].value">
             <lang locale="en_US" value="null" />

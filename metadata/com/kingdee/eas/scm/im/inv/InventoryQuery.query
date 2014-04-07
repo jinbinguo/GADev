@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.scm.im.inv</package>
+    <name>InventoryQuery</name>
+    <alias>joinQuery[com.kingdee.eas.scm.im.inv.InventoryQuery].alias</alias>
+    <units>
+        <queryField>
+            <name>warehouse.id</name>
+            <isSelector>true</isSelector>
+        </queryField>
+        <queryField>
+            <name>material.id</name>
+            <isSelector>true</isSelector>
+        </queryField>
+    </units>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.scm.im.inv.InventoryQuery].defaultSorters.querySorterItemextendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.scm.im.inv.InventoryQuery].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.scm.im.inv.InventoryQuery].units.queryField[material.id].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.scm.im.inv.InventoryQuery].units.queryField[material.id].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.scm.im.inv.InventoryQuery].units.queryField[warehouse.id].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.scm.im.inv.InventoryQuery].units.queryField[warehouse.id].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</joinQuery>
+

@@ -22,6 +22,7 @@ import com.kingdee.bos.ctrl.report.forapp.kdnote.client.NoteTemplateManageView;
 import com.kingdee.bos.ctrl.report.forapp.kdnote.client.NoteUserConfig;
 import com.kingdee.bos.ctrl.report.forapp.kdnote.client.NoteVarListener;
 import com.kingdee.bos.ctrl.report.forapp.kdnote.client.ui.NoteFileDialog;
+import com.kingdee.bos.ctrl.report.forapp.kdnote.client.ui.NoteFileDialogEx;
 import com.kingdee.bos.ctrl.report.forapp.kdnote.client.util.MultiLanguageUtil;
 import com.kingdee.bos.ctrl.report.forapp.kdnote.client.util.NoteUseUtil;
 import com.kingdee.bos.ctrl.report.forapp.kdnote.client.util.NoteUtil;
@@ -112,7 +113,7 @@ public class KDNoteHelperEx extends KDNoteHelper {
 			if (!choose)
 				break;
 			if (templatePath == null) {
-				NoteFileDialog nfDlg = NoteFileDialog.create(owner,getBizRpcReducer());
+				NoteFileDialogEx nfDlg = NoteFileDialogEx.create(owner,getBizRpcReducer());
 				nfDlg.setShowSaveAsDefault(true);
 				nfDlg.setNoteType(templateType);
 				nfDlg.setUseTemplateOrgFilter(_isOrgFilterSelected ? true : isOrgFilter);

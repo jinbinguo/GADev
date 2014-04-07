@@ -189,8 +189,8 @@ public class PublicUtils implements Serializable {
     		String msg = String.format("getBigDecimal参数类型[%s],值[%s]异常", value.getClass().getName(),value.toString());
     		throw new Exception(msg);
 	    }
-
     }
+    
     
     /**
      * 值转换为布尔型，并判断是否为真
@@ -211,5 +211,24 @@ public class PublicUtils implements Serializable {
      */
     public static boolean isTrue(int value) {
     	return 1 == value;
+    }
+    
+    
+    /**
+     * 是否中文(包含中文标点符号)
+     * @param c
+     * @return
+     */
+    public static final boolean isChineseCharacter(char c) {   
+        Character.UnicodeBlock ub = Character.UnicodeBlock.of(c);  
+        if (ub == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS  
+                || ub == Character.UnicodeBlock.CJK_COMPATIBILITY_IDEOGRAPHS  
+                || ub == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A  
+                || ub == Character.UnicodeBlock.GENERAL_PUNCTUATION  
+                || ub == Character.UnicodeBlock.CJK_SYMBOLS_AND_PUNCTUATION  
+                || ub == Character.UnicodeBlock.HALFWIDTH_AND_FULLWIDTH_FORMS) {  
+            return true;  
+        }  
+        return false;  
     }
 }

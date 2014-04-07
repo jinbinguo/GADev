@@ -423,7 +423,7 @@ public class GAUtils implements Serializable {
 	 */
 	public static RepairWOBizTypeInfo getDefaultBizType(Context ctx) throws Exception {
 		IRepairWOBizType repairWOBizType = null;
-		if (repairWOBizType == null) repairWOBizType = RepairWOBizTypeFactory.getRemoteInstance();
+		if (ctx == null) repairWOBizType = RepairWOBizTypeFactory.getRemoteInstance();
 		else repairWOBizType = RepairWOBizTypeFactory.getLocalInstance(ctx);
 		RepairWOBizTypeInfo defaultBizType = repairWOBizType.getRepairWOBizTypeInfo("where number='0001'");
 		return defaultBizType;

@@ -19,5 +19,6 @@ public interface ISyncDataFacade extends IBizCtrl
 {
     public ServerReturnInfo syncWipBill(ServiceOrgUnitInfo serviceOrgInfo, IObjectPK dmsWipBillPk) throws BOSException, EASBizException;
     public ServerReturnInfo syncTradeInquire(ServiceOrgUnitInfo serviceOrgInfo, IObjectPK dmsTradeInqirePk) throws BOSException, EASBizException;
+    public ServerReturnInfo syncPrintContent(ServiceOrgUnitInfo serviceOrgUnitInfo, IObjectPK dmsPrintContentPK) throws BOSException, EASBizException;
     public void autosync() throws BOSException, EASBizException;
 }

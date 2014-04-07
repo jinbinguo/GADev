@@ -120,6 +120,61 @@
                 </bizRef>
             </bizRefs>
         </permissionItem>
+        <permissionItem>
+            <innerID>036c4d4e-efd3-45ea-a1b9-49bfb45b2220PERMITEM</innerID>
+            <name>dmsPrintContent</name>
+            <alias>permission[.bim].permissionItems.permissionItem[dmsPrintContent].alias</alias>
+            <description>permission[.bim].permissionItems.permissionItem[dmsPrintContent].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.集成管理.DMS集成平台.数据查询</groupName>
+            <group>permission[.bim].permissionItems.permissionItem[dmsPrintContent].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>B165134F</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.ga.syncdata.app</package>
+                    <name>DMSPrintContent</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>4f9bd395-2876-4e90-bf00-109fea54ed17</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.syncdata.client</package>
+                        <name>DMSPrintContentEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>e1107627-170b-4eae-8cc2-e2d49b2c04a6</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.ga.syncdata.client</package>
+                        <name>DMSPrintContentListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                        <bizProperty>
+                            <property>ActionView</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
     </permissionItems>
     <dependences>
         <dependence>
@@ -246,6 +301,43 @@
             <lang locale="zh_CN" value="系统.集成管理.DMS集成平台.数据导入" />
             <lang locale="zh_HK" value="系統.集成管理.DMS集成平臺.數據導入" />
             <lang locale="zh_TW" value="系統.集成管理.DMS集成平臺.數據導入" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsPrintContent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="厂家打印内容" />
+            <lang locale="zh_HK" value="廠家列印內容" />
+            <lang locale="zh_TW" value="廠家列印內容" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsPrintContent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsPrintContent].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.ga.syncdata.DMSPrintContent" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.syncdata.DMSPrintContent" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.syncdata.DMSPrintContent" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsPrintContent].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsPrintContent].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsPrintContent].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[.bim].permissionItems.permissionItem[dmsPrintContent].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.集成管理.DMS集成平台.数据查询" />
+            <lang locale="zh_HK" value="系統.集成管理.DMS集成平臺.數據查詢" />
+            <lang locale="zh_TW" value="系統.集成管理.DMS集成平臺.數據查詢" />
         </rs>
         <rs key="permission[.bim].permissionItems.permissionItem[dmsTradeInquire].alias">
             <lang locale="en_US" value="null" />

@@ -3,13 +3,11 @@ package com.kingdee.eas.myframework.util;
 import java.io.Serializable;
 
 import com.kingdee.bos.Context;
-import com.kingdee.eas.basedata.org.FullOrgUnitInfo;
 import com.kingdee.eas.basedata.org.OrgType;
 import com.kingdee.eas.basedata.org.OrgUnitCollection;
 import com.kingdee.eas.basedata.org.OrgUnitInfo;
 import com.kingdee.eas.basedata.org.PurchaseOrgUnitInfo;
-import com.kingdee.eas.basedata.org.app.FullOrgUnitControllerBean;
-import com.kingdee.eas.basedata.org.app.FullOrgUnitControllerBeanEx;
+import com.kingdee.eas.basedata.org.SaleOrgUnitInfo;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.jdbc.rowset.IRowSet;
 import com.kingdee.util.NumericExceptionSubItem;
@@ -81,6 +79,15 @@ public class OrgUtils implements Serializable {
 	 */
 	public static PurchaseOrgUnitInfo castToPurchaseOrg(OrgUnitInfo orgUnitInfo) {
 		return (PurchaseOrgUnitInfo) orgUnitInfo.cast(PurchaseOrgUnitInfo.class);
+	}
+	
+	/**
+	 * 组织类型转换成销售组织
+	 * @param orgUnitInfo
+	 * @return
+	 */
+	public static SaleOrgUnitInfo castToSaleOrg(OrgUnitInfo orgUnitInfo) {
+		return (SaleOrgUnitInfo)orgUnitInfo.cast(SaleOrgUnitInfo.class);
 	}
 	
 }

@@ -23951,7 +23951,7 @@
             <metaDataType>bien</metaDataType>
             <alias>metaDataBriefView[.com_kingdee_eas_base_enum].metaDataBriefs.metaDataBrief[com.kingdee.eas.ga.basedata.UserTypeEnum].alias</alias>
             <description>metaDataBriefView[.com_kingdee_eas_base_enum].metaDataBriefs.metaDataBrief[com.kingdee.eas.ga.basedata.UserTypeEnum].description</description>
-            <parent>com.kingdee.eas.ga.ga</parent>
+            <parent>com.kingdee.eas.ga.basedata.basedata</parent>
             <boType />
         </metaDataBrief>
         <metaDataBrief>
@@ -23970,6 +23970,15 @@
             <alias>metaDataBriefView[.com_kingdee_eas_base_enum].metaDataBriefs.metaDataBrief[com.kingdee.eas.ga.rs.RepairWOStatusEnum].alias</alias>
             <description>metaDataBriefView[.com_kingdee_eas_base_enum].metaDataBriefs.metaDataBrief[com.kingdee.eas.ga.rs.RepairWOStatusEnum].description</description>
             <parent>com.kingdee.eas.ga.rs.rs</parent>
+            <boType />
+        </metaDataBrief>
+        <metaDataBrief>
+            <packageName />
+            <name>com.kingdee.eas.ga.basedata.basedata</name>
+            <metaDataType>pack</metaDataType>
+            <alias>metaDataBriefView[.com_kingdee_eas_base_enum].metaDataBriefs.metaDataBrief[com.kingdee.eas.ga.basedata.basedata].alias</alias>
+            <description>metaDataBriefView[.com_kingdee_eas_base_enum].metaDataBriefs.metaDataBrief[com.kingdee.eas.ga.basedata.basedata].description</description>
+            <parent>com.kingdee.eas.ga.ga</parent>
             <boType />
         </metaDataBrief>
     </metaDataBriefs>
@@ -35556,8 +35565,8 @@
         </rs>
         <rs key="metaDataBriefView[.com_kingdee_eas_base_enum].metaDataBriefs.metaDataBrief[com.kingdee.eas.fi.fi].alias">
             <lang locale="en_US" value="fi" />
-            <lang locale="zh_CN" value="财务会计" />
-            <lang locale="zh_TW" value="財務會計" />
+            <lang locale="zh_CN" value="财务系统" />
+            <lang locale="zh_TW" value="財務系統" />
         </rs>
         <rs key="metaDataBriefView[.com_kingdee_eas_base_enum].metaDataBriefs.metaDataBrief[com.kingdee.eas.fi.fi].description">
             <lang locale="en_US" value="null" />
@@ -50610,6 +50619,16 @@
             <lang locale="zh_TW" value="RepairWOStatusEnum" />
         </rs>
         <rs key="metaDataBriefView[.com_kingdee_eas_base_enum].metaDataBriefs.metaDataBrief[com.kingdee.eas.ga.rs.RepairWOStatusEnum].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_enum].metaDataBriefs.metaDataBrief[com.kingdee.eas.ga.basedata.basedata].alias">
+            <lang locale="en_US" value="basedata" />
+            <lang locale="zh_CN" value="基础资料" />
+            <lang locale="zh_TW" value="基礎資料" />
+        </rs>
+        <rs key="metaDataBriefView[.com_kingdee_eas_base_enum].metaDataBriefs.metaDataBrief[com.kingdee.eas.ga.basedata.basedata].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_TW" value="null" />

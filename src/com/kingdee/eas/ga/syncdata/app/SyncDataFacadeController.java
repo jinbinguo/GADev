@@ -22,5 +22,6 @@ public interface SyncDataFacadeController extends BizController
 {
     public ServerReturnInfo syncWipBill(Context ctx, ServiceOrgUnitInfo serviceOrgInfo, IObjectPK dmsWipBillPk) throws BOSException, EASBizException, RemoteException;
     public ServerReturnInfo syncTradeInquire(Context ctx, ServiceOrgUnitInfo serviceOrgInfo, IObjectPK dmsTradeInqirePk) throws BOSException, EASBizException, RemoteException;
+    public ServerReturnInfo syncPrintContent(Context ctx, ServiceOrgUnitInfo serviceOrgUnitInfo, IObjectPK dmsPrintContentPK) throws BOSException, EASBizException, RemoteException;
     public void autosync(Context ctx) throws BOSException, EASBizException, RemoteException;
 }

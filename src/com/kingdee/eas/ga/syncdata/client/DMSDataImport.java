@@ -14,27 +14,32 @@ import com.kingdee.bos.ctrl.swing.KDFileChooser;
 import com.kingdee.bos.ctrl.swing.KDLabelContainer;
 import com.kingdee.bos.ctrl.swing.KDTextField;
 import com.kingdee.bos.dao.IObjectPK;
+import com.kingdee.bos.dao.ormapping.ObjectUuidPK;
 import com.kingdee.bos.ui.face.CoreUIObject;
-import com.kingdee.bos.util.GC;
 import com.kingdee.eas.auto4s.rsm.rs.util.client.RsQueryF7Utils;
 import com.kingdee.eas.auto4s.rsm.rs.util.client.RsUtils;
 import com.kingdee.eas.base.permission.UserInfo;
 import com.kingdee.eas.basedata.orgext.ServiceOrgUnitInfo;
 import com.kingdee.eas.common.client.SysContext;
 import com.kingdee.eas.ga.syncdata.DMSImpTypeEnum;
-import com.kingdee.eas.ga.syncdata.DMSInOutQueryCollection;
 import com.kingdee.eas.ga.syncdata.DMSInOutQueryEntryCollection;
 import com.kingdee.eas.ga.syncdata.DMSInOutQueryFactory;
 import com.kingdee.eas.ga.syncdata.DMSInOutQueryInfo;
+import com.kingdee.eas.ga.syncdata.DMSPrintContentCollection;
+import com.kingdee.eas.ga.syncdata.DMSPrintContentEntryCollection;
+import com.kingdee.eas.ga.syncdata.DMSPrintContentFactory;
+import com.kingdee.eas.ga.syncdata.DMSPrintContentInfo;
 import com.kingdee.eas.ga.syncdata.DMSWipBillEntry2Collection;
 import com.kingdee.eas.ga.syncdata.DMSWipBillEntry3Collection;
 import com.kingdee.eas.ga.syncdata.DMSWipBillEntryCollection;
 import com.kingdee.eas.ga.syncdata.DMSWipBillFactory;
 import com.kingdee.eas.ga.syncdata.DMSWipBillInfo;
 import com.kingdee.eas.ga.syncdata.IDMSInOutQuery;
+import com.kingdee.eas.ga.syncdata.IDMSPrintContent;
 import com.kingdee.eas.ga.syncdata.IDMSWipBill;
 import com.kingdee.eas.ga.syncdata.ISyncDataFacade;
 import com.kingdee.eas.ga.syncdata.SyncDataFacadeFactory;
+import com.kingdee.eas.ga.syncdata.parsedata.DMSPrintContentParse;
 import com.kingdee.eas.ga.syncdata.parsedata.DMSTradeInquireParse;
 import com.kingdee.eas.ga.syncdata.parsedata.WipBillHeadParse;
 import com.kingdee.eas.ga.syncdata.parsedata.WipBillManHourParse;
@@ -84,8 +89,8 @@ public class DMSDataImport extends AbstractDMSDataImport {
 	@Override
 	protected void cmbImportType_itemStateChanged(ItemEvent e) throws Exception {
 
-		DMSImpTypeEnum impType = (DMSImpTypeEnum) cmbImportType
-				.getSelectedItem();
+		DMSImpTypeEnum impType = (DMSImpTypeEnum) cmbImportType.getSelectedItem();
+		btnImport.setText("导入");
 		if (impType.equals(DMSImpTypeEnum.WIPBILL)) { // WIN单
 			labFile1.setVisible(true);
 			labFile2.setVisible(true);
@@ -120,7 +125,37 @@ public class DMSDataImport extends AbstractDMSDataImport {
 			Rectangle recSpent = contSpentInfo.getBounds();
 			contSpentInfo.setBounds(recSpent.x, file1Y + 25, recSpent.width,recSpent.height);
 			
-		}	
+		} else if (PublicUtils.equals(DMSImpTypeEnum.TXT, impType)) { //文本文件
+			labFile1.setVisible(true);
+			labFile2.setVisible(false);
+			labFile3.setVisible(false);
+			btnBrower1.setVisible(true);
+			btnBrower2.setVisible(false);
+			btnBrower3.setVisible(false);
+			labFile1.setBoundLabelText("文本文件");
+			int file1Y = labFile1.getBounds().y;
+			Rectangle recMsg = contMsgInfo.getBounds();
+			contMsgInfo.setBounds(recMsg.x, file1Y + 25, recMsg.width, recMsg.height);
+			
+			Rectangle recSpent = contSpentInfo.getBounds();
+			contSpentInfo.setBounds(recSpent.x, file1Y + 25, recSpent.width,recSpent.height);
+			
+		} else if (PublicUtils.equals(DMSImpTypeEnum.Auto, impType)) { //自动
+			labFile1.setVisible(false);
+			labFile2.setVisible(false);
+			labFile3.setVisible(false);
+			btnBrower1.setVisible(false);
+			btnBrower2.setVisible(false);
+			btnBrower3.setVisible(false);
+			btnImport.setText("运行");
+			int file1Y = kDLabelContainer2.getBounds().y;
+			Rectangle recMsg = contMsgInfo.getBounds();
+			contMsgInfo.setBounds(recMsg.x, file1Y + 25, recMsg.width, recMsg.height);
+			
+			Rectangle recSpent = contSpentInfo.getBounds();
+			contSpentInfo.setBounds(recSpent.x, file1Y + 25, recSpent.width,recSpent.height);
+			
+		}		
 		resetFileChoose();
 	}
 		
@@ -140,24 +175,29 @@ public class DMSDataImport extends AbstractDMSDataImport {
 
 	protected void btnBrower1_actionPerformed(java.awt.event.ActionEvent e)
 			throws Exception {
-		File file = openFile(txtFile1,labFile1);
+		File file = null;
+		DMSImpTypeEnum impType = (DMSImpTypeEnum) cmbImportType.getSelectedItem();
+		if (PublicUtils.equals(impType, DMSImpTypeEnum.TXT))
+			file = openFileForTxt(txtFile1,labFile1);
+		else file = openFileForExcel(txtFile1,labFile1);
 		if (file != null) file1 = file;
 	}
 
 	protected void btnBrower2_actionPerformed(java.awt.event.ActionEvent e)
 			throws Exception {
-		File file = openFile(txtFile2,labFile2);
+		File file = openFileForExcel(txtFile2,labFile2);
 		if (file != null) file2 = file;
 	}
 
 	protected void btnBrower3_actionPerformed(java.awt.event.ActionEvent e)
 			throws Exception {
-		File file = openFile(txtFile3,labFile3);
+		File file = openFileForExcel(txtFile3,labFile3);
 		if (file != null) file3 = file;
 	}
 
 	protected void btnImport_actionPerformed(java.awt.event.ActionEvent e)
 			throws Exception {
+		ThreadImportAuto threadImportAuto = new ThreadImportAuto();
 		if (DMSImpTypeEnum.WIPBILL.equals(cmbImportType.getSelectedItem())) {
 			if (isRun) {
 				MsgBoxEx.showInfo("导入正在运行中，请销后再试!");
@@ -212,8 +252,138 @@ public class DMSDataImport extends AbstractDMSDataImport {
 			new ThreadTimer().start();
 			ThreadImportOUTINBill threadImportOUTINBill = new ThreadImportOUTINBill();
 			threadImportOUTINBill.start();
+		} else if (PublicUtils.equals(cmbImportType.getSelectedItem(), DMSImpTypeEnum.TXT)) {
+			if (isRun) {
+				MsgBoxEx.showInfo("导入正在运行中，请销后再试!");
+				return;
+			}
+			ServiceOrgUnitInfo serviceOrgInfo = (ServiceOrgUnitInfo) prmtServiceOrg.getData();
+			if (serviceOrgInfo== null) {
+				MsgBoxEx.showInfo("公司不能为空，请选择!");
+				prmtServiceOrg.requestFocus();
+				return;
+			}
+			if (file1 == null ||  !file1.exists()) {
+				MsgBoxEx.showInfo("[文本文件]文件不存在，请选择!");
+				btnBrower1.requestFocus();
+				return;
+			}
+			labProgress.setVisible(true);
+			isRun = true;
+			new ThreadTimer().start();
+			ThreadImportTxt threadImportTxt = new ThreadImportTxt();
+			threadImportTxt.start();
+		} else if (PublicUtils.equals(cmbImportType.getSelectedItem(), DMSImpTypeEnum.Auto)) {
+			isRun = !isRun;
+			labProgress.setVisible(isRun);
+			btnImport.setText(isRun ? "停止" : "运行");
+			new ThreadTimer().start();
+			if (isRun)
+				threadImportAuto.start();
+			else threadImportAuto.interrupt();
+			
 		}
 
+	}
+	
+	private void importAuto() throws Exception {
+		
+		while (isRun) {
+			String sql = String.format("where baseStatus=1");
+			IDMSPrintContent dmsPrintContent = DMSPrintContentFactory.getRemoteInstance();
+			DMSPrintContentCollection dmsPrintContentCol = dmsPrintContent.getDMSPrintContentCollection(sql);
+			
+			for (int i = 0; i < dmsPrintContentCol.size(); i++ ) {
+				DMSPrintContentInfo dmsPrintContentInfo = dmsPrintContentCol.get(i);
+				IObjectPK dmsPrintContentPK = new ObjectUuidPK(dmsPrintContentInfo.getString("id"));
+				ISyncDataFacade syncFacade = SyncDataFacadeFactory.getRemoteInstance();
+				ServerReturnInfo returnInfo = syncFacade.syncPrintContent(dmsPrintContentInfo.getServiceOrgUnit(), dmsPrintContentPK);
+				if (returnInfo.isSuccess()) {
+					addMsgInfo(returnInfo.getReturnMsg());
+				//	addMsgInfo("导入成功...");
+					//MsgBoxEx.showInfo("导入成功...");  
+				} else {
+					
+					//addMsgInfo("导入部分成功,请查看明细异常信息...");
+					
+					addMsgInfo(returnInfo.getExceptionMsg());
+					//MsgBoxEx.showInfo("导入部分成功...");
+				}
+			}
+			Thread.sleep(30000);
+		
+		}
+	}
+	
+	private void importTxt() throws Exception {
+		try {
+			labProgress.setVisible(true);
+			txtMsgInfo.setText("");
+			txtSpentInfo.setText("");
+			isRun = true;
+			ServiceOrgUnitInfo serviceOrgInfo = (ServiceOrgUnitInfo) prmtServiceOrg.getData();
+			
+			DMSPrintContentInfo dmsPrintContentInfo = new DMSPrintContentInfo();
+			if (!CodingRuleUtils.hasCodingRule(dmsPrintContentInfo, serviceOrgInfo.getString("id"))) {
+				MsgBoxEx.showInfo("未配置DMSW打印内容单编码规则，请先配置！");
+				return;
+			}
+			
+			dmsPrintContentInfo.setServiceOrgUnit(serviceOrgInfo);
+			dmsPrintContentInfo.setBizDate(SysUtil.getAppServerTime(null));
+			
+
+			
+			long startTime = System.currentTimeMillis();
+			DMSPrintContentParse printContentParse = new DMSPrintContentParse(file1);
+			DMSPrintContentEntryCollection dmsPrintContentEntryCol= printContentParse.parseContent();
+			addSpentInfo("读取文本", startTime);
+			
+			dmsPrintContentInfo.put("entrys",dmsPrintContentEntryCol);
+
+			
+			startTime = System.currentTimeMillis();
+			IDMSPrintContent dmsPrintContent = DMSPrintContentFactory.getRemoteInstance();
+			addSpentInfo("连接远程接口DMSWipBill",startTime);
+			dmsPrintContentInfo.setBaseStatus(BillBaseStatusEnum.TEMPORARILYSAVED);
+			
+			startTime = System.currentTimeMillis();
+			IObjectPK pk = dmsPrintContent.save(dmsPrintContentInfo);
+			addSpentInfo("新增DMSWIP单",startTime);
+			
+			startTime = System.currentTimeMillis();
+			ISyncDataFacade syncFacade = SyncDataFacadeFactory.getRemoteInstance();
+			addSpentInfo("连接远程接口SyncDataFacade",startTime);
+			
+			startTime = System.currentTimeMillis();
+			
+			ServerReturnInfo returnInfo = syncFacade.syncPrintContent(serviceOrgInfo, pk);
+			addSpentInfo("服务器执行DMSWIP单转EAS维修工单",startTime);
+			
+			isRun = false;
+			appendSpentInfo(CR+"========服务端耗时明细========"+CR);
+			appendSpentInfo(returnInfo.getSpentMsg());
+			
+			if (returnInfo.isSuccess()) {
+				addMsgInfo(returnInfo.getReturnMsg());
+				addMsgInfo("导入成功...");
+				MsgBoxEx.showInfo("导入成功...");
+			} else {
+				addMsgInfo(returnInfo.getExceptionMsg());
+				addMsgInfo("导入部分成功,请查看明细异常信息...");
+				MsgBoxEx.showInfo("导入部分成功...");
+			}
+			
+		} catch (Exception e) {
+			isRun = false;
+			addMsgInfo(PublicUtils.getStackTrace(e));
+			addMsgInfo("导入失败,请查看明细异常信息...");
+			MsgBoxEx.showInfo("导入失败...");
+			e.printStackTrace();
+		} finally {
+			labProgress.setVisible(false);
+			isRun = false;
+		}
 	}
 	
 	private void importWIPBill() throws Exception {
@@ -363,9 +533,9 @@ public class DMSDataImport extends AbstractDMSDataImport {
 			isRun = false;
 		}
 	}
-	private File openFile(KDTextField txtFile, KDLabelContainer labFile) throws Exception {
+	private File openFile(KDTextField txtFile, KDLabelContainer labFile,String description, String[] extensions) throws Exception {
 		KDFileChooser fileChooser = new KDFileChooser(defaultPath);
-		FileFilter filter = new FileFilterImp("Excel文件", new String[]{".xls",".xlsx"});
+		FileFilter filter = new FileFilterImp(description, extensions);
 		fileChooser.addChoosableFileFilter(filter);
 		fileChooser.setFileFilter(filter);
 		int status = fileChooser.showDialog(this, labFile.getBoundLabelText());
@@ -376,7 +546,14 @@ public class DMSDataImport extends AbstractDMSDataImport {
 			return file;
 		}
 		return null;
-		
+	}
+	
+	private File openFileForExcel(KDTextField txtFile, KDLabelContainer labFile) throws Exception {
+		return openFile(txtFile,labFile,"Excel文件", new String[]{".xls",".xlsx"});
+	}
+	
+	private File openFileForTxt(KDTextField txtFile, KDLabelContainer labFile) throws Exception {
+		return openFile(txtFile,labFile,"文本文件", new String[]{".txt"});
 	}
 	
 	private void appendMsgInfo(String msg) {
@@ -399,6 +576,37 @@ public class DMSDataImport extends AbstractDMSDataImport {
 		txtSpentInfo.append(CR);
 	}
 	
+	class ThreadImportTxt extends Thread {
+		public void run() {
+			super.run();
+			try {
+				importTxt();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+
+		@Override
+		public synchronized void start() {
+			super.start();
+		}	
+	}
+	
+	class ThreadImportAuto extends Thread {
+		public void run() {
+			super.run();
+			try {
+				importAuto();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+
+		@Override
+		public synchronized void start() {
+			super.start();
+		}	
+	}
 	
 	class ThreadImportWipBill extends Thread {
 		public void run() {

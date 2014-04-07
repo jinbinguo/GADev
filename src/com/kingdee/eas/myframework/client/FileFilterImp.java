@@ -13,7 +13,7 @@ public class FileFilterImp extends FileFilter {
 		this(description, new String[] { extension });
 	}
 
-	public FileFilterImp(String description, String extensions[]) {
+	public FileFilterImp(String description, String[] extensions) {
 		this.description = description;
 		this.extensions = (String[]) extensions.clone();
 	}

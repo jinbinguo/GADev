@@ -637,6 +637,34 @@
             <scale>0</scale>
             <precision>10</precision>
         </column>
+        <column>
+            <name>CFRelateItemEntryId</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFRelateItemEntryId].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFRelateItemEntryId].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFGiftDeptID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFGiftDeptID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFGiftDeptID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>CPK_ATS_RWORWOImck</name>
@@ -766,6 +794,25 @@
                 </fkColumnPair>
             </fkColumnPairs>
         </foreignKey>
+        <foreignKey>
+            <name>CFK_ATS_ATSRWORW45</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.org" />
+                <key name="name" value="T_ORG_Admin" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="CFGiftDeptID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
     </foreignKeys>
     <resource>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].alias">
@@ -857,6 +904,18 @@
             <lang locale="zh_CN" value="折扣" />
             <lang locale="zh_HK" value="折扣" />
             <lang locale="zh_TW" value="折扣" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFGiftDeptID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="赠送部门" />
+            <lang locale="zh_HK" value="贈送部門" />
+            <lang locale="zh_TW" value="贈送部門" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFGiftDeptID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="赠送部门" />
+            <lang locale="zh_HK" value="贈送部門" />
+            <lang locale="zh_TW" value="贈送部門" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFI].alias">
             <lang locale="en_US" value="null" />
@@ -1061,6 +1120,18 @@
             <lang locale="zh_CN" value="数量" />
             <lang locale="zh_HK" value="數量" />
             <lang locale="zh_TW" value="數量" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFRelateItemEntryId].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="关联维修项目分录ID" />
+            <lang locale="zh_HK" value="關聯維修項目分錄ID" />
+            <lang locale="zh_TW" value="關聯維修項目分錄ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFRelateItemEntryId].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="关联维修项目分录ID" />
+            <lang locale="zh_HK" value="關聯維修項目分錄ID" />
+            <lang locale="zh_TW" value="關聯維修項目分錄ID" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFRepairItemID].alias">
             <lang locale="en_US" value="null" />

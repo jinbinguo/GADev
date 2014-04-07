@@ -67,6 +67,21 @@ public class SyncDataFacade extends AbstractBizCtrl implements ISyncDataFacade
         }
     }
     /**
+     *同步打印监控-User defined method
+     *@param serviceOrgUnitInfo 公司
+     *@param dmsPrintContentPK 打印内容ID
+     *@return
+     */
+    public ServerReturnInfo syncPrintContent(ServiceOrgUnitInfo serviceOrgUnitInfo, IObjectPK dmsPrintContentPK) throws BOSException, EASBizException
+    {
+        try {
+            return getController().syncPrintContent(getContext(), serviceOrgUnitInfo, dmsPrintContentPK);
+        }
+        catch(RemoteException err) {
+            throw new EJBRemoteException(err);
+        }
+    }
+    /**
      *自动同步-User defined method
      */
     public void autosync() throws BOSException, EASBizException

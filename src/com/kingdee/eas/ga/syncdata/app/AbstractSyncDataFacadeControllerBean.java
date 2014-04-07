@@ -86,6 +86,30 @@ public abstract class AbstractSyncDataFacadeControllerBean extends AbstractBizCo
         return null;
     }
 
+    public ServerReturnInfo syncPrintContent(Context ctx, ServiceOrgUnitInfo serviceOrgUnitInfo, IObjectPK dmsPrintContentPK) throws BOSException, EASBizException
+    {
+        try {
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("3d9ef113-e0d8-4478-a9fa-b4c577fa738f"), new Object[]{ctx, serviceOrgUnitInfo, dmsPrintContentPK});
+            invokeServiceBefore(svcCtx);
+            if(!svcCtx.invokeBreak()) {
+            ServerReturnInfo retValue = (ServerReturnInfo)_syncPrintContent(ctx, serviceOrgUnitInfo, dmsPrintContentPK);
+            svcCtx.setMethodReturnValue(retValue);
+            }
+            invokeServiceAfter(svcCtx);
+            return (ServerReturnInfo)svcCtx.getMethodReturnValue();
+        } catch (BOSException ex) {
+            throw ex;
+        } catch (EASBizException ex0) {
+            throw ex0;
+        } finally {
+            super.cleanUpServiceState();
+        }
+    }
+    protected ServerReturnInfo _syncPrintContent(Context ctx, IObjectValue serviceOrgUnitInfo, IObjectPK dmsPrintContentPK) throws BOSException, EASBizException
+    {    	
+        return null;
+    }
+
     public void autosync(Context ctx) throws BOSException, EASBizException
     {
         try {
@@ -96,8 +120,10 @@ public abstract class AbstractSyncDataFacadeControllerBean extends AbstractBizCo
             }
             invokeServiceAfter(svcCtx);
         } catch (BOSException ex) {
+            this.setRollbackOnly();
             throw ex;
         } catch (EASBizException ex0) {
+            this.setRollbackOnly();
             throw ex0;
         } finally {
             super.cleanUpServiceState();

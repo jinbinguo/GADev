@@ -20,6 +20,18 @@
             <userDefined>true</userDefined>
             <value>TRADEINQUIRE</value>
         </enumValue>
+        <enumValue>
+            <name>TXT</name>
+            <alias>bizEnum[com.kingdee.eas.ga.syncdata.DMSImpTypeEnum].enumValues.enumValue[TXT].alias</alias>
+            <userDefined>true</userDefined>
+            <value>TXT</value>
+        </enumValue>
+        <enumValue>
+            <name>Auto</name>
+            <alias>bizEnum[com.kingdee.eas.ga.syncdata.DMSImpTypeEnum].enumValues.enumValue[Auto].alias</alias>
+            <userDefined>true</userDefined>
+            <value>AUTO</value>
+        </enumValue>
     </enumValues>
     <resource>
         <rs key="bizEnum[com.kingdee.eas.ga.syncdata.DMSImpTypeEnum].alias">
@@ -33,11 +45,23 @@
             <lang locale="zh_CN" value="" />
             <lang locale="zh_TW" value="f" />
         </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.syncdata.DMSImpTypeEnum].enumValues.enumValue[Auto].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="自动" />
+            <lang locale="zh_HK" value="自動" />
+            <lang locale="zh_TW" value="自動" />
+        </rs>
         <rs key="bizEnum[com.kingdee.eas.ga.syncdata.DMSImpTypeEnum].enumValues.enumValue[TRADEINQUIRE].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="交易查询" />
             <lang locale="zh_HK" value="交易查詢" />
             <lang locale="zh_TW" value="交易查詢" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.syncdata.DMSImpTypeEnum].enumValues.enumValue[TXT].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="文本文件" />
+            <lang locale="zh_HK" value="文本文件" />
+            <lang locale="zh_TW" value="文本文件" />
         </rs>
         <rs key="bizEnum[com.kingdee.eas.ga.syncdata.DMSImpTypeEnum].enumValues.enumValue[WIPBILL].alias">
             <lang locale="en_US" value="null" />

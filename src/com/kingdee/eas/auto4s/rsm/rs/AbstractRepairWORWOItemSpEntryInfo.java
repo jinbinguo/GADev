@@ -487,6 +487,28 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
     {
         setInt("allocateCount", item);
     }
+    /**
+     * Object:项目配件明细's 关联维修项目分录IDproperty 
+     */
+    public String getRelateItemEntryId()
+    {
+        return getString("relateItemEntryId");
+    }
+    public void setRelateItemEntryId(String item)
+    {
+        setString("relateItemEntryId", item);
+    }
+    /**
+     * Object: 项目配件明细 's 赠送部门 property 
+     */
+    public com.kingdee.eas.basedata.org.AdminOrgUnitInfo getGiftDept()
+    {
+        return (com.kingdee.eas.basedata.org.AdminOrgUnitInfo)get("giftDept");
+    }
+    public void setGiftDept(com.kingdee.eas.basedata.org.AdminOrgUnitInfo item)
+    {
+        put("giftDept", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("FF1F0E1A");
