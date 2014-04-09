@@ -3611,7 +3611,7 @@ public class SyncDataFacadeControllerBean extends
 				if (returnInfo.isSuccess()) {
 					RepairWOFactory.getLocalInstance(ctx).save(repairWoInfo);
 					String sql = String.format(
-									"update CT_SYN_DMSPrintContent set FBaseStatus=7 where FID='%s'",
+									"update CT_SYN_DMSPrintContent set FBaseStatus=4 where FID='%s'",
 									dmsPrintContentPK.toString());
 					DBUtils.execute(ctx, sql);
 				}
