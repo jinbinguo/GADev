@@ -159,7 +159,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	//private WarrantyTypeInfo defaultWarrantTypeInfo = null;
 	private RepairClassifyInfo defaultRepairClassifyInfo = null;
 	private RepairItemInfo defaultRepairItemForTXT = null;
-	private RepairItemInfo defaultRepairItemForDJQ = null;
+//	private RepairItemInfo defaultRepairItemForDJQ = null;
 	
 	private RepairTypeInfo defaultRepairTypeInfo = null;
 	private boolean hasPermission_OprtRetailLine = false; //零售行操作权限 
@@ -406,7 +406,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	    if (brandInfo != null) {
 		   //按品牌带出默认维修项目TXT && 维修项目-代金券
 		    defaultRepairItemForTXT = GAUtils.getDefaultRepairItemForTXT(null, brandInfo,orgUnitInfo);
-		    defaultRepairItemForDJQ = GAUtils.getDefaultRepairItemForDJQ(null, brandInfo,orgUnitInfo);
+		//    defaultRepairItemForDJQ = GAUtils.getDefaultRepairItemForDJQ(null, brandInfo,orgUnitInfo);
 		    					
 		    					
 		    //按品牌获取默认维修类型与维修种类
@@ -442,6 +442,8 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	    
 	    KDBizPromptBox prmtSAEntry = (KDBizPromptBox) kdtRWOItemSpEntry.getColumn("person").getEditor().getComponent();
 	    RsQueryF7Utils.initPersonFilter(prmtSAEntry, orgUnitInfo);
+	    
+
 	}
 	
 	@Override
@@ -1050,16 +1052,17 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		if (footRow == null) footRow =footManager.addFootRow(0);
 		for (int i = 0; i < kdtRWOItemSpEntry.getRowCount(); i++) {
 			IRow row = kdtRWOItemSpEntry.getRow(i);
-			BigDecimal amount = (BigDecimal) row.getCell("amount").getValue();
-			if (amount == null) amount = BIGDEC0;
-			BigDecimal taxRate = (BigDecimal)row.getCell("taxRate").getValue();
-			if (taxRate == null) taxRate = BIGDEC0;
-			
-			totalAmount = totalAmount.add(amount);
-			totalTax = totalTax.add(amount.multiply(taxRate.divide(BIGDEC100,10,BigDecimal.ROUND_HALF_UP)));
+			try {
+				BigDecimal amount = PublicUtils.getBigDecimal(row.getCell("amount").getValue(),2);
+				totalAmount = totalAmount.add(amount);
+				BigDecimal taxAmount = PublicUtils.getBigDecimal(row.getCell("taxAmount").getValue(),2);
+				totalTaxAmount = totalTaxAmount.add(taxAmount);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 			
 		}
-		totalTaxAmount = totalAmount.add(totalTax);
+		totalTax = totalTaxAmount.subtract(totalAmount);
 		
 		KDTMergeManager footMerge = footManager.getMergeManager();
 		footRow.setMergeable(true);
@@ -1341,6 +1344,10 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			row.getCell("repairPkg").getStyleAttributes().setLocked(false);
 			row.getCell("person").getStyleAttributes().setLocked(false);
 			
+			row.getCell("worktimeQty").getStyleAttributes().setLocked(true);
+			row.getCell("worktimePrice").getStyleAttributes().setLocked(true);
+			row.getCell("worktimeCost").getStyleAttributes().setLocked(true);
+			
 			
 			BigDecimal unIssueQty = PublicUtils.getBigDecimal(row.getCell(unIssueIndex).getValue());
 			if (unIssueQty.compareTo(BIGDEC0) == 0) {
@@ -1621,10 +1628,19 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		} catch (Exception e) {
 			UIUtils.handUIException(e);
 		}
-		for (int i = 0;i < kdtRWOItemSpEntry.getRowCount(); i++)
+		for (int i = 0;i < kdtRWOItemSpEntry.getRowCount(); i++) {
 			resetItemSpEditorLocked(kdtRWOItemSpEntry.getRow(i));
+			IRow row = kdtRWOItemSpEntry.getRow(i);
+			RepairItemInfo repairItemInfo = (RepairItemInfo) row.getCell("repairItem").getValue();
+			String itemspNum = (String) row.getCell("itemspNum").getValue();
+			if (repairItemInfo != null && !PublicUtils.isEmpty(repairItemInfo.getNumber()) &&
+					!PublicUtils.equals(itemspNum, repairItemInfo.getNumber())) {
+				row.getCell("itemspNum").setValue(repairItemInfo.getNumber());
+			}
+		}
 		prmtBrand.setEnabled(false);
 		prmtVin.setValue(prmtVehicle.getValue());
+		
 		
 	}
 
@@ -2459,7 +2475,15 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
              kdTable.getCell(rowIndex,"itemspName").setValue(repairItemInfo.getName());
              kdTable.getCell(rowIndex, "issueQty").setValue(null);
              kdTable.getCell(rowIndex, "unIssueQty").setValue(null);
+             
              try {
+            	 /**计算标准工时、工时单价、工时成本  */
+                 BigDecimal workTimeQty = getRepairItemWorkTimeQty(repairItemInfo);
+                 kdTable.getCell(rowIndex, "worktimeQty").setValue(workTimeQty);
+                 kdTable.getCell(rowIndex, "worktimePrice").setValue(workTimeStdPrice);
+                 kdTable.getCell(rowIndex, "worktimeCost").setValue(workTimeQty.multiply(workTimeStdPrice));
+                 
+                 
             	 //出关联配件
             	 RepairItemSpEntryCollection repairItemSpEntryCol = getRepairItemSPEntryCollection(repairItemInfo);
             	 BigDecimal defaultRepairItemTaxPrice = repairItemInfo.getBigDecimal("price"); //参考售价(含税)
@@ -2480,7 +2504,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	            		 }
 	            	 }
 	             }
-	             if (PublicUtils.equals(repairItemInfo, defaultRepairItemForDJQ)) {
+	             if (repairItemInfo.getNumber().startsWith("FDJQ")) {
 	            	 kdTable.getCell(rowIndex, "qty").setValue(new BigDecimal(-1));
 	             }
 	             if (rowIndex > 0) {
@@ -2529,8 +2553,8 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 						}
 						kdTable.getRow(rowIndex).getCell("itemspName").getStyleAttributes().setLocked(!hasPermission_OprtRetailItemspName);
 						
-						//关联维修项目参考售价未配置或为0时，关联配件取自身的参考售价，否则为0
-						if (defaultRepairItemTaxPrice == null || defaultRepairItemTaxPrice.compareTo(BIGDEC0) == 0) {
+						//关联维修项目参考售价未配置或为0时，关联配件取自身的参考售价，否则为0----取消
+					//	if (defaultRepairItemTaxPrice == null || defaultRepairItemTaxPrice.compareTo(BIGDEC0) == 0) {
 							String sql = String.format("select isnull(FPrice,0) from T_BD_MaterialSales where FMaterialID='%s' and FOrgUnit='%s'",
 									  materialInfo.getString("id"),orgUnitInfo.getString("id"));
 								IRowSet rs = DBUtils.executeQuery(null, sql);
@@ -2541,9 +2565,9 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 									  throw new EASBizException(new NumericExceptionSubItem("",String.format("物料[%s],销售组织[%s]未分配销售页签，请先分配",materialInfo.getName(),orgUnitInfo.getString("name"))));
 								 }
 							
-						}  else {
-							kdTable.getCell(rowIndex, "price").setValue(BIGDEC0);
-						}
+					//	}  else {
+					//		kdTable.getCell(rowIndex, "price").setValue(BIGDEC0);
+					//	}
 						IRow row = kdTable.getRow(rowIndex);
 						calItemSpEntryAmount(row);
 						//默认首次计算出初始的实际含税单价
@@ -2574,6 +2598,39 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
    	  	kdTable.getEditManager().editCellAt(beginRowIndex, qtyIndex);
 		
 	}
+	/**
+	 * 获取维修项目标准工时
+	 * @param repairItemId
+	 * @return
+	 * @throws Exception
+	 */
+	private BigDecimal getRepairItemWorkTimeQty(RepairItemInfo repairItemInfo) throws Exception {
+		if (repairItemInfo == null) return BIGDEC0;
+		String sql = String.format("select isnull(FStdWorkTime,0) FStdWorkTime from T_ATS_RepairItemEntry where FParentId='%s'", repairItemInfo.getString("id"));
+		IRowSet rs = DBUtils.executeQuery(null, sql);
+		if (rs != null && rs.next()) {
+			return rs.getBigDecimal("FStdWorkTime");
+		}
+		return BIGDEC0;
+	}
+	
+	/**
+	 * 获取工时单价
+	 * @param brandInfo
+	 * @return
+	 * @throws Exception
+	
+	private BigDecimal getWorkTimePrice(BrandInfo brandInfo) throws Exception {
+		if (brandInfo == null) return BIGDEC0;
+		String sql = String.format("select isnull(FWorkTimeStandardPrice,0) FWorkTimeStandardPrice from T_ATS_WorkTimeStdPrice where FIsUse=1 and FAuditStatus=2 and FBrandID='%s'",brandInfo.getString("id"));
+		IRowSet rs = DBUtils.executeQuery(null, sql);
+		if (rs != null && rs.next()) {
+			return rs.getBigDecimal("FWorkTimeStandardPrice");
+		}
+		return BIGDEC0;
+		
+	}
+	 */
 	
 	private KDBizPromptBox getRepairItemPrmt() {
 		final KDBizPromptBox prmt= new KDBizPromptBox();
@@ -3090,8 +3147,6 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     		MsgBoxEx.showDetailAndOK(this, "折后价低于成本价", msg.toString(), MsgBox.YES);
     		abort();
     	}
-    	
-		
 	}
 	@Override
     public SelectorItemCollection getSelectors() {
@@ -3355,6 +3410,9 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
         KDTableUtils.formatDecimal(kdtRWOItemSpEntry, "issueQty",true);
         KDTableUtils.formatDecimal(kdtRWOItemSpEntry, "unIssueQty",true);
         KDTableUtils.formatDecimal(kdtRWOItemSpEntry, "allocateExenseRate",false);
+        KDTableUtils.formatDecimal(kdtRWOItemSpEntry, "worktimeQty",true);
+        KDTableUtils.formatDecimal(kdtRWOItemSpEntry, "worktimePrice",true);
+        KDTableUtils.formatDecimal(kdtRWOItemSpEntry, "worktimeCost",true);
         
     }
 
@@ -3390,7 +3448,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
  
     				//按品牌带出默认维修项目TXT && 维修项目-代金券
     				defaultRepairItemForTXT = GAUtils.getDefaultRepairItemForTXT(null, brandInfo,orgUnitInfo);
-    				defaultRepairItemForDJQ = GAUtils.getDefaultRepairItemForDJQ(null, brandInfo,orgUnitInfo);
+    			//	defaultRepairItemForDJQ = GAUtils.getDefaultRepairItemForDJQ(null, brandInfo,orgUnitInfo);
     				
     				//首等日期
     				pkfirstBookInDate.setValue(rs.getDate("FPlateDate"));

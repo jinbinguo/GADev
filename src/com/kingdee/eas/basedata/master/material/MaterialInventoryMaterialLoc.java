@@ -37,7 +37,7 @@ public class MaterialInventoryMaterialLoc extends CoreBillEntryBase implements I
     }
     public BOSObjectType getType()
     {
-        return new BOSObjectType("29F2D57A");
+        return new BOSObjectType("928F7517");
     }
     private MaterialInventoryMaterialLocController getController() throws BOSException
     {

@@ -665,6 +665,48 @@
             <scale>0</scale>
             <precision>0</precision>
         </column>
+        <column>
+            <name>CFWorktimeQty</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFWorktimeQty].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFWorktimeQty].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NUMERIC</sqlType>
+            <length>28</length>
+            <scale>10</scale>
+            <precision>28</precision>
+        </column>
+        <column>
+            <name>CFWorktimePrice</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFWorktimePrice].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFWorktimePrice].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NUMERIC</sqlType>
+            <length>28</length>
+            <scale>10</scale>
+            <precision>28</precision>
+        </column>
+        <column>
+            <name>CFWorktimeCost</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFWorktimeCost].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFWorktimeCost].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NUMERIC</sqlType>
+            <length>28</length>
+            <scale>10</scale>
+            <precision>28</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>CPK_ATS_RWORWOImck</name>
@@ -1335,6 +1377,42 @@
             <lang locale="zh_CN" value="DMS行号" />
             <lang locale="zh_HK" value="DMS行號" />
             <lang locale="zh_TW" value="DMS行號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFWorktimeCost].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工时成本" />
+            <lang locale="zh_HK" value="工時成本" />
+            <lang locale="zh_TW" value="工時成本" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFWorktimeCost].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工时成本" />
+            <lang locale="zh_HK" value="工時成本" />
+            <lang locale="zh_TW" value="工時成本" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFWorktimePrice].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工时单价" />
+            <lang locale="zh_HK" value="工時單價" />
+            <lang locale="zh_TW" value="工時單價" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFWorktimePrice].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工时单价" />
+            <lang locale="zh_HK" value="工時單價" />
+            <lang locale="zh_TW" value="工時單價" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFWorktimeQty].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工时数量" />
+            <lang locale="zh_HK" value="工時數量" />
+            <lang locale="zh_TW" value="工時數量" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFWorktimeQty].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工时数量" />
+            <lang locale="zh_HK" value="工時數量" />
+            <lang locale="zh_TW" value="工時數量" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.CT_ATS_RepairWORWOItemSpEntry].columns.column[CFWprice].alias">
             <lang locale="en_US" value="null" />

@@ -54,6 +54,6 @@ public class AbstractMaterialInventoryMaterialLocInfo extends com.kingdee.eas.fr
     }
     public BOSObjectType getBOSType()
     {
-        return new BOSObjectType("29F2D57A");
+        return new BOSObjectType("928F7517");
     }
 }

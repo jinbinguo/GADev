@@ -256,7 +256,7 @@ public class GAUtils implements Serializable {
 	 * @param brandInfo
 	 * @return
 	 * @throws Exception
-	 */
+	
 	public static RepairItemInfo getDefaultRepairItemForDJQ(Context ctx,BrandInfo brandInfo,OrgUnitInfo orgUnitInfo) throws Exception {
  		if (orgUnitInfo == null) {
 			throw new EASBizException(new NumericExceptionSubItem("","获取默认维修类型，参数[组织公司]不能为空!"));
@@ -275,9 +275,9 @@ public class GAUtils implements Serializable {
 			String orgId = orgUnitInfo.getString("id");
 	
 			//DMS维修项目-代金券（厦门中宝-宝马）DJQ-1
-			RepairItemInfo defaultRepairItemDJQ_BMW = repairItem.getRepairItemInfo(String.format("where number='%s' and OrgUnit.id='%s'", "DJQ-1",orgId));
+			RepairItemInfo defaultRepairItemDJQ_BMW = repairItem.getRepairItemInfo(String.format("where number='%s' and OrgUnit.id='%s'", "FDJQ-QT1",orgId));
 			//DMS维修项目-代金券（厦门中宝-MINI）DJQ-2
-			RepairItemInfo defaultRepairItemDJQ_MINI = repairItem.getRepairItemInfo(String.format("where number='%s' and OrgUnit.id='%s'", "DJQ-2",orgId));
+			RepairItemInfo defaultRepairItemDJQ_MINI = repairItem.getRepairItemInfo(String.format("where number='%s' and OrgUnit.id='%s'", "FDJQ-QT2",orgId));
 	    
 	    	
 			if (brandInfo == null) 
@@ -294,7 +294,7 @@ public class GAUtils implements Serializable {
 		}
 	
 	}
-	
+	 */
 	/**
 	 * 默认车辆
 	 * @param ctx

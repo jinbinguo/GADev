@@ -174,6 +174,13 @@ public class PublicUtils implements Serializable {
     		return true;
     	} else return false;
     }
+    
+    public static BigDecimal getBigDecimal(Object value, int scale) throws Exception {
+    	BigDecimal returnValue = getBigDecimal(value);
+    	returnValue.setScale(scale, BigDecimal.ROUND_HALF_UP);
+    	return returnValue;
+    }
+    
     public static BigDecimal getBigDecimal(Object value) throws Exception {
     	try {
 	    	if (value == null) return BIGDECIMAL0;

@@ -44,7 +44,7 @@ public abstract class AbstractMaterialInventoryMaterialLocControllerBean extends
 
     protected BOSObjectType getBOSType()
     {
-        return new BOSObjectType("29F2D57A");
+        return new BOSObjectType("928F7517");
     }
 
     public boolean exists(Context ctx, IObjectPK pk) throws BOSException, EASBizException

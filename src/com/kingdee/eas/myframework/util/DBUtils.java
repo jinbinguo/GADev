@@ -46,6 +46,10 @@ public class DBUtils implements Serializable {
 		return rs;
 	}
 	
+	public static void executeForDialect(Context ctx, String sql) throws Exception {
+		execute(ctx,"/*dialect*/"+sql);
+	}
+	
 	public static void execute(Context ctx, String sql) throws Exception {
 		ISQLExecutor sqlexec = null;
 		if (ctx == null) sqlexec = SQLExecutorFactory.getRemoteInstance();

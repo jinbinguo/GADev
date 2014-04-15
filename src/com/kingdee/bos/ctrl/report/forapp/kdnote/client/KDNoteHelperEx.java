@@ -17,6 +17,7 @@ import com.kingdee.bos.ctrl.kdf.form2.ui.INotePrintHelper;
 import com.kingdee.bos.ctrl.kdf.form2.ui.NotePrinter;
 import com.kingdee.bos.ctrl.print.IPrintActionListener;
 import com.kingdee.bos.ctrl.print.config.PrintJobConfig;
+import com.kingdee.bos.ctrl.print.util.KDPrintUtilEx;
 import com.kingdee.bos.ctrl.report.forapp.kdnote.client.KDNoteHelper;
 import com.kingdee.bos.ctrl.report.forapp.kdnote.client.NoteManageView;
 import com.kingdee.bos.ctrl.report.forapp.kdnote.client.NoteTemplateManageView;
@@ -37,6 +38,7 @@ import com.kingdee.bos.ctrl.reportone.r1.print.browser.R1PrintBrowser;
 import com.kingdee.bos.ctrl.reportone.r1.print.browser.R1PrintBrowserEx;
 import com.kingdee.bos.ctrl.reportone.r1.print.data.AbstractPrintDataProvider;
 import com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUIPIEx;
+import com.kingdee.eas.framework.client.CoreUI;
 import com.kingdee.eas.myframework.client.MsgBoxEx;
 import com.kingdee.eas.myframework.util.InvokeUtils;
 import com.kingdee.util.StringUtils;
@@ -52,10 +54,10 @@ public class KDNoteHelperEx extends KDNoteHelper {
     private static NoteTemplateManageView noteTemplateManageView;
     private BizRpcReducer _bizRpcReducer;
 	
-	public void print(String templateType, Object dataProvider, java.awt.Component owner, boolean isShowPrinterDialog, RepairWOEditUIPIEx ui)  {
+	public void print(String templateType, Object dataProvider, java.awt.Component owner, boolean isShowPrinterDialog, CoreUI ui)  {
 		log.debug((new StringBuilder()).append("KDNote print templateType:").append(templateType).append(", dataProvider:").append(dataProvider).append(", owner:").append(owner).toString());
 		try {
-			 
+		  KDPrintUtilEx.bakFile();	 
 	      Template[] templates = readDefaultTemplateEx(templateType, owner);
 	      if (templates == null) return;
 	      for (int i = 0; i < templates.length; i++) {
@@ -65,7 +67,8 @@ public class KDNoteHelperEx extends KDNoteHelper {
 	    		  if(ui.getDataObject() != null && !StringUtils.isEmpty(ui.getDataObject().getString("id")))
 	    			  idList.add(ui.getDataObject().getString("id"));
 	    		  DefaultNoteDataProvider multiDataSourceProviderProxy = new DefaultNoteDataProvider(idList);
-	    		  ui.initDefaultNoteDataProvider(multiDataSourceProviderProxy);
+	    		  if (ui instanceof RepairWOEditUIPIEx) 
+	    			  ((RepairWOEditUIPIEx)ui).initDefaultNoteDataProvider(multiDataSourceProviderProxy);
 	    		  dataProvider = multiDataSourceProviderProxy;
 	    	  } 
 	    	  if(template != null)  {
@@ -87,7 +90,14 @@ public class KDNoteHelperEx extends KDNoteHelper {
 	   }  catch(Exception ex) {
 	      log.error("套打打印失败", ex);
 	      WindowUtil.msgboxError(MultiLanguageUtil.getMLS("client.KDNoteHelper.printErrorPrompt", "套打不能正常进行。请从客户端日志了解异常信息。"), getPrintTitle(false), owner);
+	   } finally {
+		   try {
+			KDPrintUtilEx.revertFile();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	   }
+	   
 	}
     private final String getPrintTitle(boolean isPreview) {
     	return isPreview ? MultiLanguageUtil.getMLS("client.KDNoteHelper.previewTitle", "套打预览") : MultiLanguageUtil.getMLS("client.KDNoteHelper.printTitle", "套打打印");

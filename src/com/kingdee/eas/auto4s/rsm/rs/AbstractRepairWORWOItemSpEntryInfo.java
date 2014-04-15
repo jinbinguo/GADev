@@ -509,6 +509,39 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
     {
         put("giftDept", item);
     }
+    /**
+     * Object:项目配件明细's 工时数量property 
+     */
+    public java.math.BigDecimal getWorktimeQty()
+    {
+        return getBigDecimal("worktimeQty");
+    }
+    public void setWorktimeQty(java.math.BigDecimal item)
+    {
+        setBigDecimal("worktimeQty", item);
+    }
+    /**
+     * Object:项目配件明细's 工时单价property 
+     */
+    public java.math.BigDecimal getWorktimePrice()
+    {
+        return getBigDecimal("worktimePrice");
+    }
+    public void setWorktimePrice(java.math.BigDecimal item)
+    {
+        setBigDecimal("worktimePrice", item);
+    }
+    /**
+     * Object:项目配件明细's 工时成本property 
+     */
+    public java.math.BigDecimal getWorktimeCost()
+    {
+        return getBigDecimal("worktimeCost");
+    }
+    public void setWorktimeCost(java.math.BigDecimal item)
+    {
+        setBigDecimal("worktimeCost", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("FF1F0E1A");

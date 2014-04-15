@@ -47,7 +47,7 @@ public class R1PrintBrowserEx extends R1PrintBrowser {
 					return aa;
 				} else {
 					printer.setPrintConfig(config);
-					config.getModel().setPrintDirect(true);
+					config.getModel().setPrintDirect(false);
 					printer.print();
 					//deleteConfigInXml(config.getPrintJobName(),config.getPrinter());
 					return -1;
