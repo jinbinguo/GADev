@@ -91,6 +91,17 @@ public class AbstractRepairManInfo extends com.kingdee.eas.myframework.template.
     {
         setString("addr", item);
     }
+    /**
+     * Object: ËÍÐÞÈË 's ¹«Ë¾ property 
+     */
+    public com.kingdee.eas.basedata.org.AdminOrgUnitInfo getOrgUnit()
+    {
+        return (com.kingdee.eas.basedata.org.AdminOrgUnitInfo)get("orgUnit");
+    }
+    public void setOrgUnit(com.kingdee.eas.basedata.org.AdminOrgUnitInfo item)
+    {
+        put("orgUnit", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("40C83D22");

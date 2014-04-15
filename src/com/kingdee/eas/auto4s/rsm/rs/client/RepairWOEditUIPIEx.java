@@ -196,6 +196,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
         KDTDefaultCellEditor kdtRWOItemSpEntry_repairWay_CellEditor = new KDTDefaultCellEditor(kdtRWOItemSpEntry_repairWay_ComboBox);
         kdtRWOItemSpEntry.getColumn("repairWay").setEditor(kdtRWOItemSpEntry_repairWay_CellEditor);
         
+        
 		
 	}
 	@Override
@@ -384,7 +385,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	    actionUnAudit.setVisible(false);
 	    
 	    toolBar.add(btnPrintContinue,45);
-	    actionPrintContinue.setVisible(false); //暂时隐藏，功能未完全
+	  //  actionPrintContinue.setVisible(false); //暂时隐藏，功能未完全
 	    
 	    //获取维修、零售最大折扣率
 		
@@ -404,12 +405,12 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	    BrandInfo brandInfo = (BrandInfo) prmtBrand.getValue();
 	    if (brandInfo != null) {
 		   //按品牌带出默认维修项目TXT && 维修项目-代金券
-		    defaultRepairItemForTXT = GAUtils.getDefaultRepairItemForTXT(null, brandInfo);
-		    defaultRepairItemForDJQ = GAUtils.getDefaultRepairItemForDJQ(null, brandInfo);
+		    defaultRepairItemForTXT = GAUtils.getDefaultRepairItemForTXT(null, brandInfo,orgUnitInfo);
+		    defaultRepairItemForDJQ = GAUtils.getDefaultRepairItemForDJQ(null, brandInfo,orgUnitInfo);
 		    					
 		    					
 		    //按品牌获取默认维修类型与维修种类
-		    defaultRepairTypeInfo = GAUtils.getDefaultRepairType(null,brandInfo);
+		    defaultRepairTypeInfo = GAUtils.getDefaultRepairType(null,brandInfo,orgUnitInfo);
 	    }
 	    
 	    KDBizPromptBox prmtPersonEntry = (KDBizPromptBox) kdtRWOItemSpEntry.getColumn("person").getEditor().getComponent();
@@ -417,6 +418,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	    
 	    KDBizPromptBox prmtSupplierEntry = (KDBizPromptBox) kdtRWOItemSpEntry.getColumn("supplier").getEditor().getComponent();
 	    prmtSupplierEntry.setCommitFormat("$number$;$name$");
+	    RsQueryF7Utils.makeSupplierF7(userInfo, prmtSupplierEntry, (ServiceOrgUnitInfo)prmtOrgUnit.getValue());
 	   
 	    KDBizPromptBox prmtGiftDeptEntry = (KDBizPromptBox) kdtRWOItemSpEntry.getColumn("giftDept").getEditor().getComponent();
 	    EntityViewInfo entityGiftDept = new EntityViewInfo();
@@ -431,6 +433,15 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	    if (!canChangeBillHeadValue()) {
 	    	setBillHeadEnabled(false);
 	    }
+	    
+	    EntityViewInfo entityCustomerAccount = new EntityViewInfo();
+	    FilterInfo filterCustomerAccount = new FilterInfo();
+	    filterCustomerAccount.getFilterItems().add(new FilterItemInfo("orgUnit.id",orgUnitInfo.getString("id")));
+	    entityCustomerAccount.setFilter(filterCustomerAccount); 
+	    prmtCustomerAccount.setEntityViewInfo(entityCustomerAccount);
+	    
+	    KDBizPromptBox prmtSAEntry = (KDBizPromptBox) kdtRWOItemSpEntry.getColumn("person").getEditor().getComponent();
+	    RsQueryF7Utils.initPersonFilter(prmtSAEntry, orgUnitInfo);
 	}
 	
 	@Override
@@ -447,10 +458,10 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	
 	private void defaultValueForAddNew() throws Exception {
 		if (getOprtState().equals(OprtState.ADDNEW)) {
-			VehicleInfo defaultVehicleInfo = GAUtils.getDefualtVehicleInfo(null);
+			VehicleInfo defaultVehicleInfo = GAUtils.getDefualtVehicleInfo(null,orgUnitInfo);
 			prmtVehicle.setValue(defaultVehicleInfo);
 			
-			CustomerAccountInfo defaultCustomerAccountInfo = GAUtils.getDefaultCustomerAccountInfo(null);
+			CustomerAccountInfo defaultCustomerAccountInfo = GAUtils.getDefaultCustomerAccountInfo(null,orgUnitInfo);
 			prmtCustomerAccount.setValue(defaultCustomerAccountInfo);
 			
 			/**上次里程+1*/
@@ -467,7 +478,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		}
 		BrandInfo brandInfo = (BrandInfo) prmtBrand.getValue();
 		if (brandInfo != null)
-			defaultRepairClassifyInfo = GAUtils.getDefaultRepairClassify(null,brandInfo);
+			defaultRepairClassifyInfo = GAUtils.getDefaultRepairClassify(null,brandInfo,orgUnitInfo);
 		
 	}
 	
@@ -2180,6 +2191,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 					if (brandInfo != null) {
 						FilterInfo filterBrand = new FilterInfo();
 						filterBrand.getFilterItems().add(new FilterItemInfo("parent.brand.id",brandInfo.getString("id")));
+						filterBrand.getFilterItems().add(new FilterItemInfo("orgUnit.id",orgUnitInfo.getString("id")));
 						filterInfo.mergeFilter(filterBrand, "AND");
 					}
 					repairItemEntryF7ListUI.setExpandFilter(filterInfo);
@@ -2237,6 +2249,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 						if (brandInfo != null) {
 							FilterInfo filterBrand = new FilterInfo();
 							filterBrand.getFilterItems().add(new FilterItemInfo("parent.brand.id",brandInfo.getString("id")));
+							filterBrand.getFilterItems().add(new FilterItemInfo("orgUnit.id",orgUnitInfo.getString("id")));
 							filterInfo.mergeFilter(filterBrand, "AND");
 						}
 						repairItemEntryF7ListUI.setExpandFilter(filterInfo);
@@ -2278,6 +2291,9 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		sc.add(new SelectorItemInfo("material.name"));
 		sc.add(new SelectorItemInfo("material.number"));
 		sc.add(new SelectorItemInfo("materialName"));
+		sc.add(new SelectorItemInfo("material.baseUnit.id"));
+		sc.add(new SelectorItemInfo("material.baseUnit.name"));
+		sc.add(new SelectorItemInfo("material.baseUnit.number"));
 		sc.add(new SelectorItemInfo("unit.id"));
 		sc.add(new SelectorItemInfo("unit.name"));
 		sc.add(new SelectorItemInfo("unit.number"));
@@ -2374,10 +2390,16 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 						row.getCell("initFactPrice").setValue(initFactPrice);
 						kdTable.getCell(rowIndex, "price").getStyleAttributes().setLocked(!hasPermission_OprtRetailPrice);
 						kdTable.getCell(rowIndex, "taxPrice").getStyleAttributes().setLocked(!hasPermission_OprtRetailPrice);
+						
+						String orgId = orgUnitInfo.getString("id");
+						BigDecimal costPrice =  getMaterialCostPrice(orgId, materialInfo);
+						kdTable.getCell(rowIndex, "costAmount").setValue(costPrice);
 					}
 				  } catch (Exception e) {
 						UIUtils.handUIException(e);
 				  }
+				  
+				  
 			      
 			  }
 			  int qtyIndex = kdTable.getColumnIndex("qty");
@@ -2477,13 +2499,14 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 				//自动带出关联配件
 				if (!PublicUtils.isEmpty(repairItemSpEntryCol)) {
 					
-					
+					String orgId = orgUnitInfo.getString("id");
 					for (int j = 0; j < repairItemSpEntryCol.size(); j++) {
 						RepairItemSpEntryInfo repairItemSpEntryInfo = repairItemSpEntryCol.get(j);
 						MaterialInfo materialInfo = repairItemSpEntryInfo.getMaterial();
 						BigDecimal qty = PublicUtils.getBigDecimal(repairItemSpEntryInfo.getBigDecimal("qty"));
-						
+						BigDecimal costPrice =  getMaterialCostPrice(orgId, materialInfo);
 						insertLine(kdTable, rowIndex);
+						kdTable.getCell(rowIndex, "costAmount").setValue(costPrice);
 						kdTable.getCell(rowIndex, "material").setValue(materialInfo);
 						kdTable.getCell(rowIndex, "t").setValue(TEnum.P);
 						kdTable.getCell(rowIndex,"itemspNum").setValue(materialInfo.getNumber());
@@ -3361,13 +3384,13 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     					+ CR + rs.getString("CustomerAddr");
     				///txtcustomInfo.setText(strCustomerInfo);
     				//按品牌获取默认维修类型与维修种类
-    				defaultRepairTypeInfo = GAUtils.getDefaultRepairType(null,brandInfo);
+    				defaultRepairTypeInfo = GAUtils.getDefaultRepairType(null,brandInfo,orgUnitInfo);
     				prmtRepairType.setValue(defaultRepairTypeInfo);
     				
  
     				//按品牌带出默认维修项目TXT && 维修项目-代金券
-    				defaultRepairItemForTXT = GAUtils.getDefaultRepairItemForTXT(null, brandInfo);
-    				defaultRepairItemForDJQ = GAUtils.getDefaultRepairItemForDJQ(null, brandInfo);
+    				defaultRepairItemForTXT = GAUtils.getDefaultRepairItemForTXT(null, brandInfo,orgUnitInfo);
+    				defaultRepairItemForDJQ = GAUtils.getDefaultRepairItemForDJQ(null, brandInfo,orgUnitInfo);
     				
     				//首等日期
     				pkfirstBookInDate.setValue(rs.getDate("FPlateDate"));
@@ -3762,7 +3785,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     		initDefaultNoteDataProvider(multiDataSourceProviderProxy);
     		KDNoteHelperEx appHlp = new KDNoteHelperEx();
     	    PrintIntegrationManager.initPrint(appHlp, editData.getBOSType(), idList, getTDFileName(), "com.kingdee.eas.scm.common.SCMResource", true);
-    	    appHlp.print(getTDFileName(), multiDataSourceProviderProxy, SwingUtilities.getWindowAncestor(this));
+    	    appHlp.print(getTDFileName(), multiDataSourceProviderProxy, SwingUtilities.getWindowAncestor(this),true, this);
     	    PrintIntegrationInfo newPIInfo = getPrintIntegrationInfo(); 	    
     	    setSettlePrintFlag(appHlp.getPrintedTemplatePath(),oldPIInfo,newPIInfo);
     	   

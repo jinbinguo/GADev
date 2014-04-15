@@ -49,6 +49,7 @@ public class MaterialInventoryUICTEx extends MaterialInventoryUI {
 		sc.add(new SelectorItemInfo("CostQty"));
 		sc.add(new SelectorItemInfo("CostPrice"));
 		sc.add(new SelectorItemInfo("*"));
+		sc.add(new SelectorItemInfo("MaterialLoc.*"));
 		return sc;
 	}
 

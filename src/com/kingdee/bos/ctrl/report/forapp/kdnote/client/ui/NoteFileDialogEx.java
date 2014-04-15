@@ -18,10 +18,15 @@ import com.kingdee.bos.ctrl.reportone.kdrs.exception.KDRSException;
 import com.kingdee.bos.ctrl.reportone.kdrs.exception.NotFoundException;
 import com.kingdee.bos.ctrl.swing.*;
 import com.kingdee.bos.ctrl.swing.util.CtrlSwingUtilities;
+import com.kingdee.eas.myframework.util.PublicUtils;
+import com.sun.java_cup.internal.version;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.util.HashMap;
 import java.util.Locale;
+import java.util.Vector;
+
 import javax.swing.*;
 import javax.swing.event.*;
 import javax.swing.tree.TreePath;
@@ -31,6 +36,7 @@ public class NoteFileDialogEx extends TypicalDialog
     implements TreeSelectionListener, TreeExpansionListener, ListSelectionListener {
    
 	private class ListElement  {
+		
         public String getName()  {
             return name;
         }
@@ -40,6 +46,14 @@ public class NoteFileDialogEx extends TypicalDialog
         public String getCategory() {
             return category;
         }
+        public boolean isSelected() {
+        	return selected;
+        }
+        public void setSeleted(boolean selected) {
+        	this.selected = selected;
+        }
+        
+        
 
         public String toString()  {
             if(StringUtil.isEmptyString(alias))
@@ -63,6 +77,7 @@ public class NoteFileDialogEx extends TypicalDialog
         private String name;
         private String alias;
         private String category;
+        private boolean selected;
 
         public ListElement(String name, String alias, String category)  {
             super();
@@ -71,7 +86,6 @@ public class NoteFileDialogEx extends TypicalDialog
             this.category = category;
         }
     }
-
     class CustomListCellRender  implements ListCellRenderer  {
 
         public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus)
@@ -84,7 +98,7 @@ public class NoteFileDialogEx extends TypicalDialog
              //   lab.setIcon(ResourceManager.getIcon(com.kingdee.bos.ctrl.report.forapp.kdnote.client.ui.NoteFileDialogEx.class, "res.r1_print.gif"));
            // else
             //    lab.setIcon(ResourceManager.getIcon(com.kingdee.bos.ctrl.report.forapp.kdnote.client.ui.NoteFileDialogEx.class, "res/empty.gif"));
-            lab.setSelected(isSelected);
+            lab.setSelected(le.isSelected());
             lab.setOpaque(true);
             lab.setBackground(c.getBackground());
             TableLayout tl = TableLayout.splitCol(2);
@@ -228,6 +242,7 @@ public class NoteFileDialogEx extends TypicalDialog
         _rightPanel = new NoteTemplatesPanel();
         _lstFile = _rightPanel.lstTemplates;
         _lstFile.setCellRenderer(new CustomListCellRender());
+
         
         _lstFile.addListSelectionListener(this);
         IContextSupplier supplier = new IContextSupplier() {
@@ -259,13 +274,11 @@ public class NoteFileDialogEx extends TypicalDialog
         _lstFile.addMouseListener(new MouseAdapter() {
 
             public void mouseClicked(MouseEvent e)  {
-            	
-            	
-                if(e.getClickCount() != 2)
-                    return;
-                int idx = _lstFile.locationToIndex(e.getPoint());
-                if(idx >= 0)
-                    onOk();
+            	 if (e.getX() < 20) {
+        			 ListElement le = (ListElement)_lstFile.getSelectedValue();
+        			 le.setSeleted(!le.isSelected());
+        			 _lstFile.repaint();
+        		 }
             }
         });
         _rightPanel.cbUseOrgFilter.addActionListener(new ActionListener() {
@@ -304,9 +317,19 @@ public class NoteFileDialogEx extends TypicalDialog
         else
             return null;
     }
+    public String[] getNoteNameEx() {
+    	Vector<String> vec = new Vector<String>();
+    	for (int i = 0; i < _lstFile.getElementCount(); i++) {
+    		ListElement le = (ListElement)_lstFile.getElement(i);
+    		if (le.isSelected()) vec.add(le.getName());
+    	}
+    	return PublicUtils.vectorToString(vec);
+    	
+    }
 
     public String getNoteAlias()  {
         ListElement le = (ListElement)_lstFile.getSelectedValue();
+       
         if(le != null)
             return le.getAlias();
         else
@@ -316,9 +339,21 @@ public class NoteFileDialogEx extends TypicalDialog
     public String getNoteDir()  {
         return PathUtil.makeChildPath(_tree.getRelativeRoot(), _tree.getTreeUI().getSelectionPathText());
     }
+    
+    
 
     public String getNotePathText()  {
         return PathUtil.makeChildPath(getNoteDir(), getNoteName());
+    }
+    public String[] getNotePathTextEx() {
+    	String[] noteNames = getNoteNameEx();
+    	if (noteNames == null) return null;
+    	String[] notePathTexts = new String[noteNames.length];
+    	for (int i = 0; i < noteNames.length; i++) {
+    		String notePathText = PathUtil.makeChildPath(getNoteDir(), noteNames[i]);
+    		notePathTexts[i] = notePathText;
+    	}
+    	return notePathTexts;
     }
 
     public String getNoteType()  {
@@ -327,6 +362,18 @@ public class NoteFileDialogEx extends TypicalDialog
 
     public String getRelativeNotePathText()  {
         return PathUtil.makeChildPath(getNoteType(), getNoteName());
+    }
+    
+    public String[] getRelativeNotePathTextEx() {
+    	String[] noteNames = getNoteNameEx();
+    	if (noteNames == null) return null;
+    	String[] relativeNotePathTexts = new String[noteNames.length];
+    	for (int i = 0; i < noteNames.length; i++) {
+    		String relativeNotePathText = PathUtil.makeChildPath(getNoteType(), noteNames[i]);
+    		relativeNotePathTexts[i] = relativeNotePathText;
+    	}
+    	return relativeNotePathTexts;
+    	
     }
 
     public void valueChanged(ListSelectionEvent e)  {

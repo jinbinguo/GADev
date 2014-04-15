@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataTable xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.basedata.master.material.app</package>
+    <name>T_BD_MaterialInventory</name>
+    <alias>dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].alias</alias>
+    <columns>
+        <column>
+            <name>CFCostQty</name>
+            <alias>dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[CFCostQty].alias</alias>
+            <description>dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[CFCostQty].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NUMERIC</sqlType>
+            <length>28</length>
+            <scale>10</scale>
+            <precision>28</precision>
+        </column>
+        <column>
+            <name>CFCostPrice</name>
+            <alias>dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[CFCostPrice].alias</alias>
+            <description>dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[CFCostPrice].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NUMERIC</sqlType>
+            <length>28</length>
+            <scale>10</scale>
+            <precision>28</precision>
+        </column>
+    </columns>
+    <resource>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].alias">
+            <lang locale="zh_CN" value="物料库存资料" />
+            <lang locale="zh_HK" value="物料庫存資料" />
+            <lang locale="zh_TW" value="物料庫存資料" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[CFCostPrice].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="成本价" />
+            <lang locale="zh_HK" value="成本價" />
+            <lang locale="zh_TW" value="成本價" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[CFCostPrice].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="成本价" />
+            <lang locale="zh_HK" value="成本價" />
+            <lang locale="zh_TW" value="成本價" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[CFCostQty].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="数量" />
+            <lang locale="zh_HK" value="數量" />
+            <lang locale="zh_TW" value="數量" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[CFCostQty].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="数量" />
+            <lang locale="zh_HK" value="數量" />
+            <lang locale="zh_TW" value="數量" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FABCType].alias">
+            <lang locale="zh_CN" value="ABC分类" />
+            <lang locale="zh_HK" value="ABC分類" />
+            <lang locale="zh_TW" value="ABC分類" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FABCType].description">
+            <lang locale="zh_CN" value="ABC分类" />
+            <lang locale="zh_HK" value="ABC分類" />
+            <lang locale="zh_TW" value="ABC分類" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FAheadUnit].alias">
+            <lang locale="zh_CN" value="提前期单位" />
+            <lang locale="zh_HK" value="提前期單位" />
+            <lang locale="zh_TW" value="提前期單位" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FAheadUnit].description">
+            <lang locale="zh_CN" value="提前期单位" />
+            <lang locale="zh_HK" value="提前期單位" />
+            <lang locale="zh_TW" value="提前期單位" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FBatchPolicy].alias">
+            <lang locale="zh_CN" value="批量政策" />
+            <lang locale="zh_HK" value="批量政策" />
+            <lang locale="zh_TW" value="批量政策" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FBatchPolicy].description">
+            <lang locale="zh_CN" value="批量政策" />
+            <lang locale="zh_HK" value="批量政策" />
+            <lang locale="zh_TW" value="批量政策" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FCheapRate].alias">
+            <lang locale="zh_CN" value="减价比例(%)" />
+            <lang locale="zh_HK" value="減價比例(%)" />
+            <lang locale="zh_TW" value="減價比例(%)" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FConsumeSpeed].alias">
+            <lang locale="zh_CN" value="物料消耗速率" />
+            <lang locale="zh_HK" value="物料消耗速率" />
+            <lang locale="zh_TW" value="物料消耗速率" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FConsumeSpeed].description">
+            <lang locale="zh_CN" value="物料消耗速率" />
+            <lang locale="zh_HK" value="物料消耗速率" />
+            <lang locale="zh_TW" value="物料消耗速率" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FControlUnitID].alias">
+            <lang locale="zh_CN" value="控制单元" />
+            <lang locale="zh_HK" value="控制單元" />
+            <lang locale="zh_TW" value="控制單元" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FControlUnitID].description">
+            <lang locale="zh_CN" value="控制单元" />
+            <lang locale="zh_HK" value="控制單元" />
+            <lang locale="zh_TW" value="控制單元" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FCreateTime].alias">
+            <lang locale="zh_CN" value="创建时间" />
+            <lang locale="zh_HK" value="創建時間" />
+            <lang locale="zh_TW" value="創建時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FCreateTime].description">
+            <lang locale="zh_CN" value="创建时间" />
+            <lang locale="zh_HK" value="創建時間" />
+            <lang locale="zh_TW" value="創建時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FCreatorID].alias">
+            <lang locale="zh_CN" value="创建者" />
+            <lang locale="zh_HK" value="創建者" />
+            <lang locale="zh_TW" value="創建者" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FCreatorID].description">
+            <lang locale="zh_CN" value="创建者" />
+            <lang locale="zh_HK" value="創建者" />
+            <lang locale="zh_TW" value="創建者" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FDaysBottom].alias">
+            <lang locale="zh_CN" value="库存下限天数" />
+            <lang locale="zh_HK" value="庫存下限天數" />
+            <lang locale="zh_TW" value="庫存下限天數" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FDaysBottom].description">
+            <lang locale="zh_CN" value="库存下限天数" />
+            <lang locale="zh_HK" value="庫存下限天數" />
+            <lang locale="zh_TW" value="庫存下限天數" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FDaysPlanTurnover].alias">
+            <lang locale="zh_CN" value="目标周转天数" />
+            <lang locale="zh_HK" value="目標周轉天數" />
+            <lang locale="zh_TW" value="目標周轉天數" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FDaysPlanTurnover].description">
+            <lang locale="zh_CN" value="目标周转天数" />
+            <lang locale="zh_HK" value="目標周轉天數" />
+            <lang locale="zh_TW" value="目標周轉天數" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FDaysTop].alias">
+            <lang locale="zh_CN" value="库存上限天数" />
+            <lang locale="zh_HK" value="庫存上限天數" />
+            <lang locale="zh_TW" value="庫存上限天數" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FDaysTop].description">
+            <lang locale="zh_CN" value="库存上限天数" />
+            <lang locale="zh_HK" value="庫存上限天數" />
+            <lang locale="zh_TW" value="庫存上限天數" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FDaysTurnover].alias">
+            <lang locale="zh_CN" value="最大周转天数" />
+            <lang locale="zh_HK" value="最大周轉天數" />
+            <lang locale="zh_TW" value="最大周轉天數" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FDaysTurnover].description">
+            <lang locale="zh_CN" value="最大周转天数" />
+            <lang locale="zh_HK" value="最大周轉天數" />
+            <lang locale="zh_TW" value="最大周轉天數" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FDefaultWarehouseID].alias">
+            <lang locale="zh_CN" value="默认仓库" />
+            <lang locale="zh_HK" value="默認倉庫" />
+            <lang locale="zh_TW" value="默認倉庫" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FDefaultWarehouseID].description">
+            <lang locale="zh_CN" value="默认仓库" />
+            <lang locale="zh_HK" value="默認倉庫" />
+            <lang locale="zh_TW" value="默認倉庫" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FEffectedStatus].alias">
+            <lang locale="zh_CN" value="暂存或保存标记" />
+            <lang locale="zh_HK" value="暫存或保存標記" />
+            <lang locale="zh_TW" value="暫存或保存標記" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FEffectedStatus].description">
+            <lang locale="zh_CN" value="暂存或保存标记" />
+            <lang locale="zh_HK" value="暫存或保存標記" />
+            <lang locale="zh_TW" value="暫存或保存標記" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FFixationBatchQty].alias">
+            <lang locale="zh_CN" value="固定批量" />
+            <lang locale="zh_HK" value="固定批量" />
+            <lang locale="zh_TW" value="固定批量" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FFixationBatchQty].description">
+            <lang locale="zh_CN" value="固定批量" />
+            <lang locale="zh_HK" value="固定批量" />
+            <lang locale="zh_TW" value="固定批量" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FFreezeOrgUnit].alias">
+            <lang locale="zh_CN" value="禁用组织" />
+            <lang locale="zh_HK" value="禁用組織" />
+            <lang locale="zh_TW" value="禁用組織" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FFreezeOrgUnit].description">
+            <lang locale="zh_CN" value="禁用组织" />
+            <lang locale="zh_HK" value="禁用組織" />
+            <lang locale="zh_TW" value="禁用組織" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FInWarehsAhead].alias">
+            <lang locale="zh_CN" value="入库失效提前期" />
+            <lang locale="zh_HK" value="入庫失效提前期" />
+            <lang locale="zh_TW" value="入庫失效提前期" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FInWarehsAhead].description">
+            <lang locale="zh_CN" value="入库失效提前期" />
+            <lang locale="zh_HK" value="入庫失效提前期" />
+            <lang locale="zh_TW" value="入庫失效提前期" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FInvPlanner].alias">
+            <lang locale="zh_CN" value="库存计划员" />
+            <lang locale="zh_HK" value="庫存計畫員" />
+            <lang locale="zh_TW" value="庫存計畫員" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FInvPlanner].description">
+            <lang locale="zh_CN" value="库存计划员" />
+            <lang locale="zh_HK" value="庫存計畫員" />
+            <lang locale="zh_TW" value="庫存計畫員" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FIsBarcode].alias">
+            <lang locale="zh_CN" value="条码管理" />
+            <lang locale="zh_HK" value="條碼管理" />
+            <lang locale="zh_TW" value="條碼管理" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FIsBarcode].description">
+            <lang locale="zh_CN" value="是否条码管理" />
+            <lang locale="zh_HK" value="是否條碼管理" />
+            <lang locale="zh_TW" value="是否條碼管理" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FIsBatchNo].alias">
+            <lang locale="zh_CN" value="使用批号管理" />
+            <lang locale="zh_HK" value="使用批號管理" />
+            <lang locale="zh_TW" value="使用批號管理" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FIsBatchNo].description">
+            <lang locale="zh_CN" value="是否使用批号管理" />
+            <lang locale="zh_HK" value="是否使用批號管理" />
+            <lang locale="zh_TW" value="是否使用批號管理" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FIsCheck].alias">
+            <lang locale="zh_CN" value="检验" />
+            <lang locale="zh_HK" value="檢驗" />
+            <lang locale="zh_TW" value="檢驗" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FIsCompages].alias">
+            <lang locale="zh_CN" value="组合件" />
+            <lang locale="zh_HK" value="組合件" />
+            <lang locale="zh_TW" value="組合件" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FIsCompages].description">
+            <lang locale="zh_CN" value="是否组合件" />
+            <lang locale="zh_HK" value="是否組合件" />
+            <lang locale="zh_TW" value="是否組合件" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FIsControl].alias">
+            <lang locale="zh_CN" value="库存管理" />
+            <lang locale="zh_HK" value="庫存管理" />
+            <lang locale="zh_TW" value="庫存管理" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FIsControl].description">
+            <lang locale="zh_CN" value="是否库存管理" />
+            <lang locale="zh_HK" value="是否庫存管理" />
+            <lang locale="zh_TW" value="是否庫存管理" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FIsLotNumber].alias">
+            <lang locale="zh_CN" value="批次管理" />
+            <lang locale="zh_HK" value="批次管理" />
+            <lang locale="zh_TW" value="批次管理" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FIsLotNumber].description">
+            <lang locale="zh_CN" value="是否批次管理" />
+            <lang locale="zh_HK" value="是否批次管理" />
+            <lang locale="zh_TW" value="是否批次管理" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FIsNegative].alias">
+            <lang locale="zh_CN" value="允许负库存" />
+            <lang locale="zh_HK" value="允許負庫存" />
+            <lang locale="zh_TW" value="允許負庫存" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FIsNegative].description">
+            <lang locale="zh_CN" value="是否允许负库存" />
+            <lang locale="zh_HK" value="是否允許負庫存" />
+            <lang locale="zh_TW" value="是否允許負庫存" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FIsPeriodValid].alias">
+            <lang locale="zh_CN" value="保质期管理" />
+            <lang locale="zh_HK" value="保質期管理" />
+            <lang locale="zh_TW" value="保質期管理" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FIsPeriodValid].description">
+            <lang locale="zh_CN" value="保质期管理" />
+            <lang locale="zh_HK" value="保質期管理" />
+            <lang locale="zh_TW" value="保質期管理" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FIsSequenceNo].alias">
+            <lang locale="zh_CN" value="使用序列号管理" />
+            <lang locale="zh_HK" value="使用序列號管理" />
+            <lang locale="zh_TW" value="使用序列號管理" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FIsSequenceNo].description">
+            <lang locale="zh_CN" value="是否使用序列号管理" />
+            <lang locale="zh_HK" value="是否使用序列號管理" />
+            <lang locale="zh_TW" value="是否使用序列號管理" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FIssuePriorityMode].alias">
+            <lang locale="zh_CN" value="出库优先方式" />
+            <lang locale="zh_HK" value="出庫優先方式" />
+            <lang locale="zh_TW" value="出庫優先方式" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FIssuePriorityMode].description">
+            <lang locale="zh_CN" value="出库优先方式" />
+            <lang locale="zh_HK" value="出庫優先方式" />
+            <lang locale="zh_TW" value="出庫優先方式" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FLastUpdateTime].alias">
+            <lang locale="zh_CN" value="最后修改时间" />
+            <lang locale="zh_HK" value="最後修改時間" />
+            <lang locale="zh_TW" value="最後修改時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FLastUpdateTime].description">
+            <lang locale="zh_CN" value="最后修改时间" />
+            <lang locale="zh_HK" value="最後修改時間" />
+            <lang locale="zh_TW" value="最後修改時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FLastUpdateUserID].alias">
+            <lang locale="zh_CN" value="最后修改者" />
+            <lang locale="zh_HK" value="最後修改者" />
+            <lang locale="zh_TW" value="最後修改者" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FLastUpdateUserID].description">
+            <lang locale="zh_CN" value="最后修改者" />
+            <lang locale="zh_HK" value="最後修改者" />
+            <lang locale="zh_TW" value="最後修改者" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FLocationID].alias">
+            <lang locale="zh_CN" value="默认库位" />
+            <lang locale="zh_HK" value="默認庫位" />
+            <lang locale="zh_TW" value="默認庫位" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FLocationID].description">
+            <lang locale="zh_CN" value="" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FMaterialID].alias">
+            <lang locale="zh_CN" value="物料" />
+            <lang locale="zh_HK" value="物料" />
+            <lang locale="zh_TW" value="物料" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FMaterialID].description">
+            <lang locale="zh_CN" value="物料" />
+            <lang locale="zh_HK" value="物料" />
+            <lang locale="zh_TW" value="物料" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FOrgUnit].alias">
+            <lang locale="zh_CN" value="业务属性组织" />
+            <lang locale="zh_HK" value="業務屬性組織" />
+            <lang locale="zh_TW" value="業務屬性組織" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FOrgUnit].description">
+            <lang locale="zh_CN" value="业务属性组织" />
+            <lang locale="zh_HK" value="業務屬性組織" />
+            <lang locale="zh_TW" value="業務屬性組織" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FOutWarehsAhead].alias">
+            <lang locale="zh_CN" value="出库失效提前期" />
+            <lang locale="zh_HK" value="出庫失效提前期" />
+            <lang locale="zh_TW" value="出庫失效提前期" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FOutWarehsAhead].description">
+            <lang locale="zh_CN" value="出库失效提前期" />
+            <lang locale="zh_HK" value="出庫失效提前期" />
+            <lang locale="zh_TW" value="出庫失效提前期" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FPeriodValidUnit].alias">
+            <lang locale="zh_CN" value="保质期单位" />
+            <lang locale="zh_HK" value="保質期單位" />
+            <lang locale="zh_TW" value="保質期單位" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FPeriodValidUnit].description">
+            <lang locale="zh_CN" value="保质期单位" />
+            <lang locale="zh_HK" value="保質期單位" />
+            <lang locale="zh_TW" value="保質期單位" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FPeriodValid].alias">
+            <lang locale="zh_CN" value="保质期" />
+            <lang locale="zh_HK" value="保質期" />
+            <lang locale="zh_TW" value="保質期" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FPeriodValid].description">
+            <lang locale="zh_CN" value="保质期" />
+            <lang locale="zh_HK" value="保質期" />
+            <lang locale="zh_TW" value="保質期" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FPlanningMode].alias">
+            <lang locale="zh_CN" value="计划方式" />
+            <lang locale="zh_HK" value="計畫方式" />
+            <lang locale="zh_TW" value="計畫方式" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FPlanningMode].description">
+            <lang locale="zh_CN" value="计划方式" />
+            <lang locale="zh_HK" value="計畫方式" />
+            <lang locale="zh_TW" value="計畫方式" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FPrepWarnAhead].alias">
+            <lang locale="zh_CN" value="预警提前期" />
+            <lang locale="zh_HK" value="預警提前期" />
+            <lang locale="zh_TW" value="預警提前期" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FPrepWarnAhead].description">
+            <lang locale="zh_CN" value="预警提前期" />
+            <lang locale="zh_HK" value="預警提前期" />
+            <lang locale="zh_TW" value="預警提前期" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FPurchasingAheadDate].alias">
+            <lang locale="zh_CN" value="采购提前期（天）" />
+            <lang locale="zh_HK" value="採購提前期（天）" />
+            <lang locale="zh_TW" value="採購提前期（天）" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FPurchasingAheadDate].description">
+            <lang locale="zh_CN" value="采购提前期（天）" />
+            <lang locale="zh_HK" value="採購提前期（天）" />
+            <lang locale="zh_TW" value="採購提前期（天）" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FQtyMax].alias">
+            <lang locale="zh_CN" value="最高库存量" />
+            <lang locale="zh_HK" value="最高庫存量" />
+            <lang locale="zh_TW" value="最高庫存量" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FQtyMax].description">
+            <lang locale="zh_CN" value="最高库存量" />
+            <lang locale="zh_HK" value="最高庫存量" />
+            <lang locale="zh_TW" value="最高庫存量" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FQtyMinPackage].alias">
+            <lang locale="zh_CN" value="最小包装量" />
+            <lang locale="zh_HK" value="最小包裝量" />
+            <lang locale="zh_TW" value="最小包裝量" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FQtyMinPackage].description">
+            <lang locale="zh_CN" value="最小包装量" />
+            <lang locale="zh_HK" value="最小包裝量" />
+            <lang locale="zh_TW" value="最小包裝量" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FQtyMin].alias">
+            <lang locale="zh_CN" value="最低库存量" />
+            <lang locale="zh_HK" value="最低庫存量" />
+            <lang locale="zh_TW" value="最低庫存量" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FQtyMin].description">
+            <lang locale="zh_CN" value="最低库存量" />
+            <lang locale="zh_HK" value="最低庫存量" />
+            <lang locale="zh_TW" value="最低庫存量" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FQtySafety].alias">
+            <lang locale="zh_CN" value="安全库存量" />
+            <lang locale="zh_HK" value="安全庫存量" />
+            <lang locale="zh_TW" value="安全庫存量" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FQtySafety].description">
+            <lang locale="zh_CN" value="安全库存量" />
+            <lang locale="zh_HK" value="安全庫存量" />
+            <lang locale="zh_TW" value="安全庫存量" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FQualityOrgID].alias">
+            <lang locale="zh_CN" value="质检组织" />
+            <lang locale="zh_HK" value="質檢組織" />
+            <lang locale="zh_TW" value="質檢組織" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FReBookQty].alias">
+            <lang locale="zh_CN" value="再订货点" />
+            <lang locale="zh_HK" value="再訂貨點" />
+            <lang locale="zh_TW" value="再訂貨點" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FReBookQty].description">
+            <lang locale="zh_CN" value="再订货点" />
+            <lang locale="zh_HK" value="再訂貨點" />
+            <lang locale="zh_TW" value="再訂貨點" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FStatus].alias">
+            <lang locale="zh_CN" value="物料状态" />
+            <lang locale="zh_HK" value="物料狀態" />
+            <lang locale="zh_TW" value="物料狀態" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FStatus].description">
+            <lang locale="zh_CN" value="物料状态" />
+            <lang locale="zh_HK" value="物料狀態" />
+            <lang locale="zh_TW" value="物料狀態" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FUnitID].alias">
+            <lang locale="zh_CN" value="库存计量单位" />
+            <lang locale="zh_HK" value="庫存計量單位" />
+            <lang locale="zh_TW" value="庫存計量單位" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].columns.column[FUnitID].description">
+            <lang locale="zh_CN" value="" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].description">
+            <lang locale="zh_CN" value="物料库存资料" />
+            <lang locale="zh_HK" value="物料庫存資料" />
+            <lang locale="zh_TW" value="物料庫存資料" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.basedata.master.material.app.T_BD_MaterialInventory].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</dataTable>
+

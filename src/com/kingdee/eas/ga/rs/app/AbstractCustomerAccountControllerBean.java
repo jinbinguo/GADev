@@ -191,6 +191,14 @@ public abstract class AbstractCustomerAccountControllerBean extends SimpleDataba
         return super._getCollection(ctx, svcCtx, oql);
     }
 
+					protected com.kingdee.eas.basedata.org.OrgUnitInfo getMainBizOrgUnit(Context ctx,com.kingdee.eas.framework.CoreBillBaseInfo model) {
+			Object obj = model.get("orgUnit");
+			if (obj != null && obj instanceof com.kingdee.eas.basedata.org.OrgUnitInfo)
+				return (com.kingdee.eas.basedata.org.OrgUnitInfo)obj;
+			else
+				return null;
+		}
+
     public SimpleDatabaseCollection getSimpleDatabaseCollection (Context ctx) throws BOSException
     {
     	return (SimpleDatabaseCollection)(getCustomerAccountCollection(ctx).cast(SimpleDatabaseCollection.class));

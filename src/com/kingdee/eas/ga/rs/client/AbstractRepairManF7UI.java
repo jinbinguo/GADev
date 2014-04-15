@@ -306,7 +306,7 @@ public abstract class AbstractRepairManF7UI extends CoreUIObject
         kDPanel1.add(kDLabelContainer6, null);
         kDLabelContainer7.setBounds(new Rectangle(5, 5, 221, 19));
         kDPanel1.add(kDLabelContainer7, null);
-        kDLabelContainer8.setBounds(new Rectangle(473, 54, 221, 19));
+        kDLabelContainer8.setBounds(new Rectangle(472, 54, 221, 19));
         kDPanel1.add(kDLabelContainer8, null);
         kDLabelContainer9.setBounds(new Rectangle(473, 75, 221, 19));
         kDPanel1.add(kDLabelContainer9, null);

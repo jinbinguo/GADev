@@ -7,6 +7,7 @@ import java.awt.event.*;
 
 import org.apache.log4j.Logger;
 
+import com.kingdee.bos.BOSException;
 import com.kingdee.bos.metadata.entity.FilterInfo;
 import com.kingdee.bos.metadata.entity.FilterItemInfo;
 import com.kingdee.bos.metadata.query.util.CompareType;
@@ -16,6 +17,7 @@ import com.kingdee.bos.dao.IObjectValue;
 import com.kingdee.eas.auto4s.bdm.pbd.VehicleInfo;
 import com.kingdee.eas.auto4s.rsm.rs.util.client.RsQueryF7Utils;
 import com.kingdee.eas.base.permission.UserInfo;
+import com.kingdee.eas.basedata.org.AdminOrgUnitInfo;
 import com.kingdee.eas.common.client.SysContext;
 import com.kingdee.eas.framework.*;
 import com.kingdee.eas.myframework.util.KDTableUtils;
@@ -96,16 +98,24 @@ public class RepairManListUI extends AbstractRepairManListUI {
 				myFilterInfo.getFilterItems().add(new FilterItemInfo("tel","%" + tel + "%",CompareType.LIKE));
 			}
 			
+			AdminOrgUnitInfo adminOrgUnitInfo = SysContext.getSysContext().getCurrentAdminUnit();
+	    	myFilterInfo.getFilterItems().add(new FilterItemInfo("orgUnit.id",adminOrgUnitInfo.getString("id")));
+	
+			
 
 			filterInfo.mergeFilter(myFilterInfo, "and");
 			mainQuery.setFilter(filterInfo);
 		} catch (Exception exc) {
 			UIUtils.handUIExceptionAndAbort(exc);
 		}
-		long l = System.currentTimeMillis();
-		logger.info("====================start==============" + String.valueOf(l));
 		super.tblMain_doRequestRowSet(e);
-		logger.info("====================end==============" + String.valueOf(System.currentTimeMillis()-l));
+
 	}
+	
+    @Override
+    protected FilterInfo getDefaultFilterForQuery() {
+    	return super.getDefaultFilterForQuery();
+    	
+    }
 
 }

@@ -1,0 +1,2535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.auto4s.bdm.rsm.app</package>
+    <name>RepairItemQuery</name>
+    <alias>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].alias</alias>
+    <description>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].description</description>
+    <userDefined>false</userDefined>
+    <reportDataSource />
+    <bizUnitPK>com.kingdee.eas.auto4s.bdm.rsm.RepairItem</bizUnitPK>
+    <connectionProvider />
+    <subObjects>
+        <subEntity>
+            <name>RepairItem</name>
+            <alias>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].subObjects.subEntity[RepairItem].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItem" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>creator</name>
+            <alias>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].subObjects.subEntity[creator].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="User" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>lastUpdateUser</name>
+            <alias>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].subObjects.subEntity[lastUpdateUser].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="User" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>treeid</name>
+            <alias>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].subObjects.subEntity[treeid].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemTree" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>repairClassify</name>
+            <alias>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].subObjects.subEntity[repairClassify].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairClassify" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>orgUnit</name>
+            <alias>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].subObjects.subEntity[orgUnit].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="AdminOrgUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>brand</name>
+            <alias>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].subObjects.subEntity[brand].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="Brand" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>Entry</name>
+            <alias>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].subObjects.subEntity[Entry].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemEntry" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>Entry_series</name>
+            <alias>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].subObjects.subEntity[Entry_series].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="Series" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>Entry_model</name>
+            <alias>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].subObjects.subEntity[Entry_model].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="Model" />
+            </entityRef>
+        </subEntity>
+    </subObjects>
+    <units>
+        <propertyUnit>
+            <name>NewUnit0</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[NewUnit0].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit0" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairItem" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="creator" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit1</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[NewUnit1].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit1" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="creator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit2</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[NewUnit2].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit2" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairItem" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="lastUpdateUser" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit3</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[NewUnit3].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit3" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="lastUpdateUser" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit4</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[NewUnit4].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit4" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairItem" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="treeid" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit5</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[NewUnit5].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit5" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="treeid" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>number</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairItem" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>name</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairItem" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>IsUse</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[IsUse].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>986c99ae-466d-43e1-ac1c-d1eca209740f</key>
+                    <parentUnit>
+                        <key name="name" value="IsUse" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairItem" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="IsUse" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>repairClassify.name</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[repairClassify.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>ccbf1cbc-6bd9-467b-ba30-b613017da69f</key>
+                    <parentUnit>
+                        <key name="name" value="repairClassify.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="repairClassify" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>orgUnit.name</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[orgUnit.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>438cfa34-52b8-41a3-a3af-d77db1ac2252</key>
+                    <parentUnit>
+                        <key name="name" value="orgUnit.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="orgUnit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>brand.name</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[brand.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>f53509a3-26ca-49ab-bc67-9cc14f6801c5</key>
+                    <parentUnit>
+                        <key name="name" value="brand.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="brand" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>isTimeEdit</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[isTimeEdit].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Boolean</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>ef35a232-5f77-4e56-be01-83b887cab2c7</key>
+                    <parentUnit>
+                        <key name="name" value="isTimeEdit" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairItem" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="isTimeEdit" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>description</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[description].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="description" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairItem" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="description" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>simpleName</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[simpleName].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="simpleName" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairItem" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="simpleName" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>createTime</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[createTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Timestamp</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="createTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairItem" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="createTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>creator.name</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[creator.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="creator.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="creator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>lastUpdateTime</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[lastUpdateTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Timestamp</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="lastUpdateTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairItem" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="lastUpdateTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>lastUpdateUser.name</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[lastUpdateUser.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="lastUpdateUser.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="lastUpdateUser" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>treeid.id</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[treeid.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="treeid.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="treeid" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>desc</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[desc].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>89f8e34d-4f66-46d7-b48e-5c35305a6def</key>
+                    <parentUnit>
+                        <key name="name" value="desc" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairItem" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="desc" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>3ff995a4-c1e3-478a-8260-7b105950a572</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[3ff995a4-c1e3-478a-8260-7b105950a572].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>1caf2532-0603-4485-b3fc-822c3f677fc5</key>
+                    <parentUnit>
+                        <key name="name" value="3ff995a4-c1e3-478a-8260-7b105950a572" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairItem" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="repairClassify" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>e82d29a8-05af-43e6-b253-321bd7b9b70c</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[e82d29a8-05af-43e6-b253-321bd7b9b70c].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>7854665f-a4a3-40e2-9525-3d0db7ce6525</key>
+                    <parentUnit>
+                        <key name="name" value="e82d29a8-05af-43e6-b253-321bd7b9b70c" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="repairClassify" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>60a84799-fbef-4971-bd7a-4995f16d598d</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[60a84799-fbef-4971-bd7a-4995f16d598d].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>e7bced18-91fe-4bcc-853d-e3c9d6547fcf</key>
+                    <parentUnit>
+                        <key name="name" value="60a84799-fbef-4971-bd7a-4995f16d598d" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairItem" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="orgUnit" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>a05ec161-f48f-4e9a-9d69-8ea15771d6f6</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[a05ec161-f48f-4e9a-9d69-8ea15771d6f6].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>7517f367-c199-427c-ac13-3b53011295c7</key>
+                    <parentUnit>
+                        <key name="name" value="a05ec161-f48f-4e9a-9d69-8ea15771d6f6" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="orgUnit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>46d4439b-964a-416c-a61a-34bcce8905d1</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[46d4439b-964a-416c-a61a-34bcce8905d1].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>06dba3de-07e7-40c4-adf0-f6b3da5f27ba</key>
+                    <parentUnit>
+                        <key name="name" value="46d4439b-964a-416c-a61a-34bcce8905d1" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairItem" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="brand" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>80041863-ccb8-4c9c-9663-70b3dc5a3418</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[80041863-ccb8-4c9c-9663-70b3dc5a3418].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>8cbd9393-9505-4830-adfb-8d21b0dbd94d</key>
+                    <parentUnit>
+                        <key name="name" value="80041863-ccb8-4c9c-9663-70b3dc5a3418" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="brand" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>Entry.seq</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.seq].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>9dc07a66-680f-45c0-ac69-982837c02504</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.seq" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="seq" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>e6f107cf-f91b-4260-b287-a6b1554f76d0</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[e6f107cf-f91b-4260-b287-a6b1554f76d0].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>a5845029-b7d1-46f6-ac67-502962068c6f</key>
+                    <parentUnit>
+                        <key name="name" value="e6f107cf-f91b-4260-b287-a6b1554f76d0" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairItem" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>b917e1ce-13e8-418d-a202-39cf5bf2e4bc</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[b917e1ce-13e8-418d-a202-39cf5bf2e4bc].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>8ebb6807-a910-4431-b8dc-64abeb48c229</key>
+                    <parentUnit>
+                        <key name="name" value="b917e1ce-13e8-418d-a202-39cf5bf2e4bc" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="parent" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>Entry.series.name</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.series.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>1bc11680-48f9-47eb-b454-fc6391925480</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.series.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry_series" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>3cb10283-e0de-4df9-b822-171c8c4db3b5</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[3cb10283-e0de-4df9-b822-171c8c4db3b5].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>3e7866c5-fb47-438c-b5be-1035eff43da2</key>
+                    <parentUnit>
+                        <key name="name" value="3cb10283-e0de-4df9-b822-171c8c4db3b5" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="series" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>f102e861-e6eb-4f1c-8f79-ac21fc153c4e</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[f102e861-e6eb-4f1c-8f79-ac21fc153c4e].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>f15de29a-4d01-4bb7-85e7-10b710829b1d</key>
+                    <parentUnit>
+                        <key name="name" value="f102e861-e6eb-4f1c-8f79-ac21fc153c4e" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry_series" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>Entry.model.name</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.model.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>541ee1b0-cacb-4e24-95bd-6f218a4f3236</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.model.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry_model" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>f08c6e8f-8282-4abd-b823-5d6bb046dbbd</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[f08c6e8f-8282-4abd-b823-5d6bb046dbbd].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>1bbb693b-123a-41ca-ad35-46248f18657c</key>
+                    <parentUnit>
+                        <key name="name" value="f08c6e8f-8282-4abd-b823-5d6bb046dbbd" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="model" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>442653b1-2d8c-4d82-b784-1bc2d8a1c062</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[442653b1-2d8c-4d82-b784-1bc2d8a1c062].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>62b1c9cb-f5b9-4704-a9f0-11ca8c0fcfbf</key>
+                    <parentUnit>
+                        <key name="name" value="442653b1-2d8c-4d82-b784-1bc2d8a1c062" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry_model" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>Entry.stdWorkTime</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.stdWorkTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>1e1dc7af-4876-4774-a925-be189d519428</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.stdWorkTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="stdWorkTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.assignWorkTime</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.assignWorkTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>e7c2a145-91ae-4bff-9bcf-cadd8230278b</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.assignWorkTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="assignWorkTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>id</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairItem" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.id</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>28b3e145-f943-4c2e-99f4-d50f5b621a12</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>orgUnit.id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[orgUnit.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>4c095b87-37c8-49c2-840d-936cf947e649</key>
+                    <parentUnit>
+                        <key name="name" value="orgUnit.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="orgUnit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </queryField>
+    </units>
+    <defaultFilter>
+        <name>defaultFilter</name>
+        <formulaString />
+        <query>
+            <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+            <key name="name" value="RepairItemQuery" />
+        </query>
+    </defaultFilter>
+    <defaultSorters>
+        <querySorterItem>
+            <propertyName>number</propertyName>
+            <sortType>ASC</sortType>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+            <configured>false</configured>
+        </querySorterItem>
+    </defaultSorters>
+    <queryPK>
+        <name>QueryPK</name>
+        <alias>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].queryPK[QueryPK].alias</alias>
+        <description>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].queryPK[QueryPK].description</description>
+        <keyProperties>
+            <queryField>
+                <key name="name" value="id" />
+            </queryField>
+            <queryField>
+                <key name="name" value="Entry.id" />
+            </queryField>
+        </keyProperties>
+    </queryPK>
+    <isDistinct>false</isDistinct>
+    <joins>
+        <join>
+            <name>NewJoin0</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="RepairItem" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="creator" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>0</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="NewUnit0" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="NewUnit1" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="NewJoin0" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </join>
+        <join>
+            <name>NewJoin1</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="RepairItem" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="lastUpdateUser" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>0</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="NewUnit2" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="NewUnit3" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="NewJoin0" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </join>
+        <join>
+            <name>NewJoin2</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="RepairItem" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="treeid" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>0</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="NewUnit4" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="NewUnit5" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="NewJoin0" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </join>
+        <join>
+            <name>ae19bf0b-6ec7-4c5a-b3f3-fcbda214cda1</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="RepairItem" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="repairClassify" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>17edbe12-7875-402d-856d-c370e51c51f4</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="3ff995a4-c1e3-478a-8260-7b105950a572" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="e82d29a8-05af-43e6-b253-321bd7b9b70c" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="ae19bf0b-6ec7-4c5a-b3f3-fcbda214cda1" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </join>
+        <join>
+            <name>b305e105-1f77-43fd-89c3-3ee53d8dab7a</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="RepairItem" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="orgUnit" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>18ad0159-656a-4cc4-9958-ed289a97994f</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="60a84799-fbef-4971-bd7a-4995f16d598d" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="a05ec161-f48f-4e9a-9d69-8ea15771d6f6" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="b305e105-1f77-43fd-89c3-3ee53d8dab7a" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </join>
+        <join>
+            <name>d5689269-c06c-4e3b-8c67-3a8f191ee0c9</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="RepairItem" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="brand" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>104ada3a-4637-4ab7-b0e9-2100149ca2cf</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="46d4439b-964a-416c-a61a-34bcce8905d1" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="80041863-ccb8-4c9c-9663-70b3dc5a3418" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="d5689269-c06c-4e3b-8c67-3a8f191ee0c9" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </join>
+        <join>
+            <name>f0c2ef37-0593-4bde-9273-c321d8cf1ab4</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="RepairItem" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="Entry" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>5c6a6506-5ce8-416f-b0da-cab8123af4f9</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="e6f107cf-f91b-4260-b287-a6b1554f76d0" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="b917e1ce-13e8-418d-a202-39cf5bf2e4bc" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="f0c2ef37-0593-4bde-9273-c321d8cf1ab4" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </join>
+        <join>
+            <name>e18e5c36-4248-4b4c-8821-d5350bcf5c43</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="Entry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="Entry_series" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>6c124178-0841-451a-93d6-78804e657c90</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="3cb10283-e0de-4df9-b822-171c8c4db3b5" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="f102e861-e6eb-4f1c-8f79-ac21fc153c4e" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="e18e5c36-4248-4b4c-8821-d5350bcf5c43" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </join>
+        <join>
+            <name>4824cf94-c23a-4878-ab0b-ffbf0b983e00</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="Entry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="Entry_model" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>cc6476ed-972e-47e0-8bc3-c9612e10825a</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="f08c6e8f-8282-4abd-b823-5d6bb046dbbd" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="442653b1-2d8c-4d82-b784-1bc2d8a1c062" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="4824cf94-c23a-4878-ab0b-ffbf0b983e00" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </join>
+    </joins>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修项目" />
+            <lang locale="zh_HK" value="維修項目" />
+            <lang locale="zh_TW" value="維修項目" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].defaultSorters.querySorterItemextendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].defaultSorters.querySorterItemextendedProperty.F7WindowTitle">
+            <lang locale="en_US" value="com.kingdee.eas.auto4s.bdm.rsm.client.RsmResource.RepairItemQueryF7WindowTitle" />
+            <lang locale="zh_CN" value="com.kingdee.eas.auto4s.bdm.rsm.client.RsmResource.RepairItemQueryF7WindowTitle" />
+            <lang locale="zh_TW" value="com.kingdee.eas.auto4s.bdm.rsm.client.RsmResource.RepairItemQueryF7WindowTitle" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].defaultSorters.querySorterItemextendedProperty.f7WindowTitle">
+            <lang locale="en_US" value="维修项目" />
+            <lang locale="zh_CN" value="维修项目" />
+            <lang locale="zh_TW" value="维修项目" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].defaultSorters.querySorterItemextendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].defaultSorters.querySorterItemextendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].defaultSorters.querySorterItemextendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].defaultSorters.querySorterItemextendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="分组基础资料查询" />
+            <lang locale="zh_HK" value="分組基礎資料查詢" />
+            <lang locale="zh_TW" value="分組基礎資料查詢" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].extendedProperty.F7WindowTitle">
+            <lang locale="en_US" value="com.kingdee.eas.auto4s.bdm.rsm.client.RsmResource.RepairItemQueryF7WindowTitle" />
+            <lang locale="zh_CN" value="com.kingdee.eas.auto4s.bdm.rsm.client.RsmResource.RepairItemQueryF7WindowTitle" />
+            <lang locale="zh_TW" value="com.kingdee.eas.auto4s.bdm.rsm.client.RsmResource.RepairItemQueryF7WindowTitle" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].extendedProperty.f7WindowTitle">
+            <lang locale="en_US" value="维修项目" />
+            <lang locale="zh_CN" value="维修项目" />
+            <lang locale="zh_TW" value="维修项目" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].queryPK[QueryPK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].queryPK[QueryPK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].subObjects.subEntity[Entry].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].subObjects.subEntity[Entry_model].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].subObjects.subEntity[Entry_series].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].subObjects.subEntity[RepairItem].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].subObjects.subEntity[brand].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].subObjects.subEntity[creator].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].subObjects.subEntity[lastUpdateUser].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].subObjects.subEntity[orgUnit].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].subObjects.subEntity[repairClassify].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].subObjects.subEntity[treeid].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[3cb10283-e0de-4df9-b822-171c8c4db3b5].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[3ff995a4-c1e3-478a-8260-7b105950a572].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[442653b1-2d8c-4d82-b784-1bc2d8a1c062].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[46d4439b-964a-416c-a61a-34bcce8905d1].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[60a84799-fbef-4971-bd7a-4995f16d598d].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[80041863-ccb8-4c9c-9663-70b3dc5a3418].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[NewUnit0].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[NewUnit1].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[NewUnit2].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[NewUnit3].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[NewUnit4].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[NewUnit5].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[a05ec161-f48f-4e9a-9d69-8ea15771d6f6].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[b917e1ce-13e8-418d-a202-39cf5bf2e4bc].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[e6f107cf-f91b-4260-b287-a6b1554f76d0].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[e82d29a8-05af-43e6-b253-321bd7b9b70c].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[f08c6e8f-8282-4abd-b823-5d6bb046dbbd].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.propertyUnit[f102e861-e6eb-4f1c-8f79-ac21fc153c4e].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.assignWorkTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="派工工时" />
+            <lang locale="zh_HK" value="派工工時" />
+            <lang locale="zh_TW" value="派工工時" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.assignWorkTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.assignWorkTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.model.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="适用车型" />
+            <lang locale="zh_HK" value="適用車型" />
+            <lang locale="zh_TW" value="適用車型" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.model.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.model.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.model.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.seq].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据分录序列号" />
+            <lang locale="zh_HK" value="單據分錄序列號" />
+            <lang locale="zh_TW" value="單據分錄序列號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.seq].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.seq].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.seq].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.seq].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.seq].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.series.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="适用车系" />
+            <lang locale="zh_HK" value="適用車系" />
+            <lang locale="zh_TW" value="適用車系" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.series.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.series.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.series.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.stdWorkTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="标准工时" />
+            <lang locale="zh_HK" value="標準工時" />
+            <lang locale="zh_TW" value="標準工時" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.stdWorkTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[Entry.stdWorkTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[IsUse].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="禁用状态" />
+            <lang locale="zh_HK" value="禁用狀態" />
+            <lang locale="zh_TW" value="禁用狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[IsUse].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[IsUse].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[brand.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="品牌" />
+            <lang locale="zh_HK" value="品牌" />
+            <lang locale="zh_TW" value="品牌" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[brand.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[brand.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[brand.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[createTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建时间" />
+            <lang locale="zh_HK" value="創建時間" />
+            <lang locale="zh_TW" value="創建時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[createTime].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[createTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[createTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[createTime].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[createTime].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[creator.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建人" />
+            <lang locale="zh_HK" value="創建人" />
+            <lang locale="zh_TW" value="創建人" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[creator.name].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[creator.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[creator.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[creator.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[creator.name].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[desc].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="描述" />
+            <lang locale="zh_HK" value="描述" />
+            <lang locale="zh_TW" value="描述" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[desc].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[desc].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[description].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="描述" />
+            <lang locale="zh_HK" value="描述" />
+            <lang locale="zh_TW" value="描述" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[description].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[description].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[description].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[description].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[description].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[id].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[id].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[id].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[id].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[id].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[isTimeEdit].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工时是否可修改" />
+            <lang locale="zh_HK" value="工時是否可修改" />
+            <lang locale="zh_TW" value="工時是否可修改" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[isTimeEdit].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[isTimeEdit].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[lastUpdateTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改时间" />
+            <lang locale="zh_HK" value="最後修改時間" />
+            <lang locale="zh_TW" value="最後修改時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[lastUpdateTime].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[lastUpdateTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[lastUpdateTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[lastUpdateTime].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[lastUpdateTime].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[lastUpdateUser.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="修改人" />
+            <lang locale="zh_HK" value="修改人" />
+            <lang locale="zh_TW" value="修改人" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[lastUpdateUser.name].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[lastUpdateUser.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[lastUpdateUser.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[lastUpdateUser.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[lastUpdateUser.name].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="名称" />
+            <lang locale="zh_HK" value="名稱" />
+            <lang locale="zh_TW" value="名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[name].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[name].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="编码" />
+            <lang locale="zh_HK" value="編碼" />
+            <lang locale="zh_TW" value="編碼" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[number].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[number].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[number].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[number].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[number].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[orgUnit.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[orgUnit.id].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[orgUnit.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[orgUnit.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[orgUnit.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[orgUnit.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[repairClassify.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修种类" />
+            <lang locale="zh_HK" value="維修種類" />
+            <lang locale="zh_TW" value="維修種類" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[repairClassify.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[repairClassify.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[repairClassify.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[simpleName].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="简称" />
+            <lang locale="zh_HK" value="簡稱" />
+            <lang locale="zh_TW" value="簡稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[simpleName].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[simpleName].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[simpleName].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[simpleName].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[simpleName].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[treeid.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[treeid.id].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[treeid.id].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[treeid.id].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[treeid.id].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[treeid.id].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</joinQuery>
+

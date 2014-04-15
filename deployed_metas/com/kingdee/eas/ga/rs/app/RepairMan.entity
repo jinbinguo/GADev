@@ -309,6 +309,20 @@
                 <key name="name" value="CFAddr" />
             </mappingField>
         </ownProperty>
+        <linkProperty>
+            <name>orgUnit</name>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairMan].properties.linkProperty[orgUnit].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.RepairMan].properties.linkProperty[orgUnit].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="CFOrgUnitID" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="R_RepairMan_AdminOrgUnit_orgUnit" />
+            </relationship>
+        </linkProperty>
     </properties>
     <logicalKey>
         <name>id</name>
@@ -618,12 +632,74 @@
             </formalParameters>
         </event>
     </events>
+    <defaultView>
+        <name />
+        <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairMan].defaultViewalias</alias>
+        <description>entityObject[com.kingdee.eas.ga.rs.app.RepairMan].defaultViewdescription</description>
+    </defaultView>
     <resource>
         <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="送修人" />
             <lang locale="zh_HK" value="送修人" />
             <lang locale="zh_TW" value="送修人" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].defaultViewalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].defaultViewdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].defaultViewextendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].defaultViewextendedProperty.bimTemplateType">
+            <lang locale="en_US" value="BillBase" />
+            <lang locale="zh_CN" value="BillBase" />
+            <lang locale="zh_TW" value="BillBase" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].defaultViewextendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].defaultViewextendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].defaultViewextendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.ga.rs.app.RepairManQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.rs.app.RepairManQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.rs.app.RepairManQuery" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].defaultViewextendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.ga.rs.client.RepairManEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.rs.client.RepairManEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.rs.client.RepairManEditUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].defaultViewextendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].defaultViewextendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].defaultViewextendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.ga.rs.client.RepairManListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.ga.rs.client.RepairManListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.ga.rs.client.RepairManListUI" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].description">
             <lang locale="en_US" value="null" />
@@ -942,10 +1018,15 @@
             <lang locale="zh_HK" value="對象主鍵" />
             <lang locale="zh_TW" value="對象主鍵" />
         </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].extendedProperty.MainOrgFieldName">
+            <lang locale="en_US" value="orgUnit" />
+            <lang locale="zh_CN" value="orgUnit" />
+            <lang locale="zh_TW" value="orgUnit" />
+        </rs>
         <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].extendedProperty.OrgType">
-            <lang locale="en_US" value="NONE" />
-            <lang locale="zh_CN" value="NONE" />
-            <lang locale="zh_TW" value="NONE" />
+            <lang locale="en_US" value="Admin" />
+            <lang locale="zh_CN" value="Admin" />
+            <lang locale="zh_TW" value="Admin" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].extendedProperty.bimTemplateType">
             <lang locale="en_US" value="BillBase" />
@@ -978,6 +1059,11 @@
             <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].extendedProperty.isUseCodeRule">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
@@ -1117,6 +1203,58 @@
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].properties.linkProperty[orgUnit].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].properties.linkProperty[orgUnit].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].properties.linkProperty[orgUnit].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].properties.linkProperty[orgUnit].extendedProperty.dataField">
+            <lang locale="en_US" value="name" />
+            <lang locale="zh_CN" value="name" />
+            <lang locale="zh_TW" value="name" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].properties.linkProperty[orgUnit].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].properties.linkProperty[orgUnit].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].properties.linkProperty[orgUnit].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].properties.linkProperty[orgUnit].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].properties.linkProperty[orgUnit].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].properties.linkProperty[orgUnit].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairMan].properties.ownProperty[addr].alias">
             <lang locale="en_US" value="null" />

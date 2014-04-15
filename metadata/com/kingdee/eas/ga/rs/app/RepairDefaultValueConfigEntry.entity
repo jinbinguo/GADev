@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entityObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.ga.rs.app</package>
+    <name>RepairDefaultValueConfigEntry</name>
+    <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].alias</alias>
+    <description>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].description</description>
+    <userDefined>true</userDefined>
+    <bosType>0D8F2048</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.ga.rs.RepairDefaultValueConfigEntry</businessImplName>
+    <businessControllerName>com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntryController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getValue].description</description>
+            <innerID>03ac0885-d059-4742-bc30-5c283c09868d</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getValue].description</description>
+            <innerID>c46e5580-deef-4cea-a359-6c6aff907947</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>selector</name>
+                    <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getValue].parameters.parameter[selector].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getValue].parameters.parameter[selector].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SelectorItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getValue].description</description>
+            <innerID>d1bf95fc-94dd-44f1-a41e-6d8f9dee0b09</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getValue].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getValue].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getCollection].description</description>
+            <innerID>df98b830-ff16-4d49-8c56-5ee2fc20462f</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getCollection].description</description>
+            <innerID>d19041bb-63f5-41f4-b370-7a9f802eb658</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>view</name>
+                    <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getCollection].parameters.parameter[view].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getCollection].parameters.parameter[view].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.EntityViewInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getCollection].description</description>
+            <innerID>5c7d4624-c55c-4833-9a1f-025cbd284319</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getCollection].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getCollection].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <isAbstract>false</isAbstract>
+    <bizUnitPK>com.kingdee.eas.ga.rs.RepairDefaultValueConfig</bizUnitPK>
+    <baseEntity>
+        <key name="package" value="com.kingdee.eas.myframework.template.base.app" />
+        <key name="name" value="SimpleBizBillEntry" />
+    </baseEntity>
+    <table>
+        <key name="package" value="com.kingdee.eas.ga.rs.app" />
+        <key name="name" value="CT_RS_RepairDVCE" />
+    </table>
+    <properties>
+        <linkProperty>
+            <name>Parent</name>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].properties.linkProperty[Parent].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].properties.linkProperty[Parent].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FParentID" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="R_RepairDefaultValueConfig_RepairDefaultValueConfigEntry_entrys" />
+            </relationship>
+        </linkProperty>
+        <linkProperty>
+            <name>brand</name>
+            <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].properties.linkProperty[brand].alias</alias>
+            <description>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].properties.linkProperty[brand].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="CFBrandID" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="R_RepairDefaultValueConfigEntry_Brand_brand" />
+            </relationship>
+        </linkProperty>
+    </properties>
+    <logicalKey>
+        <name>id</name>
+        <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].logicalKey[id].alias</alias>
+        <description>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].logicalKey[id].description</description>
+        <keyClass>com.kingdee.bos.dao.IObjectPK</keyClass>
+        <userDefined>true</userDefined>
+        <keyProperties>
+            <baseProperty>
+                <key name="name" value="id" />
+            </baseProperty>
+        </keyProperties>
+    </logicalKey>
+    <defaultView>
+        <name />
+        <alias>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].defaultViewalias</alias>
+        <description>entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].defaultViewdescription</description>
+    </defaultView>
+    <resource>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="分录" />
+            <lang locale="zh_HK" value="分錄" />
+            <lang locale="zh_TW" value="分錄" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].defaultViewalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].defaultViewdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="分录" />
+            <lang locale="zh_HK" value="分錄" />
+            <lang locale="zh_TW" value="分錄" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].extendedProperty.bimTemplateType">
+            <lang locale="en_US" value="BillBase" />
+            <lang locale="zh_CN" value="BillBase" />
+            <lang locale="zh_TW" value="BillBase" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].logicalKey[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].logicalKey[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getCollection].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getCollection].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getCollection].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getCollection].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getCollection].parameters.parameter[view].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getCollection].parameters.parameter[view].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getValue].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getValue].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getValue].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getValue].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getValue].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getValue].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getValue].parameters.parameter[selector].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].methods.method[getValue].parameters.parameter[selector].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].properties.linkProperty[Parent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据头" />
+            <lang locale="zh_HK" value="單據頭" />
+            <lang locale="zh_TW" value="單據頭" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].properties.linkProperty[Parent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据头" />
+            <lang locale="zh_HK" value="單據頭" />
+            <lang locale="zh_TW" value="單據頭" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].properties.linkProperty[Parent].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].properties.linkProperty[Parent].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].properties.linkProperty[Parent].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].properties.linkProperty[Parent].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].properties.linkProperty[brand].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="品牌" />
+            <lang locale="zh_HK" value="品牌" />
+            <lang locale="zh_TW" value="品牌" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].properties.linkProperty[brand].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="品牌" />
+            <lang locale="zh_HK" value="品牌" />
+            <lang locale="zh_TW" value="品牌" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].properties.linkProperty[brand].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].properties.linkProperty[brand].extendedProperty.dataField">
+            <lang locale="en_US" value="name" />
+            <lang locale="zh_CN" value="name" />
+            <lang locale="zh_TW" value="name" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].properties.linkProperty[brand].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].properties.linkProperty[brand].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].properties.linkProperty[brand].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].properties.linkProperty[brand].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].properties.linkProperty[brand].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.ga.rs.app.RepairDefaultValueConfigEntry].properties.linkProperty[brand].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</entityObject>
+

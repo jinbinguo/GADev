@@ -139,6 +139,19 @@
                 <key name="name" value="Brand" />
             </entityRef>
         </subEntity>
+        <subEntity>
+            <name>orgUnit</name>
+            <alias>joinQuery[com.kingdee.eas.ga.rs.app.RepairManQuery].subObjects.subEntity[orgUnit].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairManQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="AdminOrgUnit" />
+            </entityRef>
+        </subEntity>
     </subObjects>
     <units>
         <queryField>
@@ -1908,6 +1921,130 @@
                 <key name="name" value="RepairManQuery" />
             </query>
         </propertyUnit>
+        <queryField>
+            <name>orgUnit.name</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairManQuery].units.queryField[orgUnit.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>39315a31-801b-4a33-bab5-4637904bd3ba</key>
+                    <parentUnit>
+                        <key name="name" value="orgUnit.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="orgUnit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairManQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>288aa6d8-11a3-4bf3-9b48-3b742c53b265</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairManQuery].units.propertyUnit[288aa6d8-11a3-4bf3-9b48-3b742c53b265].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>b36a284e-8731-4a85-94cc-8e56c8a93d58</key>
+                    <parentUnit>
+                        <key name="name" value="288aa6d8-11a3-4bf3-9b48-3b742c53b265" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairMan" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="orgUnit" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairManQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>9d0e7486-8c6c-4e6d-ab88-1923bede7fad</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairManQuery].units.propertyUnit[9d0e7486-8c6c-4e6d-ab88-1923bede7fad].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>dd13d7ca-97d2-4c1e-840b-81b4ffdea0ff</key>
+                    <parentUnit>
+                        <key name="name" value="9d0e7486-8c6c-4e6d-ab88-1923bede7fad" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="orgUnit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairManQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>orgUnit.id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.RepairManQuery].units.queryField[orgUnit.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>ba735553-6171-4cf1-b084-f7e0616cb5c6</key>
+                    <parentUnit>
+                        <key name="name" value="orgUnit.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="orgUnit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairManQuery" />
+            </query>
+        </queryField>
     </units>
     <defaultFilter>
         <name>defaultFilter</name>
@@ -2224,6 +2361,36 @@
                 <key name="name" value="RepairManQuery" />
             </query>
         </join>
+        <join>
+            <name>697b6b7b-33eb-405b-abf8-686a2b27a8b6</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="RepairMan" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="orgUnit" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>7136c160-9fc2-4619-ab36-6cff2864149f</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="288aa6d8-11a3-4bf3-9b48-3b742c53b265" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="9d0e7486-8c6c-4e6d-ab88-1923bede7fad" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="697b6b7b-33eb-405b-abf8-686a2b27a8b6" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="RepairManQuery" />
+            </query>
+        </join>
     </joins>
     <resource>
         <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairManQuery].alias">
@@ -2368,6 +2535,12 @@
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairManQuery].subObjects.subEntity[orgUnit].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
         <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairManQuery].subObjects.subEntity[series].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
@@ -2392,6 +2565,12 @@
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairManQuery].units.propertyUnit[288aa6d8-11a3-4bf3-9b48-3b742c53b265].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
         <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairManQuery].units.propertyUnit[4537e3cd-646f-42bc-bb67-4e744d2212df].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
@@ -2411,6 +2590,12 @@
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairManQuery].units.propertyUnit[9117260d-f8b0-432b-93b0-b41ce07af676].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairManQuery].units.propertyUnit[9d0e7486-8c6c-4e6d-ab88-1923bede7fad].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
@@ -3147,6 +3332,38 @@
             <lang locale="zh_TW" value="false" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairManQuery].units.queryField[number].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairManQuery].units.queryField[orgUnit.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairManQuery].units.queryField[orgUnit.id].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairManQuery].units.queryField[orgUnit.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairManQuery].units.queryField[orgUnit.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairManQuery].units.queryField[orgUnit.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.RepairManQuery].units.queryField[orgUnit.name].extendedProperty.isUsingF7">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />

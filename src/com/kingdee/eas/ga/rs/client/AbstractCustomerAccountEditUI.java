@@ -54,6 +54,7 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contrepairSaleType;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contsettlementType;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contatsCustomer;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contorgUnit;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtretailSaleType;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtretailDiscountRate;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtrepairDiscountRate;
@@ -62,6 +63,7 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
     protected com.kingdee.bos.ctrl.swing.KDTextField txtrepairSaleType;
     protected com.kingdee.bos.ctrl.swing.KDComboBox settlementType;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtatsCustomer;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtorgUnit;
     protected com.kingdee.eas.ga.rs.CustomerAccountInfo editData = null;
     /**
      * output class constructor
@@ -90,6 +92,7 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         this.contrepairSaleType = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contsettlementType = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contatsCustomer = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contorgUnit = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.txtretailSaleType = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.txtretailDiscountRate = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.txtrepairDiscountRate = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
@@ -98,6 +101,7 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         this.txtrepairSaleType = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.settlementType = new com.kingdee.bos.ctrl.swing.KDComboBox();
         this.prmtatsCustomer = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.prmtorgUnit = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.contretailSaleType.setName("contretailSaleType");
         this.contretailDiscountRate.setName("contretailDiscountRate");
         this.contrepairDiscountRate.setName("contrepairDiscountRate");
@@ -106,6 +110,7 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         this.contrepairSaleType.setName("contrepairSaleType");
         this.contsettlementType.setName("contsettlementType");
         this.contatsCustomer.setName("contatsCustomer");
+        this.contorgUnit.setName("contorgUnit");
         this.txtretailSaleType.setName("txtretailSaleType");
         this.txtretailDiscountRate.setName("txtretailDiscountRate");
         this.txtrepairDiscountRate.setName("txtrepairDiscountRate");
@@ -114,6 +119,7 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         this.txtrepairSaleType.setName("txtrepairSaleType");
         this.settlementType.setName("settlementType");
         this.prmtatsCustomer.setName("prmtatsCustomer");
+        this.prmtorgUnit.setName("prmtorgUnit");
         // CoreUI		
         this.btnPrint.setVisible(false);		
         this.btnPrintPreview.setVisible(false);		
@@ -162,6 +168,11 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         this.contatsCustomer.setBoundLabelLength(100);		
         this.contatsCustomer.setBoundLabelUnderline(true);		
         this.contatsCustomer.setVisible(true);
+        // contorgUnit		
+        this.contorgUnit.setBoundLabelText(resHelper.getString("contorgUnit.boundLabelText"));		
+        this.contorgUnit.setBoundLabelLength(100);		
+        this.contorgUnit.setBoundLabelUnderline(true);		
+        this.contorgUnit.setVisible(true);
         // txtretailSaleType		
         this.txtretailSaleType.setHorizontalAlignment(2);		
         this.txtretailSaleType.setMaxLength(100);		
@@ -187,7 +198,7 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         this.txttypeCode.setMaxLength(100);		
         this.txttypeCode.setRequired(true);
         // prmtfinCustomer		
-        this.prmtfinCustomer.setQueryInfo("com.kingdee.eas.basedata.master.cssp.app.CustomerInfoQuery");		
+        this.prmtfinCustomer.setQueryInfo("com.kingdee.eas.basedata.master.cssp.app.F7CustomerCompanyQuery");		
         this.prmtfinCustomer.setEditable(true);		
         this.prmtfinCustomer.setDisplayFormat("$name$");		
         this.prmtfinCustomer.setEditFormat("$number$");		
@@ -208,7 +219,18 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         this.prmtatsCustomer.setEditFormat("$number$");		
         this.prmtatsCustomer.setCommitFormat("$number$");		
         this.prmtatsCustomer.setRequired(false);
-        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {txtNumber,txtName,txtSimpleName,txtDescription,boxDeletedStatus,chkscheduled,txtretailSaleType,txtretailDiscountRate,txtrepairSaleType,txtrepairDiscountRate,txttypeCode,prmtfinCustomer,settlementType,prmtatsCustomer}));
+        // prmtorgUnit		
+        this.prmtorgUnit.setQueryInfo("com.kingdee.eas.basedata.org.app.AdminItemQuery");		
+        this.prmtorgUnit.setVisible(true);		
+        this.prmtorgUnit.setEditable(true);		
+        this.prmtorgUnit.setDisplayFormat("$name$");		
+        this.prmtorgUnit.setEditFormat("$number$");		
+        this.prmtorgUnit.setCommitFormat("$number$");		
+        this.prmtorgUnit.setRequired(false);		
+        this.prmtorgUnit.setEnabled(false);
+        		setOrgF7(prmtorgUnit,com.kingdee.eas.basedata.org.OrgType.getEnum("Admin"));
+					
+        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {txtNumber,txtName,txtSimpleName,txtDescription,boxDeletedStatus,chkscheduled,txtretailSaleType,txtretailDiscountRate,txtrepairSaleType,txtrepairDiscountRate,txttypeCode,prmtfinCustomer,settlementType,prmtatsCustomer,prmtorgUnit}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding
 		registerBindings();
@@ -244,9 +266,9 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         this.add(kDLabelContainer3, null);
         kDLabelContainer4.setBounds(new Rectangle(605, 67, 270, 19));
         this.add(kDLabelContainer4, null);
-        contdeletedStatus.setBounds(new Rectangle(10, 141, 270, 19));
+        contdeletedStatus.setBounds(new Rectangle(10, 164, 270, 19));
         this.add(contdeletedStatus, null);
-        chkscheduled.setBounds(new Rectangle(293, 141, 270, 19));
+        chkscheduled.setBounds(new Rectangle(293, 164, 270, 19));
         this.add(chkscheduled, null);
         contretailSaleType.setBounds(new Rectangle(10, 33, 270, 19));
         this.add(contretailSaleType, null);
@@ -264,6 +286,8 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         this.add(contsettlementType, null);
         contatsCustomer.setBounds(new Rectangle(293, 115, 270, 19));
         this.add(contatsCustomer, null);
+        contorgUnit.setBounds(new Rectangle(10, 140, 270, 19));
+        this.add(contorgUnit, null);
         //kDLabelContainer1
         kDLabelContainer1.setBoundEditor(txtNumber);
         //kDLabelContainer2
@@ -290,6 +314,8 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         contsettlementType.setBoundEditor(settlementType);
         //contatsCustomer
         contatsCustomer.setBoundEditor(prmtatsCustomer);
+        //contorgUnit
+        contorgUnit.setBoundEditor(prmtorgUnit);
 
     }
 
@@ -413,7 +439,8 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
 		dataBinder.registerBinding("finCustomer", com.kingdee.eas.basedata.master.cssp.CustomerInfo.class, this.prmtfinCustomer, "data");
 		dataBinder.registerBinding("repairSaleType", String.class, this.txtrepairSaleType, "text");
 		dataBinder.registerBinding("settlementType", com.kingdee.eas.ga.rs.SettlementTypeEnum.class, this.settlementType, "selectedItem");
-		dataBinder.registerBinding("atsCustomer", com.kingdee.eas.auto4s.bdm.pbd.CustomerInfo.class, this.prmtatsCustomer, "data");		
+		dataBinder.registerBinding("atsCustomer", com.kingdee.eas.auto4s.bdm.pbd.CustomerInfo.class, this.prmtatsCustomer, "data");
+		dataBinder.registerBinding("orgUnit", com.kingdee.eas.basedata.org.AdminOrgUnitInfo.class, this.prmtorgUnit, "data");		
 	}
 	//Regiester UI State
 	private void registerUIState(){
@@ -475,7 +502,7 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
     protected void removeByPK(IObjectPK pk) throws Exception {
     	IObjectValue editData = this.editData;
     	super.removeByPK(pk);
-    	recycleNumberByOrg(editData,"NONE",editData.getString("number"));
+    	recycleNumberByOrg(editData,"Admin",editData.getString("number"));
     }
     
     protected void recycleNumberByOrg(IObjectValue editData,String orgType,String number) {
@@ -531,13 +558,21 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
             }
         }
     }
+			protected com.kingdee.eas.basedata.org.OrgType getMainBizOrgType() {
+			return com.kingdee.eas.basedata.org.OrgType.getEnum("Admin");
+		}
+
+	protected KDBizPromptBox getMainBizOrg() {
+		return prmtorgUnit;
+}
+
 
     /**
      * output loadFields method
      */
     public void loadFields()
     {
-        		setAutoNumberByOrg("NONE");
+        		setAutoNumberByOrg("Admin");
         dataBinder.loadFields();
     }
 		protected void setOrgF7(KDBizPromptBox f7,com.kingdee.eas.basedata.org.OrgType orgType) throws Exception
@@ -573,7 +608,8 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
 		getValidateHelper().registerBindProperty("finCustomer", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("repairSaleType", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("settlementType", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("atsCustomer", ValidateHelper.ON_SAVE);    		
+		getValidateHelper().registerBindProperty("atsCustomer", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("orgUnit", ValidateHelper.ON_SAVE);    		
 	}
 
 
@@ -642,6 +678,15 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
         	sic.add(new SelectorItemInfo("atsCustomer.number"));
         	sic.add(new SelectorItemInfo("atsCustomer.name"));
 		}
+		if(selectorAll.equalsIgnoreCase("true"))
+		{
+			sic.add(new SelectorItemInfo("orgUnit.*"));
+		}
+		else{
+        	sic.add(new SelectorItemInfo("orgUnit.id"));
+        	sic.add(new SelectorItemInfo("orgUnit.number"));
+        	sic.add(new SelectorItemInfo("orgUnit.name"));
+		}
         return sic;
     }        
 
@@ -675,6 +720,9 @@ public abstract class AbstractCustomerAccountEditUI extends com.kingdee.eas.myfr
     protected IObjectValue createNewData()
     {
         com.kingdee.eas.ga.rs.CustomerAccountInfo objectValue = new com.kingdee.eas.ga.rs.CustomerAccountInfo();
+				if (com.kingdee.eas.common.client.SysContext.getSysContext().getCurrentOrgUnit(com.kingdee.eas.basedata.org.OrgType.getEnum("Admin")) != null)
+			objectValue.put("orgUnit",com.kingdee.eas.common.client.SysContext.getSysContext().getCurrentOrgUnit(com.kingdee.eas.basedata.org.OrgType.getEnum("Admin")));
+ 
         objectValue.setCreator((com.kingdee.eas.base.permission.UserInfo)(com.kingdee.eas.common.client.SysContext.getSysContext().getCurrentUser()));		
         return objectValue;
     }

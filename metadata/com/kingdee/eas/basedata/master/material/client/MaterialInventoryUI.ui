@@ -1,0 +1,1072 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uiObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.basedata.master.material.client</package>
+    <name>MaterialInventoryUI</name>
+    <alias>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].alias</alias>
+    <components>
+        <component>
+            <name>prmtCreator</name>
+            <tabIndex>47</tabIndex>
+        </component>
+        <component>
+            <name>prmtLastUpdateUser</name>
+            <tabIndex>49</tabIndex>
+        </component>
+        <component>
+            <name>comboStatus</name>
+            <tabIndex>44</tabIndex>
+        </component>
+        <component>
+            <name>prmtOrgUnit</name>
+            <tabIndex>45</tabIndex>
+        </component>
+        <component>
+            <name>prmtFreezeOrgUnit</name>
+            <tabIndex>46</tabIndex>
+        </component>
+        <component>
+            <name>txtQtySafety</name>
+            <tabIndex>7</tabIndex>
+        </component>
+        <component>
+            <name>txtQtyMin</name>
+            <tabIndex>8</tabIndex>
+        </component>
+        <component>
+            <name>txtQtyMax</name>
+            <tabIndex>9</tabIndex>
+        </component>
+        <component>
+            <name>txtQtyMinPackage</name>
+            <tabIndex>18</tabIndex>
+        </component>
+        <component>
+            <name>comboAbcType</name>
+            <tabIndex>19</tabIndex>
+        </component>
+        <component>
+            <name>comboIssuePriorityMode</name>
+            <tabIndex>21</tabIndex>
+        </component>
+        <component>
+            <name>prmtUnit</name>
+            <tabIndex>22</tabIndex>
+        </component>
+        <component>
+            <name>comboPeriodValidUnit</name>
+            <tabIndex>25</tabIndex>
+        </component>
+        <component>
+            <name>comboAheadUnit</name>
+            <tabIndex>29</tabIndex>
+        </component>
+        <component>
+            <name>pkLastUpdateTime</name>
+            <tabIndex>50</tabIndex>
+        </component>
+        <component>
+            <name>pkCreateTime</name>
+            <tabIndex>48</tabIndex>
+        </component>
+        <component>
+            <name>spDaysBottom</name>
+            <tabIndex>10</tabIndex>
+        </component>
+        <component>
+            <name>kDSPeriodValid</name>
+            <tabIndex>24</tabIndex>
+        </component>
+        <component>
+            <name>kDSInWarehsAhead</name>
+            <tabIndex>26</tabIndex>
+        </component>
+        <component>
+            <name>kDSPrepWarnAhead</name>
+            <tabIndex>28</tabIndex>
+        </component>
+        <component>
+            <name>spOutWarehsAhead</name>
+            <tabIndex>27</tabIndex>
+        </component>
+        <component>
+            <name>spInvDaysTop</name>
+            <tabIndex>11</tabIndex>
+        </component>
+        <component>
+            <name>spDaysTurnover</name>
+            <tabIndex>12</tabIndex>
+        </component>
+        <component>
+            <name>prmtInvPlanner</name>
+            <tabIndex>30</tabIndex>
+        </component>
+        <component>
+            <name>chkIsControl</name>
+            <tabIndex>6</tabIndex>
+        </component>
+        <component>
+            <name>chkIsNegative</name>
+            <constraints>245,47,140,19</constraints>
+            <tabIndex>13</tabIndex>
+        </component>
+        <component>
+            <name>chkIsBatchNo</name>
+            <constraints>495,47,140,19</constraints>
+            <tabIndex>14</tabIndex>
+        </component>
+        <component>
+            <name>chkIsLotNumber</name>
+            <tabIndex>16</tabIndex>
+        </component>
+        <component>
+            <name>chkIsBarcode</name>
+            <constraints>245,68,140,19</constraints>
+            <tabIndex>17</tabIndex>
+        </component>
+        <component>
+            <name>chkIsSequenceNo</name>
+            <constraints>495,68,140,19</constraints>
+            <tabIndex>15</tabIndex>
+        </component>
+        <component>
+            <name>chkIsCompages</name>
+            <tabIndex>20</tabIndex>
+        </component>
+        <component>
+            <name>chkIsPeriodValid</name>
+            <constraints>245,89,140,19</constraints>
+            <tabIndex>23</tabIndex>
+        </component>
+        <component>
+            <name>contAbcType</name>
+            <constraints>8,121,209,19</constraints>
+        </component>
+        <component>
+            <name>contUnit</name>
+            <constraints>245,121,209,19</constraints>
+        </component>
+        <component>
+            <name>contQtySafety</name>
+            <constraints>8,144,209,19</constraints>
+        </component>
+        <component>
+            <name>kDLabelContainer1</name>
+            <constraints>245,144,209,19</constraints>
+        </component>
+        <component>
+            <name>contQtyMax</name>
+            <constraints>8,167,209,19</constraints>
+        </component>
+        <component>
+            <name>contQtyMin</name>
+            <constraints>245,167,209,19</constraints>
+        </component>
+        <component>
+            <name>contPeriodValid</name>
+            <constraints>8,190,209,19</constraints>
+        </component>
+        <component>
+            <name>contPeriodValidUnit</name>
+            <constraints>245,190,209,19</constraints>
+        </component>
+        <component>
+            <name>contInWarehsAhead</name>
+            <constraints>8,213,209,19</constraints>
+        </component>
+        <component>
+            <name>contOutWarehsAhead</name>
+            <constraints>245,213,209,19</constraints>
+        </component>
+        <component>
+            <name>contPrepWarnAhead</name>
+            <constraints>8,236,209,19</constraints>
+        </component>
+        <component>
+            <name>contAheadUnit</name>
+            <constraints>245,236,209,19</constraints>
+        </component>
+        <component>
+            <name>contDaysBottom</name>
+            <constraints>8,259,209,19</constraints>
+        </component>
+        <component>
+            <name>contDaysTop</name>
+            <constraints>245,259,209,19</constraints>
+        </component>
+        <component>
+            <name>contDaysTurnover</name>
+            <constraints>8,282,209,19</constraints>
+        </component>
+        <component>
+            <name>contIssuePriorityMode</name>
+            <constraints>245,282,209,19</constraints>
+        </component>
+        <component>
+            <name>contQtyMinPackage</name>
+            <constraints>8,305,209,19</constraints>
+        </component>
+        <component>
+            <name>kDLabelContainer2</name>
+            <constraints>676,45,270,19</constraints>
+        </component>
+        <component>
+            <name>kDLabelContainer3</name>
+            <constraints>679,26,270,19</constraints>
+        </component>
+        <component>
+            <name>kDLabelContainer4</name>
+            <constraints>677,78,203,19</constraints>
+        </component>
+        <component>
+            <name>kDLabelContainer5</name>
+            <constraints>678,57,270,19</constraints>
+        </component>
+        <component>
+            <name>kDLabelContainer6</name>
+            <constraints>677,98,270,19</constraints>
+        </component>
+        <component>
+            <name>kDLabelContainer7</name>
+            <constraints>678,6,270,19</constraints>
+        </component>
+        <component>
+            <name>comboPlanningMode</name>
+            <tabIndex>31</tabIndex>
+        </component>
+        <component>
+            <name>txtReBookQty</name>
+            <tabIndex>32</tabIndex>
+        </component>
+        <component>
+            <name>txtConsumeSpeed</name>
+            <tabIndex>33</tabIndex>
+        </component>
+        <component>
+            <name>comboBatchPolicy</name>
+            <tabIndex>35</tabIndex>
+        </component>
+        <component>
+            <name>txtFixationBatchQty</name>
+            <tabIndex>36</tabIndex>
+        </component>
+        <component>
+            <name>spinnerPurchAheadDate</name>
+            <tabIndex>34</tabIndex>
+        </component>
+        <component>
+            <name>contDefaultWare</name>
+            <constraints>245,305,209,19</constraints>
+        </component>
+        <component>
+            <name>prmtDefaultWare</name>
+            <tabIndex>37</tabIndex>
+        </component>
+        <component>
+            <name>contDaysPlanTurnover</name>
+            <constraints>8,328,209,19</constraints>
+        </component>
+        <component>
+            <name>txtDaysPlanTurnover</name>
+            <tabIndex>38</tabIndex>
+        </component>
+        <component>
+            <name>kDLabelContainer8</name>
+            <constraints>244,350,209,19</constraints>
+        </component>
+        <component>
+            <name>kDLabel1</name>
+            <constraints>709,121,13,19</constraints>
+        </component>
+        <component>
+            <name>txtCheapRate</name>
+            <tabIndex>39</tabIndex>
+        </component>
+        <component>
+            <name>chkIsCheck</name>
+            <constraints>495,89,140,19</constraints>
+            <tabIndex>41</tabIndex>
+        </component>
+        <component>
+            <name>kDLabelContainer9</name>
+            <constraints>8,350,209,19</constraints>
+        </component>
+        <component>
+            <name>prmtQualityOrg</name>
+            <tabIndex>40</tabIndex>
+        </component>
+        <component>
+            <name>conToolRate</name>
+            <constraints>495,121,209,19</constraints>
+        </component>
+        <component>
+            <name>txtToolRate</name>
+            <tabIndex>42</tabIndex>
+        </component>
+        <component>
+            <name>kDLabelContainer10</name>
+            <constraints>245,328,209,19</constraints>
+        </component>
+        <component>
+            <name>prmtDefaultlocation</name>
+            <tabIndex>43</tabIndex>
+        </component>
+        <component>
+            <name>contCostQty</name>
+            <alias>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[contCostQty].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>496,167,209,19</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[contCostQty].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[contCostQty].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[contCostQty].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[contCostQty].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="kDPanel1" />
+            </parent>
+        </component>
+        <component>
+            <name>contCostPrice</name>
+            <alias>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[contCostPrice].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>496,144,209,19</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[contCostPrice].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[contCostPrice].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[contCostPrice].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[contCostPrice].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="kDPanel1" />
+            </parent>
+        </component>
+        <component>
+            <name>kdtMaterialLoc</name>
+            <alias>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[kdtMaterialLoc].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.kdf.table.KDTable</classType>
+            <isContainer>false</isContainer>
+            <constraints>496,195,208,172</constraints>
+            <tabIndex>53</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>formatXml</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[kdtMaterialLoc].properties.property[formatXml].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="kDPanel1" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>seq.text</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>MaterialLoc.seq</bindingField>
+                    <fieldType>int</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+                <propertyBinding>
+                    <propertyName>userObject</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>MaterialLoc</bindingField>
+                    <fieldType>com.kingdee.eas.basedata.master.material.MaterialInventoryMaterialLocCollection</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+                <propertyBinding>
+                    <propertyName>loc.text</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>MaterialLoc.loc</bindingField>
+                    <fieldType>String</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+                <propertyBinding>
+                    <propertyName>bmwLoc.text</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>MaterialLoc.bmwLoc</bindingField>
+                    <fieldType>com.kingdee.util.enums.Enum</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>txtCostQty</name>
+            <alias>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostQty].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDFormattedTextField</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>52</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>horizontalAlignment</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostQty].properties.property[horizontalAlignment].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>dataType</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostQty].properties.property[dataType].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>supportedEmpty</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostQty].properties.property[supportedEmpty].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>minimumValue</name>
+                    <type>java.math.BigDecimal</type>
+                    <value>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostQty].properties.property[minimumValue].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>maximumValue</name>
+                    <type>java.math.BigDecimal</type>
+                    <value>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostQty].properties.property[maximumValue].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>precision</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostQty].properties.property[precision].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>required</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostQty].properties.property[required].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contCostQty" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>value</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>CostQty</bindingField>
+                    <fieldType>java.math.BigDecimal</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>txtCostPrice</name>
+            <alias>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostPrice].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDFormattedTextField</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>51</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>horizontalAlignment</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostPrice].properties.property[horizontalAlignment].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>dataType</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostPrice].properties.property[dataType].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>supportedEmpty</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostPrice].properties.property[supportedEmpty].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>minimumValue</name>
+                    <type>java.math.BigDecimal</type>
+                    <value>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostPrice].properties.property[minimumValue].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>maximumValue</name>
+                    <type>java.math.BigDecimal</type>
+                    <value>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostPrice].properties.property[maximumValue].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>precision</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostPrice].properties.property[precision].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>required</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostPrice].properties.property[required].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contCostPrice" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>value</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>CostPrice</bindingField>
+                    <fieldType>java.math.BigDecimal</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+    </components>
+    <statuses>
+        <status>
+            <name>ADDNEW</name>
+            <userDefined>true</userDefined>
+        </status>
+        <status>
+            <name>EDIT</name>
+            <userDefined>true</userDefined>
+        </status>
+        <status>
+            <name>VIEW</name>
+            <userDefined>true</userDefined>
+        </status>
+    </statuses>
+    <resource>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[chkIsBarcode].alias">
+            <lang locale="zh_CN" value="条码管理" />
+            <lang locale="zh_HK" value="條碼管理" />
+            <lang locale="zh_TW" value="條碼管理" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[chkIsBatchNo].alias">
+            <lang locale="zh_CN" value="使用批号管理" />
+            <lang locale="zh_HK" value="使用批號管理" />
+            <lang locale="zh_TW" value="使用批號管理" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[chkIsCheck].alias">
+            <lang locale="zh_CN" value="检验" />
+            <lang locale="zh_HK" value="檢驗" />
+            <lang locale="zh_TW" value="檢驗" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[chkIsCompages].alias">
+            <lang locale="zh_CN" value="组合件" />
+            <lang locale="zh_HK" value="組合件" />
+            <lang locale="zh_TW" value="組合件" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[chkIsControl].alias">
+            <lang locale="zh_CN" value="库存管理" />
+            <lang locale="zh_HK" value="庫存管理" />
+            <lang locale="zh_TW" value="庫存管理" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[chkIsLotNumber].alias">
+            <lang locale="zh_CN" value="批次管理" />
+            <lang locale="zh_HK" value="批次管理" />
+            <lang locale="zh_TW" value="批次管理" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[chkIsNegative].alias">
+            <lang locale="zh_CN" value="允许负库存" />
+            <lang locale="zh_HK" value="允許負庫存" />
+            <lang locale="zh_TW" value="允許負庫存" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[chkIsPeriodValid].alias">
+            <lang locale="zh_CN" value="保质期管理" />
+            <lang locale="zh_HK" value="保質期管理" />
+            <lang locale="zh_TW" value="保質期管理" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[chkIsSequenceNo].alias">
+            <lang locale="zh_CN" value="使用序列号管理" />
+            <lang locale="zh_HK" value="使用序列號管理" />
+            <lang locale="zh_TW" value="使用序列號管理" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[comboAbcType].alias">
+            <lang locale="zh_CN" value="ABC分类" />
+            <lang locale="zh_HK" value="ABC分類" />
+            <lang locale="zh_TW" value="ABC分類" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[comboAheadUnit].alias">
+            <lang locale="zh_CN" value="提前期单位" />
+            <lang locale="zh_HK" value="提前期單位" />
+            <lang locale="zh_TW" value="提前期單位" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[comboBatchPolicy].alias">
+            <lang locale="zh_CN" value="批量政策" />
+            <lang locale="zh_HK" value="批量政策" />
+            <lang locale="zh_TW" value="批量政策" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[comboIssuePriorityMode].alias">
+            <lang locale="zh_CN" value="出库优先方式" />
+            <lang locale="zh_HK" value="出庫優先方式" />
+            <lang locale="zh_TW" value="出庫優先方式" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[comboPeriodValidUnit].alias">
+            <lang locale="zh_CN" value="保质期单位" />
+            <lang locale="zh_HK" value="保質期單位" />
+            <lang locale="zh_TW" value="保質期單位" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[comboPlanningMode].alias">
+            <lang locale="zh_CN" value="计划方式" />
+            <lang locale="zh_HK" value="計畫方式" />
+            <lang locale="zh_TW" value="計畫方式" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[comboStatus].alias">
+            <lang locale="zh_CN" value="物料状态" />
+            <lang locale="zh_HK" value="物料狀態" />
+            <lang locale="zh_TW" value="物料狀態" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[contCostPrice].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[contCostPrice].properties.property[boundLabelLength].value">
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_CN" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[contCostPrice].properties.property[boundLabelText].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="成本价" />
+            <lang locale="zh_HK" value="成本價" />
+            <lang locale="zh_TW" value="成本價" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[contCostPrice].properties.property[boundLabelUnderline].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[contCostPrice].properties.property[visible].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[contCostQty].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[contCostQty].properties.property[boundLabelLength].value">
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_CN" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[contCostQty].properties.property[boundLabelText].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="数量" />
+            <lang locale="zh_HK" value="數量" />
+            <lang locale="zh_TW" value="數量" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[contCostQty].properties.property[boundLabelUnderline].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[contCostQty].properties.property[visible].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[kDSInWarehsAhead].alias">
+            <lang locale="zh_CN" value="入库失效提前期" />
+            <lang locale="zh_HK" value="入庫失效提前期" />
+            <lang locale="zh_TW" value="入庫失效提前期" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[kDSPeriodValid].alias">
+            <lang locale="zh_CN" value="保质期" />
+            <lang locale="zh_HK" value="保質期" />
+            <lang locale="zh_TW" value="保質期" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[kDSPrepWarnAhead].alias">
+            <lang locale="zh_CN" value="预警提前期" />
+            <lang locale="zh_HK" value="預警提前期" />
+            <lang locale="zh_TW" value="預警提前期" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[kdtMaterialLoc].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[kdtMaterialLoc].extendedProperty.buildDetail">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[kdtMaterialLoc].properties.property[formatXml].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;DocRoot xmlns:c=&quot;http://www.kingdee.com/Common&quot; xmlns:f=&quot;http://www.kingdee.com/Form&quot; xmlns:t=&quot;http://www.kingdee.com/Table&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.kingdee.com/KDF KDFSchema.xsd&quot; version=&quot;0.0&quot;&gt;&lt;Styles&gt;&lt;c:Style id=&quot;sCol2&quot;&gt;&lt;c:Protection hidden=&quot;true&quot; /&gt;&lt;c:NumberFormat&gt;&amp;amp;int&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;/Styles&gt;&lt;Table id=&quot;KDTable&quot;&gt;&lt;t:Sheet name=&quot;sheet1&quot;&gt;&lt;t:Table t:selectMode=&quot;15&quot; t:mergeMode=&quot;0&quot; t:dataRequestMode=&quot;0&quot; t:pageRowCount=&quot;100&quot;&gt;&lt;t:ColumnGroup&gt;&lt;t:Column t:key=&quot;bmwLoc&quot; t:width=&quot;90&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;1&quot; /&gt;&lt;t:Column t:key=&quot;loc&quot; t:width=&quot;90&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;2&quot; /&gt;&lt;t:Column t:key=&quot;seq&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol2&quot; /&gt;&lt;/t:ColumnGroup&gt;&lt;t:Head&gt;&lt;t:Row t:name=&quot;header&quot; t:height=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot;&gt;&lt;t:Cell&gt;宝马仓库&lt;/t:Cell&gt;&lt;t:Cell&gt;货位&lt;/t:Cell&gt;&lt;t:Cell&gt;单据分录序列号&lt;/t:Cell&gt;&lt;/t:Row&gt;&lt;/t:Head&gt;&lt;/t:Table&gt;&lt;t:SheetOptions&gt;&lt;t:MergeBlocks&gt;&lt;t:Head /&gt;&lt;/t:MergeBlocks&gt;&lt;/t:SheetOptions&gt;&lt;/t:Sheet&gt;&lt;/Table&gt;&lt;/DocRoot&gt;" />
+            <lang locale="zh_HK" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;DocRoot xmlns:c=&quot;http://www.kingdee.com/Common&quot; xmlns:f=&quot;http://www.kingdee.com/Form&quot; xmlns:t=&quot;http://www.kingdee.com/Table&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.kingdee.com/KDF KDFSchema.xsd&quot; version=&quot;0.0&quot;&gt;&lt;Styles&gt;&lt;c:Style id=&quot;sCol2&quot;&gt;&lt;c:Protection hidden=&quot;true&quot; /&gt;&lt;c:NumberFormat&gt;&amp;amp;int&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;/Styles&gt;&lt;Table id=&quot;KDTable&quot;&gt;&lt;t:Sheet name=&quot;sheet1&quot;&gt;&lt;t:Table t:selectMode=&quot;15&quot; t:mergeMode=&quot;0&quot; t:dataRequestMode=&quot;0&quot; t:pageRowCount=&quot;100&quot;&gt;&lt;t:ColumnGroup&gt;&lt;t:Column t:key=&quot;bmwLoc&quot; t:width=&quot;90&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;1&quot; /&gt;&lt;t:Column t:key=&quot;loc&quot; t:width=&quot;90&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;2&quot; /&gt;&lt;t:Column t:key=&quot;seq&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol2&quot; /&gt;&lt;/t:ColumnGroup&gt;&lt;t:Head&gt;&lt;t:Row t:name=&quot;header&quot; t:height=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot;&gt;&lt;t:Cell&gt;寶馬倉庫&lt;/t:Cell&gt;&lt;t:Cell&gt;貨位&lt;/t:Cell&gt;&lt;t:Cell&gt;單據分錄序列號&lt;/t:Cell&gt;&lt;/t:Row&gt;&lt;/t:Head&gt;&lt;/t:Table&gt;&lt;t:SheetOptions&gt;&lt;t:MergeBlocks&gt;&lt;t:Head /&gt;&lt;/t:MergeBlocks&gt;&lt;/t:SheetOptions&gt;&lt;/t:Sheet&gt;&lt;/Table&gt;&lt;/DocRoot&gt;" />
+            <lang locale="zh_TW" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;DocRoot xmlns:c=&quot;http://www.kingdee.com/Common&quot; xmlns:f=&quot;http://www.kingdee.com/Form&quot; xmlns:t=&quot;http://www.kingdee.com/Table&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.kingdee.com/KDF KDFSchema.xsd&quot; version=&quot;0.0&quot;&gt;&lt;Styles&gt;&lt;c:Style id=&quot;sCol2&quot;&gt;&lt;c:Protection hidden=&quot;true&quot; /&gt;&lt;c:NumberFormat&gt;&amp;amp;int&lt;/c:NumberFormat&gt;&lt;/c:Style&gt;&lt;/Styles&gt;&lt;Table id=&quot;KDTable&quot;&gt;&lt;t:Sheet name=&quot;sheet1&quot;&gt;&lt;t:Table t:selectMode=&quot;15&quot; t:mergeMode=&quot;0&quot; t:dataRequestMode=&quot;0&quot; t:pageRowCount=&quot;100&quot;&gt;&lt;t:ColumnGroup&gt;&lt;t:Column t:key=&quot;bmwLoc&quot; t:width=&quot;90&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;1&quot; /&gt;&lt;t:Column t:key=&quot;loc&quot; t:width=&quot;90&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;2&quot; /&gt;&lt;t:Column t:key=&quot;seq&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:index=&quot;-1&quot; t:styleID=&quot;sCol2&quot; /&gt;&lt;/t:ColumnGroup&gt;&lt;t:Head&gt;&lt;t:Row t:name=&quot;header&quot; t:height=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot;&gt;&lt;t:Cell&gt;寶馬倉庫&lt;/t:Cell&gt;&lt;t:Cell&gt;貨位&lt;/t:Cell&gt;&lt;t:Cell&gt;單據分錄序列號&lt;/t:Cell&gt;&lt;/t:Row&gt;&lt;/t:Head&gt;&lt;/t:Table&gt;&lt;t:SheetOptions&gt;&lt;t:MergeBlocks&gt;&lt;t:Head /&gt;&lt;/t:MergeBlocks&gt;&lt;/t:SheetOptions&gt;&lt;/t:Sheet&gt;&lt;/Table&gt;&lt;/DocRoot&gt;" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[pkCreateTime].alias">
+            <lang locale="zh_CN" value="创建时间" />
+            <lang locale="zh_HK" value="創建時間" />
+            <lang locale="zh_TW" value="創建時間" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[pkLastUpdateTime].alias">
+            <lang locale="zh_CN" value="最后修改时间" />
+            <lang locale="zh_HK" value="最後修改時間" />
+            <lang locale="zh_TW" value="最後修改時間" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[prmtCreator].alias">
+            <lang locale="zh_CN" value="创建者" />
+            <lang locale="zh_HK" value="創建者" />
+            <lang locale="zh_TW" value="創建者" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[prmtDefaultWare].alias">
+            <lang locale="zh_CN" value="默认仓库" />
+            <lang locale="zh_HK" value="默認倉庫" />
+            <lang locale="zh_TW" value="默認倉庫" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[prmtDefaultlocation].alias">
+            <lang locale="zh_CN" value="默认库位" />
+            <lang locale="zh_HK" value="默認庫位" />
+            <lang locale="zh_TW" value="默認庫位" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[prmtFreezeOrgUnit].alias">
+            <lang locale="zh_CN" value="禁用组织" />
+            <lang locale="zh_HK" value="禁用組織" />
+            <lang locale="zh_TW" value="禁用組織" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[prmtInvPlanner].alias">
+            <lang locale="zh_CN" value="库存计划员" />
+            <lang locale="zh_HK" value="庫存計畫員" />
+            <lang locale="zh_TW" value="庫存計畫員" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[prmtLastUpdateUser].alias">
+            <lang locale="zh_CN" value="最后修改者" />
+            <lang locale="zh_HK" value="最後修改者" />
+            <lang locale="zh_TW" value="最後修改者" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[prmtOrgUnit].alias">
+            <lang locale="zh_CN" value="业务属性组织" />
+            <lang locale="zh_HK" value="業務屬性組織" />
+            <lang locale="zh_TW" value="業務屬性組織" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[prmtQualityOrg].alias">
+            <lang locale="zh_CN" value="质检组织" />
+            <lang locale="zh_HK" value="質檢組織" />
+            <lang locale="zh_TW" value="質檢組織" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[prmtUnit].alias">
+            <lang locale="zh_CN" value="库存计量单位" />
+            <lang locale="zh_HK" value="庫存計量單位" />
+            <lang locale="zh_TW" value="庫存計量單位" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[spDaysBottom].alias">
+            <lang locale="zh_CN" value="库存下限天数" />
+            <lang locale="zh_HK" value="庫存下限天數" />
+            <lang locale="zh_TW" value="庫存下限天數" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[spDaysTurnover].alias">
+            <lang locale="zh_CN" value="最大周转天数" />
+            <lang locale="zh_HK" value="最大周轉天數" />
+            <lang locale="zh_TW" value="最大周轉天數" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[spInvDaysTop].alias">
+            <lang locale="zh_CN" value="库存上限天数" />
+            <lang locale="zh_HK" value="庫存上限天數" />
+            <lang locale="zh_TW" value="庫存上限天數" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[spOutWarehsAhead].alias">
+            <lang locale="zh_CN" value="出库失效提前期" />
+            <lang locale="zh_HK" value="出庫失效提前期" />
+            <lang locale="zh_TW" value="出庫失效提前期" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[spinnerPurchAheadDate].alias">
+            <lang locale="zh_CN" value="采购提前期（天）" />
+            <lang locale="zh_HK" value="採購提前期（天）" />
+            <lang locale="zh_TW" value="採購提前期（天）" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCheapRate].alias">
+            <lang locale="zh_CN" value="减价比例(%)" />
+            <lang locale="zh_HK" value="減價比例(%)" />
+            <lang locale="zh_TW" value="減價比例(%)" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtConsumeSpeed].alias">
+            <lang locale="zh_CN" value="物料消耗速率" />
+            <lang locale="zh_HK" value="物料消耗速率" />
+            <lang locale="zh_TW" value="物料消耗速率" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostPrice].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="成本价" />
+            <lang locale="zh_HK" value="成本價" />
+            <lang locale="zh_TW" value="成本價" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostPrice].properties.property[dataType].value">
+            <lang locale="en_US" value="1" />
+            <lang locale="zh_CN" value="1" />
+            <lang locale="zh_HK" value="1" />
+            <lang locale="zh_TW" value="1" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostPrice].properties.property[horizontalAlignment].value">
+            <lang locale="en_US" value="2" />
+            <lang locale="zh_CN" value="2" />
+            <lang locale="zh_HK" value="2" />
+            <lang locale="zh_TW" value="2" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostPrice].properties.property[maximumValue].value">
+            <lang locale="en_US" value="&quot;1.0E18&quot;" />
+            <lang locale="zh_CN" value="&quot;1.0E18&quot;" />
+            <lang locale="zh_HK" value="&quot;1.0E18&quot;" />
+            <lang locale="zh_TW" value="&quot;1.0E18&quot;" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostPrice].properties.property[minimumValue].value">
+            <lang locale="en_US" value="&quot;-1.0E18&quot;" />
+            <lang locale="zh_CN" value="&quot;-1.0E18&quot;" />
+            <lang locale="zh_HK" value="&quot;-1.0E18&quot;" />
+            <lang locale="zh_TW" value="&quot;-1.0E18&quot;" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostPrice].properties.property[precision].value">
+            <lang locale="en_US" value="4" />
+            <lang locale="zh_CN" value="4" />
+            <lang locale="zh_HK" value="4" />
+            <lang locale="zh_TW" value="4" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostPrice].properties.property[required].value">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostPrice].properties.property[supportedEmpty].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostQty].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="数量" />
+            <lang locale="zh_HK" value="數量" />
+            <lang locale="zh_TW" value="數量" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostQty].properties.property[dataType].value">
+            <lang locale="en_US" value="1" />
+            <lang locale="zh_CN" value="1" />
+            <lang locale="zh_HK" value="1" />
+            <lang locale="zh_TW" value="1" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostQty].properties.property[horizontalAlignment].value">
+            <lang locale="en_US" value="2" />
+            <lang locale="zh_CN" value="2" />
+            <lang locale="zh_HK" value="2" />
+            <lang locale="zh_TW" value="2" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostQty].properties.property[maximumValue].value">
+            <lang locale="en_US" value="&quot;1.0E18&quot;" />
+            <lang locale="zh_CN" value="&quot;1.0E18&quot;" />
+            <lang locale="zh_HK" value="&quot;1.0E18&quot;" />
+            <lang locale="zh_TW" value="&quot;1.0E18&quot;" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostQty].properties.property[minimumValue].value">
+            <lang locale="en_US" value="&quot;-1.0E18&quot;" />
+            <lang locale="zh_CN" value="&quot;-1.0E18&quot;" />
+            <lang locale="zh_HK" value="&quot;-1.0E18&quot;" />
+            <lang locale="zh_TW" value="&quot;-1.0E18&quot;" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostQty].properties.property[precision].value">
+            <lang locale="en_US" value="4" />
+            <lang locale="zh_CN" value="4" />
+            <lang locale="zh_HK" value="4" />
+            <lang locale="zh_TW" value="4" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostQty].properties.property[required].value">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtCostQty].properties.property[supportedEmpty].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtDaysPlanTurnover].alias">
+            <lang locale="zh_CN" value="目标周转天数" />
+            <lang locale="zh_HK" value="目標周轉天數" />
+            <lang locale="zh_TW" value="目標周轉天數" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtFixationBatchQty].alias">
+            <lang locale="zh_CN" value="固定批量" />
+            <lang locale="zh_HK" value="固定批量" />
+            <lang locale="zh_TW" value="固定批量" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtQtyMax].alias">
+            <lang locale="zh_CN" value="最高库存量" />
+            <lang locale="zh_HK" value="最高庫存量" />
+            <lang locale="zh_TW" value="最高庫存量" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtQtyMinPackage].alias">
+            <lang locale="zh_CN" value="最小包装量" />
+            <lang locale="zh_HK" value="最小包裝量" />
+            <lang locale="zh_TW" value="最小包裝量" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtQtyMin].alias">
+            <lang locale="zh_CN" value="最低库存量" />
+            <lang locale="zh_HK" value="最低庫存量" />
+            <lang locale="zh_TW" value="最低庫存量" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtQtySafety].alias">
+            <lang locale="zh_CN" value="安全库存量" />
+            <lang locale="zh_HK" value="安全庫存量" />
+            <lang locale="zh_TW" value="安全庫存量" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtReBookQty].alias">
+            <lang locale="zh_CN" value="再订货点" />
+            <lang locale="zh_HK" value="再訂貨點" />
+            <lang locale="zh_TW" value="再訂貨點" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].components.component[txtToolRate].alias">
+            <lang locale="zh_CN" value="工具费率" />
+            <lang locale="zh_HK" value="工具費率" />
+            <lang locale="zh_TW" value="工具費率" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</uiObject>
+

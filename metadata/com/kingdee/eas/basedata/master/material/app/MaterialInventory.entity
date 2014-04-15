@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entityObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.basedata.master.material.app</package>
+    <name>MaterialInventory</name>
+    <alias>entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].alias</alias>
+    <methods>
+        <method>
+            <innerID>2e9fe5b0-02e3-4b86-a7f4-196fd1b75e25</innerID>
+            <name>getInventoryInfo</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>5bff9ea2-5eef-49a6-97ed-167a1bf00dd5</innerID>
+            <name>getMaterialsExistInvInfo</name>
+            <configured>false</configured>
+        </method>
+        <method>
+            <innerID>83aff725-2a0e-428b-93d9-9c3b973305fd</innerID>
+            <name>verifyMaterialInvInfos</name>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <properties>
+        <ownProperty>
+            <name>isControl</name>
+            <length>4</length>
+            <precision>4</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>qtySafety</name>
+            <length>13</length>
+            <precision>28</precision>
+            <decimalDigits>16</decimalDigits>
+        </ownProperty>
+        <ownProperty>
+            <name>qtyMin</name>
+            <length>13</length>
+            <precision>28</precision>
+            <decimalDigits>16</decimalDigits>
+        </ownProperty>
+        <ownProperty>
+            <name>qtyMax</name>
+            <length>13</length>
+            <precision>28</precision>
+            <decimalDigits>16</decimalDigits>
+        </ownProperty>
+        <ownProperty>
+            <name>daysBottom</name>
+            <length>4</length>
+            <precision>4</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>daysTop</name>
+            <length>4</length>
+            <precision>4</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>daysTurnover</name>
+            <length>4</length>
+            <precision>4</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>isNegative</name>
+            <length>4</length>
+            <precision>4</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>isBatchNo</name>
+            <length>4</length>
+            <precision>4</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>isSequenceNo</name>
+            <length>4</length>
+            <precision>4</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>isLotNumber</name>
+            <length>4</length>
+            <precision>4</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>isBarcode</name>
+            <length>4</length>
+            <precision>4</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>qtyMinPackage</name>
+            <length>13</length>
+            <precision>28</precision>
+            <decimalDigits>16</decimalDigits>
+        </ownProperty>
+        <ownProperty>
+            <name>abcType</name>
+            <precision>4</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>isCompages</name>
+            <length>4</length>
+            <precision>4</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>issuePriorityMode</name>
+            <precision>4</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>isPeriodValid</name>
+            <length>4</length>
+            <precision>4</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>periodValid</name>
+            <length>4</length>
+            <precision>4</precision>
+        </ownProperty>
+        <ownProperty>
+            <name>inWarehsAhead</name>
+            <length>4</length>
+        </ownProperty>
+        <ownProperty>
+            <name>outWarehsAhead</name>
+            <length>4</length>
+        </ownProperty>
+        <ownProperty>
+            <name>prepWarnAhead</name>
+            <length>4</length>
+        </ownProperty>
+        <ownProperty>
+            <name>reBookQty</name>
+            <length>13</length>
+            <precision>28</precision>
+            <decimalDigits>16</decimalDigits>
+        </ownProperty>
+        <ownProperty>
+            <name>consumeSpeed</name>
+            <length>13</length>
+            <precision>28</precision>
+            <decimalDigits>16</decimalDigits>
+        </ownProperty>
+        <ownProperty>
+            <name>purchasingAheadDate</name>
+            <length>4</length>
+        </ownProperty>
+        <ownProperty>
+            <name>fixationBatchQty</name>
+            <length>13</length>
+            <precision>28</precision>
+            <decimalDigits>16</decimalDigits>
+        </ownProperty>
+        <ownProperty>
+            <name>daysPlanTurnover</name>
+            <length>13</length>
+            <precision>28</precision>
+            <decimalDigits>10</decimalDigits>
+        </ownProperty>
+        <ownProperty>
+            <name>cheapRate</name>
+            <precision>10</precision>
+            <decimalDigits>4</decimalDigits>
+        </ownProperty>
+        <ownProperty>
+            <name>isProjectNumber</name>
+            <length>4</length>
+        </ownProperty>
+        <ownProperty>
+            <name>isTrackingNumber</name>
+            <length>4</length>
+        </ownProperty>
+        <ownProperty>
+            <name>toolRate</name>
+            <length>13</length>
+            <precision>28</precision>
+            <decimalDigits>16</decimalDigits>
+        </ownProperty>
+        <ownProperty>
+            <name>CostQty</name>
+            <alias>entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostQty].alias</alias>
+            <description>entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostQty].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>BigDecimal</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>28</length>
+            <precision>28</precision>
+            <decimalDigits>10</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostQty].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFCostQty" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>CostPrice</name>
+            <alias>entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostPrice].alias</alias>
+            <description>entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostPrice].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>BigDecimal</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>28</length>
+            <precision>28</precision>
+            <decimalDigits>10</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostPrice].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFCostPrice" />
+            </mappingField>
+        </ownProperty>
+        <linkProperty>
+            <name>MaterialLoc</name>
+            <alias>entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.linkProperty[MaterialLoc].alias</alias>
+            <description>entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.linkProperty[MaterialLoc].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.basedata.master.material.app" />
+                <key name="name" value="R_MaterialInventory_MaterialInventoryMaterialLoc" />
+            </relationship>
+        </linkProperty>
+    </properties>
+    <resource>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].alias">
+            <lang locale="zh_CN" value="物料库存资料" />
+            <lang locale="zh_HK" value="物料庫存資料" />
+            <lang locale="zh_TW" value="物料庫存資料" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].description">
+            <lang locale="zh_CN" value="物料库存资料" />
+            <lang locale="zh_HK" value="物料庫存資料" />
+            <lang locale="zh_TW" value="物料庫存資料" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.basedata.master.material.client.MaterialInventoryUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].extendedProperty.isUseCodeRule">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.linkProperty[MaterialLoc].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="物料货位" />
+            <lang locale="zh_HK" value="物料貨位" />
+            <lang locale="zh_TW" value="物料貨位" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.linkProperty[MaterialLoc].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="物料货位" />
+            <lang locale="zh_HK" value="物料貨位" />
+            <lang locale="zh_TW" value="物料貨位" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostPrice].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="成本价" />
+            <lang locale="zh_HK" value="成本價" />
+            <lang locale="zh_TW" value="成本價" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostPrice].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostPrice].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="成本价" />
+            <lang locale="zh_HK" value="成本價" />
+            <lang locale="zh_TW" value="成本價" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostPrice].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostPrice].extendedProperty.bizDataType">
+            <lang locale="en_US" value="PRICE" />
+            <lang locale="zh_CN" value="PRICE" />
+            <lang locale="zh_TW" value="PRICE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostPrice].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostPrice].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostPrice].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostPrice].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostPrice].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostPrice].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostPrice].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostPrice].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostQty].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="数量" />
+            <lang locale="zh_HK" value="數量" />
+            <lang locale="zh_TW" value="數量" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostQty].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostQty].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="数量" />
+            <lang locale="zh_HK" value="數量" />
+            <lang locale="zh_TW" value="數量" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostQty].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostQty].extendedProperty.bizDataType">
+            <lang locale="en_US" value="QUANTITY" />
+            <lang locale="zh_CN" value="QUANTITY" />
+            <lang locale="zh_TW" value="QUANTITY" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostQty].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostQty].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostQty].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostQty].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostQty].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostQty].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostQty].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[CostQty].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[abcType].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[abcType].extendedProperty.bizDataType">
+            <lang locale="en_US" value="ENUM" />
+            <lang locale="zh_CN" value="ENUM" />
+            <lang locale="zh_TW" value="ENUM" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[abcType].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[aheadUnit].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[aheadUnit].extendedProperty.bizDataType">
+            <lang locale="en_US" value="ENUM" />
+            <lang locale="zh_CN" value="ENUM" />
+            <lang locale="zh_TW" value="ENUM" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[batchPolicy].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[batchPolicy].extendedProperty.bizDataType">
+            <lang locale="en_US" value="ENUM" />
+            <lang locale="zh_CN" value="ENUM" />
+            <lang locale="zh_TW" value="ENUM" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[cheapRate].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[cheapRate].extendedProperty.bizDataType">
+            <lang locale="en_US" value="DECIMAL" />
+            <lang locale="zh_CN" value="DECIMAL" />
+            <lang locale="zh_TW" value="DECIMAL" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[cheapRate].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[consumeSpeed].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[consumeSpeed].extendedProperty.bizDataType">
+            <lang locale="en_US" value="DECIMAL" />
+            <lang locale="zh_CN" value="DECIMAL" />
+            <lang locale="zh_TW" value="DECIMAL" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[daysBottom].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[daysBottom].extendedProperty.bizDataType">
+            <lang locale="en_US" value="INTEGER" />
+            <lang locale="zh_CN" value="INTEGER" />
+            <lang locale="zh_TW" value="INTEGER" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[daysBottom].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[daysPlanTurnover].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[daysPlanTurnover].extendedProperty.bizDataType">
+            <lang locale="en_US" value="DECIMAL" />
+            <lang locale="zh_CN" value="DECIMAL" />
+            <lang locale="zh_TW" value="DECIMAL" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[daysPlanTurnover].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[daysTop].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[daysTop].extendedProperty.bizDataType">
+            <lang locale="en_US" value="INTEGER" />
+            <lang locale="zh_CN" value="INTEGER" />
+            <lang locale="zh_TW" value="INTEGER" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[daysTop].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[daysTurnover].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[daysTurnover].extendedProperty.bizDataType">
+            <lang locale="en_US" value="INTEGER" />
+            <lang locale="zh_CN" value="INTEGER" />
+            <lang locale="zh_TW" value="INTEGER" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[daysTurnover].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[fixationBatchQty].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[fixationBatchQty].extendedProperty.bizDataType">
+            <lang locale="en_US" value="DECIMAL" />
+            <lang locale="zh_CN" value="DECIMAL" />
+            <lang locale="zh_TW" value="DECIMAL" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[inWarehsAhead].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[inWarehsAhead].extendedProperty.bizDataType">
+            <lang locale="en_US" value="INTEGER" />
+            <lang locale="zh_CN" value="INTEGER" />
+            <lang locale="zh_TW" value="INTEGER" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isBarcode].defaultValue">
+            <lang locale="zh_CN" value="条码管理" />
+            <lang locale="zh_HK" value="條碼管理" />
+            <lang locale="zh_TW" value="條碼管理" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isBarcode].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isBarcode].extendedProperty.bizDataType">
+            <lang locale="en_US" value="BOOLEAN" />
+            <lang locale="zh_CN" value="BOOLEAN" />
+            <lang locale="zh_TW" value="BOOLEAN" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isBatchNo].defaultValue">
+            <lang locale="zh_CN" value="使用批号管理" />
+            <lang locale="zh_HK" value="使用批號管理" />
+            <lang locale="zh_TW" value="使用批號管理" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isBatchNo].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isBatchNo].extendedProperty.bizDataType">
+            <lang locale="en_US" value="BOOLEAN" />
+            <lang locale="zh_CN" value="BOOLEAN" />
+            <lang locale="zh_TW" value="BOOLEAN" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isCheck].defaultValue">
+            <lang locale="zh_CN" value="检验" />
+            <lang locale="zh_HK" value="檢驗" />
+            <lang locale="zh_TW" value="檢驗" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isCheck].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isCheck].extendedProperty.bizDataType">
+            <lang locale="en_US" value="BOOLEAN" />
+            <lang locale="zh_CN" value="BOOLEAN" />
+            <lang locale="zh_TW" value="BOOLEAN" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isCheck].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isCompages].defaultValue">
+            <lang locale="zh_CN" value="组合件" />
+            <lang locale="zh_HK" value="組合件" />
+            <lang locale="zh_TW" value="組合件" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isCompages].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isCompages].extendedProperty.bizDataType">
+            <lang locale="en_US" value="BOOLEAN" />
+            <lang locale="zh_CN" value="BOOLEAN" />
+            <lang locale="zh_TW" value="BOOLEAN" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isControl].defaultValue">
+            <lang locale="zh_CN" value="库存管理" />
+            <lang locale="zh_HK" value="庫存管理" />
+            <lang locale="zh_TW" value="庫存管理" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isControl].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isControl].extendedProperty.bizDataType">
+            <lang locale="en_US" value="BOOLEAN" />
+            <lang locale="zh_CN" value="BOOLEAN" />
+            <lang locale="zh_TW" value="BOOLEAN" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isLotNumber].defaultValue">
+            <lang locale="zh_CN" value="批次管理" />
+            <lang locale="zh_HK" value="批次管理" />
+            <lang locale="zh_TW" value="批次管理" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isLotNumber].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isLotNumber].extendedProperty.bizDataType">
+            <lang locale="en_US" value="BOOLEAN" />
+            <lang locale="zh_CN" value="BOOLEAN" />
+            <lang locale="zh_TW" value="BOOLEAN" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isNegative].defaultValue">
+            <lang locale="zh_CN" value="允许负库存" />
+            <lang locale="zh_HK" value="允許負庫存" />
+            <lang locale="zh_TW" value="允許負庫存" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isNegative].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isNegative].extendedProperty.bizDataType">
+            <lang locale="en_US" value="BOOLEAN" />
+            <lang locale="zh_CN" value="BOOLEAN" />
+            <lang locale="zh_TW" value="BOOLEAN" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isPeriodValid].defaultValue">
+            <lang locale="zh_CN" value="保质期管理" />
+            <lang locale="zh_HK" value="保質期管理" />
+            <lang locale="zh_TW" value="保質期管理" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isPeriodValid].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isPeriodValid].extendedProperty.bizDataType">
+            <lang locale="en_US" value="BOOLEAN" />
+            <lang locale="zh_CN" value="BOOLEAN" />
+            <lang locale="zh_TW" value="BOOLEAN" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isProjectNumber].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isProjectNumber].extendedProperty.bizDataType">
+            <lang locale="en_US" value="BOOLEAN" />
+            <lang locale="zh_CN" value="BOOLEAN" />
+            <lang locale="zh_TW" value="BOOLEAN" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isProjectNumber].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isSequenceNo].defaultValue">
+            <lang locale="zh_CN" value="使用序列号管理" />
+            <lang locale="zh_HK" value="使用序列號管理" />
+            <lang locale="zh_TW" value="使用序列號管理" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isSequenceNo].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isSequenceNo].extendedProperty.bizDataType">
+            <lang locale="en_US" value="BOOLEAN" />
+            <lang locale="zh_CN" value="BOOLEAN" />
+            <lang locale="zh_TW" value="BOOLEAN" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isTrackingNumber].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isTrackingNumber].extendedProperty.bizDataType">
+            <lang locale="en_US" value="BOOLEAN" />
+            <lang locale="zh_CN" value="BOOLEAN" />
+            <lang locale="zh_TW" value="BOOLEAN" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[isTrackingNumber].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[issuePriorityMode].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[issuePriorityMode].extendedProperty.bizDataType">
+            <lang locale="en_US" value="ENUM" />
+            <lang locale="zh_CN" value="ENUM" />
+            <lang locale="zh_TW" value="ENUM" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[issuePriorityMode].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[outWarehsAhead].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[outWarehsAhead].extendedProperty.bizDataType">
+            <lang locale="en_US" value="INTEGER" />
+            <lang locale="zh_CN" value="INTEGER" />
+            <lang locale="zh_TW" value="INTEGER" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[periodValidUnit].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[periodValidUnit].extendedProperty.bizDataType">
+            <lang locale="en_US" value="ENUM" />
+            <lang locale="zh_CN" value="ENUM" />
+            <lang locale="zh_TW" value="ENUM" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[periodValid].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[periodValid].extendedProperty.bizDataType">
+            <lang locale="en_US" value="INTEGER" />
+            <lang locale="zh_CN" value="INTEGER" />
+            <lang locale="zh_TW" value="INTEGER" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[planningMode].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[planningMode].extendedProperty.bizDataType">
+            <lang locale="en_US" value="ENUM" />
+            <lang locale="zh_CN" value="ENUM" />
+            <lang locale="zh_TW" value="ENUM" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[prepWarnAhead].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[prepWarnAhead].extendedProperty.bizDataType">
+            <lang locale="en_US" value="INTEGER" />
+            <lang locale="zh_CN" value="INTEGER" />
+            <lang locale="zh_TW" value="INTEGER" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[purchasingAheadDate].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[purchasingAheadDate].extendedProperty.bizDataType">
+            <lang locale="en_US" value="INTEGER" />
+            <lang locale="zh_CN" value="INTEGER" />
+            <lang locale="zh_TW" value="INTEGER" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[qtyMax].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[qtyMax].extendedProperty.bizDataType">
+            <lang locale="en_US" value="DECIMAL" />
+            <lang locale="zh_CN" value="DECIMAL" />
+            <lang locale="zh_TW" value="DECIMAL" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[qtyMax].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[qtyMinPackage].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[qtyMinPackage].extendedProperty.bizDataType">
+            <lang locale="en_US" value="DECIMAL" />
+            <lang locale="zh_CN" value="DECIMAL" />
+            <lang locale="zh_TW" value="DECIMAL" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[qtyMinPackage].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[qtyMin].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[qtyMin].extendedProperty.bizDataType">
+            <lang locale="en_US" value="DECIMAL" />
+            <lang locale="zh_CN" value="DECIMAL" />
+            <lang locale="zh_TW" value="DECIMAL" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[qtyMin].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[qtySafety].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[qtySafety].extendedProperty.bizDataType">
+            <lang locale="en_US" value="DECIMAL" />
+            <lang locale="zh_CN" value="DECIMAL" />
+            <lang locale="zh_TW" value="DECIMAL" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[qtySafety].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[reBookQty].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[reBookQty].extendedProperty.bizDataType">
+            <lang locale="en_US" value="DECIMAL" />
+            <lang locale="zh_CN" value="DECIMAL" />
+            <lang locale="zh_TW" value="DECIMAL" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[toolRate].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[toolRate].extendedProperty.bizDataType">
+            <lang locale="en_US" value="DECIMAL" />
+            <lang locale="zh_CN" value="DECIMAL" />
+            <lang locale="zh_TW" value="DECIMAL" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.basedata.master.material.app.MaterialInventory].properties.ownProperty[toolRate].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</entityObject>
+

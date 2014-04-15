@@ -343,6 +343,20 @@
             <scale>0</scale>
             <precision>0</precision>
         </column>
+        <column>
+            <name>CFOrgUnitID</name>
+            <alias>dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairMan].columns.column[CFOrgUnitID].alias</alias>
+            <description>dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairMan].columns.column[CFOrgUnitID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>CPK_RS_RepairMas16</name>
@@ -472,6 +486,25 @@
                 </fkColumnPair>
             </fkColumnPairs>
         </foreignKey>
+        <foreignKey>
+            <name>CFK_RS_RSRMRgUnigi</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.org" />
+                <key name="name" value="T_ORG_Admin" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="CFOrgUnitID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
     </foreignKeys>
     <resource>
         <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairMan].alias">
@@ -527,6 +560,18 @@
             <lang locale="zh_CN" value="姓名" />
             <lang locale="zh_HK" value="姓名" />
             <lang locale="zh_TW" value="姓名" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairMan].columns.column[CFOrgUnitID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairMan].columns.column[CFOrgUnitID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.ga.rs.app.CT_RS_RepairMan].columns.column[CFTel].alias">
             <lang locale="en_US" value="null" />

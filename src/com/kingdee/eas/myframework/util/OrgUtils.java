@@ -3,6 +3,8 @@ package com.kingdee.eas.myframework.util;
 import java.io.Serializable;
 
 import com.kingdee.bos.Context;
+import com.kingdee.eas.basedata.org.AdminOrgUnit;
+import com.kingdee.eas.basedata.org.AdminOrgUnitInfo;
 import com.kingdee.eas.basedata.org.OrgType;
 import com.kingdee.eas.basedata.org.OrgUnitCollection;
 import com.kingdee.eas.basedata.org.OrgUnitInfo;
@@ -89,5 +91,15 @@ public class OrgUtils implements Serializable {
 	public static SaleOrgUnitInfo castToSaleOrg(OrgUnitInfo orgUnitInfo) {
 		return (SaleOrgUnitInfo)orgUnitInfo.cast(SaleOrgUnitInfo.class);
 	}
+	
+	/**
+	 * 组织类型转行政组织
+	 * @param orgUnitInfo
+	 * @return
+	 */
+	public static AdminOrgUnitInfo castToAmin(OrgUnitInfo orgUnitInfo) {
+		return (AdminOrgUnitInfo)orgUnitInfo.cast(AdminOrgUnitInfo.class);
+	}
+	
 	
 }

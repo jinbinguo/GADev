@@ -32,6 +32,11 @@
             <value>i18nResource[com.kingdee.eas.ga.rs.client.RsResource].resourceItems.resourceItem[RepairManQueryF7WindowTitle].value</value>
             <userDefined>true</userDefined>
         </resourceItem>
+        <resourceItem>
+            <name>RepairDefaultValueConfigQueryF7WindowTitle</name>
+            <value>i18nResource[com.kingdee.eas.ga.rs.client.RsResource].resourceItems.resourceItem[RepairDefaultValueConfigQueryF7WindowTitle].value</value>
+            <userDefined>true</userDefined>
+        </resourceItem>
     </resourceItems>
     <resource>
         <rs key="i18nResource[com.kingdee.eas.ga.rs.client.RsResource].alias">
@@ -51,6 +56,12 @@
             <lang locale="zh_CN" value="客户账户" />
             <lang locale="zh_HK" value="客戶賬戶" />
             <lang locale="zh_TW" value="客戶賬戶" />
+        </rs>
+        <rs key="i18nResource[com.kingdee.eas.ga.rs.client.RsResource].resourceItems.resourceItem[RepairDefaultValueConfigQueryF7WindowTitle].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修预设值设置" />
+            <lang locale="zh_HK" value="維修預設值設置" />
+            <lang locale="zh_TW" value="維修預設值設置" />
         </rs>
         <rs key="i18nResource[com.kingdee.eas.ga.rs.client.RsResource].resourceItems.resourceItem[RepairManQueryF7WindowTitle].value">
             <lang locale="en_US" value="null" />

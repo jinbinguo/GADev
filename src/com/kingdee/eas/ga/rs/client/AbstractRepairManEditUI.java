@@ -52,6 +52,7 @@ public abstract class AbstractRepairManEditUI extends com.kingdee.eas.myframewor
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contidNumber;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contzipCode;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contaddr;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contorgUnit;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtname;
     protected com.kingdee.bos.ctrl.swing.KDTextField txttel;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtemail;
@@ -59,6 +60,7 @@ public abstract class AbstractRepairManEditUI extends com.kingdee.eas.myframewor
     protected com.kingdee.bos.ctrl.swing.KDTextField txtzipCode;
     protected com.kingdee.bos.ctrl.swing.KDScrollPane scrollPaneaddr;
     protected com.kingdee.bos.ctrl.swing.KDTextArea txtaddr;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtorgUnit;
     protected com.kingdee.eas.ga.rs.RepairManInfo editData = null;
     /**
      * output class constructor
@@ -177,6 +179,7 @@ public abstract class AbstractRepairManEditUI extends com.kingdee.eas.myframewor
         this.contidNumber = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contzipCode = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contaddr = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contorgUnit = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.txtname = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.txttel = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.txtemail = new com.kingdee.bos.ctrl.swing.KDTextField();
@@ -184,12 +187,14 @@ public abstract class AbstractRepairManEditUI extends com.kingdee.eas.myframewor
         this.txtzipCode = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.scrollPaneaddr = new com.kingdee.bos.ctrl.swing.KDScrollPane();
         this.txtaddr = new com.kingdee.bos.ctrl.swing.KDTextArea();
+        this.prmtorgUnit = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.contname.setName("contname");
         this.conttel.setName("conttel");
         this.contemail.setName("contemail");
         this.contidNumber.setName("contidNumber");
         this.contzipCode.setName("contzipCode");
         this.contaddr.setName("contaddr");
+        this.contorgUnit.setName("contorgUnit");
         this.txtname.setName("txtname");
         this.txttel.setName("txttel");
         this.txtemail.setName("txtemail");
@@ -197,12 +202,13 @@ public abstract class AbstractRepairManEditUI extends com.kingdee.eas.myframewor
         this.txtzipCode.setName("txtzipCode");
         this.scrollPaneaddr.setName("scrollPaneaddr");
         this.txtaddr.setName("txtaddr");
+        this.prmtorgUnit.setName("prmtorgUnit");
         // CoreUI		
         this.contNumber.setBoundLabelText(resHelper.getString("contNumber.boundLabelText"));		
         this.contBizDate.setVisible(false);		
         this.contDescription.setBoundLabelText(resHelper.getString("contDescription.boundLabelText"));		
         this.contDescription.setVisible(false);
-		String kdtEntrysStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol2\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol3\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol4\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol5\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol6\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol7\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol8\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol9\"><c:Protection locked=\"true\" hidden=\"true\" /></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"id\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol0\" /><t:Column t:key=\"vehicle\" t:width=\"150\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"1\" /><t:Column t:key=\"plateNum\" t:width=\"80\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"2\" t:styleID=\"sCol2\" /><t:Column t:key=\"vIN\" t:width=\"180\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol3\" /><t:Column t:key=\"engineNum\" t:width=\"130\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol4\" /><t:Column t:key=\"seriesName\" t:width=\"80\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol5\" /><t:Column t:key=\"modelName\" t:width=\"180\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol6\" /><t:Column t:key=\"brandName\" t:width=\"80\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol7\" /><t:Column t:key=\"lineDesc\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol8\" /><t:Column t:key=\"lineStatus\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol9\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{id}</t:Cell><t:Cell>$Resource{vehicle}</t:Cell><t:Cell>$Resource{plateNum}</t:Cell><t:Cell>$Resource{vIN}</t:Cell><t:Cell>$Resource{engineNum}</t:Cell><t:Cell>$Resource{seriesName}</t:Cell><t:Cell>$Resource{modelName}</t:Cell><t:Cell>$Resource{brandName}</t:Cell><t:Cell>$Resource{lineDesc}</t:Cell><t:Cell>$Resource{lineStatus}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
+		String kdtEntrysStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol2\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol3\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol4\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol5\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol6\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol7\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol8\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol9\"><c:Protection locked=\"true\" hidden=\"true\" /></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"id\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol0\" /><t:Column t:key=\"vehicle\" t:width=\"150\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"1\" /><t:Column t:key=\"plateNum\" t:width=\"80\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"2\" t:styleID=\"sCol2\" /><t:Column t:key=\"vIN\" t:width=\"180\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol3\" /><t:Column t:key=\"engineNum\" t:width=\"130\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol4\" /><t:Column t:key=\"seriesName\" t:width=\"80\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol5\" /><t:Column t:key=\"modelName\" t:width=\"180\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol6\" /><t:Column t:key=\"brandName\" t:width=\"80\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol7\" /><t:Column t:key=\"lineDesc\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol8\" /><t:Column t:key=\"lineStatus\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol9\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{id}</t:Cell><t:Cell>$Resource{vehicle}</t:Cell><t:Cell>$Resource{plateNum}</t:Cell><t:Cell>$Resource{vIN}</t:Cell><t:Cell>$Resource{engineNum}</t:Cell><t:Cell>$Resource{seriesName}</t:Cell><t:Cell>$Resource{modelName}</t:Cell><t:Cell>$Resource{brandName}</t:Cell><t:Cell>$Resource{lineDesc}</t:Cell><t:Cell>$Resource{lineStatus}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
 		
         this.kdtEntrys.setFormatXml(resHelper.translateString("kdtEntrys",kdtEntrysStrXML));
         kdtEntrys.addKDTEditListener(new KDTEditAdapter() {
@@ -334,10 +340,15 @@ public abstract class AbstractRepairManEditUI extends com.kingdee.eas.myframewor
         this.contaddr.setBoundLabelLength(100);		
         this.contaddr.setBoundLabelUnderline(true);		
         this.contaddr.setVisible(true);
+        // contorgUnit		
+        this.contorgUnit.setBoundLabelText(resHelper.getString("contorgUnit.boundLabelText"));		
+        this.contorgUnit.setBoundLabelLength(100);		
+        this.contorgUnit.setBoundLabelUnderline(true);		
+        this.contorgUnit.setVisible(true);
         // txtname		
         this.txtname.setHorizontalAlignment(2);		
         this.txtname.setMaxLength(100);		
-        this.txtname.setRequired(true);
+        this.txtname.setRequired(false);
         // txttel		
         this.txttel.setHorizontalAlignment(2);		
         this.txttel.setMaxLength(100);		
@@ -358,7 +369,18 @@ public abstract class AbstractRepairManEditUI extends com.kingdee.eas.myframewor
         // txtaddr		
         this.txtaddr.setRequired(false);		
         this.txtaddr.setMaxLength(255);
-        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {txtNumber,txtname,txttel,txtemail,txtidNumber,txtzipCode,txtaddr,kDDateLastUpdateTime,prmtLastUpdateUser,kDDateCreateTime,prmtCreator,prmtAuditor,txtDescription,pkBizDate,kDDateAuditTime,boxBaseStatus,kdtEntrys}));
+        // prmtorgUnit		
+        this.prmtorgUnit.setQueryInfo("com.kingdee.eas.basedata.org.app.AdminItemQuery");		
+        this.prmtorgUnit.setVisible(true);		
+        this.prmtorgUnit.setEditable(true);		
+        this.prmtorgUnit.setDisplayFormat("$name$");		
+        this.prmtorgUnit.setEditFormat("$number$");		
+        this.prmtorgUnit.setCommitFormat("$number$");		
+        this.prmtorgUnit.setRequired(true);		
+        this.prmtorgUnit.setEnabled(false);
+        		setOrgF7(prmtorgUnit,com.kingdee.eas.basedata.org.OrgType.getEnum("Admin"));
+					
+        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {txtNumber,txtname,txttel,txtemail,txtidNumber,txtzipCode,txtaddr,kDDateLastUpdateTime,prmtLastUpdateUser,kDDateCreateTime,prmtCreator,prmtAuditor,txtDescription,pkBizDate,kDDateAuditTime,boxBaseStatus,kdtEntrys,prmtorgUnit}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding
 		registerBindings();
@@ -422,6 +444,8 @@ public abstract class AbstractRepairManEditUI extends com.kingdee.eas.myframewor
         this.add(contzipCode, new KDLayout.Constraints(683, 31, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contaddr.setBounds(new Rectangle(13, 57, 605, 44));
         this.add(contaddr, new KDLayout.Constraints(13, 57, 605, 44, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contorgUnit.setBounds(new Rectangle(683, 57, 270, 19));
+        this.add(contorgUnit, new KDLayout.Constraints(683, 57, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         //contCreator
         contCreator.setBoundEditor(prmtCreator);
         //contCreateTime
@@ -456,6 +480,8 @@ public abstract class AbstractRepairManEditUI extends com.kingdee.eas.myframewor
         contaddr.setBoundEditor(scrollPaneaddr);
         //scrollPaneaddr
         scrollPaneaddr.getViewport().add(txtaddr, null);
+        //contorgUnit
+        contorgUnit.setBoundEditor(prmtorgUnit);
 
     }
 
@@ -658,7 +684,8 @@ public abstract class AbstractRepairManEditUI extends com.kingdee.eas.myframewor
 		dataBinder.registerBinding("email", String.class, this.txtemail, "text");
 		dataBinder.registerBinding("idNumber", String.class, this.txtidNumber, "text");
 		dataBinder.registerBinding("zipCode", String.class, this.txtzipCode, "text");
-		dataBinder.registerBinding("addr", String.class, this.txtaddr, "text");		
+		dataBinder.registerBinding("addr", String.class, this.txtaddr, "text");
+		dataBinder.registerBinding("orgUnit", com.kingdee.eas.basedata.org.AdminOrgUnitInfo.class, this.prmtorgUnit, "data");		
 	}
 	//Regiester UI State
 	private void registerUIState(){		
@@ -708,7 +735,7 @@ public abstract class AbstractRepairManEditUI extends com.kingdee.eas.myframewor
     protected void removeByPK(IObjectPK pk) throws Exception {
     	IObjectValue editData = this.editData;
     	super.removeByPK(pk);
-    	recycleNumberByOrg(editData,"NONE",editData.getString("number"));
+    	recycleNumberByOrg(editData,"Admin",editData.getString("number"));
     }
     
     protected void recycleNumberByOrg(IObjectValue editData,String orgType,String number) {
@@ -764,13 +791,21 @@ public abstract class AbstractRepairManEditUI extends com.kingdee.eas.myframewor
             }
         }
     }
+			protected com.kingdee.eas.basedata.org.OrgType getMainBizOrgType() {
+			return com.kingdee.eas.basedata.org.OrgType.getEnum("Admin");
+		}
+
+	protected KDBizPromptBox getMainBizOrg() {
+		return prmtorgUnit;
+}
+
 
     /**
      * output loadFields method
      */
     public void loadFields()
     {
-        		setAutoNumberByOrg("NONE");
+        		setAutoNumberByOrg("Admin");
         dataBinder.loadFields();
     }
 		protected void setOrgF7(KDBizPromptBox f7,com.kingdee.eas.basedata.org.OrgType orgType) throws Exception
@@ -818,7 +853,8 @@ public abstract class AbstractRepairManEditUI extends com.kingdee.eas.myframewor
 		getValidateHelper().registerBindProperty("email", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("idNumber", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("zipCode", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("addr", ValidateHelper.ON_SAVE);    		
+		getValidateHelper().registerBindProperty("addr", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("orgUnit", ValidateHelper.ON_SAVE);    		
 	}
 
 
@@ -971,6 +1007,15 @@ kdtEntrys.getCell(rowIndex,"brandName").setValue(com.kingdee.bos.ui.face.UIRuleU
         sic.add(new SelectorItemInfo("idNumber"));
         sic.add(new SelectorItemInfo("zipCode"));
         sic.add(new SelectorItemInfo("addr"));
+		if(selectorAll.equalsIgnoreCase("true"))
+		{
+			sic.add(new SelectorItemInfo("orgUnit.*"));
+		}
+		else{
+        	sic.add(new SelectorItemInfo("orgUnit.id"));
+        	sic.add(new SelectorItemInfo("orgUnit.number"));
+        	sic.add(new SelectorItemInfo("orgUnit.name"));
+		}
         return sic;
     }        
     	
@@ -1147,6 +1192,9 @@ kdtEntrys.getCell(rowIndex,"brandName").setValue(com.kingdee.bos.ui.face.UIRuleU
     protected IObjectValue createNewData()
     {
         com.kingdee.eas.ga.rs.RepairManInfo objectValue = new com.kingdee.eas.ga.rs.RepairManInfo();
+				if (com.kingdee.eas.common.client.SysContext.getSysContext().getCurrentOrgUnit(com.kingdee.eas.basedata.org.OrgType.getEnum("Admin")) != null)
+			objectValue.put("orgUnit",com.kingdee.eas.common.client.SysContext.getSysContext().getCurrentOrgUnit(com.kingdee.eas.basedata.org.OrgType.getEnum("Admin")));
+ 
         objectValue.setCreator((com.kingdee.eas.base.permission.UserInfo)(com.kingdee.eas.common.client.SysContext.getSysContext().getCurrentUser()));		
         return objectValue;
     }
@@ -1161,13 +1209,8 @@ kdtEntrys.getCell(rowIndex,"brandName").setValue(com.kingdee.bos.ui.face.UIRuleU
     
         
 					protected void beforeStoreFields(ActionEvent arg0) throws Exception {
-		for (int i=0,n=kdtEntrys.getRowCount();i<n;i++) {
-			if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(kdtEntrys.getCell(i,"vehicle").getValue())) {
-				throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"车辆"});
-			}
-		}
-		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(txtname.getText())) {
-			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"姓名"});
+		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(prmtorgUnit.getData())) {
+			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"公司"});
 		}
 			super.beforeStoreFields(arg0);
 		}

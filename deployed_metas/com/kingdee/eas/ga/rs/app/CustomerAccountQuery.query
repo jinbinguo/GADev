@@ -74,6 +74,19 @@
                 <key name="name" value="Customer" />
             </entityRef>
         </subEntity>
+        <subEntity>
+            <name>orgUnit</name>
+            <alias>joinQuery[com.kingdee.eas.ga.rs.app.CustomerAccountQuery].subObjects.subEntity[orgUnit].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="CustomerAccountQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="AdminOrgUnit" />
+            </entityRef>
+        </subEntity>
     </subObjects>
     <units>
         <propertyUnit>
@@ -1037,6 +1050,130 @@
                 <key name="name" value="CustomerAccountQuery" />
             </query>
         </propertyUnit>
+        <queryField>
+            <name>orgUnit.name</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.CustomerAccountQuery].units.queryField[orgUnit.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>7e594cf0-9081-4f20-bd63-e11b37362431</key>
+                    <parentUnit>
+                        <key name="name" value="orgUnit.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="orgUnit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="CustomerAccountQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>b6a1772a-af5e-4980-9d4d-4235433c4c14</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.CustomerAccountQuery].units.propertyUnit[b6a1772a-af5e-4980-9d4d-4235433c4c14].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>47d3cc07-392c-47c0-83a6-f7213c362dd3</key>
+                    <parentUnit>
+                        <key name="name" value="b6a1772a-af5e-4980-9d4d-4235433c4c14" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="CustomerAccount" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="orgUnit" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="CustomerAccountQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>7b15e899-26b6-4bf9-a14b-ddf08a116ef3</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.CustomerAccountQuery].units.propertyUnit[7b15e899-26b6-4bf9-a14b-ddf08a116ef3].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>fb169e92-7d2d-4478-817b-7136252bfc7a</key>
+                    <parentUnit>
+                        <key name="name" value="7b15e899-26b6-4bf9-a14b-ddf08a116ef3" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="orgUnit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="CustomerAccountQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>orgUnit.id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.ga.rs.app.CustomerAccountQuery].units.queryField[orgUnit.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>2096802e-f18f-4ebe-aaa9-0222595777f4</key>
+                    <parentUnit>
+                        <key name="name" value="orgUnit.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="orgUnit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="CustomerAccountQuery" />
+            </query>
+        </queryField>
     </units>
     <defaultFilter>
         <name>defaultFilter</name>
@@ -1190,6 +1327,36 @@
                 <key name="name" value="CustomerAccountQuery" />
             </query>
         </join>
+        <join>
+            <name>a4e85484-eb9a-455a-8141-1e480bb57a72</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="CustomerAccount" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="orgUnit" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>584162ac-1d8f-449b-a49b-589900d80655</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="b6a1772a-af5e-4980-9d4d-4235433c4c14" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="7b15e899-26b6-4bf9-a14b-ddf08a116ef3" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="a4e85484-eb9a-455a-8141-1e480bb57a72" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.ga.rs.app" />
+                <key name="name" value="CustomerAccountQuery" />
+            </query>
+        </join>
     </joins>
     <resource>
         <rs key="joinQuery[com.kingdee.eas.ga.rs.app.CustomerAccountQuery].alias">
@@ -1306,7 +1473,19 @@
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.CustomerAccountQuery].subObjects.subEntity[orgUnit].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
         <rs key="joinQuery[com.kingdee.eas.ga.rs.app.CustomerAccountQuery].units.propertyUnit[62dd0884-c473-4f91-8b23-f89b57280ea1].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.CustomerAccountQuery].units.propertyUnit[7b15e899-26b6-4bf9-a14b-ddf08a116ef3].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
@@ -1331,6 +1510,12 @@
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.ga.rs.app.CustomerAccountQuery].units.propertyUnit[NewUnit3].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.CustomerAccountQuery].units.propertyUnit[b6a1772a-af5e-4980-9d4d-4235433c4c14].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
@@ -1749,6 +1934,38 @@
             <lang locale="zh_TW" value="false" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.ga.rs.app.CustomerAccountQuery].units.queryField[number].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.CustomerAccountQuery].units.queryField[orgUnit.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.CustomerAccountQuery].units.queryField[orgUnit.id].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.CustomerAccountQuery].units.queryField[orgUnit.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.CustomerAccountQuery].units.queryField[orgUnit.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.CustomerAccountQuery].units.queryField[orgUnit.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.ga.rs.app.CustomerAccountQuery].units.queryField[orgUnit.name].extendedProperty.isUsingF7">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />

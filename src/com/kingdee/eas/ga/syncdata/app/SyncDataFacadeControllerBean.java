@@ -68,6 +68,7 @@ import com.kingdee.eas.basedata.master.material.MaterialGroupInfo;
 import com.kingdee.eas.basedata.master.material.MaterialInfo;
 import com.kingdee.eas.basedata.org.AdminOrgUnitInfo;
 import com.kingdee.eas.basedata.org.CompanyOrgUnitInfo;
+import com.kingdee.eas.basedata.org.OrgUnitInfo;
 import com.kingdee.eas.basedata.org.PurchaseOrgUnitInfo;
 import com.kingdee.eas.basedata.org.SaleOrgUnitInfo;
 import com.kingdee.eas.basedata.org.StorageOrgUnitInfo;
@@ -172,7 +173,7 @@ public class SyncDataFacadeControllerBean extends
 	private final int BATCH_SAVE_MAXCOUNT = 10;
 
 	private HashMap<String, String> hashExceptionKey = new HashMap<String, String>(); // 异常的单据Key
-
+	private OrgUnitInfo orgUnitInfo = null;
 	protected ServerReturnInfo _syncWipBill(Context ctx,
 			IObjectValue serviceOrgInfo, IObjectPK dmsWipBillPk)
 			throws BOSException, EASBizException {
@@ -187,8 +188,9 @@ public class SyncDataFacadeControllerBean extends
 		if (repairWO == null)
 			repairWO = RepairWOFactory.getLocalInstance(ctx);
 
-		DMSWipBillInfo dmsWipBillInfo = dmsWipBill
-				.getDMSWipBillInfo(dmsWipBillPk);
+		DMSWipBillInfo dmsWipBillInfo = dmsWipBill.getDMSWipBillInfo(dmsWipBillPk);
+		
+		orgUnitInfo = dmsWipBillInfo.getServiceOrgUnit();
 
 		returnInfo.addSpentMsg("获取DMSWIP单数据", startTime);
 
@@ -236,7 +238,7 @@ public class SyncDataFacadeControllerBean extends
 		// TODO 默认车辆 -调整
 		// final String DEFAULT_DMS_Vehicle = "r1AAAAAAhl+en/9F";
 		// IVehicle vehicle = VehicleFactory.getLocalInstance(ctx);
-		VehicleInfo defaultVehicle = GAUtils.getDefualtVehicleInfo(ctx);// vehicle
+		VehicleInfo defaultVehicle = GAUtils.getDefualtVehicleInfo(ctx,orgUnitInfo);// vehicle
 		// .
 		// getVehicleByVin
 		// (
@@ -278,31 +280,31 @@ public class SyncDataFacadeControllerBean extends
 		// final String DEFAULT_WarrantyType_BMW = "zfcAAAADYhrW0/uD";
 		// //DMS保修类型（厦门中宝-宝马） XMZB-DMS-01
 		WarrantyTypeInfo defaultWarrantyType_BMW = GAUtils
-				.getDefaultWarrantType(ctx, defaultBrand_BMW);
+				.getDefaultWarrantType(ctx, defaultBrand_BMW,orgUnitInfo);
 		// defaultWarrantyType_BMW.put("id", DEFAULT_WarrantyType_BMW);
 
 		// final String DEFAULT_WarrantyType_MINI = "zfcAAAADYhvW0/uD";
 		// //DMS保修类型（厦门中宝-MINI）） XMZB-DMS-02
 		WarrantyTypeInfo defaultWarrantyType_MINI = GAUtils
-				.getDefaultWarrantType(ctx, defaultBrand_MINI);
+				.getDefaultWarrantType(ctx, defaultBrand_MINI,orgUnitInfo);
 		// defaultWarrantyType_MINI.put("id", DEFAULT_WarrantyType_MINI);
 
 		// 维修类型
 		// final String DEFAULT_RepairType_BMW = "zfcAAAADYhcA1NDU";
 		// //DMS维修类型（厦门中宝-宝马） XMZB-DMS-01
 		RepairTypeInfo defaultRepairType_BMW = GAUtils.getDefaultRepairType(
-				ctx, defaultBrand_BMW);
+				ctx, defaultBrand_BMW,orgUnitInfo);
 		// defaultRepairType_BMW.put("id", DEFAULT_RepairType_BMW);
 
 		// final String DEFAULT_RepairType_MINI = "zfcAAAADYhcA1NDU";
 		// //DMS维修类型（厦门中宝-MINI）XMZB-DMS-02
 		RepairTypeInfo defaultRepairType_MINI = GAUtils.getDefaultRepairType(
-				ctx, defaultBrand_MINI);
+				ctx, defaultBrand_MINI,orgUnitInfo);
 		// defaultRepairType_MINI.put("id", DEFAULT_RepairType_MINI);
 
 		// 客户账号
 		CustomerAccountInfo defaultCustomerAccountInfo = GAUtils
-				.getDefaultCustomerAccountInfo(ctx);
+				.getDefaultCustomerAccountInfo(ctx,orgUnitInfo);
 
 		// 业务类型
 		RepairWOBizTypeInfo defaultBizType = GAUtils.getDefaultBizType(ctx);
@@ -566,20 +568,20 @@ public class SyncDataFacadeControllerBean extends
 		// 付费类别 DMS付费类别
 		// final String DEFAULT_Paymentclassify = "zfcAAAADYhjnpYpd";
 		PaymentClassifyInfo defaultPaymentclassify = GAUtils
-				.getDefaultPaymentClassifyInfo(ctx);
+				.getDefaultPaymentClassifyInfo(ctx,orgUnitInfo);
 		// defaultPaymentclassify.put("id", DEFAULT_Paymentclassify);
 
 		// 维修种类
 		// final String DEFAULT_RepairClassify_BMW = "zfcAAAADYh5HVb8e";
 		// //DMS维修种类（厦门中宝-宝马） XMZB-DMS-01
 		RepairClassifyInfo defaultRepairClassify_BMW = GAUtils
-				.getDefaultRepairClassify(ctx, defaultBrand_BMW);
+				.getDefaultRepairClassify(ctx, defaultBrand_BMW,orgUnitInfo);
 		// defaultRepairClassify_BMW.put("id", DEFAULT_RepairClassify_BMW);
 
 		// final String DEFAULT_RepairClassify_MINI = "zfcAAAADYh9HVb8e";
 		// //DMS维修种类（厦门中宝-MINI） XMZB-DMS-02
 		RepairClassifyInfo defaultRepairClassify_MINI = GAUtils
-				.getDefaultRepairClassify(ctx, defaultBrand_MINI);
+				.getDefaultRepairClassify(ctx, defaultBrand_MINI,orgUnitInfo);
 		// defaultRepairClassify_MINI.put("id", DEFAULT_RepairClassify_MINI);
 
 		long startTime = System.currentTimeMillis();
@@ -941,7 +943,7 @@ public class SyncDataFacadeControllerBean extends
 		// 付费类别 DMS付费类别
 		// final String DEFAULT_Paymentclassify = "zfcAAAADYhjnpYpd";
 		PaymentClassifyInfo defaultPaymentclassify = GAUtils
-				.getDefaultPaymentClassifyInfo(ctx);// new
+				.getDefaultPaymentClassifyInfo(ctx,orgUnitInfo);// new
 		// PaymentClassifyInfo();
 		// defaultPaymentclassify.put("id", DEFAULT_Paymentclassify);
 
@@ -949,13 +951,13 @@ public class SyncDataFacadeControllerBean extends
 		// final String DEFAULT_RepairClassify_BMW = "zfcAAAADYh5HVb8e";
 		// //DMS维修种类（厦门中宝-宝马） XMZB-DMS-01
 		RepairClassifyInfo defaultRepairClassify_BMW = GAUtils
-				.getDefaultRepairClassify(ctx, defaultBrand_BMW);
+				.getDefaultRepairClassify(ctx, defaultBrand_BMW,orgUnitInfo);
 		// defaultRepairClassify_BMW.put("id", DEFAULT_RepairClassify_BMW);
 
 		// final String DEFAULT_RepairClassify_MINI = "zfcAAAADYh9HVb8e";
 		// //DMS维修种类（厦门中宝-MINI） XMZB-DMS-02
 		RepairClassifyInfo defaultRepairClassify_MINI = GAUtils
-				.getDefaultRepairClassify(ctx, defaultBrand_MINI);
+				.getDefaultRepairClassify(ctx, defaultBrand_MINI,orgUnitInfo);
 		// defaultRepairClassify_MINI.put("id", DEFAULT_RepairClassify_MINI);
 
 		// 维修班组
@@ -973,26 +975,26 @@ public class SyncDataFacadeControllerBean extends
 		// final String DEFAULT_RepairItem_BMW = "zfcAAAADYiAAz7yt";
 		// //DMS维修项目（厦门中宝-宝马）XMZB-DMS-01
 		RepairItemInfo defaultRepairItem_BMW = GAUtils
-				.getDefaultRepairItemInfo(ctx, defaultBrand_BMW);
+				.getDefaultRepairItemInfo(ctx, defaultBrand_BMW,orgUnitInfo);
 		// defaultRepairItem_BMW.put("id", DEFAULT_RepairItem_BMW);
 
 		// final String DEFAULT_RepairItem_MINI = "zfcAAAADYiIAz7yt";
 		// //DMS维修项目（厦门中宝-MINI）XMZB-DMS-02
 		RepairItemInfo defaultRepairItem_MINI = GAUtils
-				.getDefaultRepairItemInfo(ctx, defaultBrand_MINI);
+				.getDefaultRepairItemInfo(ctx, defaultBrand_MINI,orgUnitInfo);
 		// defaultRepairItem_MINI.put("id", DEFAULT_RepairItem_MINI);
 
 		// 维修类型
 		// final String DEFAULT_RepairType_BMW = "zfcAAAADYhcA1NDU";
 		// //DMS维修类型（厦门中宝-宝马）XMZB-DMS-01
 		RepairTypeInfo defaultRepairType_BMW = GAUtils.getDefaultRepairType(
-				ctx, defaultBrand_BMW);
+				ctx, defaultBrand_BMW,orgUnitInfo);
 		// defaultRepairType_BMW.put("id", DEFAULT_RepairType_BMW);
 
 		// final String DEFAULT_RepairType_MINI = "zfcAAAADYhkA1NDU";
 		// //DMS维修类型（厦门中宝-MINI）XMZB-DMS-02
 		RepairTypeInfo defaultRepairType_MINI = GAUtils.getDefaultRepairType(
-				ctx, defaultBrand_MINI);
+				ctx, defaultBrand_MINI,orgUnitInfo);
 		// defaultRepairType_MINI.put("id", DEFAULT_RepairType_MINI);
 
 		long startTime = System.currentTimeMillis();
@@ -1640,6 +1642,7 @@ public class SyncDataFacadeControllerBean extends
 			startTime = System.currentTimeMillis();
 			DMSInOutQueryInfo dmsTradeInquireInfo = dmsTradeInquire
 					.getDMSInOutQueryInfo(dmsTradeInqirePk);
+			orgUnitInfo = dmsTradeInquireInfo.getServiceOrgUnit();
 			spentMsg = "获取DMS交易查询单据";
 			returnInfo.addSpentMsg(spentMsg, startTime);
 
@@ -3318,7 +3321,7 @@ public class SyncDataFacadeControllerBean extends
 				.getDMSPrintContentInfo(String.format(
 						"where id='%s' order by entrys.seq", dmsPrintContentPK
 								.toString()));
-
+		orgUnitInfo = dmsPrintContentInfo.getServiceOrgUnit();
 		returnInfo.addSpentMsg("获取DMSWIP单数据", startTime);
 
 		try {
@@ -3787,7 +3790,7 @@ public class SyncDataFacadeControllerBean extends
 		// TODO 默认车辆 -调整
 		// final String DEFAULT_DMS_Vehicle = "r1AAAAAAhl+en/9F";
 		// IVehicle vehicle = VehicleFactory.getLocalInstance(ctx);
-		VehicleInfo defaultVehicle = GAUtils.getDefualtVehicleInfo(ctx);// vehicle
+		VehicleInfo defaultVehicle = GAUtils.getDefualtVehicleInfo(ctx,orgUnitInfo);// vehicle
 		// .
 		// getVehicleByVin
 		// (
@@ -3834,31 +3837,31 @@ public class SyncDataFacadeControllerBean extends
 		// final String DEFAULT_WarrantyType_BMW = "zfcAAAADYhrW0/uD";
 		// //DMS保修类型（厦门中宝-宝马） XMZB-DMS-01
 		WarrantyTypeInfo defaultWarrantyType_BMW = GAUtils
-				.getDefaultWarrantType(ctx, defaultBrand_BMW);
+				.getDefaultWarrantType(ctx, defaultBrand_BMW,orgUnitInfo);
 		// defaultWarrantyType_BMW.put("id", DEFAULT_WarrantyType_BMW);
 
 		// final String DEFAULT_WarrantyType_MINI = "zfcAAAADYhvW0/uD";
 		// //DMS保修类型（厦门中宝-MINI）） XMZB-DMS-02
 		WarrantyTypeInfo defaultWarrantyType_MINI = GAUtils
-				.getDefaultWarrantType(ctx, defaultBrand_MINI);
+				.getDefaultWarrantType(ctx, defaultBrand_MINI,orgUnitInfo);
 		// defaultWarrantyType_MINI.put("id", DEFAULT_WarrantyType_MINI);
 
 		// 维修类型
 		// final String DEFAULT_RepairType_BMW = "zfcAAAADYhcA1NDU";
 		// //DMS维修类型（厦门中宝-宝马） XMZB-DMS-01
 		RepairTypeInfo defaultRepairType_BMW = GAUtils.getDefaultRepairType(
-				ctx, defaultBrand_BMW);
+				ctx, defaultBrand_BMW,orgUnitInfo);
 		// defaultRepairType_BMW.put("id", DEFAULT_RepairType_BMW);
 
 		// final String DEFAULT_RepairType_MINI = "zfcAAAADYhcA1NDU";
 		// //DMS维修类型（厦门中宝-MINI）XMZB-DMS-02
 		RepairTypeInfo defaultRepairType_MINI = GAUtils.getDefaultRepairType(
-				ctx, defaultBrand_MINI);
+				ctx, defaultBrand_MINI,orgUnitInfo);
 		// defaultRepairType_MINI.put("id", DEFAULT_RepairType_MINI);
 
 		// 客户账号
 		CustomerAccountInfo defaultCustomerAccountInfo = GAUtils
-				.getDefaultCustomerAccountInfo(ctx);
+				.getDefaultCustomerAccountInfo(ctx,orgUnitInfo);
 
 		// 业务类型
 		RepairWOBizTypeInfo defaultBizType = GAUtils.getDefaultBizType(ctx);
@@ -4070,21 +4073,20 @@ public class SyncDataFacadeControllerBean extends
 
 		// 付费类别 DMS付费类别
 		// final String DEFAULT_Paymentclassify = "zfcAAAADYhjnpYpd";
-		PaymentClassifyInfo defaultPaymentclassify = GAUtils
-				.getDefaultPaymentClassifyInfo(ctx);
+		PaymentClassifyInfo defaultPaymentclassify = GAUtils.getDefaultPaymentClassifyInfo(ctx,orgUnitInfo);
 		// defaultPaymentclassify.put("id", DEFAULT_Paymentclassify);
 
 		// 维修种类
 		// final String DEFAULT_RepairClassify_BMW = "zfcAAAADYh5HVb8e";
 		// //DMS维修种类（厦门中宝-宝马） XMZB-DMS-01
 		RepairClassifyInfo defaultRepairClassify_BMW = GAUtils
-				.getDefaultRepairClassify(ctx, defaultBrand_BMW);
+				.getDefaultRepairClassify(ctx, defaultBrand_BMW,orgUnitInfo);
 		// defaultRepairClassify_BMW.put("id", DEFAULT_RepairClassify_BMW);
 
 		// final String DEFAULT_RepairClassify_MINI = "zfcAAAADYh9HVb8e";
 		// //DMS维修种类（厦门中宝-MINI） XMZB-DMS-02
 		RepairClassifyInfo defaultRepairClassify_MINI = GAUtils
-				.getDefaultRepairClassify(ctx, defaultBrand_MINI);
+				.getDefaultRepairClassify(ctx, defaultBrand_MINI,orgUnitInfo);
 		// defaultRepairClassify_MINI.put("id", DEFAULT_RepairClassify_MINI);
 
 		// 维修班组
@@ -4102,26 +4104,26 @@ public class SyncDataFacadeControllerBean extends
 		// final String DEFAULT_RepairItem_BMW = "zfcAAAADYiAAz7yt";
 		// //DMS维修项目（厦门中宝-宝马）XMZB-DMS-01
 		RepairItemInfo defaultRepairItem_BMW = GAUtils
-				.getDefaultRepairItemInfo(ctx, defaultBrand_BMW);
+				.getDefaultRepairItemInfo(ctx, defaultBrand_BMW,orgUnitInfo);
 		// defaultRepairItem_BMW.put("id", DEFAULT_RepairItem_BMW);
 
 		// final String DEFAULT_RepairItem_MINI = "zfcAAAADYiIAz7yt";
 		// //DMS维修项目（厦门中宝-MINI）XMZB-DMS-02
 		RepairItemInfo defaultRepairItem_MINI = GAUtils
-				.getDefaultRepairItemInfo(ctx, defaultBrand_MINI);
+				.getDefaultRepairItemInfo(ctx, defaultBrand_MINI,orgUnitInfo);
 		// defaultRepairItem_MINI.put("id", DEFAULT_RepairItem_MINI);
 
 		// 维修类型
 		// final String DEFAULT_RepairType_BMW = "zfcAAAADYhcA1NDU";
 		// //DMS维修类型（厦门中宝-宝马）XMZB-DMS-01
 		RepairTypeInfo defaultRepairType_BMW = GAUtils.getDefaultRepairType(
-				ctx, defaultBrand_BMW);
+				ctx, defaultBrand_BMW,orgUnitInfo);
 		// defaultRepairType_BMW.put("id", DEFAULT_RepairType_BMW);
 
 		// final String DEFAULT_RepairType_MINI = "zfcAAAADYhkA1NDU";
 		// //DMS维修类型（厦门中宝-MINI）XMZB-DMS-02
 		RepairTypeInfo defaultRepairType_MINI = GAUtils.getDefaultRepairType(
-				ctx, defaultBrand_MINI);
+				ctx, defaultBrand_MINI,orgUnitInfo);
 		// defaultRepairType_MINI.put("id", DEFAULT_RepairType_MINI);
 
 		// RepairWORWORepairItemEntryInfo repairItemEntryInfo = new

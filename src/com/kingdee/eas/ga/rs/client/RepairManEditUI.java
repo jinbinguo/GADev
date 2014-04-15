@@ -11,8 +11,14 @@ import com.kingdee.bos.ctrl.kdf.table.KDTDefaultCellEditor;
 import com.kingdee.bos.ctrl.kdf.table.KDTable;
 import com.kingdee.bos.ctrl.swing.KDPromptBox.DefaultEditor;
 import com.kingdee.bos.dao.IObjectValue;
+import com.kingdee.bos.metadata.entity.EntityViewInfo;
+import com.kingdee.bos.metadata.entity.FilterInfo;
+import com.kingdee.bos.metadata.entity.FilterItemInfo;
 import com.kingdee.bos.ui.face.CoreUIObject;
 import com.kingdee.eas.auto4s.rsm.rs.util.client.RsQueryF7Utils;
+import com.kingdee.eas.auto4s.rsm.rs.util.client.RsUtils;
+import com.kingdee.eas.basedata.orgext.ServiceOrgUnitInfo;
+import com.kingdee.eas.myframework.util.OrgUtils;
 import com.kingdee.eas.myframework.vo.RequireCompCollection;
 
 /**
@@ -40,6 +46,15 @@ public class RepairManEditUI extends AbstractRepairManEditUI
     	DefaultEditor editor = (DefaultEditor) prmtVehicle.getEditor();
     	IColumn column = kdtEntrys.getColumn("vehicle");
     	column.setEditor(new KDTDefaultCellEditor(prmtVehicle));
+    	/*EntityViewInfo entityVehicle = prmtVehicle.getEntityViewInfo();
+    	FilterInfo filterInfo = entityVehicle.getFilter();
+    	FilterInfo filterOrgUnit = new FilterInfo();
+    	ServiceOrgUnitInfo orgUnitInfo = RsUtils.getServiceOrgUnitInfo();
+    	filterOrgUnit.getFilterItems().add(new FilterItemInfo("orgUnit",orgUnitInfo.getString("id")));
+    	filterInfo.mergeFilter(filterOrgUnit, "AND");
+    	prmtVehicle.setEntityViewInfo(entityVehicle);
+    	*/
+    	
     }
     
     public RequireCompCollection registerRequireComp() throws Exception {
@@ -68,4 +83,12 @@ public class RepairManEditUI extends AbstractRepairManEditUI
         return objectValue;
     }
 
+    @Override
+    protected void createNewDataEx() throws Exception {
+    	super.createNewDataEx();
+    	
+    	ServiceOrgUnitInfo orgUnitInfo = RsUtils.getServiceOrgUnitInfo();
+ 		if (orgUnitInfo.isIsBizUnit())
+ 			editData.setOrgUnit(OrgUtils.castToAmin(orgUnitInfo));
+    }
 }

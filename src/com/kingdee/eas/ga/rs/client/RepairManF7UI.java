@@ -35,6 +35,7 @@ import com.kingdee.eas.ga.rs.RepairManInfo;
 import com.kingdee.eas.myframework.client.MsgBoxEx;
 import com.kingdee.eas.myframework.util.CodingRuleUtils;
 import com.kingdee.eas.myframework.util.DBUtils;
+import com.kingdee.eas.myframework.util.OrgUtils;
 import com.kingdee.eas.myframework.util.PermUtils;
 import com.kingdee.eas.myframework.util.PublicUtils;
 import com.kingdee.eas.rptclient.newrpt.util.MsgBox;
@@ -294,6 +295,7 @@ public class RepairManF7UI extends AbstractRepairManF7UI implements KDPromptSele
 		repairManInfo.setEmail(txtEmail.getText());
 		repairManInfo.setIdNumber(txtIdNumber.getText());
 		repairManInfo.setZipCode(txtZipCode.getText());
+		repairManInfo.setOrgUnit(OrgUtils.castToAmin(orgUnitInfo));
 		
 		
 		repairMan.save(repairManInfo);

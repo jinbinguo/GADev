@@ -51,24 +51,19 @@ public class InventoryListUIPIEx extends InventoryListUI {
 	private void resetTableExValue(int firstRow, int lastRow) throws Exception {
 		for (int i = firstRow; i <= lastRow; i++) {
 			IRow row = tblMain.getRow(i);
-			String storageOrgUnitId = (String) row.getCell("storageOrgUnit.id")
-					.getValue();
+			String storageOrgUnitId = (String) row.getCell("storageOrgUnit.id").getValue();
 			String materialId = (String) row.getCell("material.id").getValue();
-			String warehouseId = (String) row.getCell("warehouse.id")
-					.getValue();
+			String warehouseId = (String) row.getCell("warehouse.id").getValue();
 
-			SaleOrgUnitInfo saleOrgUnitInfo = hashSaleOrgCache
-					.get(storageOrgUnitId);
+			SaleOrgUnitInfo saleOrgUnitInfo = hashSaleOrgCache.get(storageOrgUnitId);
 			if (saleOrgUnitInfo == null) {
 				OrgUnitInfo storageOrgUnitInfo = new OrgUnitInfo();
 				storageOrgUnitInfo.put("id", storageOrgUnitId);
-				saleOrgUnitInfo = OrgUtils.castToSaleOrg(OrgUtils
-						.getOrgUnitInfoByRelation(null, storageOrgUnitInfo,
-								OrgType.Storage, OrgType.Sale, true));
+				saleOrgUnitInfo = OrgUtils.castToSaleOrg(OrgUtils.getOrgUnitInfoByRelation(null, storageOrgUnitInfo,OrgType.Storage, OrgType.Sale, true));
 				hashSaleOrgCache.put(storageOrgUnitId, saleOrgUnitInfo);
 			}
 			BigDecimal salePrice = getSalePrice(materialId, saleOrgUnitInfo);
-			String loc = getLocationNo(materialId, warehouseId);
+			String loc = getLocationNo(storageOrgUnitId,materialId, warehouseId);
 			tblMain.getRow(i).getCell("salePrice").setValue(salePrice);
 			tblMain.getRow(i).getCell("saleTaxPrice").setValue(salePrice.multiply(new BigDecimal(1.17)));
 			tblMain.getRow(i).getCell("locationNo").setValue(loc);
@@ -116,12 +111,12 @@ public class InventoryListUIPIEx extends InventoryListUI {
 
 	/** È¡µÃ²ÖÎ»ºÅ */
 
-	private String getLocationNo(String materialId, String warehouseId)
+	private String getLocationNo(String storeageOrgUnitId, String materialId, String warehouseId)
 			throws Exception {
-		String sql = String
-				.format(
-						"select CFLoc from CT_MS_materialLoc where FParentID='%s' and CFBmwLoc=(select CFBmwLoc from T_DB_WAREHOUSE where fid='%s')",
-						materialId, warehouseId);
+		String sql = String.format("select CFLoc from CT_MS_materialLoc" +
+				" where FParentID=(select Fid from T_BD_MaterialInventory where forgunit='%s' and fmaterialid='%s')" +
+				" and CFBmwLoc=(select CFBmwLoc from T_DB_WAREHOUSE where fid='%s')",
+				storeageOrgUnitId,materialId, warehouseId);
 		IRowSet rs = DBUtils.executeQuery(null, sql);
 		if (rs != null && rs.next())
 			return rs.getString("CFLoc");

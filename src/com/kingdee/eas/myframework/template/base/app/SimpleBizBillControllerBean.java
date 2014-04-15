@@ -14,6 +14,8 @@ import com.kingdee.bos.dao.IObjectValue;
 import com.kingdee.bos.framework.batch.BatchExecuteParamsEntry;
 import com.kingdee.bos.framework.batch.BatchExecuteResult;
 import com.kingdee.bos.metadata.entity.EntityObjectInfo;
+import com.kingdee.bos.metadata.entity.FilterInfo;
+import com.kingdee.bos.metadata.entity.FilterItemInfo;
 import com.kingdee.bos.util.BOSUuid;
 import com.kingdee.eas.base.permission.UserInfo;
 import com.kingdee.eas.basedata.org.OrgType;
@@ -56,8 +58,17 @@ public class SimpleBizBillControllerBean extends AbstractSimpleBizBillController
     		super._checkNumberDup(ctx, pk, model); //ºÏ≤È±‡¬Î «∑Ò÷ÿ∏¥
     	}
     }
-   
-    
+    @Override
+    protected FilterInfo getFilterForCheckNumber(CoreBillBaseInfo model) {
+    	FilterInfo filterInfo =  super.getFilterForCheckNumber(model);
+    	if(model.getBizOrgPropertyName() != null) {
+    		OrgUnitInfo mainOrgUnitInfo = (OrgUnitInfo)model.get(model.getBizOrgPropertyName());
+    		
+    		filterInfo.getFilterItems().add(new FilterItemInfo(model.getBizOrgPropertyName(),mainOrgUnitInfo.getString("id")));
+    	}
+    	
+    	return filterInfo;
+    }
     /**
      * ºÏ≤È «∑Ò±‡¬Î÷ÿ∏¥
      */

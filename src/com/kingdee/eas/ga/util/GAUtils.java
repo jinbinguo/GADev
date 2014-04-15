@@ -23,6 +23,7 @@ import com.kingdee.eas.auto4s.bdm.rsm.RepairTypeFactory;
 import com.kingdee.eas.auto4s.bdm.rsm.RepairTypeInfo;
 import com.kingdee.eas.auto4s.bdm.rsm.WarrantyTypeFactory;
 import com.kingdee.eas.auto4s.bdm.rsm.WarrantyTypeInfo;
+import com.kingdee.eas.basedata.org.OrgUnitInfo;
 import com.kingdee.eas.basedata.person.PersonInfo;
 import com.kingdee.eas.basedata.scm.common.ITransactionType;
 import com.kingdee.eas.basedata.scm.common.TransactionTypeFactory;
@@ -78,8 +79,11 @@ public class GAUtils implements Serializable {
 	 * @return
 	 * @throws Exception
 	 */
-	public static WarrantyTypeInfo getDefaultWarrantType(Context ctx,BrandInfo brandInfo) throws Exception {
+	public static WarrantyTypeInfo getDefaultWarrantType(Context ctx,BrandInfo brandInfo, OrgUnitInfo orgUnitInfo) throws Exception {
 		
+		//if (orgUnitInfo == null) {
+		//	throw new EASBizException(new NumericExceptionSubItem("","获取默认保修类型，参数[组织公司]不能为空!"));
+		//}
 		//品牌 
 		if (hashBrand.isEmpty()) getBrandCol(ctx);
 		BrandInfo defaultBrand_BMW = hashBrand.get("BMW"); //BMW 001
@@ -90,21 +94,26 @@ public class GAUtils implements Serializable {
     	if (ctx == null) warrantyType = WarrantyTypeFactory.getRemoteInstance();
     	else  warrantyType = WarrantyTypeFactory.getLocalInstance(ctx); 
     	
-    	
-    	//DMS保修类型（厦门中宝-宝马） XMZB-DMS-01
-    	WarrantyTypeInfo defaultWarrantyType_BWM = warrantyType.getWarrantyTypeInfo(String.format("where number='%s'","XMZB-DMS-01"));
-    	//DMS保修类型（厦门中宝-MINI） XMZB-DMS-02
-    	WarrantyTypeInfo defaultWarrantyType_MINI = warrantyType.getWarrantyTypeInfo(String.format("where number='%s'","XMZB-DMS-02"));
-    
-		if (brandInfo == null) 
-			throw new EASBizException(new NumericExceptionSubItem("","车辆品牌不能为空"));
-		if (PublicUtils.equals(brandInfo, defaultBrand_BMW)) {
-			return defaultWarrantyType_BWM;
-		} else if (PublicUtils.equals(brandInfo, defaultBrand_MINI)) {
-			return defaultWarrantyType_MINI;
-		} else {
-			throw new EASBizException(new NumericExceptionSubItem("",String.format("车辆品牌[%s]不正确!",brandInfo.getName())));
-		}
+    	try {
+	    //	String orgId = orgUnitInfo.getString("id");
+	    	//DMS保修类型（厦门中宝-宝马） XMZB-DMS-01
+	    	WarrantyTypeInfo defaultWarrantyType_BWM = warrantyType.getWarrantyTypeInfo(String.format("where number='%s'","XMZB-DMS-01"));
+	    	//DMS保修类型（厦门中宝-MINI） XMZB-DMS-02
+	    	WarrantyTypeInfo defaultWarrantyType_MINI = warrantyType.getWarrantyTypeInfo(String.format("where number='%s'","XMZB-DMS-02"));
+	    
+			if (brandInfo == null) 
+				throw new EASBizException(new NumericExceptionSubItem("","车辆品牌不能为空"));
+			if (PublicUtils.equals(brandInfo, defaultBrand_BMW)) {
+				return defaultWarrantyType_BWM;
+			} else if (PublicUtils.equals(brandInfo, defaultBrand_MINI)) {
+	
+				return defaultWarrantyType_MINI;
+			} else {
+				throw new EASBizException(new NumericExceptionSubItem("",String.format("车辆品牌[%s]不正确!",brandInfo.getName())));
+			}
+    	} catch (Exception e) {
+    		throw new EASBizException(new NumericExceptionSubItem("",String.format("获取默认保修类型为空，请查看基础资料设置!")));
+    	}
 
 	}
 	
@@ -115,7 +124,11 @@ public class GAUtils implements Serializable {
 	 * @return
 	 * @throws Exception
 	 */
-	public static RepairTypeInfo getDefaultRepairType(Context ctx,BrandInfo brandInfo) throws Exception {
+	public static RepairTypeInfo getDefaultRepairType(Context ctx,BrandInfo brandInfo,OrgUnitInfo orgUnitInfo) throws Exception {
+		
+	//	if (orgUnitInfo == null) {
+	//		throw new EASBizException(new NumericExceptionSubItem("","获取默认维修类型，参数[组织公司]不能为空!"));
+	//	}
 		
 		//品牌 
 		if (hashBrand.isEmpty()) getBrandCol(ctx);
@@ -127,19 +140,24 @@ public class GAUtils implements Serializable {
 		if (ctx == null) repairType = RepairTypeFactory.getRemoteInstance();
 		else repairType = RepairTypeFactory.getLocalInstance(ctx);
 		
-		//DMS维修类型（厦门中宝-宝马） XMZB-DMS-01
-		RepairTypeInfo defaultRepairType_BMW = repairType.getRepairTypeInfo(String.format("where number='%s'", "XMZB-DMS-01"));
-		//DMS维修类型（厦门中宝-MINI）XMZB-DMS-02
-		RepairTypeInfo defaultRepairType_MINI = repairType.getRepairTypeInfo(String.format("where number='%s'", "XMZB-DMS-02"));
-    	
-		if (brandInfo == null) 
-			throw new EASBizException(new NumericExceptionSubItem("","车辆品牌不能为空"));
-		if (PublicUtils.equals(brandInfo, defaultBrand_BMW)) {
-			return defaultRepairType_BMW;
-		} else if (PublicUtils.equals(brandInfo, defaultBrand_MINI)) {
-			return defaultRepairType_MINI;
-		} else {
-			throw new EASBizException(new NumericExceptionSubItem("",String.format("车辆品牌[%s]不正确!",brandInfo.getName())));
+		try {
+		
+			//DMS维修类型（厦门中宝-宝马） XMZB-DMS-01
+			RepairTypeInfo defaultRepairType_BMW = repairType.getRepairTypeInfo(String.format("where number='%s'", "XMZB-DMS-01"));
+			//DMS维修类型（厦门中宝-MINI）XMZB-DMS-02
+			RepairTypeInfo defaultRepairType_MINI = repairType.getRepairTypeInfo(String.format("where number='%s'", "XMZB-DMS-02"));
+	    	
+			if (brandInfo == null) 
+				throw new EASBizException(new NumericExceptionSubItem("","车辆品牌不能为空"));
+			if (PublicUtils.equals(brandInfo, defaultBrand_BMW)) {
+				return defaultRepairType_BMW;
+			} else if (PublicUtils.equals(brandInfo, defaultBrand_MINI)) {
+				return defaultRepairType_MINI;
+			} else {
+				throw new EASBizException(new NumericExceptionSubItem("",String.format("车辆品牌[%s]不正确!",brandInfo.getName())));
+			}
+		} catch (Exception e) {
+			throw new EASBizException(new NumericExceptionSubItem("",String.format("获取默认维修类型为空，请查看基础资料设置!")));
 		}
 	}
 	
@@ -150,8 +168,12 @@ public class GAUtils implements Serializable {
 	 * @return
 	 * @throws Exception
 	 */
-	public static RepairClassifyInfo getDefaultRepairClassify(Context ctx,BrandInfo brandInfo) throws Exception {
+	public static RepairClassifyInfo getDefaultRepairClassify(Context ctx,BrandInfo brandInfo,OrgUnitInfo orgUnitInfo) throws Exception {
 
+ 		//if (orgUnitInfo == null) {
+		//	throw new EASBizException(new NumericExceptionSubItem("","获取默认维修种类，参数[组织公司]不能为空!"));
+		//}
+ 		
 		//品牌 
 		if (hashBrand.isEmpty()) getBrandCol(ctx);
 		BrandInfo defaultBrand_BMW = hashBrand.get("BMW"); //BMW 001
@@ -162,21 +184,26 @@ public class GAUtils implements Serializable {
 		if (ctx == null) repairClassify = RepairClassifyFactory.getRemoteInstance();
 		else repairClassify = RepairClassifyFactory.getLocalInstance(ctx);
 		
+		//String orgId = orgUnitInfo.getString("id");
 		//DMS维修类型（厦门中宝-宝马） XMZB-DMS-01
 		RepairClassifyInfo defaultRepairClassify_BMW = repairClassify.getRepairClassifyInfo(String.format("where number='%s'", "XMZB-DMS-01"));
 		//DMS维修类型（厦门中宝-MINI）XMZB-DMS-02
 		RepairClassifyInfo defaultRepairClassify_MINI = repairClassify.getRepairClassifyInfo(String.format("where number='%s'", "XMZB-DMS-02"));
     
-    	
-		if (brandInfo == null) 
-			throw new EASBizException(new NumericExceptionSubItem("","车辆品牌不能为空"));
-		if (PublicUtils.equals(brandInfo, defaultBrand_BMW)) {
-			return defaultRepairClassify_BMW;
-		} else if (PublicUtils.equals(brandInfo, defaultBrand_MINI)) {
-			return defaultRepairClassify_MINI;
-		} else {
-			throw new EASBizException(new NumericExceptionSubItem("",String.format("车辆品牌[%s]不正确!",brandInfo.getName())));
-		}
+    	try {
+			if (brandInfo == null) 
+				throw new EASBizException(new NumericExceptionSubItem("","车辆品牌不能为空"));
+			if (PublicUtils.equals(brandInfo, defaultBrand_BMW)) {
+	
+				return defaultRepairClassify_BMW;
+			} else if (PublicUtils.equals(brandInfo, defaultBrand_MINI)) {
+				return defaultRepairClassify_MINI;
+			} else {
+				throw new EASBizException(new NumericExceptionSubItem("",String.format("车辆品牌[%s]不正确!",brandInfo.getName())));
+			}
+    	} catch (Exception e) {
+    		throw new EASBizException(new NumericExceptionSubItem("",String.format("获取默认维修种类为空，请查看基础资料设置!")));
+    	}
 	}
 	
 	/**
@@ -186,8 +213,10 @@ public class GAUtils implements Serializable {
 	 * @return
 	 * @throws Exception
 	 */
-	public static RepairItemInfo getDefaultRepairItemForTXT(Context ctx,BrandInfo brandInfo) throws Exception {
-
+	public static RepairItemInfo getDefaultRepairItemForTXT(Context ctx,BrandInfo brandInfo, OrgUnitInfo orgUnitInfo) throws Exception {
+ 		if (orgUnitInfo == null) {
+			throw new EASBizException(new NumericExceptionSubItem("","获取默认维修项目-TXT，参数[组织公司]不能为空!"));
+		}
 		//品牌 
 		if (hashBrand.isEmpty()) getBrandCol(ctx);
 		BrandInfo defaultBrand_BMW = hashBrand.get("BMW"); //BMW 001
@@ -197,10 +226,12 @@ public class GAUtils implements Serializable {
 		if (ctx == null) repairItem = RepairItemFactory.getRemoteInstance();
 		else repairItem = RepairItemFactory.getLocalInstance(ctx);
 		
+		try {
+		String orgId = orgUnitInfo.getString("id");
 		//DMS维修项目TXT（厦门中宝-宝马） TXT-1
-		RepairItemInfo defaultRepairItemTXT_BMW = repairItem.getRepairItemInfo(String.format("where number='%s'", "TXT-1"));
+		RepairItemInfo defaultRepairItemTXT_BMW = repairItem.getRepairItemInfo(String.format("where number='%s' and OrgUnit.id='%s'", "TXT-1",orgId));
 		//DMS维修项目TXT（厦门中宝-MINI）TXT-2
-		RepairItemInfo defaultRepairItemTXT_MINI = repairItem.getRepairItemInfo(String.format("where number='%s'", "TXT-2"));
+		RepairItemInfo defaultRepairItemTXT_MINI = repairItem.getRepairItemInfo(String.format("where number='%s' and OrgUnit.id='%s'", "TXT-2",orgId));
     
     	
 		if (brandInfo == null) 
@@ -208,9 +239,13 @@ public class GAUtils implements Serializable {
 		if (PublicUtils.equals(brandInfo, defaultBrand_BMW)) {
 			return defaultRepairItemTXT_BMW;
 		} else if (PublicUtils.equals(brandInfo, defaultBrand_MINI)) {
+
 			return defaultRepairItemTXT_MINI;
 		} else {
 			throw new EASBizException(new NumericExceptionSubItem("",String.format("车辆品牌[%s]不正确!",brandInfo.getName())));
+		}
+		} catch (Exception e) {
+			throw new EASBizException(new NumericExceptionSubItem("",String.format("获取默认维修项目-TXT为空，请查看基础资料设置!")));
 		}
 	
 	}
@@ -222,7 +257,10 @@ public class GAUtils implements Serializable {
 	 * @return
 	 * @throws Exception
 	 */
-	public static RepairItemInfo getDefaultRepairItemForDJQ(Context ctx,BrandInfo brandInfo) throws Exception {
+	public static RepairItemInfo getDefaultRepairItemForDJQ(Context ctx,BrandInfo brandInfo,OrgUnitInfo orgUnitInfo) throws Exception {
+ 		if (orgUnitInfo == null) {
+			throw new EASBizException(new NumericExceptionSubItem("","获取默认维修类型，参数[组织公司]不能为空!"));
+		}
 
 		//品牌 
 		if (hashBrand.isEmpty()) getBrandCol(ctx);
@@ -233,20 +271,26 @@ public class GAUtils implements Serializable {
 		if (ctx == null) repairItem = RepairItemFactory.getRemoteInstance();
 		else repairItem = RepairItemFactory.getLocalInstance(ctx);
 		
-		//DMS维修项目-代金券（厦门中宝-宝马）DJQ-1
-		RepairItemInfo defaultRepairItemDJQ_BMW = repairItem.getRepairItemInfo(String.format("where number='%s'", "DJQ-1"));
-		//DMS维修项目-代金券（厦门中宝-MINI）DJQ-2
-		RepairItemInfo defaultRepairItemDJQ_MINI = repairItem.getRepairItemInfo(String.format("where number='%s'", "DJQ-2"));
-    
-    	
-		if (brandInfo == null) 
-			throw new EASBizException(new NumericExceptionSubItem("","车辆品牌不能为空"));
-		if (PublicUtils.equals(brandInfo, defaultBrand_BMW)) {
-			return defaultRepairItemDJQ_BMW;
-		} else if (PublicUtils.equals(brandInfo, defaultBrand_MINI)) {
-			return defaultRepairItemDJQ_MINI;
-		} else {
-			throw new EASBizException(new NumericExceptionSubItem("",String.format("车辆品牌[%s]不正确!",brandInfo.getName())));
+		try {
+			String orgId = orgUnitInfo.getString("id");
+	
+			//DMS维修项目-代金券（厦门中宝-宝马）DJQ-1
+			RepairItemInfo defaultRepairItemDJQ_BMW = repairItem.getRepairItemInfo(String.format("where number='%s' and OrgUnit.id='%s'", "DJQ-1",orgId));
+			//DMS维修项目-代金券（厦门中宝-MINI）DJQ-2
+			RepairItemInfo defaultRepairItemDJQ_MINI = repairItem.getRepairItemInfo(String.format("where number='%s' and OrgUnit.id='%s'", "DJQ-2",orgId));
+	    
+	    	
+			if (brandInfo == null) 
+				throw new EASBizException(new NumericExceptionSubItem("","车辆品牌不能为空"));
+			if (PublicUtils.equals(brandInfo, defaultBrand_BMW)) {
+				return defaultRepairItemDJQ_BMW;
+			} else if (PublicUtils.equals(brandInfo, defaultBrand_MINI)) {
+				return defaultRepairItemDJQ_MINI;
+			} else {
+				throw new EASBizException(new NumericExceptionSubItem("",String.format("车辆品牌[%s]不正确!",brandInfo.getName())));
+			}
+		} catch (Exception e) {
+			throw new EASBizException(new NumericExceptionSubItem("",String.format("获取默认维修项目-代金券为空，请查看基础资料设置!")));
 		}
 	
 	}
@@ -257,12 +301,20 @@ public class GAUtils implements Serializable {
 	 * @return
 	 * @throws Exception
 	 */
-	public static VehicleInfo getDefualtVehicleInfo(Context ctx) throws Exception {
+	public static VehicleInfo getDefualtVehicleInfo(Context ctx,OrgUnitInfo orgUnitInfo) throws Exception {
+ 		if (orgUnitInfo == null) {
+			throw new EASBizException(new NumericExceptionSubItem("","获取默认车辆，参数[组织公司]不能为空!"));
+		}
+ 		String orgId = orgUnitInfo.getString("id");
 		IVehicle vehicle = null;
 		if (ctx == null) vehicle = VehicleFactory.getRemoteInstance();
 		else  vehicle = VehicleFactory.getLocalInstance(ctx);
-		VehicleInfo defaultVehicleInfo = vehicle.getVehicleInfo("where plateNum='00001' ");
-		return defaultVehicleInfo;
+		try {
+			VehicleInfo defaultVehicleInfo = vehicle.getVehicleInfo(String.format("where plateNum='00001'and OrgUnit.id='%s'", orgId));
+			return defaultVehicleInfo;
+		} catch (Exception e) {
+			throw new EASBizException(new NumericExceptionSubItem("", "获取默认车辆为空,请查看基础资料设置！"));
+		}
 	}
 	
 	/**
@@ -271,12 +323,21 @@ public class GAUtils implements Serializable {
 	 * @return
 	 * @throws Exception
 	 */
-	public static CustomerAccountInfo getDefaultCustomerAccountInfo(Context ctx) throws Exception  {
+	public static CustomerAccountInfo getDefaultCustomerAccountInfo(Context ctx,OrgUnitInfo orgUnitInfo) throws Exception  {
+ 		if (orgUnitInfo == null) {
+			throw new EASBizException(new NumericExceptionSubItem("","获取默认维修类型，参数[组织公司]不能为空!"));
+		}
+ 		
 		ICustomerAccount customerAccount = null; 
 		if (ctx == null) customerAccount = CustomerAccountFactory.getRemoteInstance();
 		else customerAccount = CustomerAccountFactory.getLocalInstance(ctx);
-		CustomerAccountInfo defaultCustomerAccountInfo = customerAccount.getCustomerAccountInfo("where number='C0000001'");
-		return defaultCustomerAccountInfo;
+		String orgId = orgUnitInfo.getString("id");
+		try {
+			CustomerAccountInfo defaultCustomerAccountInfo = customerAccount.getCustomerAccountInfo(String.format("where number='C0000001' and orgUnit.id='%s'",orgId));	
+			return defaultCustomerAccountInfo;
+		} catch (Exception e) {
+			throw new EASBizException(new NumericExceptionSubItem("", "获取默认客户账号为空,请查看基础资料设置！"));
+		}
 	}
 	/**
 	 * 默认 维修项目
@@ -285,7 +346,10 @@ public class GAUtils implements Serializable {
 	 * @return
 	 * @throws Exception
 	 */
-	public static RepairItemInfo getDefaultRepairItemInfo(Context ctx, BrandInfo brandInfo) throws Exception {
+	public static RepairItemInfo getDefaultRepairItemInfo(Context ctx, BrandInfo brandInfo,OrgUnitInfo orgUnitInfo) throws Exception {
+ 		if (orgUnitInfo == null) {
+			throw new EASBizException(new NumericExceptionSubItem("","获取默认维修类型，参数[组织公司]不能为空!"));
+		}
 		//品牌 
 		if (hashBrand.isEmpty()) getBrandCol(ctx);
 		BrandInfo defaultBrand_BMW = hashBrand.get("BMW"); //BMW 001
@@ -296,20 +360,26 @@ public class GAUtils implements Serializable {
 		if (ctx == null) repairItem = RepairItemFactory.getRemoteInstance();
 		else repairItem = RepairItemFactory.getLocalInstance(ctx);
 		
-		//DMS维修类型（厦门中宝-宝马） XMZB-DMS-01
-		RepairItemInfo defaultRepairItem_BMW = repairItem.getRepairItemInfo(String.format("where number='%s'", "XMZB-DMS-01"));
-		//DMS维修类型（厦门中宝-MINI）XMZB-DMS-02
-		RepairItemInfo defaultRepairItem_MINI = repairItem.getRepairItemInfo(String.format("where number='%s'", "XMZB-DMS-02"));
-    
-    	
-		if (brandInfo == null) 
-			throw new EASBizException(new NumericExceptionSubItem("","车辆品牌不能为空"));
-		if (PublicUtils.equals(brandInfo, defaultBrand_BMW)) {
-			return defaultRepairItem_BMW;
-		} else if (PublicUtils.equals(brandInfo, defaultBrand_MINI)) {
-			return defaultRepairItem_MINI;
-		} else {
-			throw new EASBizException(new NumericExceptionSubItem("",String.format("车辆品牌[%s]不正确!",brandInfo.getName())));
+		String orgId = orgUnitInfo.getString("id");
+		
+		try {
+			//DMS维修类型（厦门中宝-宝马） XMZB-DMS-01
+			RepairItemInfo defaultRepairItem_BMW = repairItem.getRepairItemInfo(String.format("where number='%s' and OrgUnit.id='%s'", "XMZB-DMS-01",orgId));
+			//DMS维修类型（厦门中宝-MINI）XMZB-DMS-02
+			RepairItemInfo defaultRepairItem_MINI = repairItem.getRepairItemInfo(String.format("where number='%s' and OrgUnit.id='%s'", "XMZB-DMS-02",orgId));
+	    
+	    	
+			if (brandInfo == null) 
+				throw new EASBizException(new NumericExceptionSubItem("","车辆品牌不能为空"));
+			if (PublicUtils.equals(brandInfo, defaultBrand_BMW)) {
+				return defaultRepairItem_BMW;
+			} else if (PublicUtils.equals(brandInfo, defaultBrand_MINI)) {
+				return defaultRepairItem_MINI;
+			} else {
+				throw new EASBizException(new NumericExceptionSubItem("",String.format("车辆品牌[%s]不正确!",brandInfo.getName())));
+			}
+		} catch (Exception e) {
+			throw new EASBizException(new NumericExceptionSubItem("",String.format("获取默认维修项目为空，请查看基础资料设置!")));
 		}
 	}
 	/**
@@ -318,12 +388,17 @@ public class GAUtils implements Serializable {
 	 * @return
 	 * @throws Exception
 	 */
-	public static PaymentClassifyInfo getDefaultPaymentClassifyInfo(Context ctx) throws Exception {
+	public static PaymentClassifyInfo getDefaultPaymentClassifyInfo(Context ctx,OrgUnitInfo orgUnitInfo) throws Exception {
+
 		IPaymentClassify paymentClassify = null;
 		if (ctx == null) paymentClassify = PaymentClassifyFactory.getRemoteInstance();
 		else paymentClassify = PaymentClassifyFactory.getLocalInstance(ctx);
-		PaymentClassifyInfo defaultPaymentClassifyInfo = paymentClassify.getPaymentClassifyInfo(String.format("where number='%s'","DMS"));
-		return defaultPaymentClassifyInfo;
+		try {
+			PaymentClassifyInfo defaultPaymentClassifyInfo = paymentClassify.getPaymentClassifyInfo(String.format("where number='%s'","DMS"));
+			return defaultPaymentClassifyInfo;
+		} catch (Exception e) {
+			throw new EASBizException(new NumericExceptionSubItem("",String.format("获取默认付费类别为空，请查看基础资料设置!")));
+		}
 	}
 	/**
 	 * 默认 组织ID 厦门中宝汽车有限公司 编码1001，允当所有业务组织
@@ -368,8 +443,13 @@ public class GAUtils implements Serializable {
 		ITransactionType transactionType = null;
 		if (ctx ==null) transactionType = TransactionTypeFactory.getRemoteInstance();
 		else transactionType = TransactionTypeFactory.getLocalInstance(ctx);
-		TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where number='034-1'");
-		return defaultTransactionInfo;
+		try {
+			TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where number='034-1'");
+			return defaultTransactionInfo;	
+		} catch (Exception e) {
+			throw new EASBizException(new NumericExceptionSubItem("",String.format("获取默认事务类型其他入库(调拨入库)为空，请查看基础资料设置!")));
+		}
+		
 	}
 	
 	/**
@@ -382,8 +462,12 @@ public class GAUtils implements Serializable {
 		ITransactionType transactionType = null;
 		if (ctx ==null) transactionType = TransactionTypeFactory.getRemoteInstance();
 		else transactionType = TransactionTypeFactory.getLocalInstance(ctx);
-		TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where number='034-2'");
-		return defaultTransactionInfo;
+		try {
+			TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where number='034-2'");
+			return defaultTransactionInfo;
+		} catch (Exception e) {
+			throw new EASBizException(new NumericExceptionSubItem("",String.format("获取默认事务类型其他入库(盘盈入库)为空，请查看基础资料设置!")));
+		}
 	}
 	
 	
@@ -397,8 +481,12 @@ public class GAUtils implements Serializable {
 		ITransactionType transactionType = null;
 		if (ctx ==null) transactionType = TransactionTypeFactory.getRemoteInstance();
 		else transactionType = TransactionTypeFactory.getLocalInstance(ctx);
-		TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where number='030-1'");
+		try {
+			TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where number='030-1'");
 		return defaultTransactionInfo;
+		} catch (Exception e) {
+			throw new EASBizException(new NumericExceptionSubItem("",String.format("获取默认事务类型其他出库(调拨出库)为空，请查看基础资料设置!")));
+		}
 	}
 	
 	/**
@@ -411,8 +499,12 @@ public class GAUtils implements Serializable {
 		ITransactionType transactionType = null;
 		if (ctx ==null) transactionType = TransactionTypeFactory.getRemoteInstance();
 		else transactionType = TransactionTypeFactory.getLocalInstance(ctx);
-		TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where number='030-2'");
-		return defaultTransactionInfo;
+		try {
+			TransactionTypeInfo defaultTransactionInfo  = transactionType.getTransactionTypeInfo("where number='030-2'");
+			return defaultTransactionInfo;
+		} catch (Exception e) {
+			throw new EASBizException(new NumericExceptionSubItem("",String.format("获取默认事务类型其他出库(盘亏出库)为空，请查看基础资料设置!")));
+		}
 	}
 	
 	/**
@@ -425,7 +517,11 @@ public class GAUtils implements Serializable {
 		IRepairWOBizType repairWOBizType = null;
 		if (ctx == null) repairWOBizType = RepairWOBizTypeFactory.getRemoteInstance();
 		else repairWOBizType = RepairWOBizTypeFactory.getLocalInstance(ctx);
-		RepairWOBizTypeInfo defaultBizType = repairWOBizType.getRepairWOBizTypeInfo("where number='0001'");
-		return defaultBizType;
+		try {
+			RepairWOBizTypeInfo defaultBizType = repairWOBizType.getRepairWOBizTypeInfo("where number='0001'");
+			return defaultBizType;
+		} catch (Exception e) {
+			throw new EASBizException(new NumericExceptionSubItem("",String.format("获取默认业务类型为空，请查看基础资料设置!")));
+		}
 	}
 }

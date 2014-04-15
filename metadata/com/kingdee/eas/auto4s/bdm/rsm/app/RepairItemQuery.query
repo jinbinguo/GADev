@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.auto4s.bdm.rsm.app</package>
+    <name>RepairItemQuery</name>
+    <alias>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].alias</alias>
+    <units>
+        <queryField>
+            <name>orgUnit.id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[orgUnit.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>4c095b87-37c8-49c2-840d-936cf947e649</key>
+                    <parentUnit>
+                        <key name="name" value="orgUnit.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="orgUnit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.rsm.app" />
+                <key name="name" value="RepairItemQuery" />
+            </query>
+        </queryField>
+    </units>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[orgUnit.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.rsm.app.RepairItemQuery].units.queryField[orgUnit.id].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</joinQuery>
+

@@ -39,7 +39,11 @@ public class RepairWOListUIPIEx extends RepairWOListUI {
 
 	@Override
 	public void onLoad() throws Exception {
+		cmbGABillStatus.removeAllItems();
 		cmbGABillStatus.insertItemAt("全部", 0);
+		cmbGABillStatus.insertItemAt("未结算", 1);
+		cmbGABillStatus.insertItemAt("结算", 2);
+		
 		cmbGABillStatus.setSelectedIndex(0);
 		super.onLoad();
 		int intendDeliveryTimeIndex = tblMain.getColumnIndex("IntendDeliveryTime");
@@ -152,9 +156,16 @@ public class RepairWOListUIPIEx extends RepairWOListUI {
 		try {
 			FilterInfo myFilterInfo = (FilterInfo) InvokeUtils.getFieldValue(this, "myFilterInfo");
 			FilterInfo filterInfo = new FilterInfo();
-			if (cmbGABillStatus.getSelectedItem() != null && cmbGABillStatus.getSelectedItem().toString() != quanBu) {
-				filterInfo.getFilterItems().add(new FilterItemInfo("gaBillStatus", ((RepairWOStatusEnum) cmbGABillStatus.getShowSelectedItem()).getValue(),CompareType.EQUALS));
+			if (PublicUtils.equals("未结算", cmbGABillStatus.getSelectedItem())) {
+				filterInfo.getFilterItems().add(new FilterItemInfo("gaBillStatus", RepairWOStatusEnum.ALLSETTLE_VALUE,CompareType.NOTEQUALS));
+			} else if (PublicUtils.equals("结算", cmbGABillStatus.getSelectedItem())) {
+				filterInfo.getFilterItems().add(new FilterItemInfo("gaBillStatus", RepairWOStatusEnum.ALLSETTLE_VALUE));
 			}
+			
+			//if (cmbGABillStatus.getSelectedItem() != null && cmbGABillStatus.getSelectedItem().toString() != quanBu) {
+			//	filterInfo.getFilterItems().add(new FilterItemInfo("gaBillStatus", ((RepairWOStatusEnum) cmbGABillStatus.getShowSelectedItem()).getValue(),CompareType.EQUALS));
+			//}
+			
 			if (cmbSettlePrinted.getSelectedItem() != null && !PublicUtils.equals(quanBu, cmbSettlePrinted.getSelectedItem())) {
 				if (PublicUtils.equals("是", cmbSettlePrinted.getSelectedItem())) {
 					filterInfo.getFilterItems().add(new FilterItemInfo("isPrintedSettle",true));

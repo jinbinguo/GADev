@@ -2,6 +2,7 @@ package com.kingdee.eas.scm.im.inv.client;
 
 import java.awt.event.ActionEvent;
 
+import com.kingdee.bos.dao.IObjectValue;
 import com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUIPIEx;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.eas.common.client.OprtState;
@@ -67,6 +68,14 @@ public class OtherInWarehsBillEditUIPIEx extends OtherInWarehsBillEditUI {
 		IRowSet rs = DBUtils.executeQueryForDialect(null, sql.toString());
 		if (rs != null && rs.next()) return true;
 		return false;
+	}
+	
+	@Override
+	protected IObjectValue createNewData() {
+		IObjectValue value = super.createNewData();
+		
+		value.put("TransactionType",null);
+		return value;
 	}
 
 }

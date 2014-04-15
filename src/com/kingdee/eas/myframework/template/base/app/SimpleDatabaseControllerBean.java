@@ -23,10 +23,12 @@ public class SimpleDatabaseControllerBean extends AbstractSimpleDatabaseControll
         Logger.getLogger("com.kingdee.eas.myframework.template.base.app.SimpleDatabaseControllerBean");
     
     
+    
     @Override
     protected IObjectPK _addnew(Context ctx, IObjectValue model) throws BOSException ,EASBizException { 	
     	setNumberFromCodingRule(ctx, model);
     	return  super._addnew(ctx, model);
+    	
     }
     
     /**

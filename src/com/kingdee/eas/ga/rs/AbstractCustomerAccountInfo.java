@@ -107,6 +107,17 @@ public class AbstractCustomerAccountInfo extends com.kingdee.eas.myframework.tem
     {
         put("atsCustomer", item);
     }
+    /**
+     * Object: 客户账户 's 公司 property 
+     */
+    public com.kingdee.eas.basedata.org.AdminOrgUnitInfo getOrgUnit()
+    {
+        return (com.kingdee.eas.basedata.org.AdminOrgUnitInfo)get("orgUnit");
+    }
+    public void setOrgUnit(com.kingdee.eas.basedata.org.AdminOrgUnitInfo item)
+    {
+        put("orgUnit", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("8B9E1F44");
