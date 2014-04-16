@@ -11,7 +11,10 @@ import com.kingdee.bos.ctrl.print.util.KDPrintUtil;
 import com.kingdee.bos.ctrl.reportone.r1.common.designercore.model.ReportModel;
 import com.kingdee.bos.ctrl.reportone.r1.print.common.R1PrintInfo;
 import com.kingdee.bos.ctrl.reportone.r1.print.engine.RuntimeModel;
+import com.kingdee.eas.base.core.util.UIUtil;
 import com.kingdee.eas.myframework.util.InvokeUtils;
+import com.kingdee.eas.myframework.util.UIUtils;
+import com.kingdee.eas.util.SysUtil;
 
 public class R1PrintBrowserEx extends R1PrintBrowser {
 	
@@ -78,8 +81,9 @@ public class R1PrintBrowserEx extends R1PrintBrowser {
 				return (Integer)InvokeUtils.invokeMethod(this,method,objs);
 			} catch (Exception e) {
 				e.printStackTrace();
+				return -1;
 			}
-			return 0;
+			//return 0;
 		}else
 			throw new IllegalArgumentException("Argument templateModel must be RuntimeModel.");
 	}
@@ -118,9 +122,9 @@ public class R1PrintBrowserEx extends R1PrintBrowser {
 		     return runPrintCtrl(getPrinterCtrl(), isPreview, isShowPrinterDialog, owner, title);
 		
 	    } catch (Exception e) {
-	    	e.printStackTrace();
+	    	return -2;
 	    }
-	    return 0;
+	  //  return 0;
     }
     
 }

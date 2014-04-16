@@ -80,9 +80,10 @@ public class ReceivingBillEditUIPIEx extends ReceivingBillEditUI {
 		getBizInterface().update(new ObjectUuidPK(editData.getString("id")),editData);
 		
 		
-		//自动审核，收款
+		//自动审核，收款(收款金额不等于0)
 		actionAudit_actionPerformed(e);
-		actionRec_actionPerformed(e);
+		if (BigDecimal.ZERO.compareTo(editData.getAmount()) != 0)
+			actionRec_actionPerformed(e);
 		
 		if (RepairWOEditUIPIEx.rwoUI != null) {
 			RepairWOEditUIPIEx.rwoUI.actionRefresh_actionPerformed(e);

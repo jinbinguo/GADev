@@ -168,6 +168,8 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	private boolean hasPermission_OprtRetailPrice = false; //操作配件行价格
 	private boolean hasPermission_OprtRetailBelowCost = false; //配件低于成本价销售
 	
+	private boolean hasPermission_OprtRepairTaxPrice = false; //操作维修行含税单价、含税金额
+	
 	private BigDecimal maxRepairDiscountRate = null; //最大项目折扣率
 	private BigDecimal maxRetailDiscountRate = null; //最大零售折扣率
 	
@@ -213,6 +215,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		hasPermission_OprtRetailItemspName = PermUtils.hasFunctionPermission(null, userInfo, seriveOrgInfo, "oprtRetailItemspName");
 		hasPermission_OprtRetailPrice = PermUtils.hasFunctionPermission(null, userInfo, seriveOrgInfo, "oprtRetailPrice ");
 		hasPermission_OprtRetailBelowCost = PermUtils.hasFunctionPermission(null, userInfo, seriveOrgInfo, "oprtRetailBelowCost");
+		hasPermission_OprtRepairTaxPrice = PermUtils.hasFunctionPermission(null, userInfo, seriveOrgInfo, "oprtRepairTaxPrice");
 		isLoadOprtPermission = true;
  
 	}
@@ -1284,6 +1287,9 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		//	initItemSpRepairItemEntryF7(cellItemSp);
 			cellIsCT.getStyleAttributes().setLocked(true);
 			
+			row.getCell("taxPrice").getStyleAttributes().setLocked(!hasPermission_OprtRepairTaxPrice);
+			row.getCell("taxAmount").getStyleAttributes().setLocked(!hasPermission_OprtRepairTaxPrice);
+			
 		} else if ("P".equals(cellT.getValue().toString())) { //配件
 			cellItem.getStyleAttributes().setLocked(true);
 			cellItem.setValue(null);
@@ -1293,6 +1299,8 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			row.getCell("itemspName").getStyleAttributes().setLocked(!hasPermission_OprtRetailItemspName);
 			row.getCell("price").getStyleAttributes().setLocked(!hasPermission_OprtRetailPrice);
 			row.getCell("taxPrice").getStyleAttributes().setLocked(!hasPermission_OprtRetailPrice);
+			row.getCell("amount").getStyleAttributes().setLocked(!hasPermission_OprtRetailPrice);
+			row.getCell("taxAmount").getStyleAttributes().setLocked(!hasPermission_OprtRetailPrice);
 		}
 		
 		if (!PublicUtils.isEmpty((String)cellOriginalEntryId.getValue())) {
@@ -3798,9 +3806,10 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     	    PrintIntegrationManager.initPrint(appHlp, editData.getBOSType(), idList, getTDFileName(), "com.kingdee.eas.scm.common.SCMResource", true);
     	    appHlp.print(getTDFileName(), multiDataSourceProviderProxy, SwingUtilities.getWindowAncestor(this));
     	    PrintIntegrationInfo newPIInfo = getPrintIntegrationInfo(); 	    
-    	    setSettlePrintFlag(appHlp.getPrintedTemplatePath(),oldPIInfo,newPIInfo);
-    	   
-    	    getUIWindow().close();
+    	    String printTemplatePath = appHlp.getPrintedTemplatePath();
+    	    setSettlePrintFlag(printTemplatePath,oldPIInfo,newPIInfo);
+    	    if (!PublicUtils.isEmpty(printTemplatePath))
+    	    	getUIWindow().close();
     	    
     	}
     	
@@ -3822,9 +3831,11 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     	    PrintIntegrationManager.initPrint(appHlp, editData.getBOSType(), idList, getTDFileName(), "com.kingdee.eas.scm.common.SCMResource", true);
     	    appHlp.printPreview(getTDFileName(), multiDataSourceProviderProxy, SwingUtilities.getWindowAncestor(this));
     	    
-    	    PrintIntegrationInfo newPIInfo = getPrintIntegrationInfo(); 	    
-    	    setSettlePrintFlag(appHlp.getPrintedTemplatePath(),oldPIInfo,newPIInfo);
-    	    getUIWindow().close();
+    	    PrintIntegrationInfo newPIInfo = getPrintIntegrationInfo();
+    	    String printTemplatePath = appHlp.getPrintedTemplatePath();
+    	    setSettlePrintFlag(printTemplatePath,oldPIInfo,newPIInfo);
+    	    if (!PublicUtils.isEmpty(printTemplatePath))
+    	    	getUIWindow().close();
     	 
     	}
     }
@@ -3844,10 +3855,12 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     		KDNoteHelperEx appHlp = new KDNoteHelperEx();
     	    PrintIntegrationManager.initPrint(appHlp, editData.getBOSType(), idList, getTDFileName(), "com.kingdee.eas.scm.common.SCMResource", true);
     	    appHlp.print(getTDFileName(), multiDataSourceProviderProxy, SwingUtilities.getWindowAncestor(this),true, this);
-    	    PrintIntegrationInfo newPIInfo = getPrintIntegrationInfo(); 	    
-    	    setSettlePrintFlag(appHlp.getPrintedTemplatePath(),oldPIInfo,newPIInfo);
-    	   
-    	   // getUIWindow().close();
+    	    PrintIntegrationInfo newPIInfo = getPrintIntegrationInfo(); 	 
+    	    String[] printTemplatePaths = appHlp.getPrintedTemplatePaths();
+    	    for (int i = 0; printTemplatePaths != null && i < printTemplatePaths.length; i++)
+    	    	setSettlePrintFlag(printTemplatePaths[i],oldPIInfo,newPIInfo);
+    	   if (printTemplatePaths != null)
+    		   getUIWindow().close();
     	    
     	}
     }

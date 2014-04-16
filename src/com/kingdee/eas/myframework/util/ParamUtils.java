@@ -12,6 +12,7 @@ public class ParamUtils implements Serializable{
 	
 	public static String getParamValue(Context ctx, String paramName, String orgId) throws Exception {
 		String paramValue = ParamManager.getParamValueIgnoreGroupControl(null, paramName, new ObjectStringPK(orgId), true);
+		if (paramValue == null) return "";
 		return paramValue;
 	}
 	

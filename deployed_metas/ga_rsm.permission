@@ -56,6 +56,16 @@
             <group>permission[.ga_rsm].permissionItems.permissionItem[oprtRetailLine].group</group>
             <userDefined>true</userDefined>
         </permissionItem>
+        <permissionItem>
+            <innerID>dc41941e-e6c1-4e03-ab1b-fbbefcf2a510PERMITEM</innerID>
+            <name>oprtRepairTaxPrice</name>
+            <alias>permission[.ga_rsm].permissionItems.permissionItem[oprtRepairTaxPrice].alias</alias>
+            <description>permission[.ga_rsm].permissionItems.permissionItem[oprtRepairTaxPrice].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.汽车4S行业产品.维修管理.前台接待.维修工单</groupName>
+            <group>permission[.ga_rsm].permissionItems.permissionItem[oprtRepairTaxPrice].group</group>
+            <userDefined>true</userDefined>
+        </permissionItem>
     </permissionItems>
     <dependences>
         <dependence>
@@ -136,6 +146,12 @@
                 <key name="innerID" value="4154bb33-6618-468b-9301-0b50fe8e69dePERMITEM" />
             </referedItem>
         </dependence>
+        <dependence>
+            <id>dc41941e-e6c1-4e03-ab1b-fbbefcf2a510PERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="dc41941e-e6c1-4e03-ab1b-fbbefcf2a510PERMITEM" />
+            </referedItem>
+        </dependence>
     </dependences>
     <resource>
         <rs key="permission[.ga_rsm].alias">
@@ -173,6 +189,34 @@
             <lang locale="zh_TW" value="20" />
         </rs>
         <rs key="permission[.ga_rsm].permissionItems.permissionItem[oprtRepairLine].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="EAS系统.汽车4S行业产品.维修管理.前台接待.维修工单" />
+            <lang locale="zh_HK" value="EAS系統.汽車4S行業產品.維修管理.前台接待.維修工單" />
+            <lang locale="zh_TW" value="EAS系統.汽車4S行業產品.維修管理.前台接待.維修工單" />
+        </rs>
+        <rs key="permission[.ga_rsm].permissionItems.permissionItem[oprtRepairTaxPrice].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="操作工时行含税价格" />
+            <lang locale="zh_HK" value="操作工時行含稅價格" />
+            <lang locale="zh_TW" value="操作工時行含稅價格" />
+        </rs>
+        <rs key="permission[.ga_rsm].permissionItems.permissionItem[oprtRepairTaxPrice].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[.ga_rsm].permissionItems.permissionItem[oprtRepairTaxPrice].extendedProperty.orgRelation">
+            <lang locale="en_US" value="Admin" />
+            <lang locale="zh_CN" value="Admin" />
+            <lang locale="zh_TW" value="Admin" />
+        </rs>
+        <rs key="permission[.ga_rsm].permissionItems.permissionItem[oprtRepairTaxPrice].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[.ga_rsm].permissionItems.permissionItem[oprtRepairTaxPrice].group">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="EAS系统.汽车4S行业产品.维修管理.前台接待.维修工单" />
             <lang locale="zh_HK" value="EAS系統.汽車4S行業產品.維修管理.前台接待.維修工單" />

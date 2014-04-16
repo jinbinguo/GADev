@@ -1,12 +1,8 @@
 package com.kingdee.bos.ctrl.report.forapp.kdnote.client;
 
-import java.awt.event.KeyEvent;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
-
-import javax.swing.AbstractAction;
-import javax.swing.KeyStroke;
 
 import com.kingdee.bos.ctrl.common.ui.WindowUtil;
 import com.kingdee.bos.ctrl.common.util.PathUtil;
@@ -15,15 +11,10 @@ import com.kingdee.bos.ctrl.kdf.data.impl.BOSQueryDelegate;
 import com.kingdee.bos.ctrl.kdf.form2.ui.FormPrintHelper;
 import com.kingdee.bos.ctrl.kdf.form2.ui.INotePrintHelper;
 import com.kingdee.bos.ctrl.kdf.form2.ui.NotePrinter;
+import com.kingdee.bos.ctrl.kdf.form2.ui.NotePrinterEx;
 import com.kingdee.bos.ctrl.print.IPrintActionListener;
 import com.kingdee.bos.ctrl.print.config.PrintJobConfig;
 import com.kingdee.bos.ctrl.print.util.KDPrintUtilEx;
-import com.kingdee.bos.ctrl.report.forapp.kdnote.client.KDNoteHelper;
-import com.kingdee.bos.ctrl.report.forapp.kdnote.client.NoteManageView;
-import com.kingdee.bos.ctrl.report.forapp.kdnote.client.NoteTemplateManageView;
-import com.kingdee.bos.ctrl.report.forapp.kdnote.client.NoteUserConfig;
-import com.kingdee.bos.ctrl.report.forapp.kdnote.client.NoteVarListener;
-import com.kingdee.bos.ctrl.report.forapp.kdnote.client.ui.NoteFileDialog;
 import com.kingdee.bos.ctrl.report.forapp.kdnote.client.ui.NoteFileDialogEx;
 import com.kingdee.bos.ctrl.report.forapp.kdnote.client.util.MultiLanguageUtil;
 import com.kingdee.bos.ctrl.report.forapp.kdnote.client.util.NoteUseUtil;
@@ -34,13 +25,13 @@ import com.kingdee.bos.ctrl.reportone.kdrs.biz.IContextSupplier;
 import com.kingdee.bos.ctrl.reportone.kdrs.biz.storage.IBizStorage;
 import com.kingdee.bos.ctrl.reportone.kdrs.exception.KDRSException;
 import com.kingdee.bos.ctrl.reportone.kdrs.exception.NotFoundException;
-import com.kingdee.bos.ctrl.reportone.r1.print.browser.R1PrintBrowser;
 import com.kingdee.bos.ctrl.reportone.r1.print.browser.R1PrintBrowserEx;
 import com.kingdee.bos.ctrl.reportone.r1.print.data.AbstractPrintDataProvider;
 import com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUIPIEx;
 import com.kingdee.eas.framework.client.CoreUI;
 import com.kingdee.eas.myframework.client.MsgBoxEx;
 import com.kingdee.eas.myframework.util.InvokeUtils;
+import com.kingdee.eas.util.AbortException;
 import com.kingdee.util.StringUtils;
 
 public class KDNoteHelperEx extends KDNoteHelper {
@@ -48,7 +39,7 @@ public class KDNoteHelperEx extends KDNoteHelper {
     private NotePrinter _notePrinter;
     private boolean _isOrgFilterSelected;
     private boolean _isOrgFilterEnabled;
-  //  private String chooseTemplatePath;
+    private String[] chooseTemplatePaths;
     private static NoteManageView noteManageView;
     private static NoteManageView noteLimitedManageView;
     private static NoteTemplateManageView noteTemplateManageView;
@@ -76,7 +67,8 @@ public class KDNoteHelperEx extends KDNoteHelper {
 		          INotePrintHelper helper = createPrintHelper(template.getCategory(), template.getTemplatePath(), getNotePrinter(), _listener, dataProvider);
 		          if(templateModel != null && helper != null) {
 		        	  String alias = (String) InvokeUtils.getFieldValue(template, "alias");
-		              helper.print(templateModel, false, i == 0, owner, (new StringBuilder()).append(MultiLanguageUtil.getMLS("client.KDNoteHelper.title", "EAS套打 - ")).append(alias).toString());	      
+		              int iPrint = helper.print(templateModel, false, i == 0, owner, (new StringBuilder()).append(MultiLanguageUtil.getMLS("client.KDNoteHelper.title", "EAS套打 - ")).append(alias).toString());	      
+		              if (iPrint == -2) break;
 		          }
 		      }
 	    	  
@@ -87,7 +79,9 @@ public class KDNoteHelperEx extends KDNoteHelper {
 	   } catch(AssertionError err) {
 	      log.error("", err);
 	      WindowUtil.msgboxError(MultiLanguageUtil.getMLS("client.KDNoteHelper.error", "读取套打模板失败，可能是文件损坏。"), getPrintTitle(true), owner);
-	   }  catch(Exception ex) {
+	   } catch (AbortException ae) {
+		   ae.printStackTrace();
+	   } catch(Exception ex) {
 	      log.error("套打打印失败", ex);
 	      WindowUtil.msgboxError(MultiLanguageUtil.getMLS("client.KDNoteHelper.printErrorPrompt", "套打不能正常进行。请从客户端日志了解异常信息。"), getPrintTitle(false), owner);
 	   } finally {
@@ -161,6 +155,7 @@ public class KDNoteHelperEx extends KDNoteHelper {
 					return null;
 				templatePaths = nfDlg.getNotePathTextEx();
 				relaTemplatePaths = nfDlg.getRelativeNotePathTextEx();
+				chooseTemplatePaths = relaTemplatePaths;
 				if (templatePaths == null) {
 					MsgBoxEx.showInfo("请先选择套打模版!");
 					nfDlg.show();
@@ -381,5 +376,15 @@ public class KDNoteHelperEx extends KDNoteHelper {
 		         sbPrompt.append("It implements BOSQueryDelegate.");
             }
         }
+    }
+    @Override
+    protected NotePrinter getNotePrinter() {
+    	if(_notePrinter == null)
+    		_notePrinter = new NotePrinterEx();
+    	return _notePrinter;
+    }
+
+    public String[] getPrintedTemplatePaths() {
+    	return chooseTemplatePaths;
     }
 }
