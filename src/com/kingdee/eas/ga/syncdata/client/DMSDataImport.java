@@ -51,6 +51,7 @@ import com.kingdee.eas.myframework.util.PublicUtils;
 import com.kingdee.eas.myframework.vo.ServerReturnInfo;
 import com.kingdee.eas.scm.common.BillBaseStatusEnum;
 import com.kingdee.eas.util.SysUtil;
+import com.kingdee.util.enums.EnumUtils;
 
 public class DMSDataImport extends AbstractDMSDataImport {
 	
@@ -79,11 +80,27 @@ public class DMSDataImport extends AbstractDMSDataImport {
 			prmtServiceOrg.setValue(orgUnitInfo);
 		contSpentInfo.setVisible(chkShowSpent.isSelected());
 		chkShowSpent.setSize(1,1);
+		
+		cmbImportType.removeItem(DMSImpTypeEnum.TXT);
+		cmbImportType.removeItem(DMSImpTypeEnum.Auto);
 	}
 	
 	@Override
 	protected void chkShowSpent_stateChanged(ChangeEvent e) throws Exception {
+
 		contSpentInfo.setVisible(chkShowSpent.isSelected());
+		if (chkShowSpent.isSelected()) {
+			if (cmbImportType.getItemCount() == 2) {
+				cmbImportType.addItem(DMSImpTypeEnum.TXT);
+				cmbImportType.addItem(DMSImpTypeEnum.Auto);
+			}
+		} else {
+			cmbImportType.removeItem(DMSImpTypeEnum.TXT);
+			cmbImportType.removeItem(DMSImpTypeEnum.Auto);
+			
+			
+		}
+		
 	}
 
 	@Override
