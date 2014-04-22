@@ -11,3 +11,15 @@ set a.CFItemSPNum=(select b.FNumber from T_ATS_RepairItem b where b.FID=a.CFRepa
 from CT_ATS_RepairWORWOItemSpEntry a
 where a.CFItemspNum<>(select b.FNumber from T_ATS_RepairItem b where b.FID=a.CFRepairItemID)
 and a.CFRepairItemID is not null
+
+
+update CT_ATS_RepairWORWOItemSpEntry
+set CFItemspName='',
+	  CFItemspNum='',
+		CFRepairItemID=''
+where CFRepairItemID='?';
+
+UPDATE T_ATS_RWORepairItemEntry
+set FRepairItemId='?'
+where frepairItemId='?'
+

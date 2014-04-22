@@ -168,7 +168,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	private boolean hasPermission_OprtRetailPrice = false; //操作配件行价格
 	private boolean hasPermission_OprtRetailBelowCost = false; //配件低于成本价销售
 	
-	private boolean hasPermission_OprtRepairTaxPrice = false; //操作维修行含税单价、含税金额
+	private boolean hasPermission_OprtRepairTaxPrice = false; //操作维修行价格字段
 	
 	private BigDecimal maxRepairDiscountRate = null; //最大项目折扣率
 	private BigDecimal maxRetailDiscountRate = null; //最大零售折扣率
@@ -1287,8 +1287,13 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		//	initItemSpRepairItemEntryF7(cellItemSp);
 			cellIsCT.getStyleAttributes().setLocked(true);
 			
-			row.getCell("taxPrice").getStyleAttributes().setLocked(!hasPermission_OprtRepairTaxPrice);
-			row.getCell("taxAmount").getStyleAttributes().setLocked(!hasPermission_OprtRepairTaxPrice);
+			RepairItemInfo repairItemInfo = (RepairItemInfo) cellItem.getValue();
+			if (repairItemInfo != null && !repairItemInfo.getNumber().startsWith("FDJQ")) {
+				row.getCell("taxPrice").getStyleAttributes().setLocked(!hasPermission_OprtRepairTaxPrice);
+				row.getCell("taxAmount").getStyleAttributes().setLocked(!hasPermission_OprtRepairTaxPrice);
+				row.getCell("price").getStyleAttributes().setLocked(!hasPermission_OprtRepairTaxPrice);
+				row.getCell("amount").getStyleAttributes().setLocked(!hasPermission_OprtRepairTaxPrice);
+			}
 			
 		} else if ("P".equals(cellT.getValue().toString())) { //配件
 			cellItem.getStyleAttributes().setLocked(true);
@@ -2322,6 +2327,8 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		sc.add(new SelectorItemInfo("unit.name"));
 		sc.add(new SelectorItemInfo("unit.number"));
 		sc.add(new SelectorItemInfo("qty"));
+		sc.add(new SelectorItemInfo("price"));
+		sc.add(new SelectorItemInfo("discountRate"));
 		
 		FilterInfo filterInfo = new FilterInfo();
 		filterInfo.getFilterItems().add(new FilterItemInfo("parent.id",repairItemInfo.getString("id")));
@@ -2536,6 +2543,9 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 						RepairItemSpEntryInfo repairItemSpEntryInfo = repairItemSpEntryCol.get(j);
 						MaterialInfo materialInfo = repairItemSpEntryInfo.getMaterial();
 						BigDecimal qty = PublicUtils.getBigDecimal(repairItemSpEntryInfo.getBigDecimal("qty"));
+						BigDecimal price = PublicUtils.getBigDecimal(repairItemSpEntryInfo.getBigDecimal("price"));
+						BigDecimal discountRate = PublicUtils.getBigDecimal(repairItemSpEntryInfo.getBigDecimal("discountRate"));
+						
 						BigDecimal costPrice =  getMaterialCostPrice(orgId, materialInfo);
 						insertLine(kdTable, rowIndex);
 						kdTable.getCell(rowIndex, "costAmount").setValue(costPrice);
@@ -2563,24 +2573,27 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 						
 						//关联维修项目参考售价未配置或为0时，关联配件取自身的参考售价，否则为0----取消
 					//	if (defaultRepairItemTaxPrice == null || defaultRepairItemTaxPrice.compareTo(BIGDEC0) == 0) {
-							String sql = String.format("select isnull(FPrice,0) from T_BD_MaterialSales where FMaterialID='%s' and FOrgUnit='%s'",
-									  materialInfo.getString("id"),orgUnitInfo.getString("id"));
-								IRowSet rs = DBUtils.executeQuery(null, sql);
-								if (rs != null && rs.next()) {
-									kdTable.getCell(rowIndex, "price").setValue(rs.getBigDecimal(1));
-									
-								 } else {
-									  throw new EASBizException(new NumericExceptionSubItem("",String.format("物料[%s],销售组织[%s]未分配销售页签，请先分配",materialInfo.getName(),orgUnitInfo.getString("name"))));
-								 }
+					//		String sql = String.format("select isnull(FPrice,0) from T_BD_MaterialSales where FMaterialID='%s' and FOrgUnit='%s'",
+					//				  materialInfo.getString("id"),orgUnitInfo.getString("id"));
+					//			IRowSet rs = DBUtils.executeQuery(null, sql);
+					//			if (rs != null && rs.next()) {
+					//				kdTable.getCell(rowIndex, "price").setValue(rs.getBigDecimal(1));
+					//				
+					//			 } else {
+					//				  throw new EASBizException(new NumericExceptionSubItem("",String.format("物料[%s],销售组织[%s]未分配销售页签，请先分配",materialInfo.getName(),orgUnitInfo.getString("name"))));
+					//			 }
 							
 					//	}  else {
 					//		kdTable.getCell(rowIndex, "price").setValue(BIGDEC0);
 					//	}
+						kdTable.getCell(rowIndex, "price").setValue(price);
+						kdTable.getCell(rowIndex, "discountRate").setValue(discountRate);
+						
 						IRow row = kdTable.getRow(rowIndex);
 						calItemSpEntryAmount(row);
 						//默认首次计算出初始的实际含税单价
 						BigDecimal taxPrice = (BigDecimal) row.getCell("taxPrice").getValue(); //含税
-						BigDecimal discountRate = (BigDecimal) row.getCell("discountRate").getValue();
+						//BigDecimal discountRate = (BigDecimal) row.getCell("discountRate").getValue();
 						BigDecimal initFactPrice = taxPrice.multiply(BIGDEC1.subtract(discountRate.divide(BIGDEC100,10,BigDecimal.ROUND_HALF_UP)));
 						row.getCell("initFactPrice").setValue(initFactPrice);
 						kdTable.getCell(rowIndex, "price").getStyleAttributes().setLocked(!hasPermission_OprtRetailPrice);
