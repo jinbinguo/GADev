@@ -430,6 +430,7 @@ public class NoteFileDialogEx extends TypicalDialog
                 continue;
             }
             ListElement element = new ListElement(names[i], alias[i], categories[i]);
+            element.setSeleted(true);
             int idx = idxKDFStart;
             if(isR1)
             {
