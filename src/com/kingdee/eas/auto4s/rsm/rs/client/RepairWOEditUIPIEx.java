@@ -1282,7 +1282,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		rs = DBUtils.executeQuery(null, sql);
 		if (rs != null && rs.next()) {
 			costPrice =rs.getBigDecimal(1);
-			if (costPrice != null) return costPrice;
+			if (costPrice != null) return costPrice.multiply(new BigDecimal(1.17));
 		}
 		
 		
