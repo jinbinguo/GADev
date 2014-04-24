@@ -446,6 +446,8 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	    KDBizPromptBox prmtSAEntry = (KDBizPromptBox) kdtRWOItemSpEntry.getColumn("person").getEditor().getComponent();
 	    RsQueryF7Utils.initPersonFilter(prmtSAEntry, orgUnitInfo);
 	    
+	    RsQueryF7Utils.initPersonFilter(prmtbizPerson, orgUnitInfo);
+	    
 
 	}
 	
@@ -1176,7 +1178,20 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 					MsgBoxEx.showInfo(String.format("折扣不能高于折扣权限[%s]！",maxRetailDiscountRate.setScale(2)));
 					kdtRWOItemSpEntry.getRow(rowIndex).getCell(discountRateIndex).setValue(oldValue);
 					return;
-				}				
+				}	
+
+				if (PublicUtils.equals(TEnum.P,tType) && factPrice.compareTo(initFactPrice) != 0) {
+					String orgId = orgUnitInfo.getString("id");
+					MaterialInfo materialInfo = (MaterialInfo) row.getCell("material").getValue(); 
+					BigDecimal costPrice =  getMaterialCostPrice(orgId, materialInfo);
+					if (factPrice.compareTo(costPrice) < 0) {
+						MsgBoxEx.showInfo(String.format("[%s]不能低于成本价出售！",materialInfo.getName()));
+						kdtRWOItemSpEntry.getRow(rowIndex).getCell(discountRateIndex).setValue(oldValue);
+						return;
+					}
+				}
+				
+				
 			}
 			if (colIndex == qtyIndex && isCT && qty.compareTo(BIGDEC0) >= 0) {
 				MsgBoxEx.showInfo("拆退数量不能大于0");
@@ -1253,15 +1268,24 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	private BigDecimal getMaterialCostPrice(String stroageUnitId,MaterialInfo materialInfo) throws Exception {
 		if (stroageUnitId == null || materialInfo == null) return BIGDEC0;
 		
-
-		String sql = String.format("select isnull(CFCostPrice,0) from  T_BD_MaterialInventory where FMaterialID='%s' and FOrgUnit='%s'",
+		BigDecimal costPrice = null;
+		String sql = String.format("select CFCostPrice from  T_BD_MaterialInventory where FMaterialID='%s' and FOrgUnit='%s'",
 				materialInfo.getString("id"),stroageUnitId);
 		IRowSet rs = DBUtils.executeQuery(null, sql);
-		
 		if (rs != null && rs.next()) {
-			BigDecimal costPrice = PublicUtils.getBigDecimal(rs.getBigDecimal(1));
-			return costPrice;
+			costPrice =rs.getBigDecimal(1);
+			if (costPrice != null) return costPrice;
 		}
+		
+		sql = String.format("select isnull(FPrice,0) from T_BD_MaterialPurchasing where FMaterialID='%s' and FOrgUnit='%s'",
+				materialInfo.getString("id"),stroageUnitId);
+		rs = DBUtils.executeQuery(null, sql);
+		if (rs != null && rs.next()) {
+			costPrice =rs.getBigDecimal(1);
+			if (costPrice != null) return costPrice;
+		}
+		
+		
 		return BIGDEC0;
 	}
 	
@@ -3357,9 +3381,9 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		   prmtCustomerAccount.requestFocus();
 		   SysUtil.abort();
         }
-    	if(PublicUtils.isEmpty(txtSaler.getText())) {
+    	if(prmtbizPerson.getValue() == null) {
  		   MsgBox.showInfo("业务员不能为空！");
- 		   txtSaler.requestFocus();
+ 		   prmtbizPerson.requestFocus();
  		   SysUtil.abort();
          }
     	

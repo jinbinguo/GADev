@@ -19,11 +19,14 @@ import com.kingdee.bos.metadata.entity.FilterInfo;
 import com.kingdee.bos.metadata.entity.FilterItemInfo;
 import com.kingdee.bos.metadata.query.util.CompareType;
 import com.kingdee.bos.ui.face.CoreUIObject;
+import com.kingdee.bos.ui.face.IUIFactory;
 import com.kingdee.bos.ui.face.IUIWindow;
 import com.kingdee.bos.ui.face.UIFactory;
 import com.kingdee.eas.base.uiframe.client.UIModelDialog;
 import com.kingdee.eas.common.client.UIContext;
+import com.kingdee.eas.common.client.UIFactoryName;
 import com.kingdee.eas.ga.rs.RepairWOStatusEnum;
+import com.kingdee.eas.ga.rs.client.RepairWOAllocateExpenseUI;
 import com.kingdee.eas.myframework.util.InvokeUtils;
 import com.kingdee.eas.myframework.util.MutexUtils;
 import com.kingdee.eas.myframework.util.PublicUtils;
@@ -140,15 +143,13 @@ public class RepairWOListUIPIEx extends RepairWOListUI {
 	}
 	
 	private void showEditUI() throws Exception {
-		UIContext uiContext = new UIContext(this);
-		uiContext.put("ID", getSelectedKeyValue());
-		prepareUIContext(uiContext, new ActionEvent(btnView, 0, "Double Clicked"));
-		IUIWindow window = getUIWindow();
-		if(window != null && (window instanceof UIModelDialog))
-			uiWindow = UIFactory.createUIFactory(getEditUIModal()).create(getEditUIName(), uiContext, null, "FINDVIEW");
-		 else
-		 uiWindow = UIFactory.createUIFactory("com.kingdee.eas.base.uiframe.client.UINewFrameFactory").create(getEditUIName(), uiContext, null, "FINDVIEW");
-			uiWindow.show();
+		UIContext uictx = new UIContext(this);
+		uictx.put("ID", getSelectedKeyValue());
+		prepareUIContext(uictx, new ActionEvent(btnView, 0, "Double Clicked"));
+		
+		IUIFactory iUIFactory = UIFactory.createUIFactory(UIFactoryName.NEWTAB);
+		IUIWindow iUIWindow = iUIFactory.create(RepairWOEditUIPIEx.class.getName(),uictx,null,"FINDVIEW"); 
+		iUIWindow.show();
 	}
 	
 	@Override

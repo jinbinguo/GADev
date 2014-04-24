@@ -162,6 +162,34 @@
             <scale>0</scale>
             <precision>0</precision>
         </column>
+        <column>
+            <name>CFWipRemark</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[CFWipRemark].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[CFWipRemark].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>255</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFBizPersonID</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[CFBizPersonID].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[CFBizPersonID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
     </columns>
     <foreignKeys>
         <foreignKey>
@@ -221,8 +249,39 @@
                 </fkColumnPair>
             </fkColumnPairs>
         </foreignKey>
+        <foreignKey>
+            <name>CFK_ATS_RepairWOo1</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.person" />
+                <key name="name" value="T_BD_Person" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="CFBizPersonID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
     </foreignKeys>
     <resource>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[CFBizPersonID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务员" />
+            <lang locale="zh_HK" value="業務員" />
+            <lang locale="zh_TW" value="業務員" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[CFBizPersonID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务员" />
+            <lang locale="zh_HK" value="業務員" />
+            <lang locale="zh_TW" value="業務員" />
+        </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[CFCustomInfo].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="客户信息" />
@@ -345,15 +404,27 @@
         </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[CFSaler].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="业务员" />
-            <lang locale="zh_HK" value="業務員" />
-            <lang locale="zh_TW" value="業務員" />
+            <lang locale="zh_CN" value="业务员(旧)" />
+            <lang locale="zh_HK" value="業務員(舊)" />
+            <lang locale="zh_TW" value="業務員(舊)" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[CFSaler].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="业务员" />
-            <lang locale="zh_HK" value="業務員" />
-            <lang locale="zh_TW" value="業務員" />
+            <lang locale="zh_CN" value="业务员(旧)" />
+            <lang locale="zh_HK" value="業務員(舊)" />
+            <lang locale="zh_TW" value="業務員(舊)" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[CFWipRemark].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="备注" />
+            <lang locale="zh_HK" value="備註" />
+            <lang locale="zh_TW" value="備註" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[CFWipRemark].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="备注" />
+            <lang locale="zh_HK" value="備註" />
+            <lang locale="zh_TW" value="備註" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FAccountCFGID].alias">
             <lang locale="zh_CN" value="账户类型" />
@@ -411,6 +482,11 @@
             <lang locale="zh_CN" value="上次进厂里程" />
             <lang locale="zh_HK" value="上次進廠裏程" />
             <lang locale="zh_TW" value="上次進廠裏程" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRemark].description">
+            <lang locale="zh_CN" value="维修备注" />
+            <lang locale="zh_HK" value="維修備註" />
+            <lang locale="zh_TW" value="維修備註" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[FRepairWay].alias">
             <lang locale="zh_CN" value="维修方式" />

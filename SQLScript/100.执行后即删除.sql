@@ -1,25 +1,22 @@
-﻿update  a
-set FParentID=(select fid from T_BD_MaterialInventory
-	 where FMaterialId=a.FParentID and 
-	 forgunit=(select fid from T_ORG_BaseUnit where fnumber='1001'))
-from CT_MS_materialLoc a
-where FParentID in (select fid from T_BD_Material)
-
+﻿update a
+set a.CFBizPersonID=(select b.FID from T_BD_Person b
+											left join T_ORG_PositionMember c on b.fid=c.FPersonID
+											left join T_ORG_Position d on d.FID=c.FPositionID
+											left join T_ORG_BaseUnit e on e.fid=d.FAdminOrgUnitID
+											where e.FNumber like '1003%' and b.FName_l2=a.CFSaler)
+from T_ATS_RepairWO a
+left join T_ORG_BaseUnit a1 on a.forgUnitId=a1.fid
+where a.CFBizPersonID is null and a1.FNumber='1003';
 
 update a
-set a.CFItemSPNum=(select b.FNumber from T_ATS_RepairItem b where b.FID=a.CFRepairItemID)
-from CT_ATS_RepairWORWOItemSpEntry a
-where a.CFItemspNum<>(select b.FNumber from T_ATS_RepairItem b where b.FID=a.CFRepairItemID)
-and a.CFRepairItemID is not null
+set a.CFBizPersonID=(select b.FID from T_BD_Person b
+											left join T_ORG_PositionMember c on b.fid=c.FPersonID
+											left join T_ORG_Position d on d.FID=c.FPositionID
+											left join T_ORG_BaseUnit e on e.fid=d.FAdminOrgUnitID
+											where e.FNumber like '1001%' and b.FName_l2=a.CFSaler)
+from T_ATS_RepairWO a
+left join T_ORG_BaseUnit a1 on a.forgUnitId=a1.fid
+where a.CFBizPersonID is null and a1.FNumber='1001'
 
 
-update CT_ATS_RepairWORWOItemSpEntry
-set CFItemspName='',
-	  CFItemspNum='',
-		CFRepairItemID=''
-where CFRepairItemID='?';
-
-UPDATE T_ATS_RWORepairItemEntry
-set FRepairItemId='?'
-where frepairItemId='?'
-
+select fnumber,cfsaler,cfbizpersonid from T_ATS_RepairWO where cfbizpersonid is null

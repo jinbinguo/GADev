@@ -283,6 +283,40 @@
                 <key name="name" value="CFIsPrintedSettle" />
             </mappingField>
         </ownProperty>
+        <ownProperty>
+            <name>wipRemark</name>
+            <alias>entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.ownProperty[wipRemark].alias</alias>
+            <description>entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.ownProperty[wipRemark].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>255</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.ownProperty[wipRemark].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFWipRemark" />
+            </mappingField>
+        </ownProperty>
+        <linkProperty>
+            <name>bizPerson</name>
+            <alias>entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.linkProperty[bizPerson].alias</alias>
+            <description>entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.linkProperty[bizPerson].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="CFBizPersonID" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+                <key name="name" value="R_RepairWO_Person_bizPerson" />
+            </relationship>
+        </linkProperty>
     </properties>
     <events>
         <event>
@@ -624,6 +658,18 @@
             <lang locale="zh_HK" value="項目配件明細" />
             <lang locale="zh_TW" value="項目配件明細" />
         </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.linkProperty[bizPerson].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务员" />
+            <lang locale="zh_HK" value="業務員" />
+            <lang locale="zh_TW" value="業務員" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.linkProperty[bizPerson].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
         <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.linkProperty[dept].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="部门" />
@@ -805,6 +851,11 @@
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.ownProperty[Remark].description">
+            <lang locale="zh_CN" value="维修备注" />
+            <lang locale="zh_HK" value="維修備註" />
+            <lang locale="zh_TW" value="維修備註" />
+        </rs>
         <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.ownProperty[RepairWay].extendedProperty.ColWidthInKDTable">
             <lang locale="en_US" value="50" />
             <lang locale="zh_CN" value="50" />
@@ -817,9 +868,9 @@
         </rs>
         <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.ownProperty[Saler].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="业务员" />
-            <lang locale="zh_HK" value="業務員" />
-            <lang locale="zh_TW" value="業務員" />
+            <lang locale="zh_CN" value="业务员(旧)" />
+            <lang locale="zh_HK" value="業務員(舊)" />
+            <lang locale="zh_TW" value="業務員(舊)" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.ownProperty[Saler].defaultValue">
             <lang locale="en_US" value="null" />
@@ -829,9 +880,9 @@
         </rs>
         <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.ownProperty[Saler].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="业务员" />
-            <lang locale="zh_HK" value="業務員" />
-            <lang locale="zh_TW" value="業務員" />
+            <lang locale="zh_CN" value="业务员(旧)" />
+            <lang locale="zh_HK" value="業務員(舊)" />
+            <lang locale="zh_TW" value="業務員(舊)" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.ownProperty[Saler].extendedProperty.ColWidthInKDTable">
             <lang locale="en_US" value="50" />
@@ -1360,6 +1411,69 @@
             <lang locale="zh_TW" value="false" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.ownProperty[saleType].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.ownProperty[wipRemark].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="备注" />
+            <lang locale="zh_HK" value="備註" />
+            <lang locale="zh_TW" value="備註" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.ownProperty[wipRemark].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.ownProperty[wipRemark].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="备注" />
+            <lang locale="zh_HK" value="備註" />
+            <lang locale="zh_TW" value="備註" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.ownProperty[wipRemark].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.ownProperty[wipRemark].extendedProperty.bizDataType">
+            <lang locale="en_US" value="NOTE" />
+            <lang locale="zh_CN" value="NOTE" />
+            <lang locale="zh_TW" value="NOTE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.ownProperty[wipRemark].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.ownProperty[wipRemark].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.ownProperty[wipRemark].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.ownProperty[wipRemark].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.ownProperty[wipRemark].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.ownProperty[wipRemark].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWO].properties.ownProperty[wipRemark].extendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />

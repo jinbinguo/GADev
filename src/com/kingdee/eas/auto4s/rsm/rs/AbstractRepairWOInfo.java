@@ -833,7 +833,7 @@ public class AbstractRepairWOInfo extends com.kingdee.eas.auto4s.autoframework.c
         setDate("firstBookInDate", item);
     }
     /**
-     * Object:维修工单's 业务员property 
+     * Object:维修工单's 业务员(旧)property 
      */
     public String getSaler()
     {
@@ -853,6 +853,28 @@ public class AbstractRepairWOInfo extends com.kingdee.eas.auto4s.autoframework.c
     public void setIsPrintedSettle(boolean item)
     {
         setBoolean("isPrintedSettle", item);
+    }
+    /**
+     * Object:维修工单's 备注property 
+     */
+    public String getWipRemark()
+    {
+        return getString("wipRemark");
+    }
+    public void setWipRemark(String item)
+    {
+        setString("wipRemark", item);
+    }
+    /**
+     * Object: 维修工单 's 业务员 property 
+     */
+    public com.kingdee.eas.basedata.person.PersonInfo getBizPerson()
+    {
+        return (com.kingdee.eas.basedata.person.PersonInfo)get("bizPerson");
+    }
+    public void setBizPerson(com.kingdee.eas.basedata.person.PersonInfo item)
+    {
+        put("bizPerson", item);
     }
     public BOSObjectType getBOSType()
     {
