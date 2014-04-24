@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="publisher" default="jar" basedir=".">
+<project name="publisher" default="toDestDev" basedir=".">
 	
 	<!-- 创建目录-->
     <target name="createDir">
@@ -12,11 +12,18 @@
 		<!--==========================src backup =========================================
 		<jar destfile="jars/all_eas-src.jar" basedir="src" includes="com/kingdee/eas/**"/>
 		===================================================================================-->
-	
+		
 		<!--==========================from classes =======================================-->
 		<!-- EAS扩展框架-->
-		<jar destfile="jars/ex_framework-client.jar" basedir="classes" includes="com/kingdee/eas/myframework/**" excludes="**/app/*.*, *.jar"/>
-		<jar destfile="jars/ex_framework-server.jar" basedir="classes" includes="com/kingdee/eas/myframework/**" excludes="**/client/*.*, *.jar"/>
+		<jar destfile="jars/ex_framework-client.jar" basedir="classes" includes="com/kingdee/eas/myframework/**,com/kingdee/bos/**" 
+			excludes="**/app/*.*, *.jar,
+			com/kingdee/eas/myframework/test/**,
+			com/kingdee/eas/myframework/demo/**,"/>
+		<jar destfile="jars/ex_framework-server.jar" basedir="classes" includes="com/kingdee/eas/myframework/**,com/kingdee/bos/**" 
+			excludes="**/client/*.*, *.jar,
+			com/kingdee/eas/myframework/test/**,
+			com/kingdee/eas/myframework/demo/**"/>
+		
 		
 		<!-- GA 模块-->
 		<jar destfile="jars/ga_ga-client.jar" basedir="classes" includes="com/kingdee/eas/ga/**" excludes="**/app/*.*, *.jar"/>
@@ -30,19 +37,27 @@
 		<jar destfile="jars/ga_other-client.jar" basedir="classes" includes="com/**" 
 			excludes="com/kingdee/eas/myframework/**,
 			com/kingdee/eas/ga/**,
-			com/kingdee/eas/base/uiframe/client/**,
-			com/kingdee/eas/base/license/client/**,
 			com/kingdee/eas/auto4s/**,
+			com/kingdee/bos/**,
+			com/kingdee/eas/base/uiframe/**,
+			com/kingdee/eas/base/license/**,
 			**/app/*.*, *.jar"/>
 		<jar destfile="jars/ga_other-server.jar" basedir="classes" includes="com/**" 
 			excludes="com/kingdee/eas/myframework/**,
 			com/kingdee/eas/ga/**,
 			com/kingdee/eas/auto4s/**,
+			com/kingdee/bos/**,
+			com/kingdee/eas/base/uiframe/**,
+			com/kingdee/eas/base/license/**,
 			**/client/*.*, *.jar"/>
 		
 		<!--==========================from deployed_metas ================================-->
 		<!-- EAS扩展框架-->
-		<jar destfile="jars/ex_framework-metas.jar" basedir="deployed_metas" includes="com/kingdee/eas/myframework/**" excludes="*.jar"/>
+		<jar destfile="jars/ex_framework-metas.jar" basedir="deployed_metas" includes="com/kingdee/eas/myframework/**,com/kingdee/bos/**" 
+			excludes="*.jar,
+			com/kingdee/eas/myframework/test/**,
+			com/kingdee/eas/myframework/demo/**,
+			"/>
 		
 		<!-- GA 模块-->
 		<jar destfile="jars/ga_ga-metas.jar" basedir="deployed_metas" includes="com/kingdee/eas/ga/**" excludes="*.jar"/>
@@ -54,6 +69,7 @@
 		<!-- 剩余模块-->
 		<jar destfile="jars/ga_other-metas.jar" basedir="deployed_metas" includes="com/**,/**" 
 			excludes="com/kingdee/eas/myframework/**,
+			com/kingdee/bos/**,
 			com/kingdee/eas/ga/**,
 			com/kingdee/eas/auto4s/**,
 			*.jar,*.mdbview"/>
@@ -63,6 +79,59 @@
 		
 		<!-- zip打包所有jar包-->
 		<zip destfile="jars/AllJar.zip" basedir="jars" includes="/*.jar"> </zip>
+	</target>
+	
+	<!-- 拷贝至代理商环境-->
+	<target name="toDestDev" depends="jar">
+		<mkdir dir="../Dev2/src"/>
+		<mkdir dir="../Dev2/metadata"/>
+		<mkdir dir="../Dev2/deployed_metas"/>
+		<mkdir dir="../Dev2/SQLScript"/>
+		<mkdir dir="../Dev2/lib/sp"/>
+		<mkdir dir="../Dev2/basemetas/sp"/>
+		 
+		<copy id="copy_src" todir="../Dev2/src">
+			<fileset dir="src">
+				<include name="com/kingdee/eas/**"/>
+				<exclude name="com/kingdee/bos/**"/>
+				<exclude name="com/kingdee/eas/myframework/**"/>
+				<exclude name="com/kingdee/eas/base/uiframe/**" />
+				<exclude name="com/kingdee/eas/base/license/**" />
+			</fileset>
+		</copy>
+		<copy id="copy_metas" todir="../Dev2/metadata">
+			<fileset dir="metadata">
+				<include name="com/kingdee/eas/**"/>
+				<include name="/**"/>
+				<exclude name="com/kingdee/eas/myframework/**"/>
+		    </fileset>
+		</copy>
+		<copy id="copy_deployed_metas" todir="../Dev2/deployed_metas">
+			<fileset dir="deployed_metas">
+				<include name="/**"/>
+				<include name="com/kingdee/eas/**"/>
+				<exclude name="com/kingdee/eas/myframework/**"/>
+		    </fileset>
+		</copy>
+		<copy id="copy_script" todir="../Dev2/SQLScript">
+			<fileset dir="SQLScript">
+				<include name="01.初始化脚本/**"/>
+			</fileset>
+		</copy>
+		
+		<copy id="copy_libEx" todir="../Dev2/lib/sp">
+			<fileset dir="JARS">
+				<include name="ex_framework-client.jar"/>
+				<include name="ex_framework-server.jar"/>
+			</fileset>
+		</copy>
+		
+		<copy id="copy_libEx" todir="../Dev2/basemetas/sp">
+			<fileset dir="JARS">
+				<include name="ex_framework-metas.jar"/>
+			</fileset>
+		</copy>
+
 	</target>
 	
 </project>
