@@ -2927,7 +2927,7 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         this.prmtbizPerson.setEditable(true);		
         this.prmtbizPerson.setDisplayFormat("$name$");		
         this.prmtbizPerson.setEditFormat("$number$");		
-        this.prmtbizPerson.setCommitFormat("$number$");		
+        this.prmtbizPerson.setCommitFormat("$number$;$name$");		
         this.prmtbizPerson.setRequired(true);
         // kDLabelContainer9		
         this.kDLabelContainer9.setBoundLabelText(resHelper.getString("kDLabelContainer9.boundLabelText"));		
