@@ -68,7 +68,13 @@ public class PublicUtils implements Serializable {
 				}
 				if (obj1 instanceof IObjectValue) {
 					return ((IObjectValue) obj1).getString("id").equals(((IObjectValue)obj2).getString("id"));
-				} else return obj1.equals(obj2);
+				} else if(obj1 instanceof BigDecimal) {
+					obj1 = ((BigDecimal)obj1).setScale(6,BigDecimal.ROUND_HALF_UP);
+					obj2 = ((BigDecimal)obj2).setScale(6,BigDecimal.ROUND_HALF_UP);
+					return ((BigDecimal) obj1).compareTo((BigDecimal) obj2) == 0;
+				} else {
+					return obj1.equals(obj2);
+				}
 			}
 			return false;
 		} catch (Exception e) {
