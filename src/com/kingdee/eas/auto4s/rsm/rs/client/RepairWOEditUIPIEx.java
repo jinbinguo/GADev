@@ -491,7 +491,8 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		RsQueryF7Utils.initPersonFilter(prmtSAEntry, orgUnitInfo);
 
 		RsQueryF7Utils.initPersonFilter(prmtbizPerson, orgUnitInfo);
-
+		
+		actionAddCustomer.setVisible(false);
 	}
 
 	@Override
@@ -689,7 +690,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 
 		kdtRWOItemSpEntry.addKDTMouseListener(new KDTMouseListener() {
 			public void tableClicked(KDTMouseEvent event) {
-				 if (event.getClickCount() < 2) return;
+				// if (event.getClickCount() < 2) return;
 				int iIndex = kdtRWOItemSpEntry.getColumnIndex("i");
 				int colIndex = event.getColIndex();
 				int rowIndex = event.getRowIndex();
@@ -706,7 +707,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 					WInfo w = (WInfo) row.getCell("w").getValue();
 					if (w == null)
 						return;
-					String typeCode = w.getTypeCode();
+					//String typeCode = w.getTypeCode();
 					
 					for (int i = 0; i < kdtRWOItemSpEntry.getRowCount(); i++) {
 						WInfo newW = (WInfo) kdtRWOItemSpEntry.getRow(i).getCell("w").getValue();
@@ -714,8 +715,8 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 							continue;
 						if (PublicUtils.equals(IEnum.X, kdtRWOItemSpEntry.getRow(i).getCell("i").getValue()))
 							continue;
-						String newTypeCode = newW.getTypeCode();
-						if (PublicUtils.equals(typeCode, newTypeCode)) {
+					//	String newTypeCode = newW.getTypeCode();
+						if (PublicUtils.equals(w.getNumber(), newW.getNumber())) {
 							kdtRWOItemSpEntry.getRow(i).getCell("i").setValue(newIType);
 							resetItemSpEditorLocked(kdtRWOItemSpEntry.getRow(i));
 						}
@@ -767,6 +768,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			resetItemSpEditorLocked(row);
 			
 		}
+		appendItemSpFoot();
 		
 		
 		
@@ -1930,15 +1932,10 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		txtTel.setText("");
 		if (vehicleInfo != null) {
 			StringBuilder sql = new StringBuilder();
-			sql
-					.append(
-							"SELECT b.fid, b.fnumber, b.cfname, b.cftel, b.cfemail,b.cfidnumber,b.cfzipcode,b.cfaddr, a.fid fentryId")
-					.append(" FROM ct_rs_repairmanentry a")
-					.append(
-							" LEFT JOIN ct_rs_repairman b ON a.fparentid = b.fid")
-					.append(
-							String.format(" where a.cfvehicleid='%s'",
-									vehicleInfo.getString("id")));
+			sql.append("SELECT b.fid, b.fnumber, b.cfname, b.cftel, b.cfemail,b.cfidnumber,b.cfzipcode,b.cfaddr, a.fid fentryId")
+			.append(" FROM ct_rs_repairmanentry a")
+			.append(" LEFT JOIN ct_rs_repairman b ON a.fparentid = b.fid")
+			.append(String.format(" where a.cfvehicleid='%s'",vehicleInfo.getString("id")));
 
 			IRowSet rs = DBUtils.executeQuery(null, sql.toString());
 			if (rs != null && rs.next()) {
@@ -1958,13 +1955,9 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			} else {
 				// btnShowRepairSender_actionPerformed(null);
 				StringBuilder sql1 = new StringBuilder();
-				sql1
-						.append(
-								"select b.FNumber, b.FName_l2, b.FPhone, b.FEmail,b.FPapersNum,b.FZipCode,b.FAddress from T_ATS_Vehicle a ")
-						.append(
-								"left join T_ATS_Customer b on a.FCustomerID=b.FID ")
-						.append("where  a.FID='").append(
-								vehicleInfo.getString("id")).append("'");
+				sql1.append("select b.FNumber, b.FName_l2, b.FPhone, b.FEmail,b.FPapersNum,b.FZipCode,b.FAddress from T_ATS_Vehicle a ")
+					.append("left join T_ATS_Customer b on a.FCustomerID=b.FID ")
+						.append("where  a.FID='").append(vehicleInfo.getString("id")).append("'");
 				IRowSet rs1 = DBUtils.executeQuery(null, sql1.toString());
 				if (rs1 != null && rs1.next()) {
 					String name = StringUtils.cnulls(rs1.getString("FName_l2"));
@@ -2124,10 +2117,8 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			try {
 				HashMap<String, BigDecimal> hashDiscountRate = getDiscountRate();
 				if (!PublicUtils.isEmpty(hashDiscountRate)) {
-					retailDiscountRate = hashDiscountRate
-							.get(DiscountDate_Retail);
-					repairDiscountRate = hashDiscountRate
-							.get(DiscountDate_Repair);
+					retailDiscountRate = hashDiscountRate.get(DiscountDate_Retail);
+					repairDiscountRate = hashDiscountRate.get(DiscountDate_Repair);
 				}
 			} catch (Exception e) {
 				UIUtils.handUIException(e);
@@ -2163,17 +2154,13 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 
 	private HashMap<String, BigDecimal> getDiscountRate() throws Exception {
 		HashMap<String, BigDecimal> hashDiscountRate = new HashMap<String, BigDecimal>();
-		CustomerAccountInfo caInfo = (CustomerAccountInfo) prmtCustomerAccount
-				.getData();
+		CustomerAccountInfo caInfo = (CustomerAccountInfo) prmtCustomerAccount.getData();
 		BigDecimal retailDiscountRate = null;
 		BigDecimal repairDiscountRate = null;
 		String sql = null;
 
 		if (caInfo != null) {
-			sql = String
-					.format(
-							"select isnull(CFRetailDiscountRate,0) CFRetailDiscountRate,isnull(CFRepairDiscountRate,0) CFRepairDiscountRate from CT_RS_CustomerAccount where FID='%s'",
-							caInfo.getString("id"));
+			sql = String.format("select isnull(CFRetailDiscountRate,0) CFRetailDiscountRate,isnull(CFRepairDiscountRate,0) CFRepairDiscountRate from CT_RS_CustomerAccount where FID='%s'",caInfo.getString("id"));
 			IRowSet rs = DBUtils.executeQuery(null, sql);
 			if (rs != null && rs.next()) {
 				retailDiscountRate = rs.getBigDecimal("CFRetailDiscountRate");
@@ -2192,39 +2179,20 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 				return hashDiscountRate;
 			String comeTime = sf.format(pkComeTime.getValue());
 			StringBuilder sqlBuilder = new StringBuilder();
-			sqlBuilder
-					.append(
-							" select top 1 isnull(b.CFRetailDiscountRate,0) CFRetailDiscountRate,isnull(b.CFRepairDiscountRate,0) CFRepairDiscountRate from CT_BD_CustomerDiscount a")
-					.append(
-							" left join CT_BD_CustomerDiscountEntry b on a.fid=b.FParentID")
-					.append(
-							String.format(" where b.CFAtsCustomerID='%s'",
-									atsCustomerInfo.getString("id")))
-					.append(
-							String
-									.format(
-											" and convert(varchar(10),a.CFEffectiveDate,120) <='%s'",
-											comeTime))
-					.append(
-							String
-									.format(
-											" and convert(varchar(10),a.CFExpirationDate,120) >='%s'",
-											comeTime))
-					.append(
-							String.format(" and a.CFSaleOrgUnitID='%s'",
-									orgUnitInfo.getString("id")))
+			sqlBuilder.append(" select top 1 isnull(b.CFRetailDiscountRate,0) CFRetailDiscountRate,isnull(b.CFRepairDiscountRate,0) CFRepairDiscountRate from CT_BD_CustomerDiscount a")
+					.append(" left join CT_BD_CustomerDiscountEntry b on a.fid=b.FParentID")
+					.append(String.format(" where b.CFAtsCustomerID='%s'",atsCustomerInfo.getString("id")))
+					.append(String.format(" and convert(varchar(10),a.CFEffectiveDate,120) <='%s'",comeTime))
+					.append(String.format(" and convert(varchar(10),a.CFExpirationDate,120) >='%s'",comeTime))
+					.append(String.format(" and a.CFSaleOrgUnitID='%s'",orgUnitInfo.getString("id")))
 					.append(" and a.FBaseStatus='4' order by a.FAuditTime DESC");
 			IRowSet rs = DBUtils.executeQueryForDialect(null, sqlBuilder
 					.toString());
 			if (rs != null && rs.next()) {
-				if (retailDiscountRate == null
-						|| retailDiscountRate.compareTo(BIGDEC0) == 0)
-					retailDiscountRate = rs
-							.getBigDecimal("CFRetailDiscountRate");
-				if (repairDiscountRate == null
-						|| repairDiscountRate.compareTo(BIGDEC0) == 0)
-					repairDiscountRate = rs
-							.getBigDecimal("CFRepairDiscountRate");
+				if (retailDiscountRate == null|| retailDiscountRate.compareTo(BIGDEC0) == 0)
+					retailDiscountRate = rs.getBigDecimal("CFRetailDiscountRate");
+				if (repairDiscountRate == null|| repairDiscountRate.compareTo(BIGDEC0) == 0)
+					repairDiscountRate = rs.getBigDecimal("CFRepairDiscountRate");
 
 			}
 		}
@@ -3126,13 +3094,10 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 				insertLine(kdTable, rowIndex);
 				kdTable.getCell(rowIndex, "material").setValue(materialInfo);
 				kdTable.getCell(rowIndex, "t").setValue(TEnum.P);
-				kdTable.getCell(rowIndex, "itemspNum").setValue(
-						materialInfo.getNumber());
-				kdTable.getCell(rowIndex, "itemspName").setValue(
-						materialInfo.getName());
+				kdTable.getCell(rowIndex, "itemspNum").setValue(materialInfo.getNumber());
+				kdTable.getCell(rowIndex, "itemspName").setValue(materialInfo.getName());
 				if (rowIndex > 0) {
-					WInfo wInfo = (WInfo) kdTable.getRow(0).getCell("w")
-							.getValue();
+					WInfo wInfo = (WInfo) kdTable.getRow(0).getCell("w").getValue();
 					if (wInfo != null) {
 						kdTable.getCell(rowIndex, "w").setValue(wInfo);
 						kdtRWOItemSpEntry.getRow(rowIndex).getCell(
@@ -3146,10 +3111,8 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 						.getStyleAttributes().setLocked(
 								!hasPermission_OprtRetailItemspName);
 				String sql = String
-						.format(
-								"select isnull(FPrice,0) from T_BD_MaterialSales where FMaterialID='%s' and FOrgUnit='%s'",
-								materialInfo.getString("id"), orgUnitInfo
-										.getString("id"));
+						.format("select isnull(FPrice,0) from T_BD_MaterialSales where FMaterialID='%s' and FOrgUnit='%s'",
+								materialInfo.getString("id"), orgUnitInfo.getString("id"));
 				try {
 					IRowSet rs = DBUtils.executeQuery(null, sql);
 					if (rs != null && rs.next()) {
@@ -3157,6 +3120,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 								rs.getBigDecimal(1));
 						IRow row = kdTable.getRow(rowIndex);
 						calItemSpEntryAmount(row);
+						
 						// 默认首次计算出初始的实际含税单价
 						BigDecimal taxPrice = (BigDecimal) row.getCell(
 								"taxPrice").getValue(); // 含税
@@ -3251,10 +3215,8 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 				/** 计算标准工时、工时单价、工时成本 */
 				BigDecimal workTimeQty = getRepairItemWorkTimeQty(repairItemInfo);
 				kdTable.getCell(rowIndex, "worktimeQty").setValue(workTimeQty);
-				kdTable.getCell(rowIndex, "worktimePrice").setValue(
-						workTimeStdPrice);
-				kdTable.getCell(rowIndex, "worktimeCost").setValue(
-						workTimeQty.multiply(workTimeStdPrice));
+				kdTable.getCell(rowIndex, "worktimePrice").setValue(workTimeStdPrice);
+				kdTable.getCell(rowIndex, "worktimeCost").setValue(workTimeQty.multiply(workTimeStdPrice));
 
 				// 出关联配件
 				RepairItemSpEntryCollection repairItemSpEntryCol = getRepairItemSPEntryCollection(repairItemInfo);
@@ -3265,17 +3227,10 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 					kdTable.getCell(rowIndex, "price").setValue(BIGDEC0);
 				} else {
 
-					if (defaultRepairItemTaxPrice != null
-							&& defaultRepairItemTaxPrice.compareTo(BIGDEC0) != 0) {
-						BigDecimal taxRate = PublicUtils
-								.getBigDecimal(kdTable.getRow(rowIndex)
-										.getCell("taxRate").getValue());
-						BigDecimal defaultPrice = defaultRepairItemTaxPrice
-								.divide(BIGDEC1.add(taxRate.divide(BIGDEC100,
-										10, BigDecimal.ROUND_HALF_UP)), 10,
-										BigDecimal.ROUND_HALF_UP);
-						kdTable.getCell(rowIndex, "price").setValue(
-								defaultPrice);
+					if (defaultRepairItemTaxPrice != null && defaultRepairItemTaxPrice.compareTo(BIGDEC0) != 0) {
+						BigDecimal taxRate = PublicUtils.getBigDecimal(kdTable.getRow(rowIndex).getCell("taxRate").getValue());
+						BigDecimal defaultPrice = defaultRepairItemTaxPrice.divide(BIGDEC1.add(taxRate.divide(BIGDEC100,10, BigDecimal.ROUND_HALF_UP)), 10,BigDecimal.ROUND_HALF_UP);
+						kdTable.getCell(rowIndex, "price").setValue(defaultPrice);
 					} else {
 						if (PublicUtils.isEmpty(repairItemSpEntryCol)) { // 无关联配件时
 							// ，
@@ -3284,17 +3239,14 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 							// 默认39
 							// ，
 							// 否则为0
-							kdTable.getCell(rowIndex, "price").setValue(
-									new BigDecimal(39));
+							kdTable.getCell(rowIndex, "price").setValue(new BigDecimal(39));
 						} else {
-							kdTable.getCell(rowIndex, "price")
-									.setValue(BIGDEC0);
+							kdTable.getCell(rowIndex, "price").setValue(BIGDEC0);
 						}
 					}
 				}
 				if (repairItemInfo.getNumber().startsWith("FDJQ")) {
-					kdTable.getCell(rowIndex, "qty").setValue(
-							new BigDecimal(-1));
+					kdTable.getCell(rowIndex, "qty").setValue(new BigDecimal(-1));
 				}
 				if (rowIndex > 0) {
 					WInfo wInfo = (WInfo) kdTable.getRow(0).getCell("w")
@@ -4346,6 +4298,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 				"discountRate").getValue()); // 折扣
 		BigDecimal taxRate = PublicUtils.getBigDecimal(row.getCell("taxRate")
 				.getValue()); // 税率
+		
 		BigDecimal amount = qty.multiply(price).multiply(
 				BIGDEC1.subtract(discountRate.divide(BIGDEC100, 10,
 						BigDecimal.ROUND_HALF_UP)));
@@ -4948,6 +4901,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 				|| getTDFileName() == null) {
 			return;
 		} else {
+			if (!checkCanPrint()) return;
 			updateIsPrint();
 			actionRefresh_actionPerformed(e);
 			PrintIntegrationInfo oldPIInfo = getPrintIntegrationInfo();
@@ -4980,6 +4934,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 				|| getTDFileName() == null) {
 			return;
 		} else {
+			if (!checkCanPrint()) return;
 			updateIsPrint();
 			actionRefresh_actionPerformed(e);
 			PrintIntegrationInfo oldPIInfo = getPrintIntegrationInfo();
@@ -5005,7 +4960,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		String id = editData.getString("id");
 		String sql = String.format("update CT_ATS_RepairWORWOItemSpEntry set CFIsCreateTo=1 where fparentid='%s'",id);
 		DBUtils.execute(null, sql);
-		sql = String.format("update CT_ATS_RepairWORWOItemSpEntry set CFIsCreateTo=0 where isnull(CFRepairPkgID,'null')+','+CFItemspNum+','+convert(nvarchar,CFTaxPrice)+','+convert(nvarchar,CFDiscountRate)+','+convert(nvarchar,CFIsCT)+','+isnull(CFWID,'null') in (select isnull(CFRepairPkgID,'null')+','+CFItemspNum+','+convert(nvarchar,CFTaxPrice)+','+convert(nvarchar,CFDiscountRate)+','+convert(nvarchar,CFIsCT)+','+isnull(CFWID,'null') from CT_ATS_RepairWORWOItemSpEntry where FParentID = '%s' and CFISDELETE<>1 and CFItemspNum not like 'TXT%' group by CFRepairPkgID,CFItemspNum,CFTaxPrice,CFDiscountRate,CFIsCT,CFWID having SUM(CFTaxAmount)=0 ) and CFISDELETE<>1 and CFItemspNum not like 'TXT%' and FParentID = '%s'",id,id);
+		sql = String.format("update CT_ATS_RepairWORWOItemSpEntry set CFIsCreateTo=0 where isnull(CFRepairPkgID,'null')+','+CFItemspNum+','+convert(nvarchar,CFTaxPrice)+','+convert(nvarchar,CFDiscountRate)+','+convert(nvarchar,CFIsCT)+','+isnull(CFWID,'null') in (select isnull(CFRepairPkgID,'null')+','+CFItemspNum+','+convert(nvarchar,CFTaxPrice)+','+convert(nvarchar,CFDiscountRate)+','+convert(nvarchar,CFIsCT)+','+isnull(CFWID,'null') from CT_ATS_RepairWORWOItemSpEntry where FParentID = '%s' and CFISDELETE<>1 and CFItemspNum not like 'TXT%%' group by CFRepairPkgID,CFItemspNum,CFTaxPrice,CFDiscountRate,CFIsCT,CFWID having SUM(CFTaxAmount)=0 ) and CFISDELETE<>1 and CFItemspNum not like 'TXT%%' and FParentID = '%s'",id,id);
 		DBUtils.executeForDialect(null, sql);
 		
 	}
@@ -5020,6 +4975,8 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 				|| getTDFileName() == null) {
 			return;
 		} else {
+			if (!checkCanPrint()) return;
+			updateIsPrint();
 			PrintIntegrationInfo oldPIInfo = getPrintIntegrationInfo();
 			DefaultNoteDataProvider multiDataSourceProviderProxy = new DefaultNoteDataProvider(
 					idList);
@@ -5053,8 +5010,8 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			throws Exception {
 		if (newPIInfo == null)
 			return;
-		if (editData.isIsPrintedSettle())
-			return;
+	//	if (editData.isIsPrintedSettle())
+	//		return;
 		UserInfo printUser = newPIInfo.getLastPrintUser();
 		UserInfo curUser = SysContext.getSysContext().getCurrentUserInfo();
 		if (!PublicUtils.equals(printUser, curUser))
@@ -5078,15 +5035,51 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		DBUtils.execute(null, sql);
 		
 		SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		//更新账单状态、结账日期
-		sql = String.format("update CT_ATS_RepairWORWOItemSpEntry " +
-							"set CFI='X',CFSettleDate={ts:'%s'}	where CFI='I' and FParentID='%s'", 
+		//更新账单状态、结账日期,已转应前台收款单或应收单
+		
+		sql = String.format("update a " +
+							"set CFI='X',CFSettleDate='%s' from CT_ATS_RepairWORWOItemSpEntry a where CFI='I' and FParentID='%s' " +
+							"and (exists (select 1 from T_ATS_ReceivingBillWay where FSourceBillTypeID='HM+nytJ+S7izjFHd2/madkY+1VI=' and FSourceBillIEntryID=a.FID) " +
+							"OR exists (select 1 from T_AR_OtherBillentry where FCoreBillTypeID='HM+nytJ+S7izjFHd2/madkY+1VI=' and FSourceBillEntryId=a.FID))", 
 							sf.format(DBUtils.getAppServerTime(null)),editData.getString("id"));
-		DBUtils.execute(null, sql);
+		DBUtils.executeForDialect(null, sql);
 		
 
 		actionRefresh_actionPerformed(null);
 
+	}
+	/**
+	 * 检查是否可打印，只有下推过前台收款单或应收单才能打印
+	 * @return
+	 * @throws Exception
+	 */
+	private boolean checkCanPrint() throws Exception {
+		String sql = String.format("select count(1) from CT_ATS_RepairWORWOItemSpEntry a " +
+						"where CFI='I' and FParentID='%s'",editData.getString("id"));
+		boolean canPrint = true;
+		IRowSet rs = DBUtils.executeQueryForDialect(null, sql);
+		if (rs != null && rs.next()) {
+			int unPrintSettleCount = rs.getInt(1);
+			sql = String.format("select count(1) from CT_ATS_RepairWORWOItemSpEntry a " +
+				"where CFI='I' and FParentID='%s' " +
+				"and (exists (select 1 from T_ATS_ReceivingBillWay where FSourceBillTypeID='HM+nytJ+S7izjFHd2/madkY+1VI=' and FSourceBillIEntryID=a.FID) " + 
+				" OR exists (select 1 from T_AR_OtherBillentry where FCoreBillTypeID='HM+nytJ+S7izjFHd2/madkY+1VI=' and FSourceBillEntryId=a.FID))", editData.getString("id"));
+			rs = DBUtils.executeQueryForDialect(null, sql);
+			if (rs!= null && rs.next()) {
+				int unPrintSettleCount2 = rs.getInt(1);
+				canPrint = unPrintSettleCount == unPrintSettleCount2;
+			} else {
+				canPrint = false;
+			}			
+		}
+		if (!canPrint) {
+			MsgBoxEx.showInfo("账单状态I的分录行未下推前台收款单或应收单，不能打印！");
+		}
+		
+		
+		return canPrint;
+		
+		
 	}
 
 	/**
@@ -5159,7 +5152,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 					"AND w.cfgysid = r.fsupplierid " +
 					"AND w.fparentid = CT_ATS_RepairWORWOItemSpEntry.CFRepairItemID " +
 					"AND r.fid = '%s'", id);
-		DBUtils.execute(null, sql);
+		DBUtils.executeForDialect(null, sql);
 		actionRefresh_actionPerformed(e);
 		super.actionCreateTo_actionPerformed(e);
 	}
