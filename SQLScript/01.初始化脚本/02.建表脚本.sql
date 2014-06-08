@@ -65,3 +65,10 @@ CREATE TABLE CT_SYN_DMSPrintContent (FNumber NVARCHAR(80) NULL,FBizDate DATETIME
 --add by jinbin_guo 20140411 物料货位
 If not exists (select 1 from KSQL_USERTABLES where KSQL_TABNAME ='CT_MS_MaterialLoc')	
 CREATE TABLE CT_MS_MaterialLoc (FID VARCHAR(44) DEFAULT '' NOT NULL,FSeq INT DEFAULT 0 NOT NULL,FParentID VARCHAR(44) DEFAULT '' NOT NULL,CFSeq INT NULL,CFBmwLoc varchar(100),CFLoc NVARCHAR(100) NULL,CONSTRAINT CPK_MS_MtrlIMLI442 PRIMARY KEY (FID));
+
+-- add by limin_lin 20140518 数据引入引出日志表以及分录
+If not exists (select 1 from KSQL_USERTABLES where KSQL_TABNAME ='CT_SYN_SyncLog')
+Create Table CT_SYN_SyncLog ( FCreatorID VARCHAR(44),FCreateTime DateTime,FLastUpdateUserID VARCHAR(44),FLastUpdateTime DateTime,FControlUnitID VARCHAR(44),FNumber NVARCHAR(80),FBizDate DateTime,FHandlerID VARCHAR(44),FDescription NVARCHAR(80),FHasEffected INT,FAuditorID VARCHAR(44),FSourceBillID NVARCHAR(80),FSourceFunction NVARCHAR(80),FID VARCHAR(44) DEFAULT '' NOT NULL ,CFExcelFilename NVARCHAR(255),CFImportState VARCHAR(100),CFImportOrg NVARCHAR(255),CONSTRAINT CPK_SYN_SyncLogsp5 PRIMARY KEY (FID));
+If not exists (select 1 from KSQL_USERTABLES where KSQL_TABNAME ='CT_SYN_SyncLogEntry')
+Create Table CT_SYN_SyncLogEntry ( FSeq INT,FID VARCHAR(44) DEFAULT '' NOT NULL ,FParentID VARCHAR(44),CFLogTime DateTime,CFLogContent NVARCHAR(1024),CONSTRAINT CPK_SYN_SyncLEIsp5 PRIMARY KEY (FID));
+

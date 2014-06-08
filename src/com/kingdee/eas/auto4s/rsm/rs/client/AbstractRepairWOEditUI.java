@@ -33,6 +33,7 @@ import com.kingdee.bos.ctrl.extendcontrols.*;
 import com.kingdee.bos.ctrl.kdf.util.render.*;
 import com.kingdee.bos.ui.face.IItemAction;
 import com.kingdee.eas.framework.batchHandler.RequestContext;
+import com.kingdee.eas.myframework.util.PublicUtils;
 import com.kingdee.bos.ui.util.IUIActionPostman;
 import com.kingdee.bos.appframework.client.servicebinding.ActionProxyFactory;
 import com.kingdee.bos.appframework.uistatemanage.ActionStateConst;
@@ -2898,7 +2899,7 @@ public abstract class AbstractRepairWOEditUI extends com.kingdee.eas.auto4s.auto
         prmtCustomerAccount.addDataChangeListener(new DataChangeListener() {
 		public void dataChanged(DataChangeEvent e) {
 			try {
-				prmtCustomerAccount_Changed();
+					prmtCustomerAccount_Changed();
 			}
 			catch (Exception exc) {
 				handUIException(exc);

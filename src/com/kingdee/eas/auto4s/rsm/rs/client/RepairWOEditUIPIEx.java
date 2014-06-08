@@ -729,11 +729,22 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			}
 
 		});
+		
+        prmtCustomerAccount.addDataChangeListener(new DataChangeListener() {
+    		public void dataChanged(DataChangeEvent e) {
+    			try {
+    				if (!PublicUtils.equals(e.getNewValue(), e.getOldValue()))
+    					prmtCustomerAccount_ChangedEx();
+    			}
+    			catch (Exception exc) {
+    				handUIException(exc);
+    			}
+    		}
+    	});
 	}
 
-	@Override
-	public void prmtCustomerAccount_Changed() throws Exception {
-		super.prmtCustomerAccount_Changed();
+
+	public void prmtCustomerAccount_ChangedEx() throws Exception {
 		if (UserTypeEnum.ForRepair.equals(curUserType)) { // 维修
 			txtsaleType.setText(UIRuleUtil.getString(UIRuleUtil.getProperty(
 					(IObjectValue) prmtCustomerAccount.getData(),
@@ -758,6 +769,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			WInfo wInfo = (WInfo) row.getCell("w").getValue();
 			if (wInfo == null) {
 				row.getCell("i").setValue(IEnum.H);
+				resetItemSpEditorLocked(row);
 				continue;
 			}
 			if (PublicUtils.equals(wInfo.getTypeCode(), typeCode)) {
@@ -1791,6 +1803,14 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		ICell cellIsCT = row.getCell("isCT");
 		ICell cellOriginalEntryId = row.getCell("originalEntryId");
 		ICell cellI = row.getCell("i");
+		
+		try {
+		BigDecimal unIssueQty = PublicUtils.getBigDecimal(row.getCell(unIssueIndex).getValue());
+		if (unIssueQty.compareTo(BIGDEC0) == 0) {
+			row.getCell(unIssueIndex).getStyleAttributes().setBackground(null);
+		} else
+			row.getCell(unIssueIndex).getStyleAttributes().setBackground(Color.RED);
+		
 		if (PublicUtils.equals(IEnum.H, cellI.getValue())) {
 			for (int i = 0; i < kdtRWOItemSpEntry.getColumnCount(); i++) {
 				if (hashOrginalLockIndex.get(i) != null)
@@ -1868,7 +1888,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			row.getCell(supplierIndex).getStyleAttributes().setLocked(true);
 		}
 
-		try {
+		
 			BigDecimal issueQty = PublicUtils.getBigDecimal(row.getCell(
 					"issueQty").getValue());
 			boolean isAPSettle = (Boolean) row.getCell("isAPSettle").getValue();
@@ -1908,11 +1928,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			row.getCell("worktimePrice").getStyleAttributes().setLocked(true);
 			row.getCell("worktimeCost").getStyleAttributes().setLocked(true);
 
-			BigDecimal unIssueQty = PublicUtils.getBigDecimal(row.getCell(unIssueIndex).getValue());
-			if (unIssueQty.compareTo(BIGDEC0) == 0) {
-				row.getCell(unIssueIndex).getStyleAttributes().setBackground(null);
-			} else
-				row.getCell(unIssueIndex).getStyleAttributes().setBackground(Color.RED);
+			
 
 		} catch (Exception e) {
 			UIUtils.handUIException(e);
@@ -4044,13 +4060,16 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 
 		}
 		if (hashSettleFlag.get(IEnum.X_VALUE) != null
-				&& hashSettleFlag.get(IEnum.I_VALUE) != null) { // 部分结算
+				&& (hashSettleFlag.get(IEnum.I_VALUE) != null ||
+					hashSettleFlag.get(IEnum.H_VALUE) != null)) { // 部分结算
 			gaBillStatus.setSelectedItem(RepairWOStatusEnum.partSettle);
 		} else if (hashSettleFlag.get(IEnum.X_VALUE) != null
-				&& hashSettleFlag.get(IEnum.I_VALUE) == null) { // 全部结算
+				&& hashSettleFlag.get(IEnum.I_VALUE) == null
+				&& hashSettleFlag.get(IEnum.H_VALUE) == null) { // 全部结算
 			gaBillStatus.setSelectedItem(RepairWOStatusEnum.AllSettle);
 		} else if (hashSettleFlag.get(IEnum.X_VALUE) == null
-				&& hashSettleFlag.get(IEnum.I_VALUE) != null) { // 未结算
+				&& (hashSettleFlag.get(IEnum.I_VALUE) != null ||
+					hashSettleFlag.get(IEnum.H_VALUE) != null)) { // 未结算
 			gaBillStatus.setSelectedItem(RepairWOStatusEnum.notSettle);
 		}
 	}
@@ -4627,15 +4646,11 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		try {
 			String sql = "";
 			sql = String.format(
-					"delete T_ATS_WarrRemind where FRepairWOID='%s'", editData
-							.getString("id"));
+					"delete T_ATS_WarrRemind where FRepairWOID='%s'", editData.getString("id"));
 			DBUtils.execute(null, sql);
 
-			sql = String
-					.format(
-							"select FID from T_ATS_WarrRemind WHERE FVehicleID='%s' and convert(varchar(10),FReturnTime,120)='%s' order by FReturnTime desc",
-							vehicleInfo.getString("id"), sf
-									.format(dateComeTime));
+			sql = String.format("select FID from T_ATS_WarrRemind WHERE FVehicleID='%s' and convert(varchar(10),FReturnTime,120)='%s' order by FReturnTime desc",
+							vehicleInfo.getString("id"), sf.format(dateComeTime));
 
 			IRowSet rs = DBUtils.executeQueryForDialect(null, sql);
 			if (rs != null && rs.next()) {
@@ -4895,7 +4910,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 				|| getTDFileName() == null) {
 			return;
 		} else {
-			if (!checkCanPrint()) return;
+		//	if (!checkCanPrint()) return;
 			updateIsPrint();
 			actionRefresh_actionPerformed(e);
 			PrintIntegrationInfo oldPIInfo = getPrintIntegrationInfo();
@@ -4928,7 +4943,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 				|| getTDFileName() == null) {
 			return;
 		} else {
-			if (!checkCanPrint()) return;
+			//if (!checkCanPrint()) return;
 			updateIsPrint();
 			actionRefresh_actionPerformed(e);
 			PrintIntegrationInfo oldPIInfo = getPrintIntegrationInfo();
@@ -4969,7 +4984,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 				|| getTDFileName() == null) {
 			return;
 		} else {
-			if (!checkCanPrint()) return;
+		//	if (!checkCanPrint()) return;
 			updateIsPrint();
 			PrintIntegrationInfo oldPIInfo = getPrintIntegrationInfo();
 			DefaultNoteDataProvider multiDataSourceProviderProxy = new DefaultNoteDataProvider(
@@ -4983,8 +4998,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 					SwingUtilities.getWindowAncestor(this), true, this);
 			PrintIntegrationInfo newPIInfo = getPrintIntegrationInfo();
 			String[] printTemplatePaths = appHlp.getPrintedTemplatePaths();
-			for (int i = 0; printTemplatePaths != null
-					&& i < printTemplatePaths.length; i++)
+			for (int i = 0; printTemplatePaths != null && i < printTemplatePaths.length; i++)
 				setSettlePrintFlag(printTemplatePaths[i], oldPIInfo, newPIInfo);
 			if (printTemplatePaths != null)
 				getUIWindow().close();
@@ -5038,9 +5052,32 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 							sf.format(DBUtils.getAppServerTime(null)),editData.getString("id"));
 		DBUtils.executeForDialect(null, sql);
 		
-
+		
+		sql = String.format("select DISTINCT cfi from CT_ATS_RepairWORWOItemSpEntry where fparentid='%s'",editData.getString("id"));
+		IRowSet rs = DBUtils.executeQueryForDialect(null, sql);
+		
+		// 设置GA单据状态
+		HashMap<String, String> hashSettleFlag = new HashMap<String, String>();
+		while (rs != null && rs.next()) {
+			hashSettleFlag.put(rs.getString(1), rs.getString(1));
+		}
+		if (hashSettleFlag.get(IEnum.X_VALUE) != null
+				&& (hashSettleFlag.get(IEnum.I_VALUE) != null ||
+					hashSettleFlag.get(IEnum.H_VALUE) != null)) { // 部分结算
+			sql = String.format("update T_ATS_RepairWO set CFGaBillStatus='2' where fid='%s'",editData.getString("id"));
+		} else if (hashSettleFlag.get(IEnum.X_VALUE) != null
+				&& hashSettleFlag.get(IEnum.I_VALUE) == null
+				&& hashSettleFlag.get(IEnum.H_VALUE) == null) { // 全部结算
+			sql = String.format("update T_ATS_RepairWO set CFGaBillStatus='3' where fid='%s'",editData.getString("id"));
+		} else if (hashSettleFlag.get(IEnum.X_VALUE) == null
+				&& (hashSettleFlag.get(IEnum.I_VALUE) != null ||
+					hashSettleFlag.get(IEnum.H_VALUE) != null)) { // 未结算
+			sql = String.format("update T_ATS_RepairWO set CFGaBillStatus='1' where fid='%s'",editData.getString("id"));
+		}
+		DBUtils.executeForDialect(null, sql);
+		
 		actionRefresh_actionPerformed(null);
-
+ 
 	}
 	/**
 	 * 检查是否可打印，只有下推过前台收款单或应收单才能打印
