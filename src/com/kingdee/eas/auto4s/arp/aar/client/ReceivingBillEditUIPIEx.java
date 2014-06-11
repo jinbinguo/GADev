@@ -82,6 +82,9 @@ public class ReceivingBillEditUIPIEx extends ReceivingBillEditUI {
 		
 		//自动审核，收款(收款金额不等于0)
 		actionAudit_actionPerformed(e);
+		
+		//调用打印接口
+	//	actionPrint_actionPerformed(e);
 		if (BigDecimal.ZERO.compareTo(editData.getAmount()) != 0)
 			actionRec_actionPerformed(e);
 		

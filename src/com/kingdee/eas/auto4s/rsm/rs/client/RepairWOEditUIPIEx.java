@@ -1811,14 +1811,15 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		} else
 			row.getCell(unIssueIndex).getStyleAttributes().setBackground(Color.RED);
 		
-		if (PublicUtils.equals(IEnum.H, cellI.getValue())) {
+	/*	if (PublicUtils.equals(IEnum.H, cellI.getValue())) {
 			for (int i = 0; i < kdtRWOItemSpEntry.getColumnCount(); i++) {
 				if (hashOrginalLockIndex.get(i) != null)
 					row.getCell(i).getStyleAttributes().setLocked(true);
 				else if (i != cellI.getColumnIndex()) row.getCell(i).getStyleAttributes().setLocked(true);
 			}
 			return;
-		} else if (PublicUtils.equals(IEnum.I, cellI.getValue())) {
+		} else */
+		if (PublicUtils.equals(IEnum.I, cellI.getValue())) {
 			for (int i = 0; i < kdtRWOItemSpEntry.getColumnCount(); i++) {
 				if (hashOrginalLockIndex.get(i) == null)
 					row.getCell(i).getStyleAttributes().setLocked(false);
@@ -4049,6 +4050,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		totalAmount();
 
 		// ---end--原4S标准代码，调整，取消对负数控制
+		
 
 		// saveVehicleMile();
 		// 设置GA单据状态
@@ -4111,25 +4113,15 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			if (!PublicUtils.equals(TEnum.P, tType))
 				continue;
 			boolean isCT = (Boolean) row.getCell("isCT").getValue();
-			MaterialInfo materialInfo = (MaterialInfo) row.getCell("material")
-					.getValue();
-			BigDecimal taxPrice = PublicUtils.getBigDecimal(row.getCell(
-					"taxPrice").getValue()); // 含税
-			BigDecimal discountRate = PublicUtils.getBigDecimal(row.getCell(
-					"discountRate").getValue());
-			BigDecimal factPrice = taxPrice.multiply(BIGDEC1
-					.subtract(discountRate.divide(BIGDEC100, 10,
-							BigDecimal.ROUND_HALF_UP)));
-			BigDecimal initFactPrice = PublicUtils.getBigDecimal(row.getCell(
-					"initFactPrice").getValue());
+			MaterialInfo materialInfo = (MaterialInfo) row.getCell("material").getValue();
+			BigDecimal taxPrice = PublicUtils.getBigDecimal(row.getCell("taxPrice").getValue()); // 含税
+			BigDecimal discountRate = PublicUtils.getBigDecimal(row.getCell("discountRate").getValue());
+			BigDecimal factPrice = taxPrice.multiply(BIGDEC1.subtract(discountRate.divide(BIGDEC100, 10,BigDecimal.ROUND_HALF_UP)));
+			BigDecimal initFactPrice = PublicUtils.getBigDecimal(row.getCell("initFactPrice").getValue());
 			BigDecimal costPrice = getMaterialCostPrice(orgId, materialInfo);
 			String spName = (String) row.getCell("itemspName").getValue();
-			if (factPrice.compareTo(initFactPrice) != 0
-					&& factPrice.compareTo(costPrice) < 0 && !isCT) {
-				msg
-						.append(
-								String.format("第%d行，[%s]折后价格不能低于成本价", i + 1,
-										spName)).append(CR);
+			if (factPrice.compareTo(initFactPrice) != 0 && factPrice.compareTo(costPrice) < 0 && !isCT) {
+				msg.append(String.format("第%d行，[%s]折后价格不能低于成本价", i + 1,spName)).append(CR);
 			}
 		}
 		if (msg.length() > 0) {
@@ -4375,6 +4367,16 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			SysUtil.abort();
 		}
 
+		for (int i = 0; i < kdtRWOItemSpEntry.getRowCount(); i++) {
+			IRow row = kdtRWOItemSpEntry.getRow(i);
+			IEnum iType = (IEnum) row.getCell("i").getValue();
+			WInfo wInfo = (WInfo)row.getCell("w").getValue();
+			if (wInfo == null) {
+				MsgBoxEx.showInfo(String.format("第%d行,W字段不能为空！", i+1));
+				kdtRWOItemSpEntry.cellAtPosition(i, kdtRWOItemSpEntry.getColumnIndex("w"));
+				SysUtil.abort();
+			}
+		}
 	}
 
 	/*
@@ -4911,7 +4913,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			return;
 		} else {
 		//	if (!checkCanPrint()) return;
-			updateIsPrint();
+	//		updateIsPrint();
 			actionRefresh_actionPerformed(e);
 			PrintIntegrationInfo oldPIInfo = getPrintIntegrationInfo();
 			DefaultNoteDataProvider multiDataSourceProviderProxy = new DefaultNoteDataProvider(
@@ -4944,7 +4946,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			return;
 		} else {
 			//if (!checkCanPrint()) return;
-			updateIsPrint();
+//			updateIsPrint();
 			actionRefresh_actionPerformed(e);
 			PrintIntegrationInfo oldPIInfo = getPrintIntegrationInfo();
 			DefaultNoteDataProvider multiDataSourceProviderProxy = new DefaultNoteDataProvider(idList);
@@ -4965,7 +4967,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		}
 	}
 	
-	private void updateIsPrint() throws Exception{
+/*	private void updateIsPrint() throws Exception{
 		String id = editData.getString("id");
 		String sql = String.format("update CT_ATS_RepairWORWOItemSpEntry set CFIsCreateTo=1 where fparentid='%s'",id);
 		DBUtils.execute(null, sql);
@@ -4973,7 +4975,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		DBUtils.executeForDialect(null, sql);
 		
 	}
-
+*/
 	@Override
 	public void actionPrintContinue_actionPerformed(ActionEvent e)
 			throws Exception {
@@ -4985,7 +4987,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			return;
 		} else {
 		//	if (!checkCanPrint()) return;
-			updateIsPrint();
+			//updateIsPrint();
 			PrintIntegrationInfo oldPIInfo = getPrintIntegrationInfo();
 			DefaultNoteDataProvider multiDataSourceProviderProxy = new DefaultNoteDataProvider(
 					idList);
@@ -5043,14 +5045,32 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		DBUtils.execute(null, sql);
 		
 		SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		//更新账单状态、结账日期,已转应前台收款单或应收单
+		//更新账单状态、结账日期,已转应前台收款单或应收单		
+		//更新前台收款单或就应收单的单号
+		sql = String.format("update a " +
+							"set CFI='X'," +
+							"CFSettleDate=(Select distinct FBizDate From T_AR_OtherBill aa Left join T_AR_OtherBillentry bb on bb.FParentID=aa.FID " +
+										"where bb.FCoreBillTypeID='HM+nytJ+S7izjFHd2/madkY+1VI=' and bb.FSourceBillEntryId=a.FID)," +
+							"CFArNumber=(Select distinct FNumber From T_AR_OtherBill aa Left join T_AR_OtherBillentry bb on bb.FParentID=aa.FID " +
+										"where bb.FCoreBillTypeID='HM+nytJ+S7izjFHd2/madkY+1VI=' and bb.FSourceBillEntryId=a.FID) " +
+							"from CT_ATS_RepairWORWOItemSpEntry a where CFI='I' and FParentID='%s' " +
+							"and exists (select 1 from T_AR_OtherBillentry where FCoreBillTypeID='HM+nytJ+S7izjFHd2/madkY+1VI=' and FSourceBillEntryId=a.FID)", 
+							editData.getString("id"));		
+		DBUtils.executeForDialect(null, sql);
 		
 		sql = String.format("update a " +
-							"set CFI='X',CFSettleDate='%s' from CT_ATS_RepairWORWOItemSpEntry a where CFI='I' and FParentID='%s' " +
-							"and (exists (select 1 from T_ATS_ReceivingBillWay where FSourceBillTypeID='HM+nytJ+S7izjFHd2/madkY+1VI=' and FSourceBillIEntryID=a.FID) " +
-							"OR exists (select 1 from T_AR_OtherBillentry where FCoreBillTypeID='HM+nytJ+S7izjFHd2/madkY+1VI=' and FSourceBillEntryId=a.FID))", 
-							sf.format(DBUtils.getAppServerTime(null)),editData.getString("id"));
+				"set CFI='X'," +
+				"CFSettleDate=(Select distinct FDate From T_ATS_ReceivingBill aa left join T_ATS_ReceivingBillWay bb on bb.FParentId=aa.FID " +
+							"where bb.FSourceBillTypeID='HM+nytJ+S7izjFHd2/madkY+1VI=' and bb.FSourceBillIEntryID=a.FID)," +
+				"CFReceiveNumber=(Select distinct FNumber From T_ATS_ReceivingBill aa left join T_ATS_ReceivingBillWay bb on bb.FParentId=aa.FID " +
+							"where bb.FSourceBillTypeID='HM+nytJ+S7izjFHd2/madkY+1VI=' and bb.FSourceBillIEntryID=a.FID) " +
+				"from CT_ATS_RepairWORWOItemSpEntry a where CFI='I' and FParentID='%s' " +
+				"and exists (select 1 from T_ATS_ReceivingBillWay where FSourceBillTypeID='HM+nytJ+S7izjFHd2/madkY+1VI=' and FSourceBillIEntryID=a.FID)", 
+				editData.getString("id"));		
 		DBUtils.executeForDialect(null, sql);
+
+		
+		
 		
 		
 		sql = String.format("select DISTINCT cfi from CT_ATS_RepairWORWOItemSpEntry where fparentid='%s'",editData.getString("id"));
@@ -5168,17 +5188,18 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 	@Override
 	public void actionCreateTo_actionPerformed(ActionEvent e) throws Exception {
 		rwoUI = this;
+		String accountNumber = ((CustomerAccountInfo)prmtCustomerAccount.getValue()).getNumber();
 		for (int i = 0; i < kdtRWOItemSpEntry.getRowCount(); i++) {
 			IRow row = kdtRWOItemSpEntry.getRow(i);
 			IEnum iType = (IEnum) row.getCell("i").getValue();
 			WInfo wInfo = (WInfo)row.getCell("w").getValue();
 			if (!PublicUtils.equals(IEnum.I, iType)) continue;
+			row.getCell("account").setValue(accountNumber);
 			if (wInfo == null) {
 				MsgBoxEx.showInfo(String.format("第%d行,W字段不能为空！", i+1));
 				kdtRWOItemSpEntry.cellAtPosition(i, kdtRWOItemSpEntry.getColumnIndex("w"));
 				return;
 			}
-			
 		}
 		
 		actionSave_actionPerformed(e);

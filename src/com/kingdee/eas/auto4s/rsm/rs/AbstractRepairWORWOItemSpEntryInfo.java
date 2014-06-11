@@ -542,6 +542,28 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
     {
         setBigDecimal("worktimeCost", item);
     }
+    /**
+     * Object:项目配件明细's 应收单号property 
+     */
+    public String getArNumber()
+    {
+        return getString("arNumber");
+    }
+    public void setArNumber(String item)
+    {
+        setString("arNumber", item);
+    }
+    /**
+     * Object:项目配件明细's 收款单号property 
+     */
+    public String getReceiveNumber()
+    {
+        return getString("receiveNumber");
+    }
+    public void setReceiveNumber(String item)
+    {
+        setString("receiveNumber", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("FF1F0E1A");

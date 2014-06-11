@@ -13,10 +13,14 @@ import com.kingdee.eas.basedata.org.OrgUnitInfo;
 import com.kingdee.eas.basedata.org.PurchaseOrgUnitInfo;
 import com.kingdee.eas.basedata.org.StorageOrgUnitInfo;
 import com.kingdee.eas.common.EASBizException;
+import com.kingdee.eas.framework.batchaction.BatchActionEnum;
+import com.kingdee.eas.framework.batchaction.BatchSelectionEntries;
+import com.kingdee.eas.myframework.client.MsgBoxEx;
 import com.kingdee.eas.myframework.util.DBUtils;
 import com.kingdee.eas.myframework.util.OrgUtils;
 import com.kingdee.eas.myframework.util.PublicUtils;
 import com.kingdee.eas.myframework.util.UIUtils;
+import com.kingdee.eas.util.SysUtil;
 import com.kingdee.jdbc.rowset.IRowSet;
 
 public class PurInWarehsBillEditUIPIEx extends PurInWarehsBillEditUI {
@@ -61,13 +65,15 @@ public class PurInWarehsBillEditUIPIEx extends PurInWarehsBillEditUI {
     				BigDecimal taxRate = PublicUtils.getBigDecimal(curRow.getCell("taxRate").getValue());
     				if (taxRate.compareTo(BigDecimal.ZERO) == 0) {
     					taxRate = new BigDecimal(17.00);
-    					curRow.getCell("taxRate").setValue(17.00);
+    					curRow.getCell("taxRate").setValue(taxRate);
     				}
     				if (materialInfo != null ) {
     					BigDecimal notTaxPrice = getNotTaxPrice(materialInfo);
-    					curRow.getCell("price").setValue(notTaxPrice);
+    					curRow.getCell("price").setValue(BigDecimal.ZERO);
     					BigDecimal taxPrice = notTaxPrice.multiply(BigDecimal.ONE.add(taxRate.divide(new BigDecimal(100.00),10,BigDecimal.ROUND_HALF_UP)));
-    					curRow.getCell("taxPrice").setValue(taxPrice);	
+    					curRow.getCell("taxPrice").setValue(BigDecimal.ZERO);	
+    					
+    					curRow.getCell("referTaxCost").setValue(taxPrice);
     				}
 	    		}
 	    	}
@@ -76,5 +82,18 @@ public class PurInWarehsBillEditUIPIEx extends PurInWarehsBillEditUI {
 			UIUtils.handUIException(e);
 		}
     }
-
+    
+    @Override
+    protected void verifyInput(ActionEvent e) throws Exception {
+    	super.verifyInput(e);
+    	for (int i = 0; i < detailTable.getRowCount(); i++) {
+    		IRow row = detailTable.getRow(i);
+    		BigDecimal taxPrice = (BigDecimal) row.getCell("taxPrice").getValue();
+    		if (taxPrice == null || taxPrice.compareTo(BigDecimal.ZERO) == 0) {
+    			MsgBoxEx.showInfo("含税单价不能为0或空");
+    			SysUtil.abort();
+    		}
+    	}
+    }
+  
 }

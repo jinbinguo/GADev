@@ -2,6 +2,7 @@ package com.kingdee.eas.scm.im.inv.client;
 
 import java.awt.event.ActionEvent;
 
+import com.itrus.util.SystemUtils;
 import com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUIPIEx;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.eas.common.client.OprtState;
@@ -11,6 +12,7 @@ import com.kingdee.eas.myframework.client.MsgBoxEx;
 import com.kingdee.eas.myframework.util.DBUtils;
 import com.kingdee.eas.myframework.util.PublicUtils;
 import com.kingdee.eas.myframework.util.UIUtils;
+import com.kingdee.eas.util.SysUtil;
 import com.kingdee.jdbc.rowset.IRowSet;
 import com.kingdee.util.NumericExceptionSubItem;
 
@@ -35,7 +37,23 @@ public class SaleIssueBillEditUIPIEx extends SaleIssueBillEditUI {
 	public void afterAction(BatchActionEnum bizAction,
 			BatchSelectionEntries selectionEntries, int countSuccess) {
 		super.afterAction(bizAction, selectionEntries, countSuccess);
-
+	/*	if (PublicUtils.equals(bizAction, BatchActionEnum.SUBMIT)) {
+    		String sql = "select 1 from T_IM_SaleIssueEntry a " +
+    				"where a.FSourceBillTypeID='HM+nytJ+S7izjFHd2/madkY+1VI=' " +
+    				"and exists (select 1 from CT_ATS_RepairWORWOItemSpEntry b where b.fid=a.FSourceBillEntryId and b.CFUnIssueQty<a.FQty) " +
+    				"and a.FParentID='" + editData.getString("id") + "'";
+    		try {
+				IRowSet rs = DBUtils.executeQuery(null, sql);
+				if (rs != null && rs.next()) {
+					MsgBoxEx.showInfo("配件已出库，不可重复出库！");
+					SysUtil.abort();
+				}
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    		
+    	}*/
 	}
 	
 	@Override
@@ -50,10 +68,11 @@ public class SaleIssueBillEditUIPIEx extends SaleIssueBillEditUI {
 	@Override
 	public boolean beforeAction(BatchActionEnum bizAction,
 			BatchSelectionEntries selectionEntries, ActionEvent event) {
+		
 		return super.beforeAction(bizAction, selectionEntries, event);
 		
 	}
-	
+	   
 	@Override
 	public void actionPrint_actionPerformed(ActionEvent e) throws Exception {
 		super.actionPrint_actionPerformed(e);

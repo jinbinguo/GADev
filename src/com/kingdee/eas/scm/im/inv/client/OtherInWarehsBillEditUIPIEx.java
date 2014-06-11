@@ -1,18 +1,19 @@
 package com.kingdee.eas.scm.im.inv.client;
 
 import java.awt.event.ActionEvent;
+import java.math.BigDecimal;
 
+import com.kingdee.bos.ctrl.kdf.table.IRow;
 import com.kingdee.bos.dao.IObjectValue;
 import com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUIPIEx;
-import com.kingdee.eas.common.EASBizException;
+import com.kingdee.eas.basedata.master.material.MaterialInfo;
+import com.kingdee.eas.basedata.org.StorageOrgUnitInfo;
 import com.kingdee.eas.common.client.OprtState;
-import com.kingdee.eas.framework.batchaction.BatchActionEnum;
-import com.kingdee.eas.framework.batchaction.BatchSelectionEntries;
 import com.kingdee.eas.myframework.client.MsgBoxEx;
 import com.kingdee.eas.myframework.util.DBUtils;
 import com.kingdee.eas.myframework.util.PublicUtils;
+import com.kingdee.eas.util.SysUtil;
 import com.kingdee.jdbc.rowset.IRowSet;
-import com.kingdee.util.NumericExceptionSubItem;
 
 public class OtherInWarehsBillEditUIPIEx extends OtherInWarehsBillEditUI {
 
@@ -28,6 +29,7 @@ public class OtherInWarehsBillEditUIPIEx extends OtherInWarehsBillEditUI {
 			lockUIForViewStatus();
 			MsgBoxEx.showInfo("来源维修工单已做了费用分担，将不允许修改其他入库单数据！");
 		}
+		kdtEntry.getColumn("unitFactCost").setRequired(true);
 	}
 	
 	@Override
@@ -76,6 +78,38 @@ public class OtherInWarehsBillEditUIPIEx extends OtherInWarehsBillEditUI {
 		
 		value.put("TransactionType",null);
 		return value;
+	}
+	
+	@Override
+	protected void verifyInput(ActionEvent actionevent) throws Exception {
+		super.verifyInput(actionevent);
+		for (int i = 0; i < kdtEntry.getRowCount(); i++) {
+			IRow row = kdtEntry.getRow(i);
+			BigDecimal unitFactCost = (BigDecimal) row.getCell("unitFactCost").getValue();
+			if (unitFactCost == null) {
+				MsgBoxEx.showInfo("单位实际成本不能为空!");
+				SysUtil.abort();
+			}
+			
+		}
+	}
+	
+	@Override
+	public void setColumnProperty(MaterialInfo materialInfo, int row, int col,
+			boolean isOnload) throws Exception {
+		super.setColumnProperty(materialInfo, row, col, isOnload);
+		if (materialInfo != null && !isOnload) {
+			StorageOrgUnitInfo orgUnitInfo = (StorageOrgUnitInfo) prmtStorageOrgUnit.getValue();
+			if (orgUnitInfo == null) return;
+			String sql = String.format("select isnull(FPrice,0) FPrice from T_BD_MaterialPurchasing where FOrgUnit='%s' and FMaterialID='%s'", 
+					orgUnitInfo.getString("id"),materialInfo.getString("id"));
+			IRowSet rs = DBUtils.executeQuery(null, sql);
+			if (rs != null && rs.next()) {
+				BigDecimal price = rs.getBigDecimal("FPrice");
+				kdtEntry.getRow(row).getCell("referCost").setValue(price);
+			}
+			
+		}
 	}
 
 }

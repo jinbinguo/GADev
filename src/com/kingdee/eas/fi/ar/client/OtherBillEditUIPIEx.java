@@ -29,6 +29,7 @@ public class OtherBillEditUIPIEx extends OtherBillEditUI {
 	@Override
 	public void actionSubmit_actionPerformed(ActionEvent arg0) throws Exception {
 		super.actionSubmit_actionPerformed(arg0);
+	//	actionPrint_actionPerformed(arg0);
 		if (RepairWOEditUIPIEx.rwoUI != null) {
 			RepairWOEditUIPIEx.rwoUI.actionRefresh_actionPerformed(arg0);
 			RepairWOEditUIPIEx.rwoUI = null;
