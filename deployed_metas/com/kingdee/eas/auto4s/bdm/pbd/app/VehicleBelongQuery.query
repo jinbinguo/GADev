@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.auto4s.bdm.pbd.app</package>
+    <name>VehicleBelongQuery</name>
+    <alias>joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].alias</alias>
+    <description>joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].description</description>
+    <userDefined>true</userDefined>
+    <reportDataSource />
+    <bizUnitPK />
+    <connectionProvider />
+    <subObjects>
+        <subEntity>
+            <name>VehicleBelong</name>
+            <alias>joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].subObjects.subEntity[VehicleBelong].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="VehicleBelongQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="VehicleBelong" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>person</name>
+            <alias>joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].subObjects.subEntity[person].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="VehicleBelongQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.person.app" />
+                <key name="name" value="Person" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>orgUnit</name>
+            <alias>joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].subObjects.subEntity[orgUnit].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="VehicleBelongQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="AdminOrgUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>parent</name>
+            <alias>joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].subObjects.subEntity[parent].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="VehicleBelongQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="Vehicle" />
+            </entityRef>
+        </subEntity>
+    </subObjects>
+    <units>
+        <propertyUnit>
+            <name>f023d3b8-c124-48f8-9db0-6bf1c6592b8c</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.propertyUnit[f023d3b8-c124-48f8-9db0-6bf1c6592b8c].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>17963f30-f1c9-4288-8a3c-d75468d39663</key>
+                    <parentUnit>
+                        <key name="name" value="f023d3b8-c124-48f8-9db0-6bf1c6592b8c" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="VehicleBelong" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="person" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="VehicleBelongQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>66484764-a1b8-4d16-be78-13f697338254</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.propertyUnit[66484764-a1b8-4d16-be78-13f697338254].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>89d42101-860b-4470-949a-334a82b6fa4a</key>
+                    <parentUnit>
+                        <key name="name" value="66484764-a1b8-4d16-be78-13f697338254" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="person" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="VehicleBelongQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>65778731-f90a-4402-9e79-c48fb32216c1</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.propertyUnit[65778731-f90a-4402-9e79-c48fb32216c1].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>95f140a5-4927-4ebc-87ef-e85dd287806f</key>
+                    <parentUnit>
+                        <key name="name" value="65778731-f90a-4402-9e79-c48fb32216c1" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="VehicleBelong" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="orgUnit" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="VehicleBelongQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>2e73a59c-6e97-41a8-8ebd-f5921bd50cec</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.propertyUnit[2e73a59c-6e97-41a8-8ebd-f5921bd50cec].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>302a75fb-a310-443c-b8e4-793fa4cd58b4</key>
+                    <parentUnit>
+                        <key name="name" value="2e73a59c-6e97-41a8-8ebd-f5921bd50cec" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="orgUnit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="VehicleBelongQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>id</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.queryField[id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>d959c9fd-db18-4ce8-8592-aeeaa6d1fb6d</key>
+                    <parentUnit>
+                        <key name="name" value="id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="VehicleBelong" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="VehicleBelongQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>parent.id</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.queryField[parent.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>6c32607d-85c9-4464-913a-349eb7cf43d4</key>
+                    <parentUnit>
+                        <key name="name" value="parent.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="VehicleBelongQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>orgUnit.name</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.queryField[orgUnit.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>c3b102cc-0063-4db3-bdae-49ec3e4215b6</key>
+                    <parentUnit>
+                        <key name="name" value="orgUnit.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="orgUnit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="VehicleBelongQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>person.name</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.queryField[person.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>a2502956-0459-45a2-991b-05be3404415f</key>
+                    <parentUnit>
+                        <key name="name" value="person.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="person" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="VehicleBelongQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>serviceDate</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.queryField[serviceDate].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>1187ab52-4caf-4637-acac-40dafa0374bb</key>
+                    <parentUnit>
+                        <key name="name" value="serviceDate" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="VehicleBelong" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="serviceDate" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="VehicleBelongQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>isDefault</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.queryField[isDefault].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Boolean</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>8392eb7e-4542-46b6-8686-121ccd347d5d</key>
+                    <parentUnit>
+                        <key name="name" value="isDefault" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="VehicleBelong" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="isDefault" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="VehicleBelongQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>5e8e9236-b2dc-4bcf-8837-9b3ab0712d9e</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.propertyUnit[5e8e9236-b2dc-4bcf-8837-9b3ab0712d9e].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>5ddfd667-8d7d-47ab-86d4-44b7f4234d24</key>
+                    <parentUnit>
+                        <key name="name" value="5e8e9236-b2dc-4bcf-8837-9b3ab0712d9e" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="VehicleBelong" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="parent" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="VehicleBelongQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>3ded7c0e-c149-4ea0-995a-d5bf1dc6348b</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.propertyUnit[3ded7c0e-c149-4ea0-995a-d5bf1dc6348b].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>20dd239a-da9d-40cf-86d9-7639d7b0b929</key>
+                    <parentUnit>
+                        <key name="name" value="3ded7c0e-c149-4ea0-995a-d5bf1dc6348b" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="VehicleBelongQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>orgUnit.number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.queryField[orgUnit.number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>7377657c-9886-4ade-aff8-dd4b96dd79b6</key>
+                    <parentUnit>
+                        <key name="name" value="orgUnit.number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="orgUnit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="VehicleBelongQuery" />
+            </query>
+        </queryField>
+    </units>
+    <defaultFilter>
+        <name>defaultFilter</name>
+        <formulaString />
+        <filterItems>
+            <queryFilterItem>
+                <propertyName>isDefault</propertyName>
+                <compareType>=</compareType>
+                <compareValue>1</compareValue>
+                <userDefined>false</userDefined>
+                <filter>
+                    <key name="name" value="defaultFilter" />
+                </filter>
+                <configured>false</configured>
+            </queryFilterItem>
+        </filterItems>
+        <query>
+            <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+            <key name="name" value="VehicleBelongQuery" />
+        </query>
+    </defaultFilter>
+    <isDistinct>false</isDistinct>
+    <joins>
+        <join>
+            <name>4b67370d-7d52-4fa2-9283-869fd676950c</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="VehicleBelong" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="person" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>8b1bdd80-aaa2-4032-9602-f05ca62c2f2d</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="f023d3b8-c124-48f8-9db0-6bf1c6592b8c" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="66484764-a1b8-4d16-be78-13f697338254" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="4b67370d-7d52-4fa2-9283-869fd676950c" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="VehicleBelongQuery" />
+            </query>
+        </join>
+        <join>
+            <name>9efd47b1-cf22-478a-afe9-f5386fa4d634</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="VehicleBelong" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="orgUnit" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>7839745a-6c18-4c98-80e4-1ce1d19c497b</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="65778731-f90a-4402-9e79-c48fb32216c1" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="2e73a59c-6e97-41a8-8ebd-f5921bd50cec" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="9efd47b1-cf22-478a-afe9-f5386fa4d634" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="VehicleBelongQuery" />
+            </query>
+        </join>
+        <join>
+            <name>45286597-6851-4ab2-aa96-66ca5b3cce2d</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="VehicleBelong" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="parent" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>8a5954c2-f2d0-496a-a9a0-6e14d08d20e2</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="5e8e9236-b2dc-4bcf-8837-9b3ab0712d9e" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="3ded7c0e-c149-4ea0-995a-d5bf1dc6348b" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="45286597-6851-4ab2-aa96-66ca5b3cce2d" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.bdm.pbd.app" />
+                <key name="name" value="VehicleBelongQuery" />
+            </query>
+        </join>
+    </joins>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="车辆所属维修中心查询" />
+            <lang locale="zh_HK" value="車輛所屬維修中心查詢" />
+            <lang locale="zh_TW" value="車輛所屬維修中心查詢" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].subObjects.subEntity[VehicleBelong].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].subObjects.subEntity[orgUnit].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].subObjects.subEntity[parent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].subObjects.subEntity[person].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.propertyUnit[2e73a59c-6e97-41a8-8ebd-f5921bd50cec].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.propertyUnit[3ded7c0e-c149-4ea0-995a-d5bf1dc6348b].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.propertyUnit[5e8e9236-b2dc-4bcf-8837-9b3ab0712d9e].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.propertyUnit[65778731-f90a-4402-9e79-c48fb32216c1].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.propertyUnit[66484764-a1b8-4d16-be78-13f697338254].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.propertyUnit[f023d3b8-c124-48f8-9db0-6bf1c6592b8c].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.queryField[id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.queryField[isDefault].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="所属维修中心" />
+            <lang locale="zh_HK" value="所屬維修中心" />
+            <lang locale="zh_TW" value="所屬維修中心" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.queryField[orgUnit.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修中心" />
+            <lang locale="zh_HK" value="維修中心" />
+            <lang locale="zh_TW" value="維修中心" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.queryField[orgUnit.number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="编码" />
+            <lang locale="zh_HK" value="編碼" />
+            <lang locale="zh_TW" value="編碼" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.queryField[parent.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.queryField[person.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="维修顾问" />
+            <lang locale="zh_HK" value="維修顧問" />
+            <lang locale="zh_TW" value="維修顧問" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.bdm.pbd.app.VehicleBelongQuery].units.queryField[serviceDate].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="转入服务日期" />
+            <lang locale="zh_HK" value="轉入服務日期" />
+            <lang locale="zh_TW" value="轉入服務日期" />
+        </rs>
+    </resource>
+</joinQuery>
+
