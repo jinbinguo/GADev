@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facade xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.ga.syncdata.app</package>
+    <name>DMSSyncFacade</name>
+    <alias>facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].alias</alias>
+    <description>facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].description</description>
+    <userDefined>true</userDefined>
+    <bosType>1829B218</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.ga.syncdata.DMSSyncFacade</businessImplName>
+    <businessControllerName>com.kingdee.eas.ga.syncdata.app.DMSSyncFacadeController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>ImportCustProfiles</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].methods.method[ImportCustProfiles].alias</alias>
+            <description>facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].methods.method[ImportCustProfiles].description</description>
+            <innerID>56acb60a-3afb-494b-992a-ccd286651e90</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>maxRecords</name>
+                    <alias>facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].methods.method[ImportCustProfiles].parameters.parameter[maxRecords].alias</alias>
+                    <description>facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].methods.method[ImportCustProfiles].parameters.parameter[maxRecords].description</description>
+                    <direction>in</direction>
+                    <dataType>Integer</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>ImportVehicleTypes</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].methods.method[ImportVehicleTypes].alias</alias>
+            <description>facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].methods.method[ImportVehicleTypes].description</description>
+            <innerID>1ae3fe40-33e3-4c16-901d-cf77a3fc0faf</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>maxRecords</name>
+                    <alias>facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].methods.method[ImportVehicleTypes].parameters.parameter[maxRecords].alias</alias>
+                    <description>facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].methods.method[ImportVehicleTypes].parameters.parameter[maxRecords].description</description>
+                    <direction>in</direction>
+                    <dataType>Integer</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>ImportVehicleProfiles</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].methods.method[ImportVehicleProfiles].alias</alias>
+            <description>facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].methods.method[ImportVehicleProfiles].description</description>
+            <innerID>ec08d4e3-8388-4e55-aeb7-495e01bc6111</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>maxRecords</name>
+                    <alias>facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].methods.method[ImportVehicleProfiles].parameters.parameter[maxRecords].alias</alias>
+                    <description>facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].methods.method[ImportVehicleProfiles].parameters.parameter[maxRecords].description</description>
+                    <direction>in</direction>
+                    <dataType>Integer</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <resource>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="DMS数据同步" />
+            <lang locale="zh_HK" value="DMS數據同步" />
+            <lang locale="zh_TW" value="DMS數據同步" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].methods.method[ImportCustProfiles].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="引入客户档案资料" />
+            <lang locale="zh_HK" value="引入客戶檔案資料" />
+            <lang locale="zh_TW" value="引入客戶檔案資料" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].methods.method[ImportCustProfiles].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].methods.method[ImportCustProfiles].parameters.parameter[maxRecords].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最大记录数" />
+            <lang locale="zh_HK" value="最大記錄數" />
+            <lang locale="zh_TW" value="最大記錄數" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].methods.method[ImportCustProfiles].parameters.parameter[maxRecords].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="每次处理的最大记录数，避免数据量很大时，提取速度慢，采用分批提取" />
+            <lang locale="zh_HK" value="每次處理的最大記錄數，避免數據量很大時，提取速度慢，採用分批提取" />
+            <lang locale="zh_TW" value="每次處理的最大記錄數，避免數據量很大時，提取速度慢，採用分批提取" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].methods.method[ImportVehicleProfiles].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="引入车辆档案资料" />
+            <lang locale="zh_HK" value="引入車輛檔案資料" />
+            <lang locale="zh_TW" value="引入車輛檔案資料" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].methods.method[ImportVehicleProfiles].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="引入车辆档案资料，包括车辆所属维修中心一起处理" />
+            <lang locale="zh_HK" value="引入車輛檔案資料，包括車輛所屬維修中心一起處理" />
+            <lang locale="zh_TW" value="引入車輛檔案資料，包括車輛所屬維修中心一起處理" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].methods.method[ImportVehicleProfiles].parameters.parameter[maxRecords].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最大记录数" />
+            <lang locale="zh_HK" value="最大記錄數" />
+            <lang locale="zh_TW" value="最大記錄數" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].methods.method[ImportVehicleProfiles].parameters.parameter[maxRecords].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="每次处理的最大记录数，避免数据量很大时，提取速度慢，采用分批提取" />
+            <lang locale="zh_HK" value="每次處理的最大記錄數，避免數據量很大時，提取速度慢，採用分批提取" />
+            <lang locale="zh_TW" value="每次處理的最大記錄數，避免數據量很大時，提取速度慢，採用分批提取" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].methods.method[ImportVehicleTypes].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="引入车型资料" />
+            <lang locale="zh_HK" value="引入車型資料" />
+            <lang locale="zh_TW" value="引入車型資料" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].methods.method[ImportVehicleTypes].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].methods.method[ImportVehicleTypes].parameters.parameter[maxRecords].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最大记录数" />
+            <lang locale="zh_HK" value="最大記錄數" />
+            <lang locale="zh_TW" value="最大記錄數" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.ga.syncdata.app.DMSSyncFacade].methods.method[ImportVehicleTypes].parameters.parameter[maxRecords].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="每次处理的最大记录数，避免数据量很大时，提取速度慢，采用分批提取" />
+            <lang locale="zh_HK" value="每次處理的最大記錄數，避免數據量很大時，提取速度慢，採用分批提取" />
+            <lang locale="zh_TW" value="每次處理的最大記錄數，避免數據量很大時，提取速度慢，採用分批提取" />
+        </rs>
+    </resource>
+</facade>
+

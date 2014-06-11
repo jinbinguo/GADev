@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizEnum xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.ga.syncdata</package>
+    <name>ImportStateEnum</name>
+    <alias>bizEnum[com.kingdee.eas.ga.syncdata.ImportStateEnum].alias</alias>
+    <description>bizEnum[com.kingdee.eas.ga.syncdata.ImportStateEnum].description</description>
+    <userDefined>true</userDefined>
+    <className>com.kingdee.eas.ga.syncdata.ImportStateEnum</className>
+    <enumDataType>STRING</enumDataType>
+    <enumValues>
+        <enumValue>
+            <name>Success</name>
+            <alias>bizEnum[com.kingdee.eas.ga.syncdata.ImportStateEnum].enumValues.enumValue[Success].alias</alias>
+            <userDefined>true</userDefined>
+            <value>1</value>
+        </enumValue>
+        <enumValue>
+            <name>Failure</name>
+            <alias>bizEnum[com.kingdee.eas.ga.syncdata.ImportStateEnum].enumValues.enumValue[Failure].alias</alias>
+            <userDefined>true</userDefined>
+            <value>0</value>
+        </enumValue>
+    </enumValues>
+    <resource>
+        <rs key="bizEnum[com.kingdee.eas.ga.syncdata.ImportStateEnum].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="引入状态" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.syncdata.ImportStateEnum].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.syncdata.ImportStateEnum].enumValues.enumValue[Failure].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="失败" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.ga.syncdata.ImportStateEnum].enumValues.enumValue[Success].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="成功" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</bizEnum>
+

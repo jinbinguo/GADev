@@ -1494,6 +1494,46 @@
                 <key name="name" value="CFWorktimeCost" />
             </mappingField>
         </ownProperty>
+        <ownProperty>
+            <name>arNumber</name>
+            <alias>entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[arNumber].alias</alias>
+            <description>entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[arNumber].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>100</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[arNumber].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFArNumber" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>receiveNumber</name>
+            <alias>entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[receiveNumber].alias</alias>
+            <description>entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[receiveNumber].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>100</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[receiveNumber].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFReceiveNumber" />
+            </mappingField>
+        </ownProperty>
     </properties>
     <logicalKey>
         <name>id</name>
@@ -2572,6 +2612,69 @@
             <lang locale="zh_TW" value="false" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[amount].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[arNumber].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="应收单号" />
+            <lang locale="zh_HK" value="應收單號" />
+            <lang locale="zh_TW" value="應收單號" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[arNumber].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[arNumber].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="应收单号" />
+            <lang locale="zh_HK" value="應收單號" />
+            <lang locale="zh_TW" value="應收單號" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[arNumber].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[arNumber].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[arNumber].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[arNumber].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[arNumber].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[arNumber].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[arNumber].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[arNumber].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[arNumber].extendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
@@ -3711,6 +3814,69 @@
             <lang locale="zh_TW" value="false" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[qty].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[receiveNumber].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款单号" />
+            <lang locale="zh_HK" value="收款單號" />
+            <lang locale="zh_TW" value="收款單號" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[receiveNumber].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[receiveNumber].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款单号" />
+            <lang locale="zh_HK" value="收款單號" />
+            <lang locale="zh_TW" value="收款單號" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[receiveNumber].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[receiveNumber].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[receiveNumber].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[receiveNumber].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[receiveNumber].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[receiveNumber].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[receiveNumber].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[receiveNumber].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.auto4s.rsm.rs.app.RepairWORWOItemSpEntry].properties.ownProperty[receiveNumber].extendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
