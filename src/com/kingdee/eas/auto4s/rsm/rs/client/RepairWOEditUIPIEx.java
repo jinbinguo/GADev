@@ -3041,10 +3041,7 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 		sc.add(new SelectorItemInfo("discountRate"));
 
 		FilterInfo filterInfo = new FilterInfo();
-		filterInfo.getFilterItems()
-				.add(
-						new FilterItemInfo("parent.id", repairItemInfo
-								.getString("id")));
+		filterInfo.getFilterItems().add(new FilterItemInfo("parent.id", repairItemInfo.getString("id")));
 		EntityViewInfo entityViewInfo = new EntityViewInfo();
 		entityViewInfo.setFilter(filterInfo);
 		entityViewInfo.setSelector(sc);
@@ -3128,37 +3125,29 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 				kdTable.getRow(rowIndex).getCell("itemspName")
 						.getStyleAttributes().setLocked(
 								!hasPermission_OprtRetailItemspName);
-				String sql = String
-						.format("select isnull(FPrice,0) from T_BD_MaterialSales where FMaterialID='%s' and FOrgUnit='%s'",
+				String sql = String.format("select isnull(FPrice,0) FPrice,FTaxRate from T_BD_MaterialSales where FMaterialID='%s' and FOrgUnit='%s'",
 								materialInfo.getString("id"), orgUnitInfo.getString("id"));
 				try {
 					IRowSet rs = DBUtils.executeQuery(null, sql);
 					if (rs != null && rs.next()) {
-						kdTable.getCell(rowIndex, "price").setValue(
-								rs.getBigDecimal(1));
+						kdTable.getCell(rowIndex, "price").setValue(rs.getBigDecimal("FPrice"));
+						if (rs.getBigDecimal("FTaxRate") != null && !PublicUtils.equals(BigDecimal.ZERO, rs.getBigDecimal("FTaxRate"))) {
+							kdTable.getCell(rowIndex, "taxRate").setValue(rs.getBigDecimal("FTaxRate"));
+						}
 						IRow row = kdTable.getRow(rowIndex);
 						calItemSpEntryAmount(row);
 						
 						// 默认首次计算出初始的实际含税单价
-						BigDecimal taxPrice = (BigDecimal) row.getCell(
-								"taxPrice").getValue(); // 含税
-						BigDecimal discountRate = (BigDecimal) row.getCell(
-								"discountRate").getValue();
-						BigDecimal initFactPrice = taxPrice.multiply(BIGDEC1
-								.subtract(discountRate.divide(BIGDEC100, 10,
-										BigDecimal.ROUND_HALF_UP)));
+						BigDecimal taxPrice = (BigDecimal) row.getCell("taxPrice").getValue(); // 含税
+						BigDecimal discountRate = (BigDecimal) row.getCell("discountRate").getValue();
+						BigDecimal initFactPrice = taxPrice.multiply(BIGDEC1.subtract(discountRate.divide(BIGDEC100, 10,BigDecimal.ROUND_HALF_UP)));
 						row.getCell("initFactPrice").setValue(initFactPrice);
-						kdTable.getCell(rowIndex, "price").getStyleAttributes()
-								.setLocked(!hasPermission_OprtRetailPrice);
-						kdTable.getCell(rowIndex, "taxPrice")
-								.getStyleAttributes().setLocked(
-										!hasPermission_OprtRetailPrice);
+						kdTable.getCell(rowIndex, "price").getStyleAttributes().setLocked(!hasPermission_OprtRetailPrice);
+						kdTable.getCell(rowIndex, "taxPrice").getStyleAttributes().setLocked(!hasPermission_OprtRetailPrice);
 
 						String orgId = orgUnitInfo.getString("id");
-						BigDecimal costPrice = getMaterialCostPrice(orgId,
-								materialInfo);
-						kdTable.getCell(rowIndex, "costAmount").setValue(
-								costPrice);
+						BigDecimal costPrice = getMaterialCostPrice(orgId,materialInfo);
+						kdTable.getCell(rowIndex, "costAmount").setValue(costPrice);
 					}
 				} catch (Exception e) {
 					UIUtils.handUIException(e);
@@ -3284,34 +3273,31 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 
 					String orgId = orgUnitInfo.getString("id");
 					for (int j = 0; j < repairItemSpEntryCol.size(); j++) {
-						RepairItemSpEntryInfo repairItemSpEntryInfo = repairItemSpEntryCol
-								.get(j);
-						MaterialInfo materialInfo = repairItemSpEntryInfo
-								.getMaterial();
-						BigDecimal qty = PublicUtils
-								.getBigDecimal(repairItemSpEntryInfo
-										.getBigDecimal("qty"));
-						BigDecimal price = PublicUtils
-								.getBigDecimal(repairItemSpEntryInfo
-										.getBigDecimal("price"));
-						BigDecimal discountRate = PublicUtils
-								.getBigDecimal(repairItemSpEntryInfo
-										.getBigDecimal("discountRate"));
+						RepairItemSpEntryInfo repairItemSpEntryInfo = repairItemSpEntryCol.get(j);
+						MaterialInfo materialInfo = repairItemSpEntryInfo.getMaterial();
+						BigDecimal qty = PublicUtils.getBigDecimal(repairItemSpEntryInfo.getBigDecimal("qty"));
+						BigDecimal price = PublicUtils.getBigDecimal(repairItemSpEntryInfo.getBigDecimal("price"));
+						BigDecimal discountRate = PublicUtils.getBigDecimal(repairItemSpEntryInfo.getBigDecimal("discountRate"));
 
-						BigDecimal costPrice = getMaterialCostPrice(orgId,
-								materialInfo);
+						BigDecimal costPrice = getMaterialCostPrice(orgId,materialInfo);
 						insertLine(kdTable, rowIndex);
-						kdTable.getCell(rowIndex, "costAmount").setValue(
-								costPrice);
-						kdTable.getCell(rowIndex, "material").setValue(
-								materialInfo);
+						kdTable.getCell(rowIndex, "costAmount").setValue(costPrice);
+						kdTable.getCell(rowIndex, "material").setValue(materialInfo);
 						kdTable.getCell(rowIndex, "t").setValue(TEnum.P);
-						kdTable.getCell(rowIndex, "itemspNum").setValue(
-								materialInfo.getNumber());
-						kdTable.getCell(rowIndex, "itemspName").setValue(
-								materialInfo.getName());
+						kdTable.getCell(rowIndex, "itemspNum").setValue(materialInfo.getNumber());
+						kdTable.getCell(rowIndex, "itemspName").setValue(materialInfo.getName());
 						kdTable.getCell(rowIndex, "qty").setValue(qty);
-
+						
+						String sql = String.format("select isnull(FPrice,0) FPrice,FTaxRate from T_BD_MaterialSales where FMaterialID='%s' and FOrgUnit='%s'",
+								materialInfo.getString("id"), orgUnitInfo.getString("id"));
+				
+						IRowSet rs = DBUtils.executeQuery(null, sql);
+						if (rs != null && rs.next()) {
+							if (rs.getBigDecimal("FTaxRate") != null && !PublicUtils.equals(BigDecimal.ZERO, rs.getBigDecimal("FTaxRate"))) {
+								kdTable.getCell(rowIndex, "taxRate").setValue(rs.getBigDecimal("FTaxRate"));
+							}
+						}
+						
 						BigDecimal retailDiscountRate = BIGDEC0;
 						HashMap<String, BigDecimal> hashDiscountRate = getDiscountRate();
 						if (!PublicUtils.isEmpty(hashDiscountRate)) {
@@ -3320,18 +3306,13 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 						kdTable.getCell(rowIndex, "discountRate").setValue(retailDiscountRate);
 						kdTable.getCell(rowIndex, "unIssueQty").setValue(qty);
 						if (rowIndex > 0) {
-							WInfo wInfo = (WInfo) kdTable.getRow(0)
-									.getCell("w").getValue();
+							WInfo wInfo = (WInfo) kdTable.getRow(0).getCell("w").getValue();
 							if (wInfo != null) {
 								kdTable.getCell(rowIndex, "w").setValue(wInfo);
-								kdtRWOItemSpEntry.getRow(rowIndex).getCell(
-										"settlementObject").setValue(
-										wInfo.getSettleObject());
+								kdtRWOItemSpEntry.getRow(rowIndex).getCell("settlementObject").setValue(wInfo.getSettleObject());
 							}
 						}
-						kdTable.getRow(rowIndex).getCell("itemspName")
-								.getStyleAttributes().setLocked(
-										!hasPermission_OprtRetailItemspName);
+						kdTable.getRow(rowIndex).getCell("itemspName").getStyleAttributes().setLocked(!hasPermission_OprtRetailItemspName);
 
 						// 关联维修项目参考售价未配置或为0时，关联配件取自身的参考售价，否则为0----取消
 						// if (defaultRepairItemTaxPrice == null ||
@@ -3363,21 +3344,14 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 						IRow row = kdTable.getRow(rowIndex);
 						calItemSpEntryAmount(row);
 						// 默认首次计算出初始的实际含税单价
-						BigDecimal taxPrice = (BigDecimal) row.getCell(
-								"taxPrice").getValue(); // 含税
+						BigDecimal taxPrice = (BigDecimal) row.getCell("taxPrice").getValue(); // 含税
 						// BigDecimal discountRate = (BigDecimal)
 						// row.getCell("discountRate").getValue();
-						BigDecimal initFactPrice = taxPrice.multiply(BIGDEC1
-								.subtract(discountRate.divide(BIGDEC100, 10,
-										BigDecimal.ROUND_HALF_UP)));
+						BigDecimal initFactPrice = taxPrice.multiply(BIGDEC1.subtract(discountRate.divide(BIGDEC100, 10,BigDecimal.ROUND_HALF_UP)));
 						row.getCell("initFactPrice").setValue(initFactPrice);
-						kdTable.getCell(rowIndex, "price").getStyleAttributes()
-								.setLocked(!hasPermission_OprtRetailPrice);
-						kdTable.getCell(rowIndex, "taxPrice")
-								.getStyleAttributes().setLocked(
-										!hasPermission_OprtRetailPrice);
-						kdTable.getCell(rowIndex, "relateItemEntryId")
-								.setValue(repairItemEntryId);
+						kdTable.getCell(rowIndex, "price").getStyleAttributes().setLocked(!hasPermission_OprtRetailPrice);
+						kdTable.getCell(rowIndex, "taxPrice").getStyleAttributes().setLocked(!hasPermission_OprtRetailPrice);
+						kdTable.getCell(rowIndex, "relateItemEntryId").setValue(repairItemEntryId);
 
 						resetItemSpEditorLocked(kdTable.getRow(rowIndex));
 
