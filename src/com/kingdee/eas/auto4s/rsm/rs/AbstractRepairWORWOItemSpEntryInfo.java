@@ -564,6 +564,17 @@ public class AbstractRepairWORWOItemSpEntryInfo extends com.kingdee.eas.framewor
     {
         setString("receiveNumber", item);
     }
+    /**
+     * Object:项目配件明细's 已推单property 
+     */
+    public boolean isIsCreatedTo()
+    {
+        return getBoolean("isCreatedTo");
+    }
+    public void setIsCreatedTo(boolean item)
+    {
+        setBoolean("isCreatedTo", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("FF1F0E1A");

@@ -876,6 +876,17 @@ public class AbstractRepairWOInfo extends com.kingdee.eas.auto4s.autoframework.c
     {
         put("bizPerson", item);
     }
+    /**
+     * Object: 维修工单 's 业务部门 property 
+     */
+    public com.kingdee.eas.basedata.org.AdminOrgUnitInfo getBizDept()
+    {
+        return (com.kingdee.eas.basedata.org.AdminOrgUnitInfo)get("bizDept");
+    }
+    public void setBizDept(com.kingdee.eas.basedata.org.AdminOrgUnitInfo item)
+    {
+        put("bizDept", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("FDBE5ECA");
