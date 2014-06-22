@@ -21,6 +21,8 @@ import java.util.Vector;
 
 import javax.swing.Action;
 import javax.swing.SwingUtilities;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import javax.swing.event.EventListenerList;
 
 import com.kingdee.bos.BOSException;
@@ -117,7 +119,9 @@ import com.kingdee.eas.basedata.assistant.util.PrintIntegrationManager;
 import com.kingdee.eas.basedata.master.cssp.SupplierInfo;
 import com.kingdee.eas.basedata.master.material.MaterialInfo;
 import com.kingdee.eas.basedata.master.material.UsedStatusEnum;
+import com.kingdee.eas.basedata.org.AdminOrgUnitInfo;
 import com.kingdee.eas.basedata.orgext.ServiceOrgUnitInfo;
+import com.kingdee.eas.basedata.person.PersonInfo;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.eas.common.client.OprtState;
 import com.kingdee.eas.common.client.SysContext;
@@ -741,6 +745,37 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
     			}
     		}
     	});
+        
+        prmtbizPerson.addDataChangeListener(new DataChangeListener() {
+        	public void dataChanged(DataChangeEvent e) {
+        		try {
+	        		if (!PublicUtils.equals(e.getNewValue(), e.getOldValue())) {
+	        			PersonInfo personInfo = (PersonInfo) prmtbizPerson.getValue();		
+	    				if (personInfo == null) prmtbizDept.setValue(null);
+	    				else {
+	    					String sql = String.format("select FID,FNumber,FName_L2 from T_ORG_Admin where FNumber=(select top 1 LEFT(a.fnumber,6) orgNumber " +
+	    								"from T_ORG_PositionMember pm,T_ORG_Position po,T_ORG_Admin a " +
+	    								"where pm.FPositionID=po.FID and po.FAdminOrgUnitID=a.FID " +
+	    								"and pm.FIsPrimary=1 and pm.FPersonID='%s')",personInfo.getString("id"));
+	    					IRowSet rs;
+	    					rs = DBUtils.executeQuery(null, sql);
+	    					if (rs != null && rs.next()) {
+	    						AdminOrgUnitInfo bizDeptInfo = new AdminOrgUnitInfo();
+	    						bizDeptInfo.put("id", rs.getString("FID"));
+	    						bizDeptInfo.put("number", rs.getString("FNumber"));
+	    						bizDeptInfo.put("name", rs.getString("FName_l2"));
+	    						prmtbizDept.setValue(bizDeptInfo);	
+	    					}
+	    				}
+	        		}
+	        		
+        		} catch (Exception exp) {
+        			exp.printStackTrace();
+        		}
+				
+			}
+			
+		});
 	}
 
 
@@ -1130,6 +1165,8 @@ public class RepairWOEditUIPIEx extends RepairWOEditUI {
 			initRItemListener(e);
 		makeSPItemF7();
 		initColour();
+	
+		
 	}
 
 	/**
