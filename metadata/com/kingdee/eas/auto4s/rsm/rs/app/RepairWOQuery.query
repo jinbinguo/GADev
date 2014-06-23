@@ -17,6 +17,19 @@
                 <key name="name" value="Person" />
             </entityRef>
         </subEntity>
+        <subEntity>
+            <name>bizDept</name>
+            <alias>joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].subObjects.subEntity[bizDept].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+                <key name="name" value="RepairWOQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="AdminOrgUnit" />
+            </entityRef>
+        </subEntity>
     </subObjects>
     <units>
         <queryField>
@@ -236,6 +249,99 @@
                 <key name="name" value="RepairWOQuery" />
             </query>
         </propertyUnit>
+        <queryField>
+            <name>bizDept.name</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[bizDept.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>5c220ff5-aa37-4c11-913f-fbdb4a2c0484</key>
+                    <parentUnit>
+                        <key name="name" value="bizDept.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="bizDept" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+                <key name="name" value="RepairWOQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>ef58453c-538b-42ab-915a-792ea36b0b15</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.propertyUnit[ef58453c-538b-42ab-915a-792ea36b0b15].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>51df9756-666f-47d1-a1de-cae31a7a6d4a</key>
+                    <parentUnit>
+                        <key name="name" value="ef58453c-538b-42ab-915a-792ea36b0b15" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="RepairWO" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bizDept" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+                <key name="name" value="RepairWOQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>6a967dbc-2cb9-45e7-ad75-b885f982bd12</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.propertyUnit[6a967dbc-2cb9-45e7-ad75-b885f982bd12].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>4dfe61b0-dde4-498d-be9b-532688e38a2d</key>
+                    <parentUnit>
+                        <key name="name" value="6a967dbc-2cb9-45e7-ad75-b885f982bd12" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="bizDept" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+                <key name="name" value="RepairWOQuery" />
+            </query>
+        </propertyUnit>
     </units>
     <joins>
         <join>
@@ -268,6 +374,36 @@
                 <key name="name" value="RepairWOQuery" />
             </query>
         </join>
+        <join>
+            <name>c964c036-f08f-42f0-9b5c-778066dfca42</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="RepairWO" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="bizDept" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>8f9e01b9-ffc6-460e-8422-435a48d75500</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="ef58453c-538b-42ab-915a-792ea36b0b15" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="6a967dbc-2cb9-45e7-ad75-b885f982bd12" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="c964c036-f08f-42f0-9b5c-778066dfca42" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.auto4s.rsm.rs.app" />
+                <key name="name" value="RepairWOQuery" />
+            </query>
+        </join>
     </joins>
     <resource>
         <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].extendedProperty.PI_Extend">
@@ -275,7 +411,19 @@
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].subObjects.subEntity[bizDept].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
         <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].subObjects.subEntity[bizPerson].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.propertyUnit[6a967dbc-2cb9-45e7-ad75-b885f982bd12].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
@@ -288,6 +436,12 @@
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.propertyUnit[d0bfa323-39f9-448b-ac27-fb74aa146cf2].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.propertyUnit[ef58453c-538b-42ab-915a-792ea36b0b15].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
@@ -363,6 +517,27 @@
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[bizDept.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务部门" />
+            <lang locale="zh_HK" value="業務部門" />
+            <lang locale="zh_TW" value="業務部門" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[bizDept.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[bizDept.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[bizDept.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.auto4s.rsm.rs.app.RepairWOQuery].units.queryField[bizPerson.name].displayName">
             <lang locale="en_US" value="null" />
