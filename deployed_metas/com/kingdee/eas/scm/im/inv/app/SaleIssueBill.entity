@@ -1,0 +1,2003 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entityObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.scm.im.inv.app</package>
+    <name>SaleIssueBill</name>
+    <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].alias</alias>
+    <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].description</description>
+    <userDefined>false</userDefined>
+    <bosType>CC3E933B</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.scm.im.inv.SaleIssueBill</businessImplName>
+    <businessControllerName>com.kingdee.eas.scm.im.inv.app.SaleIssueBillController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getValue].description</description>
+            <innerID>508fbfa2-0105-1000-e000-0099c0a81262</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.scm.im.inv.app.SaleIssueBill</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <exceptions>
+                <bizException>
+                    <key name="package" value="com.kingdee.eas.common" />
+                    <key name="name" value="EASBizException" />
+                </bizException>
+            </exceptions>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getValue].description</description>
+            <innerID>508fbfa2-0105-1000-e000-009ac0a81262</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.scm.im.inv.app.SaleIssueBill</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+                <parameter>
+                    <name>selector</name>
+                    <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getValue].parameters.parameter[selector].alias</alias>
+                    <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getValue].parameters.parameter[selector].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SelectorItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <exceptions>
+                <bizException>
+                    <key name="package" value="com.kingdee.eas.common" />
+                    <key name="name" value="EASBizException" />
+                </bizException>
+            </exceptions>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getValue].description</description>
+            <innerID>508fbfa2-0105-1000-e000-009bc0a81262</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.scm.im.inv.app.SaleIssueBill</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getValue].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getValue].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <exceptions>
+                <bizException>
+                    <key name="package" value="com.kingdee.eas.common" />
+                    <key name="name" value="EASBizException" />
+                </bizException>
+            </exceptions>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getCollection].description</description>
+            <innerID>508fbfa2-0105-1000-e000-009cc0a81262</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.scm.im.inv.app.SaleIssueBill</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getCollection].description</description>
+            <innerID>508fbfa2-0105-1000-e000-009dc0a81262</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.scm.im.inv.app.SaleIssueBill</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>view</name>
+                    <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getCollection].parameters.parameter[view].alias</alias>
+                    <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getCollection].parameters.parameter[view].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.EntityViewInfo</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getCollection].description</description>
+            <innerID>508fbfa2-0105-1000-e000-009ec0a81262</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.scm.im.inv.app.SaleIssueBill</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getCollection].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getCollection].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>splitBillByWrittenOffQty</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[splitBillByWrittenOffQty].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[splitBillByWrittenOffQty].description</description>
+            <innerID>eeb5131d-0115-1000-e000-006ac0a81288</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>java.util.HashMap</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>idList</name>
+                    <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[splitBillByWrittenOffQty].parameters.parameter[idList].alias</alias>
+                    <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[splitBillByWrittenOffQty].parameters.parameter[idList].description</description>
+                    <direction>in</direction>
+                    <dataType>String[]</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+                <parameter>
+                    <name>param</name>
+                    <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[splitBillByWrittenOffQty].parameters.parameter[param].alias</alias>
+                    <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[splitBillByWrittenOffQty].parameters.parameter[param].description</description>
+                    <direction>in</direction>
+                    <dataType>java.util.HashMap</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <exceptions>
+                <bizException>
+                    <key name="package" value="com.kingdee.eas.common" />
+                    <key name="name" value="EASBizException" />
+                </bizException>
+            </exceptions>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>checkPreReceived</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[checkPreReceived].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[checkPreReceived].description</description>
+            <innerID>ca0d808f-a0b4-4672-8011-778739a0fe7a</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>void</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>saleOrderIds</name>
+                    <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[checkPreReceived].parameters.parameter[saleOrderIds].alias</alias>
+                    <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[checkPreReceived].parameters.parameter[saleOrderIds].description</description>
+                    <direction>in</direction>
+                    <dataType>java.util.Set</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <exceptions>
+                <bizException>
+                    <key name="package" value="com.kingdee.eas.common" />
+                    <key name="name" value="EASBizException" />
+                </bizException>
+            </exceptions>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>createNewAuditBillBySettle</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[createNewAuditBillBySettle].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[createNewAuditBillBySettle].description</description>
+            <innerID>c4c58d80-7b0d-4132-b90c-d60ef20d69d3</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>com.kingdee.bos.dao.IObjectCollection</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>settledEntriesMap</name>
+                    <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[createNewAuditBillBySettle].parameters.parameter[settledEntriesMap].alias</alias>
+                    <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[createNewAuditBillBySettle].parameters.parameter[settledEntriesMap].description</description>
+                    <direction>in</direction>
+                    <dataType>java.util.Map</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+                <parameter>
+                    <name>srcBillIdSet</name>
+                    <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[createNewAuditBillBySettle].parameters.parameter[srcBillIdSet].alias</alias>
+                    <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[createNewAuditBillBySettle].parameters.parameter[srcBillIdSet].description</description>
+                    <direction>in</direction>
+                    <dataType>java.util.Set</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <exceptions>
+                <bizException>
+                    <key name="package" value="com.kingdee.eas.common" />
+                    <key name="name" value="EASBizException" />
+                </bizException>
+            </exceptions>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>deleteBillByUnSettle</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[deleteBillByUnSettle].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[deleteBillByUnSettle].description</description>
+            <innerID>8bd0eef3-4a9d-4050-b825-83e2f464d3ea</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>void</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>billIdSet</name>
+                    <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[deleteBillByUnSettle].parameters.parameter[billIdSet].alias</alias>
+                    <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[deleteBillByUnSettle].parameters.parameter[billIdSet].description</description>
+                    <direction>in</direction>
+                    <dataType>java.util.Set</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <exceptions>
+                <bizException>
+                    <key name="package" value="com.kingdee.eas.common" />
+                    <key name="name" value="EASBizException" />
+                </bizException>
+            </exceptions>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>changePrice</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[changePrice].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[changePrice].description</description>
+            <innerID>3e422c24-e13a-411a-ae02-09fd2923f820</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>void</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[changePrice].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[changePrice].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+                <parameter>
+                    <name>description</name>
+                    <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[changePrice].parameters.parameter[description].alias</alias>
+                    <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[changePrice].parameters.parameter[description].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+                <parameter>
+                    <name>list</name>
+                    <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[changePrice].parameters.parameter[list].alias</alias>
+                    <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[changePrice].parameters.parameter[list].description</description>
+                    <direction>in</direction>
+                    <dataType>java.util.List</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <exceptions>
+                <bizException>
+                    <key name="package" value="com.kingdee.eas.common" />
+                    <key name="name" value="EASBizException" />
+                </bizException>
+            </exceptions>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>checkChangePrice</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[checkChangePrice].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[checkChangePrice].description</description>
+            <innerID>3022a81d-1b02-45a5-84ae-029033eec434</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>String</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[checkChangePrice].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[checkChangePrice].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <exceptions>
+                <bizException>
+                    <key name="package" value="com.kingdee.eas.common" />
+                    <key name="name" value="EASBizException" />
+                </bizException>
+            </exceptions>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <isAbstract>false</isAbstract>
+    <bizUnitPK>com.kingdee.eas.scm.im.inv.SaleIssueBill</bizUnitPK>
+    <baseEntity>
+        <key name="package" value="com.kingdee.eas.scm.im.inv.app" />
+        <key name="name" value="InvBillBase" />
+    </baseEntity>
+    <table>
+        <key name="package" value="com.kingdee.eas.scm.im.inv.app" />
+        <key name="name" value="T_IM_SaleIssueBill" />
+    </table>
+    <properties>
+        <linkProperty>
+            <name>entry</name>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.linkProperty[entry].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.linkProperty[entry].description</description>
+            <userDefined>false</userDefined>
+            <configured>false</configured>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.scm.im.inv.app" />
+                <key name="name" value="R_SaleIssueBill_SaleIssueEntry" />
+            </relationship>
+        </linkProperty>
+        <linkProperty>
+            <name>customer</name>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.linkProperty[customer].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.linkProperty[customer].description</description>
+            <userDefined>false</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FCustomerID" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.scm.im.inv.app" />
+                <key name="name" value="R_SaleIssueBill_Customer" />
+            </relationship>
+        </linkProperty>
+        <linkProperty>
+            <name>currency</name>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.linkProperty[currency].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.linkProperty[currency].description</description>
+            <userDefined>false</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FCurrencyID" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.scm.im.inv.app" />
+                <key name="name" value="R_SaleIssueBill_Currency_Currency" />
+            </relationship>
+        </linkProperty>
+        <ownProperty>
+            <name>exchangeRate</name>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[exchangeRate].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[exchangeRate].description</description>
+            <userDefined>false</userDefined>
+            <configured>false</configured>
+            <dataType>BigDecimal</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>0</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[exchangeRate].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FExchangeRate" />
+            </mappingField>
+        </ownProperty>
+        <linkProperty>
+            <name>paymentType</name>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.linkProperty[paymentType].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.linkProperty[paymentType].description</description>
+            <userDefined>false</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FPaymentTypeID" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.scm.im.inv.app" />
+                <key name="name" value="R_SaleIssueBill_PaymentType_paymentType" />
+            </relationship>
+        </linkProperty>
+        <ownProperty>
+            <name>convertMode</name>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[convertMode].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[convertMode].description</description>
+            <userDefined>false</userDefined>
+            <configured>false</configured>
+            <dataType>Enum</dataType>
+            <metadataRef>com.kingdee.eas.basedata.assistant.ConvertModeEnum</metadataRef>
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>0</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[convertMode].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FConvertMode" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>isSysBill</name>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[isSysBill].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[isSysBill].description</description>
+            <userDefined>false</userDefined>
+            <configured>false</configured>
+            <dataType>Boolean</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>0</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[isSysBill].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FIsSysBill" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>actBizDate</name>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[actBizDate].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[actBizDate].description</description>
+            <userDefined>false</userDefined>
+            <configured>false</configured>
+            <dataType>Date</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>0</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[actBizDate].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FActBizDate" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>isGenBizAR</name>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[isGenBizAR].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[isGenBizAR].description</description>
+            <userDefined>false</userDefined>
+            <configured>false</configured>
+            <dataType>Boolean</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>0</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[isGenBizAR].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FIsGenBizAR" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>isInTax</name>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[isInTax].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[isInTax].description</description>
+            <userDefined>false</userDefined>
+            <configured>false</configured>
+            <dataType>Boolean</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>0</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[isInTax].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FIsInTax" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>totalLocalAmount</name>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[totalLocalAmount].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[totalLocalAmount].description</description>
+            <userDefined>false</userDefined>
+            <configured>false</configured>
+            <dataType>BigDecimal</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>0</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[totalLocalAmount].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FTotalLocalAmount" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>billRelationOption</name>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[billRelationOption].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[billRelationOption].description</description>
+            <userDefined>false</userDefined>
+            <configured>false</configured>
+            <dataType>Enum</dataType>
+            <metadataRef>com.kingdee.eas.scm.common.BillRelationOptionEnum</metadataRef>
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>0</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[billRelationOption].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FBillRelationOption" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>priceSource</name>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[priceSource].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[priceSource].description</description>
+            <userDefined>false</userDefined>
+            <configured>false</configured>
+            <dataType>Enum</dataType>
+            <metadataRef>com.kingdee.eas.basedata.scm.im.inv.FetchPriceEnum</metadataRef>
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>0</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[priceSource].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FPriceSource" />
+            </mappingField>
+        </ownProperty>
+    </properties>
+    <logicalKey>
+        <name>id</name>
+        <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].logicalKey[id].alias</alias>
+        <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].logicalKey[id].description</description>
+        <keyClass>com.kingdee.bos.dao.IObjectPK</keyClass>
+        <userDefined>false</userDefined>
+        <keyProperties>
+            <baseProperty>
+                <key name="name" value="id" />
+            </baseProperty>
+        </keyProperties>
+    </logicalKey>
+    <events>
+        <event>
+            <name>submitEvent</name>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[submitEvent].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[submitEvent].description</description>
+            <userDefined>false</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>dfd2c083-00fa-1000-e000-001fc0a813e6</name>
+                    <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].alias</alias>
+                    <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="submit" />
+                        <key name="innerID" value="dfd2c083-00fa-1000-e000-001fc0a813e6" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID />
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>b79987b3-0105-1000-e000-00f9c0a8121eevfp</innerID>
+                    <userDefined>false</userDefined>
+                    <parameter>
+                        <name>billInfo</name>
+                        <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[submitEvent].formalParameters.formalParameter.parameter[billInfo].alias</alias>
+                        <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[submitEvent].formalParameters.formalParameter.parameter[billInfo].description</description>
+                        <direction>in</direction>
+                        <dataType>ObjectValue</dataType>
+                        <metadataRef>com.kingdee.eas.scm.im.inv.app.SaleIssueBill</metadataRef>
+                        <userDefined>false</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+        <event>
+            <name>auditEvent</name>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[auditEvent].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[auditEvent].description</description>
+            <userDefined>false</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>bbce8906-00fa-1000-e000-000ec0a813e6</name>
+                    <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[auditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].alias</alias>
+                    <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[auditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="passAudit" />
+                        <key name="innerID" value="bbce8906-00fa-1000-e000-000ec0a813e6" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[auditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[auditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID>b79987b3-0105-1000-e000-00c7c0a8121eevfp</formalParameterInnerID>
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[auditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[auditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID>b79987b3-0105-1000-e000-00c8c0a8121eevfp</formalParameterInnerID>
+                            <actualParameterIndex>1</actualParameterIndex>
+                            <isBOPK>false</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>b79987b3-0105-1000-e000-00c7c0a8121eevfp</innerID>
+                    <userDefined>false</userDefined>
+                    <parameter>
+                        <name>pk</name>
+                        <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[auditEvent].formalParameters.formalParameter.parameter[pk].alias</alias>
+                        <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[auditEvent].formalParameters.formalParameter.parameter[pk].description</description>
+                        <direction>in</direction>
+                        <dataType>BOSUuid</dataType>
+                        <metadataRef />
+                        <userDefined>false</userDefined>
+                    </parameter>
+                </formalParameter>
+                <formalParameter>
+                    <innerID>b79987b3-0105-1000-e000-00c8c0a8121eevfp</innerID>
+                    <userDefined>false</userDefined>
+                    <parameter>
+                        <name>billInfo</name>
+                        <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[auditEvent].formalParameters.formalParameter.parameter[billInfo].alias</alias>
+                        <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[auditEvent].formalParameters.formalParameter.parameter[billInfo].description</description>
+                        <direction>in</direction>
+                        <dataType>ObjectValue</dataType>
+                        <metadataRef>com.kingdee.eas.scm.im.inv.app.SaleIssueBill</metadataRef>
+                        <userDefined>false</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+        <event>
+            <name>unAuditEvent</name>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[unAuditEvent].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[unAuditEvent].description</description>
+            <userDefined>false</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>bbce8906-00fa-1000-e000-000fc0a813e6</name>
+                    <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[unAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].alias</alias>
+                    <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[unAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="unpassAudit" />
+                        <key name="innerID" value="bbce8906-00fa-1000-e000-000fc0a813e6" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[unAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[unAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID>b79987b3-0105-1000-e000-00cfc0a8121eevfp</formalParameterInnerID>
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[unAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[unAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID>b79987b3-0105-1000-e000-00d0c0a8121eevfp</formalParameterInnerID>
+                            <actualParameterIndex>1</actualParameterIndex>
+                            <isBOPK>false</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>b79987b3-0105-1000-e000-00cfc0a8121eevfp</innerID>
+                    <userDefined>false</userDefined>
+                    <parameter>
+                        <name>pk</name>
+                        <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[unAuditEvent].formalParameters.formalParameter.parameter[pk].alias</alias>
+                        <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[unAuditEvent].formalParameters.formalParameter.parameter[pk].description</description>
+                        <direction>in</direction>
+                        <dataType>BOSUuid</dataType>
+                        <metadataRef />
+                        <userDefined>false</userDefined>
+                    </parameter>
+                </formalParameter>
+                <formalParameter>
+                    <innerID>b79987b3-0105-1000-e000-00d0c0a8121eevfp</innerID>
+                    <userDefined>false</userDefined>
+                    <parameter>
+                        <name>billInfo</name>
+                        <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[unAuditEvent].formalParameters.formalParameter.parameter[billInfo].alias</alias>
+                        <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[unAuditEvent].formalParameters.formalParameter.parameter[billInfo].description</description>
+                        <direction>in</direction>
+                        <dataType>ObjectValue</dataType>
+                        <metadataRef>com.kingdee.eas.scm.im.inv.app.SaleIssueBill</metadataRef>
+                        <userDefined>false</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+        <event>
+            <name>removeEvent</name>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[removeEvent].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[removeEvent].description</description>
+            <userDefined>false</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>a94a3987-00fb-1000-e000-000ac0a813e6</name>
+                    <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[removeEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-000ac0a813e6].alias</alias>
+                    <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[removeEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-000ac0a813e6].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="delete" />
+                        <key name="innerID" value="a94a3987-00fb-1000-e000-000ac0a813e6" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[removeEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-000ac0a813e6].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[removeEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-000ac0a813e6].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID>b79987b3-0105-1000-e000-00fdc0a8121eevfp</formalParameterInnerID>
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>b79987b3-0105-1000-e000-00fdc0a8121eevfp</innerID>
+                    <userDefined>false</userDefined>
+                    <parameter>
+                        <name>pk</name>
+                        <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[removeEvent].formalParameters.formalParameter.parameter[pk].alias</alias>
+                        <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[removeEvent].formalParameters.formalParameter.parameter[pk].description</description>
+                        <direction>in</direction>
+                        <dataType>BOSUuid</dataType>
+                        <metadataRef />
+                        <userDefined>false</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+        <event>
+            <name>editEvent</name>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[editEvent].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[editEvent].description</description>
+            <userDefined>false</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>a94a3987-00fb-1000-e000-0009c0a813e6</name>
+                    <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[editEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-0009c0a813e6].alias</alias>
+                    <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[editEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-0009c0a813e6].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="update" />
+                        <key name="innerID" value="a94a3987-00fb-1000-e000-0009c0a813e6" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[editEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-0009c0a813e6].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[editEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-0009c0a813e6].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID>b79987b3-0105-1000-e000-0102c0a8121eevfp</formalParameterInnerID>
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[editEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-0009c0a813e6].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[editEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-0009c0a813e6].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID>b79987b3-0105-1000-e000-0103c0a8121eevfp</formalParameterInnerID>
+                            <actualParameterIndex>1</actualParameterIndex>
+                            <isBOPK>false</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>b79987b3-0105-1000-e000-0102c0a8121eevfp</innerID>
+                    <userDefined>false</userDefined>
+                    <parameter>
+                        <name>pk</name>
+                        <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[editEvent].formalParameters.formalParameter.parameter[pk].alias</alias>
+                        <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[editEvent].formalParameters.formalParameter.parameter[pk].description</description>
+                        <direction>in</direction>
+                        <dataType>BOSUuid</dataType>
+                        <metadataRef />
+                        <userDefined>false</userDefined>
+                    </parameter>
+                </formalParameter>
+                <formalParameter>
+                    <innerID>b79987b3-0105-1000-e000-0103c0a8121eevfp</innerID>
+                    <userDefined>false</userDefined>
+                    <parameter>
+                        <name>billInfo</name>
+                        <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[editEvent].formalParameters.formalParameter.parameter[billInfo].alias</alias>
+                        <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[editEvent].formalParameters.formalParameter.parameter[billInfo].description</description>
+                        <direction>in</direction>
+                        <dataType>ObjectValue</dataType>
+                        <metadataRef>com.kingdee.eas.scm.im.inv.app.SaleIssueBill</metadataRef>
+                        <userDefined>false</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+        <event>
+            <name>getVoucherEvent</name>
+            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[getVoucherEvent].alias</alias>
+            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[getVoucherEvent].description</description>
+            <userDefined>false</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>4b81b6af-0105-1000-e000-0056c0a81262</name>
+                    <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[getVoucherEvent].eventMethods.eventMethod[4b81b6af-0105-1000-e000-0056c0a81262].alias</alias>
+                    <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[getVoucherEvent].eventMethods.eventMethod[4b81b6af-0105-1000-e000-0056c0a81262].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="generateVoucher" />
+                        <key name="innerID" value="4b81b6af-0105-1000-e000-0056c0a81262" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[getVoucherEvent].eventMethods.eventMethod[4b81b6af-0105-1000-e000-0056c0a81262].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[getVoucherEvent].eventMethods.eventMethod[4b81b6af-0105-1000-e000-0056c0a81262].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID />
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>9516300c-0106-1000-e000-0074c0a812c1evfp</innerID>
+                    <userDefined>false</userDefined>
+                    <parameter>
+                        <name>billInfo</name>
+                        <alias>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[getVoucherEvent].formalParameters.formalParameter.parameter[billInfo].alias</alias>
+                        <description>entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[getVoucherEvent].formalParameters.formalParameter.parameter[billInfo].description</description>
+                        <direction>in</direction>
+                        <dataType>ObjectValue</dataType>
+                        <metadataRef>com.kingdee.eas.scm.im.inv.app.SaleIssueBill</metadataRef>
+                        <userDefined>false</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+    </events>
+    <resource>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="销售出库单" />
+            <lang locale="zh_HK" value="銷售出庫單" />
+            <lang locale="zh_TW" value="銷售出庫單" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="销售出库单" />
+            <lang locale="zh_HK" value="銷售出庫單" />
+            <lang locale="zh_TW" value="銷售出庫單" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[auditEvent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审核" />
+            <lang locale="zh_HK" value="審核" />
+            <lang locale="zh_TW" value="審核" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[auditEvent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审核" />
+            <lang locale="zh_HK" value="審核" />
+            <lang locale="zh_TW" value="審核" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[auditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[auditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[auditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].parameterMappings.parameterMappingalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[auditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].parameterMappings.parameterMappingdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[auditEvent].formalParameters.formalParameter.parameter[billInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[auditEvent].formalParameters.formalParameter.parameter[billInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[auditEvent].formalParameters.formalParameter.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[auditEvent].formalParameters.formalParameter.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[editEvent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="修改" />
+            <lang locale="zh_HK" value="修改" />
+            <lang locale="zh_TW" value="修改" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[editEvent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="修改" />
+            <lang locale="zh_HK" value="修改" />
+            <lang locale="zh_TW" value="修改" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[editEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-0009c0a813e6].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[editEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-0009c0a813e6].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[editEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-0009c0a813e6].parameterMappings.parameterMappingalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[editEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-0009c0a813e6].parameterMappings.parameterMappingdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[editEvent].formalParameters.formalParameter.parameter[billInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[editEvent].formalParameters.formalParameter.parameter[billInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[editEvent].formalParameters.formalParameter.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[editEvent].formalParameters.formalParameter.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[getVoucherEvent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="生成凭证" />
+            <lang locale="zh_HK" value="生成憑證" />
+            <lang locale="zh_TW" value="生成憑證" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[getVoucherEvent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[getVoucherEvent].eventMethods.eventMethod[4b81b6af-0105-1000-e000-0056c0a81262].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[getVoucherEvent].eventMethods.eventMethod[4b81b6af-0105-1000-e000-0056c0a81262].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[getVoucherEvent].eventMethods.eventMethod[4b81b6af-0105-1000-e000-0056c0a81262].parameterMappings.parameterMappingalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[getVoucherEvent].eventMethods.eventMethod[4b81b6af-0105-1000-e000-0056c0a81262].parameterMappings.parameterMappingdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[getVoucherEvent].formalParameters.formalParameter.parameter[billInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[getVoucherEvent].formalParameters.formalParameter.parameter[billInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[removeEvent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="删除" />
+            <lang locale="zh_HK" value="刪除" />
+            <lang locale="zh_TW" value="刪除" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[removeEvent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="删除" />
+            <lang locale="zh_HK" value="刪除" />
+            <lang locale="zh_TW" value="刪除" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[removeEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-000ac0a813e6].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[removeEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-000ac0a813e6].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[removeEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-000ac0a813e6].parameterMappings.parameterMappingalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[removeEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-000ac0a813e6].parameterMappings.parameterMappingdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[removeEvent].formalParameters.formalParameter.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[removeEvent].formalParameters.formalParameter.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[submitEvent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="提交" />
+            <lang locale="zh_HK" value="提交" />
+            <lang locale="zh_TW" value="提交" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[submitEvent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="提交" />
+            <lang locale="zh_HK" value="提交" />
+            <lang locale="zh_TW" value="提交" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].parameterMappings.parameterMappingalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].parameterMappings.parameterMappingdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[submitEvent].formalParameters.formalParameter.parameter[billInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[submitEvent].formalParameters.formalParameter.parameter[billInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[unAuditEvent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="反审核" />
+            <lang locale="zh_HK" value="反審核" />
+            <lang locale="zh_TW" value="反審核" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[unAuditEvent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="反审核" />
+            <lang locale="zh_HK" value="反審核" />
+            <lang locale="zh_TW" value="反審核" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[unAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[unAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[unAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].parameterMappings.parameterMappingalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[unAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].parameterMappings.parameterMappingdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[unAuditEvent].formalParameters.formalParameter.parameter[billInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[unAuditEvent].formalParameters.formalParameter.parameter[billInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[unAuditEvent].formalParameters.formalParameter.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据主键" />
+            <lang locale="zh_HK" value="單據主鍵" />
+            <lang locale="zh_TW" value="單據主鍵" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].events.event[unAuditEvent].formalParameters.formalParameter.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].extendedProperty.CRNumberEdit">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].extendedProperty.CRNumberEdit ">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].extendedProperty.IsSaveBotpEntryRelation">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].extendedProperty.OrgType">
+            <lang locale="en_US" value="Storage" />
+            <lang locale="zh_CN" value="Storage" />
+            <lang locale="zh_TW" value="Storage" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].extendedProperty.PI_Extend">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].extendedProperty.controllerBeanEx">
+            <lang locale="en_US" value="com.kingdee.eas.scm.im.inv.app.SaleIssueBillControllerBeanEx" />
+            <lang locale="zh_CN" value="com.kingdee.eas.scm.im.inv.app.SaleIssueBillControllerBeanEx" />
+            <lang locale="zh_TW" value="com.kingdee.eas.scm.im.inv.app.SaleIssueBillControllerBeanEx" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.scm.im.inv.SaleIssueBillQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.scm.im.inv.SaleIssueBillQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.scm.im.inv.SaleIssueBillQuery" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.scm.im.inv.client.SaleIssueBillEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.scm.im.inv.client.SaleIssueBillEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.scm.im.inv.client.SaleIssueBillEditUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].extendedProperty.isDelRelationsWithoutEntries">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].extendedProperty.isUseCodeRule">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.scm.im.inv.client.SaleIssueBillListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.scm.im.inv.client.SaleIssueBillListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.scm.im.inv.client.SaleIssueBillListUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].logicalKey[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].logicalKey[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[changePrice].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="价格变更" />
+            <lang locale="zh_HK" value="價格變更" />
+            <lang locale="zh_TW" value="價格變更" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[changePrice].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="价格变更" />
+            <lang locale="zh_HK" value="價格變更" />
+            <lang locale="zh_TW" value="價格變更" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[changePrice].parameters.parameter[description].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[changePrice].parameters.parameter[description].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[changePrice].parameters.parameter[list].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[changePrice].parameters.parameter[list].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[changePrice].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[changePrice].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[checkChangePrice].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="检查该销售出库单是否能进行价格变更， 不能的话返回错误信息" />
+            <lang locale="zh_HK" value="檢查該銷售出庫單是否能進行價格變更， 不能的話返回錯誤信息" />
+            <lang locale="zh_TW" value="檢查該銷售出庫單是否能進行價格變更， 不能的話返回錯誤信息" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[checkChangePrice].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="检查该销售出库单是否能进行价格变更， 不能的话返回错误信息" />
+            <lang locale="zh_HK" value="檢查該銷售出庫單是否能進行價格變更， 不能的話返回錯誤信息" />
+            <lang locale="zh_TW" value="檢查該銷售出庫單是否能進行價格變更， 不能的話返回錯誤信息" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[checkChangePrice].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[checkChangePrice].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[checkPreReceived].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="校验销售订单预收款" />
+            <lang locale="zh_HK" value="校驗銷售訂單預收款" />
+            <lang locale="zh_TW" value="校驗銷售訂單預收款" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[checkPreReceived].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="校验销售订单预收款，前台根据异常和参数给出提示" />
+            <lang locale="zh_HK" value="校驗銷售訂單預收款，前台根據異常和參數給出提示" />
+            <lang locale="zh_TW" value="校驗銷售訂單預收款，前台根據異常和參數給出提示" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[checkPreReceived].parameters.parameter[saleOrderIds].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="销售订单id集合" />
+            <lang locale="zh_HK" value="銷售訂單id集合" />
+            <lang locale="zh_TW" value="銷售訂單id集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[checkPreReceived].parameters.parameter[saleOrderIds].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="当前单据核心单为销售订单，并且非冲销单时的id列表" />
+            <lang locale="zh_HK" value="當前單據核心單為銷售訂單，並且非沖銷單時的id列表" />
+            <lang locale="zh_TW" value="當前單據核心單為銷售訂單，並且非沖銷單時的id列表" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[createNewAuditBillBySettle].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="结算出库生成审核的销售出库单" />
+            <lang locale="zh_HK" value="結算出庫生成審核的銷售出庫單" />
+            <lang locale="zh_TW" value="結算出庫生成審核的銷售出庫單" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[createNewAuditBillBySettle].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="结算出库生成审核的销售出库单，由销售组对即时库存执行完结算后调用的接口" />
+            <lang locale="zh_HK" value="結算出庫生成審核的銷售出庫單，由銷售組對即時庫存執行完結算後調用的介面" />
+            <lang locale="zh_TW" value="結算出庫生成審核的銷售出庫單，由銷售組對即時庫存執行完結算後調用的介面" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[createNewAuditBillBySettle].parameters.parameter[settledEntriesMap].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="结算分录的Map" />
+            <lang locale="zh_HK" value="結算分錄的Map" />
+            <lang locale="zh_TW" value="結算分錄的Map" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[createNewAuditBillBySettle].parameters.parameter[settledEntriesMap].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="结算分录的Map(key为销售出库单分录id,value为本次结算数量)" />
+            <lang locale="zh_HK" value="結算分錄的Map(key為銷售出庫單分錄id,value為本次結算數量)" />
+            <lang locale="zh_TW" value="結算分錄的Map(key為銷售出庫單分錄id,value為本次結算數量)" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[createNewAuditBillBySettle].parameters.parameter[srcBillIdSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="源单据ID集合" />
+            <lang locale="zh_HK" value="源單據ID集合" />
+            <lang locale="zh_TW" value="源單據ID集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[createNewAuditBillBySettle].parameters.parameter[srcBillIdSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="源单据ID集合" />
+            <lang locale="zh_HK" value="源單據ID集合" />
+            <lang locale="zh_TW" value="源單據ID集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[deleteBillByUnSettle].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="反审核结算出库的销售出库单" />
+            <lang locale="zh_HK" value="反審核結算出庫的銷售出庫單" />
+            <lang locale="zh_TW" value="反審核結算出庫的銷售出庫單" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[deleteBillByUnSettle].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="反审核结算出库的销售出库单" />
+            <lang locale="zh_HK" value="反審核結算出庫的銷售出庫單" />
+            <lang locale="zh_TW" value="反審核結算出庫的銷售出庫單" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[deleteBillByUnSettle].parameters.parameter[billIdSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据ID集合" />
+            <lang locale="zh_HK" value="單據ID集合" />
+            <lang locale="zh_TW" value="單據ID集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[deleteBillByUnSettle].parameters.parameter[billIdSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据ID集合" />
+            <lang locale="zh_HK" value="單據ID集合" />
+            <lang locale="zh_TW" value="單據ID集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getCollection].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getCollection].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getCollection].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getCollection].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getCollection].parameters.parameter[view].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getCollection].parameters.parameter[view].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getValue].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getValue].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getValue].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getValue].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getValue].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getValue].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getValue].parameters.parameter[selector].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[getValue].parameters.parameter[selector].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[splitBillByWrittenOffQty].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="按核销数量分单" />
+            <lang locale="zh_HK" value="按核銷數量分單" />
+            <lang locale="zh_TW" value="按核銷數量分單" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[splitBillByWrittenOffQty].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[splitBillByWrittenOffQty].parameters.parameter[idList].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="idList" />
+            <lang locale="zh_HK" value="idList" />
+            <lang locale="zh_TW" value="idList" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[splitBillByWrittenOffQty].parameters.parameter[idList].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[splitBillByWrittenOffQty].parameters.parameter[param].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="param" />
+            <lang locale="zh_HK" value="param" />
+            <lang locale="zh_TW" value="param" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].methods.method[splitBillByWrittenOffQty].parameters.parameter[param].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.linkProperty[currency].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="币别" />
+            <lang locale="zh_HK" value="幣別" />
+            <lang locale="zh_TW" value="幣別" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.linkProperty[currency].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.linkProperty[currency].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.linkProperty[currency].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.linkProperty[customer].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="送货客户" />
+            <lang locale="zh_HK" value="送貨客戶" />
+            <lang locale="zh_TW" value="送貨客戶" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.linkProperty[customer].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.linkProperty[customer].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.linkProperty[customer].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.linkProperty[customer].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.linkProperty[entry].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="销售出库单分录" />
+            <lang locale="zh_HK" value="銷售出庫單分錄" />
+            <lang locale="zh_TW" value="銷售出庫單分錄" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.linkProperty[entry].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.linkProperty[entry].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.linkProperty[paymentType].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="付款方式" />
+            <lang locale="zh_HK" value="付款方式" />
+            <lang locale="zh_TW" value="付款方式" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.linkProperty[paymentType].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="付款方式" />
+            <lang locale="zh_HK" value="付款方式" />
+            <lang locale="zh_TW" value="付款方式" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.linkProperty[paymentType].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.linkProperty[paymentType].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[actBizDate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="实际业务日期" />
+            <lang locale="zh_HK" value="實際業務日期" />
+            <lang locale="zh_TW" value="實際業務日期" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[actBizDate].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[actBizDate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[actBizDate].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[actBizDate].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[actBizDate].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[billRelationOption].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="整单关联算法" />
+            <lang locale="zh_HK" value="整單關聯演算法" />
+            <lang locale="zh_TW" value="整單關聯演算法" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[billRelationOption].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="0" />
+            <lang locale="zh_HK" value="0" />
+            <lang locale="zh_TW" value="0" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[billRelationOption].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="整单关联算法" />
+            <lang locale="zh_HK" value="整單關聯演算法" />
+            <lang locale="zh_TW" value="整單關聯演算法" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[billRelationOption].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[convertMode].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="折算方式" />
+            <lang locale="zh_HK" value="折算方式" />
+            <lang locale="zh_TW" value="折算方式" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[convertMode].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[convertMode].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[convertMode].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[convertMode].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[exchangeRate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="汇率" />
+            <lang locale="zh_HK" value="匯率" />
+            <lang locale="zh_TW" value="匯率" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[exchangeRate].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[exchangeRate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[exchangeRate].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[exchangeRate].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[isGenBizAR].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否生成业务应收" />
+            <lang locale="zh_HK" value="是否生成業務應收" />
+            <lang locale="zh_TW" value="是否生成業務應收" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[isGenBizAR].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="0" />
+            <lang locale="zh_HK" value="0" />
+            <lang locale="zh_TW" value="0" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[isGenBizAR].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[isInTax].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否含税" />
+            <lang locale="zh_HK" value="是否含稅" />
+            <lang locale="zh_TW" value="是否含稅" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[isInTax].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="1" />
+            <lang locale="zh_HK" value="1" />
+            <lang locale="zh_TW" value="1" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[isInTax].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[isInTax].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[isInTax].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[isInTax].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[isSysBill].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否系统单据" />
+            <lang locale="zh_HK" value="是否系統單據" />
+            <lang locale="zh_TW" value="是否系統單據" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[isSysBill].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[isSysBill].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[isSysBill].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[priceSource].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="价格来源" />
+            <lang locale="zh_HK" value="價格來源" />
+            <lang locale="zh_TW" value="價格來源" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[priceSource].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[priceSource].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="价格来源" />
+            <lang locale="zh_HK" value="價格來源" />
+            <lang locale="zh_TW" value="價格來源" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[priceSource].extendedProperty.ISACCTCUSSENT">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[priceSource].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[priceSource].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[priceSource].extendedProperty.isForMatching">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[priceSource].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[totalLocalAmount].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="价税总合计本位币" />
+            <lang locale="zh_HK" value="價稅總合計本位幣" />
+            <lang locale="zh_TW" value="價稅總合計本位幣" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[totalLocalAmount].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[totalLocalAmount].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.scm.im.inv.app.SaleIssueBill].properties.ownProperty[totalLocalAmount].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</entityObject>
+

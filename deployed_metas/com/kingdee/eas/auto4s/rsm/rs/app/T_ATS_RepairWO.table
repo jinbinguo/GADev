@@ -1197,6 +1197,20 @@
             <scale>0</scale>
             <precision>0</precision>
         </column>
+        <column>
+            <name>CFDmsWip</name>
+            <alias>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[CFDmsWip].alias</alias>
+            <description>dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[CFDmsWip].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>PK_ATS_RepairWOID</name>
@@ -1689,6 +1703,18 @@
             <lang locale="zh_CN" value="部门" />
             <lang locale="zh_HK" value="部門" />
             <lang locale="zh_TW" value="部門" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[CFDmsWip].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="DMSWIP" />
+            <lang locale="zh_HK" value="DMSWIP" />
+            <lang locale="zh_TW" value="DMSWIP" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[CFDmsWip].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="DMSWIP" />
+            <lang locale="zh_HK" value="DMSWIP" />
+            <lang locale="zh_TW" value="DMSWIP" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.auto4s.rsm.rs.app.T_ATS_RepairWO].columns.column[CFFirstBookInDate].alias">
             <lang locale="en_US" value="null" />
