@@ -14,6 +14,9 @@ import org.apache.log4j.Logger;
 
 import com.kingdee.bos.ctrl.kdf.data.event.RequestRowSetEvent;
 import com.kingdee.bos.ctrl.kdf.table.IRow;
+import com.kingdee.bos.ctrl.kdf.table.event.KDTDataFillListener;
+import com.kingdee.bos.ctrl.kdf.table.event.KDTDataRequestEvent;
+import com.kingdee.bos.ctrl.kdf.table.event.KDTDataRequestListener;
 import com.kingdee.bos.ctrl.swing.LimitedLengthDocument;
 import com.kingdee.bos.metadata.entity.FilterInfo;
 import com.kingdee.bos.metadata.entity.FilterItemInfo;
@@ -48,6 +51,23 @@ public class RepairWOListUIPIEx extends RepairWOListUI {
 		cmbGABillStatus.insertItemAt("结算", 2);
 		
 		cmbGABillStatus.setSelectedIndex(0);
+		tblMain.addKDTDataFillListener(new KDTDataFillListener() {
+
+			public void afterDataFill(KDTDataRequestEvent e) {
+				int start = e.getFirstRow();
+            	int end = e.getLastRow();
+            	for (int i = start; i <= end; i++) {
+            		IRow row = tblMain.getRow(i);
+            		String vin = (String) row.getCell("Vehicle.vIN").getValue();
+            		if (!PublicUtils.isEmpty(vin) && vin.length() > 7) {
+            			vin = vin.substring(vin.length()-7);
+            			row.getCell("Vehicle.vIN").setValue(vin);	
+            		}
+            	}
+			}
+			
+		});
+		
 		super.onLoad();
 		int intendDeliveryTimeIndex = tblMain.getColumnIndex("IntendDeliveryTime");
 		tblMain.getHead().getRow(0).getCell(intendDeliveryTimeIndex).setValue("预计出厂时间");
@@ -55,6 +75,8 @@ public class RepairWOListUIPIEx extends RepairWOListUI {
 		
 		actionPrint.setVisible(false);
 		actionPrintPreview.setVisible(false);
+		actionCreateTo.setVisible(false);
+		actionAddCustomer.setVisible(false);
 		
 		kDComeTime1.setRequired(false);
 		kdComeTime2.setRequired(false);
@@ -140,6 +162,7 @@ public class RepairWOListUIPIEx extends RepairWOListUI {
 				}
 			}
 		});
+		
 	}
 	
 	private void showEditUI() throws Exception {

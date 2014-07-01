@@ -1,7 +1,10 @@
 package com.kingdee.eas.fi.ap.client;
 
+import java.awt.Component;
 import java.awt.event.ActionEvent;
 
+import com.kingdee.bos.ctrl.swing.KDDatePicker;
+import com.kingdee.bos.ctrl.swing.KDLabelContainer;
 import com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUIPIEx;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.eas.common.client.OprtState;
@@ -65,7 +68,18 @@ public class OtherBillEditUIPIEx extends OtherBillEditUI {
 		}
 		super.actionRemove_actionPerformed(arg0);
 	}
-	
+	@Override
+	protected void lockUIForViewStatus() {
+		super.lockUIForViewStatus();
+		Component comps[] = getComponents();
+		for (int i = 0; i < comps.length; i++) {
+			if (PublicUtils.equals("contpayDate", comps[i].getName()) &&
+					comps[i] instanceof KDLabelContainer) {
+				((KDLabelContainer)comps[i]).getComponent(2).setEnabled(true);
+				((KDDatePicker)((KDLabelContainer)comps[i]).getComponent(2)).setAccessAuthority(0);
+				}
+			}
+	}
 	
 	@Override
 	protected void beforeStoreFields(ActionEvent e) throws Exception {

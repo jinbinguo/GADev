@@ -2,12 +2,14 @@ package com.kingdee.eas.auto4s.arp.aar.client;
 
 import java.awt.event.ActionEvent;
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 import com.kingdee.bos.ctrl.kdf.table.IRow;
 import com.kingdee.bos.dao.ormapping.ObjectUuidPK;
 import com.kingdee.eas.auto4s.arp.aar.IReceivingBill;
 import com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUIPIEx;
+import com.kingdee.eas.myframework.util.DBUtils;
 import com.kingdee.eas.myframework.util.PublicUtils;
 
 public class ReceivingBillEditUIPIEx extends ReceivingBillEditUI {
@@ -64,6 +66,7 @@ public class ReceivingBillEditUIPIEx extends ReceivingBillEditUI {
 	
 	@Override
 	public void actionSubmit_actionPerformed(ActionEvent e) throws Exception {
+		actionSubmit.setEnabled(false);
 		ArrayList<IRow> lstRow = new ArrayList<IRow>();
 		for (int i = 0; i < kdtEntrys.getRowCount(); i++) {
 			lstRow.add(kdtEntrys.getRow(i));
@@ -85,6 +88,18 @@ public class ReceivingBillEditUIPIEx extends ReceivingBillEditUI {
 		
 		//调用打印接口
 	//	actionPrint_actionPerformed(e);
+		// 反写维修工单的账单日期与结算状态
+		SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		
+		String sql = String.format("update b " +
+						"set b.CFReceiveNumber='%s' " + 
+						"from CT_ATS_RepairWORWOItemSpEntry b " +
+						"where exists (select 1 from T_ATS_ReceivingBillWay a " +
+						"	 where a.FSourceBillTypeID='HM+nytJ+S7izjFHd2/madkY+1VI=' and a.FSourceBillIEntryID=b.FID " +
+						"		and a.FParentID='%s') " +
+						"and b.CFI='I'", editData.getNumber(),editData.getString("id"));
+		DBUtils.executeForDialect(null, sql);
+		
 		if (BigDecimal.ZERO.compareTo(editData.getAmount()) != 0)
 			actionRec_actionPerformed(e);
 		

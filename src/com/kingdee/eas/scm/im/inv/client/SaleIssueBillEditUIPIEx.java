@@ -36,7 +36,13 @@ public class SaleIssueBillEditUIPIEx extends SaleIssueBillEditUI {
 	@Override
 	public void afterAction(BatchActionEnum bizAction,
 			BatchSelectionEntries selectionEntries, int countSuccess) {
+		if (PublicUtils.equals(bizAction, BatchActionEnum.SUBMIT)) {
+			actionSubmit.setEnabled(false);
+		}
 		super.afterAction(bizAction, selectionEntries, countSuccess);
+		if (countSuccess == 0 && PublicUtils.equals(bizAction, BatchActionEnum.SUBMIT)) {
+			actionSubmit.setEnabled(true);
+		} 
 	/*	if (PublicUtils.equals(bizAction, BatchActionEnum.SUBMIT)) {
     		String sql = "select 1 from T_IM_SaleIssueEntry a " +
     				"where a.FSourceBillTypeID='HM+nytJ+S7izjFHd2/madkY+1VI=' " +
@@ -54,6 +60,7 @@ public class SaleIssueBillEditUIPIEx extends SaleIssueBillEditUI {
 			}
     		
     	}*/
+
 	}
 	
 	@Override

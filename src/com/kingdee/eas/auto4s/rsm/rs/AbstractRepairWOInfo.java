@@ -887,6 +887,17 @@ public class AbstractRepairWOInfo extends com.kingdee.eas.auto4s.autoframework.c
     {
         put("bizDept", item);
     }
+    /**
+     * Object:Î¬ÐÞ¹¤µ¥'s DMSWIPproperty 
+     */
+    public String getDmsWip()
+    {
+        return getString("dmsWip");
+    }
+    public void setDmsWip(String item)
+    {
+        setString("dmsWip", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("FDBE5ECA");

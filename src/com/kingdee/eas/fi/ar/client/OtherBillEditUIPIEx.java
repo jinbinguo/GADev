@@ -2,6 +2,7 @@ package com.kingdee.eas.fi.ar.client;
 
 import java.awt.event.ActionEvent;
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
 
 import com.kingdee.eas.auto4s.rsm.rs.client.RepairWOEditUIPIEx;
 import com.kingdee.eas.common.EASBizException;
@@ -28,7 +29,24 @@ public class OtherBillEditUIPIEx extends OtherBillEditUI {
 	
 	@Override
 	public void actionSubmit_actionPerformed(ActionEvent arg0) throws Exception {
+		actionSubmit.setEnabled(false);
+		
 		super.actionSubmit_actionPerformed(arg0);
+		// 反写维修工单的账单日期与结算状态
+		
+		SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		
+		String sql = String.format("update b " +
+						"set b.CFArNumber='%s' " + 
+						"from CT_ATS_RepairWORWOItemSpEntry b " +
+						"where exists (select 1 from T_AR_OtherBillentry a " +
+						"	 where a.FCoreBillTypeID='HM+nytJ+S7izjFHd2/madkY+1VI=' and a.FSourceBillEntryID=b.FID " +
+						"		and a.FParentID='%s') " +
+						"and b.CFI='I'", editData.getNumber(),editData.getString("id"));
+		DBUtils.executeForDialect(null, sql);
+		
+		
+		
 	//	actionPrint_actionPerformed(arg0);
 		if (RepairWOEditUIPIEx.rwoUI != null) {
 			RepairWOEditUIPIEx.rwoUI.actionRefresh_actionPerformed(arg0);
