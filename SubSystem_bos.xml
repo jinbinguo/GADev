@@ -1,60 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- BOS子系统树配置文件 by mgl 2009-2-18 -->
 <subSystem>
+    <row fullname="com.kingdee.eas.base" name="base" alias_l1="base" alias_l2="基础系统" alias_l3="基礎系統" isleaf="0" parent="com.kingdee.eas" hide="true" />
+    <row fullname="com.kingdee.eas.base.dap" name="dap" alias_l1="dap" alias_l2="动态会计平台" alias_l3="動態會計平臺" isleaf="1" parent="com.kingdee.eas.base" />
+    <row fullname="com.kingdee.eas.base.init" name="init" alias_l1="init" alias_l2="系统初始化" alias_l3="系統初始化" isleaf="1" parent="com.kingdee.eas.base" />
+    <row fullname="com.kingdee.eas.base.job" name="job" alias_l1="job" alias_l2="后台任务管理" alias_l3="後臺任務管理" isleaf="1" parent="com.kingdee.eas.base" />
+    <row fullname="com.kingdee.eas.base.message" name="message" alias_l1="message" alias_l2="业务消息中心" alias_l3="業務消息中心" isleaf="1" parent="com.kingdee.eas.base" />
+    <row fullname="com.kingdee.eas.base.myeas" name="myeas" alias_l1="myeas" alias_l2="我的EAS" alias_l3="我的EAS" isleaf="1" parent="com.kingdee.eas.base" />
+    <row fullname="com.kingdee.eas.base.wf" name="wf" alias_l1="wf" alias_l2="工作流客户端" alias_l3="工作流用戶端" isleaf="1" parent="com.kingdee.eas.base" />
+    <row fullname="com.kingdee.eas.cp" name="cp" alias_l1="cp" alias_l2="协同平台" alias_l3="協同平臺" isleaf="0" parent="com.kingdee.eas" />
+    <row fullname="com.kingdee.eas.cp.eip" name="eip" alias_l1="eip" alias_l2="信息门户" alias_l3="信息門戶" isleaf="0" parent="com.kingdee.eas.cp" />
+    <row fullname="com.kingdee.eas.cp.eip.fts" name="fts" alias_l1="fts" alias_l2="全文检索" alias_l3="全文检索" isleaf="1" parent="com.kingdee.eas.cp.eip" />
+    <row fullname="com.kingdee.eas.cp.eip.sso" name="sso" alias_l1="sso" alias_l2="单点登录" alias_l3="單點登錄" isleaf="1" parent="com.kingdee.eas.cp.eip" />
+    <row fullname="com.kingdee.eas.cp.eip.mc" name="mc" alias_l1="mc" alias_l2="门户消息中心" alias_l3="门户消息中心" isleaf="1" parent="com.kingdee.eas.cp.eip" />
+    <row fullname="com.kingdee.eas.cp.eip.cp" name="cp" alias_l1="cp" alias_l2="流程中心" alias_l3="流程中心" isleaf="1" parent="com.kingdee.eas.cp.eip" />
+    <row fullname="com.kingdee.eas.rpts" name="rpts" alias_l1="rpts" alias_l2="报表" alias_l3="报表" isleaf="1" parent="com.kingdee.eas" />
+    <row fullname="com.kingdee.eas.cp.wfm" name="wfm" alias_l1="" alias_l2="流程管理" alias_l3="流程管理" isleaf="0" parent="com.kingdee.eas.cp" />
+    <row fullname="com.kingdee.eas.cp.wfm.bill" name="bill" alias_l1="" alias_l2="流程管理单据" alias_l3="流程管理單據" isleaf="1" parent="com.kingdee.eas.cp.wfm" />
     <!-- 705菜单调整 供应链 更名为  供应链管理 MODIFY BU WENFENG_LIU 2012-04-10
 	增加一级菜单   分销管理
 	-->
-    <row fullname="com.kingdee.eas.auto4s" name="auto4s" alias_l1="auto4s" alias_l2="auto4s" alias_l3="auto4s" isleaf="0" parent="com.kingdee.eas" />
-    <row fullname="com.kingdee.eas.auto4s.arp" name="arp" alias_l1="" alias_l2="行业应收/应付管理" alias_l3="行業應收/應付管理" isleaf="0" parent="com.kingdee.eas.auto4s" />
-    <row fullname="com.kingdee.eas.auto4s.arp.aar" name="aar" alias_l1="" alias_l2="行业应收" alias_l3="行業應收" isleaf="1" parent="com.kingdee.eas.auto4s.arp" />
-    <row fullname="com.kingdee.eas.auto4s.bdm" name="bdm" alias_l1="" alias_l2="行业基础资料" alias_l3="行業基礎資料" isleaf="0" parent="com.kingdee.eas.auto4s" />
-    <row fullname="com.kingdee.eas.auto4s.bdm.pbd" name="pbd" alias_l1="" alias_l2="公共基础资料" alias_l3="公共基礎資料" isleaf="1" parent="com.kingdee.eas.auto4s.bdm" />
-    <row fullname="com.kingdee.eas.auto4s.rsm" name="rsm" alias_l1="" alias_l2="维修管理" alias_l3="維修管理" isleaf="0" parent="com.kingdee.eas.auto4s" />
-    <row fullname="com.kingdee.eas.auto4s.rsm.rs" name="rs" alias_l1="" alias_l2="维修服务" alias_l3="維修服務" isleaf="1" parent="com.kingdee.eas.auto4s.rsm" />
-    <row fullname="com.kingdee.eas.base" name="base" alias_l1="base" alias_l2="基础系统" alias_l3="基礎系統" isleaf="0" parent="com.kingdee.eas" hide="true" />
-    <row fullname="com.kingdee.eas.base.auth" name="auth" alias_l1="auth" alias_l2="身份认证" alias_l3="身份認證" isleaf="1" parent="com.kingdee.eas.safeManager" />
-    <row fullname="com.kingdee.eas.base.codingrule" name="codingrule" alias_l1="codingrule" alias_l2="编码规则" alias_l3="編碼規則" isleaf="1" parent="com.kingdee.eas.busRule" />
-    <row fullname="com.kingdee.eas.base.dap" name="dap" alias_l1="dap" alias_l2="动态会计平台" alias_l3="動態會計平臺" isleaf="1" parent="com.kingdee.eas.base" />
-    <row fullname="com.kingdee.eas.base.forewarn" name="forewarn" alias_l1="forewarn" alias_l2="预警平台" alias_l3="預警平臺" isleaf="1" parent="com.kingdee.eas.busRule" />
-    <row fullname="com.kingdee.eas.base.init" name="init" alias_l1="init" alias_l2="系统初始化" alias_l3="系統初始化" isleaf="1" parent="com.kingdee.eas.base" />
-    <row fullname="com.kingdee.eas.base.job" name="job" alias_l1="job" alias_l2="后台任务管理" alias_l3="後臺任務管理" isleaf="1" parent="com.kingdee.eas.base" />
-    <row fullname="com.kingdee.eas.base.log" name="log" alias_l1="log" alias_l2="上机日志" alias_l3="上機日誌" isleaf="1" parent="com.kingdee.eas.safeManager" />
-    <row fullname="com.kingdee.eas.base.message" name="message" alias_l1="message" alias_l2="业务消息中心" alias_l3="業務消息中心" isleaf="1" parent="com.kingdee.eas.base" />
-    <row fullname="com.kingdee.eas.base.myeas" name="myeas" alias_l1="myeas" alias_l2="我的EAS" alias_l3="我的EAS" isleaf="1" parent="com.kingdee.eas.base" />
+    <row fullname="com.kingdee.eas.scm" name="scm" alias_l1="scm" alias_l2="供应链管理" alias_l3="供應鏈管理" isleaf="0" parent="com.kingdee.eas" />
+    <row fullname="com.kingdee.eas.scm.sd" name="sdchannel" alias_l1="sdchannel" alias_l2="分销管理" alias_l3="分銷管理" isleaf="0" parent="com.kingdee.eas" hide="true" />
+    <row fullname="com.kingdee.eas.sysTool" name="sysTool" alias_l1="sysTool" alias_l2="系统平台" alias_l3="系統平臺" isleaf="0" parent="com.kingdee.eas" />
+    <row fullname="com.kingdee.eas.sysPlate" name="sysPlate" alias_l1="sysPlate" alias_l2="系统工具" alias_l3="系統工具" isleaf="0" parent="com.kingdee.eas.sysTool" />
     <row fullname="com.kingdee.eas.base.param" name="param" alias_l1="param" alias_l2="参数管理" alias_l3="參數管理" isleaf="1" parent="com.kingdee.eas.sysPlate" />
+    <row fullname="com.kingdee.eas.enterModel" name="enterModel" alias_l1="enterModel" alias_l2="企业建模" alias_l3="企業建模" isleaf="0" parent="com.kingdee.eas" />
+    <row fullname="com.kingdee.eas.safeManager" name="safeManager" alias_l1="safeManager" alias_l2="安全管理" alias_l3="安全管理" isleaf="0" parent="com.kingdee.eas.enterModel" />
     <row fullname="com.kingdee.eas.base.permission" name="permission" alias_l1="permission" alias_l2="权限系统" alias_l3="許可權系統" isleaf="0" parent="com.kingdee.eas.safeManager" />
     <row fullname="com.kingdee.eas.base.user" name="user" alias_l1="user" alias_l2="用户管理" alias_l3="用戶管理" isleaf="1" parent="com.kingdee.eas.safeManager" />
-    <row fullname="com.kingdee.eas.base.wf" name="wf" alias_l1="wf" alias_l2="工作流客户端" alias_l3="工作流用戶端" isleaf="1" parent="com.kingdee.eas.base" />
-    <row fullname="com.kingdee.eas.basedata" name="basedata" alias_l1="basedata" alias_l2="基础资料" alias_l3="基礎資料" isleaf="0" parent="com.kingdee.eas.enterModel" />
-    <row fullname="com.kingdee.eas.basedata.master" name="master" alias_l1="" alias_l2="主数据" alias_l3="主數據" isleaf="0" parent="com.kingdee.eas.basedata" />
-    <row fullname="com.kingdee.eas.basedata.master.material" name="material" alias_l1="" alias_l2="物料" alias_l3="物料" isleaf="1" parent="com.kingdee.eas.basedata.master" />
-    <row fullname="com.kingdee.eas.basedata.org" name="org" alias_l1="org" alias_l2="组织架构" alias_l3="組織架構" isleaf="1" parent="com.kingdee.eas.enterModel" />
+    <row fullname="com.kingdee.eas.base.auth" name="auth" alias_l1="auth" alias_l2="身份认证" alias_l3="身份認證" isleaf="1" parent="com.kingdee.eas.safeManager" />
+    <row fullname="com.kingdee.eas.base.log" name="log" alias_l1="log" alias_l2="上机日志" alias_l3="上機日誌" isleaf="1" parent="com.kingdee.eas.safeManager" />
     <row fullname="com.kingdee.eas.busRule" name="busRule" alias_l1="busRule" alias_l2="业务规则" alias_l3="業務規則" isleaf="0" parent="com.kingdee.eas.enterModel" />
+    <row fullname="com.kingdee.eas.base.codingrule" name="codingrule" alias_l1="codingrule" alias_l2="编码规则" alias_l3="編碼規則" isleaf="1" parent="com.kingdee.eas.busRule" />
+    <row fullname="com.kingdee.eas.base.forewarn" name="forewarn" alias_l1="forewarn" alias_l2="预警平台" alias_l3="預警平臺" isleaf="1" parent="com.kingdee.eas.busRule" />
+    <row fullname="com.kingdee.eas.basedata" name="basedata" alias_l1="basedata" alias_l2="基础资料" alias_l3="基礎資料" isleaf="0" parent="com.kingdee.eas.enterModel" />
+    <row fullname="com.kingdee.eas.basedata.org" name="org" alias_l1="org" alias_l2="组织架构" alias_l3="組織架構" isleaf="1" parent="com.kingdee.eas.enterModel" />
+    <row fullname="com.kingdee.eas.portal" name="portal" alias_l1="portal" alias_l2="portal" alias_l3="portal" isleaf="0" parent="com.kingdee.eas.sysTool" />
+    <row fullname="com.kingdee.eas.mobile" name="mobile" alias_l1="mobile" alias_l2="移动平台" alias_l3="移动平台" isleaf="1" parent="com.kingdee.eas.sysTool" />
     <row fullname="com.kingdee.eas.channel" name="channel" alias_l1="channel" alias_l2="分销管理" alias_l3="分銷管理" isleaf="0" parent="com.kingdee.eas" />
-    <row fullname="com.kingdee.eas.cp" name="cp" alias_l1="cp" alias_l2="协同平台" alias_l3="協同平臺" isleaf="0" parent="com.kingdee.eas" />
-    <row fullname="com.kingdee.eas.cp.eip" name="eip" alias_l1="eip" alias_l2="信息门户" alias_l3="信息門戶" isleaf="0" parent="com.kingdee.eas.cp" />
-    <row fullname="com.kingdee.eas.cp.eip.cp" name="cp" alias_l1="cp" alias_l2="流程中心" alias_l3="流程中心" isleaf="1" parent="com.kingdee.eas.cp.eip" />
-    <row fullname="com.kingdee.eas.cp.eip.fts" name="fts" alias_l1="fts" alias_l2="全文检索" alias_l3="全文检索" isleaf="1" parent="com.kingdee.eas.cp.eip" />
-    <row fullname="com.kingdee.eas.cp.eip.mc" name="mc" alias_l1="mc" alias_l2="门户消息中心" alias_l3="门户消息中心" isleaf="1" parent="com.kingdee.eas.cp.eip" />
-    <row fullname="com.kingdee.eas.cp.eip.sso" name="sso" alias_l1="sso" alias_l2="单点登录" alias_l3="單點登錄" isleaf="1" parent="com.kingdee.eas.cp.eip" />
-    <row fullname="com.kingdee.eas.cp.wfm" name="wfm" alias_l1="" alias_l2="流程管理" alias_l3="流程管理" isleaf="0" parent="com.kingdee.eas.cp" />
-    <row fullname="com.kingdee.eas.cp.wfm.bill" name="bill" alias_l1="" alias_l2="流程管理单据" alias_l3="流程管理單據" isleaf="1" parent="com.kingdee.eas.cp.wfm" />
+    <row fullname="com.kingdee.eas.scm.cal" name="cal" alias_l1="cal" alias_l2="存货核算" alias_l3="存貨覈算" isleaf="1" parent="com.kingdee.eas.scm" />
     <row fullname="com.kingdee.eas.csinterface" name="csinterface" alias_l1="csinterface" alias_l2="集成管理" alias_l3="集成管理" isleaf="1" parent="com.kingdee.eas" />
-    <row fullname="com.kingdee.eas.enterModel" name="enterModel" alias_l1="enterModel" alias_l2="企业建模" alias_l3="企業建模" isleaf="0" parent="com.kingdee.eas" />
-    <row fullname="com.kingdee.eas.fi" name="fi" alias_l1="" alias_l2="财务系统" alias_l3="財務系統" isleaf="0" parent="com.kingdee.eas" />
-    <row fullname="com.kingdee.eas.fi.ar" name="ar" alias_l1="" alias_l2="应收系统" alias_l3="應收系統" isleaf="1" parent="com.kingdee.eas.fi" />
-    <row fullname="com.kingdee.eas.ga" name="ga" alias_l1="" alias_l2="GA" alias_l3="GA" isleaf="0" parent="com.kingdee.eas" />
+	
+	<row fullname="com.kingdee.eas.ga" name="ga" alias_l1="" alias_l2="GA" alias_l3="GA" isleaf="0" parent="com.kingdee.eas" />
     <row fullname="com.kingdee.eas.ga.basedata" name="basedata" alias_l1="" alias_l2="基础资料" alias_l3="基礎資料" isleaf="1" parent="com.kingdee.eas.ga" />
     <row fullname="com.kingdee.eas.ga.rs" name="rs" alias_l1="" alias_l2="维修管理" alias_l3="維修管理" isleaf="1" parent="com.kingdee.eas.ga" />
     <row fullname="com.kingdee.eas.ga.syncdata" name="syncdata" alias_l1="" alias_l2="同步数据" alias_l3="同步數據" isleaf="1" parent="com.kingdee.eas.ga" />
-    <row fullname="com.kingdee.eas.mobile" name="mobile" alias_l1="mobile" alias_l2="移动平台" alias_l3="移动平台" isleaf="1" parent="com.kingdee.eas.sysTool" />
-    <row fullname="com.kingdee.eas.portal" name="portal" alias_l1="portal" alias_l2="portal" alias_l3="portal" isleaf="0" parent="com.kingdee.eas.sysTool" />
-    <row fullname="com.kingdee.eas.rpts" name="rpts" alias_l1="rpts" alias_l2="报表" alias_l3="报表" isleaf="1" parent="com.kingdee.eas" />
-    <row fullname="com.kingdee.eas.safeManager" name="safeManager" alias_l1="safeManager" alias_l2="安全管理" alias_l3="安全管理" isleaf="0" parent="com.kingdee.eas.enterModel" />
-    <row fullname="com.kingdee.eas.scm" name="scm" alias_l1="scm" alias_l2="供应链管理" alias_l3="供應鏈管理" isleaf="0" parent="com.kingdee.eas" />
-    <row fullname="com.kingdee.eas.scm.cal" name="cal" alias_l1="cal" alias_l2="存货核算" alias_l3="存貨覈算" isleaf="1" parent="com.kingdee.eas.scm" />
-    <row fullname="com.kingdee.eas.scm.sd" name="sdchannel" alias_l1="sdchannel" alias_l2="分销管理" alias_l3="分銷管理" isleaf="0" parent="com.kingdee.eas" hide="true" />
-    <row fullname="com.kingdee.eas.sysPlate" name="sysPlate" alias_l1="sysPlate" alias_l2="系统工具" alias_l3="系統工具" isleaf="0" parent="com.kingdee.eas.sysTool" />
-    <row fullname="com.kingdee.eas.sysTool" name="sysTool" alias_l1="sysTool" alias_l2="系统平台" alias_l3="系統平臺" isleaf="0" parent="com.kingdee.eas" />
+
 </subSystem>
 
