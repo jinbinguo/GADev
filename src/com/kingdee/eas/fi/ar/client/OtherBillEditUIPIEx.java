@@ -33,7 +33,7 @@ public class OtherBillEditUIPIEx extends OtherBillEditUI {
 		
 		super.actionSubmit_actionPerformed(arg0);
 		// 反写维修工单的账单日期与结算状态
-		
+
 		SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		
 		String sql = String.format("update b " +
@@ -42,7 +42,7 @@ public class OtherBillEditUIPIEx extends OtherBillEditUI {
 						"where exists (select 1 from T_AR_OtherBillentry a " +
 						"	 where a.FCoreBillTypeID='HM+nytJ+S7izjFHd2/madkY+1VI=' and a.FSourceBillEntryID=b.FID " +
 						"		and a.FParentID='%s') " +
-						"and b.CFI='I'", editData.getNumber(),editData.getString("id"));
+						"and b.CFI='I'", editData.getNumber(),pk.toString());
 		DBUtils.executeForDialect(null, sql);
 		
 		
